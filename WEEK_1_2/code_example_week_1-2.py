@@ -34,16 +34,17 @@ Requiments:
 
 
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val: int = 0, next: "ListNode" = None):
         self.val = val
         self.next = next
 
 
 class LinkedList:
     def __init__(self):
-        self.head = None
+        self.head: ListNode = None
 
-    def append(self, val):
+    def append(self, val: int) -> None:
+        """Append a new node with the given value to the end of the list."""
         if not self.head:
             self.head = ListNode(val)
         else:
@@ -52,12 +53,8 @@ class LinkedList:
                 current = current.next
             current.next = ListNode(val)
 
-    def reverse(self):
-        # Iterative approach:
-        # prev -> None
-        # curr -> head
-        # next_temp -> curr.next
-        # set curr.next = prev, move prev to curr, move curr to next_temp
+    def reverse(self) -> None:
+        """Reverse the linked list in place."""
         prev = None
         curr = self.head
         while curr:
@@ -67,8 +64,8 @@ class LinkedList:
             curr = next_temp
         self.head = prev
 
-    def to_list(self):
-        # Helper method to visualize list content
+    def to_list(self) -> list:
+        """Convert the linked list to a list of values."""
         vals = []
         current = self.head
         while current:
@@ -103,6 +100,7 @@ class TreeNode:
 
 
 def bfs_traversal(root: TreeNode) -> list:
+    """Perform a breadth-first search traversal on a binary tree."""
     if not root:
         return []
     result = []
@@ -140,7 +138,8 @@ def demo_bfs_tree():
 # We solve it using a dictionary (hash map) to achieve O(n) time complexity.
 
 
-def two_sum(nums: list, target: int) -> list:
+def two_sum(nums: list[int], target: int) -> list[int]:
+    """Find two numbers in the list that add up to the target."""
     lookup = {}
     for i, num in enumerate(nums):
         needed = target - num
@@ -178,21 +177,23 @@ DSA_QUIZ_QUESTIONS = [
 
 
 class Product:
-    def __init__(self, product_id, name, price):
+    def __init__(self, product_id: int, name: str, price: float):
         self.product_id = product_id
         self.name = name
         self.price = price
 
 
 class Order:
-    def __init__(self, order_id):
+    def __init__(self, order_id: str):
         self.order_id = order_id
-        self.items = []  # list of (Product, quantity)
+        self.items: list[tuple[Product, int]] = []
 
-    def add_item(self, product: Product, quantity: int):
+    def add_item(self, product: Product, quantity: int) -> None:
+        """Add a product and its quantity to the order."""
         self.items.append((product, quantity))
 
-    def total_cost(self):
+    def total_cost(self) -> float:
+        """Calculate the total cost of the order."""
         total = 0
         for prod, qty in self.items:
             total += prod.price * qty
@@ -200,15 +201,17 @@ class Order:
 
 
 class Customer:
-    def __init__(self, customer_id, name):
+    def __init__(self, customer_id: str, name: str):
         self.customer_id = customer_id
         self.name = name
-        self.orders = []
+        self.orders: list[Order] = []
 
-    def place_order(self, order: Order):
+    def place_order(self, order: Order) -> None:
+        """Place an order for the customer."""
         self.orders.append(order)
 
-    def get_total_spent(self):
+    def get_total_spent(self) -> float:
+        """Calculate the total amount spent by the customer."""
         return sum(order.total_cost() for order in self.orders)
 
 
@@ -253,7 +256,8 @@ class Logger:
                 cls._instance._created = True
         return cls._instance
 
-    def log(self, message):
+    def log(self, message: str) -> None:
+        """Log a message to the console."""
         print(f"[LOG]: {message}")
 
 
@@ -290,7 +294,7 @@ import sys
 
 def filter_csv(
     input_file: str, output_file: str, filter_column: str, filter_value: str
-):
+) -> None:
     """Filters rows of a CSV file based on a given column's matching value."""
     with open(input_file, mode="r", newline="", encoding="utf-8") as infile, open(
         output_file, mode="w", newline="", encoding="utf-8"
@@ -314,7 +318,8 @@ def filter_csv(
 import re
 
 
-def analyze_logs(log_file: str):
+def analyze_logs(log_file: str) -> None:
+    """Analyze a log file and print the count of each error."""
     pattern = re.compile(r"ERROR: (.*)")
     error_count = {}
 
@@ -339,19 +344,25 @@ import os
 import subprocess
 
 
-def setup_environment():
-    print("Starting environment setup...")
+def setup_environment() -> None:
+    """Set up the environment by installing dependencies and configuring settings."""
+    try:
+        print("Starting environment setup...")
 
-    # Example: install dependencies
-    # In a real scenario, you might read from a requirements.txt or a package list
-    subprocess.run(["pip", "install", "requests"], check=True)
+        # Example: install dependencies
+        # In a real scenario, you might read from a requirements.txt or a package list
+        subprocess.run(["pip", "install", "requests"], check=True)
 
-    # Example: set an environment variable
-    os.environ["MY_APP_MODE"] = "development"
-    print("Set MY_APP_MODE=development")
+        # Example: set an environment variable
+        os.environ["MY_APP_MODE"] = "development"
+        print("Set MY_APP_MODE=development")
 
-    # Additional tasks: create directories, fetch config files, etc.
-    print("Environment setup complete.")
+        # Additional tasks: create directories, fetch config files, etc.
+        print("Environment setup complete.")
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred while installing dependencies: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 
 # --- Basic Scripting Quiz Section ---
