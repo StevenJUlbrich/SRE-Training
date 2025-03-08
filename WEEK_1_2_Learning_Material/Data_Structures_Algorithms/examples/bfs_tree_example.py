@@ -61,7 +61,7 @@ def bfs_traversal(root):
 
     Time Complexity: O(n) - visits each node exactly once
     Space Complexity: O(w) - where w is the maximum width of the tree
-                          (in the worst case, w can be n/2 for a complete binary tree)
+            (in the worst case, w can be n/2 for a complete binary tree)
     """
     # Handle empty tree
     if not root:
