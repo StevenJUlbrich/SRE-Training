@@ -1,186 +1,207 @@
 #!/usr/bin/env python3
 """
-Flawed Linked List Implementation - Data Structures & Algorithms
+Flawed Linked List Implementation - Learning Exercise
 
 This module contains a flawed implementation of a singly linked list
-with various errors and inefficiencies that need to be identified and fixed.
+with various common mistakes and inefficiencies.
 
-TASK:
-    - Review the code and identify the bugs and inefficiencies
-    - Fix the implementation to make it work correctly
-    - Consider edge cases and performance issues
+Learning Task:
+    - Identify and fix implementation errors
+    - Improve error handling and edge cases
+    - Enhance performance of operations
+    - Correct logic and structural issues
 
-Common issues to look for:
-    - Missing edge case handling
+Common issues demonstrated:
     - Incorrect pointer manipulation
-    - Logical errors in operations
-    - Memory leaks or inefficient use of resources
-    - Incorrect handling of empty lists
+    - Memory leaks and dangling references
+    - Inefficient traversal
+    - Missing edge case handling
+    - Inconsistent state management
 """
 
 
 class Node:
-    """
-    A Node in a singly linked list.
-
-    # ISSUE #1 (HINT): There might be an issue with how nodes are initialized
-    """
-
-    def __init__(self, value):
-        """Initialize a new Node with the given value."""
-        self.value = value
-        # Node doesn't have a next pointer initialized
+    # Missing docstring
+    def __init__(self, data):
+        self.data = data  # Inconsistent naming (data vs value)
+        self.next = None
 
 
+# No class-level docstring
 class LinkedList:
-    """
-    A singly linked list implementation with various operations.
-
-    # ISSUE #2 (HINT): There might be issues with tracking the list state
-    """
-
     def __init__(self):
-        """Initialize an empty linked list."""
         self.head = None
-        # Not tracking the list length, which could be useful
+        # Not tracking length - will need to recalculate each time
 
-    def append(self, value):
-        """
-        Add a new node with the given value to the end of the list.
+    # Missing is_empty method - would simplify other methods
 
-        # ISSUE #3 (HINT): Check the handling of empty lists
-        """
-        new_node = Node(value)
+    def append(self, data):
+        # No docstring explaining the method
+        new_node = Node(data)
 
-        # If the list is empty
         if self.head is None:
             self.head = new_node
             return
 
-        # Find the last node
+        # Inefficient traversal - always starts from the beginning
         current = self.head
-        while current.next:  # This will cause an AttributeError
+        while current.next:
             current = current.next
 
-        # Add the new node at the end
         current.next = new_node
 
-    def prepend(self, value):
-        """
-        Add a new node with the given value to the beginning of the list.
+    def prepend(self, data):
+        # Missing docstring
+        new_node = Node(data)
 
-        # ISSUE #4 (HINT): Check for correct pointer manipulation
-        """
-        new_node = Node(value)
-
-        # Make the new node the head
+        # Error: doesn't update the head pointer correctly
+        # This will lose the rest of the list!
         self.head = new_node
-        # The new head doesn't point to the old head
+        # Should be: new_node.next = self.head; self.head = new_node
 
-    def delete(self, value):
-        """
-        Delete the first node with the given value from the list.
+    def delete(self, data):
+        # No docstring or return value
 
-        # ISSUE #5 (HINT): Check edge cases and return values
-        """
-        # If the list is empty
-        if self.head is None:
-            print("Cannot delete from an empty list")
-            # Should return a value indicating failure
+        # Missing check for empty list
+        current = self.head
 
-        # If the head node contains the value
-        if self.head.value == value:
-            self.head = self.head.next
+        # Special case: deleting the head node
+        if current.data == data:
+            # Error: doesn't handle the case when the list becomes empty
+            self.head = current.next
             return
 
-        # Search for the value in the rest of the list
-        current = self.head
-        while current.next and current.next.value != value:
+        # Error: Incorrect traversal logic that can miss the last node
+        while current.next and current.next.data != data:
             current = current.next
 
-        # If the value was found
-        if current.next:
-            current.next = current.next.next
-        else:
-            print(f"Value {value} not found in the list")
-            # Should return a value indicating failure
+        # Error: No check if the value was actually found
+        # This will cause an error if current.next is None
+        current.next = current.next.next
+        # Missing return value to indicate success/failure
 
-    def reverse(self):
-        """
-        Reverse the linked list in place.
+    def find(self, data):
+        # Missing docstring
 
-        # ISSUE #6 (HINT): There's a significant flaw in the reversal logic
-        """
-        # Initialize pointers
-        prev = None
-        curr = self.head
+        # Doesn't handle empty list
+        current = self.head
 
-        # Reverse the list
-        while curr:
-            next_temp = curr.next
-            curr.next = prev
-            # Missing step: updating prev and curr for the next iteration
-            curr = next_temp
+        # Basic logic is correct, but...
+        while current:
+            if current.data == data:
+                # Error: returns data instead of the node
+                return current.data
+            current = current.next
 
-        # Update the head pointer
-        # Missing step: not updating self.head
+        # No explicit return None for when value isn't found
+
+    def insert_after(self, target, new_data):
+        # No docstring
+
+        # Error: Not reusing the find method
+        # Duplicated traversal logic
+        current = self.head
+
+        while current:
+            if current.data == target:
+                # Found the target node
+                new_node = Node(new_data)
+
+                # Error: incorrect order of operations
+                # This will skip the next node!
+                new_node.next = current.next.next
+                current.next = new_node
+                return True
+            current = current.next
+
+        # Missing return value for failure case
 
     def print_list(self):
-        """
-        Print all values in the linked list.
-
-        # ISSUE #7 (HINT): What happens if the list is empty?
-        """
-        values = []
+        # No docstring
         current = self.head
 
-        # Collect all values
+        # Error: inefficient string concatenation in a loop
+        result = ""
         while current:
-            values.append(str(current.value))
+            # This creates a new string object each iteration
+            result += str(current.data) + " -> "
             current = current.next
 
-        # Print the values
-        print(" -> ".join(values))
-        # No special handling for empty lists
+        # Error: will always have an extra " -> " at the end
+        print(result)
+
+    # Missing to_list method - useful for testing
+
+    def get_length(self):
+        # No docstring
+
+        # Error: inefficient O(n) calculation every time
+        # Should have tracked length as a property
+        count = 0
+        current = self.head
+
+        while current:
+            count += 1
+            current = current.next
+
+        return count
+
+    # Missing method to handle reversing the list
+    # Missing method to detect cycles
+    # No proper __str__ or __repr__ methods
 
 
-def demonstrate_linked_list():
-    """
-    Demonstrate operations on the linked list.
-
-    # ISSUE #8 (HINT): Not all operations are properly demonstrated
-    """
+def demo_linked_list():
     # Create a new linked list
     ll = LinkedList()
+    print("Created a new linked list")
 
-    # Add some values
-    print("Adding values 1, 2, 3")
-    ll.append(1)
-    ll.append(2)
-    ll.append(3)
+    # Error: inconsistent naming (append vs add)
+    print("\nAdding values 1, 2, 3, 4, 5")
+    for i in range(1, 6):
+        ll.append(i)
 
-    # Print the list
-    print("Current list:")
+    print("Linked list contents:")
     ll.print_list()
 
-    # Prepend a value
+    # Error: using prepend incorrectly
+    # This will disconnect the list!
     print("\nPrepending value 0")
     ll.prepend(0)
-    print("Current list:")
+    print("Linked list contents:")
     ll.print_list()
 
-    # Delete a value
-    print("\nDeleting value 2")
-    ll.delete(2)
-    print("Current list:")
+    # Error: insert_after has a bug that will cause issues
+    print("\nInserting value 2.5 after 2")
+    ll.insert_after(2, 2.5)
+    print("Linked list contents:")
     ll.print_list()
 
-    # Reverse the list
-    print("\nReversing the list")
-    ll.reverse()
-    print("Reversed list:")
-    ll.print_list()  # This will not print the correct reversed list
+    # Error: find returns the data, not the node
+    print("\nFinding value 3")
+    found = ll.find(3)
+    print(f"Found: {found}")
+
+    # Error: delete method doesn't return success/failure
+    print("\nDeleting value 2.5")
+    ll.delete(2.5)
+    print("Linked list contents:")
+    ll.print_list()
+
+    # Error: no to_list method provided
+    # Would have to manually convert
+
+    # Try to delete a value that doesn't exist
+    # Error: will cause an error due to lack of checking
+    print("\nDeleting value 10 (which doesn't exist)")
+    try:
+        ll.delete(10)
+    except:
+        print("Error occurred when trying to delete non-existent value")
+
+    print("Final linked list contents:")
+    ll.print_list()
 
 
-if __name__ == "__main__":
-    demonstrate_linked_list()
+# Error: missing if __name__ == "__main__" guard
+demo_linked_list()
