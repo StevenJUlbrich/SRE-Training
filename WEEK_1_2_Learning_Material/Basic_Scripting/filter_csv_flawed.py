@@ -1,105 +1,93 @@
 #!/usr/bin/env python3
 """
-Flawed CSV Filtering Script - Basic Scripting
+Flawed CSV Filtering Script (Alternative Version)
 
-This module contains a flawed implementation of a CSV filtering script.
-There are several errors and inefficiencies that need to be identified and fixed.
+OBJECTIVE:
+    - Reads a CSV file.
+    - Filters by a user-specified column and value.
+    - Writes only matching rows to a new file.
 
-TASK:
-    - Review the code and identify the bugs and inefficiencies
-    - Fix the implementation to make it work correctly
-    - Consider error handling, validation, and user experience improvements
-
-Common issues to look for:
-    - Missing error handling
-    - Inefficient file operations
-    - Incorrect CSV parsing
-    - Poor user feedback
+INSTRUCTIONS:
+    - Identify the logical and structural flaws.
+    - Consider improvements in error handling, user experience, and best practices.
 """
 
 import csv
 import sys
 
 
-def filter_csv(input_file, output_file, filter_column, filter_value):
+def extract_rows(source_file, destination_file, target_column, match_value):
     """
-    Filter rows of a CSV file based on a given column's matching value.
+    Extract rows from a CSV where target_column = match_value.
 
-    # ISSUE #1 (HINT): Missing error handling and parameter validation
+    FLAWS/HINTS:
+        1) No checks to see if the CSV file exists or can be opened.
+        2) Missing context managers (using plain open without 'with').
+        3) Ignores whether target_column actually appears in the header.
+        4) Does not handle rows of unexpected length.
+        5) No meaningful error handling or user feedback.
     """
-    # Open the input and output files
-    # ISSUE #2 (HINT): Not using context managers (with statements)
-    infile = open(input_file, "r")
-    outfile = open(output_file, "w")
 
-    # Read the CSV
-    # ISSUE #3 (HINT): Not handling CSV properly
-    reader = csv.reader(infile)
+    # Open files directly (Flaw: no context manager, potential resource leak).
+    f_in = open(source_file, "r")
+    f_out = open(destination_file, "w")
 
-    # Get the header row
-    header = next(reader)
+    reader = csv.reader(f_in)
+    writer = csv.writer(f_out)
 
-    # ISSUE #4 (HINT): No validation of filter_column
+    # Attempt to grab a header row
+    # (Flaw: no validation if header actually exists or is too short.)
+    header_row = next(reader)
 
-    # Find the index of the filter column
-    # ISSUE #5 (HINT): Error-prone way to find column index
-    filter_index = -1
-    for i, column in enumerate(header):
-        if column == filter_column:
-            filter_index = i
+    # (Flaw: no attempt to check if target_column is actually in the header.)
+    # We'll just do a naive scan to find the column index
+    col_idx = 0  # This is a guess that 'target_column' will be at index 0
+    for i, col_name in enumerate(header_row):
+        if col_name == target_column:
+            col_idx = i
             break
 
-    # ISSUE #6 (HINT): What if the column is not found?
+    # Write the header to the new file
+    writer.writerow(header_row)
 
-    # Write the header to the output file
-    # ISSUE #7 (HINT): Not using csv.writer
-    outfile.write(",".join(header) + "\n")
-
-    # Filter and write matching rows
+    # For each row, compare the value in col_idx
+    # (Flaw: no boundary checks for row length.)
     for row in reader:
-        # ISSUE #8 (HINT): Potential index error if row is too short
-        if row[filter_index] == filter_value:
-            outfile.write(",".join(row) + "\n")
+        if row[col_idx] == match_value:
+            writer.writerow(row)
 
-    # Close the files
-    # ISSUE #9 (HINT): Should use context managers instead
-    infile.close()
-    outfile.close()
-
-    # ISSUE #10 (HINT): No feedback to the user about the operation
+    # Close files (Flaw: lack of try-except or context manager)
+    f_in.close()
+    f_out.close()
 
 
 def main():
     """
-    Main function to parse arguments and run the CSV filter.
-
-    # ISSUE #11 (HINT): Inadequate command-line argument handling
+    Main function that parses arguments from sys.argv.
+    FLAWS/HINTS:
+        6) No robust command-line argument parsing.
+        7) Minimal feedback to the user.
+        8) No checks on number/type of arguments or file existence.
     """
-    # Check if we have the right number of arguments
-    if len(sys.argv) != 5:
+    if len(sys.argv) < 5:
         print(
-            "Usage: python filter_csv.py input_file output_file filter_column filter_value"
+            "Usage: python flawed_filter_alternative.py <input> <output> <column> <value>"
         )
         return 1
 
-    # Get the arguments
-    input_file = sys.argv[1]
-    output_file = sys.argv[2]
-    filter_column = sys.argv[3]
-    filter_value = sys.argv[4]
+    input_csv = sys.argv[1]
+    output_csv = sys.argv[2]
+    column_name = sys.argv[3]
+    desired_value = sys.argv[4]
 
-    # ISSUE #12 (HINT): No checking if files exist or can be opened
+    # Call the flawed extraction function
+    extract_rows(input_csv, output_csv, column_name, desired_value)
 
-    # Filter the CSV
-    # ISSUE #13 (HINT): No error handling around function call
-    filter_csv(input_file, output_file, filter_column, filter_value)
-
-    # ISSUE #14 (HINT): No indication of success or failure
-    print("Filtering complete.")
-
+    # (Flaw: no indication of how many rows matched or success/failure states.)
+    print("Extraction completed (possibly).")
     return 0
 
 
 if __name__ == "__main__":
-    # ISSUE #15 (HINT): Not capturing or using the return value
+    # (Flaw: return code is unused; no handling in a larger system.)
     main()

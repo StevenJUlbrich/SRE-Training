@@ -1,153 +1,117 @@
 #!/usr/bin/env python3
 """
-Flawed Log Analysis Script - Basic Scripting
+Structured Flawed Log Analysis Script
 
-This module contains a flawed implementation of a log file analyzer.
-There are several errors and inefficiencies that need to be identified and fixed.
-
-TASK:
-    - Review the code and identify the bugs and inefficiencies
-    - Fix the implementation to make it work correctly
-    - Consider error handling, validation, and output formatting improvements
-
-Common issues to look for:
-    - Missing error handling
-    - Inefficient code
-    - Incorrect pattern matching
-    - Poor code organization
+This script is designed to analyze a log file and produce a summary of error messages.
+It follows a structured approach with functions for argument parsing, analysis, searching,
+and reporting. However, certain subtleties have been intentionally overlooked.
+Examine the hints in the comments to identify potential improvements.
 """
 
+import argparse
 import re
 import sys
 
 
-def analyze_logs(log_file):
+def parse_args():
+    # Hint: argparse is used appropriately, but consider validating inputs further.
+    parser = argparse.ArgumentParser(
+        description="Analyze log files for error messages and generate a summary."
+    )
+    parser.add_argument("log_file", help="Path to the log file")
+    parser.add_argument(
+        "--search", type=str, help="Optional term to search for in the log"
+    )
+    parser.add_argument(
+        "--top", type=int, default=5, help="Number of top errors to display"
+    )
+    return parser.parse_args()
+
+
+def analyze_log_file(log_file_path):
     """
-    Analyze a log file and print the count of each error.
+    Analyze the log file to count error messages.
 
-    # ISSUE #1 (HINT): Missing error handling for file operations
+    Hints:
+    - Consider verifying that the file exists before opening.
+    - Using readlines() may not be optimal for very large files.
+    - File handles should ideally be managed with context managers.
     """
-    # Pattern to match error messages
-    # ISSUE #2 (HINT): Pattern may not be optimal or correct
-    pattern = re.compile("ERROR: (.*)")
+    # Flaw: No check for file existence and not using a context manager.
+    f = open(log_file_path, "r")
+    errors = {}
+    error_pattern = re.compile("ERROR: (.+)")
+    # Flaw: readlines() loads the entire file into memory.
+    lines = f.readlines()
+    f.close()
 
-    # Dictionary to store error counts
-    # ISSUE #3 (HINT): Could use a more efficient data structure
-    error_count = {}
-
-    # Open and read the log file
-    # ISSUE #4 (HINT): Not using context manager (with statement)
-    log_file = open(log_file, "r")
-
-    # ISSUE #5 (HINT): Reading the entire file at once could be memory-intensive
-    lines = log_file.readlines()
-
-    # Close the file
-    log_file.close()
-
-    # Iterate through each line
     for line in lines:
-        # Check for error messages
-        match = pattern.search(line)
+        match = error_pattern.search(line)
         if match:
-            error_msg = match.group(1)
-
-            # Increment error count
-            # ISSUE #6 (HINT): Inefficient way to count occurrences
-            if error_msg in error_count:
-                error_count[error_msg] += 1
+            error_msg = match.group(1).strip()
+            if error_msg in errors:
+                errors[error_msg] += 1
             else:
-                error_count[error_msg] = 1
-
-    # Print the results
-    # ISSUE #7 (HINT): Output formatting could be improved
-    print("Error Count:")
-    for error_msg, count in error_count.items():
-        print(f"{error_msg} occurred {count} times.")
-
-    # ISSUE #8 (HINT): No return value or summary information
+                errors[error_msg] = 1
+    return errors
 
 
-def search_errors(log_file, search_term):
+def search_log_file(log_file_path, term):
     """
-    Search for errors containing a specific term.
+    Search the log file for lines containing a specific term.
 
-    # ISSUE #9 (HINT): Function has duplicate code from analyze_logs
+    Hints:
+    - Consider using a context manager to handle file operations.
+    - Reflect on whether a case-insensitive search might be more useful.
     """
-    # Pattern to match error messages
-    pattern = re.compile("ERROR: (.*)")
-
-    # List to store matching errors
-    # ISSUE #10 (HINT): No deduplication of errors
-    matching_errors = []
-
-    # Open and read the log file
-    log_file = open(log_file, "r")
-
-    # Iterate through each line
-    for line in log_file:
-        # Check for error messages
-        match = pattern.search(line)
-        if match:
-            error_msg = match.group(1)
-
-            # Check if the error contains the search term
-            # ISSUE #11 (HINT): Case-sensitive search might not be desired
-            if search_term in error_msg:
-                matching_errors.append(error_msg)
-
-    # Close the file
-    log_file.close()
-
-    # Print the results
-    print(f"Errors containing '{search_term}':")
-    for error_msg in matching_errors:
-        print(f"- {error_msg}")
-
-    # ISSUE #12 (HINT): No return value
+    f = open(log_file_path, "r")
+    results = []
+    for line in f:
+        # Flaw: This search is case-sensitive.
+        if term in line:
+            results.append(line.strip())
+    f.close()
+    return results
 
 
-def get_error_timestamps(log_file):
+def generate_summary_report(errors, top_n):
     """
-    Get timestamps of errors in the log file.
+    Generate a formatted summary report of error counts.
 
-    # ISSUE #13 (HINT): Incomplete implementation
+    Hints:
+    - The report should clearly list the most frequent errors.
     """
-    # Pattern to match timestamps and errors
-    # ISSUE #14 (HINT): The pattern might miss some formats or be too restrictive
-    timestamp_pattern = re.compile(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}).*ERROR")
-
-    # ISSUE #15 (HINT): Function is just a stub, not implemented
+    report_lines = []
+    report_lines.append("=== Log Analysis Summary Report ===")
+    total_errors = sum(errors.values())
+    report_lines.append(f"Total Errors: {total_errors}")
+    report_lines.append("")
+    report_lines.append(f"Top {top_n} Errors:")
+    # Flaw: Sorting is done manually; consider more efficient approaches if scaling.
+    sorted_errors = sorted(errors.items(), key=lambda x: x[1], reverse=True)
+    for i, (err, count) in enumerate(sorted_errors[:top_n], 1):
+        report_lines.append(f"{i}. {err} - {count} occurrence(s)")
+    return "\n".join(report_lines)
 
 
 def main():
-    """
-    Main function to parse arguments and run the log analyzer.
+    args = parse_args()
 
-    # ISSUE #16 (HINT): Poor command-line argument handling
-    """
-    # Check arguments
-    if len(sys.argv) < 2:
-        print("Usage: python logs_analysis.py log_file [search_term]")
-        return 1
+    # Flaw: No error handling for file I/O; this could crash if the file is missing.
+    error_counts = analyze_log_file(args.log_file)
 
-    log_file = sys.argv[1]
+    # If a search term is provided, perform the search.
+    if args.search:
+        search_results = search_log_file(args.log_file, args.search)
+        print(f"Search results for '{args.search}':")
+        for result in search_results:
+            print(result)
+        print("")
 
-    # ISSUE #17 (HINT): No file existence check
-
-    # If we have a search term, search for matching errors
-    if len(sys.argv) > 2:
-        search_term = sys.argv[2]
-        search_errors(log_file, search_term)
-    else:
-        # Otherwise, analyze all errors
-        analyze_logs(log_file)
-
-    # ISSUE #18 (HINT): No error handling for function calls
-
+    report = generate_summary_report(error_counts, args.top)
+    print(report)
     return 0
 
 
 if __name__ == "__main__":
-    # ISSUE #19 (HINT): Not using the return value from main
-    main()
+    sys.exit(main())

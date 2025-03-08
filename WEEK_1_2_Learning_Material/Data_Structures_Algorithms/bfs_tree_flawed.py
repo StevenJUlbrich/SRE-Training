@@ -1,114 +1,152 @@
 #!/usr/bin/env python3
 """
-Flawed Breadth-First Search (BFS) Implementation - Data Structures & Algorithms
+Flawed Breadth-First Search (BFS) Tree Traversal - Learning Exercise
 
 This module contains a flawed implementation of BFS traversal on a binary tree.
-There are several errors and inefficiencies that need to be identified and fixed.
+The code contains several errors, inefficiencies, and poor practices.
 
-TASK:
-    - Review the code and identify the bugs and inefficiencies
-    - Fix the implementation to make it work correctly
-    - Consider edge cases and improvements
+Learning Task:
+    - Identify and fix algorithmic errors and inefficiencies
+    - Improve code organization and documentation
+    - Enhance error handling and edge cases
 
-Common issues to look for:
-    - Incorrect data structure usage
-    - Missing edge case handling
-    - Logic errors in the traversal algorithm
-    - Inefficient implementation
+Common issues demonstrated:
+    - Improper queue usage
+    - Incorrect traversal logic
+    - Inefficient data structures
+    - Poor error handling
+    - Missing documentation
 """
 
-# ISSUE #1 (HINT): The import might be incorrect or missing
-# We need a data structure to implement BFS properly
-import queue  # This is not the best choice for BFS
+# Missing proper imports
+import time
 
 
-class TreeNode:
-    """
-    A node in a binary tree.
-    """
-
-    def __init__(self, val=0, left=None, right=None):
-        """Initialize a new TreeNode with the given value and children."""
-        self.val = val
-        self.left = left
-        self.right = right
+# Poor class design - missing proper documentation and validation
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
 
-def bfs_traversal(root):
-    """
-    Perform a breadth-first search traversal on a binary tree.
-
-    # ISSUE #2 (HINT): The edge case handling might be incorrect or missing
-    """
-    # Try to handle empty tree - but this is not sufficient
-    if root is None:
-        return
+# Flawed BFS implementation with several issues
+def breadth_first_search(tree_root):
+    # Missing check for None input
 
     result = []
 
-    # ISSUE #3 (HINT): Using the wrong data structure for BFS
-    # A queue should be used for BFS, but this implementation uses a regular queue module
-    q = queue.Queue()
-    q.put(root)
+    # Using a list as a queue (inefficient for queue operations)
+    queue = [tree_root]
 
-    # ISSUE #4 (HINT): The traversal logic might have problems
-    while not q.empty():
-        # Get the front node
-        node = q.get()
+    while len(queue) > 0:
+        # Incorrect queue removal (using pop instead of pop(0) for FIFO behavior)
+        # This turns it into a stack (LIFO), resulting in DFS, not BFS
+        current = queue.pop()
 
-        # Add its value to result
-        result.append(node.val)
+        result.append(current.value)
 
-        # ISSUE #5 (HINT): The order of adding children might be incorrect
-        # In BFS, we typically process left child first then right child
-        if node.right:  # Adding right child first
-            q.put(node.right)
+        # Wrong order of adding children (right before left)
+        # This will affect the traversal order
+        if current.right:
+            queue.append(current.right)
 
-        if node.left:  # Adding left child second
-            q.put(node.left)
+        if current.left:
+            queue.append(current.left)
 
-    # ISSUE #6 (HINT): What if we want to return the result?
-    # The function doesn't return anything
-    print("BFS Traversal:", result)
+    return result
 
 
-def build_sample_tree():
-    """
-    Build a sample binary tree for demonstration.
+# Inefficient level tracking implementation
+def bfs_get_levels(root):
+    if root is None:
+        return []
 
-    Returns:
-        TreeNode: The root node of the sample tree
-    """
-    # ISSUE #7 (HINT): The tree construction might be incorrect
-    # This creates a tree, but not in the expected way
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.right = TreeNode(3)
-    root.left.left = TreeNode(4)
-    root.left.right = TreeNode(5)
-    # Missing additional nodes compared to the example
+    levels = []
+    current_level = []
+
+    # Using lists inefficiently
+    queue = [root]
+    next_level_queue = []
+
+    while queue:
+        # Pop from end (incorrect FIFO behavior)
+        node = queue.pop()
+        current_level.append(node.value)
+
+        # Adds children to a separate queue
+        if node.left:
+            next_level_queue.append(node.left)
+        if node.right:
+            next_level_queue.append(node.right)
+
+        # If current level is processed, move to next level
+        if not queue:
+            levels.append(current_level)
+            # Inefficient copying of the entire queue
+            queue = next_level_queue.copy()
+            next_level_queue = []
+            current_level = []
+
+    return levels
+
+
+# Poor helper function for creating a sample tree
+def create_tree():
+    # Hardcoded tree creation without flexibility
+    root = Node(1)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.left.left = Node(4)
+    root.left.right = Node(5)
+    root.right.right = Node(6)
+
+    # Inconsistent with documented example tree
+    # Missing node 7 under node 5
 
     return root
 
 
-def demonstrate_bfs():
-    """
-    Demonstrate BFS traversal on a sample binary tree.
+# Inefficient and error-prone tree printing function
+def print_tree(root):
+    # This doesn't actually print a tree structure
+    # It just does a recursive traversal
+    if root is None:
+        return
 
-    # ISSUE #8 (HINT): The demonstration might not handle all cases or might be incomplete
-    """
-    # Build a sample tree
-    tree = build_sample_tree()
+    print(root.value, end=" ")
 
-    # Perform BFS traversal
-    bfs_traversal(tree)
-
-    # ISSUE #9 (HINT): What about testing with an empty tree?
-    # No test with an empty tree
-
-    # ISSUE #10 (HINT): What about testing with a single node tree?
-    # No test with a single node tree
+    # Not actually printing a tree structure visually
+    print_tree(root.left)
+    print_tree(root.right)
 
 
-if __name__ == "__main__":
-    demonstrate_bfs()
+# Demonstration function with poor organization
+def demo():
+    print("BFS Tree Traversal Demo")
+
+    # Unnecessary sleeps in a demo function
+    time.sleep(1)
+
+    test_tree = create_tree()
+
+    # Incorrect description - this is actually doing a pre-order DFS due to the bug
+    print("BFS Traversal Result:")
+    print(breadth_first_search(test_tree))
+
+    time.sleep(1)
+
+    # No error handling if function fails
+    print("BFS with levels:")
+    levels = bfs_get_levels(test_tree)
+    print(levels)
+
+    # No comparison to other traversal methods
+    # No explanation of how BFS works or its applications
+
+    # Unnecessary computation that doesn't add value
+    print("Number of nodes:", len(breadth_first_search(test_tree)))
+
+
+# No proper main function encapsulation
+demo()

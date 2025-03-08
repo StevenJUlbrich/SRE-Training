@@ -1,159 +1,219 @@
 #!/usr/bin/env python3
 """
-Flawed Environment Setup Script - Basic Scripting
+Flawed Service Deployment Environment Setup - SRE Practice
 
-This module contains a flawed implementation of an environment setup script.
-There are several errors and inefficiencies that need to be identified and fixed.
+This script is intended to set up an environment for deploying microservices,
+but contains numerous flaws, anti-patterns, and reliability issues.
 
-TASK:
-    - Review the code and identify the bugs and inefficiencies
-    - Fix the implementation to make it work correctly
-    - Consider error handling, validation, and code organization improvements
+Learning Task:
+    - Identify and fix reliability, security, and maintainability issues
+    - Improve error handling, logging, and resource management
+    - Implement proper configuration and validation
 
-Common issues to look for:
-    - Missing error handling
-    - Inefficient code
-    - Security issues
-    - Poor code organization
+Common SRE issues demonstrated:
+    - Insufficient logging
+    - Poor error handling
+    - Resource leaks
+    - Security vulnerabilities
+    - Configuration problems
 """
 
+import json
 import os
+import random
+import socket
 import subprocess
 import sys
+import time
+
+# Global variables
+DB_PASSWORD = "password123"  # Hardcoded credentials
+SERVICES = ["api", "database", "cache", "worker"]
+DEBUG = True  # Hardcoded debug flag
+
+# Create a log file
+LOG_FILE = open("deployment.log", "w")  # Resource leak: never closed
 
 
-def install_dependencies(requirements_file):
-    """
-    Install Python dependencies using pip.
+def log_message(message):
+    """Log a message to the console and log file."""
+    print(message)
 
-    # ISSUE #1 (HINT): Missing error handling and validation
-    """
-    # ISSUE #2 (HINT): No check if the file exists
-
-    print(f"Installing dependencies from {requirements_file}...")
-
-    # Run pip command
-    # ISSUE #3 (HINT): Using os.system is less secure and provides little control
-    os.system(f"pip install -r {requirements_file}")
-
-    # ISSUE #4 (HINT): No verification of successful installation
-
-    print("Dependencies installed.")
+    # Write to log file without any error handling
+    LOG_FILE.write(message + "\n")
+    # No flush - potential for lost logs
 
 
-def setup_environment_variables(env_vars):
-    """
-    Set environment variables for the application.
+def check_system_requirements():
+    """Check if the system meets the deployment requirements."""
+    log_message("Checking system requirements...")
 
-    # ISSUE #5 (HINT): Limited scope of environment variables
-    """
-    # ISSUE #6 (HINT): No validation of env_vars
+    # Check Python version (incomplete check)
+    if sys.version_info.major < 3:
+        log_message("ERROR: Python 3 is required")
+        return False
 
-    print("Setting environment variables...")
+    # Check disk space (using shell=True which is a security risk)
+    if os.name == "posix":
+        df_output = subprocess.check_output("df -h /", shell=True).decode()
+        available = df_output.split("\n")[1].split()[3]
+        log_message(f"Available disk space: {available}")
 
-    # Set each environment variable
+    # Always return True even if checks fail
+    log_message("System requirements check passed")
+    return True
+
+
+def load_configuration(config_file="config.json"):
+    """Load configuration from a JSON file."""
+    log_message(f"Loading configuration from {config_file}...")
+
+    # No check if the file exists before trying to open it
+    try:
+        with open(config_file, "r") as f:
+            config = json.load(f)
+            log_message("Configuration loaded successfully")
+            return config
+    except FileNotFoundError:
+        # Create a default config instead of failing
+        log_message(f"Configuration file {config_file} not found. Using defaults.")
+        return {
+            "port": 8080,
+            "host": "localhost",
+            "timeout": 30,
+            "max_retries": 3,
+            "env": "development",
+        }
+    except json.JSONDecodeError:
+        # Using hardcoded config if JSON is invalid
+        log_message(f"Error parsing {config_file}. Using defaults.")
+        return {
+            "port": 8080,
+            "host": "localhost",
+            "timeout": 30,
+            "max_retries": 3,
+            "env": "development",
+        }
+
+
+def create_directories():
+    """Create the necessary directories."""
+    log_message("Creating directories...")
+
+    # Hardcoded directories
+    dirs = ["logs", "data", "config", "tmp"]
+
+    for directory in dirs:
+        # Using os.mkdir instead of os.makedirs - will fail if parent directory doesn't exist
+        if not os.path.exists(directory):
+            try:
+                os.mkdir(directory)
+                log_message(f"Created directory: {directory}")
+            except Exception as e:
+                # Generic exception handler with limited details
+                log_message(f"Error creating directory {directory}: {str(e)}")
+                # Continues despite errors
+        else:
+            log_message(f"Directory {directory} already exists")
+
+
+def check_port(port):
+    """Check if a port is available."""
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        sock.bind(("localhost", port))
+        log_message(f"Port {port} is available")
+        # Socket is not properly closed - resource leak
+    except socket.error:
+        log_message(f"ERROR: Port {port} is not available")
+    # No return value to indicate success or failure
+
+
+def install_dependencies():
+    """Install required dependencies."""
+    log_message("Installing dependencies...")
+
+    # Hardcoded requirements
+    packages = ["flask", "redis", "sqlalchemy", "requests"]
+
+    for package in packages:
+        # Using os.system which is vulnerable to command injection
+        cmd = f"pip install {package}"
+        log_message(f"Running: {cmd}")
+        exit_code = os.system(cmd)
+
+        if exit_code != 0:
+            log_message(f"WARNING: Failed to install {package}")
+            # Continues despite installation failure
+
+    # No verification that dependencies were actually installed correctly
+
+
+def setup_environment_variables(config):
+    """Set up environment variables."""
+    log_message("Setting up environment variables...")
+
+    # Setting sensitive information in environment variables
+    os.environ["DB_PASSWORD"] = DB_PASSWORD  # Using hardcoded global password
+
+    env_vars = {
+        "APP_ENV": config.get("env", "development"),
+        "DEBUG": "true" if DEBUG else "false",  # Using global DEBUG variable
+        "LOG_LEVEL": "DEBUG" if DEBUG else "INFO",
+        "TIMEOUT": str(config.get("timeout", 30)),
+        # Sensitive data in logs
+        "AUTH_TOKEN": f"token_{int(time.time())}_{random.randint(1000, 9999)}",
+    }
+
     for key, value in env_vars.items():
-        # ISSUE #7 (HINT): This only sets variables for the current process
         os.environ[key] = value
-        print(f"Set {key}={value}")
-
-    # ISSUE #8 (HINT): No warning about the limited scope of these variables
-
-
-def create_directories(directories):
-    """
-    Create directories for the application.
-
-    # ISSUE #9 (HINT): Missing error handling
-    """
-    # ISSUE #10 (HINT): No validation of directories parameter
-
-    print("Creating directories...")
-
-    # Create each directory
-    for directory in directories:
-        # ISSUE #11 (HINT): Doesn't handle existing directories well
-        os.mkdir(directory)
-        print(f"Created directory: {directory}")
-
-    # ISSUE #12 (HINT): No recursive directory creation (parents)
+        # Logging potentially sensitive environment variables
+        log_message(f"Set environment variable: {key}={value}")
 
 
-def run_setup_commands(commands):
-    """
-    Run a list of setup commands.
+def start_services():
+    """Start the required services."""
+    log_message("Starting services...")
 
-    # ISSUE #13 (HINT): Poor error handling and security concerns
-    """
-    # ISSUE #14 (HINT): No validation of commands parameter
+    # No dependency order considered
+    for service in SERVICES:
+        log_message(f"Starting {service} service...")
 
-    print("Running setup commands...")
+        # Simulate service startup
+        time.sleep(random.uniform(0.5, 2.0))
 
-    # Run each command
-    for command in commands:
-        print(f"Running: {command}")
-
-        # ISSUE #15 (HINT): Using os.system is less secure and provides little control
-        result = os.system(command)
-
-        # ISSUE #16 (HINT): Insufficient error checking
-        if result != 0:
-            print(f"Command failed with code {result}")
-
-    print("Setup commands completed.")
+        # 10% chance of service failing to start
+        if random.random() < 0.1:
+            log_message(f"ERROR: Failed to start {service} service")
+            # Critical failure but script continues anyway
+        else:
+            log_message(f"Successfully started {service} service")
 
 
 def setup_environment():
-    """
-    Set up the environment by installing dependencies, setting env variables,
-    creating directories, and running setup commands.
+    """Main function to set up the deployment environment."""
+    log_message("Starting deployment environment setup...")
 
-    # ISSUE #17 (HINT): Hardcoded configuration
-    """
-    print("Starting environment setup...")
+    # Check system requirements but ignore the result
+    check_system_requirements()
 
-    # Define the configuration
-    # ISSUE #18 (HINT): Hardcoded configuration should be in a separate config file
-    config = {
-        "requirements_file": "requirements.txt",
-        "env_vars": {
-            "APP_ENV": "development",
-            "DEBUG": "true",
-            "API_KEY": "secret_key_12345",  # ISSUE #19 (HINT): Hardcoded sensitive information
-        },
-        "directories": ["data", "logs", "config"],
-        "commands": [
-            "echo 'Setup starting...'",
-            "python --version",
-            "echo 'APP_ENV=' + os.environ.get('APP_ENV', '')",  # ISSUE #20 (HINT): This won't interpolate in the shell command
-        ],
-    }
+    # Load configuration
+    config = load_configuration()
 
-    # Run the setup steps
-    # ISSUE #21 (HINT): No error handling around function calls
-    install_dependencies(config["requirements_file"])
-    setup_environment_variables(config["env_vars"])
-    create_directories(config["directories"])
-    run_setup_commands(config["commands"])
+    # Set up components without checking for errors
+    create_directories()
+    check_port(config.get("port", 8080))
+    install_dependencies()
+    setup_environment_variables(config)
+    start_services()
 
-    print("Environment setup complete.")
-
-
-def main():
-    """
-    Main function to run the environment setup script.
-
-    # ISSUE #22 (HINT): Poor command-line handling and configuration options
-    """
-    # ISSUE #23 (HINT): No command-line arguments for configuration
-
-    # Run the setup
-    # ISSUE #24 (HINT): No error handling
-    setup_environment()
-
-    # ISSUE #25 (HINT): No return value to indicate success/failure
+    # No overall status check
+    log_message("Deployment environment setup completed")
+    # No return code to indicate success/failure
 
 
 if __name__ == "__main__":
-    # ISSUE #26 (HINT): Not using the return value from main
-    main()
+    # No command line arguments or options
+    setup_environment()
+
+    # Never close the log file - resource leak
