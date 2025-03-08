@@ -1,0 +1,38 @@
+2023-06-15 08:00:01 INFO: Application started
+2023-06-15 08:00:02 INFO: Configuration loaded from /etc/app/config.json
+2023-06-15 08:00:05 INFO: Connected to database successfully
+2023-06-15 08:01:15 INFO: User alice@example.com logged in
+2023-06-15 08:03:22 WARNING: High memory usage detected (85%)
+2023-06-15 08:05:30 INFO: Processing batch job #12345
+2023-06-15 08:06:45 ERROR: Database connection timeout
+2023-06-15 08:06:47 INFO: Retrying database connection (attempt 1)
+2023-06-15 08:06:50 INFO: Connected to database successfully
+2023-06-15 08:15:12 INFO: User bob@example.com logged in
+2023-06-15 08:17:36 ERROR: Failed to open file /var/data/reports/june2023.csv
+2023-06-15 08:18:03 INFO: User charlie@example.com logged in
+2023-06-15 08:25:45 WARNING: API rate limit at 80%
+2023-06-15 08:30:11 INFO: Scheduled backup started
+2023-06-15 08:32:51 ERROR: Permission denied: /backup/daily/20230615.zip
+2023-06-15 08:33:05 INFO: Changing backup location to /tmp/backup
+2023-06-15 08:33:20 INFO: Backup completed successfully at /tmp/backup/20230615.zip
+2023-06-15 08:40:02 WARNING: Disk usage above 90% on /var partition
+2023-06-15 08:42:17 INFO: Starting cleanup routine
+2023-06-15 08:42:45 INFO: Removed 15 temporary files
+2023-06-15 08:45:30 ERROR: Database connection timeout
+2023-06-15 08:45:32 INFO: Retrying database connection (attempt 1)
+2023-06-15 08:45:35 INFO: Connected to database successfully
+2023-06-15 08:50:22 INFO: User diana@example.com logged in
+2023-06-15 08:55:43 WARNING: Cache hit ratio below 50%
+2023-06-15 09:00:00 INFO: Hourly stats: 4 users logged in, 3 errors encountered
+2023-06-15 09:05:15 ERROR: Failed to load user preferences for user bob@example.com
+2023-06-15 09:10:33 INFO: Processing report generation request
+2023-06-15 09:11:02 ERROR: Report generation failed: invalid parameters
+2023-06-15 09:15:17 INFO: User eve@example.com logged in
+2023-06-15 09:20:45 ERROR: Database connection timeout
+2023-06-15 09:20:48 INFO: Retrying database connection (attempt 1)
+2023-06-15 09:20:53 INFO: Connected to database successfully
+2023-06-15 09:30:11 INFO: Cache refreshed successfully
+2023-06-15 09:45:23 WARNING: Message queue backlog growing (250+ messages)
+2023-06-15 09:50:08 ERROR: Failed to send notification to user frank@example.com
+2023-06-15 09:55:22 INFO: Starting queue processing job
+2023-06-15 10:00:00 INFO: Hourly stats: 2 users logged in, 3 errors encountered

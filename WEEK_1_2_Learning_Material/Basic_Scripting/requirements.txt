@@ -1,0 +1,16 @@
+# Core requirements for Basic Scripting section
+
+# For CSV processing
+pandas>=2.0.1
+
+# For improved command line interfaces
+argparse>=1.4.0
+
+# For colorful terminal output
+colorama>=0.4.6
+
+# For parsing and manipulating dates
+python-dateutil>=2.8.2
+
+# For testing
+pytest>=7.3.1
