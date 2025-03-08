@@ -89,6 +89,70 @@ If you want to preview a certain number of rows from the filtered output, use th
 python filter_csv_example.py input.csv output.csv City "New York" --preview 5
 ```
 
+## 2. Logs Analysis Example Usage Examples
+
+Below are practical ways to run the script. Let us assume the folder structure is:
+
+```text
+project_root/
+├── examples/
+│   └── logs_analysis_example.py
+└── sample_data/
+    └── app.log
+```
+
+### 2.1. Basic Analysis
+
+1. **Navigate into the `examples/` directory**:
+
+   ```bash
+   cd project_root/examples
+   ```
+
+2. **Run the script** with your log file specified by a relative path:
+
+   ```bash
+   python logs_analysis_example.py ../sample_data/app.log
+   ```
+
+**What happens:**
+
+- The script prints a summary of how many errors occurred in the log.
+- Shows which hour saw the highest number of errors.
+- Displays the top 5 most frequent error messages by default.
+
+### 2.2. Controlling the Number of Top Errors
+
+If you want to display the top 3 errors instead of the default 5:
+
+```bash
+python logs_analysis_example.py ../sample_data/app.log --top 3
+```
+
+### 2.3. Searching the Logs
+
+To search for a specific pattern in the logs (for instance, any line mentioning “database”):
+
+```bash
+python logs_analysis_example.py ../sample_data/app.log --search database
+```
+
+The script will include a “Search Results” section in the report, showing lines where your specified pattern appears.
+
+### 2.4. Saving the Report to a File
+
+If you want to write the analysis output to a file called `analysis_report.txt`:
+
+```bash
+python logs_analysis_example.py ../sample_data/app.log --output ../sample_data/analysis_report.txt
+```
+
+You can also combine multiple options, e.g.:
+
+```bash
+python logs_analysis_example.py ../sample_data/app.log --top 5 --search database --output ../sample_data/analysis_report.txt
+```
+
 ## Additional Resources
 
 - [Python CSV Module Documentation](https://docs.python.org/3/library/csv.html)
