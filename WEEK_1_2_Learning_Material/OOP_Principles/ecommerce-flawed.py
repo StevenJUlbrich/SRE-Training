@@ -1,160 +1,225 @@
 #!/usr/bin/env python3
 """
-Flawed E-commerce OOP Implementation - Object-Oriented Programming Principles
+Flawed E-commerce OOP Implementation - Learning Exercise
 
-This module contains a flawed implementation of a simple e-commerce system.
-There are several violations of OOP principles that need to be identified and fixed.
+This module contains a flawed implementation of a simple e-commerce system
+that demonstrates common mistakes in object-oriented programming.
 
-TASK:
-    - Review the code and identify OOP principle violations
-    - Fix the implementation to follow proper OOP principles
-    - Improve encapsulation, responsibility separation, and class relationships
+Learning Task:
+    - Identify and fix OOP design and implementation issues
+    - Improve encapsulation and data protection
+    - Fix relationship modeling between classes
+    - Address validation and error handling issues
+    - Implement proper OOP principles
 
-Common issues to look for:
+Common issues demonstrated:
     - Poor encapsulation
-    - Violation of Single Responsibility Principle
-    - Improper class relationships
+    - Improper inheritance vs. composition
     - Missing validation
-    - Inefficient or redundant code
+    - Inconsistent state management
+    - Tight coupling between classes
 """
 
-# ISSUE #1 (HINT): Missing proper import for decimal handling
-# Should use Decimal for monetary values
+import datetime
+
+# Missing proper imports for Decimal, missing type hints
 
 
-class Product:
-    """
-    Represents a product in the e-commerce system.
-    
-    # ISSUE #2 (HINT): Lacks proper encapsulation
-    """
-    
+# Base class that's not really needed - demonstrates inheritance misuse
+class BaseItem:
+    """Base class for items in the system."""
+
+    def __init__(self, item_id, name):
+        self.id = item_id
+        self.name = name
+
+
+# Product inherits from BaseItem unnecessarily
+class Product(BaseItem):
+    """Represents a product in the e-commerce system."""
+
     def __init__(self, product_id, name, price, description=""):
-        """Initialize a new Product."""
-        self.product_id = product_id
-        self.name = name
-        self.price = price  # ISSUE: Direct attribute access without validation
+        # Call parent constructor
+        super().__init__(product_id, name)
+
+        # No validation for price
+        self.price = price  # Public attribute with no protection
         self.description = description
-        self.inventory_count = 0  # ISSUE: Public attribute for sensitive data
-    
-    # ISSUE #3 (HINT): Missing validation methods for price and inventory
-    
-    def display_info(self):
-        """Display product information."""
-        print(f"Product ID: {self.product_id}")
-        print(f"Name: {self.name}")
-        print(f"Price: ${self.price}")
-        print(f"Description: {self.description}")
-        print(f"In Stock: {self.inventory_count}")
-        # ISSUE: This method mixes business logic with presentation
+        self.inventory = 0  # Public attribute with no protection
+
+    # No property decorator for encapsulation
+
+    def add_inventory(self, quantity):
+        # No validation for negative quantity
+        self.inventory += quantity
+
+    def remove_inventory(self, quantity):
+        # Improper validation - allows inventory to go negative
+        self.inventory -= quantity
+        return True  # Always returns True even if there's not enough inventory
+
+    # Missing is_in_stock method
+
+    def __str__(self):
+        return f"{self.name} (ID: {self.id}, ${self.price})"
 
 
+# OrderItem - poorly designed with no validation
+class OrderItem:
+    """Represents an item in an order."""
+
+    def __init__(self, product, quantity):
+        # No validation for quantity
+        self.product = product
+        self.quantity = quantity
+        # Doesn't store the unit price at time of order
+
+    def subtotal(self):
+        # Uses current product price, not price at time of order
+        return self.product.price * self.quantity
+
+    # Missing __str__ method
+
+
+# Order - has design flaws and logic issues
 class Order:
-    """
-    Represents an order in the e-commerce system.
-    
-    # ISSUE #4 (HINT): This class is doing too much (violates Single Responsibility)
-    """
-    
-    def __init__(self, order_id, customer_name, customer_email):
-        """Initialize a new Order."""
-        self.order_id = order_id
-        self.customer_name = customer_name
-        self.customer_email = customer_email  # ISSUE: Order shouldn't store customer details
-        self.items = []  # List of tuples (product, quantity)
+    """Represents an order in the e-commerce system."""
+
+    # Global counter - breaks encapsulation and creates shared state
+    order_counter = 0
+
+    def __init__(self, customer):
+        # Generate order ID using class variable
+        Order.order_counter += 1
+        self.order_id = f"ORD-{Order.order_counter}"
+
+        # Direct reference to Customer object creates tight coupling
+        self.customer = customer
+        self.items = []
+        self.order_date = datetime.datetime.now()
         self.status = "Created"
-    
+
     def add_item(self, product, quantity):
-        """Add a product to the order."""
-        # ISSUE #5 (HINT): Missing validation and inventory check
-        self.items.append((product, quantity))
-        
-        # ISSUE: Direct manipulation of product inventory without checks
-        product.inventory_count -= quantity
-    
-    def calculate_total(self):
-        """Calculate the total cost of the order."""
+        # No validation for quantity
+        # No check if product has enough inventory
+
+        # Directly modifies product inventory without using product's methods
+        product.inventory -= quantity
+
+        # Add item to order
+        self.items.append(OrderItem(product, quantity))
+        return True
+
+    def total_cost(self):
         total = 0
-        for product, quantity in self.items:
-            # ISSUE #6 (HINT): Direct attribute access and float for money
-            total += product.price * quantity
+        for item in self.items:
+            # Inefficient calculation - should use item.subtotal()
+            total += item.product.price * item.quantity
         return total
-    
+
+    # Missing item_count method
+
     def complete_order(self):
-        """Complete the order."""
         self.status = "Completed"
-        
-        # ISSUE: Sends email directly from Order class (too much responsibility)
-        self.send_confirmation_email()
-    
-    def send_confirmation_email(self):
-        """Send a confirmation email to the customer."""
-        # ISSUE #7 (HINT): This should be in a separate service class
-        print(f"Sending confirmation email to {self.customer_email}...")
-        # Email sending logic would go here
-    
+        # Directly accesses and modifies customer's orders
+        self.customer.orders.append(self)
+
     def cancel_order(self):
-        """Cancel the order."""
-        # ISSUE #8 (HINT): Incomplete cancellation logic
+        if self.status == "Cancelled":
+            return
+
+        # Return items to inventory by directly modifying the inventory
+        for item in self.items:
+            item.product.inventory += item.quantity
+
         self.status = "Cancelled"
-        # Missing: Return items to inventory
+
+        # Removes itself from customer's orders - creates risk of inconsistent state
+        if self in self.customer.orders:
+            self.customer.orders.remove(self)
+
+    # Missing proper __str__ method with detailed output
 
 
-class Customer:
-    """
-    Represents a customer in the e-commerce system.
-    
-    # ISSUE #9 (HINT): Poor relationship with Order class
-    """
-    
+# Customer - poor design and encapsulation
+class Customer(BaseItem):  # Unnecessary inheritance
+    """Represents a customer in the e-commerce system."""
+
     def __init__(self, customer_id, name, email):
-        """Initialize a new Customer."""
-        self.customer_id = customer_id
-        self.name = name
+        super().__init__(customer_id, name)
+
+        # No validation for email format
         self.email = email
-        # ISSUE: No way to track customer orders
-    
-    # ISSUE #10 (HINT): Missing methods to manage customer orders
+        self.orders = []  # Public attribute with no protection
+
+    # Missing place_order method - orders are added directly in Order.complete_order
+
+    def get_order_history(self):
+        return self.orders
+
+    def get_total_spent(self):
+        # Incorrect calculation - doesn't check for completed orders only
+        return sum(order.total_cost() for order in self.orders)
+
+    # Missing __str__ method
 
 
+# Global function to demonstrate the system - has logical flaws
 def demonstrate_ecommerce():
-    """
-    Demonstrate the e-commerce system.
-    
-    # ISSUE #11 (HINT): Demonstration code has issues
-    """
-    # Create some products
-    laptop = Product(101, "Laptop", 1200.0, "High-performance laptop")
-    mouse = Product(102, "Mouse", 25.5, "Wireless mouse")
-    
+    """Demonstrate the OOP-based e-commerce model with a sample workflow."""
+
+    # Create some products with no proper decimal handling
+    laptop = Product(101, "Laptop", 1200.00, "High-performance laptop")
+    mouse = Product(102, "Mouse", 25.50, "Wireless mouse")
+    headphones = Product(103, "Headphones", 89.99, "Noise-cancelling headphones")
+
     # Add inventory
-    laptop.inventory_count = 5  # ISSUE: Direct attribute manipulation
-    mouse.inventory_count = 20
-    
+    laptop.add_inventory(5)
+    mouse.add_inventory(20)
+    headphones.add_inventory(10)
+
     # Create a customer
     alice = Customer("C001", "Alice Smith", "alice@example.com")
-    
-    # Create an order
-    # ISSUE: Order is created with redundant customer information
-    order = Order("ORD-001", alice.name, alice.email)
-    
-    # Add items to the order
-    order.add_item(laptop, 1)
-    order.add_item(mouse, 2)
-    
-    # ISSUE: No connection between customer and order
-    
-    # Calculate and display the total
-    total = order.calculate_total()
-    print(f"Order total: ${total}")
-    
-    # Complete the order
-    order.complete_order()
-    
-    # Display inventory (which may be incorrect due to lack of validation)
-    print(f"Laptop inventory: {laptop.inventory_count}")
-    print(f"Mouse inventory: {mouse.inventory_count}")
+
+    # Create an order with logical inconsistency
+    # Order should be associated with customer name, not the customer object
+    order_1 = Order(alice)
+
+    # Add items to the order with no error checking
+    order_1.add_item(laptop, 1)
+    order_1.add_item(mouse, 2)
+
+    # Complete the order - this will automatically add the order to customer
+    order_1.complete_order()
+
+    # Create another order
+    order_2 = Order(alice)
+
+    # Add items to the second order
+    order_2.add_item(headphones, 1)
+
+    # Place the second order
+    order_2.complete_order()
+
+    # Cancel the second order
+    order_2.cancel_order()
+
+    # Display results with minimal formatting and explanation
+    print("Products:")
+    print(laptop)
+    print(mouse)
+    print(headphones)
+
+    print("Customer:")
+    print(f"{alice.name} (ID: {alice.id})")
+    print(f"Total spent: ${alice.get_total_spent()}")
+
+    print("Orders:")
+    for order in alice.orders:
+        print(
+            f"Order {order.order_id} - Status: {order.status} - Total: ${order.total_cost()}"
+        )
 
 
-if __name__ == "__main__":
-    demonstrate_ecommerce()
+# No proper main guard
+demonstrate_ecommerce()

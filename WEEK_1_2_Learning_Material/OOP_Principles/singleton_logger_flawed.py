@@ -1,131 +1,183 @@
 #!/usr/bin/env python3
 """
-Flawed Singleton Logger Implementation - Object-Oriented Programming Principles
+Flawed Singleton Logger Implementation - Learning Exercise
 
 This module contains a flawed implementation of the Singleton design pattern
-for a logging system. There are several issues with the Singleton implementation
-and other OOP principles that need to be identified and fixed.
+for a logging system. It demonstrates common mistakes and misunderstandings
+when implementing this pattern.
 
-TASK:
-    - Review the code and identify issues with the Singleton implementation
-    - Fix the implementation to create a proper thread-safe Singleton
-    - Improve encapsulation and class design
+Learning Task:
+    - Identify and fix issues with the Singleton implementation
+    - Improve thread safety
+    - Correct object instantiation control
+    - Address potential memory leaks and performance issues
+    - Implement proper encapsulation
 
-Common issues to look for:
-    - Incorrect Singleton implementation
-    - Thread-safety problems
+Common issues demonstrated:
+    - Improper Singleton implementation
+    - Thread safety problems
+    - Incorrect class vs instance methods
     - Poor encapsulation
-    - Inefficient code
+    - Inefficient log storage
 """
 
 import threading
 import time
 from datetime import datetime
 
-# ISSUE #1 (HINT): Missing proper level management
-# Should use an enum or constants for log levels
+# No proper enum usage for log levels - using strings instead
+LOG_LEVEL_DEBUG = "DEBUG"
+LOG_LEVEL_INFO = "INFO"
+LOG_LEVEL_WARNING = "WARNING"
+LOG_LEVEL_ERROR = "ERROR"
+LOG_LEVEL_CRITICAL = "CRITICAL"
+
+# Global dictionary to map string levels to numeric values
+# This approach is error-prone and hard to maintain
+LOG_LEVEL_VALUES = {
+    LOG_LEVEL_DEBUG: 1,
+    LOG_LEVEL_INFO: 2,
+    LOG_LEVEL_WARNING: 3,
+    LOG_LEVEL_ERROR: 4,
+    LOG_LEVEL_CRITICAL: 5,
+}
 
 
 class Logger:
     """
     A flawed implementation of a Singleton logger.
 
-    # ISSUE #2 (HINT): This implementation of Singleton has problems
+    This implementation has several issues that prevent it from being
+    a proper Singleton and thread-safe logger.
     """
 
-    # Class variable to store the instance
+    # Class variable but not properly protected
     instance = None
 
-    # ISSUE #3 (HINT): Missing lock for thread safety
+    # Missing proper thread lock for synchronization
 
-    def __init__(self):
+    def __init__(self, name="DefaultLogger"):
         """Initialize a new Logger instance."""
-        # ISSUE #4 (HINT): This allows creating multiple instances
-        # Should check if an instance already exists
+        # No prevention of direct instantiation
 
-        # Initialize instance variables
-        self.log_entries = []
-        self.min_level = 1  # 0=DEBUG, 1=INFO, 2=WARNING, 3=ERROR, 4=CRITICAL
+        # Poor encapsulation - using public attributes
+        self.name = name
+        self.logs = []
+        self.level = LOG_LEVEL_INFO
 
-    @staticmethod
-    def get_instance():
+    # Flawed Singleton implementation - doesn't use classmethod decorator
+    def get_instance(self, name="DefaultLogger"):
         """
         Get the singleton instance of the Logger.
 
-        # ISSUE #5 (HINT): This method doesn't ensure thread safety
+        This method is flawed as it's an instance method, not a class method.
         """
+        # Not thread-safe without a lock
         if Logger.instance is None:
-            # ISSUE: Not thread-safe - race condition possible here
-            Logger.instance = Logger()
+            Logger.instance = Logger(name)
         return Logger.instance
 
-    # ISSUE #6 (HINT): Missing proper log level methods
+    # Incorrect setter method - missing validation
+    def set_level(self, level):
+        """Set the minimum log level to display."""
+        # No validation if level is a valid log level
+        self.level = level
 
-    def log(self, level, message):
-        """
-        Log a message at the specified level.
-
-        # ISSUE #7 (HINT): Level handling is numeric and error-prone
-        """
-        level_names = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
-
-        if level >= self.min_level:
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-            # ISSUE #8 (HINT): Thread name isn't captured
-
-            # Create log entry
-            log_entry = {
-                "timestamp": timestamp,
-                "level": level_names[level],
-                "message": message,
-            }
-
-            # Add to log entries
-            self.log_entries.append(log_entry)
-
-            # Print the log entry
-            print(f"[{timestamp}] [{level_names[level]}] {message}")
-
+    # Log methods that don't properly use the internal _log method
     def debug(self, message):
         """Log a debug message."""
-        self.log(0, message)
+        # Direct implementation instead of reusing _log
+        if LOG_LEVEL_VALUES[LOG_LEVEL_DEBUG] >= LOG_LEVEL_VALUES[self.level]:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            thread_name = threading.current_thread().name
+
+            # Inconsistent log format compared to other levels
+            log_entry = f"{timestamp} - DEBUG - {message}"
+            self.logs.append(log_entry)
+
+            print(f"[{timestamp}] [DEBUG] [{thread_name}] {message}")
 
     def info(self, message):
         """Log an info message."""
-        self.log(1, message)
+        self._log(LOG_LEVEL_INFO, message)
 
     def warning(self, message):
         """Log a warning message."""
-        self.log(2, message)
+        self._log(LOG_LEVEL_WARNING, message)
 
     def error(self, message):
         """Log an error message."""
-        self.log(3, message)
+        self._log(LOG_LEVEL_ERROR, message)
 
     def critical(self, message):
         """Log a critical message."""
-        self.log(4, message)
+        self._log(LOG_LEVEL_CRITICAL, message)
 
-    # ISSUE #9 (HINT): Logs are publicly accessible
-    # No encapsulation of log_entries
+    def _log(self, level, message):
+        """Internal method to log a message."""
+        # Improper level check using hardcoded dictionary
+        if LOG_LEVEL_VALUES[level] >= LOG_LEVEL_VALUES[self.level]:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            thread_name = threading.current_thread().name
+
+            # Inconsistent log entry format (different from debug)
+            log_entry = {
+                "timestamp": timestamp,
+                "level": level,
+                "thread": thread_name,
+                "message": message,
+            }
+
+            # Direct list manipulation - not thread-safe
+            self.logs.append(log_entry)
+
+            print(f"[{timestamp}] [{level}] [{thread_name}] {message}")
+
+    # No method to safely retrieve logs
+
+    def clear_logs(self):
+        """Clear all logged entries."""
+        # Not thread-safe
+        self.logs = []
+
+
+# Global logger instance - breaks the Singleton pattern
+global_logger = None
+
+
+def get_logger(name="DefaultLogger"):
+    """
+    A global function to get the logger instance.
+
+    This approach undermines the Singleton pattern and creates confusion
+    about how to access the logger.
+    """
+    global global_logger
+    if global_logger is None:
+        global_logger = Logger(name)
+    return global_logger
 
 
 def worker_function(worker_id):
     """
     A sample worker function that uses the logger.
 
-    # ISSUE #10 (HINT): This might not use the logger correctly
+    This function demonstrates incorrect access to the logger singleton.
     """
-    # ISSUE: Creating a new logger each time (doesn't use get_instance)
-    logger = Logger()
+    # Inconsistent way to access the logger - sometimes using the global function,
+    # sometimes using the class method
+    if worker_id % 2 == 0:
+        logger = get_logger()
+    else:
+        # This creates a new logger instance, not getting the singleton
+        logger = Logger()
+        logger = logger.get_instance()
 
     logger.info(f"Worker {worker_id} started")
 
     # Simulate some work
     time.sleep(0.1 * worker_id)
 
-    # Log based on worker id
     if worker_id % 2 == 0:
         logger.debug(f"Worker {worker_id} is doing even-numbered work")
     else:
@@ -140,19 +192,18 @@ def worker_function(worker_id):
 
 def demonstrate_singleton_logger():
     """
-    Demonstrate the flawed Singleton Logger with multiple threads.
+    Demonstrate the Singleton Logger with multiple threads.
     """
-    # Get the logger instance
-    # ISSUE #11 (HINT): Not using the get_instance method consistently
-    logger = Logger()
-    logger.min_level = 0  # Show all log levels
+    # Inconsistent logger access - not using the Singleton properly
+    main_logger = Logger("MainLogger")
+    main_logger.set_level(LOG_LEVEL_DEBUG)
 
-    logger.info("Starting the demonstration")
+    main_logger.info("Starting the demonstration")
 
     # Create some threads to simulate concurrent access
     threads = []
     for i in range(5):
-        thread = threading.Thread(target=worker_function, args=(i,))
+        thread = threading.Thread(target=worker_function, args=(i,), name=f"Worker-{i}")
         threads.append(thread)
 
     # Start the threads
@@ -163,18 +214,22 @@ def demonstrate_singleton_logger():
     for thread in threads:
         thread.join()
 
-    logger.info("All workers have completed")
+    main_logger.info("All workers have completed")
 
-    # ISSUE #12 (HINT): No demonstration of singleton property
-    # Should show that multiple calls to get_instance() return the same object
+    # This will show that we don't have a true Singleton
+    logger1 = Logger("Logger1")
+    logger2 = Logger("Logger2")
 
-    # Show log entries
-    print("\nLog Entries:")
-    for entry in logger.log_entries:
-        print(f"[{entry['timestamp']}] [{entry['level']}] {entry['message']}")
+    print("\nSingleton Check:")
+    print(f"logger1 is logger2: {logger1 is logger2}")  # Will be False
 
-    # ISSUE #13 (HINT): This will show incorrect results
-    # Due to thread safety issues and not using get_instance consistently
+    # No demonstration of direct instantiation prevention since it's not implemented
+
+    # Brief explanation of the intended pattern
+    print("\nSingleton Pattern (As Intended):")
+    print("1. Only one instance should exist throughout the application")
+    print("2. Global access point via a class method or global function")
+    print("3. Thread-safe implementation (not in this flawed version)")
 
 
 if __name__ == "__main__":
