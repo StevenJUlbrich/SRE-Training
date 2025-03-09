@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## BFS FLAWED NOTES
 
-### For Students (Different Skill Levels)
+### For Students (Different Skill Levels) BFS
 
 **Beginner:**
 
@@ -96,7 +96,7 @@ This exercise builds on the same principles as the environment setup exercise bu
 
 ## LINKED LIST FLAWED NOTES
 
-## For Students (Different Skill Levels)
+### For Students (Different Skill Levels) LINKED LIST
 
 **Beginner:**
 
@@ -116,7 +116,7 @@ This exercise builds on the same principles as the environment setup exercise bu
 - Analyze and optimize the time and space complexity
 - Add additional linked list operations (e.g., merge, sort)
 
-### Key Issues in the Flawed Implementation
+### Key Issues in the Flawed Implementation Link List
 
 1. **Broken prepend method**: Doesn't connect the new node to the existing list
 2. **Incorrect pointer manipulation**: Several methods have bugs in how they update pointers
@@ -130,3 +130,36 @@ This exercise builds on the same principles as the environment setup exercise bu
 10. **Poor error handling**: May raise exceptions when trying to access non-existent nodes
 
 This exercise not only teaches linked list implementation but also reinforces general programming best practices like proper documentation, consistent naming, error handling, and efficiency considerations.
+
+## For Students (Different Skill Levels) Two Sum
+
+**Beginner:**
+
+- Fix basic logical errors in the brute force implementation
+- Add proper input validation
+- Ensure correct handling of edge cases
+
+**Intermediate:**
+
+- Implement the hash map-based solution
+- Analyze and compare time and space complexity
+- Create comprehensive test cases
+
+**Advanced:**
+
+- Implement and compare all three approaches (brute force, hash map, two-pointer)
+- Analyze trade-offs between solutions
+- Extend to related problems (e.g., Three Sum, Four Sum)
+
+## Key Issues in the Flawed Implementation Two Sum
+
+1. **Inefficient algorithm**: Uses nested loops with O(n²) time complexity
+2. **Incorrect loop bounds**: Doesn't check all possible pairs
+3. **Missing input validation**: Doesn't handle empty lists or invalid inputs
+4. **Index confusion**: Mixes 0-indexed and 1-indexed approaches
+5. **Self-pairing bug**: May use the same element twice in `two_sum_alternative`
+6. **Inconsistent return values**: Returns different types in different cases
+7. **Limited test cases**: Doesn't test edge cases or special scenarios
+8. **No proper error handling**: Missing exception handling and proper output
+
+This exercise helps students develop skills in algorithm optimization, debugging, and testing - core competencies for software engineers and particularly valuable for technical interviews.

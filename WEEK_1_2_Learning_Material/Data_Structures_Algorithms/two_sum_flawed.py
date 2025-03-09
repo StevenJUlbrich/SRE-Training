@@ -1,91 +1,95 @@
 #!/usr/bin/env python3
 """
-Flawed Two Sum Implementation - Data Structures & Algorithms
+Flawed Two Sum Implementation - Algorithms Practice
 
-This module contains a flawed implementation of the Two Sum problem:
-Given an array of integers and a target value, find two numbers in the array
-that add up to the target and return their indices.
+This module contains a flawed implementation of the Two Sum problem.
+The task is to find indices of two numbers that add up to a target sum.
 
-TASK:
-    - Review the code and identify the bugs and inefficiencies
-    - Fix the implementation to make it work correctly
-    - Consider optimizations and improvements
+Learning Task:
+    - Identify algorithmic inefficiencies
+    - Spot logical errors and edge cases
+    - Improve time and space complexity
+    - Fix bugs in implementation
 
-Common issues to look for:
-    - Logic errors
-    - Inefficient algorithms
-    - Edge case handling
-    - Incorrect return values
+Common issues demonstrated:
+    - Inefficient brute force approach
+    - Incorrect handling of edge cases
+    - Off-by-one errors
+    - Improper return values
+    - Missing validation
 """
 
 
+# Inefficient brute force implementation
 def two_sum(nums, target):
-    """
-    Find two numbers in the list that add up to the target.
+    # No input validation for empty lists or non-numeric values
 
-    # ISSUE #1 (HINT): This implementation has inefficient time complexity
-    """
-    # Attempt to solve the problem
+    # Incorrect loop bounds - doesn't check all combinations
+    for i in range(len(nums) - 1):
+        # Only checks adjacent elements, missing many valid pairs
+        j = i + 1
+
+        # Checks only one pair per outer loop iteration
+        if nums[i] + nums[j] == target:
+            # Found a pair that sums to target
+            # Return the indices incorrectly (0-indexed vs 1-indexed confusion)
+            return [i + 1, j + 1]
+
+    # No return value if no solution is found
+    # Should return None or empty list or raise an exception
+
+
+# Alternative inefficient implementation
+def two_sum_alternative(nums, target):
+    # Incorrect handling for empty list
+    if len(nums) == 0:
+        # Should return None or empty list or raise an exception
+        return "Error: Empty list provided"
+
+    # Inefficient nested loops (O(n²) time complexity)
     for i in range(len(nums)):
-        # ISSUE #2 (HINT): This doesn't avoid using the same element twice
+        # Bug: includes comparing an element with itself
         for j in range(len(nums)):
-            # Check if we've found a pair that adds up to the target
+            # Should skip when i == j to avoid using the same element twice
+
+            # Check if pair sums to target
             if nums[i] + nums[j] == target:
-                return [i, j]  # Return the indices
+                # Incorrect validation before returning
+                # Doesn't check if i and j are the same index
+                return [i, j]
 
-    # ISSUE #3 (HINT): What if no solution is found?
-    # Function doesn't handle the case where no solution exists
-
-
-def two_sum_hash(nums, target):
-    """
-    Find two numbers in the list that add up to the target using a dictionary.
-
-    # ISSUE #4 (HINT): This implementation has flawed logic
-    """
-    # Create a dictionary to store values
-    seen = {}
-
-    # Iterate through the array
-    for i, num in enumerate(nums):
-        # ISSUE #5 (HINT): The complement calculation and lookup might be incorrect
-        # Calculate the complement needed
-        complement = target + num  # This is incorrect
-
-        # Look up the complement in the dictionary
-        if complement in seen:
-            # ISSUE #6 (HINT): The return order might be incorrect
-            return [i, seen[complement]]  # Order of indices is swapped
-
-        # Add the current number to the dictionary
-        seen[num] = i
-
-    # If no solution is found
-    return None  # ISSUE #7 (HINT): Inconsistent return type
+    # Correct handling for no solution, but inconsistent return type
+    return "No solution found"
 
 
-def demonstrate_two_sum():
-    """
-    Demonstrate the two sum implementations.
+# Function to test the implementation
+def test_two_sum():
+    # Limited test cases, missing edge cases
+    test_cases = [
+        {"nums": [2, 7, 11, 15], "target": 9, "expected": [0, 1]},
+        # Missing test cases for:
+        # - Empty list
+        # - No solution
+        # - Multiple possible solutions
+        # - Negative numbers
+        # - Duplicate numbers
+    ]
 
-    # ISSUE #8 (HINT): The test cases might not cover all scenarios
-    """
-    # Test cases
-    nums = [2, 7, 11, 15]
-    target = 9
+    for tc in test_cases:
+        nums = tc["nums"]
+        target = tc["target"]
+        expected = tc["expected"]
 
-    # Test the regular approach
-    result1 = two_sum(nums, target)
-    print(f"Regular approach: {result1}")
+        # Test the main implementation
+        result = two_sum(nums, target)
 
-    # Test the hash table approach
-    result2 = two_sum_hash(nums, target)
-    print(f"Hash table approach: {result2}")
-
-    # ISSUE #9 (HINT): No test with an empty array or no solution
-
-    # ISSUE #10 (HINT): No performance comparison between approaches
+        # Incorrect comparison - doesn't consider order of indices
+        # Also doesn't handle case when two_sum returns None
+        if result == expected:
+            print(f"PASS: two_sum({nums}, {target}) = {result}")
+        else:
+            print(f"FAIL: two_sum({nums}, {target}) = {result}, expected {expected}")
 
 
-if __name__ == "__main__":
-    demonstrate_two_sum()
+# Call the test function without proper main guard
+test_two_sum()
