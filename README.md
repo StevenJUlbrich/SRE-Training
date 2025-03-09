@@ -24,9 +24,10 @@ Guiding Principles
   o	Prepare participants for behavioral interview questions relevant to large enterprise contexts.
 
 ## PHASE 1: FOUNDATION (MONTHS 1–3)
-Month 1: Software Engineering Fundamentals & Version Control
 
-## WEEKS 1–2: PROGRAMMING REFRESHER
+## Software Engineering Fundamentals & Version Control
+
+### WEEKS 1–2: PROGRAMMING REFRESHER
 
 •	Data Structures & Algorithms
   o	Reinforce basics (arrays, lists, trees, graphs, searching/sorting) with an emphasis on whiteboard interview scenarios.
