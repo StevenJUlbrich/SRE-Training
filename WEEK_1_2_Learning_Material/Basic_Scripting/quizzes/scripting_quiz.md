@@ -21,60 +21,60 @@
 
 6. **Review the following code. What issues or potential bugs do you see?**
 
-```python
-def process_log_file(filename):
-    log_file = open(filename, 'r')
-    content = log_file.read()
-    errors = []
-    
-    for line in content.split('\n'):
-        if 'ERROR' in line:
-            errors.append(line)
-    
-    print(f"Found {len(errors)} errors")
-    return errors
-```
+    ```python
+    def process_log_file(filename):
+        log_file = open(filename, 'r')
+        content = log_file.read()
+        errors = []
+        
+        for line in content.split('\n'):
+            if 'ERROR' in line:
+                errors.append(line)
+        
+        print(f"Found {len(errors)} errors")
+        return errors
+    ```
 
 7. **What will happen when the following script is run? Explain any issues.**
 
-```python
-import os
-import sys
+    ```python
+    import os
+    import sys
 
-def set_config():
-    os.environ['APP_ENV'] = 'production'
-    print(f"Environment set to {os.environ['APP_ENV']}")
-
-if __name__ == "__main__":
-    config_file = sys.argv[1]
-    with open(config_file, 'r') as f:
-        config = f.read()
-    set_config()
-    os.system(f"./start_app.sh {config_file}")
-```
+    def set_config():
+        os.environ['APP_ENV'] = 'production'
+        print(f"Environment set to {os.environ['APP_ENV']}")
+    
+    if __name__ == "__main__": 
+        config_file = sys.argv[1]
+        with open(config_file, 'r') as f:
+            config = f.read()
+        set_config()
+        os.system(f"./start_app.sh {config_file}")
+    ```
 
 8. **Analyze the following CSV processing code. What improvements would you make?**
 
-```python
-import csv
+    ```python
+    import csv
 
-def filter_users(csv_file, min_age):
-    with open(csv_file, 'r') as f:
-        reader = csv.reader(f)
-        header = next(reader)
+    def filter_users(csv_file, min_age):
+        with open(csv_file, 'r') as f:
+            reader = csv.reader(f)
+            header = next(reader)
+            
+            age_index = header.index('age')
+            result = []
+            
+            for row in reader:
+                if int(row[age_index]) >= min_age:
+                    result.append(row)
         
-        age_index = header.index('age')
-        result = []
-        
-        for row in reader:
-            if int(row[age_index]) >= min_age:
-                result.append(row)
-    
-    with open('filtered_users.csv', 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-        writer.writerows(result)
-```
+        with open('filtered_users.csv', 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(header)
+            writer.writerows(result)
+    ```
 
 ## Coding Challenges
 
