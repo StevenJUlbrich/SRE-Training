@@ -1,0 +1,8 @@
+# Core requirements for Data Structures & Algorithms section
+# These are minimal since most examples use standard library
+
+# For visualization purposes (optional)
+matplotlib>=3.7.1
+
+# For testing
+pytest>=7.3.1

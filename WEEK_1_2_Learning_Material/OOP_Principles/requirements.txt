@@ -1,0 +1,10 @@
+# Core requirements for OOP Principles section
+
+# Testing
+pytest>=7.3.1
+
+# For type annotations
+typing-extensions>=4.5.0
+
+# For cleaner formatting and displaying
+tabulate>=0.9.0
