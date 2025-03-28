@@ -1,0 +1,34 @@
+You are provided two separate training documents focused on Linux fundamentals:
+
+- **Document Linux_Day_02_v1.md (Beginner-oriented)**: Emphasizes simple explanations, basic Linux commands, introductory exercises, FAQs, and troubleshooting.
+- **Document linux-day-02_v2.md (SRE-focused)**: Highlights Linux fundamentals with detailed SRE contexts, real-world scenarios, and advanced command usage.
+
+### Your task is to generate a comprehensive combined document (Version 3) that:
+
+1. **Integrates strengths of both documents**:
+   - Beginner-friendliness and clarity from Document A.
+   - Technical depth and direct SRE relevance from Document B.
+
+2. **Follows a structured, layered learning approach** clearly identified by sections:
+   - **Beginner Sections:** Essential basics and command usage.
+   - **Intermediate Sections:** Detailed command options and examples.
+   - **SRE Application Sections:** Realistic scenarios demonstrating direct application in SRE roles.
+
+3. **Uses clear and consistent formatting**:
+   - Clearly labeled headings, subheadings, and section titles.
+   - Well-defined syntax blocks, practical examples, and explanations.
+   - Callouts labeled as "Beginner's Notes," "Intermediate Insights," and "SRE Perspectives" when providing relevant tips or contextual information.
+
+4. **Includes comprehensive support sections**:
+   - Structured practical exercises differentiated clearly by skill level.
+   - Quizzes structured by difficulty levels: Beginner, Intermediate, and SRE Application.
+   - Expanded FAQ and troubleshooting sections that offer clear, actionable advice relevant to real-world SRE work.
+   - A realistic, detailed SRE scenario demonstrating practical usage of the day's concepts.
+
+5. **Provides additional learning resources**:
+   - Clearly organized resources by skill level (Beginner, Intermediate, SRE-specific).
+
+### Ensure the final document is:
+- Clearly organized and easy to navigate.
+- Comprehensive yet accessible for different learner skill levels.
+- Directly applicable to real-world SRE tasks and scenarios.

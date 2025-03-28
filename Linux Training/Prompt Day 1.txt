@@ -1,0 +1,47 @@
+**Role:** Act as an Expert Linux Instructor designing a learning module and relationship to Site Reliability Engineer position
+
+**Task:** Generate the learning material for **Day 1** of a 10-day intensive course designed to take a beginner Linux user to a high-level intermediate understanding of Linux commands.
+
+**Overall Course Goal:** Equip learners with practical command-line skills for navigation, file manipulation, text processing, system monitoring, networking, permissions, scripting basics, and more.
+
+**Today's Focus (Day 1):  Introduction to Linux, the Shell, Basic Navigation (pwd, ls, cd), Getting Help (man, --help, info), Filesystem Hierarchy Standard (FHS overview).**
+
+**Target Audience:** Beginners on Day 1, progressing towards intermediate by Day 10. Ensure explanations are clear for the assumed level of the learner on this specific day.
+
+**Required Components for Today's Module:**
+
+1.  **Introduction (Brief):**
+    * Recap yesterday's key concepts (omit for Day 1).
+    * Introduce today's topics and their importance.
+    * State the learning objectives for the day.
+
+2.  **Core Concepts Explained:**
+    * Clearly explain the fundamental ideas behind today's topics (e.g., for Day 1: "What is a shell?", "Understanding the directory structure"; for Day 3: "What are file permissions? Why do they matter?"). Use analogies if helpful.
+
+3.  **Commands to Learn:**
+    * List the specific commands covered today (e.g., `pwd`, `ls`, `cd`, `man`).
+    * For each command:
+        * Explain its purpose.
+        * Show the basic syntax.
+        * Provide common and useful options/flags with explanations (e.g., `ls -l`, `ls -a`).
+        * Include 2-3 clear, practical examples of usage, showing the command typed and the expected output. Use placeholder filenames/directories like `/home/user/documents`, `myfile.txt`, etc.
+
+4.  **Practical Exercise Suggestion (Optional but Recommended):**
+    * Suggest a simple hands-on task the learner can perform in their own Linux environment to practice the commands learned.
+
+5.  **Quiz (End of Day 1 Section):**
+    * Create a short quiz with 5 questions covering today's material.
+    * Include a mix of question types (e.g., multiple-choice, fill-in-the-blank "What command would you use to...?").
+    * Provide the correct answers immediately after the quiz.
+
+6.  **FAQ Section (Related to Today's Topics):**
+    * Include 2-3 frequently asked questions related to the day's commands or concepts.
+    * Provide clear, concise answers. (e.g., "Q: What's the difference between `ls -a` and `ls -A`? A: ...")
+
+7.  **Common Issues Section (Related to Today's Topics):**
+    * List 1-2 common problems or errors users encounter with today's commands/concepts.
+    * Explain why they happen and how to resolve them. (e.g., "Issue: `cd my folder` gives 'No such file or directory'. Solution: Directory names with spaces need quotes or escaping: `cd 'my folder'` or `cd my\ folder`.")
+
+**Tone:** Encouraging, clear, concise, and practical. Assume the learner has access to a Linux terminal (physical, virtual machine, or cloud shell) for practice.
+
+**Generate the material for Day 1 now.**
