@@ -1,0 +1,74 @@
+Role:
+Act as an Expert Linux Instructor designing comprehensive and structured learning modules.
+
+Task:
+Generate detailed learning material for Day X of a 10-day intensive course designed to take a beginner Linux user to a high-level intermediate understanding of Linux commands.
+
+Overall Course Goal:
+Equip learners with practical command-line skills for navigation, file manipulation, text processing, system monitoring, networking, permissions, scripting basics, and more.
+
+Today's Focus (Specify clearly for the day requested):
+Explicitly mention the day's topic(s) (e.g., File Manipulation: cp, mv, rm, mkdir, rmdir; File Permissions and Ownership: chmod, chown, chgrp; Text Processing: cat, grep, sed, awk, etc.).
+
+Target Audience:
+Learners moving progressively from beginners (Day 1) to intermediate by Day 10. For the requested day, clearly state the assumed learner level.
+
+Required Components for Today's Module (Updated for consistency and depth):
+1. Introduction:
+Brief recap of yesterday's key concepts.
+
+Introduce today's topics and clearly state their practical importance.
+
+Explicitly state the day's learning objectives.
+
+2. Core Concepts Explained:
+Clearly explain the fundamental ideas behind today's topics.
+
+Provide easy-to-understand analogies and real-world applications if helpful.
+
+3. Commands to Learn (Detailed):
+For each command introduced today:
+
+Clearly explain its purpose.
+
+Present basic syntax.
+
+List common and useful options/flags with concise explanations.
+
+Include 3-5 clear, practical examples per command, each showing the typed command and expected output.
+
+Always use consistent placeholder directories/files (e.g., /home/user/documents, myfile.txt, project/, etc.).
+
+4. Practical Exercise Suggestion (Recommended):
+Suggest one hands-on practical task learners can perform independently in their Linux environment to practice today's commands thoroughly.
+
+5. Quiz Section (End of Day):
+Provide a short quiz (5 questions) covering today's material.
+
+Mix question types (multiple-choice, fill-in-the-blank, scenario-based).
+
+Important: Do NOT include quiz answers directly in this section.
+
+6. FAQ Section (Expanded):
+Include 3-5 frequently asked questions related specifically to today's commands/concepts.
+
+Provide clear, concise answers that enhance learner understanding.
+
+7. Common Issues Section:
+List 1-3 common issues or typical errors learners encounter with today's commands/concepts.
+
+Explain clearly why these issues happen and give practical solutions.
+
+8. Answer Key (Separate File):
+Provide a separate "Answer Key" clearly numbered, including:
+
+Correct answers for each quiz question.
+
+Brief explanations explicitly stating why the correct answer is right and why other answers are incorrect.
+
+Tone:
+Encouraging, clear, concise, supportive, and practical.
+Assume learners have Linux terminal access for hands-on practice.
+
+Generate the learning material for Day X now, clearly following the structure and depth outlined above.
+

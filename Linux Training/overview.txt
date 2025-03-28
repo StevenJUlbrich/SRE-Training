@@ -1,0 +1,10 @@
+Day 1: The Absolute Basics: What is Linux? What's a terminal/shell? Basic navigation (pwd, ls, cd). Getting help (man, --help). File system structure.
+Day 2: File Manipulation: Creating (touch, mkdir), viewing (cat, less, more, head, tail), copying (cp), moving/renaming (mv), deleting (rm, rmdir).
+Day 3: Permissions & Ownership: Understanding rwx, chmod, chown, chgrp. sudo.
+Day 4: Text Processing & Searching: grep, find, basic pipes (|), redirection (>, >>, <).
+Day 5: Intermediate Text/Data Manipulation: sed, awk (basics), sort, uniq, wc. More complex pipes.
+Day 6: Processes & System Monitoring: ps, top, htop (if available), kill, jobs, bg, fg. System info (uname, df, du, free).
+Day 7: Networking Basics: ping, ifconfig/ip addr, netstat/ss, ssh, scp.
+Day 8: User & Group Management: useradd, userdel, usermod, groupadd, groupdel, passwd. Viewing users (/etc/passwd, getent).
+Day 9: Archiving & Compression: tar, gzip, gunzip, zip, unzip. Package management basics (e.g., apt or yum/dnf - mention variation).
+Day 10: Shell Scripting Basics & Advanced Concepts: Variables, simple loops (for), conditionals (if), command substitution ($(...)), environment variables (export, .bashrc/.zshrc). Review & Next Steps.

@@ -1,7 +1,7 @@
 You are provided two separate training documents focused on Linux fundamentals:
 
-- **Document Linux_Day_02_v1.md (Beginner-oriented)**: Emphasizes simple explanations, basic Linux commands, introductory exercises, FAQs, and troubleshooting.
-- **Document linux-day-02_v2.md (SRE-focused)**: Highlights Linux fundamentals with detailed SRE contexts, real-world scenarios, and advanced command usage.
+ Emphasizes simple explanations, basic Linux commands, introductory exercises, FAQs, and troubleshooting.
+ Highlights Linux fundamentals with detailed SRE contexts, real-world scenarios, and advanced command usage.
 
 ### Your task is to generate a comprehensive combined document (Version 3) that:
 
