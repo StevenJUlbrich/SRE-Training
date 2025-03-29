@@ -91,7 +91,7 @@ The minus sign before `%mem` is crucial as it reverses the sort order. Without i
 
 ### **7. During an incident, you notice high system load but normal CPU usage. What's the most likely cause of this discrepancy?**
 
-**Correct Answer: b) I/O wait or blocking operations**
+### Correct Answer: b) I/O wait or blocking operations
 
 **Explanation:** System load average represents the number of processes that are either running or waiting for resources. When load is high but CPU usage remains normal, it typically indicates that processes are waiting for something other than CPU time.
 
@@ -119,7 +119,7 @@ Port conflicts are common in production environments, especially during deployme
 
 ### **9. You need to reload a service's configuration without restarting it. Which signal would you typically use?**
 
-**Correct Answer: c) SIGHUP (1)**
+### Correct Answer: c) SIGHUP (1)
 
 **Explanation:** SIGHUP (Hangup signal, signal number 1) traditionally indicated that a terminal was disconnected, but many services repurposed it as a signal to reload their configuration without a full restart. This has become a standard convention in many Linux services and daemons.
 
@@ -133,7 +133,7 @@ Using SIGHUP for configuration reload is especially important in production envi
 
 ### **10. A system is showing high memory usage but the sum of all process RSS values doesn't account for it. What's the most likely explanation?**
 
-**Correct Answer: b) Kernel memory usage and buffers/cache**
+### Correct Answer: b) Kernel memory usage and buffers/cache
 
 **Explanation:** The Linux kernel uses memory for various purposes beyond what's visible in process listings:
 

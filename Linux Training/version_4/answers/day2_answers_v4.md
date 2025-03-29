@@ -1,135 +1,117 @@
-# **Day 2 V3 Quiz Answer Key**
+# Day 2 Quiz Answers
 
-with real-world SRE context, command walkthroughs, and learning rationale for every question:
+## 🟢 Beginner Tier
 
----
+**1. Multiple-choice:**  
+Which command explicitly creates nested directories such as `app/logs/errors`?
 
-## ✅ **Day 2 Full Answer Key with Explanations**
-
----
-
-### 🧑‍🏫 **Beginner Level**
+- **Answer:** `mkdir -p app/logs/errors`
+- **Explanation:** The `-p` (parents) flag explicitly tells `mkdir` to create all required intermediate directories, ensuring no errors if intermediate directories don't exist.
 
 ---
 
-**1. What does `touch file.txt` do?**  
+**2. Fill-in-the-blank:**  
+To explicitly view only the first 20 lines of a file, the command is `head ___ 20 file.txt`.
 
-- a) Deletes it  
-- b) Views its content  
-- ✅ c) **Creates it**
+- **Answer:** `-n`
+- **Explanation:** The `-n` option explicitly specifies the exact number of lines to display from the start of a file.
 
-🔍 **Explanation:**  
-The `touch` command is primarily used to create an empty file if it doesn't exist. It can also update the **modification** timestamp of an existing file.  
-📌 **SRE Context:** Often used in automation scripts to prepare placeholder logs or trigger file watchers.
-
----
-
-**2. Which option makes `mkdir` create parent directories as needed?**  
-
-- ✅ a) `-p`  
-- b) `-r`  
-- c) `-m`
-
-🔍 **Explanation:**  
-The `-p` flag instructs `mkdir` to create intermediate directories along the path if they don’t already exist — making directory creation scripts idempotent.  
-📌 **SRE Context:** In automation pipelines, using `mkdir -p` avoids failures when parent paths are missing.
-
----
-
-**3. How do you view the top 5 lines of a config file?**  
-
-- a) `less -n config`  
-- b) `tail -n 5 config`  
-- ✅ c) `head -n 5 config`
-
-🔍 **Explanation:**  
-`head` outputs the first lines of a file. `-n 5` limits the output to just five lines.  
-📌 **SRE Context:** Useful when verifying that configs begin with expected headers or structure.
-
----
-
-### 🧩 **Intermediate Level**
-
----
-
-**4. Which command shows the most recent 25 lines of a log?**  
-
-- ✅ `tail -n 25 filename`
-
-🔍 **Explanation:**  
-`tail` is designed to show the end of a file — typically logs. With `-n`, it lets you control how many lines to show.  
-📌 **SRE Context:** Helps pinpoint recent events during live debugging or postmortem.
-
----
-
-**5. Which `cp` option preserves file metadata and structure during copying?**  
-
-- a) `-f`  
-- ✅ b) `-a`
-
-🔍 **Explanation:**  
-The `-a` (archive) flag ensures that symbolic links, file permissions, timestamps, and ownership are preserved.  
-📌 **SRE Context:** Essential when backing up configuration directories to ensure an identical restore state.
-
----
-
-**6. What does this command do?**  
+Corrected explicit command:
 
 ```bash
-cp config.conf config.conf.bak.$(date +%F-%H%M)
-```  
-
-- ✅ a) Copies config.conf with a timestamped name  
-- b) Compresses the config file  
-- c) Deletes the original file
-
-🔍 **Explanation:**  
-This creates a backup copy of the config file, using the current date/time to ensure uniqueness and tracking.  
-📌 **SRE Context:** Timestamped backups allow safe rollback and simplify audits.
+head -n 20 file.txt
+```
 
 ---
 
-### ⚙️ **SRE Application Level**
+**3. Multiple-choice:**  
+Explicitly, which command removes an empty directory named `oldlogs`?
+
+- **Answer:** `rmdir oldlogs`
+- **Explanation:** The `rmdir` command explicitly removes only empty directories, making it the safest choice for deleting directories without accidentally removing contents.
 
 ---
 
-**7. Which command sequence is most appropriate during a \"disk full\" incident?**  
+## 🟡 Intermediate Tier
 
-- a) `rm -rf /var/log/*`  
-- b) `du -sh /var/* | sort -rh | head -10`  
-- c) `mkdir /backup && mv /var/log/* /backup/`  
-- ✅ d) **Both b and c**
+**1. Scenario-based:**  
+You explicitly want to copy `config.conf` to `backup.conf`, explicitly preserving permissions and timestamps. Which explicit command achieves this?
 
-🔍 **Explanation:**  
-Option **b** helps identify the biggest space consumers. Option **c** safely moves data instead of deleting it. Option **a** is dangerous and irreversible.  
-📌 **SRE Context:** Root-cause analysis, rollback, and auditing are impossible if logs are deleted blindly. Always prioritize preservation and analysis.
+- **Answer:** `cp -a config.conf backup.conf`
+- **Explanation:** The `-a` (archive) flag explicitly preserves file attributes such as permissions, timestamps, ownership, and symbolic links during copy operations.
 
 ---
 
-**8. Before modifying a production configuration, what should you do?**  
+**2. Multiple-choice:**  
+Explicitly, which command continuously displays new log entries in real-time?
 
-- a) Edit it directly  
-- b) Run `rm` on the old file  
-- ✅ c) Use `cp -a` to back it up
-
-🔍 **Explanation:**  
-`cp -a` ensures a faithful backup of the config with full metadata. Editing directly without a backup is risky, and deleting the original removes history.  
-📌 **SRE Context:** Backups protect you during incidents, audits, and rollbacks.
+- **Answer:** `tail -f /var/log/app.log`
+- **Explanation:** The `tail -f` command explicitly follows file content in real-time, making it ideal for monitoring logs continuously during troubleshooting or incidents.
 
 ---
 
-**9. You want to track live error messages in a growing log. Which command fits?**  
+**3. Fill-in-the-blank:**  
+To explicitly rename a file from `error.log` to `error_old.log`, you explicitly use the command: `mv _____ _____`.
+
+- **Answer:** `error.log error_old.log`
+- **Explanation:** The `mv` command explicitly renames (moves) a file from the first argument (`error.log`) to the second argument (`error_old.log`).
+
+Corrected explicit command:
 
 ```bash
-tail -f /var/log/app.log | grep ERROR
-```  
-
-- ✅ a) Tracks ERROR messages in real-time  
-- b) Deletes all errors  
-- c) Compresses log on the fly
-
-🔍 **Explanation:**  
-This command continuously monitors new lines appended to the log and filters only those containing “ERROR”.  
-📌 **SRE Context:** Ideal during active outages or post-deploy monitoring to catch issues as they happen.
+mv error.log error_old.log
+```
 
 ---
+
+**4. Scenario-based:**  
+Explicitly, you accidentally deleted a critical file. What explicit preventive measure could have avoided this?
+
+- **Answer:** Using `rm -i`
+- **Explanation:** The interactive option (`-i`) explicitly prompts for confirmation before deleting each file, reducing the risk of accidental deletions.
+
+---
+
+## 🔴 SRE-Level Tier
+
+**1. Scenario-based:**  
+Explicitly during an incident, you need real-time monitoring of an application log file explicitly to detect errors instantly. Which explicit command is best suited?
+
+- **Answer:** `tail -f /var/log/application.log`
+- **Explanation:** `tail -f` explicitly provides immediate, continuous updates to logs, enabling rapid detection and response to real-time events.
+
+---
+
+**2. Fill-in-the-blank:**  
+Explicitly removing directories containing files requires the command: `rm ____ directoryname`.
+
+- **Answer:** `-r`
+- **Explanation:** The recursive option (`-r`) explicitly allows `rm` to remove directories along with all their contents. Use with caution.
+
+Corrected explicit command:
+
+```bash
+rm -r directoryname
+```
+
+---
+
+**3. Multiple-choice:**  
+Explicitly, to securely delete multiple files interactively, which explicit command would you use?
+
+- **Answer:** `rm -i file*`
+- **Explanation:** Using the `-i` (interactive) flag explicitly ensures each file deletion is confirmed individually, significantly reducing the risk of errors.
+
+---
+
+**4. Scenario-based:**  
+Explicitly, you must create multiple empty log files (`app.log`, `db.log`, `web.log`) explicitly in a single command. What explicit command do you run?
+
+- **Answer:** `touch {app,db,web}.log`
+- **Explanation:** Brace expansion explicitly allows creating multiple files efficiently in one concise command, a technique frequently used by SREs to streamline operations.
+
+Corrected explicit command:
+
+```bash
+touch {app,db,web}.log
+```
