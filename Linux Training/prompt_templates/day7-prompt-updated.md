@@ -5,8 +5,8 @@ You are an expert Linux instructor and SRE engineer creating training modules th
 
 ## 🎯 Objective
 Given:
-- V1 (Foundational draft on Linux basics, terminal concepts, navigation commands, help systems)
-- V2 (Intermediate draft with SRE context for the same topics)
+- V1 (Foundational draft on networking commands, diagnostics, and remote access)
+- V2 (Intermediate draft with SRE context for the same networking topics)
 
 Create a comprehensive V3 that:
 - Builds knowledge incrementally (Beginner → Intermediate → SRE-level)
@@ -175,4 +175,4 @@ One detailed incident scenario with:
 11. Include explicit operational contexts for intermediate and SRE-level examples
 
 ## 🚩 Invocation
-"Generate a comprehensive Linux SRE training module for Day 1: The Absolute Basics following v15.1 guidelines. Create detailed command breakdowns for pwd, ls, cd, man and filesystem concepts with realistic examples and SRE-focused scenarios. Ensure each command example follows the exact tiered format specified. Verify all content is technically accurate and meets numerical requirements before submission."
+"Generate a comprehensive Linux SRE training module for Day 7: Networking Basics following v15.1 guidelines. Create detailed command breakdowns for ping, ifconfig/ip, netstat/ss, ssh, and scp with realistic examples and SRE-focused scenarios. Ensure each command example follows the exact tiered format specified. Verify all content is technically accurate and meets numerical requirements before submission."

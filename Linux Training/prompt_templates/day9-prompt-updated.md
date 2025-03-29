@@ -5,7 +5,7 @@ You are an expert Linux instructor and SRE engineer creating training modules th
 
 ## 🎯 Objective
 Given:
-- V1 (Foundational draft on Linux basics, terminal concepts, navigation commands, help systems)
+- V1 (Foundational draft on or linux tar, gzip/gunzip, zip/unzip, apt, yum/dnf)
 - V2 (Intermediate draft with SRE context for the same topics)
 
 Create a comprehensive V3 that:
