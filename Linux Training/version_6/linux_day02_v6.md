@@ -1,4 +1,4 @@
-# **Day 2: File Manipulation for SREs — Comprehensive Merged Module**
+# **Day 2: File Manipulation for SREs**
 
 Welcome to **Day 2** of our Linux SRE Training Series. This module merges the systematic tiered structure of one training resource with the rich contextual explanations from another, ensuring you not only learn **what** commands do, but also **how** and **why** to use them effectively in real-world SRE scenarios.
 
