@@ -133,7 +133,8 @@ For each of the following operations, show detailed translations across all syst
 3. **Aggregation** (GROUP BY → aggregation pipeline → stream processing)
 4. **Relationships** (JOIN → $lookup → stream joining)
 5. **Schema Examination** (information_schema → getCollectionInfos() → topic inspection)
-6. **Monitoring Commands** (Query inspection across systems)
+6. **Table/Collection Inspection** (meta-commands and utilities for viewing structures)
+7. **Monitoring Commands** (Query inspection across systems)
 
 For each operation, follow this exact format:
 
@@ -143,11 +144,16 @@ For each operation, follow this exact format:
 **Knowledge Foundation:**
 - Brief recap of the relational database concept this builds upon
 - Visual indicator of complexity progression from relational to other paradigms
+- Clear distinction between standard SQL, client-specific commands, and database-specific utilities
 
 **Relational Approach (PostgreSQL):**
 ```sql
 -- Example SQL operation
 SELECT column FROM table WHERE condition;
+```
+-- OR if a client meta-command:
+```
+\d tablename  -- PostgreSQL psql client meta-command
 ```
 
 **Document Approach (MongoDB):**
@@ -155,11 +161,20 @@ SELECT column FROM table WHERE condition;
 // Example MongoDB operation
 db.collection.find({condition}, {projection});
 ```
+-- OR if a shell command:
+```
+db.getCollectionInfos()  // MongoDB shell command
+```
 
 **Streaming Approach (Kafka):**
-
+```
 # Example Kafka operation or KSQL
 kafka-console-consumer --bootstrap-server localhost:9092 --topic topic_name --from-beginning
+```
+-- OR if a client utility:
+```
+kafka-topics.sh --describe --topic topic_name  # Kafka CLI utility
+```
 
 **Translation Flow Diagram:**
 - Visual representation showing the equivalent operations side-by-side
@@ -179,7 +194,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic topic_name --fr
 - Potential failure modes unique to each approach
 - Recovery strategies for each system
 - Visual comparison of operational characteristics
-
+```
 
 ### 🛠️ Operational Differences Section
 Detailed comparison of operational characteristics across systems:
@@ -294,11 +309,14 @@ Exactly 10 questions focused on cross-database concepts:
   * Progressive complexity throughout the quiz
 * Each question must include:
   * Clear scenario or context
-  * Multiple choice options (4 options per question)
-  * Detailed explanation for both correct and incorrect answers
+  * Multiple choice options (4 options per question) labeled A, B, C, D
   * Connection to workplace relevance
   * Visual reference if applicable
   * Explicit knowledge connection to relational database concepts
+* Do NOT include answer explanations or indicate which option is correct
+* Include a note that explanations and correct answers will be provided separately
+* Ensure questions are challenging but fair based on the material covered
+* Include a mix of difficulty levels appropriate for evaluating cross-database understanding
 
 ### 🚧 Cross-Database Troubleshooting Scenarios
 Exactly 3 realistic scenarios involving multiple database types:

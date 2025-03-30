@@ -157,9 +157,10 @@ db.collection.find({condition}, {projection});
 ```
 
 **Streaming Approach (Kafka):**
-
+```
 # Example Kafka operation or KSQL
 kafka-console-consumer --bootstrap-server localhost:9092 --topic topic_name --from-beginning
+```
 
 **Translation Flow Diagram:**
 - Visual representation showing the equivalent operations side-by-side
@@ -179,7 +180,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic topic_name --fr
 - Potential failure modes unique to each approach
 - Recovery strategies for each system
 - Visual comparison of operational characteristics
-
+```
 
 ### 🛠️ Operational Differences Section
 Detailed comparison of operational characteristics across systems:
@@ -294,11 +295,14 @@ Exactly 10 questions focused on cross-database concepts:
   * Progressive complexity throughout the quiz
 * Each question must include:
   * Clear scenario or context
-  * Multiple choice options (4 options per question)
-  * Detailed explanation for both correct and incorrect answers
+  * Multiple choice options (4 options per question) labeled A, B, C, D
   * Connection to workplace relevance
   * Visual reference if applicable
   * Explicit knowledge connection to relational database concepts
+* Do NOT include answer explanations or indicate which option is correct
+* Include a note that explanations and correct answers will be provided separately
+* Ensure questions are challenging but fair based on the material covered
+* Include a mix of difficulty levels appropriate for evaluating cross-database understanding
 
 ### 🚧 Cross-Database Troubleshooting Scenarios
 Exactly 3 realistic scenarios involving multiple database types:
