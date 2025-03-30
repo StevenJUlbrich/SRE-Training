@@ -26,21 +26,23 @@ Real-world incidents show that improper SELECT queries, missing WHERE clauses, o
 Below is a **concept map** that visually outlines Day 1 topics and how they tie together:
 
 ```text
-                      ┌─────────────────────┐
-                      │  Database (Schema)  │
-                      └─────────────────────┘
-                              │
-                              ▼
-            ┌─────────────────────────────────┐
-            │ Tables (with Rows & Columns)   │
-            └─────────────────────────────────┘
-              │                │              
-              ▼                ▼               
-      Primary Key        Foreign Key  ──────────► References another table
-              │                │               
-              ▼                ▼               
-            SELECT ── FROM ── WHERE  ──► Basic SQL building blocks
-                  (Used to retrieve data from tables)
+            ┌─────────────────────┐
+            │  Database (Schema)  │
+            └─────────────────────┘
+                │
+                ▼
+      ┌─────────────────────────────────┐
+      │       Tables (Rows & Columns)   │
+      └─────────────────────────────────┘
+            │                │              
+            ▼                ▼               
+        Primary Key        Foreign Key  
+            │                │               
+            ▼                ▼               
+      ┌─────────────────────────────────┐
+      │ SELECT ── FROM ── WHERE         │
+      └─────────────────────────────────┘
+          (Basic SQL building blocks used to retrieve data)
 ```
 
 We’ll primarily explore **PostgreSQL** examples, noting if Oracle/SQL Server differ significantly.
@@ -86,7 +88,7 @@ Many of you have encountered applications where data is stored or retrieved, but
 
 Here’s your **learning timeline** for this course:
 
-```text
+```plaintext
 [Day 1: Core Relational Concepts] → [Day 2: Advanced Queries & Joins] → [Day 3: SRE-Driven Monitoring & Tuning] → ...
 ```
 
@@ -100,19 +102,19 @@ Below is a more detailed visual concept map, **color-coded by complexity level**
 
 ```text
  ┌─────────────────────────────────────────────────────────────────────────┐
- │                               Database                                 │
- │       (Schemas, Tables, Columns, Rows, Basic Storage Structures)       │
+ │                               Database                                  │
+ │       (Schemas, Tables, Columns, Rows, Basic Storage Structures)        │
  └─────────────────────────────────────────────────────────────────────────┘
-    │                  │                       │              │
-    │                  │                       │              ▼ (🔴 SRE Principle)
-    │                  │                       │      Observability & Monitoring
-    ▼ (🟢)             ▼ (🟡)                  ▼ (🔴)
+  │                  │                       │              │
+  │                  │                       │              ▼ (🔴 SRE Principle)
+  │                  │                       │      Observability & Monitoring
+  ▼ (🟢)             ▼ (🟡)                  ▼ (🔴)
   Primary Key       Foreign Key            Performance Tuning
-    (Uniqueness)        (Relationships)       (Query Plans, Indexing)
-    │                  │                              │
-    ▼                  ▼                              ▼
-  Basic SELECT → FROM → WHERE  ───── (🟢 Basic usage → 🟡 Extended usage → 🔴 High performance)
-    (Reading data)     (Context)         (Filtering)               
+  (Uniqueness)        (Relationships)       (Query Plans, Indexing)
+  │                  │                              │
+  ▼                  ▼                              ▼
+Basic SELECT → FROM → WHERE ───── (🟢 Basic usage → 🟡 Extended usage → 🔴 High performance)
+  (Reading data)     (Context)         (Filtering)
 ```
 
 - SRE considerations ( 🔴 ) span all tiers, gradually increasing in depth and technicality.
@@ -190,12 +192,12 @@ A **file cabinet** with multiple **folders** (schemas), each containing **docume
 
 ```text
 +----------------------- Database -----------------------+
-|  Schema: public                                       |
+|  Schema: public                                        |
 |     +------------------ Table: employees -------------+|
 |     |  columns: (id, first_name, last_name, ... )     ||
 |     |  rows:    each row is one employee record       ||
-|     +----------------------------------------------+  ||
-+------------------------------------------------------+
+|     +-------------------------------------------------+|
++--------------------------------------------------------+
 ```
 
 **Syntax & Variations:**
@@ -404,7 +406,7 @@ Like **filtering** a spreadsheet to display only certain columns you’re intere
 
 ```text
 ┌────────────────────────────────────┐
-│       SELECT columns FROM table   │
+│       SELECT columns FROM table    │
 └────────────────────────────────────┘
                  │
                  ▼
@@ -820,16 +822,13 @@ A conceptual diagram showing **schemas, tables, columns, and rows**:
 ```
 
 ### 2. **Primary/Foreign Key Relationship**  
-
-Visually showing two tables connected by a **foreign key**:
-
 ```text
-  customers                    orders
-┌───────────────┐         ┌───────────────┐
-│ customer_id(PK)| 1 ---> │ customer_id(FK)│
-│ first_name     │         │ order_id(PK)  │
-│ last_name      │         │ amount        │
-└───────────────┘         └───────────────┘
+  customers                     orders
+┌─────────────────┐        ┌─────────────────┐
+│ customer_id(PK) │ 1 ---> │ customer_id(FK) │
+│ first_name      │        │ order_id(PK)    │
+│ last_name       │        │ amount          │
+└─────────────────┘        └─────────────────┘
 ```
 
 ### 3. **SQL Query Flow**  
@@ -839,8 +838,8 @@ Step-by-step representation of how a **SELECT** query is processed:
 ```text
 SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY
    |        |       |         |         |           |
-   |        |       ---- Filter rows   |           |
-   |        ---- Identify table(s)     ---- Filter groups
+   |        |       ---- Filter rows    |           |
+   |        ---- Identify table(s)      ---- Filter groups
    ---- Choose columns                         ---- Sort final result
 ```
 
