@@ -127,16 +127,19 @@ Think of database design like organizing a library. Each shelf (table) categoriz
 **Visual Representation:**  
 
 ```ascii
-   Properly Organized        Poorly Organized
-   (Logical Schema)          (Random Schema)
+   Properly Organized          Poorly Organized
+   (Logical Schema)            (Random Schema)
 
-+-------------+            +----------------+
-|  Table A    |            | Mixed Entities |
-|   (entities)|            |   & Data       |
-|  ---------- |            |--------------------------------
-| Data in neat|            | Rows all over, columns missing, 
-| columns     |            | no logic to arrangement
-+-------------+            +----------------+
++-----------------+      +----------------------+
+|    Table A      |      |    Mixed Entities    |
+|   (entities)    |      |       & Data         |
+|-----------------|      |----------------------|
+| Data in neat    |      | Rows all over,       |
+| columns         |      | columns missing,     |
+|                 |      | no logic to          |
+|                 |      | arrangement.         |
++-----------------+      +----------------------+
+
 ```
 
 **Principles & Applications:**
@@ -258,17 +261,18 @@ Think of a spreadsheet where each cell can only hold one piece of information. I
 **Visual Representation:**  
 
 ```ascii
-Unnormalized Table (Addresses in one column)   Normalized Table (Separate rows or columns)
+Unnormalized Table (Addresses in one column)       Normalized Table (Separate rows)
 
-+-----------+------------------------+        +-----------+---------------+
-| user_id   | addresses             |        | user_id   | address       |
-|-----------|------------------------|        |-----------|---------------|
-| 1         | "Addr1, Addr2, Addr3" |  -->   | 1         | "Addr1"       |
-| 2         | "AddrA, AddrB"        |        | 1         | "Addr2"       |
-+-----------+------------------------+        | 1         | "Addr3"       |
-                                             | 2         | "AddrA"       |
-                                             | 2         | "AddrB"       |
-                                             +-----------+---------------+
++-----------+-------------------------+           +-----------+---------------+
+| user_id   | addresses               |           | user_id   | address       |
+|-----------|-------------------------|           |-----------|---------------|
+| 1         | "Addr1, Addr2, Addr3"   |   -->     | 1         | "Addr1"       |
+| 2         | "AddrA, AddrB"          |           | 1         | "Addr2"       |
++-----------+-------------------------+           | 1         | "Addr3"       |
+                                                  | 2         | "AddrA"       |
+                                                  | 2         | "AddrB"       |
+                                                  +-----------+---------------+
+
 ```
 
 **Principles & Applications:**
@@ -393,17 +397,26 @@ Imagine a school schedule table indexed by (student_id, class_id). 2NF requires 
 **Visual Representation:**
 
 ```ascii
-Before 2NF (Partial Dependency)             After 2NF
+Visual Representation of 2NF:
 
-+-------------------+------------+        +----------------+--------------+
-| (student_id,      | teacher    |        | (student_id,   |   grade      |
-|  class_id)        | name       |        |  class_id)     |              |
-| grade             | <--- partial dep.   +----------------+--------------+
-+-------------------+------------+        +----------+
-                                          | classes  |
-                                          | teacher  |
-                                          | name     |
-                                          +----------+
+       Before 2NF (Partial Dependency)                      After 2NF (Dependencies Resolved)
+
++--------------+------------+---------+-----------+        +--------------+------------+---------+     +------------+-----------+
+| student_id * | class_id * | grade   | teacher   |        | student_id * | class_id * | grade   |     | class_id * | teacher   |
++--------------+------------+---------+-----------+  -->   +--------------+------------+---------+     +------------+-----------+
+| 1            | MATH101    | A       | Mr. Smith |        | 1            | MATH101    | A       |     | MATH101    | Mr. Smith |
+| 1            | HIST202    | B       | Ms. Jones |        | 1            | HIST202    | B       |     | HIST202    | Ms. Jones |
+| 2            | MATH101    | B       | Mr. Smith |        | 2            | MATH101    | B       |     | CHEM301    | Dr. Brown |
+| ...          | ...        | ...     | ...       |        | ...          | ...        | ...     |     | ...        | ...       |
++--------------+------------+---------+-----------+        +--------------+------------+---------+     +------------+-----------+
+                               ^                            (Enrollment Table: Grade depends      (Class Table: Teacher depends
+                               |                             on full key: student_id, class_id)   on key: class_id)
+                               +-- Partial Dependency
+                                   (Teacher only depends
+                                    on class_id)
+
+(* denotes part of primary key)
+
 ```
 
 **Principles & Applications:**
@@ -518,32 +531,54 @@ No partial dependencies. Partitioning by semester for performance/scalability.
 
 ---
 
-### 4. Entity-Relationship Modeling
+### 4. ## Entity-Relationship Modeling (ERM)
 
-#### Command/Concept: Entity-Relationship Modeling (Defining entities, attributes, and relationships)
+**Command/Concept:** Entity-Relationship Modeling (Defining entities, attributes, and relationships)
 
-**Overview:**  
-Entity-Relationship Modeling (ERM) is a high-level method of designing a database by identifying entities (tables), attributes (columns), and the relationships between them. It’s often visualized in an **Entity-Relationship Diagram (ERD)**.
+**Overview:**
+Entity-Relationship Modeling (ERM) is a conceptual technique used in software engineering and database design. It involves identifying key objects or concepts called **entities** (which often become database tables), the properties or characteristics of these entities called **attributes** (which often become table columns), and the connections or associations between entities called **relationships**. The goal is to create a clear blueprint of the data structure before building a database. This blueprint is often visualized using an **Entity-Relationship Diagram (ERD)**.
 
-**Real-World Analogy:**  
-Imagine mapping out a family tree, where each person is an entity, their relationships define how they connect, and attributes like name, birthdate, etc., describe each person.
+**Real-World Analogy:**
+Imagine designing a system for a library.
+* **Entities:** `Book`, `Author`, `Borrower`
+* **Attributes:**
+  * `Book`: `ISBN`, `Title`, `PublicationYear`
+  * `Author`: `AuthorID`, `Name`, `BirthYear`
+  * `Borrower`: `BorrowerID`, `Name`, `Address`
+* **Relationships:**
+  * An `Author` *writes* many `Book`s (One-to-Many).
+  * A `Borrower` *borrows* many `Book`s (One-to-Many, potentially Many-to-Many over time via a `Loan` entity).
 
-**Visual Representation:**
+**Visual Representation (Simplified ERD for a Blog):**
+
+Here's a conceptual ASCII ERD showing entities and relationships for a basic blog system:
 
 ```ascii
-   +-----------+       1        +-------------+
-   |  Users    |---------------<|  Comments   |
-   +-----------+               +-------------+
-        ^  1                         ^
-        |                            |
-        | 1                          | M
-        v                            |
-   +-----------+       1        +------------+
-   |   Posts   |---------------<|  PostTags  |
-   +-----------+               +------------+
-```
++-------------+ 1        M +-----------+
+|   Users     |----------->|   Posts   |  (A User writes many Posts)
+|-------------|            +-----------+
+| UserID (PK) |               | 1
+| Name        |               |
+| Email       |               v M
++-------------+            +-------------+
+      | 1                  |   Comments  | (A Post has many Comments)
+      |                    |-------------| (A User writes many Comments)
+      v M                  | CommentID(PK)|
++-------------+            | Content     |
+                           | PostID (FK) |
+                           | UserID (FK) |
+                           +-------------+
 
-*(Simplified ERD for a blog system.)*
++-----------+ M        1 +-------------+ M        1 +-----------+
+|   Posts   |----------->|  PostTags   |<-----------|   Tags    |
+|-----------|            |-------------|            |-----------|
+| PostID(PK)|            | PostID (FK) |            | TagID (PK)|
+| Title     |            | TagID (FK)  |            | Name      |
+| Content   |            +-------------+            +-----------+
+| UserID(FK)|           (Junction Table)
++-----------+
+(A Post can have many Tags, a Tag can be on many Posts - Many-to-Many via PostTags)
+```
 
 **Principles & Applications:**
 
