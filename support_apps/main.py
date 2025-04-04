@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 
-from converter import process_markdown_file
+from converter import load_diagram_config, process_markdown_file
 
 
 def setup_logger():
@@ -23,12 +23,46 @@ def setup_logger():
     logger.addHandler(file_handler)
 
 
+def create_default_config(output_path):
+    """Create a default configuration file"""
+    import json
+
+    # Define default configuration
+    default_config = {
+        "default": {"max_width": "600px", "max_height": None, "min_width": None},
+        "flowchart": {"max_width": "650px", "max_height": None, "min_width": "300px"},
+        "sequence": {"max_width": "550px", "max_height": None, "min_width": "250px"},
+        "classdiagram": {
+            "max_width": "600px",
+            "max_height": None,
+            "min_width": "300px",
+        },
+        "statediagram": {
+            "max_width": "550px",
+            "max_height": None,
+            "min_width": "250px",
+        },
+        "erdiagram": {"max_width": "700px", "max_height": None, "min_width": "400px"},
+        "gantt": {"max_width": "800px", "max_height": None, "min_width": "500px"},
+        "pie": {"max_width": "450px", "max_height": "450px", "min_width": "300px"},
+    }
+
+    try:
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(default_config, f, indent=2)
+        logging.info(f"Created default configuration file: {output_path}")
+        return True
+    except Exception as e:
+        logging.error(f"Error creating configuration file: {str(e)}")
+        return False
+
+
 def main():
     """Main entry point for the command-line interface"""
     parser = argparse.ArgumentParser(
         description="Convert Mermaid diagrams in Markdown to images"
     )
-    parser.add_argument("file", help="Path to the Markdown file")
+    parser.add_argument("file", nargs="?", help="Path to the Markdown file")
     parser.add_argument(
         "--prefix", default="diagram", help="Prefix for image filenames"
     )
@@ -40,11 +74,22 @@ def main():
     )
     parser.add_argument("--image-dir", help="Custom directory for generated images")
     parser.add_argument("--gui", action="store_true", help="Launch the GUI")
+    parser.add_argument("--config", help="Path to diagram configuration JSON file")
+    parser.add_argument(
+        "--create-config",
+        metavar="FILE",
+        help="Create a default configuration file at the specified path",
+    )
 
     args = parser.parse_args()
 
     # Set up logging
     setup_logger()
+
+    # Create default config if requested
+    if args.create_config:
+        success = create_default_config(args.create_config)
+        sys.exit(0 if success else 1)
 
     # Launch GUI if requested
     if args.gui:
@@ -57,12 +102,28 @@ def main():
             logging.error(f"Could not launch GUI: {str(e)}")
             sys.exit(1)
 
+    # Check if file is provided when not in GUI mode and not creating config
+    if not args.file:
+        logging.error(
+            "No input file specified. Use --gui for GUI mode or specify a file."
+        )
+        parser.print_help()
+        sys.exit(1)
+
     # Process the file
     if not os.path.exists(args.file):
         logging.error(f"File not found: {args.file}")
         sys.exit(1)
 
-    stats = process_markdown_file(args.file, args.prefix, args.format, args.image_dir)
+    # Load diagram configuration if specified
+    diagram_config = None
+    if args.config:
+        diagram_config = load_diagram_config(args.config)
+        logging.info(f"Loaded configuration from: {args.config}")
+
+    stats = process_markdown_file(
+        args.file, args.prefix, args.format, args.image_dir, diagram_config
+    )
 
     # Print summary
     print("\nConversion Summary:")

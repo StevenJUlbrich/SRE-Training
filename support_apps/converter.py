@@ -32,6 +32,79 @@ def extract_mermaid_blocks(markdown_content):
     return matches
 
 
+def modify_svg_dimensions(svg_path, max_width="600px", max_height=None, min_width=None):
+    """
+    Modify an SVG file to add width, height, and viewBox attributes while preserving layout.
+    """
+    try:
+        # Read the SVG file
+        with open(svg_path, "r", encoding="utf-8") as f:
+            svg_content = f.read()
+
+        import re
+
+        # First, extract any existing viewBox, width, and height
+        viewbox_match = re.search(r'viewBox=["\']([^"\']+)["\']', svg_content)
+        width_match = re.search(r'width=["\']([^"\']+)["\']', svg_content)
+        height_match = re.search(r'height=["\']([^"\']+)["\']', svg_content)
+
+        # If we have a viewBox, we'll preserve it
+        if viewbox_match:
+            original_viewbox = viewbox_match.group(1)
+        # If no viewBox but we have width and height, create one
+        elif width_match and height_match:
+            try:
+                width_val = width_match.group(1)
+                height_val = height_match.group(1)
+
+                # Try to convert to numbers, stripping units
+                width_num = float(re.sub(r"[^0-9.]", "", width_val))
+                height_num = float(re.sub(r"[^0-9.]", "", height_val))
+
+                original_viewbox = f"0 0 {width_num} {height_num}"
+            except ValueError:
+                original_viewbox = "0 0 1000 1000"  # Default if conversion fails
+        else:
+            # Default viewBox
+            original_viewbox = "0 0 1000 1000"
+
+        # Create a modified SVG by adding a wrapping svg element with our constraints
+        # This preserves the original SVG's internal scaling while allowing us to constrain its display size
+        modified_svg = f'<svg xmlns="http://www.w3.org/2000/svg" '
+
+        if max_width:
+            modified_svg += f'width="{max_width}" '
+
+        if max_height:
+            modified_svg += f'height="{max_height}" '
+        else:
+            modified_svg += 'height="auto" '
+
+        # Add preserveAspectRatio to maintain proper scaling
+        modified_svg += 'preserveAspectRatio="xMidYMid meet" '
+
+        # Add style for min-width if provided
+        if min_width:
+            modified_svg += f'style="min-width: {min_width};" '
+
+        # Add the viewBox using the original or calculated viewBox
+        modified_svg += f'viewBox="{original_viewbox}">\n'
+
+        # Add the original SVG content, removing the outer <svg> tags
+        inner_content = re.sub(r"<svg[^>]*>", "", svg_content, count=1)
+        inner_content = re.sub(r"</svg>\s*$", "", inner_content)
+        modified_svg += inner_content + "\n</svg>"
+
+        # Write the modified content back to the file
+        with open(svg_path, "w", encoding="utf-8") as f:
+            f.write(modified_svg)
+
+        return True
+    except Exception as e:
+        logger.error(f"Error modifying SVG dimensions: {e}")
+        return False
+
+
 def create_image_directory(markdown_path, image_dir=None):
     """
     Create a directory for the images next to the markdown file.
@@ -50,7 +123,9 @@ def create_image_directory(markdown_path, image_dir=None):
     return image_dir
 
 
-def generate_image_from_mermaid(mermaid_code, output_path, image_format="svg"):
+def generate_image_from_mermaid(
+    mermaid_code, output_path, image_format="svg", diagram_config=None
+):
     """
     Generate an image from Mermaid code using mermaid-py.
     Returns True if successful, False otherwise.
@@ -88,6 +163,19 @@ def generate_image_from_mermaid(mermaid_code, output_path, image_format="svg"):
         # Generate the image directly to file
         if image_format.lower() == "svg":
             md.Mermaid(graph).to_svg(output_path)
+
+            # Apply diagram sizing if SVG and config is provided
+            if diagram_config:
+                # Get config for this diagram type or use default
+                config = diagram_config.get(
+                    diagram_type, diagram_config.get("default", {})
+                )
+                max_width = config.get("max_width", "600px")
+                max_height = config.get("max_height", None)
+                min_width = config.get("min_width", None)
+
+                # Modify the SVG dimensions
+                modify_svg_dimensions(output_path, max_width, max_height, min_width)
         else:
             md.Mermaid(graph).to_png(output_path)
 
@@ -158,7 +246,11 @@ def replace_mermaid_with_images(
 
 
 def process_markdown_file(
-    file_path, image_prefix="diagram", image_format="svg", image_dir=None
+    file_path,
+    image_prefix="diagram",
+    image_format="svg",
+    image_dir=None,
+    diagram_config=None,
 ):
     """
     Process a markdown file to convert Mermaid diagrams to images.
@@ -168,10 +260,44 @@ def process_markdown_file(
     - image_prefix: Prefix for generated image files
     - image_format: Format for the images (svg or png)
     - image_dir: Custom directory for images (default: ./images/)
+    - diagram_config: Configuration for diagram dimensions by type
 
     Returns:
     - Dictionary with statistics about the conversion
     """
+    # If no diagram config is provided, use a default
+    if diagram_config is None:
+        diagram_config = {
+            "default": {"max_width": "600px", "max_height": None, "min_width": None},
+            "flowchart": {
+                "max_width": "650px",
+                "max_height": None,
+                "min_width": "300px",
+            },
+            "sequence": {
+                "max_width": "550px",
+                "max_height": None,
+                "min_width": "250px",
+            },
+            "classdiagram": {
+                "max_width": "600px",
+                "max_height": None,
+                "min_width": "300px",
+            },
+            "statediagram": {
+                "max_width": "550px",
+                "max_height": None,
+                "min_width": "250px",
+            },
+            "erdiagram": {
+                "max_width": "700px",
+                "max_height": None,
+                "min_width": "400px",
+            },
+            "gantt": {"max_width": "800px", "max_height": None, "min_width": "500px"},
+            "pie": {"max_width": "450px", "max_height": "450px", "min_width": "300px"},
+        }
+
     stats = {
         "total_diagrams": 0,
         "successful_conversions": 0,
@@ -211,14 +337,46 @@ def process_markdown_file(
             image_name = create_image_name(image_prefix, i + 1, block, image_format)
             image_path = os.path.join(image_dir, image_name)
 
-            # Generate the image
-            success = generate_image_from_mermaid(block, image_path, image_format)
+            # Determine diagram type to apply appropriate configuration
+            first_line = block.strip().split("\n")[0].strip()
+            diagram_type = "flowchart"  # Default
+
+            # Try to detect diagram type
+            if first_line.startswith("sequenceDiagram"):
+                diagram_type = "sequence"
+            elif first_line.startswith("classDiagram"):
+                diagram_type = "classdiagram"
+            elif first_line.startswith("stateDiagram"):
+                diagram_type = "statediagram"
+            elif first_line.startswith("erDiagram"):
+                diagram_type = "erdiagram"
+            elif first_line.startswith("gantt"):
+                diagram_type = "gantt"
+            elif first_line.startswith("pie"):
+                diagram_type = "pie"
+            elif first_line.startswith("graph") or first_line.startswith("flowchart"):
+                diagram_type = "flowchart"
+
+            # Generate the image with the appropriate configuration
+            success = generate_image_from_mermaid(
+                block, image_path, image_format, diagram_config
+            )
 
             if success:
                 # Use relative path in the markdown
                 rel_path = os.path.join("./images", image_name).replace("\\", "/")
                 image_paths.append(rel_path)
                 stats["successful_conversions"] += 1
+
+                # If this is an SVG, we've already embedded dimensions, so update image_paths
+                # to include information about whether dimensions are embedded
+                if image_format.lower() == "svg":
+                    image_paths[-1] = (
+                        rel_path,
+                        True,
+                    )  # Tuple: (path, dimensions_embedded)
+                else:
+                    image_paths[-1] = (rel_path, False)
             else:
                 image_paths.append(None)
                 stats["failed_conversions"] += 1
@@ -231,8 +389,8 @@ def process_markdown_file(
         stats["output_file"] = output_file
 
         # Replace Mermaid blocks with image references in a new file
-        new_content, successful = replace_mermaid_with_images(
-            content, mermaid_blocks, image_paths
+        new_content, successful = replace_mermaid_with_images_enhanced(
+            content, mermaid_blocks, image_paths, diagram_config
         )
 
         # Write the new content to the output file
@@ -248,3 +406,137 @@ def process_markdown_file(
         logger.error(f"Error processing file {file_path}: {str(e)}")
         logger.error(traceback.format_exc())
         return stats
+
+
+def replace_mermaid_with_images_enhanced(
+    markdown_content, mermaid_blocks, image_paths, diagram_config
+):
+    """
+    Replace Mermaid code blocks with image references.
+    This enhanced version handles SVGs with embedded dimensions differently.
+
+    Returns the updated markdown content and count of successful replacements.
+    """
+    new_content = markdown_content
+    offset = 0  # Offset to adjust positions after replacements
+    successful = 0
+
+    for i, (block, start, end) in enumerate(mermaid_blocks):
+        image_path_info = image_paths[i]
+
+        # Calculate positions adjusted by the offset
+        adj_start = start + offset
+        adj_end = end + offset
+
+        if image_path_info:
+            # Unpack the image path info
+            if isinstance(image_path_info, tuple):
+                image_path, dimensions_embedded = image_path_info
+            else:
+                # For backward compatibility
+                image_path = image_path_info
+                dimensions_embedded = False
+
+            # Determine what type of diagram this is
+            first_line = block.strip().split("\n")[0].strip()
+            diagram_type = "flowchart"  # Default
+
+            if first_line.startswith("sequenceDiagram"):
+                diagram_type = "sequence"
+            elif first_line.startswith("classDiagram"):
+                diagram_type = "classdiagram"
+            elif first_line.startswith("stateDiagram"):
+                diagram_type = "statediagram"
+            elif first_line.startswith("erDiagram"):
+                diagram_type = "erdiagram"
+            elif first_line.startswith("gantt"):
+                diagram_type = "gantt"
+            elif first_line.startswith("pie"):
+                diagram_type = "pie"
+            elif first_line.startswith("graph") or first_line.startswith("flowchart"):
+                diagram_type = "flowchart"
+
+            # Get diagram-specific configuration
+            config = diagram_config.get(diagram_type, diagram_config.get("default", {}))
+            max_width = config.get("max_width", "600px")
+
+            # Create appropriate markdown image reference based on whether dimensions are embedded
+            if dimensions_embedded:
+                # For SVGs with embedded dimensions, use a simple image reference
+                image_ref = f'\n\n<img src="{image_path}" alt="Diagram">\n\n'
+            else:
+                # For PNGs or SVGs without embedded dimensions, include style attribute
+                image_ref = f'\n\n<img src="{image_path}" alt="Diagram" style="max-width: {max_width};">\n\n'
+
+            # Replace the mermaid block with the image reference
+            new_content = new_content[:adj_start] + image_ref + new_content[adj_end:]
+
+            # Update the offset based on difference in length
+            offset += len(image_ref) - (adj_end - adj_start)
+            successful += 1
+        else:
+            # Add warning comment and keep original block
+            warning = f"\n\n<!-- WARNING: Failed to generate diagram -->\n"
+            orig_block = f"```mermaid\n{block}```"
+
+            # Replace with warning + original
+            replacement = warning + orig_block
+            new_content = new_content[:adj_start] + replacement + new_content[adj_end:]
+
+            # Update the offset
+            offset += len(replacement) - (adj_end - adj_start)
+
+    return new_content, successful
+
+
+def load_diagram_config(config_path=None):
+    """
+    Load diagram configuration from a JSON file or return the default configuration.
+
+    Args:
+        config_path: Path to the JSON configuration file (optional)
+
+    Returns:
+        dict: Configuration dictionary
+    """
+    default_config = {
+        "default": {"max_width": "600px", "max_height": None, "min_width": None},
+        "flowchart": {"max_width": "650px", "max_height": None, "min_width": "300px"},
+        "sequence": {"max_width": "550px", "max_height": None, "min_width": "250px"},
+        "classdiagram": {
+            "max_width": "600px",
+            "max_height": None,
+            "min_width": "300px",
+        },
+        "statediagram": {
+            "max_width": "550px",
+            "max_height": None,
+            "min_width": "250px",
+        },
+        "erdiagram": {"max_width": "700px", "max_height": None, "min_width": "400px"},
+        "gantt": {"max_width": "800px", "max_height": None, "min_width": "500px"},
+        "pie": {"max_width": "450px", "max_height": "450px", "min_width": "300px"},
+    }
+
+    if not config_path or not os.path.exists(config_path):
+        return default_config
+
+    try:
+        import json
+
+        with open(config_path, "r", encoding="utf-8") as f:
+            config = json.load(f)
+
+        # Merge with defaults for any missing values
+        for diagram_type, default_values in default_config.items():
+            if diagram_type not in config:
+                config[diagram_type] = default_values
+            else:
+                for key, value in default_values.items():
+                    if key not in config[diagram_type]:
+                        config[diagram_type][key] = value
+
+        return config
+    except Exception as e:
+        logger.error(f"Error loading diagram config from {config_path}: {e}")
+        return default_config

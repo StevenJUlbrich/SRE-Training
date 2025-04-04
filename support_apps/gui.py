@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import filedialog, scrolledtext, ttk
 
 # Import the converter module
-from converter import process_markdown_file
+from converter import load_diagram_config, process_markdown_file
 
 # Configure logging to use a queue handler for the GUI
 log_queue = queue.Queue()
@@ -80,6 +80,7 @@ class MermaidConverterGUI:
         self.image_prefix_var = tk.StringVar(value="diagram")
         self.image_format_var = tk.StringVar(value="svg")
         self.image_dir_var = tk.StringVar()
+        self.config_file_var = tk.StringVar()
         self.status_var = tk.StringVar(value="Ready")
         self.is_processing = False
 
@@ -93,13 +94,13 @@ class MermaidConverterGUI:
         self.process_log_queue()
 
         # Check dependencies
-        # missing_deps = check_dependencies()
-        # if missing_deps:
-        #     self.log_text.insert(tk.END, "Missing dependencies detected:\n")
-        #     for dep in missing_deps:
-        #         self.log_text.insert(tk.END, f"  - {dep}\n")
-        #     self.log_text.insert(tk.END, "Please install required packages with:\n")
-        #     self.log_text.insert(tk.END, "pip install python-mermaid\n\n")
+        missing_deps = check_dependencies()
+        if missing_deps:
+            self.log_text.insert(tk.END, "Missing dependencies detected:\n")
+            for dep in missing_deps:
+                self.log_text.insert(tk.END, f"  - {dep}\n")
+            self.log_text.insert(tk.END, "Please install required packages with:\n")
+            self.log_text.insert(tk.END, "pip install python-mermaid\n\n")
 
     def create_file_selection_frame(self):
         """Create the file selection section"""
@@ -158,9 +159,34 @@ class MermaidConverterGUI:
             row=3, column=1, sticky=tk.W
         )
 
+        # Configuration file
+        ttk.Label(frame, text="Config JSON:").grid(row=4, column=0, sticky=tk.W, pady=5)
+        ttk.Entry(frame, textvariable=self.config_file_var, width=50).grid(
+            row=4, column=1, padx=5, pady=5, sticky=tk.EW
+        )
+        ttk.Button(frame, text="Browse...", command=self.browse_config).grid(
+            row=4, column=2, padx=5, pady=5
+        )
+        ttk.Label(frame, text="(Optional: JSON configuration for diagram sizing)").grid(
+            row=5, column=1, sticky=tk.W
+        )
+
+        # Add buttons for creating and editing config
+        config_button_frame = ttk.Frame(frame)
+        config_button_frame.grid(row=6, column=1, sticky=tk.W, pady=5)
+
+        ttk.Button(
+            config_button_frame,
+            text="Create Default Config",
+            command=self.create_default_config,
+        ).pack(side=tk.LEFT, padx=5)
+        ttk.Button(
+            config_button_frame, text="Edit Config", command=self.edit_config
+        ).pack(side=tk.LEFT, padx=5)
+
         # Convert button
         convert_btn = ttk.Button(frame, text="Convert", command=self.start_conversion)
-        convert_btn.grid(row=4, column=0, columnspan=3, pady=10)
+        convert_btn.grid(row=7, column=0, columnspan=3, pady=10)
 
         frame.columnconfigure(1, weight=1)
 
@@ -206,6 +232,102 @@ class MermaidConverterGUI:
         dir_path = filedialog.askdirectory()
         if dir_path:
             self.image_dir_var.set(dir_path)
+
+    def browse_config(self):
+        """Open file dialog to select a JSON configuration file"""
+        file_path = filedialog.askopenfilename(
+            filetypes=[("JSON files", "*.json"), ("All files", "*.*")]
+        )
+        if file_path:
+            self.config_file_var.set(file_path)
+
+    def create_default_config(self):
+        """Create a default configuration file"""
+        import json
+
+        # Define default configuration
+        default_config = {
+            "default": {"max_width": "600px", "max_height": None, "min_width": None},
+            "flowchart": {
+                "max_width": "650px",
+                "max_height": None,
+                "min_width": "300px",
+            },
+            "sequence": {
+                "max_width": "550px",
+                "max_height": None,
+                "min_width": "250px",
+            },
+            "classdiagram": {
+                "max_width": "600px",
+                "max_height": None,
+                "min_width": "300px",
+            },
+            "statediagram": {
+                "max_width": "550px",
+                "max_height": None,
+                "min_width": "250px",
+            },
+            "erdiagram": {
+                "max_width": "700px",
+                "max_height": None,
+                "min_width": "400px",
+            },
+            "gantt": {"max_width": "800px", "max_height": None, "min_width": "500px"},
+            "pie": {"max_width": "450px", "max_height": "450px", "min_width": "300px"},
+        }
+
+        # Get save location
+        file_path = filedialog.asksaveasfilename(
+            defaultextension=".json",
+            filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
+            initialfile="diagram_config.json",
+        )
+
+        if file_path:
+            try:
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(default_config, f, indent=2)
+
+                self.config_file_var.set(file_path)
+                self.log_message(
+                    f"Created default configuration file: {file_path}", logging.INFO
+                )
+            except Exception as e:
+                self.log_message(
+                    f"Error creating configuration file: {str(e)}", logging.ERROR
+                )
+
+    def edit_config(self):
+        """Open the configuration file in the default editor"""
+        config_path = self.config_file_var.get()
+
+        if not config_path:
+            self.log_message("No configuration file selected", logging.WARNING)
+            return
+
+        if not os.path.exists(config_path):
+            self.log_message(
+                f"Configuration file not found: {config_path}", logging.ERROR
+            )
+            return
+
+        try:
+            # Try to open the file with the default system editor
+            if sys.platform == "win32":
+                os.startfile(config_path)
+            elif sys.platform == "darwin":  # macOS
+                os.system(f'open "{config_path}"')
+            else:  # Linux
+                os.system(f'xdg-open "{config_path}"')
+
+            self.log_message(
+                f"Opened configuration file in editor: {config_path}", logging.INFO
+            )
+        except Exception as e:
+            self.log_message(
+                f"Error opening configuration file: {str(e)}", logging.ERROR
+            )
 
     def log_message(self, message, level=logging.INFO):
         """Add a message to the log text widget"""
@@ -270,19 +392,36 @@ class MermaidConverterGUI:
         image_prefix = self.image_prefix_var.get() or "diagram"
         image_format = self.image_format_var.get() or "svg"
         image_dir = self.image_dir_var.get() or None
+        config_path = self.config_file_var.get() or None
+
+        # Load diagram configuration if specified
+        diagram_config = None
+        if config_path:
+            try:
+                diagram_config = load_diagram_config(config_path)
+                self.log_message(
+                    f"Loaded configuration from: {config_path}", logging.INFO
+                )
+            except Exception as e:
+                self.log_message(
+                    f"Error loading configuration: {str(e)}", logging.ERROR
+                )
+                # Continue with default config
 
         # Run conversion in a separate thread
         threading.Thread(
             target=self.run_conversion,
-            args=(file_path, image_prefix, image_format, image_dir),
+            args=(file_path, image_prefix, image_format, image_dir, diagram_config),
             daemon=True,
         ).start()
 
-    def run_conversion(self, file_path, image_prefix, image_format, image_dir):
+    def run_conversion(
+        self, file_path, image_prefix, image_format, image_dir, diagram_config=None
+    ):
         """Run the conversion process and update the UI when done"""
         try:
             stats = process_markdown_file(
-                file_path, image_prefix, image_format, image_dir
+                file_path, image_prefix, image_format, image_dir, diagram_config
             )
 
             # Update the UI from the main thread

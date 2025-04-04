@@ -6,7 +6,7 @@ Welcome to Day 3 of your SRE Database Training! Today’s focus is on **Database
 
 
 
-<img src="./images/day03-diagram-1-44ae673c.svg" alt="Diagram" style="max-width: 600px;">
+![Diagram](./images/diagram-1-44ae673c.png)
 
 
 
@@ -70,7 +70,7 @@ Each concept includes:
 
 
 
-<img src="./images/day03-diagram-2-18ac3f50.svg" alt="Diagram" style="max-width: 600px;">
+![Diagram](./images/diagram-2-18ac3f50.png)
 
 
 
@@ -92,11 +92,7 @@ Each concept includes:
 
 **🖼️ Visual Representation** (ER Diagram in Mermaid):
 
-
-
-<img src="./images/day03-diagram-3-769c17dd.svg" alt="Diagram" style="max-width: 200px;">
-
-
+![Diagram](./images/diagram-3-769c17dd.png)
 
 **🔬 Technical Explanation**: Identifies **entities** (tables), their **attributes** (columns), and **relationships** (1-to-1, 1-to-many, many-to-many).
 
@@ -116,11 +112,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-<img src="./images/day03-diagram-4-8c637dee.svg" alt="Diagram" style="max-width: 200px;">
-
-
+![Diagram](./images/diagram-4-8c637dee.png)
 
 **🔬 Technical Explanation**:
 
@@ -146,7 +138,7 @@ Each concept includes:
 
 
 
-<img src="./images/day03-diagram-5-fa37afe2.svg" alt="Diagram" style="max-width: 600px;">
+<img src="./images/diagram-5-fa37afe2.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -170,7 +162,7 @@ Each concept includes:
 
 
 
-<img src="./images/day03-diagram-6-b0a9f23a.svg" alt="Diagram" style="max-width: 600px;">
+<img src="./images/diagram-6-b0a9f23a.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -194,7 +186,7 @@ Each concept includes:
 
 
 
-<img src="./images/day03-diagram-7-67f8a250.svg" alt="Diagram" style="max-width: 600px;">
+<img src="./images/diagram-7-67f8a250.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -218,7 +210,7 @@ Each concept includes:
 
 
 
-<img src="./images/day03-diagram-8-12249ad8.svg" alt="Diagram" style="max-width: 600px;">
+<img src="./images/diagram-8-12249ad8.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -240,7 +232,7 @@ Below is a Mermaid flowchart showing how an unnormalized table is transformed in
 
 
 
-<img src="./images/day03-diagram-9-6d0519f0.svg" alt="Diagram" style="max-width: 100px;">
+<img src="./images/diagram-9-6d0519f0.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -333,7 +325,7 @@ Use Mermaid for a diagnostic workflow example:
 
 
 
-<img src="./images/day03-diagram-10-69fbf38e.svg" alt="Diagram" style="max-width: 900px;">
+<img src="./images/diagram-10-69fbf38e.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -421,7 +413,7 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 
 
-<img src="./images/day03-diagram-11-dcdfac07.svg" alt="Diagram" style="max-width: 400px;">
+<img src="./images/diagram-11-dcdfac07.png" alt="Diagram" style="max-width: 650px;">
 
 
 
@@ -429,7 +421,7 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 
 
-<img src="./images/day03-diagram-12-e3779271.svg" alt="Diagram" style="max-width: 200px;">
+<img src="./images/diagram-12-e3779271.png" alt="Diagram" style="max-width: 700px;">
 
 
 
