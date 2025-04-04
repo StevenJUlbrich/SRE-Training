@@ -114,7 +114,9 @@ def create_image_name(prefix, index, mermaid_code, image_format="svg"):
     return f"{prefix}-{index}-{code_hash}.{image_format}"
 
 
-def replace_mermaid_with_images(markdown_content, mermaid_blocks, image_paths):
+def replace_mermaid_with_images(
+    markdown_content, mermaid_blocks, image_paths, max_width="600px"
+):
     """
     Replace Mermaid code blocks with image references.
     Returns the updated markdown content and count of successful replacements.
@@ -131,8 +133,8 @@ def replace_mermaid_with_images(markdown_content, mermaid_blocks, image_paths):
         adj_end = end + offset
 
         if image_path:
-            # Create markdown image reference
-            image_ref = f"\n\n![Diagram]({image_path})\n\n"
+            # Create markdown image reference with style attribute
+            image_ref = f'\n\n<img src="{image_path}" alt="Diagram" style="max-width: {max_width};">\n\n'
 
             # Replace the mermaid block with the image reference
             new_content = new_content[:adj_start] + image_ref + new_content[adj_end:]
