@@ -3,14 +3,22 @@ from mermaid.graph import Graph
 
 # Define the Mermaid diagram syntax
 mermaid_syntax = """
-pie title Pets adopted by volunteers
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 15
+erDiagram
+    EMPLOYEES ||--o{ DEPARTMENTS : belongs_to
+    EMPLOYEES {
+        int emp_id PK
+        string emp_name
+        int dept_id FK NOT NULL
+    }
+    DEPARTMENTS {
+        int dept_id PK
+        string dept_name UNIQUE
+        string location CHECK
+    }
 """
 
 # Create a Graph object with the syntax
-graph = Graph("piechart", mermaid_syntax)
+graph = Graph("erdiagram", mermaid_syntax)
 
 # Generate the SVG content directly from the Graph object
 md.Mermaid(graph).to_svg("./support_apps/image/mermaid_diagram.svg")
