@@ -1,6 +1,6 @@
-## 🏗️ Day 3: Database Design Principles & Normalization (Oracle-Focused) citeturn1file0
+# 🏗️ Day 3: Database Design Principles & Normalization (Oracle-Focused) citeturn1file0
 
-### 📌 Introduction
+## 📌 Introduction
 
 Welcome to Day 3 of your SRE Database Training! Today’s focus is on **Database Design Principles** and **Normalization**, building on the fundamentals from Days 1 and 2. Proper design is essential for **performance**, **data integrity**, and **maintainability**. Below is a Mermaid-based concept map illustrating how design choices directly impact overall system reliability:
 

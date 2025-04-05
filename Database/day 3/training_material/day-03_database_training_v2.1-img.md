@@ -6,7 +6,7 @@ Welcome to Day 3 of your SRE Database Training! Today’s focus is on **Database
 
 
 
-![Diagram](./images/diagram-03-1-44ae673c.png)
+![Diagram](./images/diagram-01-1-44ae673c.png)
 
 
 
@@ -70,7 +70,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-2-18ac3f50.png)
+![Diagram](./images/diagram-01-2-18ac3f50.png)
 
 
 
@@ -94,7 +94,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-3-769c17dd.png)
+![Diagram](./images/diagram-01-3-769c17dd.png)
 
 
 
@@ -118,7 +118,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-4-8c637dee.png)
+![Diagram](./images/diagram-01-4-8c637dee.png)
 
 
 
@@ -146,7 +146,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-5-fa37afe2.png)
+![Diagram](./images/diagram-01-5-fa37afe2.png)
 
 
 
@@ -170,7 +170,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-6-b0a9f23a.png)
+![Diagram](./images/diagram-01-6-b0a9f23a.png)
 
 
 
@@ -194,7 +194,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-7-67f8a250.png)
+![Diagram](./images/diagram-01-7-67f8a250.png)
 
 
 
@@ -218,7 +218,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-03-8-12249ad8.png)
+![Diagram](./images/diagram-01-8-12249ad8.png)
 
 
 
@@ -240,7 +240,7 @@ Below is a Mermaid flowchart showing how an unnormalized table is transformed in
 
 
 
-![Diagram](./images/diagram-03-9-6d0519f0.png)
+![Diagram](./images/diagram-01-9-6d0519f0.png)
 
 
 
@@ -333,7 +333,7 @@ Use Mermaid for a diagnostic workflow example:
 
 
 
-![Diagram](./images/diagram-03-10-69fbf38e.png)
+![Diagram](./images/diagram-01-10-69fbf38e.png)
 
 
 
@@ -421,7 +421,7 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 
 
-![Diagram](./images/diagram-03-11-dcdfac07.png)
+![Diagram](./images/diagram-01-11-dcdfac07.png)
 
 
 
@@ -429,7 +429,7 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 
 
-![Diagram](./images/diagram-03-12-e3779271.png)
+![Diagram](./images/diagram-01-12-e3779271.png)
 
 
 
