@@ -1,14 +1,10 @@
-# 🏗️ Day 3: Database Design Principles & Normalization (Oracle-Focused) citeturn1file0
+# 🏗️ Day 3: Database Design Principles & Normalization (Oracle-Focused)
 
 ## 📌 Introduction
 
 Welcome to Day 3 of your SRE Database Training! Today’s focus is on **Database Design Principles** and **Normalization**, building on the fundamentals from Days 1 and 2. Proper design is essential for **performance**, **data integrity**, and **maintainability**. Below is a Mermaid-based concept map illustrating how design choices directly impact overall system reliability:
 
-
-
-![Diagram: flowchart](images/test-01--1-53f9d654.png)
-
-
+![Diagram: flowchart](images/day-03a-1-53f9d654.png)
 
 > **Real-World Scenario**: A poorly designed schema that duplicates data often leads to complicated support cases, where multiple references to the same data cause inconsistencies and application bugs.
 
@@ -68,11 +64,7 @@ Each concept includes:
 
 **🖼️ Visual Representation** (Simple principle summary):
 
-
-
-![Diagram: flowchart](images/test-01--2-d45b7b77.png)
-
-
+![Diagram: flowchart](images/day-03a-2-d45b7b77.png)
 
 **🔬 Technical Explanation**: Violations of these principles lead to anomalies, inefficiencies, and complexity in maintenance.
 
@@ -92,11 +84,7 @@ Each concept includes:
 
 **🖼️ Visual Representation** (ER Diagram in Mermaid):
 
-
-
-![Diagram: erdiagram](images/test-01--3-bdf547ad.png)
-
-
+![Diagram: erdiagram](images/day-03a-3-bdf547ad.png)
 
 **🔬 Technical Explanation**: Identifies **entities** (tables), their **attributes** (columns), and **relationships** (1-to-1, 1-to-many, many-to-many).
 
@@ -116,11 +104,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-![Diagram: erdiagram](images/test-01--4-e5972104.png)
-
-
+![Diagram: erdiagram](images/day-03a-4-e5972104.png)
 
 **🔬 Technical Explanation**:
 
@@ -144,11 +128,7 @@ Each concept includes:
 
 **🖼️ Visual Representation** (Normalization from unnormalized to 1NF):
 
-
-
-![Diagram: flowchart](images/test-01--5-e94d292e.png)
-
-
+![Diagram: flowchart](images/day-03a-5-e94d292e.png)
 
 **🔬 Technical Explanation**: 1NF enforces **atomicity** (no repeating groups, no multi-valued columns).
 
@@ -168,11 +148,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-![Diagram: flowchart](images/test-01--6-0638c5f1.png)
-
-
+![Diagram: flowchart](images/day-03a-6-0638c5f1.png)
 
 **🔬 Technical Explanation**: For tables with **composite primary keys**, 2NF requires that non-key columns depend on **all** parts of the key.
 
@@ -192,11 +168,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-![Diagram: flowchart](images/test-01--7-17c65f1a.png)
-
-
+![Diagram: flowchart](images/day-03a-7-17c65f1a.png)
 
 **🔬 Technical Explanation**: 3NF eliminates **transitive dependencies** (non-key attributes depending on other non-key attributes).
 
@@ -216,11 +188,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-![Diagram: flowchart](images/test-01--8-ec352a9d.png)
-
-
+![Diagram: flowchart](images/day-03a-8-ec352a9d.png)
 
 **🔬 Technical Explanation**: Duplicate data in strategic places to reduce join complexity.
 
@@ -238,11 +206,7 @@ Each concept includes:
 
 Below is a Mermaid flowchart showing how an unnormalized table is transformed into 1NF, 2NF, and 3NF:
 
-
-
-![Diagram: flowchart](images/test-01--9-5a4334ff.png)
-
-
+![Diagram: flowchart](images/day-03a-9-5a4334ff.png)
 
 **SQL Example** (Oracle):
 
@@ -331,11 +295,7 @@ CREATE TABLE orders (
 
 Use Mermaid for a diagnostic workflow example:
 
-
-
-![Diagram: flowchart](images/test-01--10-45c819cf.png)
-
-
+![Diagram: flowchart](images/day-03a-10-45c819cf.png)
 
 ---
 
@@ -419,19 +379,11 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 ### 2. Normalization Decision Tree (Mermaid)
 
-
-
-![Diagram: flowchart](images/test-01--11-d15ac3fc.png)
-
-
+![Diagram: flowchart](images/day-03a-11-d15ac3fc.png)
 
 ### 3. Oracle Constraints Visualization
 
-
-
-![Diagram: erdiagram](images/test-01--12-486c74d9.png)
-
-
+![Diagram: erdiagram](images/day-03a-12-486c74d9.png)
 
 ### 4. Performance Impact Analysis
 
