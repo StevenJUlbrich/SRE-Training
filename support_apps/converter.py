@@ -3,10 +3,25 @@ import logging
 import os
 import re
 import shutil
+import time  # Import the time module
 import traceback
 from pathlib import Path
 
-# Configure logging
+# --- Top Level Imports ---
+try:
+    import mermaid as md
+    from mermaid.graph import Graph
+
+    MERMAID_AVAILABLE = True
+except ImportError:
+    logging.critical(
+        "Mermaid library (python-mermaid) not found. Conversion will fail."
+    )
+    MERMAID_AVAILABLE = False
+# --- End Top Level Imports ---
+
+
+# Configure logging (Consider moving to main entry points)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -22,215 +37,181 @@ def extract_mermaid_blocks(markdown_content):
     """
     pattern = r"```mermaid\s+(.*?)```"
     matches = []
-
     for match in re.finditer(pattern, markdown_content, re.DOTALL):
-        block_text = match.group(1)
+        block_text = match.group(1).strip()
         start_pos = match.start()
         end_pos = match.end()
         matches.append((block_text, start_pos, end_pos))
-
     return matches
-
-
-def modify_svg_dimensions(svg_path, max_width="600px", max_height=None, min_width=None):
-    """
-    Modify an SVG file to add width, height, and viewBox attributes while preserving layout.
-    """
-    try:
-        # Read the SVG file
-        with open(svg_path, "r", encoding="utf-8") as f:
-            svg_content = f.read()
-
-        import re
-
-        # First, extract any existing viewBox, width, and height
-        viewbox_match = re.search(r'viewBox=["\']([^"\']+)["\']', svg_content)
-        width_match = re.search(r'width=["\']([^"\']+)["\']', svg_content)
-        height_match = re.search(r'height=["\']([^"\']+)["\']', svg_content)
-
-        # If we have a viewBox, we'll preserve it
-        if viewbox_match:
-            original_viewbox = viewbox_match.group(1)
-        # If no viewBox but we have width and height, create one
-        elif width_match and height_match:
-            try:
-                width_val = width_match.group(1)
-                height_val = height_match.group(1)
-
-                # Try to convert to numbers, stripping units
-                width_num = float(re.sub(r"[^0-9.]", "", width_val))
-                height_num = float(re.sub(r"[^0-9.]", "", height_val))
-
-                original_viewbox = f"0 0 {width_num} {height_num}"
-            except ValueError:
-                original_viewbox = "0 0 1000 1000"  # Default if conversion fails
-        else:
-            # Default viewBox
-            original_viewbox = "0 0 1000 1000"
-
-        # Create a modified SVG by adding a wrapping svg element with our constraints
-        # This preserves the original SVG's internal scaling while allowing us to constrain its display size
-        modified_svg = f'<svg xmlns="http://www.w3.org/2000/svg" '
-
-        if max_width:
-            modified_svg += f'width="{max_width}" '
-
-        if max_height:
-            modified_svg += f'height="{max_height}" '
-        else:
-            modified_svg += 'height="auto" '
-
-        # Add preserveAspectRatio to maintain proper scaling
-        modified_svg += 'preserveAspectRatio="xMidYMid meet" '
-
-        # Add style for min-width if provided
-        if min_width:
-            modified_svg += f'style="min-width: {min_width};" '
-
-        # Add the viewBox using the original or calculated viewBox
-        modified_svg += f'viewBox="{original_viewbox}">\n'
-
-        # Add the original SVG content, removing the outer <svg> tags
-        inner_content = re.sub(r"<svg[^>]*>", "", svg_content, count=1)
-        inner_content = re.sub(r"</svg>\s*$", "", inner_content)
-        modified_svg += inner_content + "\n</svg>"
-
-        # Write the modified content back to the file
-        with open(svg_path, "w", encoding="utf-8") as f:
-            f.write(modified_svg)
-
-        return True
-    except Exception as e:
-        logger.error(f"Error modifying SVG dimensions: {e}")
-        return False
 
 
 def create_image_directory(markdown_path, image_dir=None):
     """
-    Create a directory for the images next to the markdown file.
-    Returns the path to the created directory.
+    Create a directory for the images next to the markdown file or use specified one.
+    Returns the absolute path to the created/specified directory.
     """
     if image_dir:
-        # Use specified directory if provided
-        os.makedirs(image_dir, exist_ok=True)
-        return image_dir
+        abs_image_dir = os.path.abspath(image_dir)
+        os.makedirs(abs_image_dir, exist_ok=True)
+        logger.info(f"Ensured specified image directory exists: {abs_image_dir}")
+        return abs_image_dir
+    else:
+        markdown_abs_path = os.path.abspath(markdown_path)
+        markdown_dir = os.path.dirname(markdown_abs_path)
+        default_image_dir = os.path.join(markdown_dir, "images")
+        os.makedirs(default_image_dir, exist_ok=True)
+        logger.info(f"Ensured default image directory exists: {default_image_dir}")
+        return default_image_dir
 
-    # Create 'images' directory next to the markdown file
-    markdown_dir = os.path.dirname(os.path.abspath(markdown_path))
-    image_dir = os.path.join(markdown_dir, "images")
-    os.makedirs(image_dir, exist_ok=True)
 
-    return image_dir
+def _determine_diagram_type(mermaid_code):
+    """Helper function to determine the diagram type from the first line."""
+    if not mermaid_code:
+        return "flowchart"
+    first_line = mermaid_code.strip().split("\n", 1)[0].strip()
+    type_map = {
+        "sequenceDiagram": "sequence",
+        "classDiagram": "classdiagram",
+        "stateDiagram": "statediagram",
+        "erDiagram": "erdiagram",
+        "gantt": "gantt",
+        "pie": "pie",
+        "graph": "flowchart",
+        "flowchart": "flowchart",
+        "journey": "journey",
+    }
+    for keyword, diagram_type in type_map.items():
+        if first_line.startswith(keyword):
+            logger.debug(
+                f"Detected diagram type '{diagram_type}' from line: {first_line}"
+            )
+            return diagram_type
+    logger.warning(
+        f"Could not determine diagram type from first line: '{first_line}'. Defaulting to 'flowchart'."
+    )
+    return "flowchart"
 
 
 def generate_image_from_mermaid(
     mermaid_code, output_path, image_format="svg", diagram_config=None
 ):
     """
-    Generate an image from Mermaid code using mermaid-py.
+    Generate an image from Mermaid code using the mermaid-py library.
+    Includes timing for Mermaid() instantiation and the core conversion call.
     Returns True if successful, False otherwise.
     """
+    if not MERMAID_AVAILABLE:
+        logger.error("Mermaid library not available. Cannot generate image.")
+        return False
+
     try:
-        # Import here to handle import errors gracefully
-        import mermaid as md
-        from mermaid.graph import Graph
+        # --- Step 1: Determine Type & Create Graph Object ---
+        graph_start_time = time.time()
+        diagram_type = _determine_diagram_type(mermaid_code)
+        graph_obj = Graph(diagram_type, mermaid_code)
+        graph_end_time = time.time()
+        logger.debug(
+            f"Graph object creation took {graph_end_time - graph_start_time:.4f} seconds."
+        )
 
-        # Determine diagram type from the first line of the code
-        first_line = mermaid_code.strip().split("\n")[0].strip()
+        # --- Step 2: Instantiate Mermaid Object (Suspected Bottleneck) ---
+        mermaid_instance = None  # Initialize to None
+        instantiation_start_time = time.time()
+        try:
+            mermaid_instance = md.Mermaid(graph_obj)
+        except Exception as init_err:
+            logger.error(f"Error instantiating Mermaid object: {init_err}")
+            logger.error(traceback.format_exc())
+            return False  # Cannot proceed if instantiation fails
+        finally:
+            instantiation_end_time = time.time()
+            instantiation_duration = instantiation_end_time - instantiation_start_time
+            logger.info(
+                f"Mermaid object instantiation took {instantiation_duration:.2f} seconds."
+            )
 
-        # Default to flowchart if we can't determine the type
-        diagram_type = "flowchart"
+        # --- Step 3: Generate Output ---
+        output_format = image_format.lower()
+        render_start_time = time.time()
+        generation_success = False
 
-        # Try to detect diagram type
-        if first_line.startswith("sequenceDiagram"):
-            diagram_type = "sequence"
-        elif first_line.startswith("classDiagram"):
-            diagram_type = "classdiagram"
-        elif first_line.startswith("stateDiagram"):
-            diagram_type = "statediagram"
-        elif first_line.startswith("erDiagram"):
-            diagram_type = "erdiagram"
-        elif first_line.startswith("gantt"):
-            diagram_type = "gantt"
-        elif first_line.startswith("pie"):
-            diagram_type = "pie"
-        elif first_line.startswith("graph") or first_line.startswith("flowchart"):
-            diagram_type = "flowchart"
+        try:
+            if output_format == "svg":
+                mermaid_instance.to_svg(output_path)
+                generation_success = True
+            elif output_format == "png":
+                mermaid_instance.to_png(output_path)
+                generation_success = True
+            else:
+                logger.error(f"Unsupported image format requested: {image_format}")
+                return False
+        except Exception as render_err:
+            logger.error(
+                f"Error during {output_format.upper()} generation: {render_err}"
+            )
+            generation_success = False
+        finally:
+            render_end_time = time.time()
+            render_duration = render_end_time - render_start_time
+            logger.info(
+                f"Mermaid {output_format.upper()} generation call for {os.path.basename(output_path)} took {render_duration:.2f} seconds."
+            )
 
-        # Create the graph
-        graph = Graph(diagram_type, mermaid_code)
-
-        # Generate the image directly to file without modifying the SVG
-        if image_format.lower() == "svg":
-            md.Mermaid(graph).to_svg(output_path)
-            # Skip SVG modification as it causes rendering issues
-        else:
-            md.Mermaid(graph).to_png(output_path)
-
-        # Check if the image was created
-        if os.path.exists(output_path):
-            logger.info(f"Successfully generated image: {output_path}")
+        # --- Step 4: Verify Output & Cleanup ---
+        if (
+            generation_success
+            and os.path.exists(output_path)
+            and os.path.getsize(output_path) > 0
+        ):
+            logger.debug(f"Successfully generated image file: {output_path}")
             return True
         else:
-            logger.error(f"Failed to generate image: {output_path}")
+            # Log failure reasons
+            if not generation_success:
+                logger.error(
+                    f"Image generation failed due to rendering error for: {os.path.basename(output_path)}"
+                )
+            elif not os.path.exists(output_path):
+                logger.error(
+                    f"Image generation failed: Output file does not exist: {os.path.basename(output_path)}"
+                )
+            elif os.path.getsize(output_path) == 0:
+                logger.error(
+                    f"Image generation failed: Output file is empty: {os.path.basename(output_path)}"
+                )
+            else:
+                logger.error(
+                    f"Image generation failed for unknown reason: {os.path.basename(output_path)}"
+                )
+
+            # Clean up empty/failed file
+            if os.path.exists(output_path):
+                try:
+                    os.remove(output_path)
+                    logger.warning(
+                        f"Removed empty/failed output file: {os.path.basename(output_path)}"
+                    )
+                except OSError as rm_err:
+                    logger.error(
+                        f"Failed to remove empty/failed output file {output_path}: {rm_err}"
+                    )
             return False
 
     except Exception as e:
-        logger.error(f"Error generating image: {str(e)}")
+        logger.error(
+            f"Unexpected error in generate_image_from_mermaid for {output_path}: {str(e)}"
+        )
         logger.error(traceback.format_exc())
         return False
 
 
 def create_image_name(prefix, index, mermaid_code, image_format="svg"):
-    """
-    Create a unique image name based on prefix, index and content hash.
-    """
-    # Create a short hash of the mermaid code
-    code_hash = hashlib.md5(mermaid_code.encode()).hexdigest()[:8]
-    return f"{prefix}-{index}-{code_hash}.{image_format}"
-
-
-def replace_mermaid_with_images(
-    markdown_content, mermaid_blocks, image_paths, max_width="600px"
-):
-    """
-    Replace Mermaid code blocks with image references.
-    Returns the updated markdown content and count of successful replacements.
-    """
-    new_content = markdown_content
-    offset = 0  # Offset to adjust positions after replacements
-    successful = 0
-
-    for i, (block, start, end) in enumerate(mermaid_blocks):
-        image_path = image_paths[i]
-
-        # Calculate positions adjusted by the offset
-        adj_start = start + offset
-        adj_end = end + offset
-
-        if image_path:
-            # Create markdown image reference with style attribute
-            image_ref = f'\n\n<img src="{image_path}" alt="Diagram" style="max-width: {max_width};">\n\n'
-
-            # Replace the mermaid block with the image reference
-            new_content = new_content[:adj_start] + image_ref + new_content[adj_end:]
-
-            # Update the offset based on difference in length
-            offset += len(image_ref) - (adj_end - adj_start)
-            successful += 1
-        else:
-            # Add warning comment and keep original block
-            warning = f"\n\n<!-- WARNING: Failed to generate diagram -->\n"
-            orig_block = f"```mermaid\n{block}```"
-
-            # Replace with warning + original
-            replacement = warning + orig_block
-            new_content = new_content[:adj_start] + replacement + new_content[adj_end:]
-
-            # Update the offset
-            offset += len(replacement) - (adj_end - adj_start)
-
-    return new_content, successful
+    """Create a unique image filename."""
+    code_hash = hashlib.md5(mermaid_code.encode("utf-8")).hexdigest()[:8]
+    safe_prefix = re.sub(r"[^\w\-]+", "", prefix)
+    filename = f"{safe_prefix}-{index}-{code_hash}.{image_format.lower()}"
+    logger.debug(f"Generated image filename: {filename}")
+    return filename
 
 
 def process_markdown_file(
@@ -240,53 +221,15 @@ def process_markdown_file(
     image_dir=None,
     diagram_config=None,
     use_html_wrapper=True,
+    output_suffix="-img",
 ):
     """
-    Process a markdown file to convert Mermaid diagrams to images.
-
-    Parameters:
-    - file_path: Path to the markdown file
-    - image_prefix: Prefix for generated image files
-    - image_format: Format for the images (svg or png)
-    - image_dir: Custom directory for images (default: ./images/)
-    - diagram_config: Configuration for diagram dimensions by type
-    - use_html_wrapper: Whether to use HTML wrapper (True) or standard Markdown image syntax (False)
-
-    Returns:
-    - Dictionary with statistics about the conversion
+    Processes a Markdown file: finds Mermaid blocks, converts them to images,
+    updates the Markdown content with image links, and saves to a new file.
+    Includes timing for the call to generate_image_from_mermaid.
     """
-    # If no diagram config is provided, use a default
     if diagram_config is None:
-        diagram_config = {
-            "default": {"max_width": "600px", "max_height": None, "min_width": None},
-            "flowchart": {
-                "max_width": "650px",
-                "max_height": None,
-                "min_width": "300px",
-            },
-            "sequence": {
-                "max_width": "550px",
-                "max_height": None,
-                "min_width": "250px",
-            },
-            "classdiagram": {
-                "max_width": "600px",
-                "max_height": None,
-                "min_width": "300px",
-            },
-            "statediagram": {
-                "max_width": "550px",
-                "max_height": None,
-                "min_width": "250px",
-            },
-            "erdiagram": {
-                "max_width": "700px",
-                "max_height": None,
-                "min_width": "400px",
-            },
-            "gantt": {"max_width": "800px", "max_height": None, "min_width": "500px"},
-            "pie": {"max_width": "450px", "max_height": "450px", "min_width": "300px"},
-        }
+        diagram_config = load_diagram_config()
 
     stats = {
         "total_diagrams": 0,
@@ -297,205 +240,192 @@ def process_markdown_file(
     }
 
     try:
-        # Verify the input file exists
-        if not os.path.exists(file_path):
-            logger.error(f"Input file does not exist: {file_path}")
+        abs_file_path = os.path.abspath(file_path)
+        logger.info(f"Starting processing for file: {abs_file_path}")
+        if not os.path.isfile(abs_file_path):
+            logger.error(f"Input path is not a file or does not exist: {abs_file_path}")
             return stats
 
-        # Read the markdown file
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
+        try:
+            with open(abs_file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+        except Exception as read_err:
+            logger.error(f"Failed to read input file {abs_file_path}: {read_err}")
+            return stats
 
-        # Extract Mermaid blocks
         mermaid_blocks = extract_mermaid_blocks(content)
         stats["total_diagrams"] = len(mermaid_blocks)
-
         if not mermaid_blocks:
-            logger.info(f"No Mermaid diagrams found in {file_path}")
-            return stats
-
-        logger.info(f"Found {len(mermaid_blocks)} Mermaid diagrams in {file_path}")
-
-        # Create the image directory
-        image_dir = create_image_directory(file_path, image_dir)
-        stats["image_directory"] = image_dir
-
-        # Generate images for each Mermaid block
-        image_paths = []
-        for i, (block, _, _) in enumerate(mermaid_blocks):
-            # Create image file name
-            image_name = create_image_name(image_prefix, i + 1, block, image_format)
-            image_path = os.path.join(image_dir, image_name)
-
-            # Determine diagram type to apply appropriate configuration
-            first_line = block.strip().split("\n")[0].strip()
-            diagram_type = "flowchart"  # Default
-
-            # Try to detect diagram type
-            if first_line.startswith("sequenceDiagram"):
-                diagram_type = "sequence"
-            elif first_line.startswith("classDiagram"):
-                diagram_type = "classdiagram"
-            elif first_line.startswith("stateDiagram"):
-                diagram_type = "statediagram"
-            elif first_line.startswith("erDiagram"):
-                diagram_type = "erdiagram"
-            elif first_line.startswith("gantt"):
-                diagram_type = "gantt"
-            elif first_line.startswith("pie"):
-                diagram_type = "pie"
-            elif first_line.startswith("graph") or first_line.startswith("flowchart"):
-                diagram_type = "flowchart"
-
-            # Generate the image with the appropriate configuration
-            success = generate_image_from_mermaid(
-                block, image_path, image_format, diagram_config
+            logger.info(
+                f"No Mermaid diagrams found in {abs_file_path}. No output file generated."
             )
-
-            if success:
-                # Use relative path in the markdown
-                rel_path = os.path.join("./images", image_name).replace("\\", "/")
-                image_paths.append(rel_path)
-                stats["successful_conversions"] += 1
-
-                # If this is an SVG, we've already embedded dimensions, so update image_paths
-                # to include information about whether dimensions are embedded
-                if image_format.lower() == "svg":
-                    image_paths[-1] = (
-                        rel_path,
-                        True,
-                    )  # Tuple: (path, dimensions_embedded)
-                else:
-                    image_paths[-1] = (rel_path, False)
-            else:
-                image_paths.append(None)
-                stats["failed_conversions"] += 1
-
-        # Create the output file path
-        output_file = file_path.replace(".md", "-img.md")
-        if output_file == file_path:  # Handle case where input doesn't end with .md
-            output_file = f"{file_path}-img.md"
-
-        stats["output_file"] = output_file
-
-        # Replace Mermaid blocks with image references
-        new_content, successful = replace_mermaid_with_images_enhanced(
-            content, mermaid_blocks, image_paths, diagram_config, use_html_wrapper
+            return stats
+        logger.info(
+            f"Found {len(mermaid_blocks)} Mermaid diagram(s) in {abs_file_path}"
         )
 
-        # Write the new content to the output file
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(new_content)
+        abs_image_dir = create_image_directory(abs_file_path, image_dir)
+        stats["image_directory"] = abs_image_dir
+        logger.info(f"Using image directory: {abs_image_dir}")
 
-        logger.info(f"Created output file: {output_file}")
-        logger.info(f"Conversion stats: {stats}")
+        image_paths_info = []
+        output_md_dir = os.path.dirname(abs_file_path)
 
+        # --- Loop through diagrams ---
+        total_loop_time = 0
+        loop_start_time = time.time()
+
+        for i, (block, _, _) in enumerate(mermaid_blocks):
+            iter_start_time = time.time()  # Time start of this iteration
+            logger.info(f"--- Processing Diagram {i+1}/{len(mermaid_blocks)} ---")
+            image_name = create_image_name(image_prefix, i + 1, block, image_format)
+            abs_image_path = os.path.join(abs_image_dir, image_name)
+
+            # --- Timing the entire generation function call ---
+            gen_func_start_time = time.time()
+            success = generate_image_from_mermaid(block, abs_image_path, image_format)
+            gen_func_end_time = time.time()
+            gen_func_duration = gen_func_end_time - gen_func_start_time
+            logger.info(
+                f"Call to generate_image_from_mermaid for diagram {i+1} took {gen_func_duration:.2f} seconds."
+            )
+            # --- End timing generation function call ---
+
+            if success:
+                try:
+                    rel_path = os.path.relpath(
+                        abs_image_path, start=output_md_dir
+                    ).replace("\\", "/")
+                except ValueError:
+                    logger.warning(
+                        f"Cannot create relative path for image {abs_image_path} from {output_md_dir}. Using absolute URI path."
+                    )
+                    rel_path = Path(abs_image_path).as_uri()
+                image_paths_info.append((rel_path, True))
+                stats["successful_conversions"] += 1
+            else:
+                image_paths_info.append((None, False))
+                stats["failed_conversions"] += 1
+
+            iter_end_time = time.time()  # Time end of this iteration
+            iter_duration = iter_end_time - iter_start_time
+            total_loop_time += iter_duration
+            logger.info(
+                f"--- Finished Diagram {i+1}/{len(mermaid_blocks)} (Iteration took {iter_duration:.2f}s) ---"
+            )
+
+        loop_end_time = time.time()
+        logger.info(
+            f"Finished processing all diagrams. Total loop time: {total_loop_time:.2f}s. Average per diagram: {total_loop_time / len(mermaid_blocks) if mermaid_blocks else 0:.2f}s."
+        )
+
+        # --- Determine Output Filename ---
+        abs_file_path_obj = Path(abs_file_path)
+        output_file_name = f"{abs_file_path_obj.stem}{output_suffix}.md"
+        abs_output_file = abs_file_path_obj.parent / output_file_name
+        stats["output_file"] = str(abs_output_file)
+        logger.info(f"Output Markdown file will be generated at: {abs_output_file}")
+
+        # --- Replace Blocks ---
+        replace_start_time = time.time()
+        new_content, successful_replacements = replace_mermaid_with_images_enhanced(
+            content, mermaid_blocks, image_paths_info, diagram_config, use_html_wrapper
+        )
+        replace_end_time = time.time()
+        logger.info(
+            f"Replacing blocks in content took {replace_end_time - replace_start_time:.2f} seconds."
+        )
+
+        if successful_replacements != stats["successful_conversions"]:
+            logger.warning(
+                f"Mismatch: {stats['successful_conversions']} successful conversions vs {successful_replacements} replacements."
+            )
+
+        # --- Write Output File ---
+        write_start_time = time.time()
+        try:
+            with open(abs_output_file, "w", encoding="utf-8") as f:
+                f.write(new_content)
+            logger.info(f"Successfully created output file: {abs_output_file}")
+        except Exception as write_err:
+            logger.error(f"Failed to write output file {abs_output_file}: {write_err}")
+            return stats  # Return stats accumulated so far
+        write_end_time = time.time()
+        logger.info(
+            f"Writing output file took {write_end_time - write_start_time:.2f} seconds."
+        )
+
+        logger.info(f"Processing complete for {abs_file_path}. Stats: {stats}")
         return stats
 
     except Exception as e:
-        logger.error(f"Error processing file {file_path}: {str(e)}")
+        logger.error(
+            f"An unexpected error occurred processing file {file_path}: {str(e)}"
+        )
         logger.error(traceback.format_exc())
+        stats["failed_conversions"] = stats.get("total_diagrams", 0) - stats.get(
+            "successful_conversions", 0
+        )
         return stats
 
 
 def replace_mermaid_with_images_enhanced(
-    markdown_content, mermaid_blocks, image_paths, diagram_config, use_html_wrapper=True
+    markdown_content,
+    mermaid_blocks,
+    image_paths_info,
+    diagram_config,
+    use_html_wrapper=True,
 ):
     """
-    Replace Mermaid code blocks with image references.
-    Supports both standard Markdown syntax and HTML with configuration.
+    Replace Mermaid code blocks with image references (HTML or Markdown syntax).
     """
     new_content = markdown_content
-    offset = 0  # Offset to adjust positions after replacements
-    successful = 0
+    offset = 0
+    successful_replacements = 0
 
-    for i, (block, start, end) in enumerate(mermaid_blocks):
-        image_path_info = image_paths[i]
+    for i, (block_text, start_pos, end_pos) in enumerate(mermaid_blocks):
+        relative_image_path, success_flag = image_paths_info[i]
+        adj_start = start_pos + offset
+        adj_end = end_pos + offset
+        replacement_text = ""
 
-        # Calculate positions adjusted by the offset
-        adj_start = start + offset
-        adj_end = end + offset
-
-        if image_path_info:
-            # Unpack the image path info
-            if isinstance(image_path_info, tuple):
-                image_path, dimensions_embedded = image_path_info
-            else:
-                # For backward compatibility
-                image_path = image_path_info
-                dimensions_embedded = False
-
-            # Get the image format from the file extension
-            is_svg = image_path.lower().endswith(".svg")
-
-            # Determine what type of diagram this is
-            first_line = block.strip().split("\n")[0].strip()
-            diagram_type = "flowchart"  # Default
-
-            if first_line.startswith("sequenceDiagram"):
-                diagram_type = "sequence"
-            elif first_line.startswith("classDiagram"):
-                diagram_type = "classdiagram"
-            elif first_line.startswith("stateDiagram"):
-                diagram_type = "statediagram"
-            elif first_line.startswith("erDiagram"):
-                diagram_type = "erdiagram"
-            elif first_line.startswith("gantt"):
-                diagram_type = "gantt"
-            elif first_line.startswith("pie"):
-                diagram_type = "pie"
-            elif first_line.startswith("graph") or first_line.startswith("flowchart"):
-                diagram_type = "flowchart"
-
-            # Get diagram-specific configuration
-            config = (
-                diagram_config.get(diagram_type, diagram_config.get("default", {}))
-                if diagram_config
-                else {"max_width": "600px"}
-            )
+        if success_flag and relative_image_path:
+            is_svg = relative_image_path.lower().endswith(".svg")
+            diagram_type = _determine_diagram_type(block_text)
+            config = diagram_config.get(diagram_type, diagram_config.get("default", {}))
             max_width = config.get("max_width", "600px")
+            alt_text = f"Diagram: {diagram_type}"
 
-            # Choose the appropriate image reference format
-            if not use_html_wrapper or not is_svg:
-                # Use standard Markdown image syntax for PNGs or if HTML wrapper is disabled
-                image_ref = f"\n\n![Diagram]({image_path})\n\n"
-            else:
-                # For SVGs with HTML wrapper, use a div container
-                image_ref = f"""
-<div style="width: {max_width}; margin: 0 auto;">
-    <img src="{image_path}" alt="Diagram" style="width: 100%; height: auto;" />
+            if use_html_wrapper and is_svg:
+                replacement_text = f"""
+
+<div style="max-width: {max_width}; margin: 1em auto; text-align: center;">
+    <img src="{relative_image_path}" alt="{alt_text}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
 </div>
+
 """
-            # Replace the mermaid block with the image reference
-            new_content = new_content[:adj_start] + image_ref + new_content[adj_end:]
-
-            # Update the offset based on difference in length
-            offset += len(image_ref) - (adj_end - adj_start)
-            successful += 1
+            else:
+                replacement_text = f"\n\n![{alt_text}]({relative_image_path})\n\n"
+            successful_replacements += 1
+            # logger.debug(f"Replacing block {i+1} with image link: {relative_image_path}") # Reduce log noise
         else:
-            # Add warning comment and keep original block
-            warning = f"\n\n<!-- WARNING: Failed to generate diagram -->\n"
-            orig_block = f"```mermaid\n{block}```"
+            # Ensure warning comment is added correctly even on failure
+            warning_comment = "\n\n\n"
+            original_block_text = f"```mermaid\n{block_text.strip()}\n```\n"
+            replacement_text = warning_comment + original_block_text
+            logger.warning(
+                f"Keeping original code block {i+1} due to generation failure."
+            )
 
-            # Replace with warning + original
-            replacement = warning + orig_block
-            new_content = new_content[:adj_start] + replacement + new_content[adj_end:]
+        new_content = new_content[:adj_start] + replacement_text + new_content[adj_end:]
+        offset += len(replacement_text) - (end_pos - start_pos)
 
-            # Update the offset
-            offset += len(replacement) - (adj_end - adj_start)
-
-    return new_content, successful
+    return new_content, successful_replacements
 
 
-def load_diagram_config(config_path=None):
+def load_diagram_config(config_path="diagram_config.json"):
     """
-    Load diagram configuration from a JSON file or return the default configuration.
-
-    Args:
-        config_path: Path to the JSON configuration file (optional)
-
-    Returns:
-        dict: Configuration dictionary
+    Load diagram configuration from a JSON file.
     """
     default_config = {
         "default": {"max_width": "600px", "max_height": None, "min_width": None},
@@ -515,26 +445,49 @@ def load_diagram_config(config_path=None):
         "gantt": {"max_width": "800px", "max_height": None, "min_width": "500px"},
         "pie": {"max_width": "450px", "max_height": "450px", "min_width": "300px"},
     }
+    path_to_check = config_path if config_path else "diagram_config.json"
+    abs_path_to_check = os.path.abspath(path_to_check)
 
-    if not config_path or not os.path.exists(config_path):
+    if not os.path.isfile(abs_path_to_check):
+        if config_path:
+            logger.warning(
+                f"Specified configuration file not found at {abs_path_to_check}. Using default configuration."
+            )
+        else:
+            logger.info(
+                f"Default configuration file '{path_to_check}' not found. Using default configuration."
+            )
         return default_config
 
     try:
         import json
 
-        with open(config_path, "r", encoding="utf-8") as f:
-            config = json.load(f)
+        with open(abs_path_to_check, "r", encoding="utf-8") as f:
+            loaded_config = json.load(f)
+            logger.info(f"Successfully loaded configuration from {abs_path_to_check}")
 
-        # Merge with defaults for any missing values
-        for diagram_type, default_values in default_config.items():
-            if diagram_type not in config:
-                config[diagram_type] = default_values
+        final_config = default_config.copy()
+        for diagram_type, settings in loaded_config.items():
+            if diagram_type in final_config:
+                if isinstance(settings, dict) and isinstance(
+                    final_config[diagram_type], dict
+                ):
+                    final_config[diagram_type].update(settings)
+                else:
+                    final_config[diagram_type] = settings
             else:
-                for key, value in default_values.items():
-                    if key not in config[diagram_type]:
-                        config[diagram_type][key] = value
+                final_config[diagram_type] = settings
+        if "default" not in final_config:
+            final_config["default"] = default_config["default"]
+        return final_config
 
-        return config
+    except json.JSONDecodeError as json_err:
+        logger.error(
+            f"Error decoding JSON from configuration file {abs_path_to_check}: {json_err}. Using default configuration."
+        )
+        return default_config
     except Exception as e:
-        logger.error(f"Error loading diagram config from {config_path}: {e}")
+        logger.error(
+            f"An unexpected error occurred loading diagram config from {abs_path_to_check}: {e}. Using default configuration."
+        )
         return default_config

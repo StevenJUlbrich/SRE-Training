@@ -6,7 +6,7 @@ Welcome to Day 3 of your SRE Database Training! Today’s focus is on **Database
 
 
 
-![Diagram](./images/diagram-02-1-44ae673c.png)
+![Diagram: flowchart](images/test-01--1-53f9d654.png)
 
 
 
@@ -70,7 +70,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-2-18ac3f50.png)
+![Diagram: flowchart](images/test-01--2-d45b7b77.png)
 
 
 
@@ -94,7 +94,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-3-769c17dd.png)
+![Diagram: erdiagram](images/test-01--3-bdf547ad.png)
 
 
 
@@ -118,7 +118,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-4-8c637dee.png)
+![Diagram: erdiagram](images/test-01--4-e5972104.png)
 
 
 
@@ -146,7 +146,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-5-fa37afe2.png)
+![Diagram: flowchart](images/test-01--5-e94d292e.png)
 
 
 
@@ -170,7 +170,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-6-b0a9f23a.png)
+![Diagram: flowchart](images/test-01--6-0638c5f1.png)
 
 
 
@@ -194,7 +194,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-7-67f8a250.png)
+![Diagram: flowchart](images/test-01--7-17c65f1a.png)
 
 
 
@@ -218,7 +218,7 @@ Each concept includes:
 
 
 
-![Diagram](./images/diagram-02-8-12249ad8.png)
+![Diagram: flowchart](images/test-01--8-ec352a9d.png)
 
 
 
@@ -240,7 +240,7 @@ Below is a Mermaid flowchart showing how an unnormalized table is transformed in
 
 
 
-![Diagram](./images/diagram-02-9-6d0519f0.png)
+![Diagram: flowchart](images/test-01--9-5a4334ff.png)
 
 
 
@@ -333,7 +333,7 @@ Use Mermaid for a diagnostic workflow example:
 
 
 
-![Diagram](./images/diagram-02-10-69fbf38e.png)
+![Diagram: flowchart](images/test-01--10-45c819cf.png)
 
 
 
@@ -421,7 +421,7 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 
 
-![Diagram](./images/diagram-02-11-dcdfac07.png)
+![Diagram: flowchart](images/test-01--11-d15ac3fc.png)
 
 
 
@@ -429,7 +429,7 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 
 
-![Diagram](./images/diagram-02-12-e3779271.png)
+![Diagram: erdiagram](images/test-01--12-486c74d9.png)
 
 
 
