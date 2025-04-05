@@ -160,22 +160,10 @@ def generate_image_from_mermaid(
         # Create the graph
         graph = Graph(diagram_type, mermaid_code)
 
-        # Generate the image directly to file
+        # Generate the image directly to file without modifying the SVG
         if image_format.lower() == "svg":
             md.Mermaid(graph).to_svg(output_path)
-
-            # Apply diagram sizing if SVG and config is provided
-            if diagram_config:
-                # Get config for this diagram type or use default
-                config = diagram_config.get(
-                    diagram_type, diagram_config.get("default", {})
-                )
-                max_width = config.get("max_width", "600px")
-                max_height = config.get("max_height", None)
-                min_width = config.get("min_width", None)
-
-                # Modify the SVG dimensions
-                modify_svg_dimensions(output_path, max_width, max_height, min_width)
+            # Skip SVG modification as it causes rendering issues
         else:
             md.Mermaid(graph).to_png(output_path)
 
@@ -251,6 +239,7 @@ def process_markdown_file(
     image_format="svg",
     image_dir=None,
     diagram_config=None,
+    use_html_wrapper=True,
 ):
     """
     Process a markdown file to convert Mermaid diagrams to images.
@@ -261,6 +250,7 @@ def process_markdown_file(
     - image_format: Format for the images (svg or png)
     - image_dir: Custom directory for images (default: ./images/)
     - diagram_config: Configuration for diagram dimensions by type
+    - use_html_wrapper: Whether to use HTML wrapper (True) or standard Markdown image syntax (False)
 
     Returns:
     - Dictionary with statistics about the conversion
@@ -388,9 +378,9 @@ def process_markdown_file(
 
         stats["output_file"] = output_file
 
-        # Replace Mermaid blocks with image references in a new file
+        # Replace Mermaid blocks with image references
         new_content, successful = replace_mermaid_with_images_enhanced(
-            content, mermaid_blocks, image_paths, diagram_config
+            content, mermaid_blocks, image_paths, diagram_config, use_html_wrapper
         )
 
         # Write the new content to the output file
@@ -409,13 +399,11 @@ def process_markdown_file(
 
 
 def replace_mermaid_with_images_enhanced(
-    markdown_content, mermaid_blocks, image_paths, diagram_config
+    markdown_content, mermaid_blocks, image_paths, diagram_config, use_html_wrapper=True
 ):
     """
     Replace Mermaid code blocks with image references.
-    This enhanced version handles SVGs with embedded dimensions differently.
-
-    Returns the updated markdown content and count of successful replacements.
+    Supports both standard Markdown syntax and HTML with configuration.
     """
     new_content = markdown_content
     offset = 0  # Offset to adjust positions after replacements
@@ -437,6 +425,9 @@ def replace_mermaid_with_images_enhanced(
                 image_path = image_path_info
                 dimensions_embedded = False
 
+            # Get the image format from the file extension
+            is_svg = image_path.lower().endswith(".svg")
+
             # Determine what type of diagram this is
             first_line = block.strip().split("\n")[0].strip()
             diagram_type = "flowchart"  # Default
@@ -457,17 +448,24 @@ def replace_mermaid_with_images_enhanced(
                 diagram_type = "flowchart"
 
             # Get diagram-specific configuration
-            config = diagram_config.get(diagram_type, diagram_config.get("default", {}))
+            config = (
+                diagram_config.get(diagram_type, diagram_config.get("default", {}))
+                if diagram_config
+                else {"max_width": "600px"}
+            )
             max_width = config.get("max_width", "600px")
 
-            # Create appropriate markdown image reference based on whether dimensions are embedded
-            if dimensions_embedded:
-                # For SVGs with embedded dimensions, use a simple image reference
-                image_ref = f'\n\n<img src="{image_path}" alt="Diagram">\n\n'
+            # Choose the appropriate image reference format
+            if not use_html_wrapper or not is_svg:
+                # Use standard Markdown image syntax for PNGs or if HTML wrapper is disabled
+                image_ref = f"\n\n![Diagram]({image_path})\n\n"
             else:
-                # For PNGs or SVGs without embedded dimensions, include style attribute
-                image_ref = f'\n\n<img src="{image_path}" alt="Diagram" style="max-width: {max_width};">\n\n'
-
+                # For SVGs with HTML wrapper, use a div container
+                image_ref = f"""
+<div style="width: {max_width}; margin: 0 auto;">
+    <img src="{image_path}" alt="Diagram" style="width: 100%; height: auto;" />
+</div>
+"""
             # Replace the mermaid block with the image reference
             new_content = new_content[:adj_start] + image_ref + new_content[adj_end:]
 

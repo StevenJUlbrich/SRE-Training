@@ -4,11 +4,7 @@
 
 Welcome to Day 3 of your SRE Database Training! Today’s focus is on **Database Design Principles** and **Normalization**, building on the fundamentals from Days 1 and 2. Proper design is essential for **performance**, **data integrity**, and **maintainability**. Below is a Mermaid-based concept map illustrating how design choices directly impact overall system reliability:
 
-
-
 ![Diagram](./images/diagram-1-44ae673c.png)
-
-
 
 > **Real-World Scenario**: A poorly designed schema that duplicates data often leads to complicated support cases, where multiple references to the same data cause inconsistencies and application bugs.
 
@@ -68,11 +64,7 @@ Each concept includes:
 
 **🖼️ Visual Representation** (Simple principle summary):
 
-
-
 ![Diagram](./images/diagram-2-18ac3f50.png)
-
-
 
 **🔬 Technical Explanation**: Violations of these principles lead to anomalies, inefficiencies, and complexity in maintenance.
 
@@ -136,11 +128,7 @@ Each concept includes:
 
 **🖼️ Visual Representation** (Normalization from unnormalized to 1NF):
 
-
-
-<img src="./images/diagram-5-fa37afe2.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-5-fa37afe2.png)
 
 **🔬 Technical Explanation**: 1NF enforces **atomicity** (no repeating groups, no multi-valued columns).
 
@@ -160,11 +148,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-<img src="./images/diagram-6-b0a9f23a.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-6-b0a9f23a.png)
 
 **🔬 Technical Explanation**: For tables with **composite primary keys**, 2NF requires that non-key columns depend on **all** parts of the key.
 
@@ -184,11 +168,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-<img src="./images/diagram-7-67f8a250.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-7-67f8a250.png)
 
 **🔬 Technical Explanation**: 3NF eliminates **transitive dependencies** (non-key attributes depending on other non-key attributes).
 
@@ -208,11 +188,7 @@ Each concept includes:
 
 **🖼️ Visual Representation**:
 
-
-
-<img src="./images/diagram-8-12249ad8.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-8-12249ad8.png)
 
 **🔬 Technical Explanation**: Duplicate data in strategic places to reduce join complexity.
 
@@ -230,11 +206,7 @@ Each concept includes:
 
 Below is a Mermaid flowchart showing how an unnormalized table is transformed into 1NF, 2NF, and 3NF:
 
-
-
-<img src="./images/diagram-9-6d0519f0.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-9-6d0519f0.png)
 
 **SQL Example** (Oracle):
 
@@ -323,11 +295,7 @@ CREATE TABLE orders (
 
 Use Mermaid for a diagnostic workflow example:
 
-
-
-<img src="./images/diagram-10-69fbf38e.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-10-69fbf38e.png)
 
 ---
 
@@ -411,19 +379,11 @@ On **Day 4**, we’ll dive into **SQL JOIN** types (INNER, LEFT, RIGHT, FULL), b
 
 ### 2. Normalization Decision Tree (Mermaid)
 
-
-
-<img src="./images/diagram-11-dcdfac07.png" alt="Diagram" style="max-width: 650px;">
-
-
+![Diagram](./images/diagram-11-dcdfac07.png)
 
 ### 3. Oracle Constraints Visualization
 
-
-
-<img src="./images/diagram-12-e3779271.png" alt="Diagram" style="max-width: 700px;">
-
-
+![Diagram](./images/diagram-12-e3779271.png)
 
 ### 4. Performance Impact Analysis
 

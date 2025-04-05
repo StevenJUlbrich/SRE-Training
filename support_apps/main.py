@@ -80,6 +80,11 @@ def main():
         metavar="FILE",
         help="Create a default configuration file at the specified path",
     )
+    parser.add_argument(
+        "--markdown-style",
+        action="store_true",
+        help="Use standard Markdown image syntax (![Diagram](path)) instead of HTML",
+    )
 
     args = parser.parse_args()
 
@@ -122,7 +127,12 @@ def main():
         logging.info(f"Loaded configuration from: {args.config}")
 
     stats = process_markdown_file(
-        args.file, args.prefix, args.format, args.image_dir, diagram_config
+        args.file,
+        args.prefix,
+        args.format,
+        args.image_dir,
+        diagram_config,
+        not args.markdown_style,  # Invert the flag
     )
 
     # Print summary

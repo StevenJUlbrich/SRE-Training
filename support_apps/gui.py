@@ -174,6 +174,13 @@ class MermaidConverterGUI:
         # Add buttons for creating and editing config
         config_button_frame = ttk.Frame(frame)
         config_button_frame.grid(row=6, column=1, sticky=tk.W, pady=5)
+        # Add a checkbox for using standard Markdown syntax
+        self.use_markdown_style_var = tk.BooleanVar(value=False)
+        ttk.Checkbutton(
+            frame,
+            text="Use standard Markdown image syntax (![Diagram](path))",
+            variable=self.use_markdown_style_var,
+        ).grid(row=6, column=2, columnspan=3, sticky=tk.W, pady=5)
 
         ttk.Button(
             config_button_frame,
@@ -377,6 +384,8 @@ class MermaidConverterGUI:
         if not os.path.exists(file_path):
             self.log_message(f"Error: File does not exist: {file_path}", logging.ERROR)
             return
+        # Get the style option
+        use_html_wrapper = not self.use_markdown_style_var.get()
 
         # Clear the log
         self.log_text.config(state=tk.NORMAL)
@@ -411,17 +420,35 @@ class MermaidConverterGUI:
         # Run conversion in a separate thread
         threading.Thread(
             target=self.run_conversion,
-            args=(file_path, image_prefix, image_format, image_dir, diagram_config),
+            args=(
+                file_path,
+                image_prefix,
+                image_format,
+                image_dir,
+                diagram_config,
+                use_html_wrapper,
+            ),
             daemon=True,
         ).start()
 
     def run_conversion(
-        self, file_path, image_prefix, image_format, image_dir, diagram_config=None
+        self,
+        file_path,
+        image_prefix,
+        image_format,
+        image_dir,
+        diagram_config=None,
+        use_html_wrapper=True,
     ):
         """Run the conversion process and update the UI when done"""
         try:
             stats = process_markdown_file(
-                file_path, image_prefix, image_format, image_dir, diagram_config
+                file_path,
+                image_prefix,
+                image_format,
+                image_dir,
+                diagram_config,
+                use_html_wrapper,
             )
 
             # Update the UI from the main thread
