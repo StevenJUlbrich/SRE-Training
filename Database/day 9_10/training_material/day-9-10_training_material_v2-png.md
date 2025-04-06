@@ -19,7 +19,7 @@ Welcome to the two-day module focused on comparing relational (SQL) and NoSQL da
 3. **Visual Concept Map**  
    
 
-![Diagram: flowchart](images/diagram-1-05c98693.png)
+![Mermaid Diagram: flowchart](images/diagram-1-05c98693.png)
 
 
    - This map connects the **SQL** vs **NoSQL** paradigms, along with fundamental differences such as ACID vs BASE.
@@ -56,7 +56,7 @@ Below are the **10 key concepts** for Day 9. Each concept includes a beginner-fr
 - **Visual Representation**  
   
 
-![Diagram: flowchart](images/diagram-2-3f364f93.png)
+![Mermaid Diagram: flowchart](images/diagram-2-3f364f93.png)
 
 
 
@@ -94,7 +94,7 @@ Below are the **10 key concepts** for Day 9. Each concept includes a beginner-fr
 
 
 
-![Diagram: flowchart](images/diagram-3-7b4c1982.png)
+![Mermaid Diagram: flowchart](images/diagram-3-7b4c1982.png)
 
 
 
@@ -197,7 +197,7 @@ Below are the **10 key concepts** for Day 9. Each concept includes a beginner-fr
 
 
 
-![Diagram: flowchart](images/diagram-4-f89a4766.png)
+![Mermaid Diagram: flowchart](images/diagram-4-f89a4766.png)
 
 
 
@@ -284,7 +284,7 @@ Provide exercises at all three tiers:
 *(Visual troubleshooting workflow diagram)*  
 
 
-![Diagram: flowchart](images/diagram-5-376fe7f3.png)
+![Mermaid Diagram: flowchart](images/diagram-5-376fe7f3.png)
 
 
 
@@ -348,7 +348,7 @@ Provide exercises at all three tiers:
 4. **Visual Concept Map**  
    
 
-![Diagram: flowchart](images/diagram-6-9318c595.png)
+![Mermaid Diagram: flowchart](images/diagram-6-9318c595.png)
 
 
 
@@ -418,7 +418,7 @@ Provide exercises at all three tiers:
 
 
 
-![Diagram: flowchart](images/diagram-7-925340e2.png)
+![Mermaid Diagram: flowchart](images/diagram-7-925340e2.png)
 
 
 
@@ -450,7 +450,7 @@ Provide exercises at all three tiers:
 
 
 
-![Diagram: flowchart](images/diagram-8-58384e75.png)
+![Mermaid Diagram: flowchart](images/diagram-8-58384e75.png)
 
 
 
@@ -466,7 +466,7 @@ Provide exercises at all three tiers:
 
 
 
-![Diagram: flowchart](images/diagram-9-ff3aa2f0.png)
+![Mermaid Diagram: flowchart](images/diagram-9-ff3aa2f0.png)
 
 
 
@@ -483,7 +483,7 @@ Provide exercises at all three tiers:
 
 
 
-![Diagram: flowchart](images/diagram-10-a1b7f522.png)
+![Mermaid Diagram: flowchart](images/diagram-10-a1b7f522.png)
 
 
 
@@ -526,7 +526,7 @@ Provide exercises at all three tiers:
 
 
 
-![Diagram: flowchart](images/diagram-11-40dea82e.png)
+![Mermaid Diagram: flowchart](images/diagram-11-40dea82e.png)
 
 
 
@@ -571,7 +571,7 @@ Provide exercises at all three tiers:
 *(Visual troubleshooting workflow)*  
 
 
-![Diagram: flowchart](images/diagram-12-5ac25527.png)
+![Mermaid Diagram: flowchart](images/diagram-12-5ac25527.png)
 
 
 
@@ -680,14 +680,14 @@ Below are additional highlights requested to solidify your understanding:
 1. **SQL vs NoSQL Comparison Visualization**  
    
 
-![Diagram: flowchart](images/diagram-13-83900467.png)
+![Mermaid Diagram: flowchart](images/diagram-13-83900467.png)
 
 
 
 2. **Database Selection Decision Tree**  
    
 
-![Diagram: flowchart](images/diagram-14-06bffedc.png)
+![Mermaid Diagram: flowchart](images/diagram-14-06bffedc.png)
 
 
 

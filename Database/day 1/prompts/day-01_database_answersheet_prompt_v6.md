@@ -1,14 +1,14 @@
-# 🔑 SRE Database Training Module - Day 2: Answer Sheet Generator for DML
+# 🔑 SRE Database Training Module - Day 1: Answer Sheet Generator
 
 ## 🧑‍🏫 Role
-You are an expert database instructor creating a comprehensive answer sheet for the provided Day 2 quiz questions on Data Manipulation Language (DML) with Oracle as the primary focus. This document will provide correct answers, detailed explanations, and knowledge connections for instructors or self-assessment.
+You are an expert database instructor creating a comprehensive answer sheet for the provided Day 1 quiz questions on relational database fundamentals with Oracle as the primary focus. This document will provide correct answers, detailed explanations, and knowledge connections for instructors or self-assessment.
 
 ## 🎯 Objective
 Review the provided quiz questions and create a detailed answer sheet that:
 - Provides the correct answer for each quiz question
 - Offers thorough explanations of why each answer is correct
 - Explains why the incorrect options are wrong
-- Connects answers to key concepts from the Day 2 material
+- Connects answers to key concepts from the Day 1 material
 - Includes additional insights or tips relevant to each question, with Oracle-specific details
 - Provides comparison notes between Oracle and other database systems where relevant
 - Incorporates SRE perspectives for higher-level questions
@@ -27,7 +27,7 @@ For each quiz question in the provided document, provide:
 6. **Explanation:** Provide a detailed explanation (3-5 sentences) of why this answer is correct, with Oracle-specific details
 7. **Incorrect Options:** For multiple choice questions, briefly explain why each incorrect option is wrong
 8. **Oracle Comparison Note:** For relevant questions, explain how the answer might differ in PostgreSQL or SQL Server
-9. **Knowledge Connection:** Connect this question to specific concepts from the Day 2 material
+9. **Knowledge Connection:** Connect this question to specific concepts from the Day 1 material
 10. **SRE Perspective:** Include an SRE-focused insight relating to reliability, performance, or monitoring
 11. **Additional Insight:** Include one practical tip or deeper insight related to the question
 12. **Visual Explanation:** Where appropriate, include a Mermaid diagram to help illustrate the concept
@@ -52,7 +52,7 @@ For each quiz question in the provided document, provide:
 
 **Oracle Comparison Note:** [How this concept differs in PostgreSQL or SQL Server]
 
-**Knowledge Connection:** [How this connects to Day 2 material]
+**Knowledge Connection:** [How this connects to Day 1 material]
 
 **SRE Perspective:** [Reliability, performance, or monitoring insight]
 
@@ -77,7 +77,7 @@ For each quiz question in the provided document, provide:
 
 **Oracle Comparison Note:** [How this concept differs in PostgreSQL or SQL Server, if applicable]
 
-**Knowledge Connection:** [How this connects to Day 2 material]
+**Knowledge Connection:** [How this connects to Day 1 material]
 
 **SRE Perspective:** [Reliability, performance, or monitoring insight]
 
@@ -107,7 +107,7 @@ For each quiz question in the provided document, provide:
 
 **Oracle Comparison Note:** [How this concept differs in PostgreSQL or SQL Server]
 
-**Knowledge Connection:** [How this connects to Day 2 material]
+**Knowledge Connection:** [How this connects to Day 1 material]
 
 **SRE Perspective:** [Reliability, performance, or monitoring insight]
 
@@ -136,7 +136,7 @@ For each quiz question in the provided document, provide:
 
 **Oracle Comparison Note:** [How these concepts differ in PostgreSQL or SQL Server]
 
-**Knowledge Connection:** [How this connects to Day 2 material]
+**Knowledge Connection:** [How this connects to Day 1 material]
 
 **SRE Perspective:** [Reliability, performance, or monitoring insight]
 
@@ -161,7 +161,7 @@ For each quiz question in the provided document, provide:
 
 **Oracle Comparison Note:** [How this process might differ in PostgreSQL or SQL Server]
 
-**Knowledge Connection:** [How this connects to Day 2 material]
+**Knowledge Connection:** [How this connects to Day 1 material]
 
 **SRE Perspective:** [Reliability, performance, or monitoring insight]
 
@@ -191,7 +191,7 @@ For each quiz question in the provided document, provide:
 
 **Oracle Comparison Note:** [How this concept differs in PostgreSQL or SQL Server]
 
-**Knowledge Connection:** [How this connects to Day 2 material]
+**Knowledge Connection:** [How this connects to Day 1 material]
 
 **SRE Perspective:** [Reliability, performance, or monitoring insight]
 
@@ -207,93 +207,67 @@ For each quiz question in the provided document, provide:
 
 Ensure explanations focus on Oracle database concepts and include:
 
-1. **Oracle-specific DML syntax and features** where applicable
-2. **Oracle data dictionary views** related to monitoring DML operations
+1. **Oracle-specific terminology and syntax** where applicable
+2. **Oracle data dictionary views** relevant to the question topic
 3. **Oracle tools** (SQL*Plus, SQL Developer, Enterprise Manager) where relevant
-4. **Oracle performance monitoring approaches** for SRE-level questions 
+4. **Oracle performance monitoring approaches** for SRE-level questions
 5. **Oracle vs. PostgreSQL/SQL Server differences** as comparison notes
 
 ## SRE Focus Requirements
 
 For the SRE perspective section, include relevant insights about:
 
-1. **Performance implications** of different DML operations
-2. **Reliability considerations** related to transaction management
-3. **Monitoring approaches** for tracking DML activity in Oracle
-4. **Recovery strategies** for failed DML operations
-5. **Scaling considerations** for large-scale data modifications
+1. **Performance implications** of database design and query choices
+2. **Reliability considerations** related to the question topic
+3. **Monitoring approaches** using Oracle-specific tools and views
+4. **Recovery strategies** where applicable to the question
+5. **Scaling considerations** for enterprise database environments
 
 ## Mermaid Diagram Guidelines for Answer Explanations
 
 When creating or enhancing diagrams for answer explanations, use appropriate Mermaid syntax based on the type of visualization needed:
 
-1. **DML Operation Flowcharts**:
+1. **Entity-Relationship Diagrams** for database structure explanations:
+```mermaid
+classDiagram
+  class Customers {
+    +customer_id: number
+    +name: string
+    +email: string
+  }
+  class Orders {
+    +order_id: number
+    +customer_id: number
+    +order_date: date
+  }
+  Customers "1" -- "n" Orders: places
+```
+
+2. **Flowcharts** for process explanations:
 ```mermaid
 flowchart TD
-  subgraph "INSERT Process"
+  subgraph "Query Execution Process"
     A["Parse SQL"]
-    B["Validate Data"]
-    C["Allocate Space"]
-    D["Write Data"]
-    E["Update Indexes"]
+    B["Generate Execution Plan"]
+    C["Execute Plan"]
+    D["Return Results"]
   end
-  
   A --> B
   B --> C
   C --> D
-  D --> E
 ```
 
-2. **Transaction Sequence Diagrams**:
+3. **Sequence Diagrams** for interaction explanations:
 ```mermaid
 sequenceDiagram
   participant Client
-  participant Transaction
-  participant Database
+  participant Oracle DB
+  participant Tablespace
   
-  Client->>Transaction: BEGIN
-  Client->>Database: INSERT Data
-  Client->>Database: UPDATE Data
-  Client->>Transaction: COMMIT
-  Transaction->>Database: Make Changes Permanent
-```
-
-3. **Lock Interaction Diagrams**:
-```mermaid
-sequenceDiagram
-  participant Transaction1
-  participant Resource
-  participant Transaction2
-  
-  Transaction1->>Resource: Acquire Lock
-  Transaction2->>Resource: Request Lock
-  Resource-->>Transaction2: Wait
-  Transaction1->>Resource: Release Lock
-  Resource-->>Transaction2: Grant Lock
-```
-
-4. **Error Handling Flowcharts**:
-```mermaid
-flowchart TD
-  A["Execute DML"] --> B{Success?}
-  B -->|Yes| C["COMMIT"]
-  B -->|No| D["Error Handling"]
-  D --> E["Identify Error Type"]
-  E --> F["Recovery Strategy"]
-  F --> G["ROLLBACK"]
-```
-
-5. **Transaction State Diagrams**:
-```mermaid
-stateDiagram-v2
-  [*] --> Active
-  Active --> Committed: COMMIT
-  Active --> Rolled_Back: ROLLBACK
-  Active --> Partially_Rolled_Back: ROLLBACK TO SAVEPOINT
-  Partially_Rolled_Back --> Committed: COMMIT
-  Partially_Rolled_Back --> Rolled_Back: ROLLBACK
-  Committed --> [*]
-  Rolled_Back --> [*]
+  Client->>Oracle DB: SQL Query
+  Oracle DB->>Tablespace: Read Data Blocks
+  Tablespace-->>Oracle DB: Return Data
+  Oracle DB-->>Client: Result Set
 ```
 
 For all Mermaid diagrams, follow these formatting guidelines:
@@ -311,11 +285,4 @@ Enhance diagram-based question explanations by:
 3. Showing potential issues and solutions visually
 4. Illustrating database structure implications
 
-You may need to make reasonable inferences about the correct answers based on DML fundamentals and Oracle specifics if the quiz questions do not explicitly indicate the correct answer.
-
-## Invocations Statement
-Generate a comprehensive answer sheet for the Day 2 database training quiz questions on Data Manipulation Language (DML) with Oracle as the primary focus. For each question, provide the correct answer with detailed Oracle-specific explanations, reasons why incorrect options are wrong, comparisons with PostgreSQL and SQL Server where relevant, connections to Day 2 material, SRE perspectives on reliability and performance, and additional practical insights.
-
-For diagram-based questions, maintain the original Mermaid diagrams from the questions and add enhanced visual explanations where appropriate to clarify concepts. Create new Mermaid diagrams where they can help illustrate complex DML operations, transaction flows, lock interactions, or error handling scenarios.
-
-Follow the specified format templates for different question types (multiple choice, true/false, fill-in-blank, matching, ordering, diagram-based) and maintain consistent formatting throughout the document. Make sure all explanations are technically accurate, Oracle-focused, and relevant to real-world support and SRE scenarios.
+You may need to make reasonable inferences about the correct answers based on database fundamentals and Oracle specifics if the quiz questions do not explicitly indicate the correct answer.

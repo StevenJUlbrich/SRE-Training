@@ -9,31 +9,31 @@ Below is a comprehensive Day 6 training module on Basic Database Administration,
 Welcome to Day 6 of your database training! Today’s focus is on **Basic Database Administration** and how it ties into **SRE principles** of availability and performance.
 
 ### Observe, Test, Evaluate, and Take Action
-
 - **Observe**: Inspect user accounts, roles, and permission structures in the database.
 - **Test**: Confirm how permissions behave when applied to different users.
 - **Evaluate**: Measure the impacts of these permissions on both security and performance.
 - **Take Action**: Adjust permissions, roles, and user configurations to optimize database security and availability.
 
 ### Why User Management Matters
-
 - **Security & Governance**: Proper user management prevents unauthorized data access and ensures compliance with legal and organizational mandates.
 - **Accountability**: Tracing issues back to specific user accounts or roles is critical for audits and post-incident reviews.
 - **Operational Efficiency**: Efficient permission structures reduce time spent troubleshooting access issues.
 
 ### Real-World Support Scenario
-
 Picture a high-traffic web application that experiences sudden read failures. Upon investigation, you discover the read-only service account no longer has `SELECT` privileges on key tables. This single permissions oversight can cause large-scale outages, demonstrating the importance of systematic user and permission management.
 
 ### SRE Perspective on Availability & Performance
-
 - Databases are often the “single source of truth.” Downtime or poor performance has a **direct impact** on users.
 - SREs monitor metrics like connection utilization, query response times, and resource consumption to ensure smooth operations.
 - Permissions can impact performance if misapplied (e.g., a read-only user unexpectedly running resource-heavy updates).
 
 Below is a **high-level concept map** illustrating the relationship between users, permissions, database objects, and reliability:
 
-![Diagram: flowchart](images/diagram-v2-1-5b1fefa5.png)
+
+
+![Mermaid Diagram: flowchart](images/diagram-1-5b1fefa5.png)
+
+
 
 ---
 
@@ -42,21 +42,18 @@ Below is a **high-level concept map** illustrating the relationship between user
 Here are **4 objectives** for each tier (🔍 Beginner, 🧩 Intermediate, and 💡 Advanced/SRE):
 
 ### 🔍 Beginner
-
 1. **Explain** the purpose of user accounts and permissions in a database.
 2. **Identify** the difference between system privileges and object privileges.
 3. **Demonstrate** how to create and drop a basic database user.
 4. **Describe** why availability and performance are important from an SRE viewpoint.
 
 ### 🧩 Intermediate
-
 1. **Implement** role-based access control using custom roles in a chosen database system.
 2. **Apply** the principle of least privilege to real-world scenarios.
 3. **Configure** auditing to monitor user activity for compliance.
 4. **Outline** how database downtime impacts business continuity and user experience.
 
 ### 💡 Advanced/SRE
-
 1. **Design** permission structures balancing security and operational needs for high-traffic systems.
 2. **Monitor** key database metrics (latency, throughput, resource usage) to ensure reliability.
 3. **Respond** to incidents involving user misconfigurations impacting performance or availability.
@@ -75,8 +72,11 @@ Each concept below includes a **Beginner Analogy**, a **Visual Representation**,
    - **Object privileges** are like having a key to a single office or room.
 
 2. **Visual Representation**  
+   
 
-![Diagram: flowchart](images/diagram-v2-2-f18aa5ea.png)
+![Mermaid Diagram: flowchart](images/diagram-2-f18aa5ea.png)
+
+
 
 3. **Technical Explanation**  
    - **System privileges** allow actions like creating databases, managing schemas, or controlling critical system-level configurations.  
@@ -95,7 +95,6 @@ Each concept below includes a **Beginner Analogy**, a **Visual Representation**,
    - “Object privileges never impact performance.” Actually, poorly organized permissions can create confusion and hamper user efficiency.
 
 7. **Database Implementation**  
-
    | Database | System Privilege Example        | Object Privilege Example   |
    |----------|---------------------------------|----------------------------|
    | Oracle   | `CREATE USER`, `SYSDBA`         | `SELECT ON employees`      |
@@ -109,14 +108,16 @@ Each concept below includes a **Beginner Analogy**, a **Visual Representation**,
 Below is a deeper look at our **Day 6** topics, each structured with an overview, analogy, mermaid diagram, technical details, tiered examples, and pitfalls.
 
 ### 4.1 Database User Management Fundamentals
-
 - **Concept Overview**: Establishes authentication (who you are) and authorization (what you can do).
 - **Analogy**: Think of “front desk registration” in an office, ensuring only verified staff get ID badges.
 - **Mermaid Diagram**:
 
-![Diagram: flowchart](images/diagram-v2-3-509c4964.png)
+  
 
-- **Technical Details**:
+![Mermaid Diagram: flowchart](images/diagram-3-509c4964.png)
+
+
+- **Technical Details**: 
   - Each user has unique credentials.  
   - Databases often store user info in system tables or use external authentication (LDAP, Kerberos).
 - **Tiered Examples**:  
@@ -128,7 +129,6 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
   - Overlooking password complexity settings or rotation policies.
 
 ### 4.2 Creating and Managing Database Users
-
 - **Syntax & Best Practices**:
   - Oracle: `CREATE USER john IDENTIFIED BY strongPass123;`
   - Postgres: `CREATE ROLE john WITH LOGIN PASSWORD 'strongPass123';`
@@ -137,16 +137,13 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
   - Incorporates creation, password resets, user lockouts, and eventual removal or disabling.
 
 ### 4.3 Roles and Privileges
-
 - **Predefined Roles**: Oracle’s `CONNECT`, `RESOURCE`, `DBA`; Postgres’s `pg_read_all_data`, etc.
 - **Custom Roles**: Assign only the privileges your specific environment needs.
 
 ### 4.4 System vs. Object Privileges
-
 - Detailed in **Core Concepts** (Section 3 example).
 
 ### 4.5 GRANT and REVOKE Commands
-
 - **Syntax**  
   - Oracle/Postgres: `GRANT privilege ON object TO user;`  
   - SQL Server: `GRANT SELECT ON dbo.Employees TO [Domain\User];`  
@@ -154,29 +151,24 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
 - **Cascading Effects**: Revoking a role can remove privileges from all assigned users.
 
 ### 4.6 Read vs. Write Permissions
-
 - **Least Privilege**: Grant only required privileges for the user’s business function.
 - **Example**: Give marketing analysts read-only access to sales data, but not write or update access.
 
 ### 4.7 Database Security Best Practices
-
 - **Password Policies**: Enforce complexity, length, and rotation schedules.
 - **Auditing**: Track DDL and DML changes, logon attempts, and suspicious queries.
 - **Encryption**: Use data-at-rest (tablespace encryption) and data-in-transit (TLS) security.
 
 ### 4.8 Monitoring User Activity
-
 - **Logging & Auditing**: Identify anomalies like logins at unusual hours or repeated authentication failures.
 - **Alerting**: SRE principle to ensure immediate notifications if suspicious behavior occurs.
 
 ### 4.9 SRE Perspective: Database Availability
-
 - **Why It Matters**: Outages affect user experience and revenue.
 - **Common Challenges**: Hardware failure, network issues, misconfigured roles causing system errors.
 - **Strategies**: Implement replication, clustering, or failover solutions.
 
 ### 4.10 SRE Perspective: Database Performance
-
 - **Performance Metrics**: Query latency, throughput, CPU and memory usage, I/O stats.
 - **Monitoring**: Tools like Prometheus, Grafana, CloudWatch, or built-in DB performance views.
 - **Optimization**: Indexing, caching, query rewrites, connection pooling.
@@ -186,7 +178,6 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
 ## 5. 🔄 Permission Management Process in Practice
 
 ### Decision Framework
-
 1. **Identify** user needs.
 2. **Determine** the minimal set of privileges.
 3. **Implement** privileges via direct grants or roles.
@@ -194,15 +185,16 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
 
 ### Visual Workflow
 
-![Diagram: flowchart](images/diagram-v2-4-64b10434.png)
+
+![Mermaid Diagram: flowchart](images/diagram-4-64b10434.png)
+
+
 
 ### Common Pitfalls
-
 - Granting high-level roles (like `DBA` or `superuser`) for convenience.
 - Forgetting to test user permissions before deployment.
 
 ### Verification Techniques
-
 - **Check Effective Privileges**: `SHOW GRANTS` (MySQL), `\du` (Postgres), or system views in Oracle/SQL Server.
 - **Attempt Role-Specific Tasks**: Log in as the user and test commands.
 
@@ -211,24 +203,20 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
 ## 6. 🛠️ SRE Practices for Database Reliability
 
 ### Key Availability Metrics
-
 - **Uptime Percentage**: e.g., 99.9% or 99.99% Service Level Objective (SLO).
 - **Replication Lag**: Time difference in transactional states between primary and standby.
 - **Mean Time to Detect/Recover (MTTD/MTTR)**: How quickly the team recognizes and fixes issues.
 
 ### Common Availability Challenges
-
 - **Single Points of Failure**: Lack of redundancy in hardware or services.
 - **Long-running Transactions**: Cause blocking and potentially crash failover systems.
 - **Human Error**: Misconfiguration, accidental privilege revocations.
 
 ### High Availability Architectures
-
 - **Primary-Standby** (Synchronous or Asynchronous replication).
 - **Cluster** with multiple nodes sharing storage or using distributed systems.
 
 ### Incident Response Process
-
 1. Detect issue via monitoring or alerts.
 2. Escalate if critical thresholds exceeded.
 3. Triage by verifying logs and system resources.
@@ -240,24 +228,20 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
 ## 7. 🔍 SRE Practices for Database Performance
 
 ### Key Performance Metrics
-
 - **Query Latency** (Response time)
 - **Throughput** (Transactions per second)
 - **Resource Utilization** (CPU, memory, disk, network)
 
 ### Common Bottlenecks & Solutions
-
 - **Slow Queries**: Add indexes, optimize queries.
 - **Lock Contention**: Use appropriate transaction isolation, break large transactions.
 - **Hardware Resource Limits**: Scale vertically (bigger machines) or horizontally (sharding, replication).
 
 ### Performance Monitoring & Alerting
-
 - **Dashboards** with real-time metrics, thresholds for automatic alerts.
 - **Logs & Execution Plans** for root cause analysis of slow queries.
 
 ### Incident Response
-
 - **Identify** hotspots or locked sessions.
 - **Kill** blocking queries if necessary.
 - **Optimize** schema, queries, or hardware for future prevention.
@@ -269,19 +253,16 @@ Below is a deeper look at our **Day 6** topics, each structured with an overview
 Provide **3 exercises** for each tier:  
 
 ### 🔍 Beginner
-
 1. **Create a new database user** with a secure password, then grant them read-only access to one table.
 2. **Identify the difference** between system and object privileges by listing them in your database of choice.
 3. **Audit** your own login attempts by checking the database’s security logs.
 
 ### 🧩 Intermediate
-
 1. **Implement a role-based structure**: Create a role for a reporting team and grant `SELECT` privileges on multiple tables, then assign users to this role.
 2. **Revise privileges**: Revoke direct privileges from a user, ensuring all required permissions come through the role.
 3. **Set up basic monitoring**: Configure a built-in monitoring or logging tool to capture user activity and unsuccessful login attempts.
 
 ### 💡 Advanced/SRE
-
 1. **Implement a security policy**: Enforce strong password rules and enable auditing of all DDL commands.
 2. **Script a failover test**: Write a scenario in which you intentionally bring down the primary database to verify the standby seamlessly takes over.
 3. **Simulate high load**: Use a load testing tool to see if user authentication or permissions cause performance issues, then optimize accordingly.
@@ -291,7 +272,6 @@ Provide **3 exercises** for each tier:
 ## 9. 🚧 Troubleshooting Scenarios
 
 ### Scenario 1: “User Suddenly Cannot Access Table”
-
 - **Symptoms**: Login succeeds, but queries fail with “permission denied.”
 - **Cause**: The user’s role lost `SELECT` privileges during a privileges revocation.
 - **Diagnostic Approach**:
@@ -300,10 +280,12 @@ Provide **3 exercises** for each tier:
 - **Resolution**: Re-grant necessary privileges or reassign the user to the correct role.
 - **Workflow** (Mermaid):
   
-![Diagram: flowchart](images/diagram-v2-5-6b4246a8.png)
+
+![Mermaid Diagram: flowchart](images/diagram-5-6b4246a8.png)
+
+
 
 ### Scenario 2: “Sudden Spike in Slow Queries”
-
 - **Symptoms**: Query times triple, CPU usage spikes.
 - **Cause**: An unprivileged user was given `INSERT` privileges, leading to excessive data ingestion scripts running without optimization.
 - **Diagnostic Approach**:
@@ -312,7 +294,6 @@ Provide **3 exercises** for each tier:
 - **Resolution**: Optimize the script or revoke the excessive privilege. Possibly create an “import user” role with more stringent resource limits.
 
 ### Scenario 3: “Database Connection Storm”
-
 - **Symptoms**: Massive number of connections saturate DB resources.
 - **Cause**: A newly created user runs a poorly written application that opens connections but never closes them.
 - **Resolution**: Set connection pool limits, kill idle sessions, and educate on best coding practices.
@@ -324,7 +305,6 @@ Provide **3 exercises** for each tier:
 Each tier has **3 FAQs**.
 
 ### 🔍 Beginner FAQs
-
 1. **Q**: How do I quickly see what privileges a user has?  
    **A**: Use your database’s system views or built-in commands (e.g., `\du` in Postgres).
 2. **Q**: What’s the difference between a user and a role?  
@@ -333,7 +313,6 @@ Each tier has **3 FAQs**.
    **A**: Indirectly, yes. Overly generous privileges can enable unoptimized or unintended actions.
 
 ### 🧩 Intermediate FAQs
-
 1. **Q**: Can I assign multiple roles to the same user?  
    **A**: Yes, you can stack roles to combine privileges—but be mindful of potential conflicts or overlaps.
 2. **Q**: How do I audit changes to roles and privileges?  
@@ -342,7 +321,6 @@ Each tier has **3 FAQs**.
    **A**: Yes. In many databases, you can create a hierarchy of roles that simplifies administration and permission grouping.
 
 ### 💡 Advanced/SRE FAQs
-
 1. **Q**: How do I handle “superuser” accounts in an enterprise environment?  
    **A**: Limit them to a minimal set of DBAs or SREs, implement strong password policies, and log every action they take.
 2. **Q**: How frequently should I rotate credentials for critical users?  
@@ -396,7 +374,6 @@ Each tier has **3 FAQs**.
 ## 14. 🔮 Preview of Next Day’s Content
 
 **Day 7: Performance Tuning Introduction (Indexes!)**  
-
 - Learn what **indexes** are and how they help speed up queries.  
 - Explore **indexing strategies**, how to measure their impact, and best practices for ongoing performance tuning.  
 - Understand how the SRE principles of availability and performance dovetail with indexing to keep databases running smoothly.
@@ -423,7 +400,11 @@ This matrix helps confirm the principle of least privilege.
 
 ## 2. Permission Decision Tree
 
-![Diagram: flowchart](images/diagram-v2-6-7d9832ef.png)
+
+
+![Mermaid Diagram: flowchart](images/diagram-6-7d9832ef.png)
+
+
 
 ---
 
@@ -440,7 +421,6 @@ This matrix helps confirm the principle of least privilege.
 ## 4. SRE Monitoring Dashboard Design
 
 Key widgets/graphs to include:
-
 1. **Connection Utilization**: Identifies potential connection storms or memory saturation.
 2. **Top Queries by CPU/IO**: Surfaces resource-intensive queries.
 3. **Replication/Failover Status**: Ensures HA features are functioning.
