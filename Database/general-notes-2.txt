@@ -1,0 +1,44 @@
+Claude, I need to generate a new prompt for 
+
+Day 7 Focus: Performance Tuning Fundamentals
+
+Index types and structures
+How indexes improve query performance
+Execution plans and their interpretation
+Basic query optimization strategies
+
+Day 8 Focus: Advanced Performance Tuning & Monitoring
+
+Query optimization beyond indexes
+Database configuration parameters
+Performance monitoring and metrics
+Maintenance operations
+Scaling strategies
+
+Finalize schema following the structure and quality of the previous prompt I shared with you. 
+The prompt is for generating the quiz and answer sheet material
+
+Please:
+
+Analyze the previous prompt's structure, formatting, and key components
+Identify the important elements that made it effective (section organization, detail level, visual aids, etc.)
+Create a new prompt for [specific topic] that maintains the same quality standards
+Adapt any topic-specific sections while preserving the overall framework
+Enhance areas that could be improved based on your analysis of previous outputs
+
+Please pay special attention to:
+
+Technical depth and practical examples
+Visual representation requirements (like Mermaid diagrams)
+The progression from beginner to advanced concepts
+Real-world application scenarios
+Formatting guidelines for consistent output
+
+Use the 'Observe, Test, Evaluate, Act' approach to ensure the new prompt will produce results at least as good as the previous one."
+This approach guides me to:
+
+Systematically analyze what made the previous prompt effective
+Maintain structural elements that worked well
+Make appropriate adaptations for the new topic
+Look for opportunities to improve based on previous outputs
+Apply a methodical process to ensure quality and relevance

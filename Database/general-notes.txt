@@ -1,0 +1,22 @@
+No SQL Database
+DynamoDB
+MongoDB 
+Cassandra
+
+
+SQL Database
+Oracle
+Postgres
+MS SQL 
+
+
+modify 
+Database Design Architecture for SQL and NoSQL databases.
+Combine typical SRE tasks (e.g., monitoring database performance, basic query optimization).
+Examples of Database actions of  CRUD Operations
+Comparison of the CRUD Actions between SQL and NOSQL database.
+Must include performance profiling of queries (explain plans, indexing strategy).
+
+
+Primary SQL database is Oracle.
+Primary NoSQL is Cassandra.

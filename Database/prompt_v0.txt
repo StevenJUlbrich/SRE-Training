@@ -1,0 +1,38 @@
+Generate a detailed daily learning module document for an SRE training program, intended for display in an immersive Markdown format.
+
+**Target Audience:** Beginners to Intermediate Product Support personnel (ages 23-60, with 2-20 years of experience). The tone should be conversational yet informative, aiming for a 'brick by brick' knowledge build. Use clear language, relatable analogies, and practical examples relevant to support roles (e.g., looking up data, understanding system components, basic troubleshooting steps).
+
+**Input for this specific module:**
+* **Day:** [Insert Day Number, e.g., Day 2]
+* **Topic:** [Insert Topic Description from the SRE Training Plan: Month 3 Canvas artifact for that specific day, e.g., Data Manipulation Language (DML): INSERT, UPDATE, DELETE. Lab: Practice adding, modifying, and removing data.]
+
+**Required Format and Structure:**
+The output document *must* strictly follow the structure and style exemplified by the previously created `linux_day01_v6.pdf` (for Linux topics) and `db_day01_learning_material` (for Database topics) documents. Include all the following sections, adapting content meticulously to the specified Day and Topic:
+
+1.  **Introduction:** Welcome, overview of the day's topic, its importance, and relevance to Support/SRE roles.
+2.  **Objectives by Tier:** Define specific, measurable learning outcomes for Beginner, Intermediate, and SRE-Context/Perspective levels relevant to the day's topic.
+3.  **Connection to Future Topics:** Briefly explain how this module builds upon previous lessons and connects to upcoming ones.
+4.  **Core Concepts:** Break down the main ideas of the topic. For each key concept, include:
+    * Beginner Analogy
+    * Technical Explanation
+    * Support/SRE Application (How is this used or relevant in their world?)
+    * System Impact (What effect does this have on the systems?)
+5.  **Command/Keyword/Concept Breakdown:** Detail the specific commands, SQL keywords, cloud services, or technical concepts for the day. For each item, include:
+    * Overview/Purpose
+    * Syntax & Flags/Clauses/Options/Parameters (use tables where appropriate for clarity)
+    * Tiered Examples (Beginner, Intermediate, SRE-Level Context) with clear explanations of *what* the example does and *why* it's relevant.
+    * Instructional Notes (incorporating Beginner Tips, Intermediate/SRE Insights, Common Pitfalls, Security Notes/Considerations, Performance Impact/Considerations).
+6.  **System Effects:** Briefly describe the overall impact of the day's actions/commands on the system (e.g., read vs. write, resource usage profile, state changes).
+7.  **Building Good Habits Early / Avoiding Common Pitfalls:** Explicitly include guidance on best practices and common mistakes to avoid related to the day's topic (e.g., importance of `WHERE` clauses in DML, transaction safety, careful use of commands, IaC principles, security configurations).
+8.  **Hands-On Exercises (Tiered):** Provide specific, tiered exercises based on the Lab/Activity described in the input Topic. Instructions should be clear, step-by-step, and appropriate for the target audience and assumed tooling.
+9.  **Quiz Questions (Tiered):** Include multiple-choice questions testing understanding at Beginner, Intermediate, and SRE-Context levels, covering the key concepts and practical aspects.
+10. **Troubleshooting Scenarios:** Present 2-3 common problems related to the topic, with Symptom, Possible Cause(s), Diagnostic steps, and Resolution/Prevention strategies.
+11. **FAQ (Tiered):** Include frequently asked questions relevant to the topic, categorized by Beginner, Intermediate, and SRE-Level, providing practical answers.
+12. **Support/SRE (Mini-)Scenario:** Provide a brief, practical scenario illustrating how the day's learning applies directly to a realistic Support or SRE task or troubleshooting process.
+13. **Key Takeaways:** Summarize the main concepts, commands/keywords/services, operational insights, and explicitly list the crucial Good Habits/Pitfalls discussed throughout the module.
+14. **Preview of Next Topic:** Briefly state what will be covered in the next day's module to set expectations.
+15. **Further Learning Resources (Tiered):** Provide relevant links (ensure they are generally accessible) or references for different skill levels to encourage deeper exploration.
+16. **Congratulations/Closing:** End with an encouraging closing statement summarizing the achievement of completing the day's module.
+
+**Output:**
+Produce the complete learning module as a single Markdown document, fully formatted and ready for display in an immersive environment. Ensure accuracy, clarity, and completeness according to these instructions.
