@@ -35,13 +35,11 @@ You may choose open-source tools like **Prometheus**, **ELK/OpenSearch** stacks,
 ### Observability Maturity Model
 Picture your organization’s observability maturity in stages:
 
-```mermaid
-flowchart LR
-    A((Basic Monitoring)) --> B((Metrics-Driven Observability))
-    B --> C((Logs & Metrics Integration))
-    C --> D((Full Distributed Tracing))
-    D --> E((Automated & Predictive Insights))
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-1-df317065.png)
+
+
 
 - **Basic Monitoring**: Simple checks and alerts (e.g., CPU or memory usage).
 - **Metrics-Driven Observability**: Detailed custom metrics with queries, dashboards, and alert rules.
@@ -56,8 +54,15 @@ By the end of this module, you’ll be able to:
 - Deploy **distributed tracing** solutions using OpenTelemetry.
 - Integrate these pillars for holistic, enterprise-ready observability.
 
-> **YouTube Video Placeholder**: {{VIDEO_LINK_INTRO}}  
-> *Keywords*: “observability implementation journey”, “observability tools comparison”, “metrics logs traces implementation”, “SRE observability adoption strategy”, “observability maturity model”
+#### Introduction: From Concepts to Implementation
+- Implementing SRE from Scratch https://www.youtube.com/watch?v=pess2GvboS0
+
+- Building an Open Source Observability Stack from Raw Telemetry https://www.youtube.com/watch?v=lCB-3P2O8I8
+
+#### Implementing Metrics Collection
+- PROMETHEUS Metrics for your Python FastAPI App https://www.youtube.com/watch?v=WWzl53ObYvo
+- Prometheus Custom Metrics https://www.youtube.com/watch?v=cBVmkCjOa38
+
 
 ---
 
@@ -65,13 +70,11 @@ By the end of this module, you’ll be able to:
 
 Observability often starts with **metrics** because they provide near-real-time, numeric insights into system health and performance. In this section, we’ll use **Prometheus** and **Grafana** as the reference stack, but many techniques apply to Datadog, Geneos, and other solutions. We’ll then walk through *beginner*, *intermediate*, and *advanced* implementations.
 
-```mermaid
-flowchart LR
-    A((Application)) --> B[Prometheus Client Library]
-    B --> C((Prometheus Server))
-    C --> D[AlertManager]
-    C --> E((Grafana Dashboards))
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-2-76d281df.png)
+
+
 
 ### 🔍 Beginner Level: Setting Up Basic Prometheus and Grafana
 1. **Prometheus Architecture Components**  
@@ -208,20 +211,18 @@ Within days, the pilot revealed that **metrics-based alerting** was drastically 
 #### “Before and After” Architecture Diagrams
 
 **Before** (High-Level Overview):
-```mermaid
-flowchart LR
-    LegacyScripts[Homegrown Scripts] --> TextFiles[Text Files Storage]
-    TextFiles --> OnCallTeams[Manual Analysis]
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-3-6f40d0ae.png)
+
+
 
 **After** (Prometheus-Federated Architecture):
-```mermaid
-flowchart LR
-    A((Local Services)) --> B[Local Prometheus Instance]
-    B --> C[Prometheus Federation Layer]
-    C --> D[(Central Grafana)]
-    D --> E[Alerts & Dashboards]
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-4-fedc9064.png)
+
+
 
 Following this transformation, FinServOne successfully *reduced outage times*, improved developer productivity, and gained deeper insights into their hybrid environment. This success laid the groundwork for subsequent expansions into structured logging and distributed tracing.
 
@@ -231,13 +232,11 @@ Following this transformation, FinServOne successfully *reduced outage times*, i
 
 Logs provide granular, event-based insights into system behavior. *Structured logs* make analysis easier and lay the foundation for log-based analytics, correlation, and root cause investigation.
 
-```mermaid
-flowchart LR
-    A((Application)) --> B[Structured Logger (Python)]
-    B --> C[Log Processing e.g. Fluentd/Fluentbit]
-    C --> D((OpenSearch/Elasticsearch))
-    D --> E[Kibana or OpenSearch Dashboards]
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-5-0bb2fa38.png)
+
+
 
 ### 🔍 Beginner Level: Setting Up Structured Logging Pipelines
 
@@ -344,22 +343,18 @@ FinEdge leadership initiated a revamp of their logging strategy:
 #### “Before and After” Diagrams
 
 **Before** (Fragmented Logging):
-```mermaid
-flowchart LR
-    A[App Server Logs] --> B[Text Files on Each Server]
-    C[Syslog] --> D[Network Drive]
-    B --> OnCall[Manual Collection]
-    D --> OnCall
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-6-43a7b2f2.png)
+
+
 
 **After** (Structured Logging with Fluentbit & OpenSearch):
-```mermaid
-flowchart LR
-    A((Microservices Logs)) --> B[Fluentbit Collectors]
-    B --> C[(OpenSearch Cluster)]
-    C --> D[Kibana Dashboards]
-    D --> E[Support Teams & Devs]
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-7-61757835.png)
+
+
 
 #### Impact & Benefits
 - **Reduced MTTR**: Engineers quickly correlated *payment gateway* errors with upstream checkout logs using `correlation_id`, cutting debugging time by 70%.  
@@ -379,13 +374,11 @@ Overall, FinEdge Commerce’s successful structured logging transformation empow
 
 Distributed tracing ties together the story told by metrics and logs, providing a request-centric view across services. In microservice architectures, *tracing* is often the only way to pinpoint performance bottlenecks and errors that span multiple services.
 
-```mermaid
-flowchart LR
-    A((Application Services)) --> B[OpenTelemetry Instrumentation]
-    B --> C((OpenTelemetry Collector))
-    C --> D[Jaeger or Zipkin]
-    D --> E[Tracing Dashboards]
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-8-522bd53f.png)
+
+
 
 ### 🔍 Beginner Level: Basic Distributed Tracing Setup
 
@@ -522,27 +515,19 @@ This success story repeated itself whenever new performance mysteries arose. Eng
 #### “Before and After” Architecture Diagrams
 
 **Before** (Metrics + Logs Only):
-```mermaid
-flowchart LR
-    A[Service A] --> B[Service B]
-    B --> C[Service C]
-    subgraph Observability
-    M[Metrics DB] & L[Logging System]
-    end
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-9-5282d076.png)
+
+
 > *No direct correlation across services for end-to-end latency tracing.*
 
 **After** (OpenTelemetry & Jaeger):
-```mermaid
-flowchart LR
-    A((Service A)) --> B((Service B))
-    B --> C((Service C))
-    subgraph Observability
-    OTel[OpenTelemetry Collector] --> JaegerDB[Jaeger Storage]
-    JaegerUI[Jaeger UI] --> JaegerDB
-    end
-    A & B & C --> OTel
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-10-94fb8f00.png)
+
+
 > *Trace data flows through the OpenTelemetry Collector to Jaeger, delivering end-to-end visibility.*
 
 Distributed tracing empowered **PayLink Solutions** with deep insights into every request flow, revolutionizing how they handled performance investigations and system reliability.
@@ -581,22 +566,15 @@ At this stage, you’re collecting **metrics**, generating **structured logs**, 
    - Keep Splunk, Datadog, or Geneos running for business-critical legacy apps until your new approach proves stable.  
    - Eventually unify or decommission older toolchains to minimize duplication.
 
-```mermaid
-flowchart LR
-    subgraph Observability Integration
-    A[Metrics] --> E[Unified Dashboard]
-    B[Logs] --> E[Unified Dashboard]
-    C[Traces] --> E[Unified Dashboard]
-    E --> F[Cross-Pillar Alerting]
-    end
-    G[Correlation IDs] --> A
-    G --> B
-    G --> C
-```
 
-> **YouTube Video Placeholder**: {{VIDEO_LINK_INTEGRATION}}  
-> *Keywords*: “observability correlation IDs”, “unified observability dashboard”, “observability integration patterns”, “metrics logs traces correlation”, “observability as code”, “GitOps observability”, “Kubernetes observability implementation”, “AWS observability services”, “observability migration strategy”
 
+![Mermaid Diagram: flowchart](images/diagram-11-39267a00.png)
+
+
+
+#### Hands-On Implementation Exercises
+- Learn Observability in 5 hours | Tool wise Demo + Interview Preparation https://www.youtube.com/watch?v=cYAE0ZhT43c
+- Distributed Tracing With Jaeger And OpenTelemetry In Kubernetes https://www.youtube.com/watch?v=FK0uh-7nDSg
 ---
 
 ### **Integration War Story** (Financial Services Organization)
@@ -650,31 +628,19 @@ FinCloud’s CIO realized that to meet modern customer expectations (near-instan
 #### “Before and After” Diagrams
 
 **Before** (Siloed Observability):
-```mermaid
-flowchart LR
-    A[Metrics in Prometheus] --- B[Logs in Splunk]
-    B --- C[Traces in Jaeger]
-    subgraph Tools
-    end
-    A --> SiloedMonitoringTeam[Team 1]
-    B --> SiloedLoggingTeam[Team 2]
-    C --> Devs[Dev Team]
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-12-4b4e1058.png)
+
+
 > *Three separate data sources, three separate UIs, minimal cross-correlation.*
 
 **After** (Unified Cross-Pillar Observability):
-```mermaid
-flowchart LR
-    A((Prometheus)) --> Grafana[Unified Dashboard]
-    B((Splunk)) --> Grafana
-    C((Jaeger)) --> Grafana
-    Grafana --> Alerts[Cross-Pillar Alerts]
-    subgraph Tech
-    D[Correlation IDs] --> A
-    D --> B
-    D --> C
-    end
-```
+
+
+![Mermaid Diagram: flowchart](images/diagram-13-28d51943.png)
+
+
 > *Central Grafana instance ties logs, metrics, and traces together; correlation IDs link events and spans across pillars.*
 
 Ultimately, FinCloud transformed from a reactive, siloed organization into one that swiftly correlates signals across logs, metrics, and traces, significantly improving reliability for its core financial services.
