@@ -1,56 +1,62 @@
-Document Enhancement Prompt
-I have a technical markdown document about scripting concepts for SREs (Site Reliability Engineers). While the content is comprehensive and well-structured, I'd like to improve its readability and educational value. Please enhance the document by:
+Here's a precise, complete prompt you can use with exact instructions on how to transform the document:
 
-Adding a detailed table of contents with links to all major sections and subsections.
-Improving the visual hierarchy by:
+# Prompt: Transform my SRE Scripting Documentation Into a Highly Readable Educational Resource
 
-Adding more whitespace between major sections
-Using consistent formatting for headings and subheadings
-Adding horizontal rules to separate major sections
+I have a markdown document containing an SRE Scripting Quiz Answer Sheet that needs comprehensive readability improvements. Please take this document and transform it into an enhanced educational resource by implementing ALL of the following changes:
 
+## Format and Structure Changes
 
-Enhancing code examples by:
+1. Create a detailed, clickable table of contents at the top with direct links to all sections and subsections.
 
-Adding more detailed comments
-Including example inputs and outputs where appropriate
-Using consistent formatting and indentation
-Breaking longer code blocks into smaller, focused examples when possible
+2. Add consistent section headers with the following format:
+   - Main sections: `## [Section Name]`
+   - Subsections: `### [Question Number]: [Question Topic]`
+   - Each question should be formatted in a consistent, visually distinct way
 
+3. Insert horizontal rules (---) between all major sections for clear visual separation.
 
-Optimizing text content by:
+4. For EVERY question section, structure it exactly as follows:
+   - Question text in blockquote format
+   - "Answer Overview" - 2-3 sentence summary
+   - "Detailed Answer" - full explanation broken into paragraphs with headings
+   - "Example Code" (where applicable) with proper syntax highlighting
+   - "Example Output" showing what running the code would produce
+   - "SRE Perspective" - explaining why this concept matters for reliability
+   - "Common Pitfalls" - formatted as a table with columns for Pitfall, Issue, and Better Approach
+   - "Advanced Considerations" - bullet points of more complex aspects
+   - "Visual Explanation" - mermaid diagram where helpful
+   - "Key Takeaways" - bullet list of 4-5 critical points
 
-Breaking long paragraphs into shorter ones
-Converting lists to bullet points for better scannability
-Using bold text for key terms and important concepts
-Adding summary boxes or "key takeaways" after complex sections
+## Content Enhancement Instructions
 
+1. Break up ALL long paragraphs into shorter ones (maximum 3-4 sentences per paragraph).
 
-Adding visual elements like:
+2. Create comparison tables for ANY concepts that can be compared side-by-side.
 
-Comparison tables for concepts that need side-by-side evaluation
-Flow charts or diagrams to illustrate processes
-Ensuring diagrams have clear labels and connections
+3. Convert ALL lists in the original document to proper markdown bullet or numbered lists.
 
+4. For ALL code examples:
+   - Add more detailed inline comments
+   - Ensure proper syntax highlighting by using ```python tags
+   - Include example inputs/outputs where missing
+   - Break up any functions longer than 30 lines
 
-Supplementing with educational aids such as:
+5. Format all key terms in bold throughout the document.
 
-Example outputs for code snippets
-"Best Practices" sections after each major topic
-A glossary of technical terms at the end of the document
+6. Add a detailed glossary section at the end with definitions for at least 15 technical terms used in the document.
 
+7. Create a strong conclusion section that summarizes the key principles across all sections.
 
-Standardizing the structure of each answer section to include:
+## Special Elements to Add
 
-Question text
-Answer overview (brief summary)
-Detailed explanation
-Code examples with comments
-SRE perspective on the concept
-Common pitfalls
-Visual explanations where helpful
-Key takeaways
+1. For ANY section discussing multiple methods or approaches, create a comparison table.
 
+2. For ALL sections discussing tools or commands, add a "Best Practices" subsection with 5-6 bullet points.
 
-Adding a conclusion that ties together the key principles across all sections.
+3. Add boxes labeled "Example Usage:" before ALL code examples to make them stand out.
 
-Please maintain the technical accuracy of all content while making these readability improvements. The goal is to create a document that serves as both a reference and a learning resource for those who want to understand scripting concepts "brick by brick."RetryClaude can make mistakes. Please double-check responses.
+4. For ANY process-oriented topic, include a mermaid flowchart to visualize the process.
+
+5. Add a "Testing Approach" section after EVERY code implementation showing how to test the solution.
+
+Do not skip any of these instructions - implement ALL of them to create a comprehensive educational document that would be extremely valuable to someone learning these concepts step by step. The final document should be thorough, consistent in structure, visually appealing, and optimized for both learning and reference.
