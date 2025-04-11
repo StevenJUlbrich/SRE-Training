@@ -429,12 +429,12 @@ Directory contents:
 - For complex processes, consider **asynchronous** or **non-blocking** patterns.
 
 #### Common Pitfalls
-| Pitfall                                  | Issue                                                        | Better Approach                                      |
-|------------------------------------------|--------------------------------------------------------------|------------------------------------------------------|
+| Pitfall                                  | Issue                                                        | Better Approach                                            |
+|------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------|
 | Using `os.system()` with user input      | Potential command injection                                  | Use `subprocess.run(..., shell=False)` with argument lists |
-| Not checking return codes                | Silent failures can happen                                   | Use `check=True` or examine `returncode`            |
-| Overly broad shell commands              | Hard to maintain, error-prone with quoting/escaping          | Pass arguments as lists                              |
-| Not capturing stdout/stderr             | Limited debug information if errors occur                    | Use `capture_output=True` or set `stderr=...`        |
+| Not checking return codes                | Silent failures can happen                                   | Use `check=True` or examine `returncode`                   |
+| Overly broad shell commands              | Hard to maintain, error-prone with quoting/escaping          | Pass arguments as lists                                    |
+| Not capturing stdout/stderr              | Limited debug information if errors occur                    | Use `capture_output=True` or set `stderr=...`              |
 
 #### Advanced Considerations
 - **Asyncio**: For parallel/subprocess management in an event loop.  
