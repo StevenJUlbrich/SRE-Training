@@ -2,19 +2,7 @@
  (Answer Sheet Prompt)  
  (Basic Scripting Quiz)
 
-Below is a complete answer sheet for the **Basic Scripting Quiz**. The structure and content follow the guidelines from the **SRE Scripting Training Module – Answer Sheet Generator**. Each question is addressed with:
-
-- **Question Number and Section**  
-- **Question Text**  
-- **Answer Overview**  
-- **Detailed Answer**  
-- **Code Solution (if applicable)**  
-- **SRE Perspective**  
-- **Common Pitfalls**  
-- **Advanced Considerations**  
-- **Visual Explanation (if appropriate)**  
-
----
+Below is a complete answer sheet for the **Basic Scripting Quiz**. 
 
 ## Conceptual Questions (1–5)
 
