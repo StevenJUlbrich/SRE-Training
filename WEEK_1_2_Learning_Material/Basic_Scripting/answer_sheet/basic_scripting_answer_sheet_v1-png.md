@@ -514,10 +514,10 @@ Apr 10 12:15:02 server CRON[5678]: (root) CMD (backup.sh)
 #### Common Pitfalls
 | Pitfall                                    | Issue                                                  | Better Approach                                 |
 |--------------------------------------------|--------------------------------------------------------|-------------------------------------------------|
-| Not using `with` for files                | Possible descriptor leaks if exception occurs          | Always use context managers for file I/O        |
-| Overly large block inside `with`          | Resource remains open longer than necessary            | Keep blocks short and targeted                 |
-| Manual close without try-finally          | If an exception occurs, the file might never close     | Let `with` handle file closure automatically   |
-| Attempting to read/write after exit block | Resource is no longer available, leading to error      | Keep operations inside the `with` scope        |
+| Not using `with` for files                 | Possible descriptor leaks if exception occurs          | Always use context managers for file I/O        |
+| Overly large block inside `with`           | Resource remains open longer than necessary            | Keep blocks short and targeted                  |
+| Manual close without try-finally           | If an exception occurs, the file might never close     | Let `with` handle file closure automatically    |
+| Attempting to read/write after exit block  | Resource is no longer available, leading to error      | Keep operations inside the `with` scope         |
 
 #### Advanced Considerations
 - **Custom** context managers using `@contextlib.contextmanager`.  
