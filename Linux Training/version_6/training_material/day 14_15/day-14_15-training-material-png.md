@@ -63,7 +63,9 @@ Think of users as individual “tenants” of a building, each with a unique key
 
 
 
-![Mermaid Diagram: flowchart](images/diagram-1-e1cad27d.png)
+<div style="max-width: 650px; margin: 1em auto; text-align: center;">
+    <img src="images/diagram-1-e1cad27d.png" alt="Mermaid Diagram: flowchart" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+</div>
 
 
 
@@ -81,7 +83,9 @@ Below are the major commands for user and group management, each with a narrativ
 
 
 
-![Mermaid Diagram: flowchart](images/diagram-2-0eebb2d2.png)
+<div style="max-width: 650px; margin: 1em auto; text-align: center;">
+    <img src="images/diagram-2-0eebb2d2.png" alt="Mermaid Diagram: flowchart" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+</div>
 
 
 
@@ -162,7 +166,9 @@ Taylor carefully removes outdated test accounts. “It’s better to lock them f
 
 
 
-![Mermaid Diagram: flowchart](images/diagram-3-cf7f5f9c.png)
+<div style="max-width: 650px; margin: 1em auto; text-align: center;">
+    <img src="images/diagram-3-a844aecc.png" alt="Mermaid Diagram: flowchart" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+</div>
 
 
 
@@ -184,7 +190,9 @@ Taylor ensures all user passwords adhere to a company policy. “Here’s where 
 
 
 
-![Mermaid Diagram: flowchart](images/diagram-4-074f9ae1.png)
+<div style="max-width: 650px; margin: 1em auto; text-align: center;">
+    <img src="images/diagram-4-91a4eabb.png" alt="Mermaid Diagram: flowchart" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+</div>
 
 
 
@@ -214,7 +222,9 @@ Taylor’s next step: create a microservice account with strict password rules�
 
 
 
-![Mermaid Diagram: flowchart](images/diagram-5-709817e1.png)
+<div style="max-width: 650px; margin: 1em auto; text-align: center;">
+    <img src="images/diagram-5-709817e1.png" alt="Mermaid Diagram: flowchart" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+</div>
 
 
 

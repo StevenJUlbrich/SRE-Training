@@ -188,8 +188,10 @@ flowchart LR
     A["groupadd groupname"] --> B["Add entry to /etc/group"]
     C["groupdel groupname"] --> D["Remove group from /etc/group"]
     
-    style A,C fill:#f96,stroke:#333,stroke-width:2px
-    style B,D fill:#bbf,stroke:#333,stroke-width:2px
+    style A fill:#f96,stroke:#333,stroke-width:2px
+    style C fill:#f96,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
 Taylor organizes teams by function: dev, ops, analytics. Groups unify them behind consistent permissions.
@@ -217,7 +219,9 @@ flowchart LR
     
     style A fill:#f96,stroke:#333,stroke-width:2px
     style B fill:#bfb,stroke:#333,stroke-width:2px
-    style C,D,E fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
 **Syntax & Flags**  
