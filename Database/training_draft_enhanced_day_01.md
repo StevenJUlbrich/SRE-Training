@@ -36,19 +36,19 @@ flowchart LR
 
 ## 🎯 Taylor’s Day 1 Learning Objectives
 
-### 🟢 Beginner
+### 🔍 Beginner
 - Identify tables, columns, and rows (a.k.a. the holy trinity of structured data).
 - Explain what keys actually do without sounding like a riddle.
 - Run basic `SELECT` queries in Oracle without crashing production.
 - Connect to Oracle using tools that don’t suck.
 
-### 🟡 Intermediate
+### 🧩 Intermediate
 - Compare Oracle, Postgres, and SQL Server syntax like a cross-dialect diplomat.
 - Implement primary and foreign key constraints correctly (and fix them when someone else doesn’t).
 - Use Oracle’s data dictionary to see what's *really* in the database.
 - Troubleshoot errors without guessing.
 
-### 🔴 SRE-Level
+### 💡 SRE-Level
 - Monitor query performance using V$ views like `V$SQL` and `V$SESSION`.
 - Understand execution plans and recognize when your database is crying.
 - Simulate recovery scenarios (and recover from them).

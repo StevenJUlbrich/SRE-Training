@@ -6,7 +6,7 @@ Below is a suggested **Answer Sheet** for the Day 4 quiz. Each answer includes a
 
 ## **Answer Key with Explanations**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **Which flag in `grep` makes the search case-insensitive?**  
    **Answer:** `-i`  
@@ -22,7 +22,7 @@ Below is a suggested **Answer Sheet** for the Day 4 quiz. Each answer includes a
 
 ---
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 4. **How do you show line numbers with `grep`? (Which option?)**  
    **Answer:** `-n`  
@@ -38,7 +38,7 @@ Below is a suggested **Answer Sheet** for the Day 4 quiz. Each answer includes a
 
 ---
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 7. **Which operator redirects both stdout and stderr to the same file?**  
    **Answer:** `&>`  

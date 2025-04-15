@@ -4,7 +4,7 @@ Below are the answer keys for each quiz question from the Day 4 module, along wi
 
 ---
 
-## 🟢 Beginner Questions
+## 🔍 Beginner Questions
 
 **1. Which flag in `grep` makes the search case-insensitive?**
 
@@ -23,7 +23,7 @@ Below are the answer keys for each quiz question from the Day 4 module, along wi
 
 ---
 
-## 🟡 Intermediate Questions
+## 🧩 Intermediate Questions
 
 **1. How do you show line numbers with `grep`? (Which option?)**
 
@@ -42,7 +42,7 @@ Below are the answer keys for each quiz question from the Day 4 module, along wi
 
 ---
 
-## 🔴 SRE-Level Questions
+## 💡 SRE-Level Questions
 
 **1. How can you redirect both stdout and stderr to the same file? (Provide the redirection operator)**
 

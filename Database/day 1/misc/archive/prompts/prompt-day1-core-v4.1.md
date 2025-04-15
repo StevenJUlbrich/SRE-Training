@@ -78,7 +78,7 @@ The primary focus should be on PostgreSQL, with explicit comparisons to Oracle a
 
 ### 📚 Core Concepts
 For each key concept, include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
+* 🔍 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
 * 🖼️ **Visual Representation:** Clear diagram illustrating the concept structure and relationships
 * 🔬 **Technical Explanation:** Precise definition and mechanics with proper terminology
 * 💼 **Support/SRE Application:** Direct workplace relevance with specific troubleshooting scenarios
@@ -130,7 +130,7 @@ For each concept/command, follow this exact format:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```[language]
 -- Example: [clear purpose statement]
 [command with basic syntax]
@@ -140,7 +140,7 @@ For each concept/command, follow this exact format:
 -- [Step-by-step breakdown for beginners]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```[language]
 -- Example: [specific support scenario]
 [command with more complex syntax]
@@ -151,7 +151,7 @@ For each concept/command, follow this exact format:
 -- Knowledge build: [how this builds on beginner concepts]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```[language]
 -- Example: [realistic SRE scenario like troubleshooting/monitoring]
 [complex command or query with advanced options]
@@ -240,19 +240,19 @@ Each visual aid must be:
 ### 🔨 Day 1 Hands-On Exercises
 Exactly 3 exercises per tier, focused specifically on Day 1 content:
 
-* 🟢 **Beginner Exercises:**
+* 🔍 **Beginner Exercises:**
   * **Database Connection Exercise**: Step-by-step instructions for connecting to a PostgreSQL sample database with screenshots
   * **Basic SELECT Exercise**: Retrieving and examining data from a single table
   * **Simple WHERE Filter Exercise**: Finding specific records based on criteria
   * Each exercise should have clear objectives and expected outcomes
   
-* 🟡 **Intermediate Exercises:**  
+* 🧩 **Intermediate Exercises:**  
   * **Multi-Table Exploration**: Identifying relationships between tables using keys
   * **Column Selection and Filtering**: Writing optimized queries that select only needed columns
   * **Support Scenario Query**: Finding specific customer/configuration data for a simulated support ticket
   * Each exercise should explicitly build on beginner skills with clear references
   
-* 🔴 **SRE-Level Exercises:**
+* 💡 **SRE-Level Exercises:**
   * **Query Performance Analysis**: Examining execution plans for a SELECT statement
   * **Data Relationship Verification**: Checking referential integrity between tables
   * **Monitoring Setup**: Configuring basic query monitoring for performance tracking
@@ -321,18 +321,18 @@ Exactly 3 realistic scenarios focused on Day 1 content (database fundamentals an
 
 ### ❓ Frequently Asked Questions
 Exactly 3 FAQs per tier (total: 9 FAQs):
-* 🟢 **Beginner FAQs:**
+* 🔍 **Beginner FAQs:**
   * Focus on fundamental understanding
   * Address common initial confusion points
   * Use simple, approachable language with analogies
 
-* 🟡 **Intermediate FAQs:**
+* 🧩 **Intermediate FAQs:**
   * Address practical application questions
   * Connect concepts to support workflows
   * Include relevant examples with output
   * Reference how these build on beginner concepts
 
-* 🔴 **SRE-Level FAQs:**
+* 💡 **SRE-Level FAQs:**
   * Address performance, scale, and reliability
   * Include database design considerations
   * Focus on production impact and monitoring
@@ -398,21 +398,21 @@ Focus on beginner-level career protection specific to Day 1 content:
 
 ### 📚 Day 1 Further Learning Resources
 
-#### 🟢 Beginner SQL & Relational Database Resources (exactly 3)
+#### 🔍 Beginner SQL & Relational Database Resources (exactly 3)
 * Each resource must focus on fundamental SQL SELECT queries and database structure:
   * Direct link to freely accessible resource
   * Clear description of what it teaches about database fundamentals
   * How it specifically helps support roles understand basic database concepts
   * Estimated time commitment for busy professionals
 
-#### 🟡 Intermediate Relational Concepts Resources (exactly 3)
+#### 🧩 Intermediate Relational Concepts Resources (exactly 3)
 * Each resource must focus on database relationships and more advanced queries:
   * Direct link to accessible resource
   * Clear description of how it builds on Day 1 concepts
   * How it connects to practical support and troubleshooting tasks
   * Key takeaways relevant to Day 1 content
 
-#### 🔴 SRE-Level Reliability Resources (exactly 3)
+#### 💡 SRE-Level Reliability Resources (exactly 3)
 * Each resource must connect basic database concepts to reliability engineering:
   * Direct link to professional resource
   * Clear description of how it elevates basic SQL knowledge to SRE contexts
@@ -441,7 +441,7 @@ Focus on beginner-level career protection specific to Day 1 content:
    * Include conceptual diagrams for all database concepts
    * Use tables for structured information and comparisons
    * Employ syntax highlighting for all code examples
-   * Use color-coding for skill levels (🟢🟡🔴)
+   * Use color-coding for skill levels (🔍🧩💡)
    * Add visual cues (icons) for different note types (🧠⚠️🚨💡☠️🧰)
    * Ensure diagrams use consistent visual language
    * Include process flow diagrams for all operational procedures

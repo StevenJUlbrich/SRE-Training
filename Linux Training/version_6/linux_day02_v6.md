@@ -104,7 +104,7 @@ Use `touch` to create new empty files if they don’t exist, or update a file’
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Create a new empty file named 'demo.log'
@@ -114,7 +114,7 @@ $ touch demo.log
 -rw-r--r-- 1 user user 0 Mar 29 09:00 demo.log
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Update only the access time of 'report.txt'
@@ -124,7 +124,7 @@ $ stat report.txt
 # Notice the 'Access' timestamp has changed, 'Modify' is unchanged
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Simulate an older timestamp for a script that rotates logs if older than X days
@@ -164,7 +164,7 @@ $ touch -t 202303010700 service.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Create a directory named 'projects'
@@ -175,7 +175,7 @@ $ ls -l
 drwxr-xr-x 2 user user 4096 Mar 29 09:10 projects
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Create nested directories for an application release
@@ -184,7 +184,7 @@ $ mkdir -p /var/www/myapp/releases/v1.2.3
 # This ensures /var/www/myapp/releases exist before creating 'v1.2.3'
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Create a directory for sensitive config files with restricted permissions
@@ -224,7 +224,7 @@ $ mkdir -m 700 /etc/secure_configs
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # View a small config file
@@ -234,7 +234,7 @@ port=8080
 debug=true
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Display file contents with line numbers
@@ -244,7 +244,7 @@ $ cat -n error.log
      3  INFO: Retrying...
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Combine multiple small logs and filter for critical lines
@@ -285,7 +285,7 @@ $ cat /var/log/app1.log /var/log/app2.log | grep CRITICAL > combined.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Read a system log with less
@@ -294,14 +294,14 @@ $ less /var/log/syslog
 # Use Up/Down keys to scroll, 'q' to quit
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # View line numbers and avoid wrapping
 $ less -N -S /var/log/nginx/error.log
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Combine multiple logs, then open them with less for search
@@ -343,7 +343,7 @@ $ cat /var/log/app/*.log | less
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Display file with paging
@@ -351,14 +351,14 @@ $ more /etc/passwd
 --More-- (Press space to continue, q to quit)
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Show instructions on navigating
 $ more -d /var/log/messages
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # In a minimal rescue environment with no 'less':
@@ -396,21 +396,21 @@ $ more /mnt/chroot/var/log/boot.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # View the first 10 lines of syslog
 $ head /var/log/syslog
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # View the first 20 lines to see any initial errors
 $ head -n 20 app.log
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Quickly verify the start of a large compressed log
@@ -451,21 +451,21 @@ $ zcat /var/log/app-archive.gz | head -n 15
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Show the last 10 lines of a log
 $ tail /var/log/messages
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Show the last 50 lines
 $ tail -n 50 /var/log/app/debug.log
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Real-time monitoring in a rotating environment
@@ -507,7 +507,7 @@ $ tail -F /var/log/myapp/current.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Copy 'file1.txt' to 'file2.txt'
@@ -518,7 +518,7 @@ $ ls
 file1.txt  file2.txt
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Copy a directory recursively preserving permissions
@@ -527,7 +527,7 @@ $ cp -rp /var/www/ /home/user/www_backup/
 # Ownership and timestamps stay intact
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Archive production configs with everything preserved
@@ -568,14 +568,14 @@ $ cp -a /etc/nginx/ /backup/nginx_$(date +%Y%m%d)
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Rename 'test.txt' to 'report.txt'
 $ mv test.txt report.txt
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Move multiple logs to an archive directory with verbose output
@@ -584,7 +584,7 @@ $ mv -v /var/log/app/*.log /var/log/app/archive/
 /var/log/app/app2.log -> /var/log/app/archive/app2.log
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Rename a config file while creating a backup if the new name already exists
@@ -624,7 +624,7 @@ $ mv -b /etc/myapp/config.yml /etc/myapp/config.yml.old
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Remove a single file
@@ -634,7 +634,7 @@ $ ls old_file.txt
 ls: cannot access 'old_file.txt': No such file or directory
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Remove a directory and contents interactively
@@ -644,7 +644,7 @@ rm: remove 'archive/old.log'? y
 ...
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Forcefully remove old logs with verbose output
@@ -683,14 +683,14 @@ removed directory '/var/log/app/old_logs'
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Remove an empty directory 'temp'
 $ rmdir temp
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Remove nested empty directories
@@ -698,7 +698,7 @@ $ rmdir -p logs/archive/2025
 # Removes 2025, then archive, then logs if each is empty
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Automated cleanup of leftover empty dirs
@@ -1016,7 +1016,7 @@ Within minutes, you’ve leveraged file commands for real-time monitoring, quick
 
 ## **11. Further Learning Resources**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **The Linux Command Line (William Shotts)**  
    - [https://linuxcommand.org/tlcl.php](https://linuxcommand.org/tlcl.php)  
@@ -1028,7 +1028,7 @@ Within minutes, you’ve leveraged file commands for real-time monitoring, quick
    - **Teaches**: Step-by-step CLI usage, including file manipulation.  
    - **Relevance**: Walks novices through daily tasks with clear examples.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **Pluralsight: Linux Fundamentals**  
    - [https://www.pluralsight.com/courses/linux-fundamentals](https://www.pluralsight.com/courses/linux-fundamentals)  
@@ -1040,7 +1040,7 @@ Within minutes, you’ve leveraged file commands for real-time monitoring, quick
    - **Teaches**: Detailed usage of core commands (cp, mv, rm, etc.).  
    - **Relevance**: Offers deeper insight into flags and real-world behaviors.
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **Google SRE Workbook: Practical Alerting & Monitoring**  
    - [https://sre.google/workbook/chapters/alerting/](https://sre.google/workbook/chapters/alerting/)  

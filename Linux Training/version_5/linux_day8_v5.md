@@ -68,7 +68,7 @@ Creates new user accounts. Critical for adding both standard and service users.
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Creates a user with default settings
@@ -77,7 +77,7 @@ $ tail -n 1 /etc/passwd
 alice:x:1001:1001::/home/alice:/bin/bash
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Creates a user with a custom home directory and Zsh shell
@@ -87,7 +87,7 @@ total 4
 drwxr-xr-x 2 engineer engineer 4096 Mar 28 10:22 engineer
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Creates a system user (no login shell) for an application
@@ -125,7 +125,7 @@ Removes user accounts. Ensures old or compromised accounts no longer exist.
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Removes user but keeps home directory
@@ -133,7 +133,7 @@ $ sudo userdel alice
 $ grep alice /etc/passwd  # should show no results
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Removes user and home directory
@@ -142,7 +142,7 @@ $ ls /home/
 ... no dev_user directory remains
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Force removal in an urgent scenario (user session might be active)
@@ -183,7 +183,7 @@ Changes user account properties (groups, shells, home directories). Vital for us
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Adds user to one group without removing from others (-aG)
@@ -192,7 +192,7 @@ $ groups alice
 alice : alice audio
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Lock a user who is on leave
@@ -201,7 +201,7 @@ $ sudo passwd -S bob
 bob L 04/01/2025 0 99999 7 -1 (Password locked.)
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Rename a user to match new naming conventions, move home dir
@@ -238,7 +238,7 @@ Creates new groups, which simplifies permission assignment for multiple users.
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Create a straightforward group
@@ -247,7 +247,7 @@ $ grep marketing /etc/group
 marketing:x:1002:
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Create a group with a specific GID
@@ -256,7 +256,7 @@ $ grep designers /etc/group
 designers:x:1500:
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Create a system group for a specialized service
@@ -291,7 +291,7 @@ Removes groups that are no longer needed.
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Remove a simple group
@@ -299,7 +299,7 @@ $ sudo groupdel marketing
 $ grep marketing /etc/group  # No output
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Remove group and verify users are unaffected
@@ -309,7 +309,7 @@ uid=1001(alice) gid=1001(alice)
 # If alice was in 'designers', she’s no longer there.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # In large infrastructures, ensure no references remain
@@ -348,7 +348,7 @@ Changes or sets user passwords, enforces password policies, and locks/unlocks ac
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Change your own password
@@ -360,7 +360,7 @@ Retype new UNIX password:
 passwd: password updated successfully
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Lock a user account
@@ -370,7 +370,7 @@ $ sudo passwd -S dev_user
 dev_user L 03/28/2025 0 99999 7 -1 (Password locked)
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Enforce password expiration policies
@@ -409,7 +409,7 @@ A text file that stores essential user account information (username, UID, prima
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # View entire file
@@ -420,7 +420,7 @@ alice:x:1001:1001::/home/alice:/bin/bash
 ...
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Search for a particular user
@@ -428,7 +428,7 @@ $ grep engineer /etc/passwd
 engineer:x:1012:1012:Engineer Account:/home/engineer:/bin/zsh
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Programmatically parse /etc/passwd for reporting
@@ -463,7 +463,7 @@ Retrieves entries from system databases configured in `/etc/nsswitch.conf`, e.g.
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Retrieve local user data
@@ -471,7 +471,7 @@ $ getent passwd alice
 alice:x:1001:1001::/home/alice:/bin/bash
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Check group membership
@@ -479,7 +479,7 @@ $ getent group devs
 devs:x:1015:bob,carol,dan
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Check an LDAP-based user (if system uses LDAP)
@@ -514,19 +514,19 @@ ldapuser:*:20010:20010:LDAP Directory User:/home/ldapuser:/bin/bash
 
 Each tier has 3 exercises to solidify your knowledge.
 
-### 🟢 Beginner Level (3 Exercises)
+### 🔍 Beginner Level (3 Exercises)
 
 1. **Create Your First User**: Use `sudo useradd -m testuser` and `passwd testuser`. Confirm creation with `id testuser`.
 2. **Explore /etc/passwd**: Run `cat /etc/passwd` and identify the entry for `testuser`. Document the fields.
 3. **Delete the User**: Remove `testuser` with `userdel -r testuser`. Verify no home directory remains.
 
-### 🟡 Intermediate Level (3 Exercises)
+### 🧩 Intermediate Level (3 Exercises)
 
 1. **Group Assignment**: Create a group `projectteam` with `sudo groupadd projectteam`. Add a user `projuser` with `sudo useradd -m -G projectteam projuser`. Check group membership.
 2. **Lock & Unlock**: Lock `projuser` with `sudo usermod -L projuser`; confirm using `sudo passwd -S projuser`. Then unlock with `sudo usermod -U projuser`.
 3. **Rename & Move**: Rename `projuser` to `newproj` using `usermod -l newproj projuser`. Move home directory to `/home/newproj` and update ownership.
 
-### 🔴 SRE-Level (3 Exercises)
+### 💡 SRE-Level (3 Exercises)
 
 1. **Service Account Creation**: Create a system user `appsvc` with no login shell. Assign a custom home in `/opt/appsvc`. Ensure correct ownership of `/opt/appsvc`.
 2. **Password Policy**: Force `appsvc` to change password in 30 days, warn 5 days prior. Check the effect via `chage -l appsvc`.
@@ -538,7 +538,7 @@ Each tier has 3 exercises to solidify your knowledge.
 
 Three to four questions per tier to test comprehension.
 
-### 🟢 Beginner Quiz
+### 🔍 Beginner Quiz
 
 1. **MCQ**: Which file primarily contains encrypted passwords?
    - a) `/etc/passwd`
@@ -553,7 +553,7 @@ Three to four questions per tier to test comprehension.
 3. **Fill in the Blank**: `__________ -r bob` removes the user bob and their home directory.
 4. **Scenario**: You need to quickly see if user `alice` exists. Which command do you run?
 
-### 🟡 Intermediate Quiz
+### 🧩 Intermediate Quiz
 
 1. **Scenario**: You created a user `dev2` with `sudo useradd dev2` but forgot `-m`. How do you fix it so `dev2` gets a home directory under `/home/dev2`?
 2. **MCQ**: If you want to add a user to a new group without removing them from other groups, which flag must be used?
@@ -563,7 +563,7 @@ Three to four questions per tier to test comprehension.
    - d) `-f`
 3. **Short Answer**: Which command can retrieve user info from an LDAP server if configured properly?
 
-### 🔴 SRE-Level Quiz
+### 💡 SRE-Level Quiz
 
 1. **Scenario**: You suspect a compromised service account. Which two immediate steps do you take using user management commands?
 2. **MCQ**: Which directive in `/etc/nsswitch.conf` ensures `getent` queries both local files and LDAP?
@@ -603,7 +603,7 @@ Three to four questions per tier to test comprehension.
 
 ## ❓ FAQ (3 Per Tier)
 
-### 🟢 Beginner FAQ
+### 🔍 Beginner FAQ
 
 1. **Q**: How do I see which groups I belong to?
    **A**: Use the `groups` command or `id`.
@@ -612,7 +612,7 @@ Three to four questions per tier to test comprehension.
 3. **Q**: Do I need to log out after being added to a group?
    **A**: Yes, to see immediate effects. Or use `newgrp groupname`.
 
-### 🟡 Intermediate FAQ
+### 🧩 Intermediate FAQ
 
 1. **Q**: Is there a simple way to force all users to change passwords on next login?
    **A**: You can script `sudo passwd -e username` for each user, or use `chage -E`.
@@ -621,7 +621,7 @@ Three to four questions per tier to test comprehension.
 3. **Q**: Can I automate user creation across multiple servers?
    **A**: Yes, with configuration management tools like Ansible, Chef, or Puppet.
 
-### 🔴 SRE-Level FAQ
+### 💡 SRE-Level FAQ
 
 1. **Q**: What if my environment uses Kerberos or LDAP for authentication?
    **A**: The same commands apply. `getent` and `/etc/nsswitch.conf` orchestrate whether local or remote directories are queried.
@@ -675,7 +675,7 @@ Three to four questions per tier to test comprehension.
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner (2–3)
+### 🔍 Beginner (2–3)
 
 1. **Linux.com – Basic User Administration**
    - **Link**: [https://www.linux.com/training-tutorials/linux-commands-user-administration/](https://www.linux.com/training-tutorials/linux-commands-user-administration/)
@@ -690,7 +690,7 @@ Three to four questions per tier to test comprehension.
    - **Teaches**: Beginner-friendly approach to user management in a small-scale environment.
    - **Applies**: Perfect for learning in a hobbyist context.
 
-### 🟡 Intermediate (2–3)
+### 🧩 Intermediate (2–3)
 
 1. **Red Hat Enterprise Linux Docs**
    - **Link**: [https://access.redhat.com/documentation](https://access.redhat.com/documentation)
@@ -705,7 +705,7 @@ Three to four questions per tier to test comprehension.
    - **Teaches**: Day-to-day admin tasks, including user management in enterprise.
    - **Connects**: Good reference for distribution-specific nuances.
 
-### 🔴 SRE-Level (2–3)
+### 💡 SRE-Level (2–3)
 
 1. **Google SRE Book (Chapter on Managing Incidents and Access)**
    - **Link**: [https://sre.google/sre-book/table-of-contents/](https://sre.google/sre-book/table-of-contents/)

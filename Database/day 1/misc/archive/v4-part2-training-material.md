@@ -864,47 +864,47 @@ Below are **3** realistic cross-database troubleshooting scenarios.
 
 Below are **9 FAQs** focused on cross-database topics:
 
-### 🟢 FAQ #1
+### 🔍 FAQ #1
 
 **Q**: When should I choose a relational database over MongoDB?  
 **A**: If you need **strict ACID transactions**, complex joins, or strongly typed schemas, a relational DB is often more suitable. MongoDB can handle some transactions but is best for flexible, schema-evolving scenarios.
 
-### 🟢 FAQ #2
+### 🔍 FAQ #2
 
 **Q**: How do I manage skills for multiple databases at once?  
 **A**: Start by **building on your SQL knowledge**, then learn equivalent concepts in MongoDB or Kafka. Use translation guides and practice real scenarios to reinforce cross-database thinking.
 
-### 🟢 FAQ #3
+### 🔍 FAQ #3
 
 **Q**: Is Kafka a replacement for a database?  
 **A**: Typically **no**. Kafka is a **streaming platform** for real-time data pipelines and event processing. It doesn’t provide typical DB features like complex querying or random access. Use it alongside databases.
 
-### 🟡 FAQ #4
+### 🧩 FAQ #4
 
 **Q**: How difficult is it to replicate data from MongoDB to a relational DB (or vice versa)?  
 **A**: It depends on **schema mapping**. Tools like **Kafka Connect**, `mongo-connector`, or custom ETL pipelines can help. You must carefully handle differences in data types and structure.
 
-### 🟡 FAQ #5
+### 🧩 FAQ #5
 
 **Q**: What are common pitfalls when implementing a streaming solution with Kafka?  
 **A**: **Under-partitioning** leading to hotspots, ignoring **consumer lag**, poor offset management, or misunderstanding **exactly-once** semantics.
 
-### 🟡 FAQ #6
+### 🧩 FAQ #6
 
 **Q**: How does NoSQL handle indexing differently from relational databases?  
 **A**: MongoDB indexes can be created on multiple fields, including geospatial. But there’s often no concept of a full “primary key + foreign key” system. Index strategies must be carefully planned to avoid huge overhead.
 
-### 🔴 FAQ #7
+### 💡 FAQ #7
 
 **Q**: For high throughput, can a single PostgreSQL instance match a sharded MongoDB or large Kafka cluster?  
 **A**: Possibly, but it becomes **complicated**. Often you’ll need partitioning or a cluster solution. Sharded NoSQL or Kafka can scale horizontally more easily for certain workloads.
 
-### 🔴 FAQ #8
+### 💡 FAQ #8
 
 **Q**: How do I monitor a multi-database environment effectively?  
 **A**: Use a **centralized** metrics system (e.g., Prometheus + Grafana), collecting from each database’s metrics endpoints. Carefully design **dashboards** that correlate cross-system metrics (e.g., queue depth vs. DB concurrency).
 
-### 🔴 FAQ #9
+### 💡 FAQ #9
 
 **Q**: How does SRE incident management differ in multi-database outages?  
 **A**: You must check logs and metrics **across all systems**. A failure in one data store might cascade. Have separate runbooks for each DB, plus an overarching incident management plan that includes cross-team collaboration.

@@ -3,7 +3,7 @@ Below is a **comprehensive answer sheet** for a set of Day 2 quiz questions focu
 ---
 
 ## Answer 1: INSERT Basics
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which of the following statements correctly inserts a new record into the DEPARTMENTS table in Oracle, assuming the table has columns (DEPT_ID, DEPT_NAME)?
@@ -38,7 +38,7 @@ If the table has default values or auto-incremented keys (using sequences in Ora
 ---
 
 ## Answer 2: UPDATE Statement
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which of the following commands updates the salary to 7500 for an employee with EMP_ID = 200 in the EMPLOYEES table?
@@ -71,7 +71,7 @@ Always include a `WHERE` clause unless you intend to update *all* rows.
 ---
 
 ## Answer 3: DELETE Statement
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which statement deletes all rows from the ORDERS table where the ORDER_DATE is before January 1, 2025?
@@ -104,7 +104,7 @@ Use `TRUNCATE TABLE table_name;` when removing *all* rows to avoid large undo ov
 ---
 
 ## Answer 4: Transaction Control
-🟢 Beginner | True/False
+🔍 Beginner | True/False
 
 **Question:**  
 Statement: In Oracle, a COMMIT statement ends the current transaction, making all changes permanent.
@@ -132,7 +132,7 @@ Long-running transactions that wait to COMMIT can hold locks for extended period
 ---
 
 ## Answer 5: ROLLBACK Usage
-🟢 Beginner | Fill-in-the-Blank
+🔍 Beginner | Fill-in-the-Blank
 
 **Question:**  
 Complete the statement:  
@@ -168,7 +168,7 @@ If you need partial rollbacks, consider **SAVEPOINT** to revert only a portion o
 ---
 
 ## Answer 6: Merge Statement
-🟡 Intermediate | Multiple Choice
+🧩 Intermediate | Multiple Choice
 
 **Question:**  
 Which of the following best describes the MERGE statement in Oracle?
@@ -203,7 +203,7 @@ Maintain good indexing strategies on the matching columns used in the MERGE cond
 ---
 
 ## Answer 7: Sequence Diagram for INSERT
-🟡 Intermediate | Diagram-Based
+🧩 Intermediate | Diagram-Based
 
 **Question:**  
 Observe the simplified transaction sequence for an INSERT in Oracle:
@@ -265,7 +265,7 @@ sequenceDiagram
 ---
 
 ## Answer 8: UPDATE with Subquery
-🟡 Intermediate | Multiple Choice
+🧩 Intermediate | Multiple Choice
 
 **Question:**  
 Which statement updates the `bonus` column in the EMPLOYEES table to 500 for employees who earn more than the average salary in their department?
@@ -329,7 +329,7 @@ For large datasets, consider using a CTE or a temporary table approach for clari
 ---
 
 ## Answer 9: DELETE with Join Condition
-🟡 Intermediate | Multiple Choice
+🧩 Intermediate | Multiple Choice
 
 **Question:**  
 You want to delete all employees from the EMPLOYEES table who have never placed any orders in the ORDERS table. Which statement could achieve this in Oracle?
@@ -387,7 +387,7 @@ This can sometimes be more efficient than `NOT IN`.
 ---
 
 ## Answer 10: SAVEPOINT Feature
-🟡 Intermediate | True/False
+🧩 Intermediate | True/False
 
 **Question:**  
 Statement: A SAVEPOINT in Oracle allows partial rollbacks within a single transaction by returning the database state to a specified checkpoint.
@@ -415,7 +415,7 @@ Use descriptive savepoint names (e.g., `SAVEPOINT after_bonus_update;`) for clar
 ---
 
 ## Answer 11: Statement-Level Triggers and DML
-🟡 Intermediate | Multiple Choice
+🧩 Intermediate | Multiple Choice
 
 **Question:**  
 Which statement about Oracle statement-level triggers for DML is true?
@@ -450,7 +450,7 @@ Use triggers sparingly, supplementing with explicit application-layer or stored 
 ---
 
 ## Answer 12: Locking Behavior
-🟡 Intermediate | True/False
+🧩 Intermediate | True/False
 
 **Question:**  
 Statement: In Oracle, an UPDATE statement on a single row will place a shared lock on the entire table.
@@ -478,7 +478,7 @@ You can inspect active locks and blocking sessions via `V$LOCK` and `V$SESSION`.
 ---
 
 ## Answer 13: RETURNING INTO Clause
-🟡 Intermediate | Fill-in-the-Blank
+🧩 Intermediate | Fill-in-the-Blank
 
 **Question:**  
 Complete the statement about Oracle’s `RETURNING INTO` clause:  
@@ -519,7 +519,7 @@ RETURNING id INTO :var;
 ---
 
 ## Answer 14: FOR UPDATE Clause
-🟡 Intermediate | Multiple Choice
+🧩 Intermediate | Multiple Choice
 
 **Question:**  
 Which of the following is true about the `SELECT ... FOR UPDATE` clause in Oracle?
@@ -554,7 +554,7 @@ After doing `SELECT ... FOR UPDATE`, an immediate update or commit is typically 
 ---
 
 ## Answer 15: Multi-Table INSERT
-🔴 SRE-Level | Multiple Choice
+💡 SRE-Level | Multiple Choice
 
 **Question:**  
 You need to split records from a staging table into two different tables based on a condition (e.g., one for employees, another for contractors). Which Oracle feature allows inserting into multiple tables in a single statement?
@@ -589,7 +589,7 @@ Within multi-table inserts, you can use the `WHEN condition THEN INSERT ...` cla
 ---
 
 ## Answer 16: Bulk Operations
-🔴 SRE-Level | Fill-in-the-Blank
+💡 SRE-Level | Fill-in-the-Blank
 
 **Question:**  
 Complete the statement regarding Oracle bulk operations in PL/SQL:  
@@ -625,7 +625,7 @@ Pair `FORALL` with `SQL%ROWCOUNT` checks or exception handling to manage partial
 ---
 
 ## Answer 17: Lock Interaction
-🔴 SRE-Level | Diagram-Based
+💡 SRE-Level | Diagram-Based
 
 **Question:**  
 Analyze the following lock interaction diagram in Oracle:
@@ -688,7 +688,7 @@ sequenceDiagram
 ---
 
 ## Answer 18: SELECT FOR UPDATE WAIT Clause
-🔴 SRE-Level | Multiple Choice
+💡 SRE-Level | Multiple Choice
 
 **Question:**  
 Which clause can you append to a `SELECT ... FOR UPDATE` statement to specify a timeout period for waiting on row locks in Oracle?
@@ -722,7 +722,7 @@ If a timeout occurs, Oracle raises the error: `ORA-30006: resource busy; acquire
 ---
 
 ## Answer 19: Flashback Transaction for DML
-🔴 SRE-Level | Ordering
+💡 SRE-Level | Ordering
 
 **Question:**  
 Arrange the steps for using Oracle Flashback Transaction to revert a problematic DML change:
@@ -757,7 +757,7 @@ Test Flashback in non-production to ensure you understand dependencies and poten
 ---
 
 ## Answer 20: Monitoring DML in Real-Time
-🔴 SRE-Level | Matching
+💡 SRE-Level | Matching
 
 **Question:**  
 Match each Oracle view or utility in Column A to its description in Column B for monitoring DML operations.

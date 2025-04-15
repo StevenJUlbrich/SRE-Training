@@ -21,17 +21,17 @@ These are fundamental for every SRE, enabling the **efficient processing of text
 
 ### 🎯 Learning Objectives
 
-- **Beginner (🟢)**
+- **Beginner (🔍)**
   1. Perform basic searches with `grep`
   2. Locate files using `find` with simple criteria
   3. Use simple pipes and redirection for data manipulation
 
-- **Intermediate (🟡)**
+- **Intermediate (🧩)**
   4. Apply advanced `grep` and `find` options in large or complex directories
   5. Build multi-command pipelines for routine operational tasks
   6. Safely redirect outputs and inputs in real-world scenarios
 
-- **SRE-Level (🔴)**
+- **SRE-Level (💡)**
   7. Perform distributed log correlation with complex `grep` patterns
   8. Automate large-scale file searches and modifications with scripting
   9. Optimize performance by chaining commands and managing resource usage
@@ -89,7 +89,7 @@ These are fundamental for every SRE, enabling the **efficient processing of text
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Search for the word "error" in app.log (case-sensitive)
@@ -98,7 +98,7 @@ These are fundamental for every SRE, enabling the **efficient processing of text
   2025-03-29 11:00:05 ERROR Database timeout occurred
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Recursive, case-insensitive search for 'login failed' in /var/log
@@ -107,7 +107,7 @@ These are fundamental for every SRE, enabling the **efficient processing of text
   /var/log/auth.log:Mar 29 10:01:12 server sshd[2233]: PAM 1 more login failed...
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Search for errors or warnings across multiple logs, showing 2 lines of context
@@ -152,7 +152,7 @@ These are fundamental for every SRE, enabling the **efficient processing of text
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Find all .txt files in the current directory
@@ -161,7 +161,7 @@ These are fundamental for every SRE, enabling the **efficient processing of text
   ./backup/config-old.txt
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Search for directories named "archive", ignoring case
@@ -170,7 +170,7 @@ These are fundamental for every SRE, enabling the **efficient processing of text
   /var/www/logs/archive
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Find logs over 200MB in /var/log and compress them automatically
@@ -208,7 +208,7 @@ Pipes chain commands together: the output of one is the input of the next. This 
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # List files, then filter only those containing "report"
@@ -217,7 +217,7 @@ Pipes chain commands together: the output of one is the input of the next. This 
   report_summary.doc
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Check running processes, sort by memory usage, view top 5
@@ -227,7 +227,7 @@ Pipes chain commands together: the output of one is the input of the next. This 
   ...
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Extract IPs from auth.log, find unique, count occurrences
@@ -273,14 +273,14 @@ Redirection controls where command input comes from and where output goes. SREs 
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Save list of files to filelist.txt (overwrites if exists)
   $ ls /etc > filelist.txt
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Append memory status to system_report.txt
@@ -288,7 +288,7 @@ Redirection controls where command input comes from and where output goes. SREs 
   # system_report.txt grows with each command run
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Capture both normal output and errors from a backup script
@@ -324,19 +324,19 @@ Redirection controls where command input comes from and where output goes. SREs 
 
 ## 🎯 Hands-On Exercises
 
-### 🟢 Beginner Exercises
+### 🔍 Beginner Exercises
 
 1. **Basic Grep**: Create a file named `sample.txt` with text lines. Use `grep` to find a specific word.
 2. **Find by Name**: In your home directory, use `find` to locate any file ending with `.sh`.
 3. **Redirect Output**: Run `ls -l /etc` and redirect it into a file called `etc_list.txt`.
 
-### 🟡 Intermediate Exercises
+### 🧩 Intermediate Exercises
 
 1. **Recursive Grep**: Search `/var/log` for the word `error` recursively with line numbers.
 2. **File Size Hunt**: Use `find` to locate files larger than 50MB in `/var/log`, redirect results to `large_logs.txt`.
 3. **Pipeline Sorting**: Run `ps aux`, pipe to `grep root`, then pipe to `sort` by memory usage.
 
-### 🔴 SRE-Level Exercises
+### 💡 SRE-Level Exercises
 
 1. **Multi-Service Log Analysis**: Combine `grep` and pipes to extract error lines from multiple logs (e.g., `app.log`, `db.log`), storing them in `all_errors.log`.
 2. **Disk Cleanup Script**: Use `find` with `-exec` or `xargs` to compress or remove logs older than 7 days in `/var/log`.
@@ -346,19 +346,19 @@ Redirection controls where command input comes from and where output goes. SREs 
 
 ## 📝 Quiz Questions
 
-### 🟢 Beginner
+### 🔍 Beginner
 
 1. **Which flag in `grep` makes the search case-insensitive?**
 2. **What is the purpose of `>` in a command?**
 3. **What command finds `.conf` files in `/etc`?** (Fill in: `find /etc ____ "*.conf"`)
 
-### 🟡 Intermediate
+### 🧩 Intermediate
 
 4. **How do you show line numbers with `grep`?** (Which option?)
 5. **Which `find` option locates files over 100MB in size?** (Fill in: `find /var/log ____ +100M`)
 6. **What does the `|` operator do in `ls | grep script`?**
 
-### 🔴 SRE-Level
+### 💡 SRE-Level
 
 7. **Which operator redirects both stdout and stderr to the same file?**
 8. **In `cmd1 | cmd2 | cmd3`, which command receives the output of `cmd2`?**
@@ -395,7 +395,7 @@ Redirection controls where command input comes from and where output goes. SREs 
 
 ## ❓ FAQ
 
-### 🟢 Beginner
+### 🔍 Beginner
 
 1. **Can I use `grep` on multiple files at once?**
    Yes, list them: `grep "pattern" file1.txt file2.txt`.
@@ -406,7 +406,7 @@ Redirection controls where command input comes from and where output goes. SREs 
 3. **Is `>` the same as copy-and-paste into a file?**
    It’s similar for text, but `>` overwrites the file automatically.
 
-### 🟡 Intermediate
+### 🧩 Intermediate
 
 1. **How can I use a pattern file with `grep`?**
    Use `-f patternfile.txt`, where each line in the file is a pattern.
@@ -417,7 +417,7 @@ Redirection controls where command input comes from and where output goes. SREs 
 3. **What happens if I use both `>` and `>>` in the same command?**
    The last operator takes precedence, but mixing them is typically confusing and should be avoided.
 
-### 🔴 SRE-Level
+### 💡 SRE-Level
 
 1. **How do I avoid scanning special or remote filesystems with `find`?**
    Use `-xdev` to skip other mount points, or `-prune` to exclude directories.
@@ -520,19 +520,19 @@ Redirection controls where command input comes from and where output goes. SREs 
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner
+### 🔍 Beginner
 
 1. **[Grep Tutorial (Linuxize)](https://linuxize.com/post/grep-command/)** - A thorough introduction to grep.
 2. **[Find Command Basics (GeeksforGeeks)](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)** - Simple find usage examples.
 3. **[Redirection & Pipes (Ryan’s Tutorials)](https://ryanstutorials.net/linuxtutorial/piping.php)** - Visual guide to I/O redirection.
 
-### 🟡 Intermediate
+### 🧩 Intermediate
 
 1. **[GNU grep Manual](https://www.gnu.org/software/grep/manual/grep.html)** - In-depth explanations of regex and performance considerations.
 2. **[Advanced Find Tricks (Linode Docs)](https://www.linode.com/docs/guides/find-command/)** - Detailed usage of `find`, including `-exec`.
 3. **[Bash Pipelines in Practice (DigitalOcean)](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-i-o-redirection)** - Chaining and advanced redirection.
 
-### 🔴 SRE-Level
+### 💡 SRE-Level
 
 1. **[Google SRE Workbook - Alerting & Monitoring](https://sre.google/workbook/alerting-on-sli/)** - Integrates text processing with observability.
 2. **[Log Searching Strategies (Datadog)](https://www.datadoghq.com/blog/log-analysis-monitoring/)** - Large-scale log correlation.

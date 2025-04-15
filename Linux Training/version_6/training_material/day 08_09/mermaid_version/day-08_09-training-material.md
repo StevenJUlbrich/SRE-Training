@@ -18,17 +18,17 @@ In this module, we’ll explore how SREs can tackle **advanced text processing**
 
 ## **Tiered Objectives**
 
-### **Beginner (🟢)**
+### **Beginner (🔍)**
 1. Recognize the purposes of `sed`, `awk`, `sort`, `uniq`, and `wc`.
 2. Perform simple substitutions, field extractions, sorting, and counting.
 3. Understand how to chain these tools in pipelines.
 
-### **Intermediate (🟡)**
+### **Intermediate (🧩)**
 1. Use `sed` and `awk` for more robust data transformations and selective extractions.
 2. Employ `sort` and `uniq` for deduplication and frequency analysis in larger data sets.
 3. Combine multiple commands seamlessly to create multi-step text processing pipelines.
 
-### **SRE-Level (🔴)**
+### **SRE-Level (💡)**
 1. Automate large-scale log transformations and config edits using advanced `sed`/`awk`.
 2. Apply `sort`, `uniq`, and `wc` to handle performance or reliability analytics in real time.
 3. Integrate security (masking sensitive data) and operational best practices into text processing flows.
@@ -77,17 +77,17 @@ sed [options] 'command' file
 
 #### **Examples**
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Replace "test" with "exam" globally in notes.txt, printing to screen
   sed 's/test/exam/g' notes.txt
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Remove lines beginning with '#'
   sed '/^#/d' config.ini
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Mask sensitive tokens (like API keys) in logs
   sed -E 's/(token=)[A-Za-z0-9]+/\1****/g' api.log
@@ -114,17 +114,17 @@ awk [options] 'pattern { action }' file
 
 #### **Examples**
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Print just the first column of a space-separated file
   awk '{print $1}' items.txt
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Show CPU usage over 20% (fields vary by system)
   ps aux | awk '$3 > 20 {print $2, $3, $11}'
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Summarize average response time ignoring lines with N/A
   awk '$5 != "N/A" {sum+=$5; count++} END {print "Avg RT:", sum/count, "ms"}' merged.log
@@ -148,17 +148,17 @@ awk [options] 'pattern { action }' file
 
 #### **Examples**
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Alphabetical sort of hosts
   sort hosts.txt
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Sort processes by memory usage descending
   ps aux | sort -k4 -nr | head -5
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Sort web logs first by status code, then by response time
   sort -k9,9n -k10,10n access.log
@@ -181,17 +181,17 @@ awk [options] 'pattern { action }' file
 
 #### **Examples**
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Deduplicate sorted lines
   sort items.txt | uniq
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Count repeated severities in logs
   grep "ERROR\|WARN\|INFO" app.log | sort | uniq -c
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Identify repeated IP addresses in two merged logs
   cat log1 log2 | awk '{print $1}' | sort | uniq -d
@@ -214,17 +214,17 @@ awk [options] 'pattern { action }' file
 
 #### **Examples**
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Lines in system.log
   wc -l system.log
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Compare two files by character size
   echo "File1:" $(wc -c < file1) ", File2:" $(wc -c < file2)
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Monitor log growth
   watch "wc -l /var/log/critical.log"
@@ -263,7 +263,7 @@ graph TB
 
 ## **Hands-On Exercises**
 
-### **🟢 Beginner Tier**
+### **🔍 Beginner Tier**
 
 1. **Substitute Words**  
    - Create `mylog.txt` with lines mentioning `DEV` environment.  
@@ -273,7 +273,7 @@ graph TB
 3. **Count Lines**  
    - In any text file, run `wc -l file.txt` to see how many lines exist.
 
-### **🟡 Intermediate Tier**
+### **🧩 Intermediate Tier**
 
 1. **Remove Comments & Sort**  
    - Create a config with commented lines. Use `sed '/^#/d' config.ini | sort` to see a cleaned, sorted list.  
@@ -282,7 +282,7 @@ graph TB
 3. **File Size Automation**  
    - Use `if [ $(wc -c < biglog.log) -gt 2000000 ]; then gzip biglog.log; fi` to auto-compress logs over 2MB.
 
-### **🔴 SRE-Level Tier**
+### **💡 SRE-Level Tier**
 
 1. **End-to-End Pipeline**  
    - In a large production log, chain together `sed` (mask tokens), `awk` (extract relevant fields), `sort` (by user or timestamp), and `uniq -c` (frequency). Save the result to `report.txt`.  
@@ -317,7 +317,7 @@ graph TB
 
 ## **FAQ**
 
-### **🟢 Beginner FAQs**
+### **🔍 Beginner FAQs**
 
 1. **Is `sed` only for substitution?**  
    It can also delete lines, insert, or do more advanced manipulations (`y`, `a`, `i` commands, etc.).
@@ -326,7 +326,7 @@ graph TB
 3. **Why does `uniq` miss duplicates?**  
    It only removes **adjacent** duplicates. Always `sort` first.
 
-### **🟡 Intermediate FAQs**
+### **🧩 Intermediate FAQs**
 
 1. **How to do multiline operations in sed?**  
    Use the hold space or `N` commands, or consider using `awk` or a dedicated script if multiline logic is complex.
@@ -335,7 +335,7 @@ graph TB
 3. **Sort vs. sort -n**  
    `sort -n` handles numeric sorting; plain `sort` uses lexicographic order—where “10” might come before “2”.
 
-### **🔴 SRE-Level FAQs**
+### **💡 SRE-Level FAQs**
 
 1. **How do I handle partial data from real-time logs with awk?**  
    Tools like `awk` can continuously read from a stream, but you may need to flush output or script it carefully.  
@@ -406,7 +406,7 @@ graph TB
 
 ## **Further Learning Resources**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **GNU sed Manual**  
    [https://www.gnu.org/software/sed/manual/](https://www.gnu.org/software/sed/manual/)  
@@ -415,7 +415,7 @@ graph TB
    [https://linuxize.com/post/awk-command/](https://linuxize.com/post/awk-command/)  
    Easy read for field processing.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **The Linux Command Line**  
    [http://linuxcommand.org/tlcl.php](http://linuxcommand.org/tlcl.php)  
@@ -423,7 +423,7 @@ graph TB
 2. **Mastering Awk (DigitalOcean)**  
    [https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux](https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux)  
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **Google SRE Workbook**  
    [https://sre.google/workbook/](https://sre.google/workbook/)  

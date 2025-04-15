@@ -16,19 +16,19 @@ Fatima’s goal: **Establish a robust monitoring plan** that ensures no process 
 
 ## **Learning Objectives**
 
-### **Beginner (🟢)**
+### **Beginner (🔍)**
 
 1. Identify and list running processes.  
 2. Start, stop, suspend, and resume processes.  
 3. Gather CPU, memory, and disk usage info quickly.
 
-### **Intermediate (🟡)**
+### **Intermediate (🧩)**
 
 1. Use interactive tools (e.g., `top`, `htop`) with advanced options.  
 2. Relate CPU, memory, and disk usage to potential resource constraints.  
 3. Employ job control commands (`jobs`, `bg`, `fg`) in real-world scenarios.
 
-### **SRE-Level (🔴)**
+### **SRE-Level (💡)**
 
 1. Automate real-time process and resource monitoring for critical services.  
 2. Investigate incidents by combining logs, resource metrics, and process trees.  
@@ -347,7 +347,7 @@ flowchart LR
 
 ## **Further Learning Resources**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **Linux Journey - Process Utilization**  
    [https://linuxjourney.com/lesson/process-utilization](https://linuxjourney.com/lesson/process-utilization)  
@@ -361,7 +361,7 @@ flowchart LR
    [http://linuxcommand.org/tlcl.php](http://linuxcommand.org/tlcl.php)  
    Comprehensive introduction to the CLI.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **DigitalOcean Tutorials: Process Management**  
    [https://www.digitalocean.com/community/tutorials/tag/linux-process](https://www.digitalocean.com/community/tutorials/tag/linux-process)  
@@ -375,7 +375,7 @@ flowchart LR
    [https://www.redhat.com/sysadmin](https://www.redhat.com/sysadmin)  
    Real-world case studies on process and resource monitoring.
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **Google SRE Book - Handling Overload**  
    [https://sre.google/sre-book/handling-overload/](https://sre.google/sre-book/handling-overload/)  

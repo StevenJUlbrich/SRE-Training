@@ -54,7 +54,7 @@ For each command, provide a structured breakdown following this exact format:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```bash
 # Example: [clear purpose statement]
 $ [command with basic options]
@@ -62,7 +62,7 @@ $ [command with basic options]
 # [Optional brief explanation if needed]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```bash
 # Example: [specific operational context]
 $ [command with more complex options]
@@ -70,7 +70,7 @@ $ [command with more complex options]
 # Explicit context: [operational significance explanation]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```bash
 # Example: [realistic SRE scenario like troubleshooting/automation]
 $ [complex command possibly combining with other tools]
@@ -138,19 +138,19 @@ One detailed incident scenario with:
 
 ### 📚 Further Learning Resources
 
-#### 🟢 Beginner: exactly 2–3  
+#### 🔍 Beginner: exactly 2–3  
 - Each resource must include:
   - Direct link
   - Clear description of what it teaches
   - How it applies to beginner Linux users
 
-#### 🟡 Intermediate: exactly 2–3  
+#### 🧩 Intermediate: exactly 2–3  
 - Each resource must include:
   - Direct link
   - Clear description of what it teaches
   - How it connects to operational skills
 
-#### 🔴 SRE-Level: exactly 2–3  
+#### 💡 SRE-Level: exactly 2–3  
 - Each resource must include:
   - Direct link
   - Clear description of advanced operational insights

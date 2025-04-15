@@ -20,7 +20,7 @@ Review the provided quiz questions and create a detailed answer sheet that:
 For each quiz question in the provided document, provide:
 
 1. **Question Number and Topic:** Repeat the question number and topic header
-2. **Difficulty Level:** Maintain the difficulty level indicated in the question (🟢/🟡/🔴)
+2. **Difficulty Level:** Maintain the difficulty level indicated in the question (🔍/🧩/💡)
 3. **Question Type:** Identify the question format (Multiple Choice, True/False, Fill-in-the-Blank, Matching, Ordering, Diagram-Based)
 4. **Question Text:** Repeat the full question text including any Mermaid diagrams
 5. **Correct Answer:** Clearly identify the correct option(s)
@@ -37,7 +37,7 @@ For each quiz question in the provided document, provide:
 ### Multiple Choice Answer Format
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level] | Multiple Choice
+🔍/🧩/💡 [Difficulty Level] | Multiple Choice
 
 **Question:** [Question text]
 
@@ -67,7 +67,7 @@ For each quiz question in the provided document, provide:
 ### True/False Answer Format
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level] | True/False
+🔍/🧩/💡 [Difficulty Level] | True/False
 
 **Question:** [Statement]
 
@@ -92,7 +92,7 @@ For each quiz question in the provided document, provide:
 ### Fill-in-the-Blank Answer Format
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level] | Fill-in-the-Blank
+🔍/🧩/💡 [Difficulty Level] | Fill-in-the-Blank
 
 **Question:** [Statement with blank]
 
@@ -122,7 +122,7 @@ For each quiz question in the provided document, provide:
 ### Matching Answer Format
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level] | Matching
+🔍/🧩/💡 [Difficulty Level] | Matching
 
 **Question:** [Matching question text]
 
@@ -151,7 +151,7 @@ For each quiz question in the provided document, provide:
 ### Ordering Answer Format
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level] | Ordering
+🔍/🧩/💡 [Difficulty Level] | Ordering
 
 **Question:** [Ordering question text]
 
@@ -176,7 +176,7 @@ For each quiz question in the provided document, provide:
 ### Diagram-Based Answer Format
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level] | Diagram-Based
+🔍/🧩/💡 [Difficulty Level] | Diagram-Based
 
 **Question:** [Include the original question with the Mermaid diagram]
 

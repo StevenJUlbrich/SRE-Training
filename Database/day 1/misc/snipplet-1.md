@@ -47,7 +47,7 @@ Every database system has its own way of describing or inspecting table structur
    ```
    - **Explanation**: SQL Server uses stored procedures like `sp_columns` or `sp_help` to display schema details about a table.  
 
-**Tiered Examples (All 🟢 Beginner)**
+**Tiered Examples (All 🔍 Beginner)**
 
 - If you’re teaching **PostgreSQL** beginners:
   ```sql

@@ -17,7 +17,7 @@ Explicitly merge and enhance these documents into a final comprehensive version 
 ### 📌 **Introduction:**
 - Explicit summary of today's learning topics.
 - Explicit relevance and context to real-world SRE roles.
-- Clearly defined learning objectives (🟢 Beginner, 🟡 Intermediate, 🔴 SRE-Level).
+- Clearly defined learning objectives (🔍 Beginner, 🧩 Intermediate, 💡 SRE-Level).
 
 ### 📚 **Core Concepts Explained:**
 Explicitly include for each concept:
@@ -38,9 +38,9 @@ Explicitly provide for each command:
 | `-l`        | `command -l`   | Explicit description |
 
 #### **Explicit Examples:**
-- 🟢 **Beginner Examples:** Explicit command usage with clearly shown output.
-- 🟡 **Intermediate Examples:** Explicit realistic operational examples with detailed explanations.
-- 🔴 **SRE-Level Examples:** Explicit scenario-driven examples with operational context and troubleshooting steps.
+- 🔍 **Beginner Examples:** Explicit command usage with clearly shown output.
+- 🧩 **Intermediate Examples:** Explicit realistic operational examples with detailed explanations.
+- 💡 **SRE-Level Examples:** Explicit scenario-driven examples with operational context and troubleshooting steps.
 
 #### **Instructional Notes:**
 - 🧠 Beginner Tip explicitly detailed.
@@ -56,9 +56,9 @@ Explicitly detail:
 
 ### 🎯 **Hands-On Exercises:**
 Explicitly structured exercises (minimum 3 per learner tier):
-- 🟢 Beginner explicitly detailed exercises.
-- 🟡 Intermediate explicitly detailed exercises.
-- 🔴 SRE-Level explicitly detailed exercises.
+- 🔍 Beginner explicitly detailed exercises.
+- 🧩 Intermediate explicitly detailed exercises.
+- 💡 SRE-Level explicitly detailed exercises.
 - Explicit reflection included on importance.
 
 ### 📝 **Quiz Questions:**
@@ -95,13 +95,13 @@ Explicitly structured resource recommendations segmented by learner tier (minimu
 - Explicit descriptions clearly detailing each resource's value and relevance.
 - Direct URLs explicitly provided for practical utility.
 
-#### 🟢 Beginner:
+#### 🔍 Beginner:
 - Explicit beginner-friendly descriptions with direct links to foundational tutorials/articles.
 
-#### 🟡 Intermediate:
+#### 🧩 Intermediate:
 - Explicit technical descriptions with direct links to intermediate-level tutorials, detailed guides, or official documentation.
 
-#### 🔴 SRE-Level:
+#### 💡 SRE-Level:
 - Advanced operational descriptions relevant to SRE clearly described, with explicit links to authoritative industry documentation, case studies, and advanced guides.
 
 ---

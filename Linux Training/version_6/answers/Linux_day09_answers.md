@@ -1,6 +1,6 @@
 # Day 9 Answser Sheet
 
-## 🟢 6.1 Beginner Quiz Answers
+## 🔍 6.1 Beginner Quiz Answers
 
 1. **True/False**: `tar` alone compresses files without extra flags.  
    **Answer**: **False**  
@@ -27,7 +27,7 @@
 
 ---
 
-## 🟡 6.2 Intermediate Quiz Answers
+## 🧩 6.2 Intermediate Quiz Answers
 
 1. Which `tar` flag lists the contents of an archive without extracting?  
    **Answer**: `-t`  
@@ -54,7 +54,7 @@
 
 ---
 
-## 🔴 6.3 SRE-Level Quiz Answers
+## 💡 6.3 SRE-Level Quiz Answers
 
 1. Your monitoring system reports CPU spikes each night at 2 AM due to a tar+gzip backup job. Suggest two performance-conscious strategies.  
    **Sample Answers**:  

@@ -4,7 +4,7 @@ This should help you or your learners verify and deepen your understanding of ne
 
 ---
 
-## 🟢 Beginner Level
+## 🔍 Beginner Level
 
 ### 1) (MCQ) “Which command tests basic connectivity?”
 
@@ -62,7 +62,7 @@ d) -p
 
 ---
 
-## 🟡 Intermediate Level
+## 🧩 Intermediate Level
 
 ### 1) (MCQ) “Which command logs you into a remote host via the default SSH port?”
 
@@ -118,7 +118,7 @@ d) Neither
 
 ---
 
-## 🔴 SRE-Level
+## 💡 SRE-Level
 
 ### 1) (Scenario) “You suspect port 8080 is used by a rogue process. How do you confirm?”
 

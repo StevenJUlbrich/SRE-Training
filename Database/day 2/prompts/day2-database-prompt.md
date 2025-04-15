@@ -35,7 +35,7 @@ Beginners to Intermediate Product Support personnel (ages 23-58, with 2-20 years
 
 ### 📚 Core Concepts
 For each key concept, include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
+* 🔍 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
 * 🖼️ **Visual Representation:** Clear Mermaid diagram illustrating the concept structure and workflow
 * 🔬 **Technical Explanation:** Precise definition and mechanics with proper terminology
 * 💼 **Support/SRE Application:** Direct workplace relevance with specific troubleshooting scenarios
@@ -172,7 +172,7 @@ Include a comprehensive section on:
 
 ## ✅ Formatting Requirements
 
-* Use emojis consistently to indicate different sections and concept tiers (🟢, 🟡, 🔴)
+* Use emojis consistently to indicate different sections and concept tiers (🔍, 🧩, 💡)
 * Create clear, properly formatted Mermaid diagrams for visual representations
 * Ensure all tables have consistent column widths and properly aligned headers
 * Use consistent formatting for code blocks, including syntax highlighting
@@ -312,7 +312,7 @@ Remember to maintain the "brick by brick" learning approach, ensuring each conce
 ## Invocations Statement
 Generate a comprehensive Day 2 database training module focused on Data Manipulation Language (DML) with Oracle as the primary focus and comparisons to PostgreSQL and SQL Server. Follow the "brick by brick" learning approach, building on Day 1's relational fundamentals and progressing through INSERT, UPDATE, DELETE operations and transaction control. 
 
-Include detailed Oracle-specific content including DML syntax variations, transaction management, bulk operations, and recovery strategies. Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🟢), intermediate (🟡), and SRE (🔴) levels. 
+Include detailed Oracle-specific content including DML syntax variations, transaction management, bulk operations, and recovery strategies. Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🔍), intermediate (🧩), and SRE (💡) levels. 
 
 Create visually engaging Mermaid diagrams following the formatting guidelines to illustrate key concepts like DML operations, transaction flows, lock interactions, error handling, and dictionary view relationships. Include realistic troubleshooting scenarios with visual flowcharts and sequence diagrams.
 

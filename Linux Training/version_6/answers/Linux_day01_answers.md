@@ -4,7 +4,7 @@ Below is an **answer sheet** for each quiz question, along with a brief explanat
 
 ---
 
-## 🟢 Beginner (Tier 1)
+## 🔍 Beginner (Tier 1)
 
 ### 1. Which command shows your current directory?
 
@@ -29,7 +29,7 @@ Below is an **answer sheet** for each quiz question, along with a brief explanat
 
 ---
 
-## 🟡 Intermediate (Tier 2)
+## 🧩 Intermediate (Tier 2)
 
 ### 4. To sort files by **modification time** (newest first), which command is correct?
 
@@ -54,7 +54,7 @@ Below is an **answer sheet** for each quiz question, along with a brief explanat
 
 ---
 
-## 🔴 SRE-Level (Tier 3)
+## 💡 SRE-Level (Tier 3)
 
 ### 7. During an incident, which location do you **most** likely check first to view recent error logs?
 

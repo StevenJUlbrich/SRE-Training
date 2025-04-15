@@ -20,9 +20,9 @@ Your task is to merge and enhance these into a comprehensive training module tha
 - Clear summary of learning topics with explicit SRE relevance
 - Real-world SRE context explaining why this knowledge matters in production environments
 - Defined learning objectives with tiered progression markers:
-  - 🟢 Beginner objectives (minimum 3)
-  - 🟡 Intermediate objectives (minimum 3)
-  - 🔴 SRE-Level objectives (minimum 3)
+  - 🔍 Beginner objectives (minimum 3)
+  - 🧩 Intermediate objectives (minimum 3)
+  - 💡 SRE-Level objectives (minimum 3)
 - Brief connection to previous modules and future learning path
 
 ### 📚 **Core Concepts:**
@@ -48,7 +48,7 @@ For each concept include:
 
 #### **Examples with Progressive Complexity:**
 
-- 🟢 **Beginner Examples:** (minimum 2 examples)
+- 🔍 **Beginner Examples:** (minimum 2 examples)
 ```bash
 # Example 1: Basic usage with clear purpose
 $ command -a
@@ -61,7 +61,7 @@ $ command -b
 Expected output with explanation of what's happening
 ```
 
-- 🟡 **Intermediate Examples:** (minimum 2 examples)
+- 🧩 **Intermediate Examples:** (minimum 2 examples)
 ```bash
 # Example 1: Combined options for typical operational tasks
 $ command -a -l /path/to/relevant/file
@@ -76,7 +76,7 @@ Realistic output demonstrating practical workflow
 # Explanation of when this approach is valuable
 ```
 
-- 🔴 **SRE-Level Examples:** (minimum 2 examples)
+- 💡 **SRE-Level Examples:** (minimum 2 examples)
 ```bash
 # Real-world scenario: System troubleshooting
 $ command --advanced-option $(command2 | awk '{print $3}') 2>/dev/null
@@ -120,21 +120,21 @@ Realistic output showing parallel execution results
 
 ### 🎯 **Hands-On Exercises:**
 
-- 🟢 **Beginner Exercises:** (exactly 3 exercises)
+- 🔍 **Beginner Exercises:** (exactly 3 exercises)
   - Clearly stated objective
   - Step-by-step instructions with exact commands
   - Expected outcomes
   - Verification methods
   - Reflection questions connecting to SRE principles
 
-- 🟡 **Intermediate Exercises:** (exactly 3 exercises)
+- 🧩 **Intermediate Exercises:** (exactly 3 exercises)
   - Scenario-based challenge with specific requirements
   - Partial guidance with room for problem-solving
   - Multiple approaches discussed
   - Evaluation criteria for solution quality
   - Connection to operational excellence
 
-- 🔴 **SRE-Level Exercises:** (exactly 3 exercises)
+- 💡 **SRE-Level Exercises:** (exactly 3 exercises)
   - Complex scenario mimicking real production issues
   - Minimal guidance to promote independent problem-solving
   - Performance or reliability requirements
@@ -143,19 +143,19 @@ Realistic output showing parallel execution results
 
 ### 📝 **Quiz Questions:**
 
-- 🟢 **Beginner Questions:** (exactly 3-4 questions)
+- 🔍 **Beginner Questions:** (exactly 3-4 questions)
   - Multiple-choice questions testing basic understanding
   - Command syntax recognition
   - Basic troubleshooting scenarios
   - Fundamental concept comprehension
 
-- 🟡 **Intermediate Questions:** (exactly 3-4 questions)
+- 🧩 **Intermediate Questions:** (exactly 3-4 questions)
   - Scenario-based questions requiring command combinations
   - Output interpretation challenges
   - System interaction understanding
   - Error diagnosis questions
 
-- 🔴 **SRE-Level Questions:** (exactly 3-4 questions)
+- 💡 **SRE-Level Questions:** (exactly 3-4 questions)
   - Complex incident simulation questions
   - Performance optimization scenarios
   - Security and compliance considerations
@@ -180,17 +180,17 @@ Realistic output showing parallel execution results
 
 Three practical FAQs per skill level (exactly 3 per level):
 
-- 🟢 **Beginner FAQs:** (exactly 3)
+- 🔍 **Beginner FAQs:** (exactly 3)
   - Question addressing common beginner confusion
   - Clear, actionable answer
   - Practical example demonstrating the solution
 
-- 🟡 **Intermediate FAQs:** (exactly 3)
+- 🧩 **Intermediate FAQs:** (exactly 3)
   - Question addressing operational challenges
   - Detailed technical explanation
   - Example showing real-world application
 
-- 🔴 **SRE-Level FAQs:** (exactly 3)
+- 💡 **SRE-Level FAQs:** (exactly 3)
   - Question addressing complex reliability scenarios
   - Comprehensive answer with multiple considerations
   - Example connecting to broader SRE practices
@@ -230,15 +230,15 @@ Three practical FAQs per skill level (exactly 3 per level):
 
 ### 📚 **Further Learning Resources:**
 
-#### 🟢 **Beginner Resources:** (exactly 2-3)
+#### 🔍 **Beginner Resources:** (exactly 2-3)
 - [Resource Name](specific-url) - Specific description of content and value
 - [Resource Name](specific-url) - How this helps build foundational knowledge
 
-#### 🟡 **Intermediate Resources:** (exactly 2-3)
+#### 🧩 **Intermediate Resources:** (exactly 2-3)
 - [Resource Name](specific-url) - Technical depth provided and practical applications
 - [Resource Name](specific-url) - How this connects to operational skills
 
-#### 🔴 **SRE-Level Resources:** (exactly 2-3)
+#### 💡 **SRE-Level Resources:** (exactly 2-3)
 - [Resource Name](specific-url) - Advanced operational insights and industry practices
 - [Resource Name](specific-url) - How this resource elevates reliability engineering skills
 

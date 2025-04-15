@@ -84,7 +84,7 @@ Below are the five core networking commands covered, each following the v15.1 st
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Check if a host is reachable on the internet
@@ -99,7 +99,7 @@ PING google.com (142.250.72.14): 56 data bytes
 rtt min/avg/max = 24.3/24.7/25.1 ms
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Quickly check if multiple internal servers are alive
@@ -114,7 +114,7 @@ PING db-server.internal (10.0.0.15) 56(84) bytes of data.
 # Explanation: the -w sets a deadline, so we won't hang if unreachable.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Mass-check critical hosts from a script
@@ -165,7 +165,7 @@ $ grep -H '0% packet loss' /tmp/*.ping.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Display basic IP information
@@ -177,7 +177,7 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 # Explanation: see IP, netmask, and interface status.
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Using ip to check routes and address for better detail
@@ -194,7 +194,7 @@ default via 10.0.0.1 dev eth0
 # Explicit Context: ip command is modern, more script-friendly.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Switch default route to a backup gateway for maintenance
@@ -246,7 +246,7 @@ default via 10.0.0.254 dev eth0 metric 100
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Check all listening TCP sockets
@@ -258,7 +258,7 @@ TCP   0      0    127.0.0.1:25            0.0.0.0:*               LISTEN
 ...
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Using ss for better performance and to see processes
@@ -270,7 +270,7 @@ LISTEN      0       100     127.0.0.1:25       *:*                 users:( ("pos
 # Explanation: we see sshd on port 22, postfix on port 25.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Filter established connections to a specific microservice port
@@ -316,7 +316,7 @@ ESTAB  0 0 10.0.0.10:8080  10.0.0.50:58342  users:( ("java",pid=1122,fd=69) )
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Basic remote login
@@ -327,7 +327,7 @@ user@linux-server's password:
 # Explanation: you’re now remotely controlling the server.
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Using a specific key and custom port to connect
@@ -338,7 +338,7 @@ Last login: Wed Mar 10 14:33:21 2025 from 10.0.0.50
 # Explicit Context: often used for staging or secured environments.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Advanced port forwarding scenario
@@ -385,7 +385,7 @@ $ ssh -L 3306:db-internal:3306 -N -f admin@jumphost
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Copy a single file to remote server
@@ -395,7 +395,7 @@ notes.txt                                    100%   21KB  2.0MB/s   00:00
 # Explanation: logs a progress bar, finishes quickly.
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Copy a directory from a remote server, preserving timestamps
@@ -406,7 +406,7 @@ logs/access.log                              100%  90KB   5.2MB/s   00:00
 # Explicit Context: analyzing logs locally helps deeper troubleshooting.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # In a script, copy backups from multiple servers in parallel
@@ -686,7 +686,7 @@ Below are three realistic scenarios with symptoms, causes, diagnosis, and resolu
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner
+### 🔍 Beginner
 
 1. [Linux Survival – Networking Basics](https://linuxsurvival.com/networking/)
    - Explains core commands (ping, ifconfig) in a novice-friendly manner.
@@ -695,7 +695,7 @@ Below are three realistic scenarios with symptoms, causes, diagnosis, and resolu
    - Clear introductions on IP addresses, netmasks.
    - Ideal for stepping beyond purely local setups.
 
-### 🟡 Intermediate
+### 🧩 Intermediate
 
 1. [Linux IP Command Reference](https://wiki.linuxfoundation.org/networking/ip_command)
    - Deep dive into ip usage.
@@ -707,7 +707,7 @@ Below are three realistic scenarios with symptoms, causes, diagnosis, and resolu
    - Explains differences in performance.
    - Helps you decide which tool suits your environment.
 
-### 🔴 SRE-Level
+### 💡 SRE-Level
 
 1. [High Performance Browser Networking](https://hpbn.co/)
    - Focus on advanced topics like latency, TCP optimization.

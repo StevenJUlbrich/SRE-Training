@@ -42,7 +42,7 @@ Every command should explicitly include:
 | `-a`        | `command -a`   | Explicit description | ```bash $ command -a Explicit terminal output ``` |
 
 - **Tiered Explicit Examples**
-  - 🟢 Beginner, 🟡 Intermediate, 🔴 SRE-Level examples explicitly detailed.
+  - 🔍 Beginner, 🧩 Intermediate, 💡 SRE-Level examples explicitly detailed.
 
 - **Instructional Notes**
   - Beginner Tips, SRE Insights, and Common Pitfalls.

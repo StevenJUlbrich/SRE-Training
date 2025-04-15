@@ -25,7 +25,7 @@ Your synthesis should:
 
 ### Strengths to Preserve from Document 3 (v5)
 - Clear visual organization with emojis and consistent formatting
-- Explicit tiered examples with skill-level markers (🟢, 🟡, 🔴)
+- Explicit tiered examples with skill-level markers (🔍, 🧩, 💡)
 - Tabular presentation of command syntax
 - Direct connections to SRE applications for each concept
 - Consistent instructional notes (tips, insights, pitfalls)
@@ -85,7 +85,7 @@ Use this exact format from Document 3:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```bash
 # Example: [clear purpose statement]
 $ [command with basic options]
@@ -93,7 +93,7 @@ $ [command with basic options]
 # [Optional brief explanation if needed]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```bash
 # Example: [specific operational context]
 $ [command with more complex options]
@@ -101,7 +101,7 @@ $ [command with more complex options]
 # Explicit context: [operational significance explanation]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```bash
 # Example: [realistic SRE scenario like troubleshooting/automation]
 $ [complex command possibly combining with other tools]
@@ -173,17 +173,17 @@ Combine the best FAQs from both documents:
 ### 📚 Further Learning Resources
 Include resources from both documents, organized by skill level:
 
-#### 🟢 Beginner: exactly 2–3  
+#### 🔍 Beginner: exactly 2–3  
 - Direct links
 - Clear descriptions
 - Relevance to beginner Linux users
 
-#### 🟡 Intermediate: exactly 2–3  
+#### 🧩 Intermediate: exactly 2–3  
 - Direct links
 - Clear descriptions
 - Connection to operational skills
 
-#### 🔴 SRE-Level: exactly 2–3  
+#### 💡 SRE-Level: exactly 2–3  
 - Direct links
 - Clear descriptions
 - Elevation of reliability engineering skills

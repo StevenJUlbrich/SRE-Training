@@ -4,7 +4,7 @@ Below is a **separate answer key** for the Day 1 quiz. Each answer includes an
 
 ## **Answer Sheet and Explanations**
 
-### 🟢 Beginner (Tier 1)
+### 🔍 Beginner (Tier 1)
 
 1. **Question**: Which command shows your current working directory?  
    **Options**:  
@@ -38,7 +38,7 @@ Below is a **separate answer key** for the Day 1 quiz. Each answer includes an
 
 ---
 
-### 🟡 Intermediate (Tier 2)
+### 🧩 Intermediate (Tier 2)
 
 4. **Question**: To **reverse** the order of a long listing, you would use:  
    **Options**:  
@@ -72,7 +72,7 @@ Below is a **separate answer key** for the Day 1 quiz. Each answer includes an
 
 ---
 
-### 🔴 SRE-Level (Tier 3)
+### 💡 SRE-Level (Tier 3)
 
 7. **Question**: During an outage, you need to find logs mentioning “timeout.” What combination of commands might you use?  
    **Options**:  

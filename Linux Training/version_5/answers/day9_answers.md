@@ -2,7 +2,7 @@
 
 ---
 
-## 🟢 Beginner Quiz Answers
+## 🔍 Beginner Quiz Answers
 
 ### 1. **Question**  
 
@@ -76,7 +76,7 @@ Which `apt` command updates the list of available packages?
 
 ---
 
-## 🟡 Intermediate Quiz Answers
+## 🧩 Intermediate Quiz Answers
 
 ### 1. **Question**  
 
@@ -154,7 +154,7 @@ How do you remove dependencies no longer required by installed packages on Ubunt
 
 ---
 
-## 🔴 SRE-Level Quiz Answers
+## 💡 SRE-Level Quiz Answers
 
 ### 1. **Question**  
 

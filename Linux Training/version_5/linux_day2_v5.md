@@ -95,7 +95,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Create an empty file named 'demo.log'
@@ -106,7 +106,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   -rw-r--r-- 1 user user 0 Mar 29 09:00 demo.log
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Update only the access time of 'demo.log'
@@ -117,7 +117,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   # Output will show a new 'Access' timestamp but unchanged 'Modify' timestamp.
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Simulate an older timestamp for a log rotation test
@@ -157,7 +157,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Create a single directory named 'projects'
@@ -168,7 +168,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   drwxr-xr-x 2 user user 4096 Mar 29 09:10 projects
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Create nested directories for a web application structure
@@ -180,7 +180,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   └── logs
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Create a locked-down directory for secret keys
@@ -220,7 +220,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Display a short text file
@@ -229,7 +229,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   End of file.
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # View file with line numbers
@@ -239,7 +239,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
        3  [ERROR] Database connection failed
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Combine multiple small logs into one
@@ -280,7 +280,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Read a system log with 'less'
@@ -288,7 +288,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   # Use Up/Down arrows or PageUp/PageDown to scroll, 'q' to quit
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # View with line numbers and no wrap
@@ -296,7 +296,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   # Helps to keep lines intact and see exact line references
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Combine multi-log follow:
@@ -337,7 +337,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Display contents page by page
@@ -345,7 +345,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   --More-- (Press space to continue, q to quit)
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Use -d for easier navigation instructions
@@ -353,7 +353,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   --More-- (Press space to continue, 'q' to quit)
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Typically, you'd use 'less' for advanced navigation, 
@@ -393,7 +393,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # View the first 10 lines of /etc/passwd
@@ -402,14 +402,14 @@ Below are **11** commands essential to file manipulation, each with a consistent
   ...
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Check the first 25 lines of a large log
   $ head -n 25 /var/log/messages
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Quick check of the first part of a compressed log (with pipe):
@@ -449,7 +449,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Show last 10 lines of 'app.log'
@@ -459,7 +459,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   ...
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Show last 50 lines in a log
@@ -467,7 +467,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   # Often used to see recent authentication attempts
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Live follow a log that rotates daily
@@ -508,7 +508,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Copy 'file1.txt' to 'file2.txt'
@@ -519,7 +519,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   file1.txt  file2.txt
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Copy a directory recursively while preserving ownership/timestamps
@@ -528,7 +528,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   # This ensures files in /var/www have same ownership in /home/user/www_backup
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Archive production config while preserving everything including symlinks
@@ -569,7 +569,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Rename 'test.txt' to 'report.txt'
@@ -580,7 +580,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   report.txt
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Move multiple log files to an archive directory with verbose output
@@ -589,7 +589,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   /var/log/app/app2.log -> /var/log/app/archive/app2.log
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Rename a config while creating a backup of the destination if it already exists
@@ -630,7 +630,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Remove a single file
@@ -641,7 +641,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   ls: cannot access 'old_file.txt': No such file or directory
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Remove a directory and its contents, with interactive prompts
@@ -651,7 +651,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   ...
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Forcefully remove large, old logs in a script with verbose output
@@ -691,14 +691,14 @@ Below are **11** commands essential to file manipulation, each with a consistent
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Remove an empty directory 'temp'
   $ rmdir temp
   ```
   
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Remove nested empty dirs
@@ -706,7 +706,7 @@ Below are **11** commands essential to file manipulation, each with a consistent
   # Removes '2025', then 'archive', then 'logs' if each is empty
   ```
   
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # In an automated cleanup script:
@@ -1020,7 +1020,7 @@ Result: **Within minutes**, you isolated the misconfiguration causing 502 respon
 
 ## **11. Further Learning Resources**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **The Linux Command Line by William Shotts**  
    - [https://linuxcommand.org/tlcl.php](https://linuxcommand.org/tlcl.php)  
@@ -1030,7 +1030,7 @@ Result: **Within minutes**, you isolated the misconfiguration causing 502 respon
    - [https://ubuntu.com/tutorials/command-line-for-beginners](https://ubuntu.com/tutorials/command-line-for-beginners)  
    - *Teaches* simple navigation, file creation, and editing. *How it helps* build confidence in basic CLI usage.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **Linux Fundamentals: Pluralsight Course**  
    - [https://www.pluralsight.com/courses/linux-fundamentals](https://www.pluralsight.com/courses/linux-fundamentals)  
@@ -1040,7 +1040,7 @@ Result: **Within minutes**, you isolated the misconfiguration causing 502 respon
    - [https://wiki.archlinux.org/title/Core_utilities](https://wiki.archlinux.org/title/Core_utilities)  
    - *Teaches* in-depth usage of essential commands. *How it connects* by providing deeper details on flags and behaviors in real-world usage.
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **Google SRE Workbook (Chapter: Practical Alerting)**  
    - [https://sre.google/workbook/chapters/alerting/](https://sre.google/workbook/chapters/alerting/)  

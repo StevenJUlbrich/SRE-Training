@@ -4,7 +4,7 @@ Each correct answer includes an explanation of why it is correct and why the oth
 
 ---
 
-## 🟢 Beginner Quiz Answers
+## 🔍 Beginner Quiz Answers
 
 ### 1. **Which file primarily contains encrypted passwords?**  
 
@@ -57,7 +57,7 @@ Each correct answer includes an explanation of why it is correct and why the oth
 
 ---
 
-## 🟡 Intermediate Quiz Answers
+## 🧩 Intermediate Quiz Answers
 
 ### 1. **Scenario:** You created a user `dev2` with `sudo useradd dev2` but forgot `-m`. How do you fix it so `dev2` gets a home directory under `/home/dev2`?
 
@@ -114,7 +114,7 @@ Each correct answer includes an explanation of why it is correct and why the oth
 
 ---
 
-## 🔴 SRE-Level Quiz Answers
+## 💡 SRE-Level Quiz Answers
 
 ### 1. **Scenario:** You suspect a compromised service account. Which two immediate steps do you take using user management commands?
 

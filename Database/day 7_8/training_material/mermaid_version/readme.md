@@ -1,5 +1,2 @@
-This folder contains the original version ('day-7_8_training_material.md') of a Markdown file that included Mermaid diagrams.
-
-The file was moved here because Mermaid diagrams may not render correctly in all Markdown viewers or platforms (e.g., some versions of Bitbucket, Confluence, etc.).
-
-A converted version of the file, with Mermaid diagrams rendered as images ('PNG'), should be located in the parent directory ('D:\Development_Personal\SRE-Training\Database\day 7_8\training_material') with the name 'day-7_8_training_material-png.md'.
+This folder contains the original version ('day-8-training-material-v1.md') ...
+A converted version ... name 'day-8-training-material-v1-png.md'.

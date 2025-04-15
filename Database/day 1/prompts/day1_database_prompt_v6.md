@@ -35,7 +35,7 @@ Beginners to Intermediate Product Support personnel (ages 23-58, with 2-20 years
 
 ### 📚 Core Concepts
 For each key concept, include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
+* 🔍 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
 * 🖼️ **Visual Representation:** Clear Mermaid diagram illustrating the concept structure and relationships
 * 🔬 **Technical Explanation:** Precise definition and mechanics with proper terminology
 * 💼 **Support/SRE Application:** Direct workplace relevance with specific troubleshooting scenarios
@@ -162,7 +162,7 @@ Include a comprehensive section on:
 
 ## ✅ Formatting Requirements
 
-* Use emojis consistently to indicate different sections and concept tiers (🟢, 🟡, 🔴)
+* Use emojis consistently to indicate different sections and concept tiers (🔍, 🧩, 💡)
 * Create clear, properly formatted Mermaid diagrams for visual representations
 * Ensure all tables have consistent column widths and properly aligned headers
 * Use consistent formatting for code blocks, including syntax highlighting
@@ -287,4 +287,4 @@ Remember to maintain the "brick by brick" learning approach, ensuring each conce
 ## Invocations Statement
 Generate a comprehensive Day 1 database training module focused primarily on Oracle databases with comparisons to PostgreSQL and SQL Server. Follow the "brick by brick" learning approach, starting with fundamental relational database concepts and progressing to SRE-level insights. Include detailed Oracle-specific content including SQL dialect comparison tables, Oracle tools and techniques, execution plan analysis, and recovery strategies. 
 
-Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🟢), intermediate (🟡), and SRE (🔴) levels. Include realistic troubleshooting scenarios with visual flowcharts and sequence diagrams. Ensure all sections have thorough Oracle-specific details while maintaining accessibility for learners with diverse experience levels (ages 23-58, experience 2-20 years).S
+Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🔍), intermediate (🧩), and SRE (💡) levels. Include realistic troubleshooting scenarios with visual flowcharts and sequence diagrams. Ensure all sections have thorough Oracle-specific details while maintaining accessibility for learners with diverse experience levels (ages 23-58, experience 2-20 years).S

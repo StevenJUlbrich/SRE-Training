@@ -28,17 +28,17 @@ Mastering these skills will significantly elevate your effectiveness and efficie
 
 By the end of Day 4, you will explicitly achieve the following competencies:
 
-- 🟢 **Beginner:**
+- 🔍 **Beginner:**
   - Clearly understand and execute basic pattern searches in text files using `grep`.
   - Locate files and directories based on name and type criteria using the `find` command.
   - Understand basic concepts of command chaining using pipes (`|`) and input/output redirection (`>`, `>>`, `<`).
 
-- 🟡 **Intermediate:**
+- 🧩 **Intermediate:**
   - Efficiently combine multiple Linux commands into complex data-processing pipelines using pipes.
   - Use `grep` and `find` effectively in common operational tasks, such as log analysis and identifying configuration discrepancies.
   - Directly control command input and output to facilitate automation and scripting of routine tasks.
 
-- 🔴 **SRE-Level:**
+- 💡 **SRE-Level:**
   - Apply advanced text searching and file location techniques explicitly in real-world production troubleshooting scenarios.
   - Quickly build and use sophisticated command pipelines for rapid diagnosis and remediation of production incidents.
   - Explicitly leverage redirection and pipes to automate workflows and system maintenance procedures critical to maintaining system reliability.
@@ -53,15 +53,15 @@ Continuing incrementally, let's now explicitly develop the **Core Concepts** sec
 
 ### **1. grep – Pattern Searching in Files**
 
-#### 🟢 **Beginner Analogy:**
+#### 🔍 **Beginner Analogy:**
 
 Think of `grep` as the "Find" function in your document editor. It helps you quickly find words or phrases within large files without manually scanning through them.
 
-#### 🟡 **Intermediate Technical Explanation:**
+#### 🧩 **Intermediate Technical Explanation:**
 
 `grep`, which stands for "Global Regular Expression Print," searches text within files using defined patterns (strings or regular expressions). It efficiently scans through logs, configuration files, or any text-based files, providing matched lines instantly. Common uses include finding errors in logs or extracting configuration values.
 
-#### 🔴 **Advanced Operational Insights (SRE Context):**
+#### 💡 **Advanced Operational Insights (SRE Context):**
 
 For SREs, `grep` is indispensable in real-time incident response for swiftly extracting meaningful information from vast logs. It supports advanced regex patterns and options to contextually analyze incidents, identify root causes, and filter out irrelevant log noise.
 
@@ -69,15 +69,15 @@ For SREs, `grep` is indispensable in real-time incident response for swiftly ext
 
 ### **2. find – Locating Files and Directories**
 
-#### 🟢 **Beginner Analogy:**
+#### 🔍 **Beginner Analogy:**
 
 Imagine `find` as your personal file locator, similar to the search bar on your computer. It quickly locates files and directories based on simple criteria such as names or types.
 
-#### 🟡 **Intermediate Technical Explanation:**
+#### 🧩 **Intermediate Technical Explanation:**
 
 The `find` command searches the Linux filesystem based on various criteria like name patterns, file type, size, ownership, permissions, and modification dates. It is highly customizable, providing flexibility for precise file management tasks and filesystem maintenance.
 
-#### 🔴 **Advanced Operational Insights (SRE Context):**
+#### 💡 **Advanced Operational Insights (SRE Context):**
 
 In SRE roles, `find` is critically used to quickly locate files during incident investigations, security audits, and storage management. Combining `find` with other commands (like `grep` or `exec`) can automate complex tasks such as finding and handling large files, identifying unauthorized file changes, or automating cleanup operations.
 
@@ -85,15 +85,15 @@ In SRE roles, `find` is critically used to quickly locate files during incident 
 
 ### **3. Pipes (`|`) – Command Chaining**
 
-#### 🟢 **Beginner Analogy:**
+#### 🔍 **Beginner Analogy:**
 
 Think of pipes (`|`) like passing a baton in a relay race; the output from one runner (command) directly becomes the input for the next runner (command), smoothly chaining commands together.
 
-#### 🟡 **Intermediate Technical Explanation:**
+#### 🧩 **Intermediate Technical Explanation:**
 
 Pipes (`|`) enable the seamless chaining of Linux commands, where the output from one command automatically serves as input for another. This approach allows the creation of streamlined workflows, significantly enhancing productivity by reducing manual intervention and intermediate storage needs.
 
-#### 🔴 **Advanced Operational Insights (SRE Context):**
+#### 💡 **Advanced Operational Insights (SRE Context):**
 
 For SREs, pipes empower the building of sophisticated analysis pipelines crucial in incident management. They enable instant data filtering, sorting, aggregation, and transformation to swiftly diagnose problems, monitor system health, and generate insightful reports, dramatically reducing response times during critical incidents.
 
@@ -101,15 +101,15 @@ For SREs, pipes empower the building of sophisticated analysis pipelines crucial
 
 ### **4. Redirection (`>`, `>>`, `<`) – Managing Input and Output**
 
-#### 🟢 **Beginner Analogy:**
+#### 🔍 **Beginner Analogy:**
 
 Redirection operators (`>`, `>>`, `<`) act like traffic signals directing where data should flow. They tell commands to either send output to a file, add to an existing file, or take input from a file.
 
-#### 🟡 **Intermediate Technical Explanation:**
+#### 🧩 **Intermediate Technical Explanation:**
 
 Redirection controls command inputs and outputs, allowing commands to read from files or write outputs directly to files instead of the screen. The `>` operator overwrites file content, `>>` appends data to existing content, and `<` redirects file content as input for commands, enhancing data handling flexibility.
 
-#### 🔴 **Advanced Operational Insights (SRE Context):**
+#### 💡 **Advanced Operational Insights (SRE Context):**
 
 In operational environments, redirection is essential for creating logs, backups, configuration snapshots, and automated script interactions. SREs leverage redirection for logging outputs from scripts or commands during maintenance windows, ensuring transparency and audibility during automated tasks and system troubleshooting.
 
@@ -141,7 +141,7 @@ The `grep` command is explicitly used for searching text patterns within files. 
 
 #### **Explicit Examples:**
 
-##### 🟢 **Beginner Examples:**
+##### 🔍 **Beginner Examples:**
 
 ```bash
 # Example 1: Simple pattern search
@@ -157,7 +157,7 @@ WARNING: Disk almost full
 warning: CPU usage high
 ```
 
-##### 🟡 **Intermediate Examples:**
+##### 🧩 **Intermediate Examples:**
 
 ```bash
 # Example 1: Recursive search with line numbers
@@ -176,7 +176,7 @@ Retrying database connection
 Database connection successful
 ```
 
-##### 🔴 **SRE-Level Examples:**
+##### 💡 **SRE-Level Examples:**
 
 ```bash
 # Scenario-driven example: Identifying frequent application errors
@@ -237,7 +237,7 @@ The `find` command explicitly locates files and directories within the Linux fil
 
 #### **Explicit Examples:**
 
-##### 🟢 **Beginner Examples:**
+##### 🔍 **Beginner Examples:**
 
 ```bash
 # Example 1: Simple filename search
@@ -252,7 +252,7 @@ $ find ~/ -type d -name 'Projects'
 /home/user/Documents/Projects
 ```
 
-##### 🟡 **Intermediate Examples:**
+##### 🧩 **Intermediate Examples:**
 
 ```bash
 # Example 1: Find recently modified files
@@ -268,7 +268,7 @@ $ find /var/log -type f -size +50M -exec ls -lh {} \;
 -rw-r--r-- 1 root root 250M Mar 28 13:01 /var/log/messages
 ```
 
-##### 🔴 **SRE-Level Examples:**
+##### 💡 **SRE-Level Examples:**
 
 ```bash
 # Scenario-driven example: Identifying files with insecure permissions
@@ -315,7 +315,7 @@ Pipes do not use flags
 
 #### **Explicit Examples:**
 
-##### 🟢 **Beginner Examples:**
+##### 🔍 **Beginner Examples:**
 
 ```bash
 # Example 1: List files and filter by name
@@ -336,7 +336,7 @@ _Explicit Explanation_: Lists all files, then explicitly counts the total number
 
 ---
 
-##### 🟡 **Intermediate Examples:**
+##### 🧩 **Intermediate Examples:**
 
 ```bash
 # Example 1: Find running processes related to 'nginx'
@@ -359,7 +359,7 @@ _Explicit Explanation_: Calculates the size of directories, sorts them explicitl
 
 ---
 
-##### 🔴 **SRE-Level Examples:**
+##### 💡 **SRE-Level Examples:**
 
 ```bash
 # Scenario-driven example: Real-time filtering of critical logs during incidents
@@ -418,7 +418,7 @@ Redirection operators (`>`, `>>`, `<`) explicitly control the input and output s
 
 #### **Explicit Examples:**
 
-##### 🟢 **Beginner Examples:**
+##### 🔍 **Beginner Examples:**
 
 ```bash
 # Example 1: Save a file list to a file
@@ -436,7 +436,7 @@ _Explicit Explanation_: Adds the text "System rebooted" explicitly at the end of
 
 ---
 
-##### 🟡 **Intermediate Examples:**
+##### 🧩 **Intermediate Examples:**
 
 ```bash
 # Example 1: Capture errors into a separate log file
@@ -454,7 +454,7 @@ _Explicit Explanation_: Attempts to ping a non-existing host, explicitly capturi
 
 ---
 
-##### 🔴 **SRE-Level Examples:**
+##### 💡 **SRE-Level Examples:**
 
 ```bash
 # Scenario-driven example: Automate logging of system status during incidents
@@ -562,7 +562,7 @@ Proceeding incrementally, I'll now explicitly generate the **🎯 Hands-On Exerc
 
 ## 🎯 **Hands-On Exercises**
 
-### 🟢 **Beginner Exercises:**
+### 🔍 **Beginner Exercises:**
 
 **Exercise 1: Basic Text Searching**
 
@@ -592,7 +592,7 @@ Proceeding incrementally, I'll now explicitly generate the **🎯 Hands-On Exerc
 
 ---
 
-### 🟡 **Intermediate Exercises:**
+### 🧩 **Intermediate Exercises:**
 
 **Exercise 1: Contextual Log Analysis**
 
@@ -622,7 +622,7 @@ Proceeding incrementally, I'll now explicitly generate the **🎯 Hands-On Exerc
 
 ---
 
-### 🔴 **SRE-Level Exercises:**
+### 💡 **SRE-Level Exercises:**
 
 **Exercise 1: Real-Time Incident Log Monitoring**
 
@@ -656,7 +656,7 @@ Proceeding incrementally, I'll now explicitly generate the **📝 Quiz Questions
 
 ## 📝 **Quiz Questions**
 
-### 🟢 **Beginner Tier Questions:**
+### 🔍 **Beginner Tier Questions:**
 
 **Question 1 (Multiple-Choice):**  
 What is the correct command to search the file `log.txt` for the word `"error"`, ignoring case sensitivity?  
@@ -683,7 +683,7 @@ You explicitly redirected output using `ls > files.txt`. What happens if `files.
 
 ---
 
-### 🟡 **Intermediate Tier Questions:**
+### 🧩 **Intermediate Tier Questions:**
 
 **Question 1 (Multiple-Choice):**  
 Which command explicitly finds files modified in the last 24 hours in `/var`?  
@@ -710,7 +710,7 @@ du -sh /var/* | sort -hr | _______
 
 ---
 
-### 🔴 **SRE-Level Tier Questions:**
+### 💡 **SRE-Level Tier Questions:**
 
 **Question 1 (Multiple-Choice):**  
 During a critical incident, you need real-time monitoring of the system logs explicitly filtering critical errors. Which command explicitly achieves this without buffering issues?  
@@ -835,7 +835,7 @@ Proceeding incrementally, we'll now explicitly generate the **❓ FAQ (Frequentl
 
 ## ❓ **Frequently Asked Questions (FAQ)**
 
-### 🟢 **Beginner FAQs**
+### 🔍 **Beginner FAQs**
 
 **Q1: Why does `grep` sometimes return no results even if the pattern exists?**  
 
@@ -878,7 +878,7 @@ echo "Additional log entry" >> log.txt   # Explicit append
 
 ---
 
-### 🟡 **Intermediate FAQs**
+### 🧩 **Intermediate FAQs**
 
 **Q1: How do I use `grep` to exclude certain matches from results?**  
 
@@ -920,7 +920,7 @@ cat logfile.txt | grep "ERROR" | sort
 
 ---
 
-### 🔴 **SRE-Level FAQs**
+### 💡 **SRE-Level FAQs**
 
 **Q1: How can I efficiently monitor real-time logs for specific patterns without buffering delays?**  
 
@@ -1122,7 +1122,7 @@ Proceeding incrementally, I'll now explicitly generate the final structured sect
 
 ## 📚 **Further Learning Resources**
 
-### 🟢 **Beginner Resources:**
+### 🔍 **Beginner Resources:**
 
 **1. [GREP Command Tutorial (Linuxize)](https://linuxize.com/post/how-to-use-grep-command-in-linux/)**  
 
@@ -1134,7 +1134,7 @@ Proceeding incrementally, I'll now explicitly generate the final structured sect
 
 ---
 
-### 🟡 **Intermediate Resources:**
+### 🧩 **Intermediate Resources:**
 
 **1. [Pipes and Redirection Explained (Ryan's Tutorials)](https://ryanstutorials.net/linuxtutorial/piping.php)**  
 
@@ -1146,7 +1146,7 @@ Proceeding incrementally, I'll now explicitly generate the final structured sect
 
 ---
 
-### 🔴 **SRE-Level Resources:**
+### 💡 **SRE-Level Resources:**
 
 **1. [Google SRE Book – Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)**  
 

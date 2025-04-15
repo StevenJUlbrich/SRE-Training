@@ -6,19 +6,19 @@
 
 ### **Objectives (Beginner, Intermediate, and SRE)**
 
-#### 🟢 Beginner Objectives
+#### 🔍 Beginner Objectives
 
 1. Understand the difference between archiving and compression.
 2. Learn basic usage of tar, gzip/gunzip, zip/unzip.
 3. Perform basic software installation and removal using apt or yum/dnf.
 
-#### 🟡 Intermediate Objectives
+#### 🧩 Intermediate Objectives
 
 1. Use tar, gzip, and zip for more advanced archiving tasks, including multi-file and directory structures.
 2. Manage packages effectively across various distributions, exploring dependency considerations and updates.
 3. Implement basic troubleshooting steps when archiving and installing packages fails.
 
-#### 🔴 SRE-Level Objectives
+#### 💡 SRE-Level Objectives
 
 1. Integrate archiving and compression into automated backup and deployment pipelines.
 2. Implement robust package management strategies for reproducibility and version control across multiple servers.
@@ -80,7 +80,7 @@
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Creating a basic tar archive of a directory named 'logs'
@@ -92,7 +92,7 @@ logs/access.log
 # This creates 'logs.tar' containing all files in 'logs'
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Creating a compressed tar archive for backup and verifying contents
@@ -106,7 +106,7 @@ $ tar -tvf project_backup.tar.gz | grep config.yaml
 # Operational significance: We compress a project folder, then verify it contains 'config.yaml'
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Automated partial restore of config files on production
@@ -152,7 +152,7 @@ etc/myapp/config.yaml
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Compress a single file
@@ -162,7 +162,7 @@ mynotes.txt.gz
 # The original file 'mynotes.txt' is removed; only 'mynotes.txt.gz' remains
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Compress a directory of logs recursively
@@ -173,7 +173,7 @@ Compressing /var/logs/app/error.log to /var/logs/app/error.log.gz
 # Operational significance: Reduces storage usage for archived logs.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Automated log rotation script snippet using gzip
@@ -218,7 +218,7 @@ find "$LOGDIR" -type f -name "*.log" -mtime +7 -exec gzip {} \;
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Zipping multiple files into a single archive
@@ -227,7 +227,7 @@ $ zip docs.zip file1.txt file2.txt
   adding: file2.txt (stored 0%)
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Zipping a whole directory and listing its contents
@@ -243,7 +243,7 @@ Archive:  website.zip
      2048  2025-03-28 14:12   var/www/html/styles.css
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Encrypting an archive for secure transfer between teams
@@ -291,7 +291,7 @@ Verify password:
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Installing and removing a simple package
@@ -310,7 +310,7 @@ $ sudo apt remove curl
 ...
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Performing a full system upgrade
@@ -324,7 +324,7 @@ The following packages will be upgraded:
 # Operational significance: Ensures all packages are up to date for security patches.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Building a reproducible environment
@@ -375,7 +375,7 @@ $ sudo apt-get dselect-upgrade
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Checking for updates on CentOS
@@ -387,7 +387,7 @@ Available Packages
   ...
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Installing multiple packages for a web server setup
@@ -402,7 +402,7 @@ Installed:
   httpd.x86_64 0:2.4.6-93.el7.centos  mariadb-server.x86_64 1:5.5.68-1.el7  php.x86_64 0:5.4.16-48.el7
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Setting up a custom local repository to install packages in an air-gapped environment
@@ -687,7 +687,7 @@ $ sudo yum install custom-software
 
 ## 11. 📚 Further Learning Resources
 
-### 11.1 🟢 Beginner Level
+### 11.1 🔍 Beginner Level
 
 1. [GNU tar Manual](https://www.gnu.org/software/tar/manual/tar.html)
    - Teaches basic usage and options for tar.
@@ -699,7 +699,7 @@ $ sudo yum install custom-software
    - Explores the fundamentals of zip files, widely used across platforms.
    - Ideal for those new to compression tools.
 
-### 11.2 🟡 Intermediate Level
+### 11.2 🧩 Intermediate Level
 
 1. [Linux Documentation Project: tar & gzip](https://tldp.org/HOWTO/Compression-HOWTO.html)
    - Detailed info on compression tools, best practices, and advanced usage.
@@ -711,7 +711,7 @@ $ sudo yum install custom-software
    - Official docs for advanced usage of dnf on Fedora and RHEL-based distros.
    - Great for intermediate system administrators wanting to expand knowledge.
 
-### 11.3 🔴 SRE-Level
+### 11.3 💡 SRE-Level
 
 1. [Google SRE Book: Managing Critical State](https://sre.google/sre-book/managing-critical-state/)
    - Explores reliability in stateful environments, dealing with backups and recoveries.

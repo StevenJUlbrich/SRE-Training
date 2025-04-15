@@ -640,7 +640,7 @@ Noah once found the production web service returning **502 errors**. He had **15
 
 > As Noah says, “Mastering these basics is just the beginning. Keep exploring!”
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **The Linux Command Line (William Shotts)**  
    [https://linuxcommand.org/tlcl.php](https://linuxcommand.org/tlcl.php)  
@@ -650,7 +650,7 @@ Noah once found the production web service returning **502 errors**. He had **15
    [https://ubuntu.com/tutorials/command-line-for-beginners](https://ubuntu.com/tutorials/command-line-for-beginners)  
    Step-by-step CLI usage with file manipulation.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **Pluralsight: Linux Fundamentals**  
    [https://www.pluralsight.com/courses/linux-fundamentals](https://www.pluralsight.com/courses/linux-fundamentals)  
@@ -660,7 +660,7 @@ Noah once found the production web service returning **502 errors**. He had **15
    [https://wiki.archlinux.org/title/Core_utilities](https://wiki.archlinux.org/title/Core_utilities)  
    Deeper insights into commands like `cp`, `mv`, `rm`.
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **Google SRE Workbook: Practical Alerting & Monitoring**  
    [https://sre.google/workbook/chapters/alerting/](https://sre.google/workbook/chapters/alerting/)  

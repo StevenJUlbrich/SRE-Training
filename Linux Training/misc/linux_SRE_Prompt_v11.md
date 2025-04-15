@@ -21,7 +21,7 @@ Your task is to explicitly merge and enhance these documents into a final compre
 
 - Explicit summary of today's learning topics.
 - Explicit relevance and context to real-world SRE roles.
-- Clearly defined learning objectives (🟢 Beginner, 🟡 Intermediate, 🔴 SRE-Level).
+- Clearly defined learning objectives (🔍 Beginner, 🧩 Intermediate, 💡 SRE-Level).
 
 ### 📚 **Core Concepts:**
 
@@ -49,7 +49,7 @@ For each command explicitly provide:
 
 #### **Explicit Examples:**
 
-- 🟢 **Beginner Examples:**
+- 🔍 **Beginner Examples:**
 
 ```bash
 # Example 1: Explicit command usage
@@ -63,7 +63,7 @@ $ command -l
 Output of command -l clearly shown here
 ```
 
-- 🟡 **Intermediate Examples:**
+- 🧩 **Intermediate Examples:**
 
 ```bash
 # Example 1: Explicit realistic operational example
@@ -77,7 +77,7 @@ $ command --verbose --sort=size
 Explicit operational context and detailed command output explanation
 ```
 
-- 🔴 **SRE-Level Examples:**
+- 💡 **SRE-Level Examples:**
 
 ```bash
 # Scenario-driven example with operational context
@@ -110,24 +110,24 @@ Explicitly detail:
 
 Explicitly structured exercises per learner tier (minimum 3 exercises per tier):
 
-- 🟢 Beginner: Basic explicit usage.
-- 🟡 Intermediate: Command combinations explicitly detailed.
-- 🔴 SRE-Level: Explicit realistic incident simulations or task automation scenarios.
+- 🔍 Beginner: Basic explicit usage.
+- 🧩 Intermediate: Command combinations explicitly detailed.
+- 💡 SRE-Level: Explicit realistic incident simulations or task automation scenarios.
 - Include explicit reflection for each exercise.
 
 ### 📝 **Quiz Questions:**
 
 Explicitly structured with 3–4 questions per learning tier:
 
-- 🟢 **Beginner Tier:**
+- 🔍 **Beginner Tier:**
   - Varied formats explicitly required (multiple-choice, fill-in-the-blank, scenario-based).
   - Explicitly structured to reinforce foundational understanding.
 
-- 🟡 **Intermediate Tier:**
+- 🧩 **Intermediate Tier:**
   - Varied formats explicitly required (multiple-choice, fill-in-the-blank, scenario-based).
   - Explicitly structured to reinforce practical operational knowledge.
 
-- 🔴 **SRE-Level Tier:**
+- 💡 **SRE-Level Tier:**
   - Varied formats explicitly required (multiple-choice, fill-in-the-blank, scenario-based).
   - Explicitly structured to reinforce advanced troubleshooting and scenario application.
 

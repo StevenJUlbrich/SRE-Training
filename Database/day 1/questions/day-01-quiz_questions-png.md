@@ -1,13 +1,13 @@
-Below is a set of 20 quiz questions derived from the attached prompt . The questions span beginner (🟢), intermediate (🟡), and SRE-level (🔴) difficulty, covering core Day 1 topics such as Oracle database structure, primary/foreign keys, basic SQL, Oracle tools, and SRE considerations. They include the required mix of multiple choice, true/false, fill-in-the-blank, matching, and ordering formats. At least five questions incorporate Mermaid diagrams.  
+Below is a set of 20 quiz questions derived from the attached prompt . The questions span beginner (🔍), intermediate (🧩), and SRE-level (💡) difficulty, covering core Day 1 topics such as Oracle database structure, primary/foreign keys, basic SQL, Oracle tools, and SRE considerations. They include the required mix of multiple choice, true/false, fill-in-the-blank, matching, and ordering formats. At least five questions incorporate Mermaid diagrams.  
 
 ---
 
-## 🟢 Beginner-Level (7 Questions)
+## 🔍 Beginner-Level (7 Questions)
 
 ### 1. Multiple Choice (Tables and Schemas)
 ```
 ## Question 1: Basic Terminology
-🟢 Beginner
+🔍 Beginner
 
 Which of the following statements best describes a table in a relational database?
 
@@ -22,7 +22,7 @@ D. A table is an Oracle-specific feature that replaces schemas.
 ### 2. Multiple Choice (Primary Keys)
 ```
 ## Question 2: Key Fundamentals
-🟢 Beginner
+🔍 Beginner
 
 Which characteristic is TRUE of a primary key in Oracle?
 
@@ -37,7 +37,7 @@ D. It can only be numeric.
 ### 3. Multiple Choice (Basic SQL SELECT)
 ```
 ## Question 3: Basic SELECT Statement
-🟢 Beginner
+🔍 Beginner
 
 Which of the following SQL statements retrieves all columns from a table named EMPLOYEES in Oracle?
 
@@ -52,7 +52,7 @@ D. SELECT EMP_ID, EMP_NAME FROM EMPLOYEES;
 ### 4. Multiple Choice (Diagram-Based: Entity-Relationship)
 
 ## Question 4: Basic ER Diagram
-🟢 Beginner
+🔍 Beginner
 
 Examine the following simple entity-relationship diagram:
 
@@ -75,7 +75,7 @@ D. The diagram shows a many-to-many relationship.
 ### 5. Multiple Choice (Oracle Tools)
 
 ## Question 5: Oracle Tools
-🟢 Beginner
+🔍 Beginner
 
 Which Oracle tool is a command-line interface used primarily for running SQL commands and PL/SQL blocks?
 
@@ -90,7 +90,7 @@ Which Oracle tool is a command-line interface used primarily for running SQL com
 ### 6. Multiple Choice (FROM Clause)
 
 ## Question 6: Basic SQL Clauses
-🟢 Beginner
+🔍 Beginner
 
 In a basic SELECT statement, the FROM clause is used to:
 
@@ -105,7 +105,7 @@ D. Indicate a new database connection.
 ### 7. Multiple Choice (Diagram-Based: Query Flow)
 
 ## Question 7: Query Execution Flow
-🟢 Beginner
+🔍 Beginner
 
 Refer to this simplified query execution flow:
 
@@ -125,12 +125,12 @@ Which step ensures the SQL statement is valid and constructs the best plan?
 
 ---
 
-## 🟡 Intermediate-Level (7 Questions)
+## 🧩 Intermediate-Level (7 Questions)
 
 ### 8. Multiple Choice (Foreign Keys)
 
 ## Question 8: Foreign Key Constraints
-🟡 Intermediate
+🧩 Intermediate
 
 Which SQL statement creates a foreign key in an Oracle table named ORDERS that references the CUSTOMERS table’s primary key CUSTOMER_ID?
 
@@ -145,7 +145,7 @@ Which SQL statement creates a foreign key in an Oracle table named ORDERS that r
 ### 9. Multiple Choice (Diagram-Based: Oracle Architecture)
 
 ## Question 9: Oracle Database Structure
-🟡 Intermediate
+🧩 Intermediate
 
 Examine the following Oracle database structure diagram:
 
@@ -168,7 +168,7 @@ Which of the following statements is correct?
 ### 10. Multiple Choice (Diagram-Based: Joins)
 
 ## Question 10: Table Joins
-🟡 Intermediate
+🧩 Intermediate
 
 Analyze the following join diagram:
 
@@ -191,7 +191,7 @@ Which SQL statement best represents this join in Oracle?
 ### 11. True/False (Oracle Data Dictionary)
 
 ## Question 11: Data Dictionary Views
-🟡 Intermediate
+🧩 Intermediate
 
 Statement: The ALL_TABLES view in Oracle shows all the tables in the entire database, regardless of the current user’s privileges.
 
@@ -204,7 +204,7 @@ Statement: The ALL_TABLES view in Oracle shows all the tables in the entire data
 ### 12. True/False (Performance Monitoring)
 
 ## Question 12: Oracle Performance
-🟡 Intermediate
+🧩 Intermediate
 
 Statement: The V$SESSION view in Oracle provides details about current active sessions, including user, status, and machine information.
 
@@ -217,7 +217,7 @@ Statement: The V$SESSION view in Oracle provides details about current active se
 ### 13. True/False (SQL Differences)
 
 ## Question 13: SQL Dialect Variations
-🟡 Intermediate
+🧩 Intermediate
 
 Statement: In Oracle, the VARCHAR2 data type is functionally identical to VARCHAR2 in PostgreSQL and SQL Server with no differences in behavior or limits.
 
@@ -230,7 +230,7 @@ Statement: In Oracle, the VARCHAR2 data type is functionally identical to VARCHA
 ### 14. Fill-in-the-Blank (WHERE Clause)
 
 ## Question 14: SQL WHERE
-🟡 Intermediate
+🧩 Intermediate
 
 Complete the following statement about the Oracle WHERE clause:
 
@@ -244,12 +244,12 @@ Complete the following statement about the Oracle WHERE clause:
 
 ---
 
-## 🔴 SRE-Level (6 Questions)
+## 💡 SRE-Level (6 Questions)
 
 ### 15. Fill-in-the-Blank (Execution Plan)
 
 ## Question 15: Execution Plans
-🔴 SRE-Level
+💡 SRE-Level
 
 Complete the following statement regarding Oracle execution plans:
 
@@ -266,7 +266,7 @@ Complete the following statement regarding Oracle execution plans:
 ### 16. Fill-in-the-Blank (Recovery)
 
 ## Question 16: Oracle Recovery
-🔴 SRE-Level
+💡 SRE-Level
 
 Complete the following statement about Oracle recovery tools:
 
@@ -283,7 +283,7 @@ Complete the following statement about Oracle recovery tools:
 ### 17. Matching (Diagram-Based: Performance Views)
 
 ## Question 17: Matching Oracle Views
-🔴 SRE-Level
+💡 SRE-Level
 
 Match each Oracle performance view in Column A to its description in Column B.
 
@@ -311,7 +311,7 @@ Column B:
 ### 18. Matching (Constraint Types)
 
 ## Question 18: Matching Constraints
-🔴 SRE-Level
+💡 SRE-Level
 
 Match each constraint type in Column A with its description in Column B.
 
@@ -333,7 +333,7 @@ Column B:
 ### 19. Ordering (Troubleshooting Steps)
 
 ## Question 19: Oracle Troubleshooting
-🔴 SRE-Level
+💡 SRE-Level
 
 Arrange the following steps in the correct order when troubleshooting a slow query in Oracle:
 
@@ -348,7 +348,7 @@ Arrange the following steps in the correct order when troubleshooting a slow que
 ### 20. Ordering (Flashback Operations)
 
 ## Question 20: Oracle Flashback
-🔴 SRE-Level
+💡 SRE-Level
 
 Arrange the following steps to perform an Oracle Flashback Table operation:
 

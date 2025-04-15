@@ -92,7 +92,7 @@ A non-interactive text editor that reads input line-by-line, applying editing co
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Replace 'hello' with 'Hello' in greetings.txt
@@ -100,7 +100,7 @@ A non-interactive text editor that reads input line-by-line, applying editing co
   # Output: each occurrence of "hello" is replaced.
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Remove all lines that start with # (treat as comments) in config.ini
@@ -108,7 +108,7 @@ A non-interactive text editor that reads input line-by-line, applying editing co
   # Explanation: This helps produce a "cleaned" config without comments.
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Update multiple environment variables in a config file, in place
@@ -145,7 +145,7 @@ awk is a powerful pattern scanning and processing tool. It reads each line, spli
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Print the first field of each line in names.txt
@@ -153,7 +153,7 @@ awk is a powerful pattern scanning and processing tool. It reads each line, spli
   # Explanation: Great for quick column extraction.
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Display processes using more than 10% CPU
@@ -161,7 +161,7 @@ awk is a powerful pattern scanning and processing tool. It reads each line, spli
   # Explanation: Filters columns: PID, CPU%, COMMAND.
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Calculate average response time from a log's 7th field, ignoring lines with 'N/A'
@@ -199,7 +199,7 @@ sort rearranges lines in a file or stream based on alphabetical, numerical, or c
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Sort lines in names.txt alphabetically
@@ -207,7 +207,7 @@ sort rearranges lines in a file or stream based on alphabetical, numerical, or c
   # Output: Lines sorted A to Z.
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Sort processes by memory usage (4th column from ps aux) descending
@@ -215,7 +215,7 @@ sort rearranges lines in a file or stream based on alphabetical, numerical, or c
   # Explanation: Identifies top memory-consuming processes.
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Sort log lines by timestamp (3rd field), then by response time (7th field)
@@ -251,7 +251,7 @@ uniq filters or reports duplicate lines, typically used after sort. SREs often r
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Remove duplicate lines from colors.txt (after sorting it)
@@ -259,7 +259,7 @@ uniq filters or reports duplicate lines, typically used after sort. SREs often r
   # Output: Single instance of each color.
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Show how many times each error string appears in the logs
@@ -267,7 +267,7 @@ uniq filters or reports duplicate lines, typically used after sort. SREs often r
   # Explanation: Combines search, sort, and count for quick error frequency.
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Identify recurring IP addresses across multiple logs, focusing on duplicates
@@ -303,7 +303,7 @@ wc counts lines, words, and bytes in text. SREs can use wc to track log growth, 
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   # Count lines in greetings.txt
@@ -311,7 +311,7 @@ wc counts lines, words, and bytes in text. SREs can use wc to track log growth, 
   # Output: e.g., 25 greetings.txt
   ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   # Check total bytes of a log, then compress if too large
@@ -320,7 +320,7 @@ wc counts lines, words, and bytes in text. SREs can use wc to track log growth, 
   # Explanation: Automated housekeeping.
   ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   # Monitor real-time log growth: lines processed per minute
@@ -559,7 +559,7 @@ Below are three realistic scenarios you may encounter:
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner (2–3 resources)
+### 🔍 Beginner (2–3 resources)
 
 1. **"GNU sed Manual" (Official)**
    - Link: [https://www.gnu.org/software/sed/manual/](https://www.gnu.org/software/sed/manual/)
@@ -574,7 +574,7 @@ Below are three realistic scenarios you may encounter:
    - Provides context on combining commands in scripts.
    - Strengthens understanding of how sed/awk integrate into simple pipelines.
 
-### 🟡 Intermediate (2–3 resources)
+### 🧩 Intermediate (2–3 resources)
 
 1. **"The Linux Command Line" Book**
    - Link: [http://linuxcommand.org/tlcl.php](http://linuxcommand.org/tlcl.php)
@@ -589,7 +589,7 @@ Below are three realistic scenarios you may encounter:
    - Discusses advanced usage patterns.
    - Connects multiple Unix text-processing tools.
 
-### 🔴 SRE-Level (2–3 resources)
+### 💡 SRE-Level (2–3 resources)
 
 1. **"Google SRE Book" (Chapter on Monitoring & Alerting)**
    - Link: [https://sre.google/sre-book/](https://sre.google/sre-book/)

@@ -2,7 +2,7 @@ Below is a set of 20 quiz questions following the instructions in day-9_10_quiz_
 
 ---
 
-# Day 9 Quiz: SQL vs NoSQL Database Comparison
+# Day 9 - 10 Quiz: SQL vs NoSQL Database Comparison
 
 ## Beginner-Level (🔍) Questions
 

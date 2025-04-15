@@ -92,7 +92,7 @@ Below are 10 essential commands, each with a structured presentation including s
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Display all running processes in BSD style (user-oriented)
@@ -103,7 +103,7 @@ student    9876  2.5  4.5 241872 89120 pts/2   Sl+ 14:20   0:15 python3 script.p
 # This gives you a basic list of processes with CPU & memory usage
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Show all processes in SysV style and filter for "nginx"
@@ -113,7 +113,7 @@ www-data 11013 11012  0 Mar26 ?        00:00:10 nginx: worker process
 # You see the master worker model typical of Nginx
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Display hierarchy and custom columns to spot resource-intensive children
@@ -158,7 +158,7 @@ $ ps --forest -o pid,user,%cpu,%mem,cmd
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Run top in default interactive mode
@@ -169,7 +169,7 @@ Tasks: 228 total,   1 running, 227 sleeping,   0 stopped,   0 zombie
 MiB Mem :  16384.0 total,  12000.0 free,   2000.0 used,   1384.0 buff/cache
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Monitor only processes owned by 'webuser'
@@ -177,7 +177,7 @@ $ top -u webuser
 # Great for focusing on a single service or user workload
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Collect 5 snapshots in batch mode for an incident timeline
@@ -216,7 +216,7 @@ $ top -b -n 5 -d 2 > top_log.txt
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Simply start htop if installed
@@ -224,7 +224,7 @@ $ htop
 # You see a colorful interface with CPU bars and memory usage
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Start htop focusing on processes of user "deploy"
@@ -232,7 +232,7 @@ $ htop -u deploy
 # Helps you isolate a deployment user's processes quickly
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Searching for a memory hog process within htop
@@ -274,7 +274,7 @@ $ htop -u deploy
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Gracefully stop a process with PID 1234
@@ -282,7 +282,7 @@ $ kill 1234
 # This attempts to let the process exit cleanly
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Force-kill a stubborn/hung process
@@ -290,7 +290,7 @@ $ kill -9 5678
 # Use with caution, as the process won't clean up resources
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Reload the configuration of an Nginx web server
@@ -328,7 +328,7 @@ $ kill -HUP $(pgrep nginx)
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Assume you ran "sleep 100 &"
@@ -337,7 +337,7 @@ $ jobs
 # This shows the job index [1] and that it's running
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Show jobs with PIDs
@@ -347,7 +347,7 @@ $ jobs -l
 # You see which is running vs. stopped and the PIDs
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # In a maintenance script, track backgrounded tasks:
@@ -386,7 +386,7 @@ $ jobs -l
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Suppose you press Ctrl+Z on "top" to suspend it
@@ -397,7 +397,7 @@ $ bg %1
 # Now "top" continues in the background
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # If you have multiple jobs
@@ -408,7 +408,7 @@ $ bg %2
 # Brings "vim config.txt" job to background (though vim in background is unusual)
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # During a large data transfer, you can suspend it to check something, then send it to bg
@@ -447,7 +447,7 @@ $ bg %+
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # A job is running in background
@@ -458,7 +458,7 @@ tail -f /var/log/syslog
 # Now you're back at the tail -f in the foreground
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Switching from a background data copy to monitor progress
@@ -466,7 +466,7 @@ $ fg %copy_data
 # If you named the job or recognized it by partial command in advanced shells
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # During maintenance, you might have multiple scripts
@@ -509,7 +509,7 @@ metrics_collection.sh
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ uname -a
@@ -517,7 +517,7 @@ Linux server1 5.11.0-40-generic #44-Ubuntu SMP x86_64 x86_64 x86_64 GNU/Linux
 # Basic overview of the kernel and OS platform
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 $ uname -r
@@ -525,7 +525,7 @@ $ uname -r
 # Handy if you need to check for kernel-level patches or modules
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Quickly see if architecture matches deployment artifacts
@@ -565,7 +565,7 @@ $ echo "Running architecture is: $arch"
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ df -h
@@ -574,7 +574,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdb1       100G   45G   55G  45% /data
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Check file system types and usage
@@ -585,7 +585,7 @@ Filesystem     Type   Size  Used Avail Use% Mounted on
 tmpfs          tmpfs  2.0G  128M  1.9G   7% /run
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Monitoring disk usage during an incident every 5 seconds
@@ -625,7 +625,7 @@ $ watch -n 5 df -h
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Check the size of the current directory
@@ -633,7 +633,7 @@ $ du -sh .
 258M    .
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Compare subdirectory sizes in /var/log
@@ -645,7 +645,7 @@ $ du -h --max-depth=1 /var/log
 # Notice which logs are big
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Exclude backups and only go 2 levels deep in /data
@@ -687,7 +687,7 @@ $ du -h --max-depth=2 --exclude='backup*' /data
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ free -h
@@ -696,7 +696,7 @@ Mem:           15Gi       4.6Gi       8.0Gi       264Mi       3.0Gi        10Gi
 Swap:         4.0Gi          0B       4.0Gi
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Watch memory usage every 5 seconds
@@ -708,7 +708,7 @@ Swap:         4.0Gi   0B     4.0Gi
 # This will continuously update
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Incorporate into a quick performance check script
@@ -1001,7 +1001,7 @@ This approach demonstrates SRE best practices: quickly identify the culprit, att
 
 ## 📚 **Further Learning Resources**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **“Linux Journey”**  
    **Link**: [https://linuxjourney.com/](https://linuxjourney.com/)  
@@ -1018,7 +1018,7 @@ This approach demonstrates SRE best practices: quickly identify the culprit, att
    **Description**: A complete beginner’s guide to the command line.  
    **Beginner Application**: Learn how to navigate the shell, manage files, and run commands effectively.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **“Linux System Administration Skills” (Red Hat)**  
    **Link**: [https://www.redhat.com/sysadmin](https://www.redhat.com/sysadmin)  
@@ -1035,7 +1035,7 @@ This approach demonstrates SRE best practices: quickly identify the culprit, att
    **Description**: Quick performance triage tips from an industry expert.  
    **Operational Connection**: Perfect for mid-level engineers needing swift incident triage strategies.
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **“Google SRE Book - Chapter: Managing Load”**  
    **Link**: [https://sre.google/sre-book/handling-overload/](https://sre.google/sre-book/handling-overload/)  

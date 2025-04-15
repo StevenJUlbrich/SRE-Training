@@ -4,7 +4,7 @@ Below is a suggested **Answer Key** and set of **Explanations** for each quiz qu
 
 ---
 
-## 🟢 Beginner Quiz – Answers & Explanations
+## 🔍 Beginner Quiz – Answers & Explanations
 
 1. **MCQ**: Which file contains encrypted passwords?
 
@@ -28,7 +28,7 @@ Below is a suggested **Answer Key** and set of **Explanations** for each quiz qu
 
 ---
 
-## 🟡 Intermediate Quiz – Answers & Explanations
+## 🧩 Intermediate Quiz – Answers & Explanations
 
 1. **Scenario**: You added user `dev2` with `sudo useradd dev2` but forgot `-m`. How do you fix it so `dev2` has a home directory under `/home/dev2`?
 
@@ -68,7 +68,7 @@ Below is a suggested **Answer Key** and set of **Explanations** for each quiz qu
 
 ---
 
-## 🔴 SRE-Level Quiz – Answers & Explanations
+## 💡 SRE-Level Quiz – Answers & Explanations
 
 1. **Scenario**: You suspect a compromised service account. Which two immediate steps do you take with user management commands?
 

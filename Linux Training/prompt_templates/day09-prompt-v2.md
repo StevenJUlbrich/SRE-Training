@@ -11,7 +11,7 @@ Given:
 Create an enhanced document that:
 - Uses Document 2's structural framework and visual organization
 - Incorporates Document 1's depth of examples and comprehensive SRE scenarios
-- Maintains consistent difficulty indicators (🟢 Beginner, 🟡 Intermediate, 🔴 SRE-level)
+- Maintains consistent difficulty indicators (🔍 Beginner, 🧩 Intermediate, 💡 SRE-level)
 - Builds knowledge incrementally while preserving operational focus
 - Includes the most valuable exercises, troubleshooting examples, and learning resources from both documents
 
@@ -41,9 +41,9 @@ For each command (tar, gzip/gunzip, zip/unzip, apt, yum/dnf) provide:
 - Purpose and SRE relevance
 - Syntax table with examples (using Document 2's format)
 - Tiered examples with realistic outputs
-  - 🟢 Beginner: Basic usage with clear outputs
-  - 🟡 Intermediate: Operational context with explicit significance
-  - 🔴 SRE-Level: Production scenarios with incident relevance
+  - 🔍 Beginner: Basic usage with clear outputs
+  - 🧩 Intermediate: Operational context with explicit significance
+  - 💡 SRE-Level: Production scenarios with incident relevance
 - Instructional notes (preserving Document 2's format)
   - Beginner tips
   - SRE insights
@@ -66,19 +66,19 @@ Syntax & Flags:
 
 Tiered Examples:
 
-🟢 Beginner Example:
+🔍 Beginner Example:
 # Example: [clear purpose statement]
 $ [command with basic options]
 [realistic terminal output]
 # [Optional brief explanation if needed]
 
-🟡 Intermediate Example:
+🧩 Intermediate Example:
 # Example: [specific operational context]
 $ [command with more complex options]
 [realistic terminal output]
 # Operational significance: [explain why this matters in production]
 
-🔴 SRE-Level Example:
+💡 SRE-Level Example:
 # Example: [realistic SRE scenario like troubleshooting/automation]
 $ [complex command possibly combining with other tools]
 [realistic terminal output]
@@ -109,15 +109,15 @@ Preserve Document 2's operational focus on how commands affect:
 
 ### 🎯 Hands-On Exercises
 Select the most valuable exercises from both documents:
-- 🟢 Beginner (3): Focused, step-by-step guidance
-- 🟡 Intermediate (3): Scenario-based challenges with operational context
-- 🔴 SRE-Level (3): Complex troubleshooting with production relevance
+- 🔍 Beginner (3): Focused, step-by-step guidance
+- 🧩 Intermediate (3): Scenario-based challenges with operational context
+- 💡 SRE-Level (3): Complex troubleshooting with production relevance
 
 ### 📝 Quiz Questions
 Combine the best questions from both documents:
-- 🟢 Beginner (5): Basic command usage and understanding
-- 🟡 Intermediate (5): Operational knowledge and scenario application
-- 🔴 SRE-Level (5): Complex troubleshooting and architectural decisions
+- 🔍 Beginner (5): Basic command usage and understanding
+- 🧩 Intermediate (5): Operational knowledge and scenario application
+- 💡 SRE-Level (5): Complex troubleshooting and architectural decisions
 
 ### 🚧 Troubleshooting
 Merge the most valuable troubleshooting scenarios (minimum 5):
@@ -129,9 +129,9 @@ Merge the most valuable troubleshooting scenarios (minimum 5):
 
 ### ❓ FAQ
 Select the most valuable FAQs from both documents:
-- 🟢 Beginner (3): Basic concepts and common questions
-- 🟡 Intermediate (3): Technical details and operational considerations
-- 🔴 SRE-Level (3): Complex scenarios and architectural decisions
+- 🔍 Beginner (3): Basic concepts and common questions
+- 🧩 Intermediate (3): Technical details and operational considerations
+- 💡 SRE-Level (3): Complex scenarios and architectural decisions
 
 ### 🔥 SRE Scenario
 Create an enhanced scenario that:
@@ -149,9 +149,9 @@ Create an enhanced scenario that:
 
 ### 📚 Further Learning Resources
 Select the most valuable resources from both documents:
-- 🟢 Beginner (3)
-- 🟡 Intermediate (3)
-- 🔴 SRE-Level (3)
+- 🔍 Beginner (3)
+- 🧩 Intermediate (3)
+- 💡 SRE-Level (3)
 
 For each resource include:
 - Direct link

@@ -6,19 +6,19 @@
 
 ### **Objectives by Skill Level**
 
-#### 🟢 Beginner Objectives
+#### 🔍 Beginner Objectives
 
 1. Understand the difference between archiving and compression.
 2. Learn basic usage of `tar`, `gzip/gunzip`, and `zip/unzip`.
 3. Install and remove packages using popular package managers (`apt` or `yum/dnf`).
 
-#### 🟡 Intermediate Objectives
+#### 🧩 Intermediate Objectives
 
 1. Use `tar`, `gzip`, and `zip` for advanced multi-file, multi-directory archiving tasks.
 2. Manage packages across distributions, investigating dependencies and updates.
 3. Troubleshoot common issues related to archiving and installing packages.
 
-#### 🔴 SRE-Level Objectives
+#### 💡 SRE-Level Objectives
 
 1. Integrate archiving and compression into automated backup and deployment pipelines.
 2. Develop robust, reproducible package management strategies across multiple servers.
@@ -75,7 +75,7 @@ Below are the key commands you’ll practice today. Each includes a purpose, usa
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
 ```bash
 # Creating a basic tar archive from a directory called 'docs'
@@ -86,7 +86,7 @@ $ tar -cvf docs.tar docs/
 ... (files listed)
 ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
 ```bash
 # Creating a compressed tar archive and then listing its contents
@@ -97,7 +97,7 @@ $ tar -tvf project_backup.tar.gz | grep config.yaml
 # Operational significance: Verifying critical config file is included.
 ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
 ```bash
 # Partial restore of only configuration files from a large backup
@@ -133,7 +133,7 @@ $ tar -xzvf full_backup.tar.gz etc/myapp/config.yaml -C /tmp/restore --strip-com
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
 ```bash
 # Compress a single file, removing the original by default:
@@ -141,7 +141,7 @@ $ gzip testfile.txt
 # Now 'testfile.txt.gz' exists, original 'testfile.txt' is gone.
 ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
 ```bash
 # Recursively compress an entire logs folder:
@@ -150,7 +150,7 @@ $ gzip -r /var/log/myapp
 # /var/log/myapp/error.log -> /var/log/myapp/error.log.gz
 ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
 ```bash
 # Integrate gzip in a log rotation script:
@@ -188,7 +188,7 @@ find "$LOGDIR" -type f -name "*.log" -mtime +7 -exec gzip {} \;
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
 ```bash
 # Zip two text files:
@@ -197,7 +197,7 @@ $ zip texts.zip file1.txt file2.txt
   adding: file2.txt (deflated 65%)
 ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
 ```bash
 # Zip an entire directory and confirm its contents:
@@ -211,7 +211,7 @@ Archive:  website.zip
      1032  2025-03-28 14:12   var/www/html/index.html
 ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
 ```bash
 # Encrypt a zip file before sharing logs externally:
@@ -250,7 +250,7 @@ Verify password:
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
 ```bash
 # Simple workflow on Ubuntu:
@@ -260,7 +260,7 @@ $ tree /etc
 $ sudo apt remove tree
 ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
 ```bash
 # Full system update:
@@ -268,7 +268,7 @@ $ sudo apt update && sudo apt upgrade -y
 # Operational significance: ensures system patches and security updates are in place.
 ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
 ```bash
 # Replicating package selections from one server to another:
@@ -310,7 +310,7 @@ $ sudo apt-get dselect-upgrade -y
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
 ```bash
 # Checking for updates
@@ -318,7 +318,7 @@ $ sudo yum check-update
 # Lists packages that can be updated
 ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
 ```bash
 # Installing multiple packages in one step
@@ -326,7 +326,7 @@ $ sudo yum install -y httpd mariadb-server php
 # Analyzing dependencies and setting up a LAMP stack
 ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
 ```bash
 # Creating a local repo for an air-gapped environment:
@@ -365,7 +365,7 @@ $ sudo yum install custom-software
 
 Below are exercises at three levels—Beginner, Intermediate, and SRE-Level—to reinforce the commands and concepts.
 
-### 5.1 🟢 Beginner Exercises
+### 5.1 🔍 Beginner Exercises
 
 1. **Basic Tar Archive**
    - Create a directory `practice` with three text files.
@@ -395,7 +395,7 @@ Below are exercises at three levels—Beginner, Intermediate, and SRE-Level—to
    - Zip up any two files into `files.zip`.
    - Unzip `files.zip` into a directory named `unzipped_files`.
 
-### 5.2 🟡 Intermediate Exercises
+### 5.2 🧩 Intermediate Exercises
 
 1. **Backup /var/log**
    - Use:
@@ -420,7 +420,7 @@ Below are exercises at three levels—Beginner, Intermediate, and SRE-Level—to
    - Create a zip of your `/etc` directory (or a smaller subfolder if `/etc` is large) named `etc_backup.zip`.
    - Transfer to a Windows or Mac system. Unzip and see if files appear consistent.
 
-### 5.3 🔴 SRE-Level Exercises
+### 5.3 💡 SRE-Level Exercises
 
 1. **Automated Log Rotation**
    - Write a short script that rotates logs for a custom app:
@@ -461,7 +461,7 @@ Below are exercises at three levels—Beginner, Intermediate, and SRE-Level—to
 
 ## 6. 📝 Quiz Questions
 
-### 6.1 🟢 Beginner Quiz
+### 6.1 🔍 Beginner Quiz
 
 1. True/False: `tar` alone compresses files without extra flags.
 2. Which command extracts files from a zip archive called `archive.zip`?
@@ -472,7 +472,7 @@ Below are exercises at three levels—Beginner, Intermediate, and SRE-Level—to
 4. Which `apt` command updates the local package index?
 5. True/False: `apt install` can be run successfully without `sudo` on most systems.
 
-### 6.2 🟡 Intermediate Quiz
+### 6.2 🧩 Intermediate Quiz
 
 1. Which `tar` flag lists the contents of an archive without extracting?
 2. How do you remove packages automatically installed as dependencies but no longer needed on Debian/Ubuntu?
@@ -480,7 +480,7 @@ Below are exercises at three levels—Beginner, Intermediate, and SRE-Level—to
 4. Which gzip option keeps the original file after compression?
 5. Scenario: You have a directory of 1,000 log files that must be compressed individually. Which gzip flag do you use to compress an entire directory structure?
 
-### 6.3 🔴 SRE-Level Quiz
+### 6.3 💡 SRE-Level Quiz
 
 1. Your monitoring system reports CPU spikes each night at 2 AM due to a tar+gzip backup job. Suggest two performance-conscious strategies.
 2. How would you replicate a Red Hat server’s packages onto a new system without direct internet access?
@@ -521,7 +521,7 @@ Here are some common pitfalls you may encounter.
 
 ## 8. ❓ FAQ
 
-### 8.1 🟢 Beginner FAQs
+### 8.1 🔍 Beginner FAQs
 
 1. **How do I check the contents of a `.tar.gz` without extracting?**
    - Use `tar -tzf archive.tar.gz`.
@@ -530,7 +530,7 @@ Here are some common pitfalls you may encounter.
 3. **Do I need sudo to extract archives?**
    - Generally no, unless you’re extracting into directories requiring privileged access (e.g., `/usr/local`).
 
-### 8.2 🟡 Intermediate FAQs
+### 8.2 🧩 Intermediate FAQs
 
 1. **How do I do incremental backups with tar?**
    - Use `--listed-incremental` or a dedicated tool (e.g., `rsnapshot`).
@@ -540,7 +540,7 @@ Here are some common pitfalls you may encounter.
    - On Debian/Ubuntu: `dpkg -L packagename`
    - On RHEL/CentOS: `rpm -ql packagename`
 
-### 8.3 🔴 SRE-Level FAQs
+### 8.3 💡 SRE-Level FAQs
 
 1. **How do I automate server environment replication on a large scale?**
    - Use configuration management tools like Ansible, Puppet, or Chef to define and enforce package states.
@@ -598,7 +598,7 @@ Here are some common pitfalls you may encounter.
 
 ## 11. 📚 Further Learning Resources
 
-### 11.1 🟢 Beginner Level
+### 11.1 🔍 Beginner Level
 
 1. [Linux Journey – Package Management](https://linuxjourney.com/lesson/package-management)
    - Interactive tutorial explaining basic package management on popular distros.
@@ -609,7 +609,7 @@ Here are some common pitfalls you may encounter.
 3. [TecMint – Compression in Linux](https://www.tecmint.com/compress-files-and-folders-in-linux/)
    - A practical guide to tools like gzip, bzip2, and zip.
 
-### 11.2 🟡 Intermediate Level
+### 11.2 🧩 Intermediate Level
 
 1. [Linux System Administrator’s Guide](https://tldp.org/LDP/sag/html/index.html)
    - In-depth references on archiving, backups, and operational best practices.
@@ -618,7 +618,7 @@ Here are some common pitfalls you may encounter.
 3. [Red Hat Official Docs](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/)
    - Explore `yum`, `dnf`, and RPM details for advanced RHEL usage.
 
-### 11.3 🔴 SRE-Level
+### 11.3 💡 SRE-Level
 
 1. [Google SRE Book – Release Engineering](https://sre.google/sre-book/release-engineering/)
    - Best practices for packaging, deploying, and maintaining production software.

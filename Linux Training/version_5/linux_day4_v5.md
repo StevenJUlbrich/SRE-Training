@@ -14,19 +14,19 @@ Welcome to **Day 4** of your Linux SRE Training! Today’s focus is on **text pr
 
 ### Learning Objectives
 
-#### 🟢 Beginner
+#### 🔍 Beginner
 
 1. Understand how to perform basic searches with `grep`
 2. Locate files and directories using `find` with simple criteria
 3. Apply fundamental pipes and redirection for basic data processing
 
-#### 🟡 Intermediate
+#### 🧩 Intermediate
 
 4. Use advanced `grep` and `find` options to filter massive logs and directories
 5. Build multi-command pipelines for routine operational tasks
 6. Redirect outputs and inputs safely and systematically in real scenarios
 
-#### 🔴 SRE-Level
+#### 💡 SRE-Level
 
 7. Correlate logs across distributed systems using complex `grep` patterns
 8. Automate large-scale file searches and modifications via scripts
@@ -73,7 +73,7 @@ Welcome to **Day 4** of your Linux SRE Training! Today’s focus is on **text pr
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Search for the word "error" in app.log (case-sensitive)
@@ -82,7 +82,7 @@ $ grep "error" app.log
 2025-03-29 11:00:05 ERROR Database timeout occurred
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Perform a recursive, case-insensitive search for 'login failed' in /var/log
@@ -91,7 +91,7 @@ $ grep -ir "login failed" /var/log
 /var/log/auth.log:Mar 29 10:01:12 server sshd[2233]: PAM 1 more login failed...
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Search for errors or warnings across multiple logs, showing 2 lines of context
@@ -136,7 +136,7 @@ $ grep -E -C 2 "(ERROR|WARN)" /var/log/app/*.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Find all .txt files in the current directory
@@ -145,7 +145,7 @@ $ find . -name "*.txt"
 ./backup/config-old.txt
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Search for directories named "archive", ignoring case
@@ -154,7 +154,7 @@ $ find /var -type d -iname "archive"
 /var/www/logs/archive
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Find logs over 200MB in /var/log and compress them automatically
@@ -194,7 +194,7 @@ Pipes (`|`) feed the standard output of one command into the standard input of a
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # List all files, then filter only those containing "report"
@@ -203,7 +203,7 @@ monthly_report.txt
 report_summary.doc
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Check running processes, sort by memory usage, and view top 5
@@ -213,7 +213,7 @@ root       2231  25.9  1.1  99348 10480 ?       Sl   Mar29   8:55 /usr/bin/pytho
 ...
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Extract IP addresses from auth.log, find unique ones, and count occurrences
@@ -259,14 +259,14 @@ Redirection allows you to direct a command’s output to files or read input fro
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Save the list of files to filelist.txt (overwrite if exists)
 $ ls /etc > filelist.txt
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Append the current memory status to system_report.txt
@@ -274,7 +274,7 @@ $ free -h >> system_report.txt
 # Now system_report.txt grows with new data each time you run the command
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Capture both output and errors from a backup script in separate files
@@ -310,19 +310,19 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 
 ## 5. Hands-On Exercises
 
-### 🟢 Beginner Exercises
+### 🔍 Beginner Exercises
 
 1. **Basic Grep**: Create a file named `sample.txt` containing some text. Use `grep` to find a specific word in it.
 2. **Find by Name**: In your home directory, locate any file ending with `.sh` using `find`.
 3. **Redirect Output**: Run `ls -l /etc` and redirect the output into a file called `etc_list.txt`.
 
-### 🟡 Intermediate Exercises
+### 🧩 Intermediate Exercises
 
 1. **Recursive Grep**: In `/var/log`, search for the word `error` in all files recursively. Use an option to show line numbers.
 2. **File Size Hunt**: Use `find` to locate files larger than 50MB in `/var/log` and output the list to `large_logs.txt`.
 3. **Pipeline Sorting**: Generate a list of running processes (`ps aux`), then pipe to `grep` for processes containing `root`, and finally sort by memory usage.
 
-### 🔴 SRE-Level Exercises
+### 💡 SRE-Level Exercises
 
 1. **Multi-Service Log Analysis**: Combine `grep` and pipes to extract error lines from multiple log files (e.g., `app.log`, `db.log`), and store them in `all_errors.log`.
 2. **Disk Cleanup Script**: Use `find` with `-exec` or piping to `xargs` to automatically compress or remove logs older than 7 days in `/var/log`.
@@ -332,19 +332,19 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 
 ## 6. Quiz Questions
 
-### 🟢 Beginner
+### 🔍 Beginner
 
 1. **Which flag in `grep` makes the search case-insensitive?**
 2. **What does `>` do when used after a command?**
 3. **Which command searches for `.conf` files in `/etc`?** (Fill in the blank: `find /etc ______ "*.conf"`)
 
-### 🟡 Intermediate
+### 🧩 Intermediate
 
 1. **How do you show line numbers with `grep`?** (Which option?)
 2. **Which command locates files over 100MB in size?** (Fill in the blank: `find /var/log ______ +100M`)
 3. **What does the `|` operator do in `ls | grep script`?**
 
-### 🔴 SRE-Level
+### 💡 SRE-Level
 
 1. **How can you redirect both stdout and stderr to the same file?** (Provide the redirection operator)
 2. **In a pipeline (`cmd1 | cmd2 | cmd3`), which command receives the output of `cmd2`?**
@@ -381,7 +381,7 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 
 ## 8. FAQ
 
-### 🟢 Beginner (3)
+### 🔍 Beginner (3)
 
 1. **Can I use `grep` on multiple files at once?**  
    Yes. Simply list files: `grep "pattern" file1.txt file2.txt`.
@@ -392,7 +392,7 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 3. **Is `>` the same as copy-and-paste into a file?**  
    Functionally similar for text output, but `>` is more precise and overwrites the file automatically.
 
-### 🟡 Intermediate (3)
+### 🧩 Intermediate (3)
 
 1. **How can I use a pattern file with `grep`?**  
    Use `-f patternfile.txt`, where each line in `patternfile.txt` is treated as a pattern.
@@ -403,7 +403,7 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 3. **What happens if I combine `>` and `>>` in the same command?**  
    The last operator in the sequence determines whether you overwrite or append (not recommended to mix them).
 
-### 🔴 SRE-Level (3)
+### 💡 SRE-Level (3)
 
 1. **How do I avoid scanning NFS or special filesystems when using `find`?**  
    Use flags like `-xdev` or manually prune directories that cross mount points.
@@ -466,7 +466,7 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 
 ## 11. Further Learning Resources
 
-### 🟢 Beginner (2–3 Resources)
+### 🔍 Beginner (2–3 Resources)
 
 1. **[Grep Tutorial (Linuxize)](https://linuxize.com/post/grep-command/)**  
    Comprehensive coverage of basic grep usage and flags—perfect to build foundational skills.
@@ -475,7 +475,7 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 3. **[Redirection & Pipes (Ryan’s Tutorials)](https://ryanstutorials.net/linuxtutorial/piping.php)**  
    Introduces piping and redirection with visuals—great for seeing data flow.
 
-### 🟡 Intermediate (2–3 Resources)
+### 🧩 Intermediate (2–3 Resources)
 
 1. **[GNU grep Manual](https://www.gnu.org/software/grep/manual/grep.html)**  
    Delivers in-depth explanations of regex syntax, performance considerations, and advanced usage.
@@ -484,7 +484,7 @@ $ /usr/local/bin/db_backup.sh > /tmp/backup_stdout.log 2> /tmp/backup_stderr.log
 3. **[Bash Pipelines in Practice (DigitalOcean Tutorial)](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-i-o-redirection)**  
    Provides advanced examples of chaining commands and redirecting streams effectively.
 
-### 🔴 SRE-Level (2–3 Resources)
+### 💡 SRE-Level (2–3 Resources)
 
 1. **[SRE Edition: Log Searching Strategies (Datadog Blog)](https://www.datadoghq.com/blog/log-analysis-monitoring/)**  
    Discusses best practices for large-scale log searching and correlation.

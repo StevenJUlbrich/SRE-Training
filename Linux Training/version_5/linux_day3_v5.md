@@ -91,7 +91,7 @@ Below are the four key commands: **chmod**, **chown**, **chgrp**, and **sudo**. 
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Grant read, write to the owner, read-only to group and others
@@ -100,7 +100,7 @@ $ chmod 644 notes.txt
 # Explanation: Numeric notation 644 sets owner=rw, group=r, others=r
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Recursively set owner full permissions, group read and execute, others no access
@@ -109,7 +109,7 @@ $ chmod -R 750 /home/shared
 # Operational Significance: Restricts a shared folder for tighter control
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Symbolically add the sticky bit to a directory for shared files
@@ -149,7 +149,7 @@ $ chmod +t /var/public_drop
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Change the file owner to 'student'
@@ -157,7 +157,7 @@ $ sudo chown student class_notes.txt
 # Explanation: Owner is now 'student'. Group remains unchanged.
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Recursively change the owner of a directory to 'webuser'
@@ -165,7 +165,7 @@ $ sudo chown -R webuser /var/www/app
 # Operational Context: In a dev environment, ensuring webuser can manage these files
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Transfer ownership of logs to a specialized logs group
@@ -204,7 +204,7 @@ $ sudo chown root:loggrp /var/log/myapp.log
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Change group ownership to 'developers'
@@ -212,7 +212,7 @@ $ sudo chgrp developers docs/
 # Explanation: All users in 'developers' group can now share doc access
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Recursively grant 'auditteam' group ownership of log files
@@ -220,7 +220,7 @@ $ sudo chgrp -R auditteam /var/log/secure_app
 # Operational Context: Allows a specialized team to read secure logs
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Rotate group ownership for phased maintenance schedules
@@ -259,7 +259,7 @@ $ sudo chgrp -R maintwindow /usr/local/maintenance_scripts
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Update package lists
@@ -267,7 +267,7 @@ $ sudo apt update
 # Explanation: The user is briefly elevated to root to fetch package info
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Edit a critical config file
@@ -275,7 +275,7 @@ $ sudo vim /etc/nginx/nginx.conf
 # Operational Significance: The file belongs to root, so normal users need sudo
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Investigate allowed privileges for a specific user in complex environments

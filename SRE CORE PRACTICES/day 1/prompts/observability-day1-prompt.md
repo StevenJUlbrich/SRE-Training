@@ -46,7 +46,7 @@ Beginners to Intermediate SREs and DevOps practitioners (ages 23-58, with 2-20 y
 [Include a Metric Types Comparison Diagram here]
 
 ### 📚 Core Concept: Logs
-* 🟢 **Beginner Analogy:** Simple real-world comparison (like journey journal)
+* 🔍 **Beginner Analogy:** Simple real-world comparison (like journey journal)
 * 🖼️ **Visual Representation:** Clear Mermaid diagram illustrating log processing flow
 * 🔬 **Technical Explanation:** Definition, structure, levels, and purpose
 * 💼 **Support/SRE Application:** How logs enable debugging and troubleshooting
@@ -58,7 +58,7 @@ Beginners to Intermediate SREs and DevOps practitioners (ages 23-58, with 2-20 y
 [Include a Structured vs. Unstructured Logs Comparison Diagram here]
 
 ### 📚 Core Concept: Traces
-* 🟢 **Beginner Analogy:** Simple real-world comparison (like GPS tracking a trip)
+* 🔍 **Beginner Analogy:** Simple real-world comparison (like GPS tracking a trip)
 * 🖼️ **Visual Representation:** Clear Mermaid diagram illustrating distributed tracing
 * 🔬 **Technical Explanation:** Definition, spans, context propagation, and purpose
 * 💼 **Support/SRE Application:** How traces enable performance analysis and debugging
@@ -711,7 +711,7 @@ Remember to maintain the "brick by brick" learning approach, ensuring each conce
 ## Invocations Statement
 Generate a comprehensive Day 1 observability training module focused on the Three Pillars of Observability (metrics, logs, and traces). Follow the "brick by brick" learning approach, introducing fundamental concepts and building to advanced SRE-level techniques.
 
-Include detailed explanations of each pillar, how they interrelate, and practical implementation examples using Python. Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🟢), intermediate (🟡), and SRE (🔴) levels.
+Include detailed explanations of each pillar, how they interrelate, and practical implementation examples using Python. Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🔍), intermediate (🧩), and SRE (💡) levels.
 
 Create the specified Mermaid diagrams to visualize data flow, component interactions, and implementation patterns. For each code example, include sequence diagrams showing execution flow and component diagrams showing system interactions.
 

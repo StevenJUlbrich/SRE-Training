@@ -74,7 +74,7 @@ Variables in shell scripts store data values used by commands and functions. The
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 #!/bin/bash
@@ -86,7 +86,7 @@ echo "Hello, $name!"
 
 *Explanation*: You assign a string to `name` and then echo it.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 #!/bin/bash
@@ -103,7 +103,7 @@ echo "Backup completed for $servername!"
 
 *Explicit context*: In an operations environment, storing `servername` and `backup_dir` as variables is more flexible than hardcoding paths.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 #!/bin/bash
@@ -155,7 +155,7 @@ Command substitution allows the output of one command to be inserted into anothe
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 #!/bin/bash
@@ -167,7 +167,7 @@ echo "The date is $today"
 
 *Explanation*: You capture the current date/time and store it in a variable.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 #!/bin/bash
@@ -179,7 +179,7 @@ echo "There are $file_count log files in /var/log."
 
 *Explicit context*: Counting log files helps SREs track log rotation or usage.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 #!/bin/bash
@@ -232,7 +232,7 @@ Loops let you process multiple items, lines, or numbers repeatedly. SREs use loo
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 #!/bin/bash
@@ -247,7 +247,7 @@ done
 
 *Explanation*: A simple numeric loop.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 #!/bin/bash
@@ -277,7 +277,7 @@ done
 
 *Explicit context*: Checking the status of multiple servers in a single script.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 #!/bin/bash
@@ -336,7 +336,7 @@ Conditionals allow a script to react differently based on the system state or us
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 #!/bin/bash
@@ -354,7 +354,7 @@ fi
 
 *Explanation*: A simple if-else that checks numeric input.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 #!/bin/bash
@@ -380,7 +380,7 @@ esac
 
 *Explicit context*: Handling different HTTP status codes in a web application environment.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 #!/bin/bash
@@ -434,7 +434,7 @@ Environment variables define system-wide or session-wide data that child process
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 #!/bin/bash
@@ -447,7 +447,7 @@ echo "MYAPP_PORT is set to $MYAPP_PORT"
 
 *Explanation*: You export a variable so child processes can also see it.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 #!/bin/bash
@@ -463,7 +463,7 @@ echo "Connecting to database at $DB_HOST..."
 
 *Explicit context*: Ensures the environment is correctly configured before proceeding.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 #!/bin/bash
@@ -686,7 +686,7 @@ By bundling these steps, you combine conditionals, loops, environment variables,
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner (2–3)
+### 🔍 Beginner (2–3)
 
 1. **"Learn Shell Scripting Step by Step"** – [https://www.howtoforge.com/tutorial/bash-scripting-tutorial/](https://www.howtoforge.com/tutorial/bash-scripting-tutorial/).  
    *Teaches basic bash syntax, loops, and conditionals.*
@@ -695,14 +695,14 @@ By bundling these steps, you combine conditionals, loops, environment variables,
 3. **"ShellCheck Online Tool"** – [https://www.shellcheck.net/](https://www.shellcheck.net/).  
    *Lint your scripts to identify common beginner mistakes.*
 
-### 🟡 Intermediate (2–3)
+### 🧩 Intermediate (2–3)
 
 1. **"Advanced Bash-Scripting Guide"** – [https://tldp.org/LDP/abs/html/](https://tldp.org/LDP/abs/html/).  
    *Covers deeper scripting constructs, arrays, functions, and more.*
 2. **"Google Shell Style Guide"** – [https://google.github.io/styleguide/shellguide.html](https://google.github.io/styleguide/shellguide.html).  
    *Provides best practices and patterns for maintainable scripts.*
 
-### 🔴 SRE-Level (2–3)
+### 💡 SRE-Level (2–3)
 
 1. **"Linux System Administrator’s Guide"** – [https://www.kernel.org/doc/Documentation/admin-guide/](https://www.kernel.org/doc/Documentation/admin-guide/).  
    *Includes advanced topics that SREs frequently encounter.*

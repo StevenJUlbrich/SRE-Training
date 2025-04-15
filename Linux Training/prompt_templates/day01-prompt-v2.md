@@ -12,7 +12,7 @@ The merged document should preserve the strengths of both while eliminating redu
 ### V5 Strengths to Preserve
 1. Comprehensive three-tier structure (Beginner, Intermediate, SRE-Level)
 2. Detailed command tables with flags, syntax, and SRE usage context
-3. Color-coded examples (🟢, 🟡, 🔴) showing clear skill progression
+3. Color-coded examples (🔍, 🧩, 💡) showing clear skill progression
 4. "Beginner Analogy" sections for complex concepts
 5. System impact and security considerations for each command
 6. Instructional notes with targeted tips for different skill levels
@@ -70,7 +70,7 @@ For each command (`pwd`, `ls`, `cd`, `man`) and the filesystem concept, follow t
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: [clear purpose statement]
@@ -80,7 +80,7 @@ $ [command with basic options]
 
 *Explanation*: [Simple explanation for beginners]
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: [specific operational context]
@@ -90,7 +90,7 @@ $ [command with more complex options]
 
 *Explicit context*: [Operational significance explanation]
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: [realistic SRE scenario]
@@ -127,9 +127,9 @@ $ [complex command possibly combining with other tools]
 
 ### 🎯 Hands-On Exercises
 Include EXACTLY 3 exercises per tier with detailed instructions:
-- 🟢 **Beginner Exercises (Tier 1)**: Step-by-step guidance
-- 🟡 **Intermediate Exercises (Tier 2)**: Scenario-based challenges
-- 🔴 **SRE-Level Exercises (Tier 3)**: Complex troubleshooting
+- 🔍 **Beginner Exercises (Tier 1)**: Step-by-step guidance
+- 🧩 **Intermediate Exercises (Tier 2)**: Scenario-based challenges
+- 💡 **SRE-Level Exercises (Tier 3)**: Complex troubleshooting
 - Each exercise must include:
   - Specific task description
   - Clear goal statement
@@ -137,9 +137,9 @@ Include EXACTLY 3 exercises per tier with detailed instructions:
 
 ### 📝 Quiz Questions
 Include EXACTLY 3 questions per tier:
-- 🟢 **Beginner (Tier 1)**: Basic command comprehension
-- 🟡 **Intermediate (Tier 2)**: Application of commands to scenarios
-- 🔴 **SRE-Level (Tier 3)**: Complex problem-solving with multiple commands
+- 🔍 **Beginner (Tier 1)**: Basic command comprehension
+- 🧩 **Intermediate (Tier 2)**: Application of commands to scenarios
+- 💡 **SRE-Level (Tier 3)**: Complex problem-solving with multiple commands
 - Use V3's multiple-choice format but maintain V5's tiered approach
 - No inline answers (answers provided separately to instructors)
 
@@ -154,9 +154,9 @@ Include EXACTLY 3 realistic scenarios with:
 
 ### ❓ FAQ
 Include EXACTLY 3 FAQs per tier:
-- 🟢 **Beginner FAQs (Tier 1)**: Fundamental questions
-- 🟡 **Intermediate FAQs (Tier 2)**: Operational questions
-- 🔴 **SRE-Level FAQs (Tier 3)**: Complex system interaction questions
+- 🔍 **Beginner FAQs (Tier 1)**: Fundamental questions
+- 🧩 **Intermediate FAQs (Tier 2)**: Operational questions
+- 💡 **SRE-Level FAQs (Tier 3)**: Complex system interaction questions
 - Each FAQ must include:
   - Realistic question
   - Comprehensive answer
@@ -183,13 +183,13 @@ Include both:
 ### 📚 Further Learning Resources
 For each tier, include EXACTLY the specified number of resources:
 
-#### 🟢 Beginner (Tier 1): EXACTLY 2-3 resources  
+#### 🔍 Beginner (Tier 1): EXACTLY 2-3 resources  
 - Each with direct link, clear description, and beginner relevance
 
-#### 🟡 Intermediate (Tier 2): EXACTLY 2-3 resources  
+#### 🧩 Intermediate (Tier 2): EXACTLY 2-3 resources  
 - Each with direct link, clear description, and operational relevance
 
-#### 🔴 SRE-Level (Tier 3): EXACTLY 2-3 resources  
+#### 💡 SRE-Level (Tier 3): EXACTLY 2-3 resources  
 - Each with direct link, clear description, and advanced SRE application
 
 ## 🔄 Integration Instructions
@@ -209,7 +209,7 @@ For each section:
 5. Maintain V5's security and performance considerations
 
 ### 3. Command Examples
-- Use V5's color-coded tiered examples (🟢, 🟡, 🔴)
+- Use V5's color-coded tiered examples (🔍, 🧩, 💡)
 - Incorporate V3's clear terminal outputs
 - Ensure each example demonstrates clear progression in complexity
 - Provide explicit operational context for intermediate and SRE-level examples
@@ -218,7 +218,7 @@ For each section:
 - Maintain consistent use of emojis for section markers
 - Use tables for command options and flags
 - Format code examples in proper bash code blocks
-- Use color indicators consistently (🟢, 🟡, 🔴) for skill levels
+- Use color indicators consistently (🔍, 🧩, 💡) for skill levels
 
 ## 🛑 Requirements
 1. No placeholders or generic content

@@ -14,9 +14,9 @@ Create a comprehensive set of quiz questions that:
 ## 📝 Quiz Structure Requirements
 
 Create exactly 15 quiz questions with the following distribution:
-- 5 Beginner-level questions (🟢)
-- 5 Intermediate-level questions (🟡)
-- 5 SRE-level questions (🔴)
+- 5 Beginner-level questions (🔍)
+- 5 Intermediate-level questions (🧩)
+- 5 SRE-level questions (💡)
 
 Each question must:
 - Clearly indicate its difficulty level with the appropriate emoji
@@ -36,7 +36,7 @@ Each question must:
 Format each question as:
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 [Question text]
 

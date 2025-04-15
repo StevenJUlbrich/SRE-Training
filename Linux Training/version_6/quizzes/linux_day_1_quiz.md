@@ -1,7 +1,7 @@
 
 ## 📝 Quiz Questions
 
-### 🟢 Beginner (Tier 1)
+### 🔍 Beginner (Tier 1)
 
 1. Which command shows your current directory?
    - a) `ls`
@@ -21,7 +21,7 @@
    - c) `/`
    - d) `/etc`
 
-### 🟡 Intermediate (Tier 2)
+### 🧩 Intermediate (Tier 2)
 
 4. To sort files by **modification time** (newest first), which command is correct?
    - a) `ls -lm`
@@ -41,7 +41,7 @@
    - c) `/var/log`
    - d) `/bin`
 
-### 🔴 SRE-Level (Tier 3)
+### 💡 SRE-Level (Tier 3)
 
 7. During an incident, which location do you **most** likely check first to view recent error logs?
    - a) `/home/user`

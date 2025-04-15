@@ -18,9 +18,9 @@ In large-scale systems, logs and config files explode in size—and the time win
 
 ### **Tiered Objectives**
 
-- **Beginner (🟢)**: Master basic searches with `grep` and `find`, plus simple use of pipes and redirection.  
-- **Intermediate (🟡)**: Apply advanced flags, chain multiple commands, handle bigger directories, and manage I/O carefully.  
-- **SRE-Level (🔴)**: Automate large-scale searches, correlate logs from multiple sources, and optimize performance under pressure.
+- **Beginner (🔍)**: Master basic searches with `grep` and `find`, plus simple use of pipes and redirection.  
+- **Intermediate (🧩)**: Apply advanced flags, chain multiple commands, handle bigger directories, and manage I/O carefully.  
+- **SRE-Level (💡)**: Automate large-scale searches, correlate logs from multiple sources, and optimize performance under pressure.
 
 ### **Connection to Previous & Future Lessons**
 
@@ -73,17 +73,17 @@ Luis stared at a mountain of logs, searching for suspicious references to proces
 
 **Tiered Examples**:
 
-- **🟢 Beginner**:  
+- **🔍 Beginner**:  
   ```bash
   # Basic search for 'error' in app.log
   grep "error" app.log
   ```
-- **🟡 Intermediate**:  
+- **🧩 Intermediate**:  
   ```bash
   # Recursive, case-insensitive
   grep -ir "login failed" /var/log
   ```
-- **🔴 SRE-Level**:  
+- **💡 SRE-Level**:  
   ```bash
   # Extended regex, plus context lines
   grep -E -C 2 "(ERROR|WARN)" /var/log/custom_*.log
@@ -120,17 +120,17 @@ Luis discovered some processes were spawning from unknown directories. He turned
 
 **Tiered Examples**:
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Locate .txt files in current directory
   find . -name "*.txt"
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Search directories named "archive" ignoring case
   find /var -type d -iname "archive"
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Compress logs larger than 200MB
   find /var/log -type f -size +200M -exec gzip {} \;
@@ -161,17 +161,17 @@ As logs ballooned, Luis realized single commands wouldn’t suffice. **Pipes** (
 
 **Tiered Examples**:
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Filter ls output for "report"
   ls | grep "report"
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Sort processes by CPU usage, then view the top 5
   ps aux | sort -rnk 3 | head -5
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Extract IPs, find unique ones, count occurrences
   grep -oE "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" /var/log/auth.log \
@@ -206,17 +206,17 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 
 **Tiered Examples**:
 
-- **🟢 Beginner**:
+- **🔍 Beginner**:
   ```bash
   # Overwrite etc_list.txt
   ls /etc > etc_list.txt
   ```
-- **🟡 Intermediate**:
+- **🧩 Intermediate**:
   ```bash
   # Append free -h output to system_report.txt
   free -h >> system_report.txt
   ```
-- **🔴 SRE-Level**:
+- **💡 SRE-Level**:
   ```bash
   # Separate stdout/stderr from a script
   /usr/local/bin/cleanup.sh > cleanup_out.log 2> cleanup_err.log
@@ -236,7 +236,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 
 ## **5. Hands-On Exercises**
 
-### **🟢 Beginner Exercises**
+### **🔍 Beginner Exercises**
 
 1. **Basic Grep**  
    - Create `sample.txt` with some random lines. `grep` for a keyword.  
@@ -245,7 +245,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 3. **Redirect Output**  
    - `ls -l /etc` into `etc_list.txt`, then check file contents.
 
-### **🟡 Intermediate Exercises**
+### **🧩 Intermediate Exercises**
 
 1. **Recursive Grep**  
    - Search `/var/log` for `error`, ignoring case, line-numbered.  
@@ -254,7 +254,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 3. **Pipeline Sorting**  
    - `ps aux | grep root | sort -rnk 3` to see root processes by CPU usage.
 
-### **🔴 SRE-Level Exercises**
+### **💡 SRE-Level Exercises**
 
 1. **Multi-Service Log Analysis**  
    - Combine `grep` and pipes to extract error lines across multiple logs. Save to `all_errors.log`.  
@@ -289,7 +289,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 
 ## **7. FAQ**
 
-### **🟢 Beginner FAQs**
+### **🔍 Beginner FAQs**
 
 1. **Can I use grep on multiple files at once?**  
    Yes: `grep "pattern" file1.txt file2.txt`.
@@ -298,7 +298,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 3. **Is `>` the same as copy-pasting text into a file?**  
    It overwrites the file immediately, so yes—though it’s automated, not interactive.
 
-### **🟡 Intermediate FAQs**
+### **🧩 Intermediate FAQs**
 
 1. **Can grep read patterns from a file?**  
    Yes, with `grep -f patternfile.txt`. Each line in the pattern file is matched.  
@@ -307,7 +307,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 3. **What if I combine `>` and `>>` in the same command?**  
    Typically, the last operator in sequence is used. Combining them is confusing—avoid it.
 
-### **🔴 SRE-Level FAQs**
+### **💡 SRE-Level FAQs**
 
 1. **How do I skip special or remote filesystems with find?**  
    Use `-xdev` to skip other filesystems, or `-prune` to exclude dirs.  
@@ -387,7 +387,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
 
 ## **10. Further Learning Resources**
 
-### **🟢 Beginner**
+### **🔍 Beginner**
 
 1. **Grep Tutorial (Linuxize)**  
    [https://linuxize.com/post/grep-command/](https://linuxize.com/post/grep-command/)  
@@ -396,7 +396,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
    [https://www.geeksforgeeks.org/find-command-in-linux-with-examples/](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)  
    Simple examples to practice.
 
-### **🟡 Intermediate**
+### **🧩 Intermediate**
 
 1. **GNU grep Manual**  
    [https://www.gnu.org/software/grep/manual/grep.html](https://www.gnu.org/software/grep/manual/grep.html)  
@@ -405,7 +405,7 @@ Finally, Luis needed to gather outputs for a quick report. **Redirection** decid
    [https://www.linode.com/docs/guides/find-command/](https://www.linode.com/docs/guides/find-command/)  
    Detailed usage with real-world scenarios.
 
-### **🔴 SRE-Level**
+### **💡 SRE-Level**
 
 1. **Google SRE Workbook: Alerting & Monitoring**  
    [https://sre.google/workbook/alerting-on-sli/](https://sre.google/workbook/alerting-on-sli/)  

@@ -93,7 +93,7 @@ Below are **five** detailed breakdowns: four commands (`pwd`, `ls`, `cd`, `man`)
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Confirm your current directory
@@ -103,7 +103,7 @@ $ pwd
 
 *Explanation*: The shell displays your absolute path, showing you're in `/home/student` directory.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Checking actual directory behind a symlink
@@ -113,7 +113,7 @@ $ pwd -P
 
 *Explicit context*: This helps you see the *real* path if `/home/student/my_symlinked_folder` is just a symbolic link to another location.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Ensuring correct directory before critical operations
@@ -160,7 +160,7 @@ $ if [[ "$(pwd -P)" == "/var/www/production" ]]; then
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Basic directory listing
@@ -170,7 +170,7 @@ Documents  Downloads  notes.txt
 
 *Explanation*: Shows the items in your current directory at a glance.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Checking logs sorted by last modification time
@@ -182,7 +182,7 @@ $ ls -lt /var/log
 
 *Explicit context*: Helps you identify which log file was updated most recently (important in diagnosing live issues).
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Finding large or hidden files quickly
@@ -228,7 +228,7 @@ drwxr-xr-x 12 root root 4.0K Mar 29 08:00 ..
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Moving into Documents folder
@@ -239,7 +239,7 @@ $ pwd
 
 *Explanation*: Confirms you have changed into the `Documents` directory.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Jumping to /var/log from home, then returning
@@ -250,7 +250,7 @@ $ cd -
 
 *Explicit context*: Quickly toggling between logs and your home directory to reference scripts or notes.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Navigating across multiple directories in a script
@@ -297,7 +297,7 @@ systemctl restart myapp
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Checking manual for pwd
@@ -306,7 +306,7 @@ $ man pwd
 
 *Explanation*: Opens the full documentation for `pwd`.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Searching for commands related to "disk"
@@ -318,7 +318,7 @@ diskpart (8)       - partition a hard disk
 
 *Explicit context*: Helps you discover tools you might not know exist.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Investigating advanced usage of systemd
@@ -361,7 +361,7 @@ While not a single executable command, understanding the **filesystem hierarchy*
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Listing top-level directories from root
@@ -373,7 +373,7 @@ boot  home  lib64 mnt    run   sys   var
 
 *Explanation*: You see the structure from the root directory.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Checking contents of /etc to review configuration files
@@ -385,7 +385,7 @@ drwxr-xr-x 2 root root  4096 Mar  1 07:30 cron.d
 
 *Explicit context*: Quick scan of config files is typical during a configuration review or pre-deployment check.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Searching logs recursively in /var for "ERROR"
@@ -436,7 +436,7 @@ Understanding how these commands and the filesystem impact your system is vital:
 
 ## 🎯 Hands-On Exercises
 
-### 🟢 Beginner Exercises (Tier 1)
+### 🔍 Beginner Exercises (Tier 1)
 
 1. **Basic Navigation**  
    - Task: Open a terminal, run `pwd`, then `ls`. Write down the contents of your current directory.  
@@ -450,7 +450,7 @@ Understanding how these commands and the filesystem impact your system is vital:
    - Task: Run `man pwd`. Scroll through it, then exit with `q`.  
    - Goal: Familiarize yourself with reading official documentation.
 
-### 🟡 Intermediate Exercises (Tier 2)
+### 🧩 Intermediate Exercises (Tier 2)
 
 1. **Detailed Listing & Sorting**  
    - Task: Navigate to `/var/log`, run `ls -lt` to sort files by last modification. Identify which file was updated most recently.  
@@ -464,7 +464,7 @@ Understanding how these commands and the filesystem impact your system is vital:
    - Task: Explore `/etc` with `ls /etc`. Locate a familiar config file (e.g., `sshd_config`) and note its permissions using `ls -l`.  
    - Goal: Relate real config files to the system’s operational state.
 
-### 🔴 SRE-Level Exercises (Tier 3)
+### 💡 SRE-Level Exercises (Tier 3)
 
 1. **Deployment Directory Check**  
    - Task: Write a small script that checks if you are in `/var/www/production` before pulling new code from Git. If not, echo a warning.  
@@ -482,7 +482,7 @@ Understanding how these commands and the filesystem impact your system is vital:
 
 ## 📝 Quiz Questions
 
-### 🟢 Beginner (Tier 1)
+### 🔍 Beginner (Tier 1)
 
 1. Which command shows your current working directory?  
    A. `pwd`  
@@ -501,7 +501,7 @@ Understanding how these commands and the filesystem impact your system is vital:
 
 ---
 
-### 🟡 Intermediate (Tier 2)
+### 🧩 Intermediate (Tier 2)
 
 4. To **reverse** the order of a long listing, you would use:  
    A. `ls -lr`  
@@ -520,7 +520,7 @@ Understanding how these commands and the filesystem impact your system is vital:
 
 ---
 
-### 🔴 SRE-Level (Tier 3)
+### 💡 SRE-Level (Tier 3)
 
 7. During an outage, you need to find logs mentioning “timeout.” What combination of commands might you use?  
    A. `cd /etc && man logs`  
@@ -570,7 +570,7 @@ Below are **three** realistic scenarios, each with symptoms, potential causes, d
 
 ## ❓ FAQ
 
-### 🟢 Beginner (Tier 1)
+### 🔍 Beginner (Tier 1)
 
 1. **Q**: Why is Linux often preferred over other operating systems for servers?  
    **A**: Linux offers stability, security, and transparency (open-source), making it reliable for server environments.
@@ -583,7 +583,7 @@ Below are **three** realistic scenarios, each with symptoms, potential causes, d
 
 ---
 
-### 🟡 Intermediate (Tier 2)
+### 🧩 Intermediate (Tier 2)
 
 1. **Q**: How can I see hidden files and directories by default without always typing `ls -a`?  
    **A**: Many shells let you configure an alias, e.g., `alias ls='ls -a --color=auto'`. Adjust to your preference in `~/.bashrc` or `~/.zshrc`.
@@ -596,7 +596,7 @@ Below are **three** realistic scenarios, each with symptoms, potential causes, d
 
 ---
 
-### 🔴 SRE-Level (Tier 3)
+### 💡 SRE-Level (Tier 3)
 
 1. **Q**: How do I quickly navigate to multiple directories in a single command?  
    **A**: You can chain `cd` commands with `&&`. For example: `cd /etc && ls && cd /var/log && ls`. This only proceeds if each step succeeds.
@@ -704,7 +704,7 @@ Below are **three** realistic scenarios, each with symptoms, potential causes, d
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner (2–3)
+### 🔍 Beginner (2–3)
 
 1. **“Linux Journey: Command Line Basics”**  
    - Link: [https://linuxjourney.com/lesson/the-shell](https://linuxjourney.com/lesson/the-shell)  
@@ -716,7 +716,7 @@ Below are **three** realistic scenarios, each with symptoms, potential causes, d
    - Comprehensive free ebook guiding you through basic to intermediate shell usage.  
    - Helps beginners build confidence in daily CLI tasks.
 
-### 🟡 Intermediate (2–3)
+### 🧩 Intermediate (2–3)
 
 1. **“Linux File System Hierarchy”**  
    - Link: [https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html](https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html)  
@@ -728,7 +728,7 @@ Below are **three** realistic scenarios, each with symptoms, potential causes, d
    - Breaks down shell commands and flags from man pages.  
    - Perfect for quickly clarifying complex command usage in your daily workflow.
 
-### 🔴 SRE-Level (2–3)
+### 💡 SRE-Level (2–3)
 
 1. **“Google SRE Book – Chapter: Handling Emergencies”**  
    - Link: [https://sre.google/sre-book/](https://sre.google/sre-book/)  

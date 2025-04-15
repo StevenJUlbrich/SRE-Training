@@ -3,7 +3,7 @@ Below is the comprehensive answer sheet for the 20 quiz questions previously gen
 ---
 
 ## Answer 1: Basic Terminology
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which of the following statements best describes a table in a relational database?
@@ -38,7 +38,7 @@ Use `DESCRIBE table_name;` in SQL*Plus or the GUI in SQL Developer to inspect th
 ---
 
 ## Answer 2: Key Fundamentals
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which characteristic is TRUE of a primary key in Oracle?
@@ -73,7 +73,7 @@ Define primary keys at table creation or using an `ALTER TABLE` statement to enf
 ---
 
 ## Answer 3: Basic SELECT Statement
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which of the following SQL statements retrieves all columns from a table named EMPLOYEES in Oracle?
@@ -108,7 +108,7 @@ When performance or clarity matters, avoid `SELECT *` and explicitly list needed
 ---
 
 ## Answer 4: Basic ER Diagram
-🟢 Beginner | Multiple Choice | Diagram-Based
+🔍 Beginner | Multiple Choice | Diagram-Based
 
 **Question:**  
 Examine the following simple entity-relationship diagram:
@@ -162,7 +162,7 @@ The "1" indicates a single department record, while "n" indicates multiple emplo
 ---
 
 ## Answer 5: Oracle Tools
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 Which Oracle tool is a command-line interface used primarily for running SQL commands and PL/SQL blocks?
@@ -197,7 +197,7 @@ Knowing basic command-line tools is critical for scripting, automation, and quic
 ---
 
 ## Answer 6: Basic SQL Clauses
-🟢 Beginner | Multiple Choice
+🔍 Beginner | Multiple Choice
 
 **Question:**  
 In a basic SELECT statement, the FROM clause is used to:
@@ -232,7 +232,7 @@ Always confirm your `FROM` sources when troubleshooting “table not found” or
 ---
 
 ## Answer 7: Query Execution Flow
-🟢 Beginner | Multiple Choice | Diagram-Based
+🔍 Beginner | Multiple Choice | Diagram-Based
 
 **Question:**  
 Refer to this simplified query execution flow:
@@ -280,7 +280,7 @@ The “Optimization” node is where the Cost-Based Optimizer (CBO) applies stat
 ---
 
 ## Answer 8: Foreign Key Constraints
-🟡 Intermediate | Multiple Choice
+🧩 Intermediate | Multiple Choice
 
 **Question:**  
 Which SQL statement creates a foreign key in an Oracle table named ORDERS that references the CUSTOMERS table’s primary key CUSTOMER_ID?
@@ -315,7 +315,7 @@ Always name constraints logically (e.g., `fk_orders_customers`) for easier ident
 ---
 
 ## Answer 9: Oracle Database Structure
-🟡 Intermediate | Multiple Choice | Diagram-Based
+🧩 Intermediate | Multiple Choice | Diagram-Based
 
 **Question:**  
 Examine the following Oracle database structure diagram:
@@ -363,7 +363,7 @@ Use `DBA_DATA_FILES` and `DBA_TABLESPACES` views to check size, status, and auto
 ---
 
 ## Answer 10: Table Joins
-🟡 Intermediate | Multiple Choice | Diagram-Based
+🧩 Intermediate | Multiple Choice | Diagram-Based
 
 **Question:**  
 Analyze the following join diagram:
@@ -405,7 +405,7 @@ Inner joins only return rows where the join condition matches, while outer joins
 ---
 
 ## Answer 11: Data Dictionary Views
-🟡 Intermediate | True/False
+🧩 Intermediate | True/False
 
 **Question:**  
 Statement: The ALL_TABLES view in Oracle shows all the tables in the entire database, regardless of the current user’s privileges.
@@ -433,7 +433,7 @@ Visibility into database objects is essential for diagnosing issues. Knowing how
 ---
 
 ## Answer 12: Oracle Performance
-🟡 Intermediate | True/False
+🧩 Intermediate | True/False
 
 **Question:**  
 Statement: The V$SESSION view in Oracle provides details about current active sessions, including user, status, and machine information.
@@ -461,7 +461,7 @@ Actively monitoring sessions helps detect blocking sessions or runaway queries, 
 ---
 
 ## Answer 13: SQL Dialect Variations
-🟡 Intermediate | True/False
+🧩 Intermediate | True/False
 
 **Question:**  
 Statement: In Oracle, the VARCHAR2 data type is functionally identical to VARCHAR2 in PostgreSQL and SQL Server with no differences in behavior or limits.
@@ -489,7 +489,7 @@ Oracle recommends using `VARCHAR2` rather than `VARCHAR`. `VARCHAR` is retained 
 ---
 
 ## Answer 14: SQL WHERE
-🟡 Intermediate | Fill-in-the-Blank
+🧩 Intermediate | Fill-in-the-Blank
 
 **Question:**  
 Complete the following statement about the Oracle WHERE clause:
@@ -526,7 +526,7 @@ Use appropriate indexes on columns often referenced in the WHERE clause for bett
 ---
 
 ## Answer 15: Execution Plans
-🔴 SRE-Level | Fill-in-the-Blank
+💡 SRE-Level | Fill-in-the-Blank
 
 **Question:**  
 Complete the following statement regarding Oracle execution plans:
@@ -563,7 +563,7 @@ Gathering statistics or creating indexes on frequently queried columns can encou
 ---
 
 ## Answer 16: Oracle Recovery
-🔴 SRE-Level | Fill-in-the-Blank
+💡 SRE-Level | Fill-in-the-Blank
 
 **Question:**  
 Complete the following statement about Oracle recovery tools:
@@ -600,7 +600,7 @@ RMAN can work with Oracle’s catalog or control files for tracking backups. Alw
 ---
 
 ## Answer 17: Matching Oracle Views
-🔴 SRE-Level | Matching | Diagram-Based
+💡 SRE-Level | Matching | Diagram-Based
 
 **Question:**  
 Match each Oracle performance view in Column A to its description in Column B.
@@ -654,7 +654,7 @@ Combining these views with real-time monitoring tools (like OEM or third-party s
 ---
 
 ## Answer 18: Matching Constraints
-🔴 SRE-Level | Matching
+💡 SRE-Level | Matching
 
 **Question:**  
 Match each constraint type in Column A with its description in Column B.
@@ -698,7 +698,7 @@ Use `ALL_CONSTRAINTS` and `ALL_CONS_COLUMNS` to examine constraints in Oracle. N
 ---
 
 ## Answer 19: Oracle Troubleshooting
-🔴 SRE-Level | Ordering
+💡 SRE-Level | Ordering
 
 **Question:**  
 Arrange the following steps in the correct order when troubleshooting a slow query in Oracle:
@@ -733,7 +733,7 @@ After making changes (e.g., adding indexes), rerun `EXPLAIN PLAN` or `DBMS_XPLAN
 ---
 
 ## Answer 20: Oracle Flashback
-🔴 SRE-Level | Ordering
+💡 SRE-Level | Ordering
 
 **Question:**  
 Arrange the following steps to perform an Oracle Flashback Table operation:

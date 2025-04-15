@@ -18,9 +18,9 @@ Your task is to merge and enhance these into a comprehensive training module tha
 - Summary of learning topics + SRE relevance
 - Real-world SRE context: why this matters
 - Defined learning objectives with tiered markers:
-  - 🟢 Beginner objectives (min 3)
-  - 🟡 Intermediate objectives (min 3)
-  - 🔴 SRE-Level objectives (min 3)
+  - 🔍 Beginner objectives (min 3)
+  - 🧩 Intermediate objectives (min 3)
+  - 💡 SRE-Level objectives (min 3)
 - Tie-in to previous/future modules
 
 ### 📚 **Core Concepts:**
@@ -44,9 +44,9 @@ Each concept must include:
 
 #### **Examples with Progressive Complexity:**
 
-- 🟢 **Beginner:** (min 2)
-- 🟡 **Intermediate:** (min 2)
-- 🔴 **SRE-Level:** (min 2)
+- 🔍 **Beginner:** (min 2)
+- 🧩 **Intermediate:** (min 2)
+- 💡 **SRE-Level:** (min 2)
 
 Each example must include:
 - Realistic system output
@@ -80,17 +80,17 @@ Link to:
 
 ### 🎯 **Hands-On Exercises:**
 
-#### 🟢 Beginner (exactly 3)
+#### 🔍 Beginner (exactly 3)
 - Step-by-step
 - Expected output
 - SRE reflection question
 
-#### 🟡 Intermediate (exactly 3)
+#### 🧩 Intermediate (exactly 3)
 - Scenario-based
 - Multiple approaches
 - Evaluation criteria
 
-#### 🔴 SRE-Level (exactly 3)
+#### 💡 SRE-Level (exactly 3)
 - Realistic incidents
 - Minimal guidance
 - Ops constraints (e.g. disk space, perf)
@@ -98,14 +98,14 @@ Link to:
 
 ### 📝 **Quiz Questions:**
 
-#### 🟢 Beginner: 3–4
+#### 🔍 Beginner: 3–4
 - Multiple choice
 - Basic syntax & concepts
 
-#### 🟡 Intermediate: 3–4
+#### 🧩 Intermediate: 3–4
 - Scenario-based, combinations, error diagnosis
 
-#### 🔴 SRE-Level: 3–4
+#### 💡 SRE-Level: 3–4
 - Simulation, optimization, security, integration
 
 ### 🚧 **Common Issues and Troubleshooting:**
@@ -121,9 +121,9 @@ Link to:
 
 ### ❓ **FAQ:**
 
-#### 🟢 Beginner: exactly 3  
-#### 🟡 Intermediate: exactly 3  
-#### 🔴 SRE-Level: exactly 3  
+#### 🔍 Beginner: exactly 3  
+#### 🧩 Intermediate: exactly 3  
+#### 💡 SRE-Level: exactly 3  
 
 Each must include:
 - Real question
@@ -148,9 +148,9 @@ Each must include:
 
 ### 📚 **Further Learning Resources:**
 
-#### 🟢 Beginner: exactly 2–3  
-#### 🟡 Intermediate: exactly 2–3  
-#### 🔴 SRE-Level: exactly 2–3  
+#### 🔍 Beginner: exactly 2–3  
+#### 🧩 Intermediate: exactly 2–3  
+#### 💡 SRE-Level: exactly 2–3  
 
 Each with:
 - Link
