@@ -1,6 +1,3 @@
-Below is a **Day 5 Quiz** in accordance with the prompt instructions. It draws upon Jin’s Day 5 training content about SQL aggregations, grouping, window functions, performance considerations, and SRE-level best practices. No answers or solutions are provided here—only the questions.
-
----
 
 # **Day 5 Quiz**
 

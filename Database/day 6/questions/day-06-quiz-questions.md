@@ -1,346 +1,284 @@
-# **20 quiz questions** for Day 6 of the database training module
-
-Covering user accounts, permissions, and the SRE perspective on availability and performance. Each question is labeled with a difficulty level (🔍 Beginner, 🧩 Intermediate, 💡 Advanced/SRE) and follows the required formats and distribution. No answers are provided here; please supply them in a separate answer key document.
+# **Day 6 Quiz: The Follow-the-Sun Chronicles – Fatima & the Fortress of Access Control**
 
 ---
 
-## 🔍 BEGINNER-LEVEL QUESTIONS (7)
+## **Beginner-Level Questions (7)**
 
-### 1) Multiple Choice
-
-```
-## Question 1: Basic User Creation
+### 1. [Multiple Choice] System vs. Object Privileges  
 🔍 Beginner
 
-Which of the following commands correctly creates a new database user named 'analyst_user' in an Oracle environment, with the password 'StrongPass2025'?
+Fatima likens system privileges to “master keys” and object privileges to “room keys” in her Fortress of Access Control. Which statement best embodies that analogy?
 
-A. CREATE ROLE analyst_user IDENTIFIED BY 'StrongPass2025';
-B. CREATE USER analyst_user IDENTIFIED BY StrongPass2025;
-C. CREATE USER analyst_user IDENTIFIED BY 'StrongPass2025';
-D. NEW USER analyst_user WITH PASSWORD='StrongPass2025';
-```
+A. System privileges grant broad, database-wide actions, whereas object privileges apply only to specific tables, views, or procedures.  
+B. Object privileges are always more powerful than system privileges.  
+C. Both system and object privileges allow only read operations.  
+D. System privileges restrict all changes to a single table.
 
 ---
 
-### 2) Multiple Choice
-
-```
-## Question 2: System vs. Object Privileges
+### 2. [Multiple Choice] Fatima’s Over-Zealous Cleanup Incident  
 🔍 Beginner
 
-Which statement best describes the difference between system privileges and object privileges?
+In Fatima’s real-life example, a read-only service account lost `SELECT` privileges on a crucial table, causing chaos. What primarily caused this meltdown?
 
-A. System privileges apply only to a single schema, while object privileges apply to all database objects.
-B. System privileges allow actions affecting the entire database, while object privileges control access to specific objects like tables or views.
-C. System privileges give read-only access, and object privileges give read-write access.
-D. System privileges are used only for backup tasks, while object privileges are used only for performance tuning.
-```
+A. A user typed an incorrect SQL query.  
+B. Overly strict password policy locked out the account.  
+C. A well-intentioned but poorly monitored privileges cleanup revoked key permissions.  
+D. The read-only user was promoted to a superuser role.
 
 ---
 
-### 3) True/False
-
-```
-## Question 3: Principle of Least Privilege
+### 3. [Multiple Choice] Fatima’s Rule #1  
 🔍 Beginner
 
-The principle of least privilege states that users should only be granted the minimum permissions they need to perform their tasks effectively.
+Which principle is most consistent with Fatima’s Rule #1 regarding privileges?
 
-A. True
+A. Always give novices the broadest privileges so they can learn faster.  
+B. When in doubt, grant system privileges so no one is blocked.  
+C. Grant object-specific keys over system master keys to minimize meltdown vectors.  
+D. Audit logs are optional if roles are used.
+
+---
+
+### 4. [True/False] Monitoring & Auditing Impact  
+🔍 Beginner
+
+Statement: Fatima claims that having no audit logs is harmless, as it frees up database resources for real workloads.
+
+A. True  
 B. False
-```
 
 ---
 
-### 4) True/False
-
-```
-## Question 4: Read-Only vs. Read-Write
+### 5. [Fill-in-the-Blank] Basic “Fortress” Perspective  
 🔍 Beginner
 
-Granting read/write access to a database user always has lower security risk than granting read-only access.
+Complete the following statement aligned with Fatima’s fortress metaphor:  
+“In this fortress, an ________ is granted read-only keys to certain floors, while an ‘AppAdmin’ can open more sensitive areas.”
 
-A. True
+A. DBA intern  
+B. Analyst role  
+C. dev_intern  
+D. performance_sheriff
+
+---
+
+### 6. [Multiple Choice] Least Privilege for a BI User  
+🔍 Beginner
+
+Which scenario best exemplifies Fatima’s “least privilege” principle for a Business Intelligence user?
+
+A. Full DBA privileges on the entire environment.  
+B. GRANT SELECT, INSERT, and DROP on all production tables.  
+C. Read-only permissions restricted to specific views and tables needed for reporting.  
+D. Inheriting superuser status from a stacked role.
+
+---
+
+### 7. [Matching] Understanding the Basic Flowchart  
+🔍 Beginner
+
+Look at the abbreviated flowchart below, then match each label to the correct description.
+
+```mermaid
+flowchart TB
+  A["Permission Request"]
+  B{"Use Existing Role?"}
+  YesRole["Grant existing role"]
+  NoRole["Create new role"]
+  
+  A --> B
+  B -->|Yes| YesRole
+  B -->|No| NoRole
+```
+
+**Column A** (Labels)  
+1. Permission Request  
+2. Use Existing Role?  
+3. Grant existing role  
+4. Create new role  
+
+**Column B** (Definitions)  
+A. Evaluate whether a current role covers the needed permissions  
+B. The user’s request for new privileges  
+C. Allocate privileges using a pre-defined role  
+D. Build a specialized role with minimal privileges
+
+---
+
+## **Intermediate-Level Questions (7)**
+
+### 8. [Multiple Choice] Role-Stacking Risks  
+🧩 Intermediate
+
+Fatima recounts a “terrifying” incident where a developer inherited near-DBA powers from stacked roles. Which measure best prevents such hidden superuser escalation?
+
+A. Immediately locking out all developers from the database  
+B. Enforcing regular audits of role inheritance to spot over-privileged stacks  
+C. Making every user an admin so no one has an unfair advantage  
+D. Encouraging devs to pass around credentials
+
+---
+
+### 9. [Multiple Choice] GRANT vs. REVOKE  
+🧩 Intermediate
+
+Fatima’s analogy: **GRANT** is handing someone a key to a locked room, while **REVOKE** is taking it away. Which of the following is an example of a correct object-level GRANT?
+
+A. `GRANT CREATE USER TO dev_intern;`  
+B. `GRANT SELECT ON sales_data TO reporting_role;`  
+C. `REVOKE DBA ON ALL TABLES FROM dev_intern;`  
+D. `DROP ROLE reporting_role;`
+
+---
+
+### 10. [Multiple Choice] Rule #2: Documentation & Justification  
+🧩 Intermediate
+
+Fatima’s Rule #2 states: “All privileges must be documented, justified, and regularly audited.” How does she recommend fulfilling this rule effectively?
+
+A. Rely solely on memory for which privileges have been granted  
+B. Maintain a simple text file listing user privileges, updated monthly  
+C. Employ a structured audit trail (e.g., a table or system logs) that automatically tracks GRANT/REVOKE activities  
+D. Only track privileges for superuser roles, ignoring read-only accounts
+
+---
+
+### 11. [Ordering] Responding to Revoked Permissions Incident  
+🧩 Intermediate
+
+Arrange the following steps in the correct order, according to Fatima’s typical approach when discovering a critical user lost needed privileges:
+
+A. Investigate logs to confirm which statement removed the privileges  
+B. Re-grant the lost privileges immediately to restore service  
+C. Document the privilege change for future audits  
+D. Discuss root cause and prevention measures with the team
+
+---
+
+### 12. [True/False] Impact of Broad Permissions on Performance  
+🧩 Intermediate
+
+Statement: Fatima says that granting broad system privileges to novices can lead to performance chaos if they run massive or unbounded queries.
+
+A. True  
 B. False
-```
 
 ---
 
-### 5) Multiple Choice
-
-```
-## Question 5: SRE Perspective on Availability
-🔍 Beginner
-
-Why is high database availability crucial from an SRE perspective?
-
-A. It guarantees zero user errors.
-B. It ensures compliance with data privacy regulations.
-C. It directly impacts user experience and potential revenue losses due to downtime.
-D. It prevents password sharing among DBAs.
-```
-
----
-
-### 6) Fill-in-the-Blank
-
-```
-## Question 6: Permissions Basics
-🔍 Beginner
-
-Complete the following statement:
-
-A user with ________ permission can insert new records but cannot create or drop tables.
-
-A. CONNECT
-B. SELECT
-C. INSERT
-D. ALTER
-```
-
----
-
-### 7) Multiple Choice
-
-```
-## Question 7: Users vs. Roles
-🔍 Beginner
-
-Which of the following is TRUE regarding the difference between users and roles in many relational databases?
-
-A. Users can log in to the database; roles cannot log in.
-B. Roles can log in to the database; users cannot log in.
-C. Users always have all privileges, but roles have none.
-D. There is no difference; 'user' and 'role' are interchangeable terms.
-```
-
----
-
-## 🧩 INTERMEDIATE-LEVEL QUESTIONS (7)
-
-### 8) Multiple Choice
-
-```
-## Question 8: Role-Based Permissions
+### 13. [Fill-in-the-Blank] Fatima’s Rule #3  
 🧩 Intermediate
 
-A database administrator wants to give a "reporting_role" the ability to run SELECT queries on the "sales" schema without letting them modify any data. Which command best achieves this in PostgreSQL?
+Complete the statement related to Fatima’s Rule #3:  
+“Over-privileged accounts aren’t just a security hazard; they can ________ performance with unbounded queries.”
 
-A. GRANT INSERT ON ALL TABLES IN SCHEMA sales TO reporting_role;
-B. GRANT SELECT ON ALL TABLES IN SCHEMA sales TO reporting_role;
-C. GRANT ALL PRIVILEGES ON SCHEMA sales TO reporting_role;
-D. GRANT USAGE ON SCHEMA sales TO reporting_role;
-```
+A. Enhance  
+B. Protect  
+C. Strangle  
+D. Justify
 
 ---
 
-### 9) Multiple Choice
-
-```
-## Question 9: GRANT vs. REVOKE
+### 14. [Multiple Choice] Valid RBAC Scenario  
 🧩 Intermediate
 
-Which of the following statements about the GRANT and REVOKE commands is CORRECT?
+Which scenario best exemplifies a balanced RBAC approach?
 
-A. REVOKE automatically removes all system privileges from every user in the database.
-B. GRANT never allows specifying which columns a user can SELECT.
-C. REVOKE can remove a privilege from a user, which may also remove privileges from roles that user manages.
-D. GRANT only works for object privileges, not system privileges.
-```
-
----
-
-### 10) Multiple Choice
-
-```
-## Question 10: Database Auditing
-🧩 Intermediate
-
-Which scenario BEST illustrates proper auditing for compliance in a database environment?
-
-A. Allowing only the DBA to view logs manually once a month.
-B. Automatically logging all DDL changes (e.g., CREATE TABLE) and storing them in a secured audit table.
-C. Disabling audit logs during peak hours to save I/O resources.
-D. Using a single superuser account with no login trace for faster changes.
-```
+A. Each developer role includes DROP, ALTER, and CREATE for every production table.  
+B. A single “one-size-fits-all” role for everyone in the organization.  
+C. Roles tailored to job functions (like “reporting,” “dev_user,” “app_user”), each with only the privileges needed for its tasks.  
+D. Every user inherits the “sre_admin” role so incidents can be resolved quickly.
 
 ---
 
-### 11) Multiple Choice
+## **Advanced/SRE-Level Questions (6)**
 
-```
-## Question 11: Availability Challenges
-🧩 Intermediate
+### 15. [Multiple Choice] Live Alerts for GRANT/REVOKE  
+💡 Advanced
 
-Which of these is a common challenge to maintaining high database availability?
+Fatima’s Rule #4: “Build real-time alerts for suspicious GRANT, REVOKE, or unstoppable queries. Prevention > Cure.” Which setup best aligns with this?
 
-A. Having roles that are too granular.
-B. Not having a read-only user for reporting.
-C. Single points of failure in database architecture.
-D. Creating too many user accounts.
-```
+A. Relying on monthly manual checks of privilege changes  
+B. Automating an audit log feed into Prometheus or Alertmanager, which sends Slack notifications upon critical changes  
+C. Letting each team manage privileges in isolation with no central oversight  
+D. Only checking for suspicious statements when performance issues arise
 
 ---
 
-### 12) Fill-in-the-Blank
+### 16. [Multiple Choice] Security & Performance Overlap  
+💡 Advanced
 
-```
-## Question 12: Database Security Best Practice
-🧩 Intermediate
+Fatima insists that security lapses often degrade performance. Which example best demonstrates this link?
 
-Complete the following statement:
-
-Implementing ________ helps track unauthorized attempts to modify critical database objects and detect potential security breaches early.
-
-A. Connection pooling
-B. Indexing
-C. Auditing
-D. Sharding
-```
+A. A developer with only read access tries to edit a table but fails  
+B. A superuser runs a massive `SELECT *` on large tables, saturating CPU and I/O  
+C. A user is forcibly disconnected after idle timeout  
+D. A developer leaves the office for lunch, and no new queries are run
 
 ---
 
-### 13) Matching
+### 17. [True/False] Over-Reliance on One Superuser  
+💡 Advanced
 
-```
-## Question 13: Syntax Comparison
-🧩 Intermediate
+Statement: Relying exclusively on a single superuser for emergency tasks can risk major downtime if that account is compromised or locked out.
 
-Match each CREATE USER or equivalent syntax to the correct database system (Column A to Column B):
-
-Column A:
-1. CREATE USER sarah FOR LOGIN sarah;
-2. CREATE ROLE sarah WITH LOGIN PASSWORD 'Pass123';
-3. CREATE USER sarah IDENTIFIED BY Pass123;
-4. CREATE USER 'sarah'@'localhost' IDENTIFIED BY 'Pass123';
-
-Column B:
-A. Oracle
-B. SQL Server
-C. PostgreSQL
-D. MySQL
-```
-
----
-
-### 14) Ordering
-
-```
-## Question 14: Permission Assignment Steps
-🧩 Intermediate
-
-Arrange the following steps in the correct order when assigning permissions to a new user:
-
-A. Assign appropriate privileges or roles.
-B. Create the user in the database.
-C. Verify privileges by testing with the new user account.
-D. Document the permission changes for audit purposes.
-```
-
----
-
-## 💡 ADVANCED/SRE-LEVEL QUESTIONS (6)
-
-### 15) Multiple Choice
-
-```
-## Question 15: High Availability Architecture
-💡 Advanced/SRE
-
-Which of the following BEST describes a typical high availability architecture for a critical production database?
-
-A. A single primary database with no failover nodes to simplify configuration.
-B. A read-replica that mirrors the primary database asynchronously, used exclusively for reporting.
-C. A cluster of nodes with synchronous replication, automatic failover, and shared storage or data replication across nodes.
-D. A single server where backups are taken weekly, ensuring minimal downtime.
-```
-
----
-
-### 16) Multiple Choice
-
-```
-## Question 16: SRE Performance Monitoring
-💡 Advanced/SRE
-
-Which metric is MOST critical to monitor for early detection of database performance degradation?
-
-A. The color scheme of the admin UI.
-B. The total size of archived audit logs over the past year.
-C. The average query response time and concurrent active sessions.
-D. The number of user accounts in the system.
-```
-
----
-
-### 17) True/False
-
-```
-## Question 17: Incident Response
-💡 Advanced/SRE
-
-If an SRE team observes a drastic drop in database throughput combined with connection timeouts, the first step is to immediately fail over to the standby without any investigation.
-
-A. True
+A. True  
 B. False
-```
 
 ---
 
-### 18) Fill-in-the-Blank
+### 18. [Matching] Fatima’s Rules in Action  
+💡 Advanced
 
-```
-## Question 18: Least Privilege in High-Traffic Systems
-💡 Advanced/SRE
+Match each situation to the corresponding Fatima Rule.
 
-Complete the statement:
+**Column A (Situations)**  
+1. A developer who’s given system-level privileges runs random commands that overload the CPU.  
+2. A read-only user unexpectedly loses SELECT on a critical table, causing an outage.  
+3. No logs exist to track when or how privileges were granted.  
+4. Roles are left untouched for years, and some old test accounts remain active.
 
-Applying the principle of least privilege in high-traffic production databases helps minimize the ________ when a compromised account is used for malicious activities.
-
-A. need for logs
-B. blast radius
-C. replication delay
-D. performance overhead
-```
-
----
-
-### 19) Matching
-
-```
-## Question 19: Advanced Permissions & Roles
-💡 Advanced/SRE
-
-Match each advanced concept (Column A) with its appropriate description (Column B):
-
-Column A:
-1. Role Inheritance
-2. Row-Level Security
-3. Failover Trigger
-4. Auditing of Superuser Actions
-
-Column B:
-A. Mechanism that selectively restricts data access at the row level.
-B. Monitoring and logging of all commands run by privileged accounts.
-C. Automatic script or condition to shift database traffic from a failed primary to a standby.
-D. Allowing a role to inherit permissions from another role in a hierarchical manner.
-```
+**Column B (Rules)**  
+A. “Regularly audit your fortress. Over-privileged, inactive, or nonsensical roles are meltdown invites.”  
+B. “All privileges must be documented, justified, and regularly audited.”  
+C. “Always prefer object-specific keys over system master keys. Fewer meltdown vectors, less havoc.”  
+D. “Over-privileged accounts aren’t just a security hazard; they can strangle performance.”
 
 ---
 
-### 20) Ordering
+### 19. [Diagram-Based Multiple Choice] Unbounded Query Flowchart  
+💡 Advanced
 
+Examine the following flowchart illustrating a meltdown from an unbounded SELECT:
+
+```mermaid
+flowchart LR
+   A["User with broad SELECT"] --> Q["SELECT * FROM massive_table;"]
+   Q --> Perf["CPU/Memory Spike"]
+   Perf --> Alert["SRE sees meltdown"]
 ```
-## Question 20: SRE Availability Response
-💡 Advanced/SRE
 
-Arrange the following steps in the correct order for responding to a severe database availability incident:
+Which statement best reflects Fatima’s stance on preventing this scenario?
 
-A. Assess monitoring metrics (e.g., CPU, memory, I/O).
-B. Identify if failover or partial shutdown is necessary.
-C. Notify stakeholders and the on-call team.
-D. Document the incident in detail for post-mortem analysis.
-```
+A. Provide all users with the ability to SELECT * from all tables at will  
+B. Restrict read access to only necessary tables/columns to avoid unbounded queries  
+C. Ignore unbounded queries unless they exceed 72 hours of runtime  
+D. Instruct the user to switch from SELECT * to SELECT COUNT(*)
 
 ---
-S
+
+### 20. [Ordering] Fatima’s Failover Security Test  
+💡 Advanced
+
+Arrange the steps for Fatima’s recommended “failover security test,” ensuring roles and privileges remain consistent across primary and standby.
+
+A. Bring down the primary database intentionally.  
+B. Confirm that the standby has replicated all roles/privileges correctly.  
+C. Switch production traffic to the standby.  
+D. After switchover, verify that no privileges are missing or unexpectedly changed.
+
+---
+
+**End of Day 6 Quiz**  
+
+*No answers or explanations are provided here. They should be compiled in a separate document.*

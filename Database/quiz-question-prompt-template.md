@@ -212,4 +212,8 @@ Include diagrams that specifically reflect those used in the Day [X] training ma
 - Include database-specific syntax and tools emphasized in this day's training
 - Address real-world SRE scenarios mentioned in the training
 
+## Important Note About Citations
+Do not include any citation markers in your answer sheet. Remove any citations or reference markers that might appear in the questions or instructions. Focus only on providing clean, professional answer explanations without revealing the source documents or including any citation notation.
+
+
 DO NOT include the correct answers or explanations in the questions themselves. These will be provided in a separate answer key document.
