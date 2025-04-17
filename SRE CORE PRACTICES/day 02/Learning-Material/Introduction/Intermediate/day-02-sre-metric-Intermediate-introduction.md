@@ -107,16 +107,7 @@ Captioned panel shows `sum by (service)` pointing to a problem with `payment-ser
 
 ## 🎨 SCENE 7: *"Tidy Dashboards, Clear Minds"*
 
-**Setting:**  
-The team’s new dashboard: 6 panels. All legible. Color-coded for urgency, not aesthetics.
-
-**Panel 1**  
-An engineer clicks on an alert annotation tied to a spike. The linked panel opens directly to the relevant graph.
-
-**Marisol (speech bubble):**  
-> “See? Now when something breaks, the dashboard **tells the story**. Not just the temperature.”
-
-**Panel 2**  
+<img src="./images/panel-10.png" alt="alt text" width="600"/>
 Junior engineer nods.
 
 **Junior:**  
@@ -165,5 +156,5 @@ Office at sunset. Clean dashboards. Calm system. Marisol walks out the door, tos
 **Sticky note:**  
 > “PromQL is a weapon. Use it with intention.”
 
-
+<img src="./images/panel-9.png" alt="alt text" width="600"/>
 
