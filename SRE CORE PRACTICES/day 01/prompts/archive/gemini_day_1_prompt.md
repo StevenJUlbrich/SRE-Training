@@ -5,8 +5,11 @@ Objective
 Create a comprehensive, visually engaging, and practical Day 1 module on the Three Pillars of Observability (Metrics, Logs, Traces) that:
 Explains the fundamental concepts of metrics, logs, and traces with rich, detailed visuals and clear, actionable, step-by-step explanations.
 Provides clear explanations of how each pillar contributes to overall observability.
+
 Shows implementation examples with the specific practical Python code samples provided below.
+
 Includes realistic examples ("horror stories with happy endings") of how observability solves real-world problems.
+
 Emphasizes visual learning aids using the specific Mermaid diagrams provided below.
 Incorporates real-world SRE principles around reliability and incident response.
 Ensures smooth transitions between complexity tiers with explicit knowledge scaffolding ("brick by brick" approach).
