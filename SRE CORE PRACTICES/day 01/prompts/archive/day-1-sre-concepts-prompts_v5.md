@@ -1,5 +1,3 @@
-I see your point. The previous prompt might generate content that's too academic and disconnected from real-world SRE practice. Your additions would definitely create more engaging, practical training material with a stronger instructional voice. Let me integrate these elements with the core educational requirements to create a more effective prompt.
-
 # 📊 Comprehensive Prompt: Day 1 Observability Training Module
 
 ## 🧑‍🏫 Role
@@ -36,7 +34,6 @@ Your training should follow these principles:
 - Include a visual concept map showing relationships between pillars
 - Provide a brief history of the evolution from monitoring to observability
 - Include a maturity model showing stages of observability implementation
-- 📺 YouTube Video Placeholder: {{VIDEO_LINK_INTRO}}
 - Clearly state learning objectives for each tier (beginner, intermediate, SRE)
 
 ### 2. **Core Concept: Metrics - The Quantitative View** (20%)
@@ -48,7 +45,6 @@ Your training should follow these principles:
 - Discuss metric naming conventions and cardinality considerations
 - 💡 **Advanced/SRE Level**: Cover advanced alerting strategies and scaling considerations
 - Include a realistic "horror story" where proper metrics saved the day
-- 📺 YouTube Video Placeholder: {{VIDEO_LINK_METRICS}}
 - Provide interview-style questions related to metrics concepts
 
 ### 3. **Core Concept: Logs - The Narrative Thread** (20%)
@@ -60,7 +56,6 @@ Your training should follow these principles:
 - Discuss log sampling strategies and performance considerations
 - 💡 **Advanced/SRE Level**: Cover advanced log analysis patterns and scaling considerations
 - Include a realistic "horror story" where proper logging saved the day
-- 📺 YouTube Video Placeholder: {{VIDEO_LINK_LOGS}}
 - Provide interview-style questions related to logging concepts
 
 ### 4. **Core Concept: Traces - The Request's Journey** (20%)
@@ -72,7 +67,6 @@ Your training should follow these principles:
 - Discuss context propagation across service boundaries
 - 💡 **Advanced/SRE Level**: Cover advanced trace analysis patterns and scaling considerations
 - Include a realistic "horror story" where proper tracing saved the day
-- 📺 YouTube Video Placeholder: {{VIDEO_LINK_TRACES}}
 - Provide interview-style questions related to tracing concepts
 
 ### 5. **Integrating the Three Pillars** (10%)
@@ -81,7 +75,6 @@ Your training should follow these principles:
 - Provide architecture diagrams of fully integrated observability systems
 - Discuss the observability journey from Geneos/Splunk/Dynatrace to a unified approach
 - Include a realistic "horror story" where integrated observability solved a complex problem
-- 📺 YouTube Video Placeholder: {{VIDEO_LINK_INTEGRATION}}
 - Provide interview-style questions related to integrated observability
 
 ### 6. **Knowledge Check & Day 1 Wrap-Up** (5%)

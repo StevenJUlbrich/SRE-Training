@@ -2,7 +2,7 @@
 
 **Role**
 
-You are an expert SRE instructor creating a comprehensive, Day 1 training module on the fundamentals of observability. Your materials build expertise from beginner 👩‍🎓 to SRE-level 🚀. Your focus is on practical observability implementation with appropriate references to different tools and platforms (Prometheus, ELK Stack, Jaeger, etc.). Encourage humor or empathy when describing real-world issues.
+You are an expert SRE instructor creating a comprehensive, Day 1 training module on the fundamentals of observability. Your materials build expertise from 🔍 Beginner to 🧩 Intermediate and end with 💡 Advanced/SRE. Your focus is on practical observability implementation with appropriate references to different tools and platforms (Prometheus, ELK Stack, Jaeger, etc.). Encourage humor or empathy when describing real-world issues.
 
 **Objective**
 
@@ -11,16 +11,15 @@ Create a comprehensive, visually engaging, and practical Day 1 module on the Thr
 * Explains the fundamental concepts of metrics, logs, and traces with rich, detailed visuals and clear, actionable, step-by-step explanations.  
 * Provides clear explanations of how each pillar contributes to overall observability.  
 * Shows implementation examples with the specific practical Python code samples provided below.  
-* Includes realistic examples ("horror stories with happy endings") of how observability solves real-world problems.  
+* Includes realistic examples of how observability solves real-world problems.  
 * Emphasizes visual learning aids using the specific Mermaid diagrams provided below.  
 * Incorporates real-world SRE principles around reliability and incident response.  
 * Ensures smooth transitions between complexity tiers with explicit knowledge scaffolding ("brick by brick" approach).  
-* Clearly indicates where curated YouTube videos should be inserted using placeholders like {{VIDEO\_LINK\_XYZ}}.  
 * Adheres strictly to the specified structure, content requirements, diagram definitions, code examples, and formatting rules outlined in this prompt.
 
 **Target Audience**
 
-Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (ages 23-58, with 2-20 years of experience) who need to understand observability concepts to effectively implement monitoring and troubleshooting strategies. This is the first day of a comprehensive observability training program.
+Beginner 🔍 Beginner to 🧩Intermediate and 💡Advanced/SREand DevOps practitioners (ages 23-58, with 2-20 years of experience) who need to understand observability concepts to effectively implement monitoring and troubleshooting strategies. This is the first day of a comprehensive observability training program.
 
 **Required Structure & Content:**
 
@@ -30,13 +29,12 @@ Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (
    * Brief explanation of the journey from basic monitoring to comprehensive observability (Include **Observability Maturity Model Diagram** here).  
    * Clear explanation of the three pillars: metrics, logs, and traces.  
    * **Visual:** Include the **Three Pillars Overview Diagram** exactly as defined below.  
-   * **Incident Story:** Provide a real-world scenario/horror story demonstrating how proper observability helps resolve incidents (e.g., "an alert was firing; logs were unclear; metrics saved the day").  
-   * **Video Placeholder:** {{VIDEO\_LINK\_INTRO}}.  
-   * **Learning Objectives by Tier:** Include 4 measurable objectives for each tier (Beginner 👩‍🎓, Intermediate 👨‍💻, Advanced/SRE 🚀) covering different aspects of the three pillars.  
+   * **Incident Story:** Provide a real-world scenario story demonstrating how proper observability helps resolve incidents (e.g., "an alert was firing; logs were unclear; metrics saved the day").  
+   * **Learning Objectives by Tier:** Include 4 measurable objectives for each tier (🔍 Beginner, 🧩 Intermediate, 💡 Advanced/SRE) covering different aspects of the three pillars.  
 2. **Core Concept: Metrics (The Quantified View)**  
-   * **Beginner 👩‍🎓:** Analogy (car dashboard), Definition, types (counters, gauges, histograms \- use **Metric Types Comparison Diagram**), purpose. Prometheus basics.  
-   * **Intermediate 👨‍💻:** RED method, custom metrics, basic visualization (referencing Grafana).  
-   * **Advanced/SRE 🚀:** How metrics enable monitoring/alerting, alert tuning, cardinality concerns, data pipeline issues, system performance impact.  
+   * **Beginner 🔍:** Analogy (car dashboard), Definition, types (counters, gauges, histograms \- use **Metric Types Comparison Diagram**), purpose. Prometheus basics.  
+   * **Intermediate 🧩:** RED method, custom metrics, basic visualization (referencing Grafana).  
+   * **Advanced/SRE 💡:** How metrics enable monitoring/alerting, alert tuning, cardinality concerns, data pipeline issues, system performance impact.  
    * **Common Misconceptions:** Explicit warnings.  
    * **Visuals:**  
      * Include the **Metrics Collection Flow Diagram** exactly as defined below.  
@@ -45,9 +43,9 @@ Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (
    * **Horror Story:** Provide an example related to metrics (e.g., cardinality explosion brought Prometheus to its knees).  
    * **Video Placeholder:** {{VIDEO\_LINK\_METRICS}}.  
 3. **Core Concept: Logs (The Narrative Thread)**  
-   * **Beginner 👩‍🎓:** Analogy (journey journal), Definition, structure, log levels (use **Log Levels Hierarchy Diagram**), basic logging.  
-   * **Intermediate 👨‍💻:** Structured JSON logs, log aggregation (e.g., ELK/EFK). Use **Structured vs. Unstructured Logs Diagram**.  
-   * **Advanced/SRE 🚀:** How logs enable debugging/troubleshooting, querying logs for trace IDs, correlating error chains, system performance impact.  
+   * **Beginner 🔍:** Analogy (journey journal), Definition, structure, log levels (use **Log Levels Hierarchy Diagram**), basic logging.  
+   * **Intermediate 🧩:** Structured JSON logs, log aggregation (e.g., ELK/EFK). Use **Structured vs. Unstructured Logs Diagram**.  
+   * **Advanced/SRE 💡:** How logs enable debugging/troubleshooting, querying logs for trace IDs, correlating error chains, system performance impact.  
    * **Common Misconceptions:** Explicit warnings.  
    * **Visuals:**  
      * Include the **Log Processing Pipeline Diagram** exactly as defined below.  
@@ -57,9 +55,9 @@ Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (
    * **Horror Story:** Provide an example related to logging (e.g., grepping unstructured logs for hours due to missing request IDs).  
    * **Video Placeholder:** {{VIDEO\_LINK\_LOGS}}.  
 4. **Core Concept: Traces (The Request's Journey)**  
-   * **Beginner 👩‍🎓:** Analogy (GPS tracking), Definition, spans (use **Span Hierarchy Diagram**), trace IDs, visual timelines.  
-   * **Intermediate 👨‍💻:** Adding tracing to Flask with OpenTelemetry. Context propagation (use **Trace Context Propagation Diagram**).  
-   * **Advanced/SRE 🚀:** How traces enable performance analysis/debugging across microservices (use **Distributed Trace Flow Diagram**), system performance impact, sampling strategies.  
+   * **Beginner 🔍:** Analogy (GPS tracking), Definition, spans (use **Span Hierarchy Diagram**), trace IDs, visual timelines.  
+   * **Intermediate 🧩:** Adding tracing to Flask with OpenTelemetry. Context propagation (use **Trace Context Propagation Diagram**).  
+   * **Advanced/SRE 💡:** How traces enable performance analysis/debugging across microservices (use **Distributed Trace Flow Diagram**), system performance impact, sampling strategies.  
    * **Common Misconceptions:** Explicit warnings.  
    * **Visuals:**  
      * Include the **Distributed Trace Flow Diagram** exactly as defined below.  
@@ -79,12 +77,12 @@ Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (
    * **Tip Box:** Mention linking dashboards using shared metadata (e.g., trace\_id).  
    * **Video Placeholder:** {{VIDEO\_LINK\_INTEGRATION}}.  
 6. **Hands-On Exercises / Tiered Challenges**  
-   * **Beginner 👩‍🎓:** Identify which pillar to use for specific questions; Instrument Flask with Prometheus metrics (referencing Code Example 1).  
-   * **Intermediate 👨‍💻:** Evaluate existing implementations; Add JSON logs (referencing Code Example 2\) and build Kibana queries.  
-   * **Advanced/SRE 🚀:** Design comprehensive observability strategies; Correlate a trace (referencing Code Example 3\) from Jaeger with matching logs and metrics.  
+   * **Beginner 🔍:** Identify which pillar to use for specific questions; Instrument Flask with Prometheus metrics (referencing Code Example 1).  
+   * **Intermediate 🧩:** Evaluate existing implementations; Add JSON logs (referencing Code Example 2\) and build Kibana queries.  
+   * **Advanced/SRE 💡:** Design comprehensive observability strategies; Correlate a trace (referencing Code Example 3\) from Jaeger with matching logs and metrics.  
    * **Bonus:** Suggest injecting a bug and tracing it across the stack.  
 7. **Code Implementation Examples (Use these exact code blocks and explanations)**  
-   * **7.1 Beginner Implementation: Basic Metrics with Python Flask** 👩‍🎓  
+   * **7.1 Beginner Implementation: Basic Metrics with Python Flask** 🔍  
      * Provide the Python code example below for implementing basic metrics.  
      * Include step-by-step explanation of how the code works.  
      * Explain expected output and how to interpret metrics data from the /metrics endpoint.  
@@ -126,7 +124,7 @@ Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (
        if \_\_name\_\_ \== '\_\_main\_\_':  
            app.run(host='0.0.0.0', port=5000)
 
-   * **7.2 Intermediate Implementation: Adding Structured Logging** 👨‍💻  
+   * **7.2 Intermediate Implementation: Adding Structured Logging** 🧩  
      * Build on the previous example by adding structured logging using the code below.  
      * Explain the importance of structured logging and request IDs for correlation.  
      * Show how logs and metrics can be correlated via common identifiers (like a request ID).  
@@ -204,7 +202,7 @@ Beginner 👩‍🎓 to Intermediate 👨‍💻 SREs and DevOps practitioners (
        if \_\_name\_\_ \== '\_\_main\_\_':  
            app.run(host='0.0.0.0', port=5000)
 
-   * **7.3 Advanced Implementation: Adding Distributed Tracing** 🚀  
+   * **7.3 Advanced Implementation: Adding Distributed Tracing** 💡  
      * Complete the observability picture by adding tracing using the code below.  
      * Show how trace context propagates through the application using OpenTelemetry.  
      * Demonstrate the correlation between all three pillars (metrics, logs, traces) using the trace\_id.  
@@ -651,7 +649,7 @@ if \_\_name\_\_ \== '\_\_main\_\_':
     * Keep characters like \#, ? inside quotes if needed within labels.  
     * Simplify complex diagrams or break them down if necessary. Test rendering.  
 11. **Formatting Requirements**  
-    * Use emojis consistently to indicate different sections and concept tiers (Beginner 👩‍🎓, Intermediate 👨‍💻, Advanced/SRE 🚀).  
+    * Use emojis consistently to indicate different sections and concept tiers (Beginner 🔍, Intermediate 🧩, Advanced/SRE 💡).  
     * Create clear Mermaid diagrams for visual representation using the exact code provided above. Format Mermaid code blocks properly using \`\`\`mermaid syntax.  
     * Ensure all tables (like Implementation Comparison) have consistent column widths and properly aligned headers.  
     * Use consistent formatting for code blocks, including \`\`\`python syntax highlighting for Python code provided above.  
@@ -660,4 +658,4 @@ if \_\_name\_\_ \== '\_\_main\_\_':
 
 **Invocation Summary**
 
-Generate a comprehensive Day 1 SRE training module focused on the Three Pillars of Observability (metrics, logs, and traces), adhering strictly to all sections, content points, code examples, Mermaid diagram definitions, formatting rules, and guidelines specified in this prompt. Follow the "brick by brick" learning approach, introducing fundamental concepts (👩‍🎓) and building to advanced SRE-level techniques (🚀). Each core concept section must include tiered learning objectives, its specific Python/Flask code example from above, its specific Mermaid diagrams defined above, a "horror story" with a fix, and a YouTube video placeholder. Ensure detailed, actionable explanations suitable for learners with diverse experience levels (ages 23-58, experience 2-20 years). The goal is real training material ready for production onboarding, reflecting the detail and structure outlined herein.
+Generate a comprehensive Day 1 SRE training module focused on the Three Pillars of Observability (metrics, logs, and traces), adhering strictly to all sections, content points, code examples, Mermaid diagram definitions, formatting rules, and guidelines specified in this prompt. Follow the "brick by brick" learning approach, introducing fundamental concepts (🔍) and building to advanced SRE-level techniques (💡). Each core concept section must include tiered learning objectives, its specific Python/Flask code example from above, its specific Mermaid diagrams defined above, a "horror story" with a fix, and a YouTube video placeholder. Ensure detailed, actionable explanations suitable for learners with diverse experience levels (ages 23-58, experience 2-20 years). The goal is real training material ready for production onboarding, reflecting the detail and structure outlined herein.
