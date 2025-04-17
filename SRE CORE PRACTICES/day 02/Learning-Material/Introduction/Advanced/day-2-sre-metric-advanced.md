@@ -16,23 +16,7 @@ We’re keeping the **graphic novel structure**, but we’re adding more:
 
 ## 🎨 SCENE 1: *“Who Watches the Watchmen? (We Do.)”*
 
-**Setting:**  
-An internal meeting titled “SLA Review – Q3”
-
-**Panel 1**  
-Marisol stares at a slide deck titled “99.999% Uptime” with 0 context.
-
-**Marisol (speech bubble):**  
-> “Cool number. Totally fake.”
-
-**Panel 2**  
-Flashback panel to last month’s incident where checkout latency spiked but nobody was paged.
-
-**Narration:**  
-> “The site was burning. But our graphs were green.”
-
-**Panel 3**  
-Marisol stands. New slide: *"SLIs: The Metrics That Actually Matter."*
+<img src="./images/panel-1.png" alt="alt text" width="500"/>
 
 ---
 
@@ -52,14 +36,8 @@ Marisol stands. New slide: *"SLIs: The Metrics That Actually Matter."*
 
 ## 🎨 SCENE 2: *“Define or Be Defined”*
 
-**Setting:**  
-Whiteboard room. Marisol draws two lines: “user” and “system”
+<img src="./images/panel-2.png" alt="alt text" width="500"/>
 
-**Panel 1**  
-Above the line: `checkout_latency_p95`, `availability`, `error_rate`  
-Below the line: `CPU`, `memory`, `disk_io`
-
-**Marisol (speech bubble):**  
 > “SLIs live *above the line*. If your user can't feel it, it doesn’t go on the dashboard.”
 
 ---
@@ -80,14 +58,8 @@ Below the line: `CPU`, `memory`, `disk_io`
 **Setting:**  
 Marisol is in a pair-coding session with an app engineer
 
-**Panel 1**  
-The app only exposes `http_requests_total` and `cpu_usage_seconds_total`
+<img src="./images/panel-3.png" alt="alt text" width="500"/>
 
-**Marisol (speech bubble):**  
-> “We can’t SLI off of just CPU. Let’s instrument what *matters*.”
-
-**Panel 2**  
-She helps write this:
 ```python
 # Track failed checkouts
 checkout_failures = Counter(
@@ -136,24 +108,7 @@ histogram_quantile(0.95,
 
 ## 🎨 SCENE 4: *“Rewriting the Dashboard”*
 
-**Setting:**  
-The original dashboard shows CPU, memory, disk I/O, etc.
-
-**Panel 1**  
-Marisol deletes half the panels.
-
-**Speech bubble:**  
-> “If this dashboard can’t explain an incident, it’s just a light show.”
-
-**Panel 2**  
-She adds:
-- ✅ `checkout success rate`
-- ✅ `checkout latency p95`
-- ✅ `queue size`
-- ✅ `error budget burn`
-
-**Marisol (speech bubble):**  
-> “This is a dashboard. The rest is ambient noise.”
+<img src="./images/panel-4.png" alt="alt text" width="500"/>
 
 ---
 
@@ -177,20 +132,7 @@ She adds:
 
 ## 🎨 SCENE 5: *“It’s Yours Now”*
 
-**Setting:**  
-Team review. Marisol steps back. The engineer who instrumented `checkout_failures_total` explains it during a postmortem.
-
-**Panel 1**  
-They point to a panel showing the 3 reasons for failed checkouts during an incident:  
-- `timeout`  
-- `payment_error`  
-- `address_invalid`
-
-**Engineer (speech bubble):**  
-> “We wouldn’t have seen this without the new metrics.”
-
-**Marisol (speech bubble):**  
-> “Now you’re not just measuring. You’re **learning.**”
+<img src="./images/panel-5.png" alt="alt text" width="500"/>
 
 ---
 
@@ -206,15 +148,8 @@ They point to a panel showing the 3 reasons for failed checkouts during an incid
 
 ## ✅ Final Panel
 
-**Setting:**  
-A clean dashboard on a monitor. SLI panels up top. Alerts are quiet. Team is sipping coffee.
-
-**Caption:**  
-> Metrics. Defined. Measured. Operationalized.
-
-**Marisol (speech bubble):**  
-> “Let the dashboards *prove* you’re doing your job—before someone else tries to.”
-
+<img src="./images/panel-6
+.png" alt="alt text" width="500"/>
 ---
 
 ## 🧱 Epilogue: Build Your Own
