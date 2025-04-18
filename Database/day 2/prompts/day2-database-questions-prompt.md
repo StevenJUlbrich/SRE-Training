@@ -15,9 +15,9 @@ Create a comprehensive set of quiz questions that:
 ## 📝 Quiz Structure Requirements
 
 Create exactly 20 quiz questions with the following distribution:
-- 7 Beginner-level questions (🟢)
-- 7 Intermediate-level questions (🟡)
-- 6 SRE-level questions (🔴)
+- 7 Beginner-level questions (🔍)
+- 7 Intermediate-level questions (🧩)
+- 6 SRE-level questions (💡)
 
 Include the following question types with the specified distribution:
 - 10 Multiple choice questions (traditional format with 4 options)
@@ -40,7 +40,7 @@ At least 5 questions should incorporate Mermaid diagrams (DML operation flows, t
 ### Multiple Choice Format
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 [Question text]
 
@@ -53,7 +53,7 @@ D. [Option D]
 ### True/False Format
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 [Statement]
 
@@ -64,7 +64,7 @@ B. False
 ### Fill-in-the-Blank Format
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 Complete the following statement:
 
@@ -79,7 +79,7 @@ D. [Option D]
 ### Matching Format
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 Match each item in Column A with the appropriate item in Column B.
 
@@ -99,7 +99,7 @@ D. [Definition/Example D]
 ### Ordering Format
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 Arrange the following steps in the correct order:
 
@@ -112,7 +112,7 @@ D. [Step D]
 ### Diagram-Based Question Format
 ```
 ## Question X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 Examine the following diagram:
 

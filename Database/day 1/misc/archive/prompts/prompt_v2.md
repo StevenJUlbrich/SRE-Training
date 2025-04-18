@@ -53,7 +53,7 @@ The material will be presented in an immersive Markdown format with consistent v
 
 ### 📚 Core Concepts
 For each key concept, include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison
+* 🔍 **Beginner Analogy:** Simple real-world comparison
 * 🔬 **Technical Explanation:** Precise definition and mechanics
 * 💼 **Support/SRE Application:** Direct workplace relevance
 * 🔄 **System Impact:** How it affects database performance and reliability
@@ -93,7 +93,7 @@ For each key command/concept, provide a structured breakdown following this exac
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```[language]
 -- Example: [clear purpose statement]
 [command with basic syntax]
@@ -103,7 +103,7 @@ For each key command/concept, provide a structured breakdown following this exac
 -- [Optional brief explanation if needed]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```[language]
 -- Example: [specific support scenario]
 [command with more complex syntax]
@@ -113,7 +113,7 @@ For each key command/concept, provide a structured breakdown following this exac
 -- Explicit context: [support task relevance explanation]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```[language]
 -- Example: [realistic SRE scenario like troubleshooting/monitoring]
 [complex command or query with advanced options]
@@ -161,17 +161,17 @@ For each key command/concept, provide a structured breakdown following this exac
 
 ### 🔨 Hands-On Exercises
 Exactly 3 exercises per tier:
-* 🟢 **Beginner Exercises:**
+* 🔍 **Beginner Exercises:**
   * Step-by-step instructions with expected outputs
   * Clear expected outcomes
   * Simple verification steps
   
-* 🟡 **Intermediate Exercises:**  
+* 🧩 **Intermediate Exercises:**  
   * Scenario-based tasks relevant to support roles
   * Less hand-holding, more problem-solving
   * Expected outcomes with verification methods
   
-* 🔴 **SRE-Level Exercises:**
+* 💡 **SRE-Level Exercises:**
   * Complex troubleshooting scenarios
   * Performance analysis tasks
   * Cross-database challenges where applicable
@@ -201,17 +201,17 @@ Exactly 3 realistic scenarios encountered in support roles:
 
 ### ❓ Frequently Asked Questions
 Exactly 3 FAQs per tier (total: 9 FAQs):
-* 🟢 **Beginner FAQs:**
+* 🔍 **Beginner FAQs:**
   * Focus on fundamental understanding
   * Address common initial confusion points
   * Use simple, approachable language
 
-* 🟡 **Intermediate FAQs:**
+* 🧩 **Intermediate FAQs:**
   * Address practical application questions
   * Connect concepts to support workflows
   * Include relevant examples
 
-* 🔴 **SRE-Level FAQs:**
+* 💡 **SRE-Level FAQs:**
   * Address performance, scale, and reliability
   * Include database design considerations
   * Focus on production impact
@@ -249,19 +249,19 @@ Must include exactly:
 
 ### 📚 Further Learning Resources
 
-#### 🟢 Beginner Resources (exactly 3)
+#### 🔍 Beginner Resources (exactly 3)
 * Each resource must include:
   * Direct link
   * Clear description of what it teaches
   * How it applies to support role database needs
 
-#### 🟡 Intermediate Resources (exactly 3)
+#### 🧩 Intermediate Resources (exactly 3)
 * Each resource must include:
   * Direct link
   * Clear description of what it teaches
   * How it connects to operational database skills
 
-#### 🔴 SRE-Level Resources (exactly 3)
+#### 💡 SRE-Level Resources (exactly 3)
 * Each resource must include:
   * Direct link
   * Clear description of advanced database concepts
@@ -288,7 +288,7 @@ Must include exactly:
    * Include conceptual diagrams for database concepts
    * Use tables for structured information
    * Employ syntax highlighting for all code examples
-   * Use color-coding for skill levels (🟢🟡🔴)
+   * Use color-coding for skill levels (🔍🧩💡)
    * Add visual cues (icons) for different note types (🧠⚠️🚨💡☠️)
 
 2. **Cross-Database Coverage**

@@ -33,7 +33,7 @@ Beginners to Intermediate Product Support personnel (ages 23-58, with 2-20 years
 
 ### 📚 Core Concepts
 For each key concept, include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
+* 🔍 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
 * 🖼️ **Visual Representation:** Clear diagram illustrating the concept structure and relationships
 * 🔬 **Technical Explanation:** Precise definition and mechanics with proper terminology
 * 💼 **Support/SRE Application:** Direct workplace relevance with specific troubleshooting scenarios
@@ -87,4 +87,4 @@ Include key points summarizing:
 Brief introduction to what will be covered on Day 2
 
 ## 🚩 Invocation Statement
-Generate a comprehensive, visually engaging Day 1 module on relational database fundamentals that builds expertise from beginner to SRE-level. Follow the requirements in the prompt to create structured content that explains database concepts progressively, focusing primarily on Oracle with appropriate PostgreSQL and SQL Server comparisons. Include all required sections: introduction, learning objectives, core concepts, detailed concept breakdowns, hands-on exercises, troubleshooting scenarios, FAQs, key takeaways, and a preview of Day 2. Use consistent visual formatting with emoji indicators for different knowledge tiers (🟢beginner, 🟡intermediate, 🔴SRE-level).
+Generate a comprehensive, visually engaging Day 1 module on relational database fundamentals that builds expertise from beginner to SRE-level. Follow the requirements in the prompt to create structured content that explains database concepts progressively, focusing primarily on Oracle with appropriate PostgreSQL and SQL Server comparisons. Include all required sections: introduction, learning objectives, core concepts, detailed concept breakdowns, hands-on exercises, troubleshooting scenarios, FAQs, key takeaways, and a preview of Day 2. Use consistent visual formatting with emoji indicators for different knowledge tiers (🔍beginner, 🧩intermediate, 💡SRE-level).

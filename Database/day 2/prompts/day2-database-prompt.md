@@ -35,7 +35,7 @@ Beginners to Intermediate Product Support personnel (ages 23-58, with 2-20 years
 
 ### 📚 Core Concepts
 For each key concept, include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
+* 🔍 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
 * 🖼️ **Visual Representation:** Clear Mermaid diagram illustrating the concept structure and workflow
 * 🔬 **Technical Explanation:** Precise definition and mechanics with proper terminology
 * 💼 **Support/SRE Application:** Direct workplace relevance with specific troubleshooting scenarios
@@ -84,9 +84,9 @@ For each concept, follow this structure:
 
 ### 🔨 Hands-On Exercises
 Include 3 exercises for each tier:
-* Beginner exercises focusing on basic DML operations in Oracle
-* Intermediate exercises applying DML to realistic support scenarios
-* SRE-level exercises incorporating transaction management and error handling
+* 🔍 Beginner exercises focusing on basic DML operations in Oracle
+* 🧩 Intermediate exercises applying DML to realistic support scenarios
+* 💡 SRE-level exercises incorporating transaction management and error handling
 
 ### 🚧 Troubleshooting Scenarios
 Include 3 realistic scenarios focused on Day 2 content:
@@ -97,9 +97,9 @@ Include 3 realistic scenarios focused on Day 2 content:
 
 ### ❓ Frequently Asked Questions
 Include 3 FAQs for each tier:
-* Beginner FAQs addressing fundamental DML understanding
-* Intermediate FAQs focusing on practical application of DML
-* SRE-level FAQs covering performance, scale, and reliability with DML operations
+* 🔍 Beginner FAQs addressing fundamental DML understanding
+* 🧩 Intermediate FAQs focusing on practical application of DML
+* 💡 SRE-level FAQs covering performance, scale, and reliability with DML operations
 * Ensure Oracle-specific questions and answers are included
 
 ### 🔥 Oracle-Specific SRE Scenario
@@ -172,7 +172,10 @@ Include a comprehensive section on:
 
 ## ✅ Formatting Requirements
 
-* Use emojis consistently to indicate different sections and concept tiers (🟢, 🟡, 🔴)
+* Use emojis consistently to indicate different sections and concept tiers:
+  * 🔍 Beginner-level concepts and examples
+  * 🧩 Intermediate-level concepts and examples
+  * 💡 SRE-level concepts and examples
 * Create clear, properly formatted Mermaid diagrams for visual representations
 * Ensure all tables have consistent column widths and properly aligned headers
 * Use consistent formatting for code blocks, including syntax highlighting
@@ -312,7 +315,7 @@ Remember to maintain the "brick by brick" learning approach, ensuring each conce
 ## Invocations Statement
 Generate a comprehensive Day 2 database training module focused on Data Manipulation Language (DML) with Oracle as the primary focus and comparisons to PostgreSQL and SQL Server. Follow the "brick by brick" learning approach, building on Day 1's relational fundamentals and progressing through INSERT, UPDATE, DELETE operations and transaction control. 
 
-Include detailed Oracle-specific content including DML syntax variations, transaction management, bulk operations, and recovery strategies. Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🟢), intermediate (🟡), and SRE (🔴) levels. 
+Include detailed Oracle-specific content including DML syntax variations, transaction management, bulk operations, and recovery strategies. Structure the content with clear visual aids, properly formatted Mermaid diagrams for all key concepts, and examples at beginner (🔍), intermediate (🧩), and SRE (💡) levels. 
 
 Create visually engaging Mermaid diagrams following the formatting guidelines to illustrate key concepts like DML operations, transaction flows, lock interactions, error handling, and dictionary view relationships. Include realistic troubleshooting scenarios with visual flowcharts and sequence diagrams.
 

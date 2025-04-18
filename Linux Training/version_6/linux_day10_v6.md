@@ -67,7 +67,7 @@ Variables in shell scripts store data like paths, user names, or environment par
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   #!/bin/bash
@@ -79,7 +79,7 @@ Variables in shell scripts store data like paths, user names, or environment par
 
   *Explanation*: A simple example assigning a string and printing it.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   #!/bin/bash
@@ -94,7 +94,7 @@ Variables in shell scripts store data like paths, user names, or environment par
 
   *Explicit context*: Parameterizing script paths makes them easier to maintain across environments.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   #!/bin/bash
@@ -142,7 +142,7 @@ Command substitution embeds a command’s output into another command or variabl
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   #!/bin/bash
@@ -154,7 +154,7 @@ Command substitution embeds a command’s output into another command or variabl
 
   *Explanation*: Embedding the result of `date` in a variable.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   #!/bin/bash
@@ -166,7 +166,7 @@ Command substitution embeds a command’s output into another command or variabl
 
   *Explicit context*: SREs need to track log counts to manage rotations.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   #!/bin/bash
@@ -216,7 +216,7 @@ Loops automate repetitive tasks. For SREs, they’re handy when checking multipl
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   #!/bin/bash
@@ -231,7 +231,7 @@ Loops automate repetitive tasks. For SREs, they’re handy when checking multipl
 
   *Explanation*: Basic numeric loop.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   #!/bin/bash
@@ -261,7 +261,7 @@ Loops automate repetitive tasks. For SREs, they’re handy when checking multipl
 
   *Explicit context*: Checking connectivity across multiple servers.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   #!/bin/bash
@@ -316,7 +316,7 @@ Conditionals let you adapt script behavior based on system state. SREs leverage 
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   #!/bin/bash
@@ -334,7 +334,7 @@ Conditionals let you adapt script behavior based on system state. SREs leverage 
 
   *Explanation*: Simple numeric comparison.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   #!/bin/bash
@@ -360,7 +360,7 @@ Conditionals let you adapt script behavior based on system state. SREs leverage 
 
   *Explicit context*: Handling different HTTP responses in a script.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   #!/bin/bash
@@ -411,7 +411,7 @@ Environment variables are accessible to child processes and unify configuration 
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
   ```bash
   #!/bin/bash
@@ -423,7 +423,7 @@ Environment variables are accessible to child processes and unify configuration 
 
   *Explanation*: Exports a variable for child processes to see.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
   ```bash
   #!/bin/bash
@@ -438,7 +438,7 @@ Environment variables are accessible to child processes and unify configuration 
 
   *Explicit context*: Ensures environment pre-conditions.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
   ```bash
   #!/bin/bash
@@ -870,7 +870,7 @@ main
 
 ## 📚 **Further Learning Resources**
 
-### 🟢 **Beginner (2–3)**
+### 🔍 **Beginner (2–3)**
 
 1. **"Learn Shell Scripting Step by Step"** – [https://www.howtoforge.com/tutorial/bash-scripting-tutorial/](https://www.howtoforge.com/tutorial/bash-scripting-tutorial/)
    - Ideal for reinforcing basics of variables, conditionals, and loops.
@@ -879,14 +879,14 @@ main
 3. **"ShellCheck Online"** – [https://www.shellcheck.net/](https://www.shellcheck.net/)
    - Catch common beginner mistakes in your scripts.
 
-### 🟡 **Intermediate (2–3)**
+### 🧩 **Intermediate (2–3)**
 
 1. **"Advanced Bash-Scripting Guide"** – [https://tldp.org/LDP/abs/html/](https://tldp.org/LDP/abs/html/)
    - Explores complex constructs (arrays, functions, traps).
 2. **"Google Shell Style Guide"** – [https://google.github.io/styleguide/shellguide.html](https://google.github.io/styleguide/shellguide.html)
    - Presents best practices for maintainable scripts.
 
-### 🔴 **SRE-Level (2–3)**
+### 💡 **SRE-Level (2–3)**
 
 1. **"Google SRE Book – Automation Chapter"** – [https://sre.google/sre-book/](https://sre.google/sre-book/)
    - Real-world guidance on large-scale automation strategies.

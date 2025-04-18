@@ -5,7 +5,7 @@
 1. **Training Material Structure Development**
    - Created a comprehensive "brick by brick" learning approach
    - Established three clear tiers of learning (beginner, intermediate, SRE-level)
-   - Developed a consistent formatting style with visual indicators (🟢🟡🔴)
+   - Developed a consistent formatting style with visual indicators (🔍🧩💡)
 
 2. **Day 1 Core Content**
    - Completed v5 version with basic content covering relational database fundamentals

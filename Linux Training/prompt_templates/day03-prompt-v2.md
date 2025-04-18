@@ -62,7 +62,7 @@ For each command, follow this structured format:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```bash
 # Example: [clear purpose statement]
 $ [command with basic options]
@@ -70,7 +70,7 @@ $ [command with basic options]
 # [Optional brief explanation if needed]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```bash
 # Example: [specific operational context]
 $ [command with more complex options]
@@ -78,7 +78,7 @@ $ [command with more complex options]
 # Explicit context: [operational significance explanation]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```bash
 # Example: [realistic SRE scenario like troubleshooting/automation]
 $ [complex command possibly combining with other tools]
@@ -146,17 +146,17 @@ Combine elements from both documents' incident scenarios to create a comprehensi
 ### 📚 Further Learning Resources
 Combine the strongest resources from both documents:
 
-#### 🟢 Beginner: 2–3 resources
+#### 🔍 Beginner: 2–3 resources
 - Direct links
 - Clear descriptions of what they teach
 - Why they're valuable for beginners
 
-#### 🟡 Intermediate: 2–3 resources
+#### 🧩 Intermediate: 2–3 resources
 - Direct links
 - Clear descriptions of what they teach
 - Connection to operational skills
 
-#### 🔴 SRE-Level: 2–3 resources
+#### 💡 SRE-Level: 2–3 resources
 - Direct links
 - Description of advanced operational insights
 - How they elevate reliability engineering skills

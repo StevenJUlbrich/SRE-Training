@@ -28,19 +28,19 @@ Throughout this module, we’ll build each concept **brick by brick**, ensuring 
 
 # 🎯 Learning Objectives by Tier
 
-## 🟢 Beginner Objectives (4)
+## 🔍 Beginner Objectives (4)
 1. **Identify** tables, columns, and rows in a relational database, explaining them in simple real-world analogies.  
 2. **Explain** the roles of primary keys and foreign keys in maintaining data integrity.  
 3. **Construct** basic SQL queries using SELECT, FROM, and WHERE to retrieve specific data.  
 4. **Connect** to sample databases and perform fundamental data lookups without errors.
 
-## 🟡 Intermediate Objectives (4)
+## 🧩 Intermediate Objectives (4)
 1. **Analyze** table relationships and how primary/foreign keys impact support query design.  
 2. **Optimize** basic queries by choosing relevant columns and applying WHERE clauses efficiently.  
 3. **Compare** different database systems (Oracle, PostgreSQL, SQL Server, MongoDB, Kafka) for data retrieval needs.  
 4. **Apply** early SRE principles—like observability and minor performance checks—to daily queries.
 
-## 🔴 SRE-Level Objectives (4)
+## 💡 SRE-Level Objectives (4)
 1. **Evaluate** how table structure and keys affect long-term reliability and performance under load.  
 2. **Investigate** slow or failing queries using preliminary execution plan analysis.  
 3. **Translate** queries and concepts across relational, NoSQL, and streaming platforms as needed.  
@@ -71,21 +71,21 @@ Below is a more detailed **visual concept map** showing how today’s topics fit
 
 ```
                   ┌────────────────────────────────┐
-                  │       🟢 Fundamentals          │
+                  │       🔍 Fundamentals          │
                   │  Tables, Columns, Rows         │
                   │  PK, FK, Basic SELECT          │
                   └────────────────────────────────┘
                             |          \
                             v           \
                ┌─────────────────────┐   \
-               │  🟡 Intermediate    │    \
+               │  🧩 Intermediate    │    \
                │  Query Efficiency   │     ---> Cross-Database Variation
                │  Deeper PK/FK       │    /
                └─────────────────────┘   /
                            |            /
                            v           /
              ┌─────────────────────────────┐
-             │     🔴 SRE-Level           │
+             │     💡 SRE-Level           │
              │  Reliability & Monitoring  │
              │  Execution Plans           │
              └─────────────────────────────┘
@@ -100,7 +100,7 @@ Below is a more detailed **visual concept map** showing how today’s topics fit
 # 📚 Core Concepts
 
 ## 1. Relational Database Fundamentals
-- **🟢 Beginner Analogy**: Think of a **digital filing cabinet** where each drawer is a **table**, each folder a **row**, and each labeled section a **column**.
+- **🔍 Beginner Analogy**: Think of a **digital filing cabinet** where each drawer is a **table**, each folder a **row**, and each labeled section a **column**.
 - **🖼️ Visual Representation**:
   ```
   ┌──────────────┐
@@ -124,7 +124,7 @@ Below is a more detailed **visual concept map** showing how today’s topics fit
 - **📝 Quick Reference**: “A **table** is a structured container for records with uniform column definitions.”
 
 ## 2. Key Concepts: Primary & Foreign Keys
-- **🟢 Beginner Analogy**: A **primary key** is like a **unique driver’s license number** for each person. A **foreign key** is like referencing that license number in a traffic database to track violations.
+- **🔍 Beginner Analogy**: A **primary key** is like a **unique driver’s license number** for each person. A **foreign key** is like referencing that license number in a traffic database to track violations.
 - **🖼️ Visual Representation**:
   ```
   USERS              ORDERS
@@ -146,7 +146,7 @@ Below is a more detailed **visual concept map** showing how today’s topics fit
 - **📝 Quick Reference**: “PK = Unique row ID. FK = Link to that ID in another table.”
 
 ## 3. Basic SQL: SELECT, FROM, WHERE
-- **🟢 Beginner Analogy**: “Asking a librarian” for specific books (SELECT) from a certain shelf (FROM) that match a certain topic (WHERE). 
+- **🔍 Beginner Analogy**: “Asking a librarian” for specific books (SELECT) from a certain shelf (FROM) that match a certain topic (WHERE). 
 - **🖼️ Visual Representation**:
   ```
    SELECT columns
@@ -216,7 +216,7 @@ A **binder** with **dividers** (tables) and pages (rows), each page containing t
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```sql
 -- Example: Show all columns/rows from 'users'
 SELECT * 
@@ -234,7 +234,7 @@ FROM users;
 -- 3) No WHERE means get every row
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```sql
 -- Example: Summarize how many rows in 'orders'
 SELECT COUNT(*) AS total_orders
@@ -249,7 +249,7 @@ FROM orders;
 -- 2) Used for capacity or sanity checks
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```sql
 -- Example: Check table size for capacity planning (PostgreSQL)
 SELECT relname AS table_name,
@@ -327,7 +327,7 @@ users
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```sql
 -- Ensure 'id' is PK in a new 'users' table
 CREATE TABLE users (
@@ -340,7 +340,7 @@ CREATE TABLE users (
 -- 2) Basic building block for relational data
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```sql
 -- Add a foreign key to link orders to users
 ALTER TABLE orders
@@ -351,7 +351,7 @@ FOREIGN KEY (user_id) REFERENCES users(id);
 -- Prevent orphan orders by guaranteeing user_id must exist in Users
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```sql
 -- Composite primary key to handle many-to-many user-group relationships
 CREATE TABLE memberships (
@@ -420,7 +420,7 @@ The foundational SQL statements for retrieving data. **SELECT** chooses columns,
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```sql
 -- Retrieve all columns from 'customers'
 SELECT *
@@ -435,7 +435,7 @@ FROM customers;
 -- Basic: No WHERE means all rows
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```sql
 -- Retrieve only name and region for users in 'NA'
 SELECT name, region
@@ -449,7 +449,7 @@ WHERE region = 'NA';
 -- Context: Quick check of user distribution in North America
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```sql
 -- Join users and orders for advanced SRE analysis
 SELECT u.name, COUNT(o.order_id) AS total_orders
@@ -511,7 +511,7 @@ Client/Tool → [Network/Driver] → Database Server
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```bash
 # Connect to Postgres
 psql -h localhost -U dev_user -d sampledb
@@ -520,7 +520,7 @@ psql -h localhost -U dev_user -d sampledb
 #   You can now run queries like SELECT * FROM customers;
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```bash
 # Connect to MongoDB with authentication
 mongo "mongodb://alice:secret@prod-mongo:27017/orders_db"
@@ -530,7 +530,7 @@ mongo "mongodb://alice:secret@prod-mongo:27017/orders_db"
 # Cross-Database Variation: Syntax differs from SQL.
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```bash
 # Connect to Kafka console consumer for SRE diagnostics
 kafka-console-consumer \
@@ -616,7 +616,7 @@ When you run a **SELECT** query or join multiple tables:
 
 # 🔨 Day 1 Hands-On Exercises
 
-## 🟢 Beginner Exercises (3)
+## 🔍 Beginner Exercises (3)
 
 1. **Database Connection Exercise**  
    **Goal**: Connect to a sample database in each system.  
@@ -661,7 +661,7 @@ When you run a **SELECT** query or join multiple tables:
 
 ---
 
-## 🟡 Intermediate Exercises (3)
+## 🧩 Intermediate Exercises (3)
 
 1. **Multi-Table Exploration**  
    **Goal**: Identify relationships between `users` and `orders` via primary/foreign keys.  
@@ -703,7 +703,7 @@ When you run a **SELECT** query or join multiple tables:
 
 ---
 
-## 🔴 SRE-Level Exercises (3)
+## 💡 SRE-Level Exercises (3)
 
 1. **Query Performance Analysis**  
    **Goal**: Examine the execution plan for a SELECT query.  
@@ -743,7 +743,7 @@ When you run a **SELECT** query or join multiple tables:
 
 # 📝 Knowledge Check Quiz
 
-## 🟢 Beginner Tier (4 questions)
+## 🔍 Beginner Tier (4 questions)
 
 1. **Which statement best describes a 'table' in a relational database?**  
    - A) A random collection of documents  
@@ -779,7 +779,7 @@ When you run a **SELECT** query or join multiple tables:
 
 ---
 
-## 🟡 Intermediate Tier (4 questions)
+## 🧩 Intermediate Tier (4 questions)
 
 1. **Why is using `SELECT *` in production often discouraged?**  
    - A) It’s shorter to write  
@@ -815,7 +815,7 @@ When you run a **SELECT** query or join multiple tables:
 
 ---
 
-## 🔴 SRE-Level Tier (4 questions)
+## 💡 SRE-Level Tier (4 questions)
 
 1. **If a basic SELECT query suddenly takes 10x longer, which factor is most likely at play?**  
    - A) The UI color scheme changed  
@@ -914,7 +914,7 @@ When you run a **SELECT** query or join multiple tables:
 
 # ❓ Frequently Asked Questions
 
-## 🟢 Beginner FAQs
+## 🔍 Beginner FAQs
 1. **Q**: *Is SQL case-sensitive?*  
    **A**: Many SQL keywords are case-insensitive, but table/column names can be case-sensitive in certain databases (Oracle with quoted identifiers, for example). Always be consistent.
 
@@ -926,7 +926,7 @@ When you run a **SELECT** query or join multiple tables:
 
 ---
 
-## 🟡 Intermediate FAQs
+## 🧩 Intermediate FAQs
 1. **Q**: *When should I use a composite primary key?*  
    **A**: If you need to uniquely identify a row by more than one column (e.g., user_id + group_id in a membership table). This is common in many-to-many relationships.
 
@@ -938,7 +938,7 @@ When you run a **SELECT** query or join multiple tables:
 
 ---
 
-## 🔴 SRE-Level FAQs
+## 💡 SRE-Level FAQs
 1. **Q**: *How do I handle large tables that keep growing?*  
    **A**: Strategies include partitioning, archiving old data, and implementing efficient indexing. Monitoring size growth is crucial for capacity planning.
 
@@ -1085,7 +1085,7 @@ On **Day 2**, we’ll focus on **CRUD Operations (INSERT, UPDATE, DELETE)** and 
 
 # 📚 Day 1 Further Learning Resources
 
-## 🟢 Beginner SQL & Relational Database Resources (3)
+## 🔍 Beginner SQL & Relational Database Resources (3)
 
 1. **SQLBolt**  
    - **Link**: [https://sqlbolt.com/](https://sqlbolt.com/)  
@@ -1107,7 +1107,7 @@ On **Day 2**, we’ll focus on **CRUD Operations (INSERT, UPDATE, DELETE)** and 
 
 ---
 
-## 🟡 Intermediate Relational Concepts Resources (3)
+## 🧩 Intermediate Relational Concepts Resources (3)
 
 1. **PostgreSQL Official Documentation**  
    - **Link**: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)  
@@ -1129,7 +1129,7 @@ On **Day 2**, we’ll focus on **CRUD Operations (INSERT, UPDATE, DELETE)** and 
 
 ---
 
-## 🔴 SRE-Level Reliability Resources (3)
+## 💡 SRE-Level Reliability Resources (3)
 
 1. **Database Reliability Engineering** (O’Reilly)  
    - **Link**: [https://www.oreilly.com/library/view/database-reliability-engineering/9781491925935/](https://www.oreilly.com/library/view/database-reliability-engineering/9781491925935/)  

@@ -87,7 +87,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
    ```bash
    # List all files in the current directory with details
@@ -98,7 +98,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
    *Explanation*: You see file types, permissions, owner, group, file size, and timestamps.
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
    ```bash
    # Include hidden files
@@ -112,7 +112,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
    *Operational Significance*: Sometimes hidden dotfiles hold critical config or secrets.
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
    ```bash
    # Combine with grep or other tools to filter for suspicious perms
@@ -144,7 +144,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```bash
   # Give yourself read/write, group read, others read
@@ -152,7 +152,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
   -rw-r--r-- 1 user user 0 Mar 29 10:10 notes.txt
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```bash
   # Recursively set a directory to owner=rwx, group=rx, others=none
@@ -162,7 +162,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
   *Operational Context*: Great for restricting group-shared directories while locking out others.
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```bash
   # Add the sticky bit to a shared directory
@@ -194,7 +194,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```bash
   # Change owner to 'student'
@@ -202,7 +202,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
   # Group remains unchanged.
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```bash
   # Recursively set ownership to 'webuser' for a web directory
@@ -210,7 +210,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
   # Operational Context: Ensures the web service can manage its own files.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```bash
   # Transfer ownership of logs to a logs group for compliance
@@ -240,14 +240,14 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```bash
   # Set group ownership to 'students'
   $ sudo chgrp students group_project/
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```bash
   # Recursively assign logs to 'devops' group
@@ -255,7 +255,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
   # Operational Context: A DevOps team might collectively review logs.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```bash
   # Rotating maintenance teams
@@ -286,14 +286,14 @@ We’ll look at five core commands frequently used by SREs to manage permissions
 
 **Tiered Examples**:
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```bash
   # Install packages (apt requires root privileges)
   $ sudo apt update && sudo apt upgrade
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```bash
   # Edit a root-owned file
@@ -301,7 +301,7 @@ We’ll look at five core commands frequently used by SREs to manage permissions
   # Operational Context: Normal user can’t edit system config files.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```bash
   # Audit privileges for a user named 'deployer'

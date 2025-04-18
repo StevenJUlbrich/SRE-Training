@@ -79,7 +79,7 @@ Below we break down the key Linux networking commands in the recommended structu
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```
 # Basic reachability
@@ -91,7 +91,7 @@ PING google.com (142.250.190.14): 56 data bytes
 2 packets transmitted, 2 received, 0% packet loss
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```
 # Testing local network device, limiting total time
@@ -100,7 +100,7 @@ $ ping -c 4 -w 3 192.168.1.10
 # Explanation: -w sets a 3-second overall deadline
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```
 # Checking latency across multiple hosts quickly
@@ -140,7 +140,7 @@ $ for host in web1 db1 proxy1; do
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```
 # Check all interfaces with legacy ifconfig
@@ -150,7 +150,7 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 ...
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```
 # View current IP addressing using ip
@@ -161,7 +161,7 @@ $ ip addr show eth0
 # Explanation: ip is script-friendly, modern, and more complete.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```
 # Temporarily add a secondary IP for multi-homed test
@@ -201,7 +201,7 @@ $ ip route get 10.0.0.50
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```
 # Show all listening TCP ports using netstat
@@ -211,7 +211,7 @@ TCP    0.0.0.0:22       0.0.0.0:*          LISTEN
 ...
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```
 # Using ss with process info
@@ -222,7 +222,7 @@ LISTEN  0       128    0.0.0.0:80         0.0.0.0:*          users:( ("nginx",pi
 # Explanation: see which processes own which ports.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```
 # Filter established connections to a microservice on port 8080
@@ -260,7 +260,7 @@ ESTAB 0  0 10.0.0.12:8080  10.0.0.44:53210  users:( ("java",pid=1234,fd=55) )
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```
 # Simple remote login
@@ -269,7 +269,7 @@ $ ssh alice@server.example.com
 [alice@server ~]$
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```
 # Connect with a custom key and port
@@ -277,7 +277,7 @@ $ ssh -p 2200 -i ~/.ssh/dev_key bob@staging.example.com
 Last login: Tue Mar 28 09:35:11 2025 from 10.0.0.15
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```
 # Creating a local tunnel to access an internal service
@@ -316,7 +316,7 @@ $ ssh -L 9090:internal-app:9090 user@bastion -N -f
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```
 # Copy a single file to remote server
@@ -324,7 +324,7 @@ $ scp notes.txt sam@host:/home/sam/
 notes.txt                100%   15KB 2.0MB/s   00:00
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```
 # Copy a directory from remote to local, preserving timestamps and attributes
@@ -333,7 +333,7 @@ $ scp -rp user@host:/var/log/ /tmp/backup_logs
 # Explanation: good for investigating logs locally.
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```
 # Parallel copying from multiple servers
@@ -527,7 +527,7 @@ $ wait
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner (2-3)
+### 🔍 Beginner (2-3)
 
 1. [Linux Journey - Networking Nomad](https://linuxjourney.com/lesson/network-basics)
    - Overviews IP, ping, ifconfig.
@@ -537,7 +537,7 @@ $ wait
 3. [SSH.com - Beginners SSH Guide](https://www.ssh.com/academy/ssh)
    - Intro to SSH usage and principles.
 
-### 🟡 Intermediate (2-3)
+### 🧩 Intermediate (2-3)
 
 1. [Red Hat’s Networking with Linux Commands](https://www.redhat.com/sysadmin/networking-linux-commands)
    - Explores `ip`, `ss`, and routing.
@@ -546,7 +546,7 @@ $ wait
 3. [SSH Mastery by Michael W. Lucas](https://mwl.io/nonfiction/tools#ssh)
    - Deeper dive into SSH configurations.
 
-### 🔴 SRE-Level (2-3)
+### 💡 SRE-Level (2-3)
 
 1. [Google SRE Book - Chapter 8: Release Engineering](https://sre.google/sre-book/release-engineering/)
    - While not exclusively about networking, it shows big-scale practices.

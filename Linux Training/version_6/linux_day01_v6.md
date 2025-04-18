@@ -91,7 +91,7 @@ Below are four core commands (`pwd`, `ls`, `cd`, `man`) plus the overall **files
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Just see where you are
@@ -101,7 +101,7 @@ $ pwd
 
 *Explanation*: You confirm that `/home/student` is your current directory.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Resolving symlinked path
@@ -111,7 +111,7 @@ $ pwd -P
 
 *Explicit context*: If `/home/student/documents` is actually a symlink, `pwd -P` shows the true underlying directory.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Checking correct prod directory before a deploy
@@ -157,7 +157,7 @@ $ if [[ "$(pwd -P)" == "/var/www/prod" ]]; then
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Basic listing of current directory
@@ -167,7 +167,7 @@ documents  downloads  readme.txt
 
 *Explanation*: Quickly see what files or directories are there.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Checking most recently updated files
@@ -179,7 +179,7 @@ $ ls -lt
 
 *Explicit context*: Sorting by time helps pinpoint logs updated just before an issue.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Inspect hidden files, large logs in /var/log
@@ -223,7 +223,7 @@ $ ls -lha
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Navigating into Documents
@@ -234,7 +234,7 @@ $ pwd
 
 *Explanation*: You’re now in the `Documents` folder.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Toggling between two locations
@@ -245,7 +245,7 @@ $ cd -
 
 *Explicit context*: Efficiently jumps between logs and your home directory.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Script-based navigation
@@ -292,7 +292,7 @@ systemctl restart app
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Learning about the pwd command
@@ -301,7 +301,7 @@ $ man pwd
 
 *Explanation*: Read official documentation on usage and flags.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Searching for disk-related commands
@@ -311,7 +311,7 @@ $ man -k disk
 
 *Explicit context*: You find tools like `fdisk`, `diskutil`, etc.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Deep dive into systemd service configuration
@@ -354,7 +354,7 @@ While not a single command, understanding the Linux filesystem layout is essenti
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Example: Listing root directory
@@ -365,7 +365,7 @@ bin  boot  dev  etc  home  lib  media  mnt  ...
 
 *Explanation*: You see all the major top-level directories.
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Example: Checking /etc for config files
@@ -377,7 +377,7 @@ drwxr-xr-x 2 root root   4096 Feb 28 07:45 cron.d
 
 *Explicit context*: SREs frequently tweak configurations under `/etc`.
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Example: Searching logs recursively in /var
@@ -414,7 +414,7 @@ $ grep -Ri "ERROR" /var/log/
 
 ## 🎯 Hands-On Exercises
 
-### 🟢 Beginner Exercises (Tier 1)
+### 🔍 Beginner Exercises (Tier 1)
 
 1. **Find Your Bearings**
    - **Task**: Open a terminal, type `pwd`, then `ls`. See what files/folders exist.
@@ -426,7 +426,7 @@ $ grep -Ri "ERROR" /var/log/
    - **Task**: Run `man ls`, skim the man page, then exit by pressing `q`.
    - **Goal**: Explore official documentation on a commonly used command.
 
-### 🟡 Intermediate Exercises (Tier 2)
+### 🧩 Intermediate Exercises (Tier 2)
 
 1. **Detailed Listing**
    - **Task**: Go to `/var/log`, run `ls -lt` to see which files updated most recently. Note the top 1–2 changed logs.
@@ -438,7 +438,7 @@ $ grep -Ri "ERROR" /var/log/
    - **Task**: Explore `/etc` with `ls -l /etc` to see config file permissions. Identify one file and note its owner, group, and permissions.
    - **Goal**: Understand how config files are protected or shared.
 
-### 🔴 SRE-Level Exercises (Tier 3)
+### 💡 SRE-Level Exercises (Tier 3)
 
 1. **Pre-Deployment Safety**
    - **Task**: Write a script that checks if `pwd -P` matches `/var/www/prod` before pulling code from Git. If not, abort.
@@ -454,7 +454,7 @@ $ grep -Ri "ERROR" /var/log/
 
 ## 📝 Quiz Questions
 
-### 🟢 Beginner (Tier 1)
+### 🔍 Beginner (Tier 1)
 
 1. Which command shows your current directory?
    - a) `ls`
@@ -474,7 +474,7 @@ $ grep -Ri "ERROR" /var/log/
    - c) `/`
    - d) `/etc`
 
-### 🟡 Intermediate (Tier 2)
+### 🧩 Intermediate (Tier 2)
 
 4. To sort files by **modification time** (newest first), which command is correct?
    - a) `ls -lm`
@@ -494,7 +494,7 @@ $ grep -Ri "ERROR" /var/log/
    - c) `/var/log`
    - d) `/bin`
 
-### 🔴 SRE-Level (Tier 3)
+### 💡 SRE-Level (Tier 3)
 
 7. During an incident, which location do you **most** likely check first to view recent error logs?
    - a) `/home/user`
@@ -543,7 +543,7 @@ $ grep -Ri "ERROR" /var/log/
 
 ## ❓ FAQ
 
-### 🟢 Beginner FAQs (Tier 1)
+### 🔍 Beginner FAQs (Tier 1)
 
 1. **Q**: How do I go “up” one directory?
    - **A**: Use `cd ..`. This moves you to the parent directory of your current location.
@@ -557,7 +557,7 @@ $ grep -Ri "ERROR" /var/log/
    - **A**: Yes, `File.txt` and `file.txt` are two different names. The same goes for commands.
    - **Real-world application**: Inconsistent capitalization can lead to “file not found” errors.
 
-### 🟡 Intermediate FAQs (Tier 2)
+### 🧩 Intermediate FAQs (Tier 2)
 
 1. **Q**: How can I make `ls` show hidden files by default?
    - **A**: Create an alias, e.g., `alias ls='ls -a --color=auto'` in `~/.bashrc` or `~/.zshrc`.
@@ -571,7 +571,7 @@ $ grep -Ri "ERROR" /var/log/
    - **A**: Not all software includes a man page by default, especially minimal or custom tools.
    - **Real-world application**: For in-house scripts, you rely on built-in help or internal documentation.
 
-### 🔴 SRE-Level FAQs (Tier 3)
+### 💡 SRE-Level FAQs (Tier 3)
 
 1. **Q**: How can I quickly swap between two directories while debugging?
    - **A**: Use `cd -`. It toggles between your current directory and the last one.
@@ -682,7 +682,7 @@ $ grep -Ri "ERROR" /var/log/
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner (Tier 1)
+### 🔍 Beginner (Tier 1)
 
 1. **Linux Journey (Shell Basics)**  
    [https://linuxjourney.com/lesson/the-shell](https://linuxjourney.com/lesson/the-shell)  
@@ -692,7 +692,7 @@ $ grep -Ri "ERROR" /var/log/
    [http://linuxcommand.org/tlcl.php](http://linuxcommand.org/tlcl.php)  
    A free, comprehensive ebook for beginners.
 
-### 🟡 Intermediate (Tier 2)
+### 🧩 Intermediate (Tier 2)
 
 1. **Filesystem Hierarchy Standard**  
    [https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html](https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html)  
@@ -702,7 +702,7 @@ $ grep -Ri "ERROR" /var/log/
    [https://explainshell.com/](https://explainshell.com/)  
    Visual breakdown of commands and flags from man pages.
 
-### 🔴 SRE-Level (Tier 3)
+### 💡 SRE-Level (Tier 3)
 
 1. **Google SRE Book (Emergency Handling Chapter)**  
    [https://sre.google/sre-book/](https://sre.google/sre-book/)  

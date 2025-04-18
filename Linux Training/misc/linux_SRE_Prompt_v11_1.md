@@ -17,7 +17,7 @@ Explicitly merge and enhance these into a fully comprehensive training module in
 ### 📌 **Introduction:**
 - Explicit summary of learning topics.
 - Explicit relevance and context to real-world SRE roles.
-- Clearly defined learning objectives (🟢 Beginner, 🟡 Intermediate, 🔴 SRE-Level).
+- Clearly defined learning objectives (🔍 Beginner, 🧩 Intermediate, 💡 SRE-Level).
 
 ### 📚 **Core Concepts:**
 For each concept explicitly include:
@@ -37,17 +37,17 @@ For each command explicitly provide:
 | `-a`        | `command -a`   | Explicit description |
 
 #### **Explicit Examples:**
-- 🟢 **Beginner Examples:**
+- 🔍 **Beginner Examples:**
 ```bash
 $ command -a
 Explicit output clearly shown
 ```
-- 🟡 **Intermediate Examples:**
+- 🧩 **Intermediate Examples:**
 ```bash
 $ command -a -l /path
 Explicit intermediate example and context
 ```
-- 🔴 **SRE-Level Examples:**
+- 💡 **SRE-Level Examples:**
 ```bash
 $ command --option scenario
 Explicit realistic scenario and troubleshooting
@@ -66,9 +66,9 @@ Explicitly detail:
 
 ### 🎯 **Hands-On Exercises:**
 Minimum 3 explicitly structured exercises per tier:
-- 🟢 Beginner
-- 🟡 Intermediate
-- 🔴 SRE-Level
+- 🔍 Beginner
+- 🧩 Intermediate
+- 💡 SRE-Level
 - Explicit reflection on importance.
 
 ### 📝 **Quiz Questions:**
@@ -97,15 +97,15 @@ Explicitly detail frequent issues:
 ### 📚 **Further Learning Resources (Explicit Guidelines):**
 Explicitly structured resources with clear descriptions and direct relevant URLs, segmented explicitly by learner tier (minimum 2 per tier):
 
-#### 🟢 Beginner Resources:
+#### 🔍 Beginner Resources:
 - Explicit beginner-friendly descriptions.
 - Direct links to basic tutorials/guides (introductory articles, basic videos).
 
-#### 🟡 Intermediate Resources:
+#### 🧩 Intermediate Resources:
 - Explicit technical explanations.
 - Links to intermediate-level guides, technical documentation, comprehensive tutorials.
 
-#### 🔴 SRE-Level Resources:
+#### 💡 SRE-Level Resources:
 - Explicitly advanced operational resources.
 - Links to industry guides, official documentation, books, case studies, advanced operational tutorials.
 

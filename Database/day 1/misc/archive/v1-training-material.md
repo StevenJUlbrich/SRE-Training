@@ -33,19 +33,19 @@ Below is a simple visual concept map of what we’ll cover today:
 
 ## 🎯 Learning Objectives by Tier
 
-### 🟢 Beginner Objectives
+### 🔍 Beginner Objectives
 1. **Explain** the concept of a relational database in simple terms.  
 2. **Identify** tables, columns, rows, and understand the roles of primary and foreign keys.  
 3. **Execute** basic SQL SELECT statements to retrieve data.  
 4. **Navigate** a sample database confidently using simple queries.
 
-### 🟡 Intermediate Objectives
+### 🧩 Intermediate Objectives
 1. **Interpret** relational database schemas and understand relationships (one-to-many, many-to-many).  
 2. **Formulate** more targeted SELECT queries using WHERE clauses to filter data.  
 3. **Assess** common performance implications of simple SELECT queries.  
 4. **Troubleshoot** basic query errors and data inconsistencies.
 
-### 🔴 SRE-Level Objectives
+### 💡 SRE-Level Objectives
 1. **Analyze** how query design can impact database reliability and resource usage.  
 2. **Optimize** SELECT queries to handle larger datasets or concurrent workloads.  
 3. **Apply** SRE principles (monitoring, incident management) to database query performance.  
@@ -75,7 +75,7 @@ Below is a simple visual concept map of what we’ll cover today:
 ## 📚 Core Concepts
 
 ### 1. Relational Database
-- 🟢 **Beginner Analogy**: Think of a **library** where each book has a specific ID (primary key), and the library’s index (catalog) helps you find related topics (foreign keys).  
+- 🔍 **Beginner Analogy**: Think of a **library** where each book has a specific ID (primary key), and the library’s index (catalog) helps you find related topics (foreign keys).  
 - 🔬 **Technical Explanation**: A relational database organizes data into **tables** (relations). Each table has columns (attributes) and rows (records). The **relational** part comes from linking data in one table to data in another via **keys**.  
 - 💼 **Support/SRE Application**: You’ll query user/account data, log error details, or check system metrics stored in these tables.  
 - 🔄 **System Impact**: Good relational design streamlines queries and ensures consistent performance. Poorly designed schemas cause slow queries and reliability issues.  
@@ -84,7 +84,7 @@ Below is a simple visual concept map of what we’ll cover today:
   - Thinking you can’t scale relational databases effectively—modern technology can handle very large relational datasets.
 
 ### 2. Tables, Columns, Rows
-- 🟢 **Beginner Analogy**: A **spreadsheet** with labeled columns (headers) and multiple rows of data.  
+- 🔍 **Beginner Analogy**: A **spreadsheet** with labeled columns (headers) and multiple rows of data.  
 - 🔬 **Technical Explanation**:
   - **Table**: A set of columns defining data structure, and rows containing actual data.  
   - **Column**: A field representing a particular attribute (e.g., `customer_name`).  
@@ -95,7 +95,7 @@ Below is a simple visual concept map of what we’ll cover today:
   - Mixing up rows and columns can lead to confusion in queries.
 
 ### 3. Primary Keys & Foreign Keys
-- 🟢 **Beginner Analogy**: The **“Social Security Number”** of a table (primary key) that another table references to connect (foreign key).  
+- 🔍 **Beginner Analogy**: The **“Social Security Number”** of a table (primary key) that another table references to connect (foreign key).  
 - 🔬 **Technical Explanation**: 
   - **Primary Key (PK)**: A unique identifier for each row in a table (no duplicates, can’t be NULL).  
   - **Foreign Key (FK)**: A column in one table that references the primary key in another table, establishing a relationship.  
@@ -105,7 +105,7 @@ Below is a simple visual concept map of what we’ll cover today:
   - Assuming an FK is always a single column—sometimes composite keys exist.
 
 ### 4. Introduction to SQL
-- 🟢 **Beginner Analogy**: **“Asking questions”** to your database using a structured language.  
+- 🔍 **Beginner Analogy**: **“Asking questions”** to your database using a structured language.  
 - 🔬 **Technical Explanation**: SQL (Structured Query Language) is the standard language for interacting with relational databases. Basic operations include **SELECT**, **INSERT**, **UPDATE**, **DELETE**.  
 - 💼 **Support/SRE Application**: You use SQL to query logs, configuration tables, or user data for troubleshooting.  
 - 🔄 **System Impact**: Efficient SQL queries improve performance; inefficient queries can overload the system.  
@@ -138,7 +138,7 @@ Below is a simple visual concept map of what we’ll cover today:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```sql
 -- Example: Quickly view all columns in the 'customers' table
 SELECT * 
@@ -153,7 +153,7 @@ FROM customers;
 -- This helps you confirm data is present and readable.
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```sql
 -- Example: Filter specific columns for a support scenario
 SELECT customer_id, customer_name
@@ -168,7 +168,7 @@ WHERE region = 'North';
 -- Context: Quick lookup of customers in the North region for a targeted support ticket.
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```sql
 -- Example: Monitoring query for identifying top customers by order volume
 SELECT c.customer_name, SUM(o.order_total) AS total_spent
@@ -221,14 +221,14 @@ ORDER BY total_spent DESC;
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```sql
 SELECT customer_name 
 FROM customers;
 /* Retrieves customer_name from the customers table. */
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```sql
 SELECT c.customer_name, o.order_date, o.order_total
 FROM customers c
@@ -237,7 +237,7 @@ WHERE o.order_date = '2025-03-01';
 /* Retrieves customers who placed orders on a specific date. */
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```sql
 SELECT l.log_id, l.log_message, s.server_name
 FROM logs l
@@ -284,7 +284,7 @@ ORDER BY l.log_timestamp DESC;
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```sql
 SELECT customer_name 
 FROM customers
@@ -292,7 +292,7 @@ WHERE region = 'North';
 /* Retrieves only customers who live in the North region. */
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```sql
 SELECT order_id, order_total
 FROM orders
@@ -300,7 +300,7 @@ WHERE order_total > 100 AND status = 'Completed';
 /* Helps identify larger completed orders for potential follow-up or auditing. */
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```sql
 SELECT server_name, error_code, log_timestamp
 FROM logs
@@ -356,7 +356,7 @@ A simplified query execution flow might look like this:
 
 ## 🔨 Hands-On Exercises
 
-### 🟢 Beginner Exercises (3)
+### 🔍 Beginner Exercises (3)
 
 1. **Basic SELECT**  
    - **Goal**: Retrieve all columns from the `customers` table.  
@@ -382,7 +382,7 @@ A simplified query execution flow might look like this:
 
 ---
 
-### 🟡 Intermediate Exercises (3)
+### 🧩 Intermediate Exercises (3)
 
 1. **Multiple Condition Query**  
    - **Goal**: List orders where `order_total > 50` and `status = 'Completed'`.  
@@ -410,7 +410,7 @@ A simplified query execution flow might look like this:
 
 ---
 
-### 🔴 SRE-Level Exercises (3)
+### 💡 SRE-Level Exercises (3)
 
 1. **Identify Slow Queries**  
    - **Goal**: Write a SELECT statement that intentionally scans a large table without an index, then use the database’s execution plan tools to identify the bottleneck.  
@@ -440,7 +440,7 @@ A simplified query execution flow might look like this:
 
 ## 📝 Knowledge Check Quiz
 
-### 🟢 Beginner Tier (3 Questions)
+### 🔍 Beginner Tier (3 Questions)
 1. **Which of the following best describes a primary key?**  
    - A) A column that can contain duplicates  
    - B) A unique identifier for each row, can’t be NULL  
@@ -464,7 +464,7 @@ A simplified query execution flow might look like this:
 
 ---
 
-### 🟡 Intermediate Tier (3 Questions)
+### 🧩 Intermediate Tier (3 Questions)
 1. **When you use `WHERE region = 'North' AND status = 'Active'`, how many rows will be returned?**  
    - A) Rows where region is 'North' or status is 'Active'  
    - B) Only rows that have both region = 'North' and status = 'Active'  
@@ -488,7 +488,7 @@ A simplified query execution flow might look like this:
 
 ---
 
-### 🔴 SRE-Level Tier (3 Questions)
+### 💡 SRE-Level Tier (3 Questions)
 1. **Which factor most significantly impacts query performance for large tables?**  
    - A) The number of columns only  
    - B) Proper indexing and query design  
@@ -571,7 +571,7 @@ Below are **3** realistic scenarios you might encounter in support roles:
 
 ## ❓ Frequently Asked Questions
 
-### 🟢 Beginner FAQs
+### 🔍 Beginner FAQs
 1. **Can I learn SQL without a technical background?**  
    - **Answer**: Absolutely! SQL is designed for readability and is often easier for beginners compared to lower-level programming.  
 2. **Is there a difference between a table and a spreadsheet?**  
@@ -579,7 +579,7 @@ Below are **3** realistic scenarios you might encounter in support roles:
 3. **Why do I see quotes or brackets around table names in some queries?**  
    - **Answer**: Different databases have different rules for naming conventions and reserved words. Quotes/brackets help avoid conflicts.
 
-### 🟡 Intermediate FAQs
+### 🧩 Intermediate FAQs
 1. **How can I find which columns are available in a table?**  
    - **Answer**: Use commands like `DESCRIBE table_name;` (MySQL), or check information_schema tables in PostgreSQL/SQL Server.  
 2. **Does using WHERE always improve performance?**  
@@ -587,7 +587,7 @@ Below are **3** realistic scenarios you might encounter in support roles:
 3. **What if I need data from three or more tables?**  
    - **Answer**: You can JOIN multiple tables in a chain. Just ensure your JOIN conditions are correct to avoid cartesian products.
 
-### 🔴 SRE-Level FAQs
+### 💡 SRE-Level FAQs
 1. **How do I measure the performance cost of a SELECT query?**  
    - **Answer**: Use `EXPLAIN` or `EXPLAIN ANALYZE` in your database to see the query execution plan and measure run times.  
 2. **When should I worry about concurrency in SELECT queries?**  
@@ -692,7 +692,7 @@ This scenario walks you through a **5-step** process using SQL commands to diagn
 
 ## 📚 Further Learning Resources
 
-### 🟢 Beginner Resources (3)
+### 🔍 Beginner Resources (3)
 
 1. **SQLBolt**  
    - **Link**: [https://sqlbolt.com/](https://sqlbolt.com/)  
@@ -711,7 +711,7 @@ This scenario walks you through a **5-step** process using SQL commands to diagn
 
 ---
 
-### 🟡 Intermediate Resources (3)
+### 🧩 Intermediate Resources (3)
 
 1. **PostgreSQL Documentation**  
    - **Link**: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)  
@@ -730,7 +730,7 @@ This scenario walks you through a **5-step** process using SQL commands to diagn
 
 ---
 
-### 🔴 SRE-Level Resources (3)
+### 💡 SRE-Level Resources (3)
 
 1. **Use The Index, Luke!**  
    - **Link**: [https://use-the-index-luke.com/](https://use-the-index-luke.com/)  

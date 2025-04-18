@@ -53,9 +53,9 @@ Learners:
 - Recap previous day's theme (if not Day 1)
 - Explain today’s topic with real-world SRE scenarios
 - Learning Objectives:
-    - 🟢 Beginner
-    - 🟡 Intermediate
-    - 🔴 SRE-Level
+    - 🔍 Beginner
+    - 🧩 Intermediate
+    - 💡 SRE-Level
 
 ### 2. 📚 Core Concepts Explained
 
@@ -92,9 +92,9 @@ For each command:
 
 ### 5. 🎯 Hands-On Exercises (Required & Tiered)
 
-- 🟢 Beginner: 3+ exercises for simple usage
-- 🟡 Intermediate: 3+ that combine commands or logic
-- 🔴 SRE: 3+ that simulate realistic incidents or automation tasks
+- 🔍 Beginner: 3+ exercises for simple usage
+- 🧩 Intermediate: 3+ that combine commands or logic
+- 💡 SRE: 3+ that simulate realistic incidents or automation tasks
 
 Add reflection: *What this teaches and why it matters.*
 

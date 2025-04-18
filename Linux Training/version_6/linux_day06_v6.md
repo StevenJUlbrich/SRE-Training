@@ -96,7 +96,7 @@ Below are 11 critical commands for process management and system monitoring, eac
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # List all running processes in BSD style
@@ -107,7 +107,7 @@ student    9876  2.5  1.5 241872 12345 pts/2   Sl+ 14:20   0:10 python3 script.p
 # Shows process owners, IDs, CPU/memory usage, and commands
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Display all processes in SysV style and filter by "nginx"
@@ -117,7 +117,7 @@ www-data 11013 11012  0 Mar26 ?        00:00:10 nginx: worker process
 # Demonstrates the master-worker model commonly used by Nginx
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Show processes in a hierarchy and display key resource columns
@@ -162,7 +162,7 @@ $ ps --forest -o pid,user,%cpu,%mem,cmd
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Launch top in interactive mode
@@ -173,7 +173,7 @@ Tasks: 228 total,   1 running, 227 sleeping,   0 stopped,   0 zombie
 MiB Mem :  16384.0 total,  12000.0 free,   2000.0 used,   1384.0 buff/cache
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Focus on processes owned by "webuser"
@@ -181,7 +181,7 @@ $ top -u webuser
 # Quickly isolate resource usage for a specific service user
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Capture multiple snapshots in batch mode for analysis
@@ -220,7 +220,7 @@ $ top -b -n 5 -d 2 > top_log.txt
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Simply run htop if installed
@@ -228,7 +228,7 @@ $ htop
 # You get an interactive, color-coded display of CPU, RAM, and processes
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Filter processes to a specific user "deploy"
@@ -236,7 +236,7 @@ $ htop -u deploy
 # Great for analyzing resource usage of a particular deployment
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Searching for a resource hog process
@@ -278,7 +278,7 @@ $ htop -u deploy
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Gracefully end a process with PID 1234
@@ -286,7 +286,7 @@ $ kill 1234
 # Equivalent to kill -TERM 1234, letting the process clean up
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Force-kill a stubborn process with PID 5678
@@ -294,7 +294,7 @@ $ kill -9 5678
 # Use only if normal termination fails
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Reload Nginx config without a full restart
@@ -332,7 +332,7 @@ $ kill -HUP $(pgrep nginx)
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Suppose you run `sleep 300 &`
@@ -341,7 +341,7 @@ $ jobs
 # Indicates job #1 is running in the background
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 $ jobs -l
@@ -350,7 +350,7 @@ $ jobs -l
 # Shows PIDs alongside job numbers
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # During maintenance:
@@ -389,7 +389,7 @@ $ jobs -l
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Suspend "top" with Ctrl+Z
@@ -400,7 +400,7 @@ $ bg %1
 # "top" continues in the background
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 $ jobs
@@ -410,7 +410,7 @@ $ bg %2
 # Moves job #2 (vim) to background (though it's interactive)
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Large data transfer suspended mid-progress
@@ -449,7 +449,7 @@ $ bg %+
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ jobs
@@ -459,7 +459,7 @@ tail -f /var/log/syslog
 # Now it's in the foreground
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # If you have multiple background tasks
@@ -467,7 +467,7 @@ $ fg %2
 # Brings job #2 to the foreground for interaction or to terminate
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # A maintenance script is running in background
@@ -509,7 +509,7 @@ $ fg %2
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ uname -a
@@ -517,7 +517,7 @@ Linux server1 5.4.0-81-generic #91-Ubuntu SMP x86_64 x86_64 x86_64 GNU/Linux
 # Displays kernel, version, architecture, and OS details
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Retrieve only the kernel version
@@ -526,7 +526,7 @@ $ uname -r
 # Handy for checking relevant kernel patches
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Automate architecture checks in a script
@@ -566,7 +566,7 @@ echo "Architecture detected: $arch"
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ df -h
@@ -575,7 +575,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdb1       100G   45G   55G  45% /data
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Check filesystem types and usage
@@ -586,7 +586,7 @@ Filesystem     Type   Size  Used Avail Use% Mounted on
 tmpfs          tmpfs  2.0G  128M  1.9G   7% /run
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Monitor disk usage every 5 seconds to detect rapid log growth
@@ -626,7 +626,7 @@ $ watch -n 5 df -h
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 # Check size of current directory
@@ -634,7 +634,7 @@ $ du -sh .
 258M    .
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Compare subdirectory sizes in /var/log
@@ -645,7 +645,7 @@ $ du -h --max-depth=1 /var/log | sort -h
 ...
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Identify the largest subdirectories in /data excluding backups
@@ -687,7 +687,7 @@ $ du -h --max-depth=2 --exclude='backup*' /data | sort -h | tail -5
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example:**
+- 🔍 **Beginner Example:**
 
 ```bash
 $ free -h
@@ -696,7 +696,7 @@ Mem:           15Gi       4.6Gi       8.0Gi       264Mi       3.0Gi        10Gi
 Swap:         4.0Gi          0B       4.0Gi
 ```
 
-- 🟡 **Intermediate Example:**
+- 🧩 **Intermediate Example:**
 
 ```bash
 # Observe memory usage every 5 seconds
@@ -707,7 +707,7 @@ Swap:         4.0Gi   0B     4.0Gi
 ...
 ```
 
-- 🔴 **SRE-Level Example:**
+- 💡 **SRE-Level Example:**
 
 ```bash
 # Incorporate memory checks in a diagnostic loop
@@ -1040,7 +1040,7 @@ Below are three realistic issues, each with symptoms, causes, diagnostics, resol
 
 ## 📚 **Further Learning Resources**
 
-### 🟢 **Beginner (3)**  
+### 🔍 **Beginner (3)**  
 
 1. **Linux Journey - Process Utilization**  
    **Link**: [https://linuxjourney.com/lesson/process-utilization](https://linuxjourney.com/lesson/process-utilization)  
@@ -1057,7 +1057,7 @@ Below are three realistic issues, each with symptoms, causes, diagnostics, resol
    **Description**: A complete beginner’s guide to Linux CLI.  
    **Beginner Application**: Excellent resource for in-depth learning with practical examples.
 
-### 🟡 **Intermediate (3)**  
+### 🧩 **Intermediate (3)**  
 
 1. **DigitalOcean Tutorials: Process Management**  
    **Link**: [https://www.digitalocean.com/community/tutorials/tag/linux-process](https://www.digitalocean.com/community/tutorials/tag/linux-process)  
@@ -1074,7 +1074,7 @@ Below are three realistic issues, each with symptoms, causes, diagnostics, resol
    **Description**: Articles and case studies on Linux administration, process management, and monitoring.  
    **Operational Connection**: Provides applied knowledge for intermediate-level SREs.
 
-### 🔴 **SRE-Level (3)**  
+### 💡 **SRE-Level (3)**  
 
 1. **Google SRE Book - Handling Overload**  
    **Link**: [https://sre.google/sre-book/handling-overload/](https://sre.google/sre-book/handling-overload/)  

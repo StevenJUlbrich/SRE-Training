@@ -47,19 +47,19 @@ Below is a simple **visual concept map** illustrating how the parts of a relatio
 
 ## 🎯 Learning Objectives by Tier
 
-### 🟢 **Beginner Objectives**
+### 🔍 **Beginner Objectives**
 1. Understand the basic structure of a relational database (tables, columns, rows).  
 2. Learn the concept of primary and foreign keys as “links” between tables.  
 3. Write simple SQL queries using `SELECT`, `FROM`, and `WHERE`.  
 4. Recognize common error messages when connecting to an Oracle database.
 
-### 🟡 **Intermediate Objectives**
+### 🧩 **Intermediate Objectives**
 1. Differentiate between Oracle, PostgreSQL, and SQL Server syntax for basic queries.  
 2. Leverage table relationships to retrieve data from multiple tables.  
 3. Implement basic troubleshooting steps when queries fail or data is missing.  
 4. Identify performance considerations, such as indexing, at a high level.
 
-### 🔴 **SRE-Level Objectives**
+### 💡 **SRE-Level Objectives**
 1. Explain how design decisions (choice of primary/foreign keys) impact database reliability.  
 2. Monitor query performance using built-in tools (e.g., `EXPLAIN` in Oracle/PostgreSQL, Execution Plans in SQL Server).  
 3. Design queries for high reliability and maintainability under heavy loads.  
@@ -70,7 +70,7 @@ Below is a simple **visual concept map** illustrating how the parts of a relatio
 ## 📚 Core Concepts and Day 1 Breakdown
 
 We’ll explore the following core concepts in a structured format. Each concept will include:  
-- 🟢 **Beginner Analogy**  
+- 🔍 **Beginner Analogy**  
 - 🖼️ **Visual Representation**  
 - 🔬 **Technical Explanation**  
 - 💼 **Support/SRE Application**  
@@ -81,7 +81,7 @@ Then we’ll show **syntax & code examples**, highlighting **Oracle**, **Postgre
 
 ### 1. Relational Database Structure
 
-**🟢 Beginner Analogy**  
+**🔍 Beginner Analogy**  
 Think of a **database** as a library. Each **table** is like a shelf, columns are the labeled categories on the shelf, and each row is a single “book” (i.e., data record).  
 
 **🖼️ Visual Representation**  
@@ -113,7 +113,7 @@ Being able to quickly understand table structures is essential when diagnosing a
 
 ### 2. Primary Keys and Foreign Keys
 
-**🟢 Beginner Analogy**  
+**🔍 Beginner Analogy**  
 A **primary key** is like a **unique ID** on a library book—no two books share the exact same ID. A **foreign key** is like a reference to that ID in another system (e.g., an external index or a card catalog).
 
 **🖼️ Visual Representation**  
@@ -161,7 +161,7 @@ A **primary key** is like a **unique ID** on a library book—no two books share
 
 ### 3. Basic SQL SELECT Statement
 
-**🟢 Beginner Analogy**  
+**🔍 Beginner Analogy**  
 Asking a librarian to “Show me all the books in the IT section.” The `SELECT` statement is the question, the “books” are the rows in the table, and “IT section” is the specific criteria.
 
 **🖼️ Visual Representation**  
@@ -213,7 +213,7 @@ A `SELECT` statement is used to retrieve data from one or more tables. You speci
 
 ### 4. FROM Clause and Table Selection
 
-**🟢 Beginner Analogy**  
+**🔍 Beginner Analogy**  
 When you’re looking for something in a library, you need to **know which shelf** to go to. The `FROM` clause tells the database from which table(s) to retrieve data.
 
 **🖼️ Visual Representation**  
@@ -241,7 +241,7 @@ The `FROM` clause identifies the data source(s) for the query. You can list mult
 
 ### 5. WHERE Clause and Basic Filtering
 
-**🟢 Beginner Analogy**  
+**🔍 Beginner Analogy**  
 Using a **filter** or **search query** in a library’s computer system to limit results to a specific author or genre. Similarly, `WHERE` narrows down the database rows you get back.
 
 **🖼️ Visual Representation**  
@@ -272,7 +272,7 @@ Only employees in department 10 are returned.
 
 Below are practice exercises tailored to three tiers of expertise. Use sample tables like `employees` and `departments`.
 
-### 🟢 Beginner Exercises
+### 🔍 Beginner Exercises
 1. **Retrieve All Rows**  
    - Use `SELECT * FROM employees;` to view all rows.  
    - Confirm you see all records.  
@@ -281,7 +281,7 @@ Below are practice exercises tailored to three tiers of expertise. Use sample ta
 3. **Identify Primary Key**  
    - Investigate the table definition and determine which column is the primary key.
 
-### 🟡 Intermediate Exercises
+### 🧩 Intermediate Exercises
 1. **Compare Two Tables**  
    - Write a query that retrieves employees along with the department name by joining `employees` and `departments`.  
 2. **Partial String Match**  
@@ -289,7 +289,7 @@ Below are practice exercises tailored to three tiers of expertise. Use sample ta
 3. **Invalid Foreign Key Check**  
    - Attempt inserting a new employee with a non-existent department_id. Observe the foreign key constraint error.
 
-### 🔴 SRE-Level Exercises
+### 💡 SRE-Level Exercises
 1. **Explain Plan or Execution Plan**  
    - Use `EXPLAIN PLAN` (Oracle/PostgreSQL) or “Display Estimated Execution Plan” in SQL Server to see how a simple SELECT statement is executed.  
 2. **Performance Tuning**  
@@ -325,7 +325,7 @@ These scenarios highlight common Day 1 issues.
 
 ## ❓ Frequently Asked Questions
 
-### 🟢 Beginner FAQs
+### 🔍 Beginner FAQs
 1. **What is a table in a database?**  
    A table is a structured set of rows and columns. Each row represents a single record, and each column defines data attributes.
 2. **Do I need to memorize SQL syntax?**  
@@ -333,7 +333,7 @@ These scenarios highlight common Day 1 issues.
 3. **Why do we need primary keys?**  
    Primary keys ensure each record is unique and easily identifiable, preventing confusion and data duplication.
 
-### 🟡 Intermediate FAQs
+### 🧩 Intermediate FAQs
 1. **What’s the difference between Oracle, PostgreSQL, and SQL Server for basic queries?**  
    The core `SELECT`, `FROM`, `WHERE` structure is consistent, but specifics like date functions, schemas, and data types can differ slightly.
 2. **How do I know if an index is needed?**  
@@ -341,7 +341,7 @@ These scenarios highlight common Day 1 issues.
 3. **Can I join more than two tables in a single query?**  
    Yes. You can join multiple tables as long as the relationships (keys) are properly defined.
 
-### 🔴 SRE-Level FAQs
+### 💡 SRE-Level FAQs
 1. **Which metrics should I monitor to ensure query performance?**  
    Monitor execution time, CPU usage, I/O statistics, and wait events (Oracle) or similar metrics in other databases.
 2. **How do I handle locked rows in production?**  

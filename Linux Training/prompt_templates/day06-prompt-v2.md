@@ -23,7 +23,7 @@ Create an enhanced module that:
 
 ## 🔄 Integration Guidelines
 For each section:
-- Use Document 2's structure and visual indicators (🟢, 🟡, 🔴)
+- Use Document 2's structure and visual indicators (🔍, 🧩, 💡)
 - Incorporate Document 1's narrative explanations and analogies within this structure
 - Include Document 2's security notes and performance considerations
 - Combine the most effective examples from both documents
@@ -70,7 +70,7 @@ For each command, provide a structured breakdown following this exact format:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```bash
 # Example: [clear purpose statement]
 $ [command with basic options]
@@ -78,7 +78,7 @@ $ [command with basic options]
 # [Optional brief explanation if needed]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```bash
 # Example: [specific operational context]
 $ [command with more complex options]
@@ -86,7 +86,7 @@ $ [command with more complex options]
 # Explicit context: [operational significance explanation]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```bash
 # Example: [realistic SRE scenario like troubleshooting/automation]
 $ [complex command possibly combining with other tools]
@@ -161,19 +161,19 @@ Create an enhanced version of Document 2's scenario that:
 ### 📚 Further Learning Resources
 Combine the best resources from both documents:
 
-#### 🟢 Beginner: exactly 3  
+#### 🔍 Beginner: exactly 3  
 - Each resource must include:
   - Direct link
   - Clear description of what it teaches
   - How it applies to beginner Linux users
 
-#### 🟡 Intermediate: exactly 3  
+#### 🧩 Intermediate: exactly 3  
 - Each resource must include:
   - Direct link
   - Clear description of what it teaches
   - How it connects to operational skills
 
-#### 🔴 SRE-Level: exactly 3  
+#### 💡 SRE-Level: exactly 3  
 - Each resource must include:
   - Direct link
   - Clear description of advanced operational insights

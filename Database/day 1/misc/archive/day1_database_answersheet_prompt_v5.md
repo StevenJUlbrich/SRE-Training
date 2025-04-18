@@ -17,7 +17,7 @@ Create a detailed answer sheet that:
 For each quiz question, provide:
 
 1. **Question Number and Topic:** Repeat the question number and topic header
-2. **Difficulty Level:** Indicate with appropriate emoji (🟢/🟡/🔴)
+2. **Difficulty Level:** Indicate with appropriate emoji (🔍/🧩/💡)
 3. **Question Text:** Repeat the full question text
 4. **Correct Answer:** Clearly identify the correct option (A, B, C, or D)
 5. **Explanation:** Provide a detailed explanation (3-5 sentences) of why this answer is correct
@@ -28,7 +28,7 @@ For each quiz question, provide:
 Format each answer as:
 ```
 ## Answer X: [Topic]
-🟢/🟡/🔴 [Difficulty Level]
+🔍/🧩/💡 [Difficulty Level]
 
 **Question:** [Question text]
 

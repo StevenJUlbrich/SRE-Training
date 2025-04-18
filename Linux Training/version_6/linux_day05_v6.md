@@ -69,21 +69,21 @@ This training document follows a structured format that highlights each command'
 
 #### Tiered Examples
 
-- **🟢 Beginner**
+- **🔍 Beginner**
 
   ```bash
   # Replace 'hello' with 'Hello' in greetings.txt
   sed 's/hello/Hello/g' greetings.txt
   ```
   
-- **🟡 Intermediate**
+- **🧩 Intermediate**
 
   ```bash
   # Delete lines starting with a comment in config files
   sed '/^#/d' /etc/myapp/config.ini
   ```
 
-- **🔴 SRE-Level**
+- **💡 SRE-Level**
 
   ```bash
   # Replace multiple environment variables in place
@@ -116,21 +116,21 @@ This training document follows a structured format that highlights each command'
 
 #### Tiered Examples
 
-- **🟢 Beginner**
+- **🔍 Beginner**
 
   ```bash
   # Print the first column of each line
   awk '{print $1}' names.txt
   ```
 
-- **🟡 Intermediate**
+- **🧩 Intermediate**
 
   ```bash
   # Show processes using more than 10% CPU (fields vary by OS)
   ps aux | awk '$3 > 10 {print $2, $3, $11}'
   ```
 
-- **🔴 SRE-Level**
+- **💡 SRE-Level**
 
   ```bash
   # Calculate average response time ignoring N/A lines
@@ -165,21 +165,21 @@ This training document follows a structured format that highlights each command'
 
 #### Tiered Examples
 
-- **🟢 Beginner**
+- **🔍 Beginner**
 
   ```bash
   # Alphabetically sort lines in names.txt
   sort names.txt
   ```
 
-- **🟡 Intermediate**
+- **🧩 Intermediate**
 
   ```bash
   # Sort processes by memory usage descending
   ps aux | sort -k4 -nr | head -5
   ```
 
-- **🔴 SRE-Level**
+- **💡 SRE-Level**
 
   ```bash
   # Sort log lines by timestamp (field 3), then by response time (field 7 numerically)
@@ -212,21 +212,21 @@ This training document follows a structured format that highlights each command'
 
 #### Tiered Examples
 
-- **🟢 Beginner**
+- **🔍 Beginner**
 
   ```bash
   # Remove duplicates from a sorted list
   sort names.txt | uniq
   ```
 
-- **🟡 Intermediate**
+- **🧩 Intermediate**
 
   ```bash
   # Count occurrences of each severity level in logs
   grep "ERROR\|WARN\|INFO" app.log | sort | uniq -c
   ```
 
-- **🔴 SRE-Level**
+- **💡 SRE-Level**
 
   ```bash
   # Identify repeating IP addresses across combined logs
@@ -259,14 +259,14 @@ This training document follows a structured format that highlights each command'
 
 #### Tiered Examples
 
-- **🟢 Beginner**
+- **🔍 Beginner**
 
   ```bash
   # Count lines in greetings.txt
   wc -l greetings.txt
   ```
 
-- **🟡 Intermediate**
+- **🧩 Intermediate**
 
   ```bash
   # Check file size in a script, then compress if over 500KB
@@ -276,7 +276,7 @@ This training document follows a structured format that highlights each command'
   fi
   ```
 
-- **🔴 SRE-Level**
+- **💡 SRE-Level**
 
   ```bash
   # Monitor log growth in real time
@@ -492,19 +492,19 @@ This training document follows a structured format that highlights each command'
 
 ## 📚 Further Learning Resources
 
-### 🟢 **Beginner**
+### 🔍 **Beginner**
 
 1. **GNU sed Manual** – [https://www.gnu.org/software/sed/manual/](https://www.gnu.org/software/sed/manual/)
 2. **Awk Introduction (Linuxize)** – [https://linuxize.com/post/awk-command/](https://linuxize.com/post/awk-command/)
 3. **TutorialsPoint: Learning Bash Scripting** – [https://www.tutorialspoint.com/unix/bash_scripting.htm](https://www.tutorialspoint.com/unix/bash_scripting.htm)
 
-### 🟡 **Intermediate**
+### 🧩 **Intermediate**
 
 1. **The Linux Command Line** – [http://linuxcommand.org/tlcl.php](http://linuxcommand.org/tlcl.php)
 2. **Mastering the awk Command (DigitalOcean)** – [https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux](https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux)
 3. **Grep, Sed, and Awk (O’Reilly)** – [https://www.oreilly.com/library/view/grep-sed-awk/9781449396677/](https://www.oreilly.com/library/view/grep-sed-awk/9781449396677/)
 
-### 🔴 **SRE-Level**
+### 💡 **SRE-Level**
 
 1. **Google SRE Book: Monitoring & Alerting** – [https://sre.google/sre-book/](https://sre.google/sre-book/)
 2. **Netflix TechBlog – Linux Performance Analysis** – [https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55](https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)

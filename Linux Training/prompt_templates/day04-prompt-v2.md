@@ -42,7 +42,7 @@ For each concept include:
 For each command/concept (grep, find, pipes, redirection) provide:
 - Command overview with SRE relevance
 - Well-formatted syntax table (from Document 2) with comprehensive examples
-- Color-coded tiered examples (🟢, 🟡, 🔴) with realistic outputs
+- Color-coded tiered examples (🔍, 🧩, 💡) with realistic outputs
 - Instructional notes including:
   - Beginner tips
   - SRE insights
@@ -68,21 +68,21 @@ For each command, follow this format:
 
 **Tiered Examples:**
 
-* 🟢 **Beginner Example:**
+* 🔍 **Beginner Example:**
 ```bash
 # Example: [clear purpose statement]
 $ [command with basic options]
 [realistic terminal output]
 ```
 
-* 🟡 **Intermediate Example:**
+* 🧩 **Intermediate Example:**
 ```bash
 # Example: [specific operational context]
 $ [command with more complex options]
 [realistic terminal output]
 ```
 
-* 🔴 **SRE-Level Example:**
+* 💡 **SRE-Level Example:**
 ```bash
 # Example: [realistic SRE scenario]
 $ [complex command possibly combining with other tools]
@@ -160,7 +160,7 @@ Curated resources for each level:
 - Include direct links and clear descriptions
 
 ## 🛑 Requirements
-1. Maintain consistent color-coding system (🟢, 🟡, 🔴) throughout
+1. Maintain consistent color-coding system (🔍, 🧩, 💡) throughout
 2. Use tables for command syntax (from Document 2)
 3. Include comprehensive examples (from Document 1)
 4. Ensure clear progression from beginner to SRE-level

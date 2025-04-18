@@ -53,21 +53,21 @@ We’ll primarily explore **PostgreSQL** examples, noting if Oracle/SQL Server d
 
 Below are the **4 objectives** at each skill tier, each tied to **SRE principles** and **practical support tasks**.
 
-### 🟢 Beginner Objectives
+### 🔍 Beginner Objectives
 
 1. **Identify** basic relational database components (tables, columns, rows).
 2. **Explain** the purpose of primary keys and foreign keys in simple terms.
 3. **Execute** simple SELECT queries with FROM and WHERE clauses in PostgreSQL.
 4. **Connect** to a PostgreSQL database and **verify** basic connectivity.
 
-### 🟡 Intermediate Objectives
+### 🧩 Intermediate Objectives
 
 1. **Analyze** database schemas to understand relationships (primary/foreign keys) in support tasks.
 2. **Optimize** basic SELECT queries by refining columns and using WHERE clauses effectively.
 3. **Troubleshoot** common connection issues in a structured, methodical manner.
 4. **Apply** initial SRE concepts (like reliability and observability) when writing queries.
 
-### 🔴 SRE-Level Objectives
+### 💡 SRE-Level Objectives
 
 1. **Evaluate** how SELECT queries impact database performance and resource utilization.
 2. **Monitor** queries for reliability and latency metrics using basic observability tools.
@@ -98,7 +98,7 @@ Eventually, we’ll connect these relational basics to **NoSQL** and **streaming
 
 ## 📊 Visual Concept Map
 
-Below is a more detailed visual concept map, **color-coded by complexity level** (🟢 = beginner, 🟡 = intermediate, 🔴 = advanced/SRE), showing **how each concept interrelates** and **where SRE principles come into play**:
+Below is a more detailed visual concept map, **color-coded by complexity level** (🔍 = beginner, 🧩 = intermediate, 💡 = advanced/SRE), showing **how each concept interrelates** and **where SRE principles come into play**:
 
 ```text
  ┌─────────────────────────────────────────────────────────────────────────┐
@@ -106,18 +106,18 @@ Below is a more detailed visual concept map, **color-coded by complexity level**
  │       (Schemas, Tables, Columns, Rows, Basic Storage Structures)        │
  └─────────────────────────────────────────────────────────────────────────┘
   │                  │                       │              │
-  │                  │                       │              ▼ (🔴 SRE Principle)
+  │                  │                       │              ▼ (💡 SRE Principle)
   │                  │                       │      Observability & Monitoring
-  ▼ (🟢)             ▼ (🟡)                  ▼ (🔴)
+  ▼ (🔍)             ▼ (🧩)                  ▼ (💡)
   Primary Key       Foreign Key            Performance Tuning
   (Uniqueness)        (Relationships)       (Query Plans, Indexing)
   │                  │                              │
   ▼                  ▼                              ▼
-Basic SELECT → FROM → WHERE ───── (🟢 Basic usage → 🟡 Extended usage → 🔴 High performance)
+Basic SELECT → FROM → WHERE ───── (🔍 Basic usage → 🧩 Extended usage → 💡 High performance)
   (Reading data)     (Context)         (Filtering)
 ```
 
-- SRE considerations ( 🔴 ) span all tiers, gradually increasing in depth and technicality.
+- SRE considerations ( 💡 ) span all tiers, gradually increasing in depth and technicality.
 
 ---
 
@@ -211,7 +211,7 @@ A **file cabinet** with multiple **folders** (schemas), each containing **docume
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```sql
   -- Example: Creating a simple table for storing basic customer info
@@ -229,7 +229,7 @@ A **file cabinet** with multiple **folders** (schemas), each containing **docume
   -- 2) first_name, last_name are variable character columns of length 50.
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```sql
   -- Example: Using a custom schema
@@ -250,7 +250,7 @@ A **file cabinet** with multiple **folders** (schemas), each containing **docume
   -- 2) TIMESTAMP column with default ensures we capture creation times.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```sql
   -- Example: Creating a table for monitoring logs (with partitioning in PostgreSQL)
@@ -316,7 +316,7 @@ employees.dept_id (FK) → departments.dept_id (PK)
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```sql
   -- Creating tables with a primary key and foreign key relationship
@@ -340,7 +340,7 @@ employees.dept_id (FK) → departments.dept_id (PK)
   -- 2) employees.dept_id references the dept_id in departments
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```sql
   -- Adding a foreign key constraint after table creation
@@ -358,7 +358,7 @@ employees.dept_id (FK) → departments.dept_id (PK)
   -- all employees in that department are also deleted. Use carefully.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```sql
   -- Example: Enforcing complex relationships with multiple columns
@@ -425,7 +425,7 @@ Like **filtering** a spreadsheet to display only certain columns you’re intere
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```sql
   -- Retrieve all data from the customers table
@@ -443,7 +443,7 @@ Like **filtering** a spreadsheet to display only certain columns you’re intere
   -- 2) FROM indicates which table to read from.
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```sql
   -- Selecting specific columns to reduce clutter
@@ -462,7 +462,7 @@ Like **filtering** a spreadsheet to display only certain columns you’re intere
   -- 2) We add a WHERE clause to focus on employees in department 10.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```sql
   -- Using an aggregate function and grouping
@@ -524,7 +524,7 @@ WHERE conditions
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```sql
   -- Single table
@@ -535,7 +535,7 @@ WHERE conditions
   -- Step-by-step: The FROM clause here simply says "read from employees".
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```sql
   -- Joining employees and departments
@@ -555,7 +555,7 @@ WHERE conditions
   -- 2) Common for troubleshooting cross-functional data issues.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```sql
   -- Subquery-based approach to isolate a complex condition
@@ -618,7 +618,7 @@ WHERE condition(s)
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```sql
   -- Filtering employees by a single dept_id
@@ -636,7 +636,7 @@ WHERE condition(s)
   -- 2) Great for verifying specific records.
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```sql
   -- Filtering on a range using numeric comparison
@@ -655,7 +655,7 @@ WHERE condition(s)
   -- 2) Efficient for diagnosing transactions in a certain range.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```sql
   -- Performance-based filtering
@@ -715,7 +715,7 @@ Like **logging into** your email before you can read or send messages.
 
 **Tiered Examples:**
 
-- 🟢 **Beginner Example**:
+- 🔍 **Beginner Example**:
 
   ```bash
   # Command line: 
@@ -730,7 +730,7 @@ Like **logging into** your email before you can read or send messages.
   # 3) Database: training_db.
   ```
 
-- 🟡 **Intermediate Example**:
+- 🧩 **Intermediate Example**:
 
   ```bash
   # Using a URI-style connection for automation
@@ -739,7 +739,7 @@ Like **logging into** your email before you can read or send messages.
   # This approach is often used in CI/CD pipelines or application configs.
   ```
 
-- 🔴 **SRE-Level Example**:
+- 💡 **SRE-Level Example**:
 
   ```bash
   # Using environment variables for secure connections and advanced parameters
@@ -871,7 +871,7 @@ public schema
 
 We have **3 exercises** for each tier.
 
-### 🟢 Beginner Exercises
+### 🔍 Beginner Exercises
 
 1. **Database Connection Exercise**  
    - **Goal**: Connect to a local PostgreSQL database named `training_db`.
@@ -913,7 +913,7 @@ We have **3 exercises** for each tier.
 
      2. Observe how only rows matching `customer_id <= 3` appear.
 
-### 🟡 Intermediate Exercises
+### 🧩 Intermediate Exercises
 
 1. **Multi-Table Exploration**  
    - **Goal**: Identify relationships between tables using primary/foreign keys.
@@ -956,7 +956,7 @@ We have **3 exercises** for each tier.
 
      3. Check if any rows are returned. If none, investigate foreign key relationships or data entry issues.
 
-### 🔴 SRE-Level Exercises
+### 💡 SRE-Level Exercises
 
 1. **Query Performance Analysis**  
    - **Goal**: Examine execution plans for a SELECT statement.
@@ -1013,7 +1013,7 @@ We have **3 exercises** for each tier.
 
 We have **4 questions per tier**, totaling **12** questions. Each includes **multiple-choice options** (4 each) and **explanations**.
 
-### 🟢 Beginner Questions (4)
+### 🔍 Beginner Questions (4)
 
 1. **Which statement best describes a table in a relational database?**  
    A) A single row containing all data  
@@ -1068,7 +1068,7 @@ We have **4 questions per tier**, totaling **12** questions. Each includes **mul
 
 ---
 
-### 🟡 Intermediate Questions (4)
+### 🧩 Intermediate Questions (4)
 
 1. **What does the `JOIN` keyword accomplish in a SQL query?**  
    A) It updates rows in multiple tables  
@@ -1124,7 +1124,7 @@ We have **4 questions per tier**, totaling **12** questions. Each includes **mul
 
 ---
 
-### 🔴 SRE-Level Questions (4)
+### 💡 SRE-Level Questions (4)
 
 1. **How can you identify if a SELECT query is doing a full table scan in PostgreSQL?**  
    A) By checking the `pg_tables` catalog for row counts  
@@ -1248,7 +1248,7 @@ We have **4 questions per tier**, totaling **12** questions. Each includes **mul
 
 Below are **3 FAQs per tier**, **total 9**.
 
-### 🟢 Beginner FAQs
+### 🔍 Beginner FAQs
 
 1. **Q**: Do I need to memorize all SQL syntax to start working with databases?  
    **A**: Not at all. Focus on basics—SELECT, FROM, WHERE, primary keys. You can learn more advanced syntax as you go.
@@ -1259,7 +1259,7 @@ Below are **3 FAQs per tier**, **total 9**.
 3. **Q**: Why can’t I delete a row from a table with a foreign key constraint?  
    **A**: The foreign key is likely protecting related data. You may need `ON DELETE CASCADE` or remove child rows first.
 
-### 🟡 Intermediate FAQs
+### 🧩 Intermediate FAQs
 
 1. **Q**: Should every table have a primary key?  
    **A**: In almost all cases, **yes**. A primary key prevents duplicate rows and simplifies data referencing and troubleshooting.
@@ -1270,7 +1270,7 @@ Below are **3 FAQs per tier**, **total 9**.
 3. **Q**: What’s the difference between `JOIN` and `LEFT JOIN`?  
    **A**: A `JOIN` (often `INNER JOIN`) returns rows that match in both tables. A `LEFT JOIN` returns **all rows** from the left table, plus matching rows from the right table.
 
-### 🔴 SRE-Level FAQs
+### 💡 SRE-Level FAQs
 
 1. **Q**: How do I monitor long-running queries automatically?  
    **A**: Use the `pg_stat_activity` view or extensions like `pg_stat_statements` with scheduled checks/alerts (e.g., Prometheus + Grafana or specialized DB monitoring tools).
@@ -1468,7 +1468,7 @@ Tomorrow, we’ll dive deeper into **joins, advanced WHERE clauses, and writing 
 
 ## 📚 Day 1 Further Learning Resources
 
-### 🟢 Beginner SQL & Relational Database Resources (3)
+### 🔍 Beginner SQL & Relational Database Resources (3)
 
 1. **[Official PostgreSQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html)**  
    - **Focus**: Basic SQL and table creation.  
@@ -1487,7 +1487,7 @@ Tomorrow, we’ll dive deeper into **joins, advanced WHERE clauses, and writing 
 
 ---
 
-### 🟡 Intermediate Relational Concepts Resources (3)
+### 🧩 Intermediate Relational Concepts Resources (3)
 
 1. **[PostgreSQL Documentation on Joins](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN)**  
    - **Focus**: Deeper exploration of JOIN types.  
@@ -1506,7 +1506,7 @@ Tomorrow, we’ll dive deeper into **joins, advanced WHERE clauses, and writing 
 
 ---
 
-### 🔴 SRE-Level Reliability Resources (3)
+### 💡 SRE-Level Reliability Resources (3)
 
 1. **[PostgreSQL Performance Tuning Wiki](https://wiki.postgresql.org/wiki/Performance_Optimization)**  
    - **Focus**: From indexing to partitioning and beyond.  

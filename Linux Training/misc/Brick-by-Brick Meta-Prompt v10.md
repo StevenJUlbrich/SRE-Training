@@ -38,9 +38,9 @@ Learners:
 - Recap previous day's learning (omit if Day 1)
 - Clearly outline today's topic, linking it to real-world SRE use-cases
 - Learning Objectives:
-  - 🟢 Beginner
-  - 🟡 Intermediate
-  - 🔴 SRE-Level
+  - 🔍 Beginner
+  - 🧩 Intermediate
+  - 💡 SRE-Level
 
 ### 2. 📚 **Core Concepts Explained:**
 For each concept:
@@ -72,16 +72,16 @@ Explicitly describe:
 
 ### 5. 🎯 **Hands-On Exercises (Required & Tiered):**
 Provide minimum 3 exercises per tier:
-- 🟢 Beginner (simple usage)
-- 🟡 Intermediate (combined commands or logic)
-- 🔴 SRE-level (incident simulation or automation)
+- 🔍 Beginner (simple usage)
+- 🧩 Intermediate (combined commands or logic)
+- 💡 SRE-level (incident simulation or automation)
 - Clearly state reflection points (importance and lessons learned)
 
 ### 6. 📝 **Quiz Questions (Required):**
 Provide clearly articulated questions:
-- 🟢 Beginner (3–4 questions)
-- 🟡 Intermediate (3–4 questions)
-- 🔴 SRE-level (3–4 questions)
+- 🔍 Beginner (3–4 questions)
+- 🧩 Intermediate (3–4 questions)
+- 💡 SRE-level (3–4 questions)
 - Varied formats: MCQ, fill-in-the-blank, scenario-based
 - Do **not** include answers inline; generate separately upon request
 
@@ -95,9 +95,9 @@ Detail minimum 3 real troubleshooting scenarios clearly structured as:
 
 ### 8. ❓ **FAQ (Required):**
 Explicitly address questions with clear answers and practical examples:
-- 🟢 Beginner (3 questions)
-- 🟡 Intermediate (3 questions)
-- 🔴 SRE-level (3 questions)
+- 🔍 Beginner (3 questions)
+- 🧩 Intermediate (3 questions)
+- 💡 SRE-level (3 questions)
 
 ### 9. 🔥 **SRE Scenario Walkthrough (Required):**
 Describe a realistic SRE incident, maintenance task, or deployment:
@@ -113,9 +113,9 @@ Clearly summarize:
 
 ### 11. 📚 **Further Learning Resources:**
 Clearly list:
-- 🟢 Beginner-level (2 resources)
-- 🟡 Intermediate-level (2 resources, such as CLI tools, manpages, visual aids)
-- 🔴 SRE/Production-level (2 resources, including books, case studies, advanced tools)
+- 🔍 Beginner-level (2 resources)
+- 🧩 Intermediate-level (2 resources, such as CLI tools, manpages, visual aids)
+- 💡 SRE/Production-level (2 resources, including books, case studies, advanced tools)
 
 ---
 

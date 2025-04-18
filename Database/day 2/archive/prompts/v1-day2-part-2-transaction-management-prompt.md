@@ -46,7 +46,7 @@ Materials will be presented in an immersive Markdown format with consistent visu
 - Tables MUST be properly aligned with column headers and divider rows
 - All examples must include proper syntax highlighting and expected outputs
 - Format hierarchical content with consistent indentation and bullet styles
-- Visual cues (🟢, 🟡, 🔴, etc.) must be applied consistently throughout the document
+- Visual cues (🔍, 🧩, 💡, etc.) must be applied consistently throughout the document
 - Each major section must include at least one visual representation (diagram, table, or formatted code)
 
 ## 📋 Day 2.2 Content Requirements
@@ -96,7 +96,7 @@ The primary focus should be on PostgreSQL, with explicit comparisons to Oracle a
 
 ### 📚 Core Concepts
 For each key concept (Transactions, ACID Properties, Transaction Control, Savepoints, Isolation Levels), include:
-* 🟢 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
+* 🔍 **Beginner Analogy:** Simple real-world comparison that resonates with diverse experiences
 * 🖼️ **Visual Representation:** Clear diagram illustrating the concept
 * 🔬 **Technical Explanation:** Precise definition and mechanics with proper terminology
 * 💼 **Support/SRE Application:** Direct workplace relevance with specific troubleshooting scenarios
@@ -153,7 +153,7 @@ For each concept, strictly adhere to this exact structure:
 **Tiered Examples:**  
 [MUST include all three tiers with consistent formatting]
 
-* 🟢 **Beginner Example**:
+* 🔍 **Beginner Example**:
 ```sql
 -- Example: [clear purpose]
 [SQL code with basic syntax]
@@ -163,7 +163,7 @@ For each concept, strictly adhere to this exact structure:
 -- [Step-by-step explanation for beginners]
 ```
 
-* 🟡 **Intermediate Example**:
+* 🧩 **Intermediate Example**:
 ```sql
 -- Example: [support scenario]
 [SQL code with more complex syntax]
@@ -174,7 +174,7 @@ For each concept, strictly adhere to this exact structure:
 -- Knowledge build: [how this builds on beginner concepts]
 ```
 
-* 🔴 **SRE-Level Example**:
+* 💡 **SRE-Level Example**:
 ```sql
 -- Example: [SRE scenario]
 [Complex SQL code]
@@ -263,19 +263,19 @@ Each visual aid must be:
 ### 🔨 Day 2.2 Hands-On Exercises
 Exactly 3 exercises per tier, focused specifically on Day 2.2 content:
 
-* 🟢 **Beginner Exercises:**
+* 🔍 **Beginner Exercises:**
   * **Basic Transaction Control Exercise**: Using BEGIN, COMMIT, ROLLBACK
   * **Multi-statement Transaction Exercise**: Combining multiple DML operations in a transaction
   * **Rollback Exercise**: Intentional errors and rollback behavior
   * Each exercise should have clear objectives and expected outcomes
   
-* 🟡 **Intermediate Exercises:**  
+* 🧩 **Intermediate Exercises:**  
   * **Savepoint Exercise**: Creating and using savepoints for partial rollbacks
   * **Isolation Level Exercise**: Demonstrating different isolation behaviors
   * **Error Handling Exercise**: Managing errors within transactions
   * Each exercise should explicitly build on beginner skills with clear references
   
-* 🔴 **SRE-Level Exercises:**
+* 💡 **SRE-Level Exercises:**
   * **Deadlock Investigation Exercise**: Creating, detecting, and resolving deadlocks
   * **Performance Tuning Exercise**: Optimizing transaction performance
   * **Data Recovery Exercise**: Recovering from transaction failures
@@ -341,18 +341,18 @@ Exactly 3 realistic scenarios focused on Day 2.2 content (transaction management
 
 ### ❓ Frequently Asked Questions
 Exactly 3 FAQs per tier (total: 9 FAQs):
-* 🟢 **Beginner FAQs:**
+* 🔍 **Beginner FAQs:**
   * Focus on basic transaction syntax and concepts
   * Address common concerns about transaction safety
   * Use simple, approachable language with analogies
 
-* 🟡 **Intermediate FAQs:**
+* 🧩 **Intermediate FAQs:**
   * Address practical application of more complex transaction concepts
   * Connect concepts to support workflows
   * Include relevant examples with output
   * Reference how these build on beginner concepts
 
-* 🔴 **SRE-Level FAQs:**
+* 💡 **SRE-Level FAQs:**
   * Address performance, concurrency, and reliability
   * Include database administration considerations
   * Focus on production impact and monitoring
@@ -417,19 +417,19 @@ Focus on transaction safety specific to Day 2.2 content:
 
 ### 📚 Day 2.2 Further Learning Resources
 
-#### 🟢 Beginner Transaction Resources (exactly 3)
+#### 🔍 Beginner Transaction Resources (exactly 3)
 * Each resource must focus on fundamental transaction concepts
 * Clear description of what it teaches about transaction management
 * How it specifically helps support roles understand safe transaction handling
 * Estimated time commitment for busy professionals
 
-#### 🟡 Intermediate Transaction Resources (exactly 3)
+#### 🧩 Intermediate Transaction Resources (exactly 3)
 * Each resource must focus on advanced transaction concepts and techniques
 * Clear description of how it builds on Day 2.2 concepts
 * How it connects to practical support and troubleshooting tasks
 * Key takeaways relevant to Day 2.2 content
 
-#### 🔴 SRE-Level Transaction Reliability Resources (exactly 3)
+#### 💡 SRE-Level Transaction Reliability Resources (exactly 3)
 * Each resource must connect transaction management to reliability engineering
 * Clear description of how it elevates basic transaction knowledge to SRE contexts
 * How understanding transaction behavior impacts system reliability
