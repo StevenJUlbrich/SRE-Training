@@ -65,9 +65,9 @@ checkout_failures.labels(reason='timeout', region='us-east-1').inc()
 | Count of events              | Counter      |
 | Current value (e.g. queue)   | Gauge        |
 | Distribution over time       | Histogram    |
-| Percentiles needed           | Histogram    |
+| Percentiles needed           | Histogram*   |
 
-> ❗ Avoid **summary** unless you know exactly why. Histograms + PromQL are more flexible.
+> ❗ *Avoid **summary** unless you know exactly why. Histograms + PromQL are more flexible and recommended for most use cases.*
 
 ---
 
@@ -84,7 +84,7 @@ Examples:
 
 ### How to Define One (Example: Login Latency)
 
-1. Metric: `login_duration_seconds_bucket`
+1. Metric: `login_duration_seconds_bucket` (a Prometheus histogram)
 2. Goal: 95% of logins under 400ms
 3. Query:
 ```promql
@@ -157,7 +157,9 @@ You’re beyond just dashboards. Now you’re planning observability systems.
 orders_queued_total{priority="high"}
 ```
 - Simulate updates
-- Expose on `/metrics`, validate in browser or curl
+- Expose on `/metrics` (the default Prometheus endpoint), validate in browser or curl
+
+> ⚠️ **Tip:** Be mindful of label cardinality when designing custom metrics. Too many unique label values can overload your monitoring system.
 
 ---
 
