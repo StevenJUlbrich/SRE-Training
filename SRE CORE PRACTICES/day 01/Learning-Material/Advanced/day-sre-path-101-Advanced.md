@@ -44,7 +44,7 @@ You’ll see these everywhere. They are the building blocks of how we observe co
 - Usually what you read when someone says “go check Splunk.”
 
 **Example:**
-```
+```spl
 2024-04-17 10:32:12 [ERROR] AuthService - Invalid token for user_id=4412
 ```
 
@@ -174,6 +174,7 @@ Ask:
 
 ### 2. Splunk Log Search (Guided)
 Use a basic Splunk query to find errors:
+
 ```spl
 index=prod_logs "error" OR "exception"
 | stats count by service_name
