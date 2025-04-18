@@ -84,9 +84,9 @@ For each concept, follow this structure:
 
 ### 🔨 Hands-On Exercises
 Include 3 exercises for each tier:
-* Beginner exercises focusing on basic DML operations in Oracle
-* Intermediate exercises applying DML to realistic support scenarios
-* SRE-level exercises incorporating transaction management and error handling
+* 🔍 Beginner exercises focusing on basic DML operations in Oracle
+* 🧩 Intermediate exercises applying DML to realistic support scenarios
+* 💡 SRE-level exercises incorporating transaction management and error handling
 
 ### 🚧 Troubleshooting Scenarios
 Include 3 realistic scenarios focused on Day 2 content:
@@ -97,9 +97,9 @@ Include 3 realistic scenarios focused on Day 2 content:
 
 ### ❓ Frequently Asked Questions
 Include 3 FAQs for each tier:
-* Beginner FAQs addressing fundamental DML understanding
-* Intermediate FAQs focusing on practical application of DML
-* SRE-level FAQs covering performance, scale, and reliability with DML operations
+* 🔍 Beginner FAQs addressing fundamental DML understanding
+* 🧩 Intermediate FAQs focusing on practical application of DML
+* 💡 SRE-level FAQs covering performance, scale, and reliability with DML operations
 * Ensure Oracle-specific questions and answers are included
 
 ### 🔥 Oracle-Specific SRE Scenario
@@ -172,7 +172,10 @@ Include a comprehensive section on:
 
 ## ✅ Formatting Requirements
 
-* Use emojis consistently to indicate different sections and concept tiers (🔍, 🧩, 💡)
+* Use emojis consistently to indicate different sections and concept tiers:
+  * 🔍 Beginner-level concepts and examples
+  * 🧩 Intermediate-level concepts and examples
+  * 💡 SRE-level concepts and examples
 * Create clear, properly formatted Mermaid diagrams for visual representations
 * Ensure all tables have consistent column widths and properly aligned headers
 * Use consistent formatting for code blocks, including syntax highlighting

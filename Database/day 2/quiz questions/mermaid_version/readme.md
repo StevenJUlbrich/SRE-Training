@@ -1,2 +1,2 @@
-This folder contains the original version ('day-02-quiz.md') ...
-A converted version ... name 'day-02-quiz-png.md'.
+This folder contains the original version of the quiz file named 'day-02-quiz.md', which includes the quiz questions in markdown format.
+A converted version of the quiz file, named 'day-02-quiz-png.md', contains the same content but with embedded PNG images for diagrams.
