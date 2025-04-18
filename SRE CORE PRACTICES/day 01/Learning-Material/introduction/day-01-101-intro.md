@@ -109,12 +109,22 @@ Hector Alvarez Presents: Observability 101 “This isn’t a fairytale. This is 
 
 ---
 
-## SCENE 5: “Triage Like a Street Medic”**  
+## 🎨 SCENE 5: **Triage Like a Street Medic**  
 > *"You’re not fixing the system. You’re stopping it from bleeding out in the hallway.” – Hector Alvarez*
 
 ---
 
-<img src="./images/panel-9.png" alt="alt text" width="500"/>
+### 🎨 VISUAL SETUP (Comic Book Panel Suggestions):
+
+1. **Panel 1:** A red-blinking alert appears on Hector’s dusty laptop in a dim-lit server room. Slack notifications scream.
+   - Caption: *"Critical alert: API error rate > 5% in us-west-2..."*
+   - Hector: Slouched in a chair, still chewing half a granola bar. “Mmh. Here we go again.”
+
+2. **Panel 2:** Hector rolls out a whiteboard titled “The Damage Report.” Five buckets: Alert, Users Affected, Metrics, Logs, Traces.
+   - He mutters: “No one gets to panic until we know what broke.”
+
+3. **Panel 3:** Side-by-side of a newbie flailing across three dashboards vs. Hector calmly cross-referencing them like Sherlock with caffeine withdrawal.
+
 ---
 
 ### 💬 Hector’s Monologue:
@@ -141,47 +151,49 @@ Hector Alvarez Presents: Observability 101 “This isn’t a fairytale. This is 
 
 ---
 
-Would you like me to structure **Scene 6: “Dashboard Design That Doesn’t Lie to You”** next, or start formatting this into actual comic layout templates—with panel descriptions, speech bubbles, and page guidance for an artist?
+## 🎨 SCENE 6: **Dashboard Design That Doesn’t Lie to You**
 
-Because Hector’s got more field notes than your Jira board has regrets.
+> “A dashboard isn’t art. It’s a life support monitor. If it’s pretty but useless, you’ve already lost.” – Hector Alvarez
 
-## SCENE 6: “Dashboard Design That Doesn’t Lie to You”
+---
 
->**“A dashboard isn’t art. It’s a life support monitor. If it’s pretty but useless, you’ve already lost.” – Hector Alvarez**
+### 🎨 VISUAL SETUP (Comic Book Panel Suggestions):
 
-<img src="./images/panel-6.png" alt="alt text" width="500"/>
+1. **Panel 1:** A new hire enthusiastically presenting a gorgeous, rainbow-colored dashboard to a conference room.
+   - Caption: "Total alignment across 12 KPIs!"
+   - Hector in the back corner, unimpressed, arms crossed. “Neat colors. Can it tell me why the site’s down?”
 
-Caption: "Total alignment across 12 KPIs!"
+2. **Panel 2:** Close-up of the dashboard. So many graphs. So little meaning. No timeframes. No context.
+   - Hector’s thought bubble: “I call this one ‘Graph Confusion in D major.’”
 
-**Hector in the back corner, unimpressed, arms crossed. “Neat colors. Can it tell me why the site’s down?”**
+3. **Panel 3:** Hector draws a crude but effective dashboard on a whiteboard: a handful of well-labeled graphs, a timeline, and annotations.
+   - “This is what helped me fix a payment outage in 8 minutes. The other thing just gave me a seizure.”
 
-<img src="./images/panel-7.png" alt="alt text" width="500"/>
+---
 
->**Hector’s thought bubble: “I call this one ‘Graph Confusion in D major.’”**
+### 💬 Hector’s Monologue:
 
-<img src="./images/panel-8.png" alt="alt text" width="500"/>
+> “Everyone wants to build dashboards. Few know how to build useful ones.  
+>  
+> Dashboards aren’t for showing off. They’re for getting answers when production’s on fire. When someone’s screaming ‘why are checkouts failing in Brazil?!’—you don’t want twelve donut charts. You want signal.  
+>  
+> A good dashboard tells a story. It should show you:  
+>  
+> - What’s broken?  
+> - Since when?  
+> - How bad is it?  
+> - Who or what is affected?  
+>  
+> That means timelines. Annotations. KPIs that matter. You don’t need graphs for every metric under the sun. You need three to five that keep your pulse steady.  
+>  
+> Business metrics up top. System health below. Request latency and error rates center stage. You should be able to walk into a war room, glance at the screen, and know what’s going wrong in 10 seconds.  
+>  
+> And please, label things. You think that graph means ‘cart latency’? Turns out it’s pulling from the legacy staging service. Nice one.  
+>  
+> I once saw a dashboard with 24 widgets and zero context. We spent more time deciphering that than fixing the issue. I started calling it ‘The Louvre.’ Pretty. Useless.”
 
->**“This is what helped me fix a payment outage in 8 minutes. The other thing just gave me a seizure.”**
+---
 
-💬 Hector’s Monologue:
->“Everyone wants to build dashboards. Few know how to build useful ones.
+### 🗯️ Hectorism:
 
->Dashboards aren’t for showing off. They’re for getting answers when production’s on fire. When someone’s screaming ‘why are checkouts failing in Brazil?!’—you don’t want twelve donut charts. You want signal.
-
->A good dashboard tells a story. It should show you:
-
-- What’s broken?
-- Since when?
-- How bad is it?
-- Who or what is affected?
-
->That means timelines. Annotations. KPIs that matter. You don’t need graphs for every metric under the sun. You need three to five that keep your pulse steady.
-
->Business metrics up top. System health below. Request latency and error rates center stage. You should be able to walk into a war room, glance at the screen, and know what’s going wrong in 10 seconds.
-
->And please, label things. You think that graph means ‘cart latency’? Turns out it’s pulling from the legacy staging service. Nice one.
-
-I once saw a dashboard with 24 widgets and zero context. We spent more time deciphering that than fixing the issue. I started calling it ‘The Louvre.’ Pretty. Useless.”
-
-🗯️ Hectorism:
->**“If your dashboard needs a legend and a translator, it’s a painting, not a tool.”**
+> “If your dashboard needs a legend and a translator, it’s a painting, not a tool.”
