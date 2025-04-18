@@ -114,17 +114,7 @@ Hector Alvarez Presents: Observability 101 “This isn’t a fairytale. This is 
 
 ---
 
-### 🎨 VISUAL SETUP (Comic Book Panel Suggestions):
-
-1. **Panel 1:** A red-blinking alert appears on Hector’s dusty laptop in a dim-lit server room. Slack notifications scream.
-   - Caption: *"Critical alert: API error rate > 5% in us-west-2..."*
-   - Hector: Slouched in a chair, still chewing half a granola bar. “Mmh. Here we go again.”
-
-2. **Panel 2:** Hector rolls out a whiteboard titled “The Damage Report.” Five buckets: Alert, Users Affected, Metrics, Logs, Traces.
-   - He mutters: “No one gets to panic until we know what broke.”
-
-3. **Panel 3:** Side-by-side of a newbie flailing across three dashboards vs. Hector calmly cross-referencing them like Sherlock with caffeine withdrawal.
-
+<img src="./images/panel-9.png" alt="alt text" width="500"/>
 ---
 
 ### 💬 Hector’s Monologue:
