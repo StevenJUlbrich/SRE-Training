@@ -1,6 +1,14 @@
-# 🧩 Observability 101 – Intermediate Level: “I Can Actually Find the Root Cause Now”
+# 🧩 Observability 101 – Intermediate Level: "I Can Actually Find the Root Cause Now"
 
-> 🎯 Goal: Build on foundational knowledge to begin diagnosing real incidents. Learn how to correlate telemetry data across tools, evaluate alert quality, and build basic queries, dashboards, and visualizations that don’t insult everyone’s intelligence.
+🎙 Narrated by Hector Alvarez – uptime historian, postmortem survivor, and dashboard realist.
+
+> "You don’t find the root cause. You reconstruct it like a crime scene. And half your clues are hiding in plain sight."
+
+---
+
+## 🎯 Goal
+
+Build on foundational knowledge to begin diagnosing real incidents. Learn how to correlate telemetry data across tools, evaluate alert quality, and build basic queries, dashboards, and visualizations that don’t insult anyone’s intelligence.
 
 ---
 
@@ -12,9 +20,13 @@
 - Understand basics of **Prometheus queries** and **OpenTelemetry traces**
 - Identify gaps in observability coverage and know what signals might be missing
 
+> **Hector’s Monologue:** "If you’re only looking at one tool during an incident, you’re probably looking in the wrong place. The truth lives in the overlap."
+
 ---
 
 ## 🔄 Data Correlation: Putting the Puzzle Together
+
+> 🧠 Hector: "The root cause doesn’t live in logs. Or metrics. Or traces. It lives in how they connect."
 
 In production, you rarely find root cause in a single pane of glass (unless your dashboards are run by wizards).
 
@@ -23,8 +35,6 @@ You need to:
 2. Check for relevant log entries.
 3. Trace the path of a request across services.
 
-This is called **event correlation**. Without it, you’re just guessing with fancier graphs.
-
 > 🔍 *Example:*  
 > You get a latency alert from DataDog.  
 > - Metric shows spike at 12:03 UTC.  
@@ -32,22 +42,25 @@ This is called **event correlation**. Without it, you’re just guessing with fa
 > - Trace shows delay in `payment-service`.  
 > Now you have a story, not just symptoms.
 
+> **Hector’s Monologue:** "Correlating data is like reconstructing a bar fight with security cam footage, chat logs, and someone’s blurry TikTok. Do it right, and the cause becomes obvious."
+
 ---
 
 ## 🔔 Alert Evaluation: Good vs Garbage
 
-A good alert:
-- Tells you something user-facing is broken
-- Is specific enough to guide investigation
-- Doesn’t fire 600 times during one incident
+> **Good Alert:**
+> - Tells you something user-facing is broken
+> - Is specific enough to guide investigation
+> - Doesn’t fire 600 times during one incident
 
-A garbage alert:
-- Says “HIGH CPU” and nothing else
-- Fires when no one cares
-- Has no metadata or links to supporting telemetry
+> **Garbage Alert:**
+> - Says “HIGH CPU” and nothing else
+> - Fires when no one cares
+> - Has no metadata or links to supporting telemetry
 
-> 🧠 Pro Tip: Alerts should answer “What’s broken?” and “What should I look at first?”  
-> Not “What am I supposed to do with this…?”
+> **Hector’s Monologue:** "If an alert fires and the first thing you do is open three dashboards and say 'huh?', that’s not an alert. That’s a cry for help."
+
+🧠 Pro Tip: Alerts should answer “What’s broken?” and “What should I look at first?”
 
 ---
 
@@ -83,6 +96,8 @@ rate(http_requests_total{status="500"}[5m])
 ```
 This shows the **rate of 500 errors** over the last 5 minutes.
 
+> **Hector’s Monologue:** "Never alert on a raw counter. That’s like judging speed by the odometer. Use `rate()` or expect confusion."
+
 ---
 
 ## 🧩 OpenTelemetry (The Teaser Trailer)
@@ -98,7 +113,7 @@ This shows the **rate of 500 errors** over the last 5 minutes.
      10ms             40ms             90ms             1500ms 🔥
 ```
 
-You don't *just* want the trace. You want to know **why that last leg is on fire**.
+> **Hector’s Monologue:** "A trace isn’t a graph. It’s a confession. Listen closely."
 
 ---
 
@@ -132,6 +147,8 @@ rate(payment_failures_total[1m])
    - What does it show?
    - Why would you alert on this?
 
+> **Hector’s Monologue:** "If your dashboard answers a question no one asked, congratulations. You’ve wasted everyone’s time."
+
 ---
 
 ## ✅ What You Should Know Now
@@ -150,4 +167,8 @@ Coming up:
 - Following full user requests across systems
 - Defining SLIs that reflect actual user experience
 - Mapping telemetry to reliability goals
+
+> **Hector’s Monologue:** "A broken service that no one notices isn’t reliable. It’s *undiscovered*. That’s worse."
+
+---
 
