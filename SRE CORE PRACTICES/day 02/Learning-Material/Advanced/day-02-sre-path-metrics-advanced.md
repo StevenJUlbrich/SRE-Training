@@ -60,7 +60,7 @@ checkout_failures.labels(reason='timeout', region='us-east-1').inc()
 
 ### Metric Type Decision Guide
 
-| Use Case                      | Metric Type  |
+| Use Case                     | Metric Type  |
 |------------------------------|--------------|
 | Count of events              | Counter      |
 | Current value (e.g. queue)   | Gauge        |
@@ -134,10 +134,10 @@ You’re beyond just dashboards. Now you’re planning observability systems.
 ### 🧰 Structure for Operational Dashboards
 
 | Section | Metrics (SLI-aligned) |
-|--------|------------------------|
-| Top    | Uptime %, success rate, error budget burn |
-| Middle | p95/p99 latency, retry rate, queue length  |
-| Bottom | Resource metrics, alerts summary, deploy markers |
+|---------|-----------------------|
+| Top     | Uptime %, success rate, error budget burn |
+| Middle  | p95/p99 latency, retry rate, queue length  |
+| Bottom  | Resource metrics, alerts summary, deploy markers |
 
 ### Dashboard Patterns to Use
 
@@ -165,7 +165,7 @@ orders_queued_total{priority="high"}
 
 ### 2. Define an SLI for a Critical Path
 - Use your app’s real data or mock metric
-- Pick an SLI (latency, error, etc)
+- Pick an SLI (latency, error, etc.)
 - Write the query
 - Define SLO target (e.g., 99.95%)
 - Draft the alert rule
