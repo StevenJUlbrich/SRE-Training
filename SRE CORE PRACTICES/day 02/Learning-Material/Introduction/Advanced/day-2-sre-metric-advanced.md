@@ -10,7 +10,7 @@ We’re keeping the **graphic novel structure**, but we’re adding more:
 - **Inline panels for educational content**
 - **Mini diagrams and breakdowns between scenes**
 - **Marisolisms as running callouts**
-- And just enough drama to make someone reconsider every alert they’ve ever written
+- And just enough drama to make someone reconsider every alert they’ve ever written**
 
 ---
 
@@ -27,7 +27,7 @@ We’re keeping the **graphic novel structure**, but we’re adding more:
 | **Metric** | Any measurement you collect | `http_requests_total` |
 | **SLI** | Service Level Indicator – A specific, user-impacting metric | % of requests under 300ms |
 | **SLO** | Service Level Objective – Target level for SLI | 99.9% of logins under 400ms over 30d |
-| **SLA** | Service Level Agreement – The contract with penalties | “If we drop below 99%, we owe credits” |
+| **SLA** | Service Level Agreement – The contract with penalties | “If we drop below 99%, we owe credits.” |
 
 **Marisol (narration):**  
 > “If a metric doesn’t represent the *user experience*, it’s not an SLI. It’s a stat.”
@@ -45,9 +45,9 @@ We’re keeping the **graphic novel structure**, but we’re adding more:
 ### 📐 Mini Guide: Common SLIs by Type
 
 | Category    | Metric                            | How to Write It (PromQL) |
-|-------------|-----------------------------------|---------------------------|
+|-------------|-----------------------------------|--------------------------|
 | Availability | % of requests returning 2xx/3xx  | `rate(http_requests_total{status=~"2..|3.."}[5m]) / rate(http_requests_total[5m])` |
-| Latency     | % of requests under X ms         | `histogram_quantile(0.95, sum(rate(request_duration_bucket[5m])) by (le))` |
+| Latency     | % of requests under X ms          | `histogram_quantile(0.95, sum(rate(request_duration_bucket[5m])) by (le))` |
 | Error Rate  | % of requests returning 5xx       | `sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m]))` |
 | Saturation  | Resource usage against limit      | `container_memory_usage_bytes / container_spec_memory_limit_bytes` |
 
@@ -148,8 +148,8 @@ histogram_quantile(0.95,
 
 ## ✅ Final Panel
 
-<img src="./images/panel-6
-.png" alt="alt text" width="500"/>
+<img src="./images/panel-6.png" alt="alt text" width="500"/>
+
 ---
 
 ## 🧱 Epilogue: Build Your Own
