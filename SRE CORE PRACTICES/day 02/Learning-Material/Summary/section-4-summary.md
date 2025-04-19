@@ -1,5 +1,5 @@
 # 📖 Section 4 – SLIs and SLOs: Turning Metrics into Promises  
->## _"Metrics measure behavior. SLIs define accountability."_  
+> ## _"Metrics measure behavior. SLIs define accountability."_  
 > — Marisol Vieira
 
 ---
@@ -33,11 +33,11 @@ This section provides a complete framework—from SLI definition to alerting log
 
 ## 🔍 SLI vs. Metric
 
-| Metric Type | Example                               | User-Relevant? | Use as SLI? |
-|-------------|----------------------------------------|----------------|-------------|
-| System metric | `cpu_usage`, `memory_bytes`           | ❌             | ❌          |
-| App metric   | `http_requests_total`, `latency_p95`  | ✅ Sometimes   | ✅          |
-| Business metric | `orders_completed_total`, `login_success_rate` | ✅ | ✅ |
+| Metric Type      | Example                                         | User-Relevant? | Use as SLI? |
+|------------------|-------------------------------------------------|----------------|-------------|
+| System metric    | `cpu_usage`, `memory_bytes`                     | ❌             | ❌          |
+| App metric       | `http_requests_total`, `latency_p95`            | ✅ Sometimes   | ✅          |
+| Business metric  | `orders_completed_total`, `login_success_rate`  | ✅             | ✅          |
 
 > 📌 **SLIs are not all metrics, but all SLIs are metrics.**  
 > The difference is *intent*.
@@ -46,23 +46,24 @@ This section provides a complete framework—from SLI definition to alerting log
 
 ## 📐 Designing an SLO
 
-> 🗺 Mermaid: SLI to SLO Design Flow  
+> 🗺 Mermaid: SLI to SLO Design Flow
+
 ```mermaid
 flowchart TD
-A[Identify Critical User Path] --> B[Define SLI]
-B --> C[Write PromQL]
-C --> D["Set Target (SLO)"]
-D --> E[Track Error Budget]
-E --> F[Alert & Report]
+    A[Identify Critical User Path] --> B[Define SLI]
+    B --> C[Write PromQL]
+    C --> D["Set Target (SLO)"]
+    D --> E[Track Error Budget]
+    E --> F[Alert & Report]
 ```
 
 ---
 
 ## ✍️ SLO Design Template
 
-| Field           | Description                               | Example                          |
+| Field            | Description                               | Example                          |
 |------------------|-------------------------------------------|----------------------------------|
-| **SLI**          | What are you measuring?                   | 95% of checkouts complete <2s   |
+| **SLI**          | What are you measuring?                   | 95% of checkouts complete <2s    |
 | **SLO Target**   | What’s acceptable over time?              | 99.9% success over 30 days       |
 | **Budget Window**| How long is the rolling period?           | 30 days                          |
 | **Budget Size**  | 0.1% (43 minutes per 30 days)             | (computed from SLO)              |
@@ -89,7 +90,7 @@ If your SLO target is 99.9%, you are allowed:
 ```promql
 (
   sum(rate(http_requests_total{status=~"2..|3..", job="checkout"}[5m]))
-/
+  /
   sum(rate(http_requests_total{job="checkout"}[5m]))
 ) * 100
 ```
@@ -133,11 +134,11 @@ sum(rate(orders_completed_total{region="us-east"}[5m]))
 
 A burn rate tells you **how fast** you’re consuming your error budget.
 
-| Burn Rate | Meaning                                |
-|-----------|----------------------------------------|
-| 1         | Budget being used perfectly evenly     |
-| >1        | Budget is being consumed *too fast*    |
-| <1        | Budget is healthy, safe burn           |
+| Burn Rate | Meaning                             |
+|-----------|-------------------------------------|
+| 1         | Budget being used perfectly evenly  |
+| >1        | Budget is being consumed *too fast* |
+| <1        | Budget is healthy, safe burn        |
 
 ### 🔥 Burn Rate Alert Example
 
@@ -147,7 +148,7 @@ A burn rate tells you **how fast** you’re consuming your error budget.
 ```promql
 (
   sum(rate(http_requests_total{status=~"5.."}[1m]))
-/
+  /
   sum(rate(http_requests_total[1m]))
 ) / 0.001 > 2
 ```
@@ -171,13 +172,14 @@ Add:
 
 ---
 
-## 🗺 Mermaid: SLI Dashboard Flow  
+## 🗺 Mermaid: SLI Dashboard Flow
+
 ```mermaid
 graph TD
-A[SLI Query] --> B[Visual Panel]
-B --> C[Threshold Rules]
-B --> D[Linked Alert Rule]
-D --> E[Notification System]
+    A[SLI Query] --> B[Visual Panel]
+    B --> C[Threshold Rules]
+    B --> D[Linked Alert Rule]
+    D --> E[Notification System]
 ```
 
 ---
