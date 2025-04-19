@@ -3,8 +3,8 @@
 ### 🎯 Focused on Beginner Tier Material  
 From: “What is a metric?” to “Why does my dashboard look like a rainbow threw up?”
 
-
 <img src="./images/marisol-image.png" alt="alt text" width="400"/>
+
 ---
 
 ## 🎨 SCENE 1: *"Grafana Isn’t Magic, It’s Math."*
@@ -64,7 +64,6 @@ The same whiteboard, now with graphs.
 Back at the desk. Junior’s dashboard, now in edit mode. Marisol leans in.
 
 <img src="./images/panel-7.png" alt="alt text" width="500"/>
-```
 
 **Marisol (speech bubble):**  
 > “This? This is poor promql. You’re graphing a counter without `rate()`. All you’re seeing is time passing.”
@@ -78,8 +77,7 @@ rate(http_requests_total{status="500"}[5m])
 **Marisol (speech bubble):**  
 > “Now *this* tells you something: how many failures are happening right now.”
 
-  
->Graph updates. Junior stares, blinking slowly.
+> Graph updates. Junior stares, blinking slowly.
 
 **Junior (thought bubble):**  
 > “...why didn’t anyone tell me this before?”
@@ -95,10 +93,10 @@ Same war room, later. Marisol is seated next to the junior. They’re building a
 
 **Marisol (narration):**  
 > “Dashboards aren’t decoration. Each panel is a **question**, and the metric is the answer.”
+
 ---
 
 <img src="./images/panel-10.png" alt="alt text" width="500"/>
-
 
 **Marisol (speech bubble):**  
 > **“If you name a panel `Graph 2`, I’m legally allowed to delete your dashboard.”**
@@ -109,9 +107,7 @@ Same war room, later. Marisol is seated next to the junior. They’re building a
 
 <img src="./images/panel-11.png" alt="alt text" width="700"/>
 
-
->Here’s the closing panel of this chapter—smiling junior, relaxed Marisol with coffee, polished dashboard on‑screen, speech‑bubble wisdom, and the teaser caption for what’s next. Let me know if you’d like any tweaks or are ready to roll into “Intermediate Metrics”!
-
+> Here’s the closing panel of this chapter—smiling junior, relaxed Marisol with coffee, polished dashboard on‑screen, speech‑bubble wisdom, and the teaser caption for what’s next. Let me know if you’d like any tweaks or are ready to roll into “Intermediate Metrics”!
 
 ---
 
