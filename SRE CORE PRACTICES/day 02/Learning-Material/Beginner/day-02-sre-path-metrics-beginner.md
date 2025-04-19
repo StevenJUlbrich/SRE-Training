@@ -54,7 +54,7 @@ Every metric you see on a dashboard has 4 parts:
 | **Labels**  | Extra info that adds detail. E.g. `job="web"`, `status="500"`, `region="us-west"` |
 | **Timestamp** | When the number was recorded                                              |
 
-> 🧠 Think of **labels** as filters or tags. They help you slice the data:
+> ### 🧠 Think of **labels** as filters or tags. They help you slice the data:
 > - All 500 errors
 > - Just requests from `auth-service`
 > - CPU usage from servers in `eu-west-1`
@@ -95,13 +95,13 @@ Different kinds of metrics behave differently. You’ve probably seen lines go u
 
 You already know where the dashboards are. Now it’s time to **read them with intention.**
 
-> Ask: “What question does this panel answer?”
+> ## Ask: “What question does this panel answer?”
 
 Bad:  
-> “Here’s a pretty line graph.”
+> ## “Here’s a pretty line graph.”
 
 Better:  
-> “This shows checkout errors over time, by region.”
+> ## “This shows checkout errors over time, by region.”
 
 ### Key Tips:
 - Make sure you understand what the **unit** is (ms? %, count?)  

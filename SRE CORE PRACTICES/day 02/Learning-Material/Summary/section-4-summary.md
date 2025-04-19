@@ -1,5 +1,5 @@
 # 📖 Section 4 – SLIs and SLOs: Turning Metrics into Promises  
-> _"Metrics measure behavior. SLIs define accountability."_  
+>## _"Metrics measure behavior. SLIs define accountability."_  
 > — Marisol Vieira
 
 ---
@@ -51,7 +51,7 @@ This section provides a complete framework—from SLI definition to alerting log
 flowchart TD
 A[Identify Critical User Path] --> B[Define SLI]
 B --> C[Write PromQL]
-C --> D[Set Target (SLO)]
+C --> D["Set Target (SLO)"]
 D --> E[Track Error Budget]
 E --> F[Alert & Report]
 ```

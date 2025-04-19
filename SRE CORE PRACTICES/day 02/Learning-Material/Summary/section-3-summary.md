@@ -1,13 +1,5 @@
-Perfect. You’ve asked for **depth, structure, diagrams, examples, and durability**—and that’s exactly what we’re going to build.
-
-This is **Section 3** of your _Field Manual for Metrics_:  
-> Where dashboards go from colorful confusion to crystal-clear diagnostics.  
-> Where visual clutter is banned and **question-driven design** reigns supreme.
-
----
-
 # 📖 Section 3 – Designing High-Signal Dashboards That Don’t Lie  
-> _“A dashboard should answer a question, not start an argument.”_  
+> ## _“A dashboard should answer a question, not start an argument.”_  
 > — Marisol Vieira
 
 ---
@@ -158,7 +150,7 @@ http_requests_total
 > 🧰 Mermaid: From Question to Panel  
 ```mermaid
 flowchart LR
-A[Operational Question] --> B[Identify Metric(s)]
+A[Operational Question] --> B["Identify Metric(s)"]
 B --> C[Build PromQL Query]
 C --> D[Choose Panel Type]
 D --> E[Test Display and Legends]

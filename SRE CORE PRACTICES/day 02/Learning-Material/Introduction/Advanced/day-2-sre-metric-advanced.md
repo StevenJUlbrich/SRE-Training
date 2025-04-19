@@ -1,6 +1,6 @@
 # 🎙️ **Marisol Vieira Presents: Advanced Metrics – “SLIs or Die Trying”**
 
-> *“Monitoring shows you your vitals. SLIs show you what your users feel when those vitals drop.”*
+> ## *“Monitoring shows you your vitals. SLIs show you what your users feel when those vitals drop.”*
 
 ---
 
@@ -38,7 +38,7 @@ We’re keeping the **graphic novel structure**, but we’re adding more:
 
 <img src="./images/panel-2.png" alt="alt text" width="500"/>
 
-> “SLIs live *above the line*. If your user can't feel it, it doesn’t go on the dashboard.”
+> ## “SLIs live *above the line*. If your user can't feel it, it doesn’t go on the dashboard.”
 
 ---
 
@@ -70,7 +70,7 @@ checkout_failures = Counter(
 ```
 
 **Narration:**  
-> “SLIs start in code. Not Grafana.”
+> ## “SLIs start in code. Not Grafana.”
 
 ---
 
