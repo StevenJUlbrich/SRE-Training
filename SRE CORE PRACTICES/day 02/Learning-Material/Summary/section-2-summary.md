@@ -53,13 +53,14 @@ PromQL operates on two kinds of data:
 - **Range vector** – a set of values *over time*, for one or more series
 
 > 🗺 Mermaid: Query Vector Flow  
+
 ```mermaid
 graph LR
-A[Metric Name] --> B{Label Filters}
-B --> C["Range Selector [5m]"]
-C --> D["Function (rate)"]
-D --> E["Aggregation (sum by)"]
-E --> F[Graph Result]
+  A[Metric Name] --> B{Label Filters}
+  B --> C["Range Selector [5m]"]
+  C --> D["Function (rate)"]
+  D --> E["Aggregation (sum by)"]
+  E --> F[Graph Result]
 ```
 
 ---
