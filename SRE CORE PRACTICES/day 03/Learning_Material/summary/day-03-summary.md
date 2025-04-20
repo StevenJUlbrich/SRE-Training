@@ -40,9 +40,14 @@
 | `Error: something failed` | ❌ No context |
 | `{ "status": 500, "user": "u42" }` | ✅ Filterable, parseable |
 
+![alt text](images/day-03-summary-panel1.png){width=400px}
+
 ---
 
 ## 🚚 **Log Shipping & Centralization: Intermediate Level**
+
+![log requirements](images/day-03-summary-panel-2.png){width=400}
+
 
 ### 🔄 Log Flow Pipeline
 ```mermaid
@@ -52,6 +57,7 @@ graph TD
   Buffer --> Store["Centralized Store (OpenSearch)"]
   Store --> UI["Query & Visualize (Grafana, Kibana)"]
 ```
+
 
 ### ⚙️ Shipper Deployment Options
 | Type | Description | Use When |
@@ -84,6 +90,8 @@ index=prod_logs service=api level=error "timeout"
 ---
 
 ## 🚨 **Log-Based Metrics, Alerting, & Correlation: Advanced Level**
+
+![log correlatin](images/day-03-summary-panel-3.png){width=400px}
 
 ### 📊 Metrics from Logs
 | Log Pattern | Metric Output |

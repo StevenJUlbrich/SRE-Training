@@ -175,9 +175,7 @@ Audit logs show:
 
 ## **Wrap-Up and Final Takeaways**
 
-📸 **Insert Image Here:** DALL·E panel of Deepak in a war room surrounded by dashboards. Metrics, logs, and traces glow behind him as he connects the pieces like a puzzle.
-
-**Prompt:** “Comic book panel showing Deepak in a war room, with logs, metrics, and traces glowing behind him on a giant dashboard. He gestures to all three as puzzle pieces connecting. Caption: ‘Structured. Centralized. Correlated. That’s the SRE mindset.’”
+![War Room](images/day-03-advanced-panel-3.png){width=500px}
 
 > *“Logs are no longer your last resort. They’re your first response tool.” — Deepak*
 
