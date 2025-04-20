@@ -1,13 +1,5 @@
-Perfect. You’ve asked for **depth, structure, diagrams, examples, and durability**—and that’s exactly what we’re going to build.
-
-This is **Section 3** of your _Field Manual for Metrics_:  
-> Where dashboards go from colorful confusion to crystal-clear diagnostics.  
-> Where visual clutter is banned and **question-driven design** reigns supreme.
-
----
-
 # 📖 Section 3 – Designing High-Signal Dashboards That Don’t Lie  
-> _“A dashboard should answer a question, not start an argument.”_  
+> ## _“A dashboard should answer a question, not start an argument.”_  
 > — Marisol Vieira
 
 ---
@@ -44,6 +36,7 @@ A good dashboard:
 ## 📐 Dashboard Layout: Top-Down Clarity
 
 > 🗺 Mermaid: Standard Dashboard Layout  
+
 ```mermaid
 graph TD
 A[Top Row: SLIs / Key Health Indicators]
@@ -136,10 +129,9 @@ histogram_quantile(0.95,
 ### ❌ Bad Panel Setup
 
 ```promql
-http_requests_total
+rate(http_requests_total[5m])
 ```
 - Title: `Requests`
-- No `rate()` → not showing activity
 - No filters → mixed HTTP status
 - No group → ambiguous source
 
@@ -147,8 +139,8 @@ http_requests_total
 
 ## 🔁 Templating & Variables
 
-- Use `region`, `service`, `env`, and `team` as variables
-- Bind time ranges and template options globally
+- Use `region`, `service`, `env`, and `team` as variables  
+- Bind time ranges and template options globally  
 - Keep variable dropdowns clean and **bounded**
 
 ---
@@ -156,9 +148,10 @@ http_requests_total
 ## 🧱 Dashboard Build Process
 
 > 🧰 Mermaid: From Question to Panel  
+
 ```mermaid
 flowchart LR
-A[Operational Question] --> B[Identify Metric(s)]
+A[Operational Question] --> B["Identify Metric(s)"]
 B --> C[Build PromQL Query]
 C --> D[Choose Panel Type]
 D --> E[Test Display and Legends]
@@ -171,22 +164,24 @@ F --> G[Deploy with Team Review]
 ## 💬 Business/SLI Panel Examples
 
 - ✅ **“Checkout Availability”**
-```promql
-(
-  sum(rate(http_requests_total{status=~"2..", job="checkout"}[5m]))
-/
-  sum(rate(http_requests_total{job="checkout"}[5m]))
-) * 100
-```
+
+    ```promql
+    (
+      sum(rate(http_requests_total{status=~"2..", job="checkout"}[5m]))
+    /
+      sum(rate(http_requests_total{job="checkout"}[5m]))
+    ) * 100
+    ```
 
 - ✅ **“Error Budget Burn (Fast Track)”**
-```promql
-(
-  sum(rate(http_requests_total{status=~"5..", job="checkout"}[1m]))
-/
-  sum(rate(http_requests_total{job="checkout"}[1m]))
-) / 0.001 > 1
-```
+
+    ```promql
+    (
+      sum(rate(http_requests_total{status=~"5..", job="checkout"}[1m]))
+    /
+      sum(rate(http_requests_total{job="checkout"}[1m]))
+    ) / 0.001 > 1
+    ```
 
 > This panel tells your team whether you're on pace to *blow your SLO*.
 
@@ -208,11 +203,13 @@ F --> G[Deploy with Team Review]
 |------------------------------|--------|
 | Request Rate                 | `rate(http_requests_total[5m])` |
 | 5xx Rate by Service          | `sum by (service)(rate(http_requests_total{status=~"5.."}[5m]))` |
-| Latency p95                  | `histogram_quantile(0.95, sum(rate(duration_bucket[5m])) by (le))` |
-| Availability (Success Ratio) | `(2xx + 3xx) / all` |
+| Latency p95                  | `histogram_quantile(0.95, sum(rate(request_duration_seconds_bucket[5m])) by (le))` |
+| Availability (Success Ratio) | `sum(rate(http_requests_total{status=~"2..|3.."}[5m])) / sum(rate(http_requests_total[5m]))` |
 | CPU Saturation               | `1 - avg by (instance)(rate(cpu_seconds_total{mode="idle"}[5m]))` |
 | Queue Length Gauge           | `queue_length{job="api"}` |
-| Burn Rate (SLO)              | `error_rate / error_budget_fraction` |
+| Burn Rate (SLO)              | `sum(rate(http_requests_total{status=~"5.."}[1m])) / (error_budget * sum(rate(http_requests_total[1m])))` |
+
+> _Note: Replace `error_budget` with your SLO error budget fraction (e.g., 0.001 for 99.9% SLO)._
 
 ---
 

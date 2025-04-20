@@ -17,12 +17,12 @@ Open office. A team stares at a dashboard titled "System Health Overview – v3 
 <img src="./images/panel-2.png" alt="alt text" width="500"/>
 
 **Marisol (narration):**  
-> “ tangled lines, small legend listing status, region, user_id, request_type, and Marisol’s narration beneath: “This dashboard isn’t lying. It’s just not telling the truth you need.” Let me know if any tweaks are needed or if you’re ready for the next step!”
+> Tangled lines, a small legend listing status, region, user_id, request_type.  
+> “This dashboard isn’t lying. It’s just not telling the truth you need.”
 
 ---
 
 ## 🎨 SCENE 2: *"The PromQL Crime Scene"*
-
 
 They pop open the Grafana query editor. The junior on-call engineer shrinks slightly.
 
@@ -34,15 +34,17 @@ http_requests_total
 ```
 **Marisol (speech bubble):**  
 > “You didn’t use `rate()`. You’re tracking *accumulated time*. You’re basically counting the years of your life.”
+
 ---
 
 <img src="./images/panel-4.png" alt="alt text" width="500"/>
+
 Panel updated—Marisol now types the corrected query:
 
 ```promql
 rate(http_requests_total{status=~"5.."}[5m])
 ```
-on the Grafana editor while the junior watches. Let me know if anything else needs adjusting or if we’re ready for the next beat!
+on the Grafana editor while the junior watches.
 
 **Marisol (speech bubble):**  
 > “There. *Now* it shows how many requests are failing *right now*, not since the dawn of Linux.”
@@ -59,24 +61,28 @@ Whiteboard. Marisol draws the breakdown of a query: `sum by (job)`… `rate()`�
 **Marisol (narration):**  
 > “Labels are power. They let you slice data. But too many? Now you’ve got 10,000 time series and no meaning.”
 
->Scene  delivered: two‑panel comic showing the whiteboard lesson. Panel 1—junior’s puzzled thought bubble as Marisol writes sum by (job)… rate()… status=~"5..". Panel 2—two grouped line sets (“by job” vs. “by instance”) and her narration about label power (and overload). Let me know if you’d like tweaks or if we roll on!
+> Scene delivered: two‑panel comic showing the whiteboard lesson.  
+> Panel 1—junior’s puzzled thought bubble as Marisol writes `sum by (job)… rate()… status=~"5.."`.  
+> Panel 2—two grouped line sets (“by job” vs. “by instance”) and her narration about label power (and overload).
+
 ---
 
 ## 🎨 SCENE 4: *"The High-Cardinality Horror"*
 
 <img src="./images/panel-6.png" alt="alt text" width="600"/>
 
-```
+Bad query:
+```promql
 rate(http_requests_total{user_id=~".*"}[5m])
 ```
 to Marisol’s rewritten fix:
-```
+```promql
 sum by (service)(
   rate(http_requests_total{status=~"5.."}[5m])
 )
-'``
-and her full speech bubble. Let me know if you’d like any other tweaks!
 ```
+and her full speech bubble.
+
 ---
 
 ## 🎨 SCENE 5: *"The Rebuild"*
@@ -98,7 +104,6 @@ and her full speech bubble. Let me know if you’d like any other tweaks!
 ## 🎨 SCENE 6: *"Teaching the Query Muscle"*
 
 <img src="./images/panel-8.png" alt="alt text" width="600"/>
-
 
 **Panel 2**  
 Captioned panel shows `sum by (service)` pointing to a problem with `payment-service`.

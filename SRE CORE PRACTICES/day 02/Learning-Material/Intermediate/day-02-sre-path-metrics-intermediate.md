@@ -90,11 +90,11 @@ If no one is ever going to say “show me error rate by container_hash” — cu
 
 ### ✍ Marisol's Dashboard Layout Template:
 
-| Section         | Panels (What to Measure)                         |
-|------------------|--------------------------------------------------|
-| Top bar (exec view) | Uptime %, request success rate, user transactions/min |
-| Mid (system health) | p95 latency, CPU usage, memory, error rate by service |
-| Bottom (debug view) | Slowest endpoints, retry counts, queue depth     |
+| Section            | Panels (What to Measure)                              |
+|--------------------|------------------------------------------------------|
+| Top bar (exec view)| Uptime %, request success rate, user transactions/min |
+| Mid (system health)| p95 latency, CPU usage, memory, error rate by service |
+| Bottom (debug view)| Slowest endpoints, retry counts, queue depth          |
 
 📌 Each panel should answer a question. If it doesn’t—it’s noise.
 

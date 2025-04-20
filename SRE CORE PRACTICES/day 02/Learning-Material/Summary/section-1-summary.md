@@ -1,20 +1,3 @@
-# Section 1 Summary
-
-## 🧱 Metric Reference Document: “The Book of Signal”  
-**Tone**: Technical. Informed. Friendly with sharp elbows.  
-**Structure**: Modular sections. Each with:
-- 🧠 Core Concept (explained)
-- 📊 Practical Examples (real world)
-- 📏 PromQL Use
-- ⚠️ Gotchas & Design Advice
-- 🗺 Mermaid Diagram (when applicable)
-
----
-
-### Let me rewrite and **fully expand Section 1** as the kickoff:
-
----
-
 # 📖 Section 1 – What *Is* a Metric?
 
 > **“A metric is a number with memory. It tells you what changed, how fast it’s changing, and if you should care.”**  
