@@ -98,4 +98,3 @@
 **Caption (Bottom):**  
 > ✅ **Day 3 Begins: Learn the discipline behind logging that works—under pressure.**
 
----
