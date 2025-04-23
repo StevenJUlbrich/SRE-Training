@@ -30,10 +30,6 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 > “Great observability isn’t just tooling—it’s teaching. You don’t just build a better system. You grow better people who can run it, understand it, and improve it.”
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel of Johan standing in front of a whiteboard during an SRE onboarding session. The board shows a simplified observability diagram linking logs, metrics, traces, and audit flows. Maya is seated, confident, with two new SREs beside her. Light from a window gives the scene a hopeful tone. Style: warm, optimistic tech comic with clean lines.”
-
 ---
 
 # Panel 2: From Chaos to Clarity
