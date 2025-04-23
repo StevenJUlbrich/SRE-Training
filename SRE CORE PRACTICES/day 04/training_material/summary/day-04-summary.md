@@ -1,4 +1,3 @@
-
 # 1️⃣  Intro – The Firehose of Logs 
 
 > Johan overwhelmed by noisy dashboards
@@ -204,7 +203,7 @@ Split-panel: Left side shows a service emitting DEBUG and INFO logs, completely 
 
 3️⃣ | Sampling & Storage Strategy | Visual of Johan comparing cost scenarios and retention flows
 
-# Panel 1: The Cost Wall
+# Panel 7: The Cost Wall
 
 ---
 
@@ -237,7 +236,7 @@ Johan and Maya are standing in front of a digital whiteboard. A bar chart shows 
 
 ---
 
-# Panel 2: Sampling in Action
+# Panel 8: Sampling in Action
 
 ---
 
@@ -270,7 +269,7 @@ Close-up of a terminal or config editor. Johan is typing a log sampling rule: ke
 
 ---
 
-# Panel 3: Retention Tiers Visualized
+# Panel 9: Retention Tiers Visualized
 
 ---
 
@@ -301,12 +300,9 @@ Side-view panel of a log data center. Logs flow through pipes labeled HOT → CO
 
 > “Side-view comic panel showing three zones labeled HOT, COLD, and ARCHIVE. Pipes flow log data between them. HOT is active with dashboards and alerts. COLD has slower machines and low lighting. ARCHIVE is deep storage with tape drives or vault imagery. Johan and Maya walk through the scene with Johan pointing to each tier. Style: comic schematic with rich visuals and clear technical metaphor.”
 
-
-
-
 4️⃣ | Trace ID & Correlation | Logs across services sharing the same trace_id
 
-# Panel 1: One Request, Many Logs
+# Panel 10: One Request, Many Logs
 
 ---
 
@@ -339,7 +335,7 @@ Johan and Maya stand in front of a timeline-based log viewer. The screen is spli
 
 ---
 
-# Panel 2: The Span Tree Revealed
+# Panel 11: The Span Tree Revealed
 
 ---
 
@@ -372,7 +368,7 @@ A span tree is shown on a large screen. Each node (span) represents a request: r
 
 ---
 
-# Panel 3: Trace ID Saves the Day
+# Panel 12: Trace ID Saves the Day
 
 ---
 
@@ -403,12 +399,9 @@ The scene transitions to a war room during an incident. Multiple engineers look 
 
 > “Comic-style war room scene with multiple engineers and dashboards. Johan stands at the center pasting a trace_id into a distributed tracing tool. A large monitor shows the full trace path with root and downstream spans. The team gathers, recognizing the root cause. Mood: sharp focus, tension release, modern incident command room.”
 
-
-
-
 5️⃣ | From Metrics to Logs to Traces | Johan following a red spike → logs → distributed trace
 
-# Panel 1: The Metric Spike
+# Panel 13: The Metric Spike
 
 ---
 
@@ -441,7 +434,7 @@ A Grafana dashboard on a large monitor shows a sudden spike in the `p95 latency`
 
 ---
 
-# Panel 2: Log Timeline Dive
+# Panel 14: Log Timeline Dive
 
 ---
 
@@ -474,7 +467,7 @@ Johan and Maya query logs around the spike window. The screen now shows structur
 
 ---
 
-# Panel 3: Trace Brings It Home
+# Panel 15: Trace Brings It Home
 
 ---
 
@@ -505,12 +498,9 @@ The trace is now loaded on a big screen. It shows a waterfall diagram: frontend 
 
 > “Comic panel showing a trace viewer with a waterfall diagram. Multiple spans connect from frontend to backend. One long span is highlighted (e.g., payment service). Johan points to it with a red laser pointer while Maya nods in realization. Mood is focused and analytical. Style: clean comic with modern DevOps visuals.”
 
-
-
-
 6️⃣ | Security & Compliance | Johan catching a “password” in logs with a shocked look
 
-# Panel 1: The Log That Shouldn’t Exist
+# Panel 16: The Log That Shouldn’t Exist
 
 ---
 
@@ -543,7 +533,7 @@ Johan and Maya are reviewing a log stream during a peer review. Maya scrolls and
 
 ---
 
-# Panel 2: Redaction in Practice
+# Panel 17: Redaction in Practice
 
 ---
 
@@ -576,7 +566,7 @@ A configuration screen shows a redaction rule being applied: masking passwords a
 
 ---
 
-# Panel 3: The Audit That Passed
+# Panel 18: The Audit That Passed
 
 ---
 
@@ -607,12 +597,9 @@ Several weeks later, Johan and Maya are sitting in a meeting room. An auditor or
 
 > “Comic panel showing Johan and Maya in a quiet compliance review room. An auditor is seated at a terminal with logs open. Fields are masked or hashed. A large green checkmark appears on the screen, indicating audit passed. Johan is relaxed, Maya smiles. Mood is calm and reflective. Style: respectful, secure tech comic illustration.”
 
-
-
-
 7️⃣ | Audit Logging | Johan reviewing tamper-proof logs in a secure archive
 
-# Panel 1: Who Changed What?
+# Panel 19: Who Changed What?
 
 ---
 
@@ -645,7 +632,7 @@ Johan and Maya are investigating a permissions issue. Maya is standing at a term
 
 ---
 
-# Panel 2: Immutable by Design
+# Panel 20: Immutable by Design
 
 ---
 
@@ -678,7 +665,7 @@ The panel shows a log pipeline where audit logs go through a write-once route in
 
 ---
 
-# Panel 3: Trust Comes From Truth
+# Panel 21: Trust Comes From Truth
 
 ---
 
@@ -709,11 +696,9 @@ Later, Johan and Maya sit in a postmortem meeting. A projector shows audit log t
 
 > “Comic panel showing a calm postmortem meeting with Johan and Maya at the table. A screen shows a timeline of audit logs used in the incident report. Logs include structured fields and timestamps. No one is panicked—just focused. Emphasis on transparency and maturity. Comic style: clean, professional, de-escalated tone.”
 
-
-
 8️⃣ | Recap & Reflection | Johan teaching a junior SRE team from a whiteboard of lessons learned
 
-# Panel 1: A New Beginning
+# Panel 22: A New Beginning
 
 ---
 
@@ -746,7 +731,7 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 ---
 
-# Panel 2: From Chaos to Clarity
+# Panel 23: From Chaos to Clarity
 
 ---
 
@@ -778,7 +763,7 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 
 ---
 
-# Panel 3: The Next Shift Begins
+# Panel 24: The Next Shift Begins
 
 ---
 
