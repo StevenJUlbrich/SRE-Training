@@ -2,9 +2,6 @@
 
 > Johan overwhelmed by noisy dashboards
 
-
-## Panel 1: A New Beginning
-
 ---
 
 ## Scene Description
@@ -30,6 +27,16 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 > “Great observability isn’t just tooling—it’s teaching. You don’t just build a better system. You grow better people who can run it, understand it, and improve it.”
 
+**🎯 Learning Objective**
+
+Understand that logging maturity includes knowledge transfer—how SREs mentor others using shared experiences and structured observability principles.
+
+**✅ Takeaway**
+
+Building systems is half the battle. Sharing why they work (or fail) is how you scale reliability. Teaching observability transforms good engineers into resilient teams.
+
+
+
 ---
 
 # Panel 2: From Chaos to Clarity
@@ -44,7 +51,7 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 
 ## Image
 
-![Alt: Montage of key moments: messy logs, trace correlation, security fix, audit passing.](path/to/image-file.png)
+![Alt: Montage of key moments: messy logs, trace correlation, security fix, audit passing.](images/panel-2.png){width=450px}
 
 ---
 
@@ -61,6 +68,15 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic-style montage of four panels in one frame. (1) Early panel shows noisy logs and alert overload. (2) Johan using trace ID to diagnose a system failure. (3) Maya writing a redaction rule. (4) The team passing an audit, calm and confident. The color tone progresses from red/chaos to blue/clarity. Modern DevOps comic aesthetic.”
+
+🎯 Learning Objective
+
+Recognize the stages of logging maturity through the lens of real-world growth—moving from raw volume and reactivity to structured, secure, and strategic observability.
+
+✅ Takeaway
+
+Logging isn’t static—it evolves with the system and the team. From flood to focus, maturity is marked by structure, traceability, and responsible access.
+
 
 ---
 
@@ -94,6 +110,16 @@ The SRE team room at dusk. Screens are calm. No alerts are firing. Johan is pack
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel of the SRE room in the early evening. Johan is grabbing his bag, walking out peacefully. Maya is at a terminal with a new SRE, explaining a concept. All dashboards are green. The atmosphere is quiet, confident, and warm. Style: reflective, slice-of-life comic closure.”
+
+🎯 Learning Objective
+
+Reinforce how sustainable reliability is not just built on technology, but on mentorship, shared practices, and calm, human-centric operations.
+
+✅ Takeaway
+
+Tools change, dashboards quiet, but reliability lives on through knowledge transfer. Good observability outlasts individuals because it’s built into the team’s habits.
+
+---
 
 # Log Levels & Filtering
 
@@ -132,6 +158,15 @@ Johan is reviewing logs with a junior SRE named Maya. They’re standing next to
 
 > “Comic-style scene showing Johan and Maya standing in front of a projected terminal full of verbose DEBUG logs. Log lines mention memory allocation, timestamps, internal variables. Johan looks tired but patient. Maya looks confused. Style: clean line art, modern tech aesthetic, whiteboard in background with 'Log Levels' written on it.”
 
+🎯 Learning Objective
+
+Understand the risks of leaving verbose logging (especially DEBUG) active in production and how it impacts observability quality and operational cost.
+
+✅ Takeaway
+
+Use log levels intentionally. DEBUG should be reserved for deep diagnostics in dev or controlled troubleshooting—not for steady-state production.
+
+
 ---
 
 # Panel 5: The Log Level Fix
@@ -165,6 +200,15 @@ Johan is configuring a log agent (Fluent Bit or Logstash) on a terminal. He type
 
 > “Panel showing Johan at a terminal editing Fluent Bit or Logstash config, writing a filter to drop DEBUG logs. Maya watches while taking notes. Background has a side monitor with a smaller log stream showing only INFO/WARN/ERROR. Style: modern comic, medium saturation, focused on interaction and clarity.”
 
+🎯 Learning Objective
+
+Learn how to use logging agents (e.g., Fluent Bit, Logstash) to suppress noisy logs before they’re ingested or indexed, reducing cost and improving signal-to-noise ratio.
+
+✅ Takeaway
+
+Logging agents are your first line of observability hygiene. Filter logs early to avoid paying to store and search the irrelevant.
+
+
 ---
 
 # Panel 6: Levels of Awareness
@@ -196,6 +240,16 @@ Split-panel: Left side shows a service emitting DEBUG and INFO logs, completely 
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel split vertically: left side shows a full terminal with constant INFO and DEBUG logs, almost unreadable. Right side shows a sparse but clear terminal stream with only WARN and ERROR. Overlay caption explains ‘Volume vs. Value’. Style: informative comic design, clear contrast, minimalist layout.”
+
+🎯 Learning Objective
+
+Visually compare unfiltered vs. well-scoped logging and grasp the value of logging severity levels for operational triage.
+
+✅ Takeaway
+
+Properly leveled and filtered logs prioritize attention. In incident response, clarity beats completeness every time.
+
+---
 
 3️⃣ | Sampling & Storage Strategy | Visual of Johan comparing cost scenarios and retention flows
 
@@ -230,6 +284,15 @@ Johan and Maya are standing in front of a digital whiteboard. A bar chart shows 
 
 > “Comic panel showing Johan and Maya standing in front of a digital whiteboard. A bar chart labeled ‘Log Ingestion by Level’ shows DEBUG and INFO dominating. A red banner at the top says ‘Budget Exceeded’. Johan is calm, arms crossed. Maya looks shocked. Style: clean tech visual, modern DevOps setting.”
 
+
+🎯 Learning Objective
+
+Understand how unfiltered logs—especially low-value DEBUG and INFO logs—can lead to excessive operational costs across storage, indexing, and analysis pipelines.
+
+✅ Takeaway
+
+Every log has a cost. If you don’t control what you collect, you’re not managing observability—you’re sponsoring chaos on a budget.
+
 ---
 
 # Panel 8: Sampling in Action
@@ -262,6 +325,16 @@ Close-up of a terminal or config editor. Johan is typing a log sampling rule: ke
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel showing Johan editing a sampling rule in a log configuration tool (e.g., Fluent Bit). He writes a rule that keeps 10% of 200 OK logs and 100% of 500 errors. A log stream next to the editor shows a mix of logs, with 500s highlighted and 200s sparsely present. Style: modern comic interface, clear technical layout.”
+
+🎯 Learning Objective
+
+Learn how to apply log sampling strategies that retain critical error logs while reducing high-volume, low-value logs like routine successes.
+
+✅ Takeaway
+
+Sampling keeps insight and drops noise. You don’t need to log every successful request—but you should log every failure.
+
+
 
 ---
 
@@ -296,6 +369,16 @@ Side-view panel of a log data center. Logs flow through pipes labeled HOT → CO
 
 > “Side-view comic panel showing three zones labeled HOT, COLD, and ARCHIVE. Pipes flow log data between them. HOT is active with dashboards and alerts. COLD has slower machines and low lighting. ARCHIVE is deep storage with tape drives or vault imagery. Johan and Maya walk through the scene with Johan pointing to each tier. Style: comic schematic with rich visuals and clear technical metaphor.”
 
+🎯 Learning Objective
+
+Grasp the purpose of hot, cold, and archived log tiers and how they align with different operational and compliance needs.
+
+✅ Takeaway
+
+Store logs where they belong. Use hot tiers for high-value, short-term insights, and shift archival logs to cheaper storage. Observability and cost control go hand-in-hand.
+
+---
+
 4️⃣ | Trace ID & Correlation | Logs across services sharing the same trace_id
 
 # Panel 10: One Request, Many Logs
@@ -328,6 +411,14 @@ Johan and Maya stand in front of a timeline-based log viewer. The screen is spli
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel showing a log viewer with a timeline layout. Three services are shown in parallel tracks—auth, checkout, and payments—all logging entries that include the same trace_id. Johan points to the entries, visually connecting them. Maya stands beside him, learning. Clean UI, modern comic style, emphasis on clarity.”
+
+🎯 Learning Objective
+
+Understand how a shared trace_id connects logs across microservices, enabling unified visibility into a single request’s journey.
+
+✅ Takeaway
+
+Without a trace_id, you're reading isolated sentences. With it, you're reading a full chapter. Correlation turns log lines into a narrative.
 
 ---
 
@@ -362,6 +453,14 @@ A span tree is shown on a large screen. Each node (span) represents a request: r
 
 > “Comic-style panel showing a digital span tree, similar to what is seen in Jaeger or Tempo. Each span node includes a label, duration, and visual hierarchy. Johan gestures to a high-latency span in the middle of the tree. Maya reviews a tablet showing the same trace. Style is modern DevOps comic, clear and illustrative.”
 
+🎯 Learning Objective
+
+Learn how spans represent time-scoped units of work within a trace and how visualizing them as a tree reveals where latency lives.
+
+✅ Takeaway
+
+Spans show structure. A trace without spans is like a recipe without steps—you need both timing and causality to find performance issues.
+
 ---
 
 # Panel 12: Trace ID Saves the Day
@@ -394,6 +493,16 @@ The scene transitions to a war room during an incident. Multiple engineers look 
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic-style war room scene with multiple engineers and dashboards. Johan stands at the center pasting a trace_id into a distributed tracing tool. A large monitor shows the full trace path with root and downstream spans. The team gathers, recognizing the root cause. Mood: sharp focus, tension release, modern incident command room.”
+
+🎯 Learning Objective
+
+See how tracing enables fast incident resolution by eliminating guesswork, surfacing root causes, and showing cross-service dependencies.
+
+✅ Takeaway
+
+When logs and metrics fail to explain "why," tracing shows "how." In an incident, it’s your truth source from user to database.
+
+
 
 5️⃣ | From Metrics to Logs to Traces | Johan following a red spike → logs → distributed trace
 
@@ -428,6 +537,14 @@ A Grafana dashboard on a large monitor shows a sudden spike in the `p95 latency`
 
 > “Comic panel of a Grafana dashboard with a sharp spike in latency. An alert banner reads ‘Latency SLO Breached’. Johan and Maya are in the foreground, inspecting the spike. The scene is a modern DevOps command center with alert tones and system status panels glowing. Style is clean, technical comic realism.”
 
+🎯 Learning Objective
+
+Understand how metrics serve as high-level indicators that signal something is wrong—but often lack the context needed to diagnose the root cause.
+
+✅ Takeaway
+
+Metrics tell you something broke. But to know what broke and why, you need to go deeper—into logs and traces.
+
 ---
 
 # Panel 14: Log Timeline Dive
@@ -460,6 +577,14 @@ Johan and Maya query logs around the spike window. The screen now shows structur
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic-style panel showing Johan and Maya looking at a log viewer. Log lines are structured, with one line showing a red-highlighted `ERROR` and a visible `trace_id`. Maya is copying the ID into a clipboard. Style: close-up tech-focused comic frame, calm but investigative.”
+
+🎯 Learning Objective
+
+Learn how to correlate logs with a time range and extract a trace_id that can be used to pivot into a distributed trace view.
+
+✅ Takeaway
+
+Logs give you the clues. If structured well, they hand you the key (trace_id) to follow the request upstream and downstream.
 
 ---
 
@@ -494,6 +619,16 @@ The trace is now loaded on a big screen. It shows a waterfall diagram: frontend 
 
 > “Comic panel showing a trace viewer with a waterfall diagram. Multiple spans connect from frontend to backend. One long span is highlighted (e.g., payment service). Johan points to it with a red laser pointer while Maya nods in realization. Mood is focused and analytical. Style: clean comic with modern DevOps visuals.”
 
+🎯 Learning Objective
+
+See how a distributed trace pinpoints a latency bottleneck by showing the precise span or service where time was lost.
+
+✅ Takeaway
+
+Traces reveal what metrics and logs only hint at: the precise span, service, and operation responsible for a degraded experience.
+
+---
+
 6️⃣ | Security & Compliance | Johan catching a “password” in logs with a shocked look
 
 # Panel 16: The Log That Shouldn’t Exist
@@ -526,6 +661,14 @@ Johan and Maya are reviewing a log stream during a peer review. Maya scrolls and
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel showing a log stream with one entry clearly showing a user email and password in plaintext. Maya has stopped scrolling and looks concerned. Johan is alert, eyes narrowed. The mood is serious. Background has system logs glowing, one highlighted in red. Style: modern DevSecOps comic realism.”
+
+🎯 Learning Objective
+
+Understand the risk of logging sensitive data such as passwords, tokens, or PII, and why logs must be treated as part of your security surface.
+
+✅ Takeaway
+
+Logging is not exempt from security best practices. Every log line should be safe enough to share—and secure enough not to.
 
 ---
 
@@ -560,6 +703,14 @@ A configuration screen shows a redaction rule being applied: masking passwords a
 
 > “Comic panel showing Johan typing into a Fluent Bit config editor or YAML filter. He writes a redaction rule to mask ‘password=’ fields. On the side screen, the log viewer updates in real-time, showing masked fields. Maya observes, impressed. Scene emphasizes safe observability. Style: structured comic visual, educational mood.”
 
+🎯 Learning Objective
+
+Learn how to apply redaction rules in log shippers (e.g., Fluent Bit, Logstash) to prevent sensitive data from entering storage or being indexed.
+
+✅ Takeaway
+
+Don’t patch logs after the fact—protect them at the edge. Redaction is security by design, not by regret.
+
 ---
 
 # Panel 18: The Audit That Passed
@@ -593,6 +744,16 @@ Several weeks later, Johan and Maya are sitting in a meeting room. An auditor or
 
 > “Comic panel showing Johan and Maya in a quiet compliance review room. An auditor is seated at a terminal with logs open. Fields are masked or hashed. A large green checkmark appears on the screen, indicating audit passed. Johan is relaxed, Maya smiles. Mood is calm and reflective. Style: respectful, secure tech comic illustration.”
 
+🎯 Learning Objective
+
+Grasp the importance of structured, compliant, and privacy-conscious logging in passing audits and building trust with stakeholders.
+
+✅ Takeaway
+
+Compliant logs are clean, clear, and intentional. They show what happened—without exposing who it happened to.
+
+---
+
 7️⃣ | Audit Logging | Johan reviewing tamper-proof logs in a secure archive
 
 # Panel 19: Who Changed What?
@@ -625,6 +786,16 @@ Johan and Maya are investigating a permissions issue. Maya is standing at a term
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel showing Maya at a terminal, reviewing structured audit logs. Fields like `actor_id`, `timestamp`, and `action=grant_role` are clearly visible. Johan stands behind her, explaining the logs. The mood is investigative but professional. Style: modern comic with structured data visuals.”
+Panel 19: Who Changed What?
+
+🎯 Learning Objective
+
+Understand the purpose of audit logs in tracking changes to critical systems—capturing who did what, when, and where.
+
+✅ Takeaway
+
+Audit logs turn questions into answers. They're your paper trail for operational accountability, not a search party after the fact.
+
 
 ---
 
@@ -659,6 +830,15 @@ The panel shows a log pipeline where audit logs go through a write-once route in
 
 > “Comic panel showing Johan drawing a whiteboard diagram of a log flow where audit logs go through a one-way pipeline into tamper-proof (WORM) storage. A lock icon is shown above the storage. Maya is seated nearby, taking notes. Clean DevOps comic style with clarity emphasis.”
 
+
+🎯 Learning Objective
+
+Learn the value of tamper-proof logging (e.g., WORM storage) for preserving the integrity of critical audit events.
+
+✅ Takeaway
+
+Logs that can be altered can't be trusted. Write-once, read-many logging is a cornerstone of regulatory and operational assurance.
+
 ---
 
 # Panel 21: Trust Comes From Truth
@@ -673,14 +853,7 @@ Later, Johan and Maya sit in a postmortem meeting. A projector shows audit log t
 
 ## Image
 
-![Alt: Postmortem meeting. Projector shows audit logs. Team members focus on timelines, not blame.](path/to/image-file.png)
-
----
-
-## Thoughts (Character Internal Dialogue)
-
-- **Johan:** “A good log doesn’t protect your code. It protects your culture.”
-- **Maya:** “The log told the story. We just listened.”
+![Alt: Postmortem meeting. Projector shows audit logs. Team members focus on timelines, not blame.](images/panel-21.png){width=450px}
 
 ---
 
@@ -691,6 +864,15 @@ Later, Johan and Maya sit in a postmortem meeting. A projector shows audit log t
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic panel showing a calm postmortem meeting with Johan and Maya at the table. A screen shows a timeline of audit logs used in the incident report. Logs include structured fields and timestamps. No one is panicked—just focused. Emphasis on transparency and maturity. Comic style: clean, professional, de-escalated tone.”
+
+🎯 Learning Objective
+
+Explore how audit logs contribute to a blame-aware culture—where clarity and timeline matter more than fault assignment.
+
+✅ Takeaway
+
+Observability isn’t just technical—it’s cultural. When your logs are honest, your team doesn’t need to guess—or blame.
+
 
 8️⃣ | Recap & Reflection | Johan teaching a junior SRE team from a whiteboard of lessons learned
 
@@ -706,7 +888,7 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 ## Image
 
-![Alt: Johan teaches new SREs with Maya beside him. The whiteboard shows observability concepts.](path/to/image-file.png)
+![Alt: Johan teaches new SREs with Maya beside him. The whiteboard shows observability concepts.](images/panel-22.png){width=450px}
 
 ---
 
@@ -725,6 +907,14 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 > “Comic panel of Johan standing in front of a whiteboard during an SRE onboarding session. The board shows a simplified observability diagram linking logs, metrics, traces, and audit flows. Maya is seated, confident, with two new SREs beside her. Light from a window gives the scene a hopeful tone. Style: warm, optimistic tech comic with clean lines.”
 
+🎯 Learning Objective
+
+Reinforce how observability becomes institutional knowledge—passed from experienced SREs to the next generation through teaching and mentorship.
+
+✅ Takeaway
+
+Tools fade, dashboards change—but teaching observability keeps teams strong. Teaching is the last and best step of mastery.
+
 ---
 
 # Panel 23: From Chaos to Clarity
@@ -739,7 +929,7 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 
 ## Image
 
-![Alt: Montage of key moments: messy logs, trace correlation, security fix, audit passing.](path/to/image-file.png)
+![Alt: Montage of key moments: messy logs, trace correlation, security fix, audit passing.](images/panel-23.png){width=450px}
 
 ---
 
@@ -756,6 +946,14 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 ### Dall-e prompt to generate the graphic novel panel(s)
 
 > “Comic-style montage of four panels in one frame. (1) Early panel shows noisy logs and alert overload. (2) Johan using trace ID to diagnose a system failure. (3) Maya writing a redaction rule. (4) The team passing an audit, calm and confident. The color tone progresses from red/chaos to blue/clarity. Modern DevOps comic aesthetic.”
+>
+> 🎯 Learning Objective
+
+Visually summarize the journey from disorganized, high-noise logging to structured, secure, and insightful observability practices.
+
+✅ Takeaway
+
+Maturity is measurable: less noise, better decisions, and shared understanding. That’s how you turn logs into clarity—and chaos into confidence.
 
 ---
 
@@ -790,3 +988,13 @@ The SRE team room at dusk. Screens are calm. No alerts are firing. Johan is pack
 
 > “Comic panel of the SRE room in the early evening. Johan is grabbing his bag, walking out peacefully. Maya is at a terminal with a new SRE, explaining a concept. All dashboards are green. The atmosphere is quiet, confident, and warm. Style: reflective, slice-of-life comic closure.”
 
+
+🎯 Learning Objective
+
+Understand that sustainable SRE practice is more than dashboards—it’s people passing on what works to keep reliability real.
+
+✅ Takeaway
+
+The goal isn’t fewer incidents—it’s fewer surprises. Teaching others what to look for in logs builds a resilient future. 
+
+---
