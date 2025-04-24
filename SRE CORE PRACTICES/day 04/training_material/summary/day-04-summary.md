@@ -1,4 +1,4 @@
-# 1️⃣  Intro – The Firehose of Logs 
+# 1️⃣ Intro – The Firehose of Logs
 
 > Johan overwhelmed by noisy dashboards
 
@@ -12,30 +12,26 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 ## Image
 
-![Alt: Johan teaches new SREs with Maya beside him. The whiteboard shows observability concepts.](images/panel-1.png){width=450px}
+![Johan teaches new SREs with Maya beside him. The whiteboard shows observability concepts.](images/panel-1.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “We logged our mistakes. Now we pass on the lessons.”
-- **Maya:** “It finally makes sense. And now I get to help others see it too.”
+- **Johan:** "We logged our mistakes. Now we pass on the lessons."
+- **Maya:** "It finally makes sense. And now I get to help others see it too."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Great observability isn’t just tooling—it’s teaching. You don’t just build a better system. You grow better people who can run it, understand it, and improve it.”
+> Great observability isn’t just tooling—it’s teaching. You don’t just build a better system. You grow better people who can run it, understand it, and improve it.
 
-**🎯 Learning Objective**
-
+**🎯 Learning Objective:**  
 Understand that logging maturity includes knowledge transfer—how SREs mentor others using shared experiences and structured observability principles.
 
-**✅ Takeaway**
-
+**✅ Takeaway:**  
 Building systems is half the battle. Sharing why they work (or fail) is how you scale reliability. Teaching observability transforms good engineers into resilient teams.
-
-
 
 ---
 
@@ -51,32 +47,25 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 
 ## Image
 
-![Alt: Montage of key moments: messy logs, trace correlation, security fix, audit passing.](images/panel-2.png){width=450px}
+![Montage of key moments: messy logs, trace correlation, security fix, audit passing.](images/panel-2.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “The system didn’t just evolve. We did.”
+- **Johan:** "The system didn’t just evolve. We did."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Good logging isn’t the end goal. It’s the path to insight, stability, and shared ownership. From chaos to clarity—that’s the arc of every great SRE story.”
+> Good logging isn’t the end goal. It’s the path to insight, stability, and shared ownership. From chaos to clarity—that’s the arc of every great SRE story.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic-style montage of four panels in one frame. (1) Early panel shows noisy logs and alert overload. (2) Johan using trace ID to diagnose a system failure. (3) Maya writing a redaction rule. (4) The team passing an audit, calm and confident. The color tone progresses from red/chaos to blue/clarity. Modern DevOps comic aesthetic.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Recognize the stages of logging maturity through the lens of real-world growth—moving from raw volume and reactivity to structured, secure, and strategic observability.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Logging isn’t static—it evolves with the system and the team. From flood to focus, maturity is marked by structure, traceability, and responsible access.
-
 
 ---
 
@@ -92,42 +81,34 @@ The SRE team room at dusk. Screens are calm. No alerts are firing. Johan is pack
 
 ## Image
 
-![Alt: Johan heads out for the day as Maya coaches a new SRE. The room is calm.](path/to/image-file.png)
+![Johan heads out for the day as Maya coaches a new SRE. The room is calm.](images/panel_03_next_shift_begins.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Logs don’t lie. And neither does good mentorship.”
-- **Maya:** “Time to pay it forward.”
+- **Johan:** "Logs don’t lie. And neither does good mentorship."
+- **Maya:** "Time to pay it forward."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Systems age. People rotate. But good practices stick. When you teach observability, you’re not just sharing tools—you’re training the next layer of reliability.”
+> Systems age. People rotate. But good practices stick. When you teach observability, you’re not just sharing tools—you’re training the next layer of reliability.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel of the SRE room in the early evening. Johan is grabbing his bag, walking out peacefully. Maya is at a terminal with a new SRE, explaining a concept. All dashboards are green. The atmosphere is quiet, confident, and warm. Style: reflective, slice-of-life comic closure.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Reinforce how sustainable reliability is not just built on technology, but on mentorship, shared practices, and calm, human-centric operations.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Tools change, dashboards quiet, but reliability lives on through knowledge transfer. Good observability outlasts individuals because it’s built into the team’s habits.
 
 ---
 
 # Log Levels & Filtering
 
+---
 
-2️⃣ | Log Levels & Filtering | Johan configuring an agent to drop debug/health logs
-
-
-# Panel 4: The Debug Avalanche
+## Panel 4: The Debug Avalanche
 
 ---
 
@@ -139,37 +120,30 @@ Johan is reviewing logs with a junior SRE named Maya. They’re standing next to
 
 ## Image
 
-![Alt: Johan and Maya stare at a wall of verbose debug logs, looking mildly overwhelmed](path/to/image-file.png)
+![Johan and Maya stare at a wall of verbose debug logs, looking mildly overwhelmed.](images/panel_04_debug_avalanche.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Someone left debug on… again.”
-- **Maya:** “Is any of this useful?”
+- **Johan:** "Someone left debug on… again."
+- **Maya:** "Is any of this useful?"
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Debug logs are powerful. But in production, they’re like eavesdropping on every whisper in a stadium. Use them when you're hunting a ghost. Not when you're running a business.”
+> Debug logs are powerful. But in production, they’re like eavesdropping on every whisper in a stadium. Use them when you're hunting a ghost. Not when you're running a business.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic-style scene showing Johan and Maya standing in front of a projected terminal full of verbose DEBUG logs. Log lines mention memory allocation, timestamps, internal variables. Johan looks tired but patient. Maya looks confused. Style: clean line art, modern tech aesthetic, whiteboard in background with 'Log Levels' written on it.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand the risks of leaving verbose logging (especially DEBUG) active in production and how it impacts observability quality and operational cost.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Use log levels intentionally. DEBUG should be reserved for deep diagnostics in dev or controlled troubleshooting—not for steady-state production.
-
 
 ---
 
-# Panel 5: The Log Level Fix
+## Panel 5: The Log Level Fix
 
 ---
 
@@ -181,37 +155,30 @@ Johan is configuring a log agent (Fluent Bit or Logstash) on a terminal. He type
 
 ## Image
 
-![Alt: Johan editing log agent config to suppress DEBUG, Maya observing and taking notes](path/to/image-file.png)
+![Johan editing log agent config to suppress DEBUG, Maya observing and taking notes.](images/panel_05_log_level_fix.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Production isn’t your scratchpad.”
-- **Maya:** “So we can just turn this off at the source?”
+- **Johan:** "Production isn’t your scratchpad."
+- **Maya:** "So we can just turn this off at the source?"
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Control log volume where it begins. Agent-level filtering ensures that what doesn’t help, doesn’t cost. When debug becomes a problem, the solution isn’t to buy more storage—it’s to be more deliberate.”
+> Control log volume where it begins. Agent-level filtering ensures that what doesn’t help, doesn’t cost. When debug becomes a problem, the solution isn’t to buy more storage—it’s to be more deliberate.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Panel showing Johan at a terminal editing Fluent Bit or Logstash config, writing a filter to drop DEBUG logs. Maya watches while taking notes. Background has a side monitor with a smaller log stream showing only INFO/WARN/ERROR. Style: modern comic, medium saturation, focused on interaction and clarity.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Learn how to use logging agents (e.g., Fluent Bit, Logstash) to suppress noisy logs before they’re ingested or indexed, reducing cost and improving signal-to-noise ratio.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Logging agents are your first line of observability hygiene. Filter logs early to avoid paying to store and search the irrelevant.
-
 
 ---
 
-# Panel 6: Levels of Awareness
+## Panel 6: Levels of Awareness
 
 ---
 
@@ -223,37 +190,33 @@ Split-panel: Left side shows a service emitting DEBUG and INFO logs, completely 
 
 ## Image
 
-![Alt: Side-by-side comparison of log streams: one verbose, one filtered](path/to/image-file.png)
+![Side-by-side comparison of log streams: one verbose, one filtered.](images/panel_06_levels_of_awareness.png){width=400px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Now that’s something I’d alert on.”
+- **Johan:** "Now that’s something I’d alert on."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Not all logs are equal. Structure and severity should work together to guide attention. Observability is knowing which whisper matters—and when to listen.”
+> Not all logs are equal. Structure and severity should work together to guide attention. Observability is knowing which whisper matters—and when to listen.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel split vertically: left side shows a full terminal with constant INFO and DEBUG logs, almost unreadable. Right side shows a sparse but clear terminal stream with only WARN and ERROR. Overlay caption explains ‘Volume vs. Value’. Style: informative comic design, clear contrast, minimalist layout.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Visually compare unfiltered vs. well-scoped logging and grasp the value of logging severity levels for operational triage.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Properly leveled and filtered logs prioritize attention. In incident response, clarity beats completeness every time.
 
 ---
 
-3️⃣ | Sampling & Storage Strategy | Visual of Johan comparing cost scenarios and retention flows
+# Sampling & Storage Strategy
 
-# Panel 7: The Cost Wall
+---
+
+## Panel 7: The Cost Wall
 
 ---
 
@@ -265,37 +228,30 @@ Johan and Maya are standing in front of a digital whiteboard. A bar chart shows 
 
 ## Image
 
-![Alt: A whiteboard with huge log cost bars labeled DEBUG/INFO. Johan and Maya analyze the data](path/to/image-file.png)
+![A whiteboard with huge log cost bars labeled DEBUG/INFO. Johan and Maya analyze the data.](images/panel_07_cost_wall.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Maya:** “How can logs cost more than compute?”
-- **Johan:** “Because we paid to hear every whisper in the building.”
+- **Maya:** "How can logs cost more than compute?"
+- **Johan:** "Because we paid to hear every whisper in the building."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Logging cost isn’t just about storage. It’s about transmission, indexing, query latency, and retention. Most environments overspend because no one questions the need for every success log to be archived forever.”
+> Logging cost isn’t just about storage. It’s about transmission, indexing, query latency, and retention. Most environments overspend because no one questions the need for every success log to be archived forever.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing Johan and Maya standing in front of a digital whiteboard. A bar chart labeled ‘Log Ingestion by Level’ shows DEBUG and INFO dominating. A red banner at the top says ‘Budget Exceeded’. Johan is calm, arms crossed. Maya looks shocked. Style: clean tech visual, modern DevOps setting.”
-
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand how unfiltered logs—especially low-value DEBUG and INFO logs—can lead to excessive operational costs across storage, indexing, and analysis pipelines.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Every log has a cost. If you don’t control what you collect, you’re not managing observability—you’re sponsoring chaos on a budget.
 
 ---
 
-# Panel 8: Sampling in Action
+## Panel 8: Sampling in Action
 
 ---
 
@@ -307,38 +263,30 @@ Close-up of a terminal or config editor. Johan is typing a log sampling rule: ke
 
 ## Image
 
-![Alt: Terminal window with sampling config. Sparse 200 logs, full 500 logs retained](path/to/image-file.png)
+![Terminal window with sampling config. Sparse 200 logs, full 500 logs retained.](images/panel_08_sampling_in_action.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Signal preserved. Noise minimized.”
-- **Maya:** “So we still see the problems... just not every success?”
+- **Johan:** "Signal preserved. Noise minimized."
+- **Maya:** "So we still see the problems... just not every success?"
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Sampling isn’t about ignorance. It’s about efficiency. You don’t need to hear every ‘okay’ to know things are working. But you need every ‘fail’—because that’s where insight lives.”
+> Sampling isn’t about ignorance. It’s about efficiency. You don’t need to hear every ‘okay’ to know things are working. But you need every ‘fail’—because that’s where insight lives.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing Johan editing a sampling rule in a log configuration tool (e.g., Fluent Bit). He writes a rule that keeps 10% of 200 OK logs and 100% of 500 errors. A log stream next to the editor shows a mix of logs, with 500s highlighted and 200s sparsely present. Style: modern comic interface, clear technical layout.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Learn how to apply log sampling strategies that retain critical error logs while reducing high-volume, low-value logs like routine successes.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Sampling keeps insight and drops noise. You don’t need to log every successful request—but you should log every failure.
-
-
 
 ---
 
-# Panel 9: Retention Tiers Visualized
+## Panel 9: Retention Tiers Visualized
 
 ---
 
@@ -350,38 +298,34 @@ Side-view panel of a log data center. Logs flow through pipes labeled HOT → CO
 
 ## Image
 
-![Alt: Johan and Maya walking past labeled storage tiers: HOT, COLD, ARCHIVE. Each has different log types](path/to/image-file.png)
+![Johan and Maya walking past labeled storage tiers: HOT, COLD, ARCHIVE. Each has different log types.](images/panel_09_retention_tiers.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Hot is for fast. Cold is for cheap. Archive is for lawyers.”
-- **Maya:** “So not everything stays searchable forever.”
+- **Johan:** "Hot is for fast. Cold is for cheap. Archive is for lawyers."
+- **Maya:** "So not everything stays searchable forever."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Tiered retention makes observability sustainable. Keep what you need where you need it. Logs should age gracefully—just like infrastructure.”
+> Tiered retention makes observability sustainable. Keep what you need where you need it. Logs should age gracefully—just like infrastructure.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Side-view comic panel showing three zones labeled HOT, COLD, and ARCHIVE. Pipes flow log data between them. HOT is active with dashboards and alerts. COLD has slower machines and low lighting. ARCHIVE is deep storage with tape drives or vault imagery. Johan and Maya walk through the scene with Johan pointing to each tier. Style: comic schematic with rich visuals and clear technical metaphor.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Grasp the purpose of hot, cold, and archived log tiers and how they align with different operational and compliance needs.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Store logs where they belong. Use hot tiers for high-value, short-term insights, and shift archival logs to cheaper storage. Observability and cost control go hand-in-hand.
 
 ---
 
-4️⃣ | Trace ID & Correlation | Logs across services sharing the same trace_id
+# Trace ID & Correlation
 
-# Panel 10: One Request, Many Logs
+---
+
+## Panel 10: One Request, Many Logs
 
 ---
 
@@ -393,36 +337,30 @@ Johan and Maya stand in front of a timeline-based log viewer. The screen is spli
 
 ## Image
 
-![Alt: Timeline view of logs from three services, all sharing the same trace_id. Johan connects the dots.](path/to/image-file.png)
+![Timeline view of logs from three services, all sharing the same trace_id. Johan connects the dots.](images/panel_10_trust_in_logs_split.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Every log tells part of the story. The trace_id tells you they’re in the same chapter.”
-- **Maya:** “So that’s how you tell the full journey of a request.”
+- **Johan:** "Every log tells part of the story. The trace_id tells you they’re in the same chapter."
+- **Maya:** "So that’s how you tell the full journey of a request."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Correlation turns isolated facts into a narrative. When each service adds trace_id, your logs become part of a timeline—not a stack of receipts.”
+> Correlation turns isolated facts into a narrative. When each service adds trace_id, your logs become part of a timeline—not a stack of receipts.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing a log viewer with a timeline layout. Three services are shown in parallel tracks—auth, checkout, and payments—all logging entries that include the same trace_id. Johan points to the entries, visually connecting them. Maya stands beside him, learning. Clean UI, modern comic style, emphasis on clarity.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand how a shared trace_id connects logs across microservices, enabling unified visibility into a single request’s journey.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Without a trace_id, you're reading isolated sentences. With it, you're reading a full chapter. Correlation turns log lines into a narrative.
 
 ---
 
-# Panel 11: The Span Tree Revealed
+## Panel 11: The Span Tree Revealed
 
 ---
 
@@ -434,36 +372,30 @@ A span tree is shown on a large screen. Each node (span) represents a request: r
 
 ## Image
 
-![Alt: Span tree showing parent-child spans from a trace. Johan points to a long-duration span.](path/to/image-file.png)
+![Span tree showing parent-child spans from a trace. Johan points to a long-duration span.](images/panel_11_span_tree.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “This one took 2.3 seconds. That’s where the latency lives.”
-- **Maya:** “So spans are like trace steps, each with their own clock.”
+- **Johan:** "This one took 2.3 seconds. That’s where the latency lives."
+- **Maya:** "So spans are like trace steps, each with their own clock."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Spans aren’t just diagnostics—they’re storyboards. Each span has timing, causality, and structure. The root span starts the trace, but the children show where time was spent.”
+> Spans aren’t just diagnostics—they’re storyboards. Each span has timing, causality, and structure. The root span starts the trace, but the children show where time was spent.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic-style panel showing a digital span tree, similar to what is seen in Jaeger or Tempo. Each span node includes a label, duration, and visual hierarchy. Johan gestures to a high-latency span in the middle of the tree. Maya reviews a tablet showing the same trace. Style is modern DevOps comic, clear and illustrative.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Learn how spans represent time-scoped units of work within a trace and how visualizing them as a tree reveals where latency lives.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Spans show structure. A trace without spans is like a recipe without steps—you need both timing and causality to find performance issues.
 
 ---
 
-# Panel 12: Trace ID Saves the Day
+## Panel 12: Trace ID Saves the Day
 
 ---
 
@@ -475,38 +407,34 @@ The scene transitions to a war room during an incident. Multiple engineers look 
 
 ## Image
 
-![Alt: Incident room scene where a trace viewer shows the full request path. Everyone gathers around Johan.](path/to/image-file.png)
+![Incident room scene where a trace viewer shows the full request path. Everyone gathers around Johan.](images/panel_12_trace_id_saves_day.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “No more guessing. Let the trace speak.”
-- **Team Member:** “This points straight to the vendor issue.”
+- **Johan:** "No more guessing. Let the trace speak."
+- **Team Member:** "This points straight to the vendor issue."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Tracing isn’t just performance data—it’s a compass in the fog. When logs are too scattered and metrics only whisper, a trace brings the full story into focus.”
+> Tracing isn’t just performance data—it’s a compass in the fog. When logs are too scattered and metrics only whisper, a trace brings the full story into focus.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic-style war room scene with multiple engineers and dashboards. Johan stands at the center pasting a trace_id into a distributed tracing tool. A large monitor shows the full trace path with root and downstream spans. The team gathers, recognizing the root cause. Mood: sharp focus, tension release, modern incident command room.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 See how tracing enables fast incident resolution by eliminating guesswork, surfacing root causes, and showing cross-service dependencies.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 When logs and metrics fail to explain "why," tracing shows "how." In an incident, it’s your truth source from user to database.
 
+---
 
+# From Metrics to Logs to Traces
 
-5️⃣ | From Metrics to Logs to Traces | Johan following a red spike → logs → distributed trace
+---
 
-# Panel 13: The Metric Spike
+## Panel 13: The Metric Spike
 
 ---
 
@@ -518,36 +446,30 @@ A Grafana dashboard on a large monitor shows a sudden spike in the `p95 latency`
 
 ## Image
 
-![Alt: A Grafana dashboard shows a red spike in latency. Johan and Maya react to the alert.](path/to/image-file.png)
+![A Grafana dashboard shows a red spike in latency. Johan and Maya react to the alert.](images/panel_13_metric_spike.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Something broke—but metrics don’t explain why.”
-- **Maya:** “We need to see what happened *inside* that spike.”
+- **Johan:** "Something broke—but metrics don’t explain why."
+- **Maya:** "We need to see what happened *inside* that spike."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Metrics are great for detecting anomalies. But they don’t reveal root causes. To get to the ‘why,’ we follow the data—into logs and then traces.”
+> Metrics are great for detecting anomalies. But they don’t reveal root causes. To get to the ‘why,’ we follow the data—into logs and then traces.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel of a Grafana dashboard with a sharp spike in latency. An alert banner reads ‘Latency SLO Breached’. Johan and Maya are in the foreground, inspecting the spike. The scene is a modern DevOps command center with alert tones and system status panels glowing. Style is clean, technical comic realism.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand how metrics serve as high-level indicators that signal something is wrong—but often lack the context needed to diagnose the root cause.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Metrics tell you something broke. But to know what broke and why, you need to go deeper—into logs and traces.
 
 ---
 
-# Panel 14: Log Timeline Dive
+## Panel 14: Log Timeline Dive
 
 ---
 
@@ -559,36 +481,30 @@ Johan and Maya query logs around the spike window. The screen now shows structur
 
 ## Image
 
-![Alt: Log viewer showing error logs. A `trace_id` is highlighted. Maya copies it.](path/to/image-file.png)
+![Log viewer showing error logs. A `trace_id` is highlighted. Maya copies it.](images/panel_14_log_timeline_dive.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Here. This trace_id connects it all.”
-- **Maya:** “Copying it. Let’s chase the rabbit.”
+- **Johan:** "Here. This trace_id connects it all."
+- **Maya:** "Copying it. Let’s chase the rabbit."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Logs confirm what metrics hint at. But with a trace_id, you unlock the whole request’s journey—from frontend through the stack.”
+> Logs confirm what metrics hint at. But with a trace_id, you unlock the whole request’s journey—from frontend through the stack.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic-style panel showing Johan and Maya looking at a log viewer. Log lines are structured, with one line showing a red-highlighted `ERROR` and a visible `trace_id`. Maya is copying the ID into a clipboard. Style: close-up tech-focused comic frame, calm but investigative.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Learn how to correlate logs with a time range and extract a trace_id that can be used to pivot into a distributed trace view.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Logs give you the clues. If structured well, they hand you the key (trace_id) to follow the request upstream and downstream.
 
 ---
 
-# Panel 15: Trace Brings It Home
+## Panel 15: Trace Brings It Home
 
 ---
 
@@ -600,38 +516,34 @@ The trace is now loaded on a big screen. It shows a waterfall diagram: frontend 
 
 ## Image
 
-![Alt: A waterfall trace with one long span highlighted. Johan and Maya pinpoint the delay.](path/to/image-file.png)
+![A waterfall trace with one long span highlighted. Johan and Maya pinpoint the delay.](images/panel_15_trace_brings_it_home.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Latency lives here.”
-- **Maya:** “That one span explains the whole spike.”
+- **Johan:** "Latency lives here."
+- **Maya:** "That one span explains the whole spike."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “A trace isn’t just data—it’s the blueprint of an incident. Follow the flow. Find the delay. Logs confirm it, metrics detect it, but traces reveal it.”
+> A trace isn’t just data—it’s the blueprint of an incident. Follow the flow. Find the delay. Logs confirm it, metrics detect it, but traces reveal it.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing a trace viewer with a waterfall diagram. Multiple spans connect from frontend to backend. One long span is highlighted (e.g., payment service). Johan points to it with a red laser pointer while Maya nods in realization. Mood is focused and analytical. Style: clean comic with modern DevOps visuals.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 See how a distributed trace pinpoints a latency bottleneck by showing the precise span or service where time was lost.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Traces reveal what metrics and logs only hint at: the precise span, service, and operation responsible for a degraded experience.
 
 ---
 
-6️⃣ | Security & Compliance | Johan catching a “password” in logs with a shocked look
+# Security & Compliance
 
-# Panel 16: The Log That Shouldn’t Exist
+---
+
+## Panel 16: The Log That Shouldn’t Exist
 
 ---
 
@@ -643,36 +555,30 @@ Johan and Maya are reviewing a log stream during a peer review. Maya scrolls and
 
 ## Image
 
-![Alt: Log viewer with an email and password in plaintext. Johan and Maya react instantly.](path/to/image-file.png)
+![Log viewer with an email and password in plaintext. Johan and Maya react instantly.](images/panel_16_log_shouldnt_exist.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Maya:** “Please tell me that’s not production data…”
-- **Johan:** “That’s a breach waiting to happen.”
+- **Maya:** "Please tell me that’s not production data…"
+- **Johan:** "That’s a breach waiting to happen."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Logs are often overlooked as attack surfaces. But every unredacted credential, every exposed token, is an open door. Observability must never come at the cost of privacy.”
+> Logs are often overlooked as attack surfaces. But every unredacted credential, every exposed token, is an open door. Observability must never come at the cost of privacy.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing a log stream with one entry clearly showing a user email and password in plaintext. Maya has stopped scrolling and looks concerned. Johan is alert, eyes narrowed. The mood is serious. Background has system logs glowing, one highlighted in red. Style: modern DevSecOps comic realism.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand the risk of logging sensitive data such as passwords, tokens, or PII, and why logs must be treated as part of your security surface.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Logging is not exempt from security best practices. Every log line should be safe enough to share—and secure enough not to.
 
 ---
 
-# Panel 17: Redaction in Practice
+## Panel 17: Redaction in Practice
 
 ---
 
@@ -684,36 +590,30 @@ A configuration screen shows a redaction rule being applied: masking passwords a
 
 ## Image
 
-![Alt: Johan edits a config to redact sensitive data. Maya sees the logs update live.](path/to/image-file.png)
+![Johan edits a config to redact sensitive data. Maya sees the logs update live.](images/panel_17_redaction_in_practice.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “It’s not just about finding problems—it’s about not creating new ones.”
-- **Maya:** “So we can enforce this at the shipper?”
+- **Johan:** "It’s not just about finding problems—it’s about not creating new ones."
+- **Maya:** "So we can enforce this at the shipper?"
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Security isn’t reactive—it’s designed. Good logs don’t just report. They protect. Redaction, masking, and field control should be defaults, not band-aids.”
+> Security isn’t reactive—it’s designed. Good logs don’t just report. They protect. Redaction, masking, and field control should be defaults, not band-aids.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing Johan typing into a Fluent Bit config editor or YAML filter. He writes a redaction rule to mask ‘password=’ fields. On the side screen, the log viewer updates in real-time, showing masked fields. Maya observes, impressed. Scene emphasizes safe observability. Style: structured comic visual, educational mood.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Learn how to apply redaction rules in log shippers (e.g., Fluent Bit, Logstash) to prevent sensitive data from entering storage or being indexed.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Don’t patch logs after the fact—protect them at the edge. Redaction is security by design, not by regret.
 
 ---
 
-# Panel 18: The Audit That Passed
+## Panel 18: The Audit That Passed
 
 ---
 
@@ -725,38 +625,34 @@ Several weeks later, Johan and Maya are sitting in a meeting room. An auditor or
 
 ## Image
 
-![Alt: Auditor reviewing clean, compliant logs with Johan and Maya. A green check is shown on screen.](path/to/image-file.png)
+![Auditor reviewing clean, compliant logs with Johan and Maya. A green check is shown on screen.](images/panel_18_audit_that_passed.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Observability built with integrity. That’s what earns trust.”
-- **Maya:** “We logged what mattered—nothing more, nothing less.”
+- **Johan:** "Observability built with integrity. That’s what earns trust."
+- **Maya:** "We logged what mattered—nothing more, nothing less."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “The goal isn’t just to see everything—it’s to see the right things, the right way. Compliance isn’t overhead. It’s assurance. A logging system that protects data protects people.”
+> The goal isn’t just to see everything—it’s to see the right things, the right way. Compliance isn’t overhead. It’s assurance. A logging system that protects data protects people.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing Johan and Maya in a quiet compliance review room. An auditor is seated at a terminal with logs open. Fields are masked or hashed. A large green checkmark appears on the screen, indicating audit passed. Johan is relaxed, Maya smiles. Mood is calm and reflective. Style: respectful, secure tech comic illustration.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Grasp the importance of structured, compliant, and privacy-conscious logging in passing audits and building trust with stakeholders.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Compliant logs are clean, clear, and intentional. They show what happened—without exposing who it happened to.
 
 ---
 
-7️⃣ | Audit Logging | Johan reviewing tamper-proof logs in a secure archive
+# Audit Logging
 
-# Panel 19: Who Changed What?
+---
+
+## Panel 19: Who Changed What?
 
 ---
 
@@ -768,38 +664,30 @@ Johan and Maya are investigating a permissions issue. Maya is standing at a term
 
 ## Image
 
-![Alt: Terminal with structured audit logs showing who made role changes. Johan and Maya analyze entries.](path/to/image-file.png)
+![Terminal with structured audit logs showing who made role changes. Johan and Maya analyze entries.](images/panel-19.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “No guesswork—just facts.”
-- **Maya:** “This isn’t a bug. Someone changed the roles yesterday.”
+- **Johan:** "No guesswork—just facts."
+- **Maya:** "This isn’t a bug. Someone changed the roles yesterday."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Audit logs are the ultimate accountability tool. They’re not about blame—they’re about clarity. In distributed systems, knowing who did what and when is as valuable as knowing why.”
+> Audit logs are the ultimate accountability tool. They’re not about blame—they’re about clarity. In distributed systems, knowing who did what and when is as valuable as knowing why.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing Maya at a terminal, reviewing structured audit logs. Fields like `actor_id`, `timestamp`, and `action=grant_role` are clearly visible. Johan stands behind her, explaining the logs. The mood is investigative but professional. Style: modern comic with structured data visuals.”
-Panel 19: Who Changed What?
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand the purpose of audit logs in tracking changes to critical systems—capturing who did what, when, and where.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Audit logs turn questions into answers. They're your paper trail for operational accountability, not a search party after the fact.
-
 
 ---
 
-# Panel 20: Immutable by Design
+## Panel 20: Immutable by Design
 
 ---
 
@@ -811,37 +699,30 @@ The panel shows a log pipeline where audit logs go through a write-once route in
 
 ## Image
 
-![Alt: Flowchart showing logs entering tamper-proof audit storage. Johan is diagramming the architecture.](path/to/image-file.png)
+![Flowchart showing logs entering tamper-proof audit storage. Johan is diagramming the architecture.](images/panel-20.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Logs you can change are logs you can’t trust.”
-- **Maya:** “So we lock them down—like financial records.”
+- **Johan:** "Logs you can change are logs you can’t trust."
+- **Maya:** "So we lock them down—like financial records."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Audit logs aren’t operational—they’re legal artifacts. You don’t redact them. You don’t rotate them away. You write them once, secure them forever, and query only when necessary.”
+> Audit logs aren’t operational—they’re legal artifacts. You don’t redact them. You don’t rotate them away. You write them once, secure them forever, and query only when necessary.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing Johan drawing a whiteboard diagram of a log flow where audit logs go through a one-way pipeline into tamper-proof (WORM) storage. A lock icon is shown above the storage. Maya is seated nearby, taking notes. Clean DevOps comic style with clarity emphasis.”
-
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Learn the value of tamper-proof logging (e.g., WORM storage) for preserving the integrity of critical audit events.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Logs that can be altered can't be trusted. Write-once, read-many logging is a cornerstone of regulatory and operational assurance.
 
 ---
 
-# Panel 21: Trust Comes From Truth
+## Panel 21: Trust Comes From Truth
 
 ---
 
@@ -853,30 +734,27 @@ Later, Johan and Maya sit in a postmortem meeting. A projector shows audit log t
 
 ## Image
 
-![Alt: Postmortem meeting. Projector shows audit logs. Team members focus on timelines, not blame.](images/panel-21.png){width=450px}
+![Postmortem meeting. Projector shows audit logs. Team members focus on timelines, not blame.](images/panel-21.png){width=450px}
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Audit logs don’t prevent incidents—but they prevent confusion. They make blame obsolete and timelines exact. In a high-stakes system, they’re the paper trail that keeps people honest, safe, and confident.”
+> Audit logs don’t prevent incidents—but they prevent confusion. They make blame obsolete and timelines exact. In a high-stakes system, they’re the paper trail that keeps people honest, safe, and confident.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel showing a calm postmortem meeting with Johan and Maya at the table. A screen shows a timeline of audit logs used in the incident report. Logs include structured fields and timestamps. No one is panicked—just focused. Emphasis on transparency and maturity. Comic style: clean, professional, de-escalated tone.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Explore how audit logs contribute to a blame-aware culture—where clarity and timeline matter more than fault assignment.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Observability isn’t just technical—it’s cultural. When your logs are honest, your team doesn’t need to guess—or blame.
 
+---
 
-8️⃣ | Recap & Reflection | Johan teaching a junior SRE team from a whiteboard of lessons learned
+# Recap & Reflection
 
-# Panel 22: A New Beginning
+---
+
+## Panel 22: A New Beginning
 
 ---
 
@@ -888,36 +766,30 @@ A calm scene. Johan stands at the front of a small SRE onboarding session. A whi
 
 ## Image
 
-![Alt: Johan teaches new SREs with Maya beside him. The whiteboard shows observability concepts.](images/panel-22.png){width=450px}
+![Johan teaches new SREs with Maya beside him. The whiteboard shows observability concepts.](images/panel-22.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “We logged our mistakes. Now we pass on the lessons.”
-- **Maya:** “It finally makes sense. And now I get to help others see it too.”
+- **Johan:** "We logged our mistakes. Now we pass on the lessons."
+- **Maya:** "It finally makes sense. And now I get to help others see it too."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Great observability isn’t just tooling—it’s teaching. You don’t just build a better system. You grow better people who can run it, understand it, and improve it.”
+> Great observability isn’t just tooling—it’s teaching. You don’t just build a better system. You grow better people who can run it, understand it, and improve it.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel of Johan standing in front of a whiteboard during an SRE onboarding session. The board shows a simplified observability diagram linking logs, metrics, traces, and audit flows. Maya is seated, confident, with two new SREs beside her. Light from a window gives the scene a hopeful tone. Style: warm, optimistic tech comic with clean lines.”
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Reinforce how observability becomes institutional knowledge—passed from experienced SREs to the next generation through teaching and mentorship.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Tools fade, dashboards change—but teaching observability keeps teams strong. Teaching is the last and best step of mastery.
 
 ---
 
-# Panel 23: From Chaos to Clarity
+## Panel 23: From Chaos to Clarity
 
 ---
 
@@ -929,35 +801,29 @@ A quiet montage-style panel. Four snapshots arranged in sequence: 1) the firehos
 
 ## Image
 
-![Alt: Montage of key moments: messy logs, trace correlation, security fix, audit passing.](images/panel-23.png){width=450px}
+![Montage of key moments: messy logs, trace correlation, security fix, audit passing.](images/panel-23.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “The system didn’t just evolve. We did.”
+- **Johan:** "The system didn’t just evolve. We did."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Good logging isn’t the end goal. It’s the path to insight, stability, and shared ownership. From chaos to clarity—that’s the arc of every great SRE story.”
+> Good logging isn’t the end goal. It’s the path to insight, stability, and shared ownership. From chaos to clarity—that’s the arc of every great SRE story.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic-style montage of four panels in one frame. (1) Early panel shows noisy logs and alert overload. (2) Johan using trace ID to diagnose a system failure. (3) Maya writing a redaction rule. (4) The team passing an audit, calm and confident. The color tone progresses from red/chaos to blue/clarity. Modern DevOps comic aesthetic.”
->
-> 🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Visually summarize the journey from disorganized, high-noise logging to structured, secure, and insightful observability practices.
 
-✅ Takeaway
-
+**✅ Takeaway:**  
 Maturity is measurable: less noise, better decisions, and shared understanding. That’s how you turn logs into clarity—and chaos into confidence.
 
 ---
 
-# Panel 24: The Next Shift Begins
+## Panel 24: The Next Shift Begins
 
 ---
 
@@ -969,32 +835,25 @@ The SRE team room at dusk. Screens are calm. No alerts are firing. Johan is pack
 
 ## Image
 
-![Alt: Johan heads out for the day as Maya coaches a new SRE. The room is calm.](path/to/image-file.png)
+![Johan heads out for the day as Maya coaches a new SRE. The room is calm.](images/panel-24.png){width=450px}
 
 ---
 
 ## Thoughts (Character Internal Dialogue)
 
-- **Johan:** “Logs don’t lie. And neither does good mentorship.”
-- **Maya:** “Time to pay it forward.”
+- **Johan:** "Logs don’t lie. And neither does good mentorship."
+- **Maya:** "Time to pay it forward."
 
 ---
 
 ## Monologue (Narrative or Insight)
 
-> “Systems age. People rotate. But good practices stick. When you teach observability, you’re not just sharing tools—you’re training the next layer of reliability.”
+> Systems age. People rotate. But good practices stick. When you teach observability, you’re not just sharing tools—you’re training the next layer of reliability.
 
-### Dall-e prompt to generate the graphic novel panel(s)
-
-> “Comic panel of the SRE room in the early evening. Johan is grabbing his bag, walking out peacefully. Maya is at a terminal with a new SRE, explaining a concept. All dashboards are green. The atmosphere is quiet, confident, and warm. Style: reflective, slice-of-life comic closure.”
-
-
-🎯 Learning Objective
-
+**🎯 Learning Objective:**  
 Understand that sustainable SRE practice is more than dashboards—it’s people passing on what works to keep reliability real.
 
-✅ Takeaway
-
-The goal isn’t fewer incidents—it’s fewer surprises. Teaching others what to look for in logs builds a resilient future. 
+**✅ Takeaway:**  
+The goal isn’t fewer incidents—it’s fewer surprises. Teaching others what to look for in logs builds a resilient future.
 
 ---
