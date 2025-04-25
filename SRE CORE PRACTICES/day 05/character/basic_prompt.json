@@ -1,0 +1,30 @@
+{
+    "characters": {
+        "mei": "Mei is a (32, Singaporean, 5'5\", athletic from rock climbing), known as \"The Panic Planner,\" is Site Reliability Engineer from Singapore with athletic build, shoulder-length black hair, and thoughtful brown eyes behind rectangular glasses. She carries herself with calm precision, often wearing dark tailored pants paired with jewel-toned shirts and her signature blue cardigan embroidered with subtle cloud patterns. Her workspace is distinguished by multiple monitors displaying unified dashboards, a small black notebook filled with system diagrams, and a yellow rubber duck named \"Murphy\" that she consults during complex problem-solving sessions. During incidents, Mei moves with deliberate efficiency, her expression remaining composed as she methodically correlates alerts across systems while her quick fingers navigate through monitoring tools. When teaching others about integration and triage, her eyes light up with enthusiasm as she demonstrates her \"Ask better questions, get better alerts\" philosophy through practical scenarios and RED method dashboards.",
+        "jc": "JC is an early-30s man with medium-dark skin and straight shoulder-length black hair. He wears a white button up shirt and speaks confidently. Observant and articulate."
+    },
+    "layout_rules": {
+        "text": "Include clearly framed comic-style speech and thought bubbles. Place narration boxes at top or bottom of the panel. Ensure all text (speech, narration, labels) is fully visible, not cropped, and does not overlap characters or borders. Use sufficient padding and margin around text elements."
+    },
+    "style_notes": {
+        "general": "Crisp ink lines, subtle halftone shading, vivid but realistic color palette (teals, deep blues, muted violets)",
+        "character_design": "Characters should be expressive and dynamic, with a focus on their facial expressions and body language. Use a mix of close-ups and medium shots to capture the action and emotions.",
+        "backgrounds": "Detailed but not overly complex, with a focus on the SRE team room and its technology. Use a mix of wide shots to establish the setting and close-ups to highlight character interactions.",
+        "text_bubbles": "Use clear, legible fonts for speech and thought bubbles. Ensure that text is easy to read against the background, with sufficient contrast."
+    },
+    "atmosphere": "Calm, methodical, futuristic operations space; conveys confidence and readiness. Ensure all on-screen text remains legible (use clean sans-serif comic lettering). No cinematic motion blur; keep details sharp for instructional clarity.",
+    "panels": [
+        {
+            "panel": 1,
+            "title": "Introduction",
+            "filename": "panel_01_introduction.png",
+            "prompt": "{characters.mei} {characters.maya} Scene: SRE team room at dusk. Johan packs his bag as Maya explains to a new SRE seated at a terminal. All dashboards show green. {layout_rules.text}",
+            "thoughts": {
+                "Johan": "Logs don’t lie. And neither does good mentorship.",
+                "Maya": "Time to pay it forward."
+            },
+            "monologue": "Ask better questions, get better alerts."
+        }
+    ]
+}
+
