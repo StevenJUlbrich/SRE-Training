@@ -1,0 +1,89 @@
+{
+    "characters": {
+      "mei": {
+        "visual_tags": [
+          "32-year-old Singaporean woman",
+          "athletic build",
+          "low ponytail, thin black rectangular glasses",
+          "muted-blue cardigan with cloud-pattern pockets",
+          "yellow rubber duck named Murphy nearby"
+        ]
+      },
+      "alex": {
+        "visual_tags": [
+          "mid-20s rookie SRE",
+          "light skin, short blond hair",
+          "dark hoodie with company logo, eager expression"
+        ]
+      },
+      "global_style": {
+        "style": "Render a Modern Graphic Novel with sharp, crisp details; absolutely no motion blur. Text & Speech Bubbles: Speech bubbles must not touch or overlap panel edges. Bubble tails must clearly point to the speaking character’s face. All text must be highly visible and Accurate, using clean sans-serif comic lettering with at least 5px padding inside bubbles. Characters (all must appear together in the same environment)",
+        "line_style": "Bold, clean ink outlines with slight thicktothin variation for depth. Shading : Minimal cross-hatching mainly soft cel shading plus subtle halftone dots in shadow areas.",
+        "palette": ["teal", "deep blue", "muted violet", "soft gray", "white","black", "emerald green", "gold"],
+        "atmosphere": "sharp details.",
+        "speech_bubble_font": "clean sans-serif comic lettering",
+        "text_padding_px": 5,
+        "bubble_avoid_edges": true,
+        "narration_box_position": "top",
+        "ensure_text_visible": true
+      },
+      "jc": {
+        "visual_tags": [
+          "early-30s man with medium-dark skin",
+          "straight shoulder-length black hair",
+          "white button-up shirt, confident stance"
+        ]
+      }
+    },
+  
+    "layout_rules": {
+      "speech_bubble_font": "clean sans-serif comic lettering",
+      "text_padding_px": 12,
+      "narration_box_position": "top"
+    },
+  
+    "panels": [
+      {
+        "panel": 1,
+        "slug": "beginner_intro",
+        "filename": "panel_beginner_intro.png",
+        "scene_description": "Operations room daylight. Mei points at a deploy feed on screen while rookie Alex holds a sticky-note with the 5-Question Drill. Dashboards show a fresh v2.4.0 label.",
+        "characters_in_frame": ["mei", "alex"],
+        "speech_bubbles": {
+          "mei": "First habit: track every deploy before you touch an alert."
+        },
+        "narration": "Beginner Tier • Awareness & Manual Steps",
+        "learning_objective": "Show learners the cornerstone habit of checking recent changes.",
+        "takeaway": "Know what shipped—it's the quickest breadcrumb to root cause."
+      },
+  
+      {
+        "panel": 2,
+        "slug": "intermediate_intro",
+        "filename": "panel_intermediate_intro.png",
+        "scene_description": "Evening. Mei and JC high-five in front of a CI dashboard that just pushed a Jsonnet RED template. A pull-request diff and a Grafana screenshot appear as holographic overlays.",
+        "characters_in_frame": ["mei", "jc"],
+        "speech_bubbles": {
+          "jc": "Template merged—every service gets an instant RED board!"
+        },
+        "narration": "Intermediate Tier • Templates Over Tabs",
+        "learning_objective": "Emphasize turning manual habits into CI-driven templates.",
+        "takeaway": "Dashboards in Git prevent silent drift and accelerate reviews."
+      },
+  
+      {
+        "panel": 3,
+        "slug": "sre_intro",
+        "filename": "panel_sre_intro.png",
+        "scene_description": "Night shift. Mei watches a self-healing metrics panel: attempts, successes, and a green 'Chaos Drill Passed' badge. A Gremlin icon fades while Murphy sports a tiny helmet.",
+        "characters_in_frame": ["mei"],
+        "speech_bubbles": {
+          "mei": "If recovery is slower than your pipeline, automate faster."
+        },
+        "narration": "SRE Tier • Automated Resilience",
+        "learning_objective": "Introduce self-healing and chaos validation as top-tier SRE goals.",
+        "takeaway": "Design systems that recover themselves—then prove it with chaos."
+      }
+    ]
+  }
+  

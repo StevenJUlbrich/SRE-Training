@@ -1,0 +1,128 @@
+{
+    "characters": {
+      "mei": {
+        "visual_tags": [
+          "32-year-old Singaporean woman",
+          "athletic build, 5'5\"",
+          "low ponytail, thin black rectangular glasses",
+          "muted-blue cardigan with cloud embroidery",
+          "yellow rubber duck named Murphy nearby"
+        ]
+      },
+      "jc": {
+        "visual_tags": [
+          "early-30s man with medium-dark skin",
+          "straight shoulder-length black hair",
+          "white button-up shirt, confident stance"
+        ]
+      },
+      "alex": {
+        "visual_tags": [
+          "mid-20s rookie SRE",
+          "light skin, short blond hair",
+          "dark hoodie with company logo, eager expression"
+        ]
+      }
+    },
+    "global_style": {
+        "style": "Render a Modern Graphic Novel with sharp, crisp details; absolutely no motion blur. Text & Speech Bubbles: Speech bubbles must not touch or overlap panel edges. Bubble tails must clearly point to the speaking character’s face. All text must be highly visible and Accurate, using clean sans-serif comic lettering with at least 5px padding inside bubbles. Characters (all must appear together in the same environment)",
+        "line_style": "Bold, clean ink outlines with slight thicktothin variation for depth. Shading : Minimal cross-hatching mainly soft cel shading plus subtle halftone dots in shadow areas.",
+        "palette": ["teal", "deep blue", "muted violet", "soft gray", "white","black", "emerald green", "gold"],
+        "atmosphere": "sharp details.",
+        "speech_bubble_font": "clean sans-serif comic lettering",
+        "text_padding_px": 5,
+        "bubble_avoid_edges": true,
+        "narration_box_position": "top",
+        "ensure_text_visible": true
+      },
+    "layout_rules": {
+      "speech_bubble_font": "clean sans-serif comic lettering",
+      "narration_box_position": "top",
+      "text_padding_px": 12
+    },
+  
+    "panels": [
+      {
+        "panel": 1,
+        "slug": "integration_intro",
+        "filename": "panel_01_integration_intro.png",
+  
+        "scene_description": "SRE war-room at dusk; dashboards glow green; Slack deploy-bot posts 'checkout-service v2.4.0'. Mei points a stylus at the screen while JC highlights a NEW node on the service map; Murphy the duck sits on her notebook.",
+  
+        "characters_in_frame": ["mei", "jc"],
+  
+        "learning_objective": "Spot fresh changes and record who owns them.",
+        "takeaway": "Every incident autographs itself with a deploy timestamp.",
+  
+        "speech_bubbles": {
+          "mei": "Ask better questions—get better alerts.",
+          "jc": "New code, new possibilities… and new break-points."
+        },
+  
+        "narration": "Day 5 • Integration & Triage • Introduction",
+        "monologue": "Track the change before the change tracks you."
+      },
+  
+      {
+        "panel": 2,
+        "slug": "triage_drill",
+        "filename": "panel_02_triage_drill.png",
+  
+        "scene_description": "Alert banner turns red: checkout_latency_p95 > 2 s. Mei stays calm; JC opens the runbook; rookie Alex types 'kubectl top pods' at a terminal.",
+  
+        "characters_in_frame": ["mei", "jc", "alex"],
+  
+        "learning_objective": "Execute the first three runbook steps and decide when to escalate.",
+        "takeaway": "Triage = symptom → scope → timestamp → owner.",
+  
+        "speech_bubbles": {
+          "alex": "Latency spike! What’s first?",
+          "mei": "Line 1—record the timestamp and scope.",
+          "jc": "And note that deploy five minutes ago."
+        },
+  
+        "narration": "Live Drill • Alert → Diagnose → Escalate",
+        "monologue": "Triage is choreography—repeat the steps until calm returns."
+      },
+  
+      {
+        "panel": 3,
+        "slug": "pitfall_montage",
+        "filename": "panel_03_pitfall_montage.png",
+  
+        "scene_description": "Four-grid humorous montage: (1) Alert Fatigue—Mei buried under flashing alerts; (2) Siloed Thinking—JC in a walled-off cubicle; (3) Undocumented Tribal Knowledge—Alex staring at sticky notes; (4) Reactive-Only Mode—team racing with fire extinguishers. Central caption: 'Chaos isn't the enemy; unmonitored chaos is.'",
+  
+        "characters_in_frame": ["mei", "jc", "alex"],
+  
+        "learning_objective": "Recognize common support pitfalls that amplify incidents.",
+        "takeaway": "Better fire alarms beat bigger fire drills.",
+  
+        "speech_bubbles": {
+          "mei": "It’s not about preventing fires—it’s about building better fire alarms."
+        },
+  
+        "narration": "Pitfall Montage",
+        "monologue": "Your system is only as reliable as your weakest alert."
+      },
+  
+      {
+        "panel": 4,
+        "slug": "integration_summary",
+        "filename": "panel_04_integration_summary.png",
+  
+        "scene_description": "Night outside; dashboards green. Mei closes her notebook; Murphy sports a tiny SLO sticker. Alex files post-drill notes; JC approves a roll-forward plan.",
+  
+        "characters_in_frame": ["mei", "jc", "alex"],
+  
+        "learning_objective": "Link integration vigilance with disciplined triage to cut MTTR.",
+        "takeaway": "Watch every change, follow the drill, and midnight pages shrink.",
+  
+        "speech_bubbles": {
+          "mei": "Good engineers solve problems; great engineers anticipate them."
+        },
+  
+        "narration": "End of Introduction • Calm Restored",
+        "monologue": "Reliability begins with curiosity about change and ends with calm, repeatable response."
+      }
+    ]
+  }
