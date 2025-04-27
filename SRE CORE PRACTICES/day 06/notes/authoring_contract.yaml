@@ -4,21 +4,42 @@ authoring_contract:
       - "🎯 Learning Objective"
       - "✅ Takeaway"
       - "Prose"
-      - "Image Embed"          # This section will now reference external image data
+      - "Image Embed"          # This section will now contain a reference to external image data
+    heading_content_schema: # Define the expected structure under each heading type in the main content YAML
+      "🎯 Learning Objective":
+        type: string # Expecting a multi-line string for the objective
+        description: "The learning objective for the chapter or section."
+      "✅ Takeaway":
+        type: string # Expecting a multi-line string for the takeaway
+        description: "The key takeaway or summary of the chapter or section."
+      "Prose":
+        type: string # Expecting a multi-line string for prose content
+        description: "Detailed narrative prose content."
+      "Image Embed":
+        type: object # Expecting a YAML object (key-value pair) to reference external panel data
+        required:
+          - panel_id # The key that must be present to reference a panel
+        properties:
+          panel_id:
+            type: integer # The value should be an integer representing the panel ID
+            description: "References a panel definition by its unique 'panel' identifier in the external image data file."
 
-  # Removed panel_json_schema as the schema for panel data is defined for the external file
+  # Removed panel_json_schema as the schema for panel data is defined in the external_image_data_schema section
 
   prose_requirements:
     word_band:
       min: 7800 # Based on the latest contract version provided
       max: 10000
+      description: "The total word count for the entire novella's prose content."
     chunk_size:
       min: 400
       max: 600
+      description: "The target word count range for each individual prose block."
     perspective: "second-person teacher + narrative examples"
     prose_style: |
       Fully narrative, conversational, detailed, and engaging; explicitly avoid bullet points or lists unless requested.
       Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate.
+      description: "The required writing style and tone for all prose content."
 
   format_rules:
     markdown_image_embed:
@@ -27,7 +48,7 @@ authoring_contract:
         ![Alt text](images/<filename>){width=<px>}
       check: "Each Image Embed section in the main content YAML must be immediately followed by a matching Markdown image line referencing the correct filename from the external image data."
     cadence:
-      description: "Alternate detailed narrative prose blocks and clearly described sequential-art panels referenced from an external data file."
+      description: "Alternate detailed narrative prose blocks and clearly described sequential-art panels referenced from an external data file, following the specified pattern."
       pattern: |
         (Prose → Image Embed)+
       max_consecutive_prose: 1
@@ -35,21 +56,25 @@ authoring_contract:
     panel_ratio:
       min_images: 6 # Updated based on the latest contract version provided
       max_images: 15
-      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and correspond to Image Embed references in the main content YAML."
+      description: "The minimum and maximum number of static image panels required for the entire novella."
+      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by an Image Embed section in the main content YAML."
 
   visual_guidelines:
     palette_style_ref: "house_palette_line_style.md"
+    description: "Reference file for the visual color palette and line style."
     prefer_diagrams: "mermaid" # Note: Mermaid diagrams are inline and don't use the external JSON file for definition
+    prefer_diagrams_description: "Preference for using Mermaid for technical diagrams where appropriate."
     character_presence:
       primary: "ava"
       rule: "At least 50 % of panels defined in the external image data file include Ava to anchor teaching voice"
+      description: "Rule for including the primary character Ava in a majority of static panels."
 
   # New section to describe the schema of the external image data file
   external_image_data_schema:
     description: |
-      A separate file (e.g., JSON) will contain an array of panel definitions that will be used by an external application to generate images.
-      Each object in the 'panels' array of this external file must follow this schema:
-    type: array
+      A separate file (e.g., JSON) will contain an array of panel definitions that will be used by an external application to generate images. The structure and required fields for each panel object within this file are defined here.
+    file_format: "JSON (array of objects)" # Explicitly state the expected file format
+    array_name: "panels" # Name of the array containing panel definitions
     items:
       type: object
       required:
@@ -61,37 +86,38 @@ authoring_contract:
       properties:
         panel:
           type: integer
-          description: The unique identifier for the panel in sequence across the entire novella.
+          description: "The unique identifier for the panel in sequence across the entire novella. This ID is used for referencing from the main content YAML."
         filename:
           type: string
-          description: The suggested filename for the generated image file (e.g., chXX_pNN_description.png).
+          description: "The suggested filename for the generated image file (e.g., chXX_pNN_description.png). This filename is used in the Markdown image reference in the main content YAML."
         scene_description:
           type: string
-          description: A clear and detailed description of the scene for image generation, including visual details, expressions, and setting.
+          description: "A clear and detailed description of the visual scene for image generation, including environment, character actions/expressions, and any on-screen text or labels."
         speech_bubbles:
           type: object
-          description: Dialogue for characters in the panel, keyed by character name.
-          # Detailed schema for speech_bubbles content can be added here if needed
+          description: "Dialogue text for characters within the panel, keyed by character name or identifier."
+          # Detailed schema for speech_bubbles content can be added here if needed, e.g., { pattern: { "[character_name]": { type: string } } }
         narration:
           type: string
-          description: Optional narration text that appears within the panel itself.
+          description: "Optional narration text that appears within the panel itself (distinct from prose narration)."
+          nullable: true # Assuming narration might be optional for a panel
 
   consistency_checklist:
     - "Headings present & in required order in the main content YAML"
     - "Word count within 7800–10000 band in the main content YAML prose" # Updated word count check
     - "Cadence pattern P→I alternation satisfied in the main content YAML"
-    - "Image count 6–15 in the external image data file's panels array" # Updated image count check and clarification
-    - "Mermaid diagrams as 'inline diagrams' that don't count against the static-panel quota (these appear directly in the main content YAML, not in the external data file)" # Clarified where Mermaid goes
-    - "Image Embed sections in main content YAML reference existing panels by ID in the external image data file" # New check for referencing
-    - "Each panel definition in the external image data file matches the external_image_data_schema" # New check for external file schema adherence
-    - "Each Image Embed section in the main content YAML is immediately followed by a matching Markdown image line referencing the correct filename from the external data" # Updated check for markdown reference
-    - "Mermaid blocks compile (if used in the main content YAML)" # Clarified
-    - "Ava appears in ≥ 50 % of panels defined in the external image data file" # Clarified where Ava's presence is checked
+    - "Image count 6–15 in the external image data file's panels array" # Updated image count check and clarification source
+    - "Mermaid diagrams as 'inline diagrams' that don't count against the static-panel quota (these appear directly as code blocks in the main content YAML, not in the external data file)" # Clarified where Mermaid goes
+    - "Image Embed sections in main content YAML reference existing panels by 'panel_id' in the external image data file" # New check for referencing using the specified key
+    - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema" # New check for external file schema adherence
+    - "Each Image Embed section in the main content YAML is immediately followed by a matching Markdown image line referencing the correct filename from the external data" # Updated check for markdown reference positioning and filename source
+    - "Mermaid blocks compile correctly (if used in the main content YAML)" # Clarified applies to main YAML
+    - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array" # Clarified where Ava's presence is checked
     - "Prose explicitly detailed, narrative, without superficial summaries or excessive bullet points in the main content YAML"
 
   ambiguity_handling:
     explicit_instruction: |
-      If uncertain about the level of detail required, how to reference external image data, or any other rule, explicitly pause and request clarification—never default to condensed or overly summarized output.
+      If uncertain about the level of detail required, how to reference external image data using 'panel_id', or any other rule, explicitly pause and request clarification—never default to condensed or overly summarized output.
 
   escalation_rule: |
     If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
