@@ -4,7 +4,7 @@ authoring_contract:
       - "🎯 Learning Objective"
       - "✅ Takeaway"
       - "Prose"
-      - "Image Embed"          # markdown ![] or mermaid block
+      - "Image Embed"
     panel_json_schema:
       required_fields:
         - panel
@@ -12,44 +12,46 @@ authoring_contract:
         - scene_description
         - speech_bubbles
         - narration
-
   prose_requirements:
     word_band:
-      min: 7500
+      min: 7800
       max: 10000
     chunk_size:
-      min: 400        # each prose block 300–500 words
+      min: 400
       max: 600
     perspective: "second-person teacher + narrative examples"
-
-  format_rules:               # 🆕 ensures “hybrid graphic-novel” cadence
+    prose_style: |
+      Fully narrative, conversational, detailed, and engaging; explicitly avoid bullet points or lists unless requested.
+      Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate.
+  format_rules:
     cadence:
-      description: "Alternate prose blocks and sequential-art panels."
+      description: "Alternate detailed narrative prose blocks and clearly described sequential-art panels."
       pattern: |
-        (Prose → Image Embed)+     # e.g., P I P I … may end with Prose
-      max_consecutive_prose: 1     # never two prose chunks without a panel
-      max_consecutive_images: 1    # no image spam without narrative
+        (Prose → Image Embed)+
+      max_consecutive_prose: 1
+      max_consecutive_images: 1
     panel_ratio:
       min_images: 8
       max_images: 15
       check: "Total images within word_band must satisfy min_images ≤ n ≤ max_images"
-
   visual_guidelines:
     palette_style_ref: "house_palette_line_style.md"
     prefer_diagrams: "mermaid"
     character_presence:
       primary: "ava"
       rule: "At least 50 % of panels include Ava to anchor teaching voice"
-
   consistency_checklist:
     - "Headings present & in required order"
-    - "Word count within 7 500–10 000 band"
+    - "Word count within 7000–10000 band"
     - "Cadence pattern P→I alternation satisfied"
-    - "Image count 8–15"
-    - "Mermaid diagrams as “inline diagrams” that don’t count against the static-panel quota"
+    - "Image count 6–15"
+    - "Mermaid diagrams as 'inline diagrams' that don't count against the static-panel quota"
     - "Panel JSON matches schema, all images referenced"
     - "Mermaid blocks compile"
     - "Ava appears in ≥ 50 % panels"
-
+    - "Prose explicitly detailed, narrative, without superficial summaries or excessive bullet points"
+  ambiguity_handling:
+    explicit_instruction: |
+      If uncertain about the level of detail required, explicitly pause and request clarification—never default to condensed or overly summarized output.
   escalation_rule: |
     If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
