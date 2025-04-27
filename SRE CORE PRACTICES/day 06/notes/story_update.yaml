@@ -1,0 +1,14 @@
+prose_requirements:
+  storytelling_ratio:
+    min_scene_pct: 20   # must be ≥20 %
+    max_scene_pct: 40   # but ≤40 % to keep tech ≥60 %
+  banking_context_anchor: true  # enforce a banking tie-in per unit
+  voice_guideline:
+    must_include:
+      - "Swahili proverb"   # or
+      - "Wrist-Slap Moment"
+  applied_example_block:
+    heading: "🚦 Applied Example"
+    description: |
+      Directly after each ✅ Takeaway, add a fenced block showing a
+      real query, log sample, or incident snippet with a 1-line user impact note.
