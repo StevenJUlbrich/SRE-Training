@@ -1,0 +1,10 @@
+Area,Why it matters,Clarification needed,Respone
+Canonical script,Avoid forks later,"Which of the three intro files is the single source of truth, or should I merge them?",source of truth is gn_intro_story.md for the introduction material.  I will be providing other material as we proceed.
+Format granularity,We?re building a hybrid book,"Do you want a fixed cadence (e.g., 2-3 prose pages ? 4 panels ? repeat) or should density vary by topic complexity?",Density vary by topic complexity
+Chapter/page budget,Drives pacing & art workload,Roughly how many total pages (or word count) are you targeting for the finished novella?,Review document novella_chapter_layouts.md
+Image resolution & aspect,Needed for DALLúE prompts & layout,"Standard comic-page ratio (US trade 6.625??10.25?), A5, or web-first responsive?",web based interface.  The material will be markdown format but moved to a confluence site.
+Character roster,Cohesion with earlier SRE comics,"Besides Ava, do Mei, JC, Alex or Felix appear in this novella, or is it Ava-centric?",new characters review sre_other_characters.md and junior_characters.md
+House palette / line style,Maintain brand consistency,Keep the teal / deep-blue / muted-violet palette and the bold clean-ink + cel shading rules? Any tweaks?,Review the document house_palette_line_style.md
+Technical inserts,Mixing prose/code/images,"How should we embed code snippets or CLI output?inline fenced blocks, sidebars, or separate appendix?","incline fenced blocks and sidebars. Levarage mermaid for diagrams, code snippets and text art to support the learning"
+Interactive artifacts,Some chapters reference labs,"Will the novella link out to live dashboards/labs, or remain self-contained?",self-contained
+Toolchain expectations,Markdown ? PDF? Web?,"Confirm final deliverable format(s) so we can plan image naming, path conventions, and export workflow.",The mode of the material will be a markdown.  I want to continue with the JSON files to generate the corresponding images as done in other work on SRE material.  It will be moved Confluence Site.

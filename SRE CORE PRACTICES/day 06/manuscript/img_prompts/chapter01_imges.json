@@ -1,0 +1,113 @@
+{
+    "characters": {
+        "ava": {
+            "visual_tags": [
+                "38-year-old Kenyan woman",
+                "athletic build, 5'7\" (170 cm)",
+                "rich dark-brown complexion, warm round face, high cheekbones",
+                "shoulder-length natural dreadlocks with subtle red highlights",
+                "large expressive brown eyes, rectangular reading glasses (sometimes)",
+                "tailored pants or pencil skirt; colourful blouse with Kente/Kitenge patterns",
+                "hand-crafted wooden bangle, simple gold studs, smartwatch",
+                "small scar over right eyebrow, circuit-tattoo on right wrist",
+                "moves with confident, purposeful posture; frequent animated hand gestures"
+            ]
+            },
+        "customers": {
+            "visual_tags": [
+            "diverse group of individuals",
+            "various ages and styles",
+            "some on mobile devices",
+            "others in traditional attire"
+            ]
+        },
+        "engineers": {
+            "visual_tags": [
+            "diverse group of engineers",
+            "various ages and styles",
+            "some in casual attire",
+            "others in sre-branded shirts"
+            ]
+        },
+        "learners": {
+            "visual_tags": [
+            "diverse group of learners",
+            "various ages and styles",
+            "some in casual attire",
+            "others in company-branded shirts"
+            ]
+        }
+    },
+    "global_style": {
+        "style": "Render a Modern Graphic Novel with sharp, crisp details. Text & Speech Bubbles: Speech bubbles must not touch or overlap panel edges. Bubble tails must clearly point to the speaking character’s face. All text must be highly visible and Accurate, using clean sans-serif comic lettering with at least 5px padding inside bubbles. Characters (all must appear together in the same environment)",
+        "line_style": "Clean, medium-weight lines with selective detail. Semi-realistic facial expressions and body language (not overly cartoonish). Slightly stylized proportions to allow for expressiveness. Minimal cross-hatching mainly soft cel shading plus subtle halftone dots in shadow areas.",
+        "palette": ["Deep Indigo Blue", "Vibrant Orange", "Teal", "Warm Gray", "Soft White","Black", "Accent Red"],
+        "atmosphere": "sharp details.",
+        "speech_bubble_font": "clean sans-serif comic lettering",
+        "text_padding_px": 5,
+        "bubble_avoid_edges": true,
+        "narration_box_position": "top",
+        "ensure_text_visible": true
+      },
+    "layout_rules": {
+        "speech_bubble_font": "clean sans-serif comic lettering",
+        "narration_box_position": "top",
+        "text_padding_px": 12
+      },
+    "panels": [
+      {
+        "panel": 1,
+        "slug": "intro_skyline",
+        "learning_objective": "Introduce Ava Kimani, the SLO Sentinel.",
+        "takeaway": "Meet Ava Kimani, your SLO Sentinel.",
+        "filename": "ch01_p01_intro_skyline.png",
+        "scene_description": "Full‑width panorama of the Nairobi skyline at dawn. Foreground: Ava Kimani on a rooftop, dreadlocks catching the breeze, holding her \"Reliability you can measure\" mug; subtle banking‑tower logos glow. High‑contrast teal/orange dawn light, crisp line work, cel shading; no motion blur.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": {
+          "ava": "Welcome to measurable reliability. I’m Ava—your SLO Sentinel."
+        },
+        "narration": "The Silicon Savannah awakens.",
+        "monologue": "Ava’s here to help you measure reliability."
+      },
+      {
+        "panel": 2,
+        "slug": "crisis_split",
+        "learning_objective": "Recognize the gap between user expectations and system reliability.",
+        "takeaway": "User expectations are high, but reliability is low.",
+        "filename": "ch01_p02_crisis_split.png",
+        "scene_description": "Split panel: Left—traditional bank branch with long queue; Right—mobile users staring at \"transaction failed\" screens. Ava inset top‑corner observing both worlds. Use red alert accents on phone screens.",
+        "characters_in_frame": ["customers", "ava"],
+        "speech_bubbles": {},
+        "narration": "Banking expectations have changed—but reliability hasn’t caught up.",
+        "monologue": "Ava’s here to help you bridge the gap."
+      },
+      {
+        "panel": 3,
+        "slug": "hero_burnout",
+        "learning_objective": "Recognize the unsustainable nature of heroic firefighting.",
+        "takeaway": "Heroic firefighting is unsustainable.",
+        "filename": "ch01_p03_hero_burnout.png",
+        "scene_description": "Interior ops‑war room at 3 a.m. Engineers slumped over keyboards; alert sirens flashing. Coffee cups, empty pizza boxes. Ava enters, wrist‑slap pose toward a ticker reading 99.999 % uptime.",
+        "characters_in_frame": ["ava", "engineers"],
+        "speech_bubbles": {
+          "ava": "99.999 % of *what*, exactly?"
+        },
+        "narration": "Heroic firefighting is unsustainable.",
+        "monologue": "Ava’s here to help you avoid burnout."
+      },
+      {
+        "panel": 4,
+        "slug": "sre_stairs",
+        "learning_objective": "Understand the SRE journey from reactive to proactive.",
+        "takeaway": "SRE is a journey, not a sprint.",                
+        "filename": "ch01_p04_sre_stairs.png",
+        "scene_description": "Staircase graphic labeled Incident Response → Monitoring → Testing → Prevention → Design for Reliability; Ava leads a diverse team upward. Nairobi skyline backdrop.",
+        "characters_in_frame": ["ava", "learners"],
+        "speech_bubbles": {
+          "ava": "Pole pole, ndio mwendo—one reliable step at a time."
+        },
+        "narration": "From reaction to proactive SRE.",
+        "monologue": "SRE is a journey, not a sprint."
+      }
+    ]
+  }
