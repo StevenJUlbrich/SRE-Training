@@ -6,5 +6,5 @@ This hybrid format combines the depth of the written introduction with the visua
 3. **"Wrist-Slap Moments"**: Comedic asides highlighting common reliability anti-patterns
 4. **Nairobi Proverbs**: Kenyan sayings illustrated as brief interludes that reinforce reliability concepts
 5. **"Try This"**: Interactive sections encouraging readers to apply concepts to their own environments
-
+6. **"Diagram or Separate Generated Image"**: A diagram or image can speak better than words to help the learner understand.
 This approach preserves the educational depth of the original introduction while making the content more visually engaging and memorable.

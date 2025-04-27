@@ -3,7 +3,7 @@ authoring_contract:
     headings_in_order:
       - "🎯 Learning Objective"
       - "✅ Takeaway"
-      - "Prose"
+      - "Teaching Narrative"     # <-- renamed from Prose
       - "Image Embed"          # This section will now contain a reference to external image data
     heading_content_schema: # Define the expected structure under each heading type in the main content YAML
       "🎯 Learning Objective":
@@ -35,9 +35,15 @@ authoring_contract:
       min: 400
       max: 600
       description: "The target word count range for each individual prose block."
+    tech_scene_ratio:
+    description: |
+      At least 70 % of each Teaching-Narrative block must be concrete
+      technical instruction (definitions, formulas, code, queries,
+      configuration snippets, mini-exercises). Scene-setting and
+      descriptive storytelling must not exceed 30 %.
     perspective: "second-person teacher + narrative examples"
     prose_style: |
-      Fully narrative, conversational, detailed, and engaging; explicitly avoid bullet points or lists unless requested.
+      Fully narrative, conversational, detailed, and engaging; explicitly avoid bullet points or lists unless necessary.
       Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate.
       description: "The required writing style and tone for all prose content."
 
@@ -58,6 +64,18 @@ authoring_contract:
       max_images: 15
       description: "The minimum and maximum number of static image panels required for the entire novella."
       check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by an Image Embed section in the main content YAML."
+    allowed_inline_widgets:
+    - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
+    - "Error Budget Meter"      # :::budget ... :::
+    - "Wrist-Slap Moment"       # :::slap ... :::
+    - "Nairobi Proverb"         # :::proverb ... :::
+    - "Try This"                # :::exercise ... :::
+    - "Diagram"                 # fenced ```mermaid``` or image
+  widget_syntax_hint: |
+    Use containers like
+      :::wisdom
+      **SRE Wisdom:** "Reliability you can measure ..."
+      :::
 
   visual_guidelines:
     palette_style_ref: "house_palette_line_style.md"
@@ -114,6 +132,8 @@ authoring_contract:
     - "Mermaid blocks compile correctly (if used in the main content YAML)" # Clarified applies to main YAML
     - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array" # Clarified where Ava's presence is checked
     - "Prose explicitly detailed, narrative, without superficial summaries or excessive bullet points in the main content YAML"
+    - "Teaching-Narrative blocks meet 70/30 tech-to-scene ratio"
+    - "Only whitelisted widgets appear, using correct container syntax"
 
   ambiguity_handling:
     explicit_instruction: |

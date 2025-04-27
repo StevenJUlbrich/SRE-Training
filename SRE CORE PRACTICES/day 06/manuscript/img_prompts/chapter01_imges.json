@@ -1,113 +1,162 @@
 {
-    "characters": {
-        "ava": {
-            "visual_tags": [
-                "38-year-old Kenyan woman",
-                "athletic build, 5'7\" (170 cm)",
-                "rich dark-brown complexion, warm round face, high cheekbones",
-                "shoulder-length natural dreadlocks with subtle red highlights",
-                "large expressive brown eyes, rectangular reading glasses (sometimes)",
-                "tailored pants or pencil skirt; colourful blouse with Kente/Kitenge patterns",
-                "hand-crafted wooden bangle, simple gold studs, smartwatch",
-                "small scar over right eyebrow, circuit-tattoo on right wrist",
-                "moves with confident, purposeful posture; frequent animated hand gestures"
-            ]
-            },
-        "customers": {
-            "visual_tags": [
-            "diverse group of individuals",
-            "various ages and styles",
-            "some on mobile devices",
-            "others in traditional attire"
-            ]
-        },
-        "engineers": {
-            "visual_tags": [
-            "diverse group of engineers",
-            "various ages and styles",
-            "some in casual attire",
-            "others in sre-branded shirts"
-            ]
-        },
-        "learners": {
-            "visual_tags": [
-            "diverse group of learners",
-            "various ages and styles",
-            "some in casual attire",
-            "others in company-branded shirts"
-            ]
-        }
+  "characters": {
+    "ava": {
+      "visual_tags": [
+        "38-year-old Kenyan woman",
+        "athletic build, 5'7\" (170 cm)",
+        "rich dark-brown complexion, warm round face, high cheekbones",
+        "shoulder-length natural dreadlocks with subtle red highlights",
+        "large expressive brown eyes, rectangular reading glasses (sometimes)",
+        "tailored pants or pencil skirt; colourful blouse with Kente/Kitenge patterns",
+        "hand-crafted wooden bangle, simple gold studs, smartwatch",
+        "small scar over right eyebrow, circuit-tattoo on right wrist",
+        "moves with confident, purposeful posture; frequent animated hand gestures"
+      ]
     },
-    "global_style": {
-        "style": "Render a Modern Graphic Novel with overall style aims for a distinctive, professional look that is approachable and technically accurate, drawing inspiration from educational graphic novels. It blends modern tech aesthetics with Kenyan-influenced design elements. The characters are designed to be relatable and aspirational, with a focus on diversity and representation. The environments reflect a blend of modern tech and traditional Kenyan elements, creating a unique visual identity. The art direction emphasizes clarity and precision, ensuring that technical concepts are easily understood while maintaining an engaging narrative flow.",
-        "line_style": "The recommended line style features clean, medium-weight lines with selective detail. The art direction includes semi-realistic facial expressions and body language (not overly cartoonish) and slightly stylized proportions for expressiveness. Technical elements should have a crisp, precise representation.",
-        "palette": ["Primary Colors: Deep Indigo Blue (#2D3E50) for reliability and the banking sector, Vibrant Orange (#E67E22) drawing from Kenyan textiles and representing innovation, and Teal (#1ABC9C) for metrics and technical elements.", "Supporting Colors: Warm Gray (#95A5A6) for backgrounds, Soft White (#ECF0F1) for text backgrounds, and Accent Red (#E74C3C) for alerts and warning states. This palette balances professional credibility with vibrant elements reflecting Ava's personality and heritage."    ],
-        "atmosphere": "Create through the environment and setting, which include modern tech environments with subtle African architectural elements, the Nairobi skyline featuring recognizable landmarks, and banking environments that mix traditional and modern tech elements.",
-        "speech_bubble_font": "clean comic lettering",
-        "text_padding_px": 5,
-        "bubble_avoid_edges": true,
-        "narration_box_position": "top",
-        "ensure_text_visible": true
+    "customer": {
+      "visual_tags": [
+        "young aldult",
+        "modern clothing style",
+        "mobile device in hand screen visible",
+        "expressing frustration"        
+      ]
+    },
+    "engineers": {
+      "visual_tags": [
+        "diverse group of engineers",
+        "various ages and styles",
+        "some in casual attire",
+        "others in sre-branded shirts"
+      ]
+    },
+    "learners": {
+      "visual_tags": [
+        "diverse group of learners",
+        "various ages and styles",
+        "some in casual attire",
+        "others in company-branded shirts"
+      ]
+    }
+  },
+  "global_style": {
+    "style": "Render a Modern Graphic Novel with overall style aims for a distinctive, professional look that is approachable and technically accurate, drawing inspiration from educational graphic novels. It blends modern tech aesthetics with Kenyan-influenced design elements. The characters are designed to be relatable and aspirational, with a focus on diversity and representation. The environments reflect a blend of modern tech and traditional Kenyan elements, creating a unique visual identity. The art direction emphasizes clarity and precision, ensuring that technical concepts are easily understood while maintaining an engaging narrative flow.",
+    "line_style": "The recommended line style features clean, medium-weight lines with selective detail. The art direction includes semi-realistic facial expressions and body language (not overly cartoonish) and slightly stylized proportions for expressiveness. Technical elements should have a crisp, precise representation.",
+    "palette": [
+      "Primary Colors: Deep Indigo Blue (#2D3E50) for reliability and the banking sector, Vibrant Orange (#E67E22) drawing from Kenyan textiles and representing innovation, and Teal (#1ABC9C) for metrics and technical elements.",
+      "Supporting Colors: Warm Gray (#95A5A6) for backgrounds, Soft White (#ECF0F1) for text backgrounds, and Accent Red (#E74C3C) for alerts and warning states. This palette balances professional credibility with vibrant elements reflecting Ava's personality and heritage."
+    ],
+    "atmosphere": "Create through the environment and setting, which include modern tech environments with subtle African architectural elements, the Nairobi skyline featuring recognizable landmarks, and banking environments that mix traditional and modern tech elements.",
+    "speech_bubble_font": "clean comic lettering",
+    "text_padding_px": 5,
+    "bubble_avoid_edges": true,
+    "narration_box_position": "top",
+    "ensure_text_visible": true
+  },
+  "layout_rules": {
+    "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
+    "narration_box_position": "top",
+    "text_padding_px": 5
+  },
+  "panels": [
+    {
+      "panel": 1,
+      "filename": "ch01_p01_rooftop_intro.png",
+      "scene_description": "Dawn panorama of Nairobi skyline. Ava stands front‑left on a coworking terrace, holding her 'Reliability you can measure' mug; indigo/orange palette.",
+      "characters_in_frame": ["ava"],
+      "speech_bubbles": {
+        "ava": "Morning, team. Let’s trade frantic fixes for measurable reliability."
       },
-    "layout_rules": {
-        "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
-        "narration_box_position": "top",
-        "text_padding_px": 5
+      "narration": "Silicon Savannah awakens."
+    },
+    {
+      "panel": 2,
+      "filename": "ch01_p02_banking_shift.png",
+      "scene_description": "Split panel: Left—1980s bank branch queue; Right—2025 customer frowning at phone displaying 'Transaction Failed'. Ava inset between, arms folded.",
+      "characters_in_frame": ["ava", "customer"],
+      "speech_bubbles": {
+        "ava": "Banking expectations changed—metrics didn’t keep up."
       },
-    "panels": [
-      {
-        "panel": 1,
-        "slug": "intro_skyline",
-        "learning_objective": "Introduce Ava Kimani, the SLO Sentinel.",
-        "takeaway": "Meet Ava Kimani, your SLO Sentinel.",
-        "filename": "ch01_p01_intro_skyline.png",
-        "scene_description": "Full‑width panorama of the Nairobi skyline at dawn. Foreground: Ava Kimani on a rooftop, dreadlocks catching the breeze, holding her \"Reliability you can measure\" mug; subtle banking‑tower logos glow. High‑contrast teal/orange dawn light, crisp line work, cel shading; no motion blur.",
-        "characters_in_frame": ["ava"],
-        "speech_bubbles": {
-          "ava": "Welcome to measurable reliability. I’m Ava—your SLO Sentinel."
-        },
-        "narration": "The Silicon Savannah awakens.",
-        "monologue": "Ava’s here to help you measure reliability."
+      "narration": "From marble lobbies to mobile failures."
+    },
+    {
+      "panel": 3,
+      "filename": "ch01_p03_hero_burnout.png",
+      "scene_description": "War‑room at 03:17: tired engineers, pizza boxes, banner shows 99.999% uptime. Ava slaps her wrist while pointing at banner.",
+      "characters_in_frame": ["ava", "engineers"],
+      "speech_bubbles": {
+        "ava": "99.999 % of what, exactly?"
       },
-      {
-        "panel": 2,
-        "slug": "crisis_split",
-        "learning_objective": "Recognize the gap between user expectations and system reliability.",
-        "takeaway": "User expectations are high, but reliability is low.",
-        "filename": "ch01_p02_crisis_split.png",
-        "scene_description": "Split panel: Left—traditional bank branch with long queue; Right—mobile users staring at \"transaction failed\" screens. Ava inset top‑corner observing both worlds. Use red alert accents on phone screens.",
-        "characters_in_frame": ["customers", "ava"],
-        "speech_bubbles": {},
-        "narration": "Banking expectations have changed—but reliability hasn’t caught up.",
-        "monologue": "Ava’s here to help you bridge the gap."
+      "narration": "Heroic firefighting is unsustainable."
+    },
+    {
+      "panel": 4,
+      "filename": "ch01_p04_sre_stairs.png",
+      "scene_description": "Metric‑labelled staircase: Incident Response → Monitoring → Testing → Prevention → Design for Reliability. Ava guides learners up steps.",
+      "characters_in_frame": ["ava", "learners"],
+      "speech_bubbles": {
+        "ava": "Heroes respond; architects anticipate."
       },
-      {
-        "panel": 3,
-        "slug": "hero_burnout",
-        "learning_objective": "Recognize the unsustainable nature of heroic firefighting.",
-        "takeaway": "Heroic firefighting is unsustainable.",
-        "filename": "ch01_p03_hero_burnout.png",
-        "scene_description": "Interior ops‑war room at 3 a.m. Engineers slumped over keyboards; alert sirens flashing. Coffee cups, empty pizza boxes. Ava enters, wrist‑slap pose toward a ticker reading 99.999 % uptime.",
-        "characters_in_frame": ["ava", "engineers"],
-        "speech_bubbles": {
-          "ava": "99.999 % of *what*, exactly?"
-        },
-        "narration": "Heroic firefighting is unsustainable.",
-        "monologue": "Ava’s here to help you avoid burnout."
+      "narration": "Climbing the SRE habit stack."
+    },
+    {
+      "panel": 5,
+      "filename": "ch01_p05_sli_thermometer.png",
+      "scene_description": "Close‑up: mobile phone overlayed with thermometer gauge labelled 'SLI'. Ava points with stylus.",
+      "characters_in_frame": ["ava"],
+      "speech_bubbles": {
+        "ava": "Measure what the user feels—nothing less."
       },
-      {
-        "panel": 4,
-        "slug": "sre_stairs",
-        "learning_objective": "Understand the SRE journey from reactive to proactive.",
-        "takeaway": "SRE is a journey, not a sprint.",                
-        "filename": "ch01_p04_sre_stairs.png",
-        "scene_description": "Staircase graphic labeled Incident Response → Monitoring → Testing → Prevention → Design for Reliability; Ava leads a diverse team upward. Nairobi skyline backdrop.",
-        "characters_in_frame": ["ava", "learners"],
-        "speech_bubbles": {
-          "ava": "Pole pole, ndio mwendo—one reliable step at a time."
-        },
-        "narration": "From reaction to proactive SRE.",
-        "monologue": "SRE is a journey, not a sprint."
-      }
-    ]
-  }
+      "narration": "Service Level Indicators."
+    },
+    {
+      "panel": 6,
+      "filename": "ch01_p06_slo_contract.png",
+      "scene_description": "Conference table with executives; glowing contract icon shows '99.9 % in <500 ms'. Ava holds stopwatch.",
+      "characters_in_frame": ["ava", "engineers"],
+      "speech_bubbles": {
+        "ava": "An SLO turns numbers into promises."
+      },
+      "narration": "Service Level Objectives."
+    },
+    {
+      "panel": 7,
+      "filename": "ch01_p07_error_budget_tightrope.png",
+      "scene_description": "Ava balances on tightrope between towers labelled Innovation and Stability; piggy‑bank net below reads 'Error Budget'.",
+      "characters_in_frame": ["ava"],
+      "speech_bubbles": {
+        "ava": "Spend risk wisely—or deployments freeze."
+      },
+      "narration": "Error Budgets: innovation currency."
+    },
+    {
+      "panel": 8,
+      "filename": "ch01_p08_regulation_towers.png",
+      "scene_description": "Huge stack of banking regulations looms over city; Ava stands with clipboard; customers below.",
+      "characters_in_frame": ["ava"],
+      "speech_bubbles": {
+        "ava": "Reliability isn’t just goodwill—it’s compliance."
+      },
+      "narration": "Banking context & regulation."
+    },
+    {
+      "panel": 9,
+      "filename": "ch01_p09_tooling_workshop.png",
+      "scene_description": "Workshop table of labelled tools: Prometheus wrench, Grafana monitor, Splunk logbook, AWS cloud gear, K8s cog. Ava wearing safety goggles.",
+      "characters_in_frame": ["ava"],
+      "speech_bubbles": {
+        "ava": "Tools enable; discipline delivers."
+      },
+      "narration": "Observability toolkit."
+    },
+    {
+      "panel": 10,
+      "filename": "ch01_p10_roadmap_sign.png",
+      "scene_description": "Road sign with arrows to Metrics, SLOs, Error Budgets, Tooling, Governance. Ava points down the road; sunrise ahead.",
+      "characters_in_frame": ["ava"],
+      "speech_bubbles": {
+        "ava": "Pole pole—one reliable milestone at a time."
+      },
+      "narration": "The journey ahead."
+    }
+  ]
+}
