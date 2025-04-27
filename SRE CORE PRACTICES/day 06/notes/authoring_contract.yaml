@@ -3,53 +3,70 @@ authoring_contract:
     headings_in_order:
       - "🎯 Learning Objective"
       - "✅ Takeaway"
-      - "Teaching Narrative"     # <-- Renamed from Prose as requested
+      - "🚦 Applied Example"    # <-- New section for real-world examples
+      - "Teaching Narrative"     # <-- Renamed from Prose
       - "Image Embed"          # This section will now contain a reference to external image data
     heading_content_schema: # Define the expected structure under each heading type in the main content YAML
-      "🎯 Learning Objective": {type: string, description: "The learning objective for the chapter or section."} # Compact syntax
-      "✅ Takeaway":           {type: string, description: "The key takeaway or summary of the chapter or section."} # Compact syntax
-      "Teaching Narrative":    {type: string, description: "Detailed narrative prose content focusing on teaching."} # Renamed from Prose, compact syntax
+      "🎯 Learning Objective": {type: string, description: "The learning objective for the chapter or section."}
+      "✅ Takeaway":           {type: string, description: "The key takeaway or summary of the chapter or section."}
+      "🚦 Applied Example": # Schema for the new Applied Example block
+        type: object
+        required:
+          - query_log_snippet # Key for the technical snippet
+          - user_impact_note # Key for the user impact
+        properties:
+          query_log_snippet: {type: string, description: "A real-world query, log sample, or incident snippet (fenced code block recommended).", format: "code"}
+          user_impact_note: {type: string, description: "A one-line note explaining the user impact of the example."}
+        description: "A block showing a real query, log sample, or incident snippet with a 1-line user impact note, directly after each Takeaway."
+      "Teaching Narrative":    {type: string, description: "Detailed narrative prose content focusing on teaching."}
       "Image Embed":
         type: object # Expecting a YAML object (key-value pair) to reference external panel data
-        required: [panel_id] # Compact syntax for required fields
+        required: [panel_id]
         properties:
-          panel_id: {type: integer, description: "References a panel definition by its unique 'panel' identifier in the external image data file."} # Compact syntax for properties and description
+          panel_id: {type: integer, description: "References a panel definition by its unique 'panel' identifier in the external image data file."}
 
   # Removed panel_json_schema as the schema for panel data is defined in the external_image_data_schema section
 
   prose_requirements:
-    word_band: {min: 7800, max: 10000, description: "The total word count for the entire novella's prose content."} # Compact syntax
-    chunk_size: {min: 400, max: 600, description: "The target word count range for each individual prose block."} # Compact syntax
-    tech_scene_ratio: # New requirement for technical vs scene-setting content
+    word_band: {min: 7800, max: 10000, description: "The total word count for the entire novella's prose content."}
+    chunk_size: {min: 400, max: 600, description: "The target word count range for each individual prose block."}
+    storytelling_ratio: # Replaces tech_scene_ratio to emphasize narrative balance
       description: |
-        At least 70 % of each Teaching-Narrative block must be concrete
-        technical instruction (definitions, formulas, code, queries,
-        configuration snippets, mini-exercises). Scene-setting and
-        descriptive storytelling must not exceed 30 %.
+        Each Teaching Narrative block must balance technical instruction with scene-setting and storytelling.
+        The scene-setting and storytelling content should be at least 20 % but not exceed 40 % to ensure sufficient technical depth.
+      min_scene_pct: 20
+      max_scene_pct: 40
+    banking_context_anchor: # New rule to enforce banking relevance - moved description under the key
+      value: true
+      description: "Ensures that each major unit or section of content is clearly tied back to banking industry concepts or examples."
+    voice_guideline: # New rules for mandatory persona elements
+      description: "Specific elements that must be included in the narrative voice."
+      must_include_per_unit:  # at least one element per Teaching Narrative
+        - "Swahili proverb"
+        - "Wrist-Slap Moment"
     perspective: "second-person teacher + narrative examples"
     prose_style: |
-      Fully narrative, conversational, detailed, and engaging; explicitly avoid bullet points or lists unless necessary.
-      Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate.
+      Fully narrative, conversational, detailed, and engaging. The conversational tone should feel like a mentor directly speaking to the reader, incorporating dialogue-rich examples and anecdotes. Explicitly avoid bullet points or lists unless necessary.
+      Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate, fulfilling the voice guidelines.
       # Removed duplicate description key here
 
   format_rules:
     markdown_image_embed:
       description: |
         After every Image Embed section (which references a panel ID from the external image data file), include a Markdown image reference line using the filename from the referenced panel:
-        ![Alt text](images/<filename>){width=<px>}
-      check: "Each Image Embed section in the main content YAML must be immediately followed by a matching Markdown image line referencing the correct filename from the external image data."
+        ![Alt text](images/&lt;filename&gt;){width=&lt;px&gt;}
+      check: "Each Image Embed section in the main content YAML must be immediately followed by a matching Markdown image line referencing the correct filename from the external data."
     cadence:
-      description: "Alternate detailed Teaching Narrative blocks and clearly described sequential-art panels referenced from an external data file, following the specified pattern." # Updated description
-      pattern: |
-        (Teaching Narrative → Image Embed)+ # Updated pattern
-      max_consecutive_prose: 
+      description: "The overall flow of content sections, starting with introductory elements, followed by alternating Teaching Narrative blocks and Image Embeds."
+      pattern_hint: "LO → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+" # Hint for the overall sequence structure
+      max_consecutive_prose: # Moved description under the key
         value: 1
-        description: "Maximum number of consecutive Teaching Narrative blocks allowed." # Updated description
-      max_consecutive_images: 
+        description: "Maximum number of consecutive Teaching Narrative blocks allowed."
+      max_consecutive_images: # Moved description under the key
         value: 1
         description: "Maximum number of consecutive Image Embed sections allowed."
     panel_ratio:
-      min_images: 6 # Updated based on the latest contract version provided
+      min_images: 6
       max_images: 15
       description: "The minimum and maximum number of static image panels required for the entire novella."
       check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by an Image Embed section in the main content YAML."
@@ -70,7 +87,6 @@ authoring_contract:
     palette_style_ref: "house_palette_line_style.md"
     description: "Reference file for the visual color palette and line style."
     prefer_diagrams: "mermaid" # Note: Mermaid diagrams are inline and don't use the external JSON file for definition
-    # Removed duplicate prefer_diagrams_description key here
     character_presence:
       primary: "ava"
       rule: "At least 50 % of panels defined in the external image data file include Ava to anchor teaching voice"
@@ -110,23 +126,26 @@ authoring_contract:
           nullable: true
 
   consistency_checklist:
-    - "Headings present & in required order in the main content YAML (Learning Objective, Takeaway, Teaching Narrative, Image Embed)" # Updated headings check
-    - "Word count within 7800–10000 band in the main content YAML prose" # Updated word count check
-    - "Cadence pattern (Teaching Narrative → Image Embed)+ alternation satisfied in the main content YAML" # Updated cadence check
-    - "Image count 6–15 in the external image data file's panels array" # Updated image count check and clarification source
-    - "Mermaid diagrams as 'inline diagrams' that don't count against the static-panel quota (these appear directly as code blocks in the main content YAML, not in the external data file)" # Clarified where Mermaid goes
-    - "Image Embed sections in main content YAML reference existing panels by 'panel_id' in the external image data file" # Check for referencing using the specified key
-    - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema" # Check for external file schema adherence
-    - "Each Image Embed section in the main content YAML is immediately followed by a matching Markdown image line referencing the correct filename from the external data" # Check for markdown reference positioning and filename source
-    - "Mermaid blocks compile correctly (if used in the main content YAML)" # Clarified applies to main YAML
-    - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array" # Clarified where Ava's presence is checked
-    - "Teaching Narrative blocks meet 70/30 tech-to-scene ratio" # New checklist item for the ratio
-    - "Prose explicitly detailed, narrative, without superficial summaries or excessive bullet points in the main content YAML" # Still relevant for overall prose quality
-    - "Only whitelisted widgets appear in Teaching Narrative blocks, using correct container syntax" # New checklist item for widgets
+    - "Headings present & in required order in the main content YAML (Learning Objective, Takeaway, Applied Example, Teaching Narrative, Image Embed)" # Updated headings check
+    - "Word count within 7800–10000 band in the main content YAML prose"
+    - "Cadence pattern reflects the sequence of Learning Objective, Takeaway, Applied Example, and alternating Teaching Narrative/Image Embed blocks" # Updated cadence check
+    - "Image count 6–15 in the external image data file's panels array"
+    - "Mermaid diagrams as 'inline diagrams' that don't count against the static-panel quota (these appear directly as code blocks in the main content YAML, not in the external data file)"
+    - "Image Embed sections in main content YAML reference existing panels by 'panel_id' in the external image data file"
+    - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema"
+    - "Each Image Embed section in the main content YAML is immediately followed by a matching Markdown image line referencing the correct filename from the external data"
+    - "Mermaid blocks compile correctly (if used in the main content YAML)"
+    - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array"
+    - "Teaching Narrative blocks meet storytelling_ratio (20-40% scene)"
+    - "Banking context anchor is present per unit/section" # New checklist item for banking relevance
+    - "Voice guideline elements (Swahili proverb OR Wrist-Slap Moment) are included per unit/section" # New checklist item for voice elements
+    - "Applied Example block is present directly after each Takeaway and matches its schema" # New checklist item for Applied Example
+    - "Teaching Narrative explicitly detailed, narrative, conversational, without superficial summaries or excessive bullet points in the main content YAML" # Updated heading name
+    - "Only whitelisted widgets appear, using correct container syntax"
 
   ambiguity_handling:
     explicit_instruction: |
-      If uncertain about the level of detail required, how to reference external image data using 'panel_id', how to use inline widgets, or any other rule, explicitly pause and request clarification—never default to condensed or overly summarized output. # Updated to mention widgets
+      If uncertain about the level of detail required, how to reference external image data using 'panel_id', how to use inline widgets, how to apply storytelling/banking context/voice guidelines, or any other rule, explicitly pause and request clarification—never default to condensed or overly summarized output.
 
   escalation_rule: |
     If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.

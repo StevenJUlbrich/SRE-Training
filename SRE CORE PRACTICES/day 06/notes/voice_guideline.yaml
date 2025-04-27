@@ -1,0 +1,5 @@
+must_include_per_unit:
+  - "Swahili proverb"
+  - "Wrist-Slap Moment"
+  - "Dialogue Line"   # e.g., Ava: “...”, Learner: “...?”
+  - "Learner Prompt"  # a second-person question to the reader

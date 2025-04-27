@@ -1,0 +1,9 @@
+dialogue_quota:
+  description: "Ensure real conversational tone."
+  min_lines: 2        # At least two distinct quoted lines
+  scope: "per Teaching Narrative"
+
+learner_prompt:
+  description: "Direct question or reflective challenge to the reader."
+  required: true
+  scope: "per Teaching Narrative"

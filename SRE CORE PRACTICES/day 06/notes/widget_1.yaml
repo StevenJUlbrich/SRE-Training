@@ -1,0 +1,4 @@
+allowed_inline_widgets:
+  - "Try This"        # already present, but make it mandatory
+try_this_frequency:
+  per_unit: true
