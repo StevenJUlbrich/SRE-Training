@@ -1,0 +1,92 @@
+{
+    
+        "characters": {
+            "ava": {
+                "visual_tags": [
+                    "38-year-old Kenyan woman",
+                    "athletic build, 5'7\" (170 cm)",
+                    "rich dark-brown complexion, warm round face, high cheekbones",
+                    "shoulder-length natural dreadlocks with subtle red highlights",
+                    "large expressive brown eyes, rectangular reading glasses (sometimes)",
+                    "tailored pants or pencil skirt; colourful blouse with Kente/Kitenge patterns",
+                    "hand-crafted wooden bangle, simple gold studs, smartwatch",
+                    "small scar over right eyebrow, circuit-tattoo on right wrist",
+                    "moves with confident, purposeful posture; frequent animated hand gestures"
+                ]
+                },
+            "customers": {
+                "visual_tags": [
+                "diverse group of individuals",
+                "various ages and styles",
+                "some on mobile devices",
+                "others in traditional attire"
+                ]
+            },
+            "engineers": {
+                "visual_tags": [
+                "diverse group of engineers",
+                "various ages and styles",
+                "some in casual attire",
+                "others in sre-branded shirts"
+                ]
+            },
+            "learners": {
+                "visual_tags": [
+                "diverse group of learners",
+                "various ages and styles",
+                "some in casual attire",
+                "others in company-branded shirts"
+                ]
+            }
+        },
+        "global_style": {
+            "style": "Render a Modern Graphic Novel with overall style aims for a distinctive, professional look that is approachable and technically accurate, drawing inspiration from educational graphic novels. It blends modern tech aesthetics with Kenyan-influenced design elements. The characters are designed to be relatable and aspirational, with a focus on diversity and representation. The environments reflect a blend of modern tech and traditional Kenyan elements, creating a unique visual identity. The art direction emphasizes clarity and precision, ensuring that technical concepts are easily understood while maintaining an engaging narrative flow.",
+            "line_style": "The recommended line style features clean, medium-weight lines with selective detail. The art direction includes semi-realistic facial expressions and body language (not overly cartoonish) and slightly stylized proportions for expressiveness. Technical elements should have a crisp, precise representation.",
+            "palette": ["Primary Colors: Deep Indigo Blue (#2D3E50) for reliability and the banking sector, Vibrant Orange (#E67E22) drawing from Kenyan textiles and representing innovation, and Teal (#1ABC9C) for metrics and technical elements.", "Supporting Colors: Warm Gray (#95A5A6) for backgrounds, Soft White (#ECF0F1) for text backgrounds, and Accent Red (#E74C3C) for alerts and warning states. This palette balances professional credibility with vibrant elements reflecting Ava's personality and heritage."    ],
+            "atmosphere": "Create through the environment and setting, which include modern tech environments with subtle African architectural elements, the Nairobi skyline featuring recognizable landmarks, and banking environments that mix traditional and modern tech elements.",
+            "speech_bubble_font": "clean comic lettering",
+            "text_padding_px": 5,
+            "bubble_avoid_edges": true,
+            "narration_box_position": "top",
+            "ensure_text_visible": true
+          },
+        "layout_rules": {
+            "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
+            "narration_box_position": "top",
+            "text_padding_px": 5
+          },
+    "panels": [
+      {
+        "panel": 1,
+        "filename": "ch00_p01_rooftop_intro.png",
+        "scene_description": "Rooftop sunrise over Nairobi tech district. Ava greets the reader with her mug; indigo sky, teal dashboards faintly projected behind her.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": {"ava": "Karibu!  Rhythm first, reliability next."},
+        "narration": "Primer • Meet Your Guide"
+      },
+      {
+        "panel": 2,
+        "filename": "ch00_p02_cadence_grid.png",
+        "scene_description": "Split-screen infographic: left shows the four required headings, right shows alternating prose and thumbnails like a heart-rate line.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": {"ava": "Tick—context.  Tock—illustration."},
+        "narration": "Primer • Cadence Demo"
+      },
+      {
+        "panel": 3,
+        "filename": "ch00_p03_trinity_icons.png",
+        "scene_description": "Thermometer, Contract, and Piggy-Bank icons float above Ava’s wrist-slap pose; small host-CPU chart crosses out in red.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": {"ava": "Measure, promise, spend—never in reverse."},
+        "narration": "Primer • SLI, SLO, Budget"
+      },
+      {
+        "panel": 4,
+        "filename": "ch00_p04_tools_preview.png",
+        "scene_description": "Ava gestures at a Mermaid diagram, a Try This card, and a green checklist table—all floating holographically.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": {"ava": "Diagram.  Exercise.  Self-check.  Repeat."},
+        "narration": "Primer • Interactive Toolkit"
+      }
+    ]
+  }
