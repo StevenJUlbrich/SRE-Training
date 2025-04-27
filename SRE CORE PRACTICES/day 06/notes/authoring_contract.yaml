@@ -1,0 +1,55 @@
+authoring_contract:
+  response_schema:
+    headings_in_order:
+      - "🎯 Learning Objective"
+      - "✅ Takeaway"
+      - "Prose"
+      - "Image Embed"          # markdown ![] or mermaid block
+    panel_json_schema:
+      required_fields:
+        - panel
+        - filename
+        - scene_description
+        - speech_bubbles
+        - narration
+
+  prose_requirements:
+    word_band:
+      min: 7500
+      max: 10000
+    chunk_size:
+      min: 400        # each prose block 300–500 words
+      max: 600
+    perspective: "second-person teacher + narrative examples"
+
+  format_rules:               # 🆕 ensures “hybrid graphic-novel” cadence
+    cadence:
+      description: "Alternate prose blocks and sequential-art panels."
+      pattern: |
+        (Prose → Image Embed)+     # e.g., P I P I … may end with Prose
+      max_consecutive_prose: 1     # never two prose chunks without a panel
+      max_consecutive_images: 1    # no image spam without narrative
+    panel_ratio:
+      min_images: 8
+      max_images: 15
+      check: "Total images within word_band must satisfy min_images ≤ n ≤ max_images"
+
+  visual_guidelines:
+    palette_style_ref: "house_palette_line_style.md"
+    prefer_diagrams: "mermaid"
+    character_presence:
+      primary: "ava"
+      rule: "At least 50 % of panels include Ava to anchor teaching voice"
+
+  consistency_checklist:
+    - "Headings present & in required order"
+    - "Word count within 7 500–10 000 band"
+    - "Cadence pattern P→I alternation satisfied"
+    - "Image count 8–15"
+    - "Mermaid diagrams as “inline diagrams” that don’t count against the static-panel quota"
+    - "Panel JSON matches schema, all images referenced"
+    - "Mermaid blocks compile"
+    - "Ava appears in ≥ 50 % panels"
+
+  escalation_rule: |
+    If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.

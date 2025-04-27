@@ -1,0 +1,14 @@
+persona:
+  name: "Ava “The Error-Budget Guardian” Kimani"
+  mission: "Teach measurable reliability with warm-but-firm mentorship."
+  voice:
+    tone: "direct, no-nonsense, jargon-light"
+    cultural_flair: "Swahili proverbs, Nairobi analogies"
+    signature_moves:
+      - "playful wrist-slap when busting myths"
+      - "rubber-duck Murphy cameo"
+  catch_phrases:
+    - "Reliability you can **measure** is the only reliability that matters."
+    - "Average latency? Amateur hour—show me p95 and p99."
+    - "Governance is the brake that lets you drive fast without crashing."
+  visual_tags_ref: "ava_kimani_physical.md"

@@ -1,0 +1,89 @@
+{
+    "global_style": { "$ref": "house_palette_line_style" },
+    "panels": [
+      {
+        "panel": 1,
+        "filename": "ch03_p01_policy_flow.png",
+        "scene_description": "Comic panel: Ava in Kenyan print blouse points a laser at a flowchart projected on screen; the Freeze node glows red; Murphy the duck wears a judge wig.",
+        "speech_bubbles": { "ava": "Freeze means stop shipping, start fixing." },
+        "narration": "Governance flowchart highlights the freeze branch."
+      },
+      {
+        "panel": 2,
+        "filename": "ch03_p02_raci_matrix.png",
+        "scene_description": "Ava presents a colour‑coded RACI grid on a touchscreen and highlights the SRE column with a neon marker.",
+        "speech_bubbles": { "ava": "Team, SRE holds the gavel on reliability." },
+        "narration": "RACI grid clarifies governance roles."
+      },
+      {
+        "panel": 3,
+        "filename": "ch03_p03_ci_gate.png",
+        "scene_description": "Buildkite pipeline sidebar shows a red gate icon; Ava slams a big red \"PAUSE\" stamp on the screen while teammates gasp behind her.",
+        "speech_bubbles": { "ava": "Deploy paused until burn lowers." },
+        "narration": "CI gate blocks a risky release based on burn‑rate."
+      },
+      {
+        "panel": 4,
+        "filename": "ch03_p04_cost_curve.png",
+        "scene_description": "Line graph overlay of revenue curve versus innovation curve; Ava stands thoughtful, coffee mug labelled 'budget != uptime'.",
+        "speech_bubbles": { "ava": "Budget and uptime are different currencies." },
+        "narration": "Graph visualises the trade‑off between reliability and velocity."
+      },
+      {
+        "panel": 5,
+        "filename": "ch03_p05_burnrate_dash.png",
+        "scene_description": "Grafana dashboard with four burn‑rate windows; Ava inset circles the 30‑minute spike in red.",
+        "speech_bubbles": { "ava": "Fast window spiking—eyes on!" },
+        "narration": "Dashboard shows multi‑window burn‑rate monitoring."
+      },
+      {
+        "panel": 6,
+        "filename": "ch03_p06_incident_timeline.png",
+        "scene_description": "Horizontal incident timeline with icons for detect, freeze, mitigation steps; Ava narrates in bottom caption.",
+        "speech_bubbles": { "ava": "Timeline tells the story of a controlled outage." },
+        "narration": "Incident markers plotted across the outage minutes."
+      },
+      {
+        "panel": 7,
+        "filename": "ch03_p07_playbook.png",
+        "scene_description": "Stylised playbook cover on a desk: gears, checklists, SRE logo; Ava hands a copy to a junior SRE.",
+        "speech_bubbles": { "ava": "Playbook is your shield in chaos." },
+        "narration": "Cultural artefact reinforces incident readiness."
+      },
+      {
+        "panel": 8,
+        "filename": "ch03_p08_ava_gavel.png",
+        "scene_description": "Courtroom‑style comic: Ava wearing a judge robe slams a gavel on a deploy button; caption 'Freeze enacted'.",
+        "speech_bubbles": { "ava": "Court adjourned—freeze enforced." },
+        "narration": "Symbolic gavel moment underscores decisive governance."
+      },
+      {
+        "panel": 9,
+        "filename": "ch03_p09_budget_gauge.png",
+        "scene_description": "Semi‑circular error‑budget gauge with the needle buried in the red zone; crisp infographic style, no characters present.",
+        "speech_bubbles": {},
+        "narration": "Gauge illustrates budget exhaustion."
+      },
+      {
+        "panel": 10,
+        "filename": "ch03_p10_automation_bot.png",
+        "scene_description": "Stylised Slack chat: Bot posts 'Deploy blocked – error budget exhausted'; Ava reacts with a thumbs‑up emoji.",
+        "speech_bubbles": { "ava": "Bot saved us a 3 a.m. wake‑up." },
+        "narration": "Automation enforces policy without human intervention."
+      },
+      {
+        "panel": 11,
+        "filename": "ch03_p11_cost_table.png",
+        "scene_description": "Infographic table showing downtime minutes versus revenue loss per quarter; Nairobi skyline silhouette in the background.",
+        "speech_bubbles": {},
+        "narration": "Quarterly cost analysis links reliability to finance."
+      },
+      {
+        "panel": 12,
+        "filename": "ch03_p12_heatmap.png",
+        "scene_description": "Heatmap grid: services on Y‑axis, months on X‑axis, colour intensity shows budget spend percentage; Ava points at the deepest red cell.",
+        "speech_bubbles": { "ava": "This service is bleeding budget." },
+        "narration": "Heatmap pinpoints heavy budget consumers for review."
+      }
+    ]
+  }

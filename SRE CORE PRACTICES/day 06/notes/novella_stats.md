@@ -16,7 +16,3 @@ This length would provide several advantages:
 
 5. **Industry Standard:** This length is comparable to other successful technical illustrated guides like "The Manga Guide to Statistics" (224 pages) or "Google's SRE Workbook" (about 500 pages of dense text), but more focused and approachable
 
-The first chapter (introduction) we've outlined would be approximately 10-12 pages with the current text-to-visual ratio we've established.
-
-For comparison, a typical technical book might be 300-400 pages of pure text, so this illustrated format delivers the core concepts more efficiently while remaining engaging and memorable for learners transitioning from production support to SRE roles.
-
