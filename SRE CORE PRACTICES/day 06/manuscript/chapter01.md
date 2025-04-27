@@ -4,9 +4,7 @@
 
 Good morning, afternoon, or evening—depending on when you're reading this! I'm Ava Kimani, coming to you from sunny Nairobi. For the past 15 years, I've been on the frontlines of reliability engineering, watching it transform from a reactive scramble to a precise discipline. Today, I'll be your guide as we embark on this journey from production support to becoming true guardians of reliability.
 
-*Notices a slide with "100% uptime" written on it*
-
-*Playfully slaps wrist* 
+*Ever Notices a slide with "100% uptime" written on it* - *Playfully slaps wrist* 
 
 >Let's start by clearing away some misconceptions. If you've come here looking for the secret to perfect reliability, I'm afraid you're in for disappointment. Perfect reliability doesn't exist—and chasing it is not only futile but actively harmful to your organization. What we're after is something far more valuable: reliability you can measure, understand, and improve systematically.
 
@@ -14,7 +12,7 @@ Good morning, afternoon, or evening—depending on when you're reading this! I'm
 
 ## 1 · Opening Anecdote 
 
-![Ava greets the dawn](images/ch01_p01_intro_skyline.png)
+![Ava greets the dawn](images/ch01_p01_intro_skyline.png){width=550}
 
 Nairobi’s first light spills across the rooftops like a promise. Ava Kimani stands on the edge of a coworking terrace, nursing her battered ceramic mug—the one that reads **Reliability you can measure** in flaking gold letters. Below her, the *Silicon Savannah* revs awake: boda‑boda couriers weaving through traffic, fibre backbones humming alive, fintech dashboards blinking from the glass façades of digital banks.
 
@@ -30,7 +28,7 @@ The air carries the metallic trill of the first commuter train. On her smartwatc
 
 ## 2 · From Branch Queues to 24×7 Mobile
 
-![Old vs new banking](images/ch01_p02_crisis_split.png)
+![Old vs new banking](images/ch01_p02_crisis_split.png){width=550px}
 
 In 1985 banking success meant a marble lobby, polished brass pens, and a velvet rope that parted when the manager finally called, *Next!*  In 2005, it meant a hallway of ATMs with a “24‑hour” neon sign. The banking industry has undergone a seismic shift. In 2025, success is a user who never thinks about banking at all—because the payment accepted, the balance updated, the fraud check cleared *while they waited for a latte*.
 
@@ -51,7 +49,7 @@ A Kenyan coffee farmer finishes uploading a produce‑loan application on his ph
 
 ## 3 · Heroic Firefighting vs Sustainable Reliability
 
-![Hero burnout](images/ch01_p03_hero_burnout.png)
+![Hero burnout](images/ch01_p03_hero_burnout.png){width=600px}
 
 Scene: 03:17. Pager sirens strobe red across a war‑room. Two engineers slump over keyboards littered with cling‑film pizza and half‑drunk maziwa chai. A banner on the big screen reads **99.999 % Uptime (month‑to‑date)**—a vanity relic. Meanwhile, a service map pulses crimson where payment calls time‑out.
 
@@ -87,7 +85,7 @@ Error‑Budget Remaining: [■■□□□□□□□□]  12 %
 
 ## 4 · Enter Site Reliability Engineering
 
-![Climbing the SRE stairs](images/ch01_p04_sre_stairs.png)
+![Climbing the SRE stairs](images/ch01_p04_sre_stairs.png){width=600px}
 
 Ava unfurls a glossy poster of a staircase: **Incident Response → Monitoring → Testing → Prevention → Design for Reliability**. Each riser is a habit stack; each habit backed by a *metric*.
 

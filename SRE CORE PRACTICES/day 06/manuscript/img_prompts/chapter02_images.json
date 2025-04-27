@@ -13,12 +13,11 @@
                 "moves with confident, purposeful posture; frequent animated hand gestures"
             ]
             },
-        "customers": {
+        "customer": {
             "visual_tags": [
-            "diverse group of individuals",
-            "various ages and styles",
-            "some on mobile devices",
-            "others in traditional attire"
+            "diverse individual",
+            "younge age and styles",
+            "with mobile devices showing payment failures"
             ]
         },
         "engineers": {
@@ -57,57 +56,51 @@
     "panels": [
       {
         "panel": 1,
-        "slug": "intro_skyline",
-        "learning_objective": "Introduce Ava Kimani, the SLO Sentinel.",
-        "takeaway": "Meet Ava Kimani, your SLO Sentinel.",
-        "filename": "ch01_p01_intro_skyline.png",
-        "scene_description": "Full‑width panorama of the Nairobi skyline at dawn. Foreground: Ava Kimani on a rooftop, dreadlocks catching the breeze, holding her \"Reliability you can measure\" mug; subtle banking‑tower logos glow. High‑contrast teal/orange dawn light, crisp line work, cel shading; no motion blur.",
+        "filename": "ch02_p01_customer_journey.png",
+        "scene_description": "Horizontal infographic: mobile user taps ‘Pay’; flow arrows through API Gateway, micro‑services, ledger DB, notification service, back to user. Ava at bottom with laser pointer. Teal/indigo palette, crisp line art, cel shading; subtle Kenyan kitenge pattern border.",
         "characters_in_frame": ["ava"],
-        "speech_bubbles": {
-          "ava": "Welcome to measurable reliability. I’m Ava—your SLO Sentinel."
-        },
-        "narration": "The Silicon Savannah awakens.",
-        "monologue": "Ava’s here to help you measure reliability."
+        "speech_bubbles": { "ava": "Trace every hop—because users feel every hop." },
+        "narration": "A payment’s real journey is longer than a single API call." 
       },
       {
         "panel": 2,
-        "slug": "crisis_split",
-        "learning_objective": "Recognize the gap between user expectations and system reliability.",
-        "takeaway": "User expectations are high, but reliability is low.",
-        "filename": "ch01_p02_crisis_split.png",
-        "scene_description": "Split panel: Left—traditional bank branch with long queue; Right—mobile users staring at \"transaction failed\" screens. Ava inset top‑corner observing both worlds. Use red alert accents on phone screens.",
-        "characters_in_frame": ["customers", "ava"],
-        "speech_bubbles": {},
-        "narration": "Banking expectations have changed—but reliability hasn’t caught up.",
-        "monologue": "Ava’s here to help you bridge the gap."
+        "filename": "ch02_p02_latency_overlay.png",
+        "scene_description": "Same journey now overlaid with red latency bars (900 ms at DB, 700 ms at fraud‑check). Stopwatch icons. Ava inset eye‑brow raised.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": { "ava": "Users don’t queue on JVM heap—they queue right here." },
+        "narration": "Latency has an address—pin it." 
       },
       {
         "panel": 3,
-        "slug": "hero_burnout",
-        "learning_objective": "Recognize the unsustainable nature of heroic firefighting.",
-        "takeaway": "Heroic firefighting is unsustainable.",
-        "filename": "ch01_p03_hero_burnout.png",
-        "scene_description": "Interior ops‑war room at 3 a.m. Engineers slumped over keyboards; alert sirens flashing. Coffee cups, empty pizza boxes. Ava enters, wrist‑slap pose toward a ticker reading 99.999 % uptime.",
-        "characters_in_frame": ["ava", "engineers"],
-        "speech_bubbles": {
-          "ava": "99.999 % of *what*, exactly?"
-        },
-        "narration": "Heroic firefighting is unsustainable.",
-        "monologue": "Ava’s here to help you avoid burnout."
+        "filename": "ch02_p03_green_vs_red.png",
+        "scene_description": "Split frame: Left—NOC wall green dashboards; Right—customer phone ‘Payment Failed’. Ava between panels wrist‑slap pose.",
+        "characters_in_frame": ["ava", "customer"],
+        "speech_bubbles": { "ava": "Green dashboards ≠ happy customers." },
+        "narration": "Host metrics alone can deceive." 
       },
       {
         "panel": 4,
-        "slug": "sre_stairs",
-        "learning_objective": "Understand the SRE journey from reactive to proactive.",
-        "takeaway": "SRE is a journey, not a sprint.",                
-        "filename": "ch01_p04_sre_stairs.png",
-        "scene_description": "Staircase graphic labeled Incident Response → Monitoring → Testing → Prevention → Design for Reliability; Ava leads a diverse team upward. Nairobi skyline backdrop.",
+        "filename": "ch02_p04_golden_signals.png",
+        "scene_description": "Four circular gauges labelled Rate, Errors, Duration, Saturation; Ava points to Errors gauge spiking. Background faint grid of payment icons.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": { "ava": "Four signals—one story: user experience." },
+        "narration": "Golden Signals, banking style." 
+      },
+      {
+        "panel": 5,
+        "filename": "ch02_p05_sli_checklist.png",
+        "scene_description": "Whiteboard with three SLI candidates; Ava ticks user‑centric one, crosses host‑centric one. Learner peers nodding.",
         "characters_in_frame": ["ava", "learners"],
-        "speech_bubbles": {
-          "ava": "Pole pole, ndio mwendo—one reliable step at a time."
-        },
-        "narration": "From reaction to proactive SRE.",
-        "monologue": "SRE is a journey, not a sprint."
+        "speech_bubbles": { "ava": "If the user can’t sense it, it’s not an SLI." },
+        "narration": "Designing solid indicators." 
+      },
+      {
+        "panel": 6,
+        "filename": "ch02_p06_case_fix.png",
+        "scene_description": "Dashboard ‘Before / After’ split: left red error columns, right green post‑fix; Error‑Budget meter from 20 % → 80 %. Ava thumbs‑up.",
+        "characters_in_frame": ["ava"],
+        "speech_bubbles": { "ava": "Measure, fix, confirm—repeat." },
+        "narration": "Closing the loop." 
       }
     ]
   }
