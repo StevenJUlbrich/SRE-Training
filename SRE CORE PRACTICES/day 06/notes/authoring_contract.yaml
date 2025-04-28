@@ -64,12 +64,11 @@ authoring_contract:
         **15 000 tokens** (≈ 11 000 words including markup) **or**
         **300 markdown lines**, the assistant MUST deliver the chapter in
         multiple sequential parts within the same conversation thread.
-        • Each part must begin with an HTML comment marker:
-            • Each part must end with:
-            <!-- End Part A -->
-            • Each part must begin with an HTML comment marker:
-            <!-- Part A of Chapter <Number> -->
-            • Parts must be labelled consecutively (Part A, Part B, Part C …).
+        • Each part must begin with: <!-- Part A of Chapter <Number> -->  
+        • Each part must end   with: <!-- End Part A -->  
+        • Parts must be labelled consecutively (Part A, Part B, Part C …).  
+        • Every part must, on its own, respect heading order, cadence, widget-placement, and storytelling-ratio rules.  
+        • The final part must include the chapter’s self-check table.
         • Every part must, on its own, respect the heading order,
           cadence, widget-placement, and storytelling-ratio rules.
         • The final part must include the chapter’s self-check table.
@@ -193,6 +192,7 @@ authoring_contract:
     - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
     - "Only whitelisted widgets appear, using correct container syntax."
     - "'Try This' widget is included at least once per chapter."
+    - "Chapters exceeding 15 000 tokens or 300 lines are split into labelled parts with correct comment markers."
 
 
   ambiguity_handling:
