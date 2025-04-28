@@ -2,8 +2,13 @@
 
 <!-- Part A of Chapter 1 -->
 ![hello](images/ch01_p01_intro_skyline.png){width=450px}
-
 ---
+## Chapter Overview
+
+This chapter introduces the fundamental concepts of Site Reliability Engineering (SRE) for banking professionals transitioning from traditional production support roles. You'll learn why measuring reliability from a user perspective is critical, how to define meaningful Service Level Indicators (SLIs) and Objectives (SLOs), and how to implement error budgets as a practical tool for balancing innovation with stability. Through practical banking examples and hands-on exercises, you'll begin building the skills to shift from reactive firefighting to proactive reliability engineering.
+
+Ava Kimani, your guide through this journey, will show you how to move beyond misleading server-side metrics to measure what truly matters to your customers. By the end of this chapter, you'll understand the SRE fundamentals that form the foundation for the more advanced topics covered in later chapters, and you'll have concrete tools to begin implementing user-focused reliability practices in your banking environment.
+
 
 ### 🎯 Learning Objective  
 
@@ -60,10 +65,6 @@ Where `ratio30d` is a thirty-day recorded rule from your SLO.
 **Try This:** Export `journey_*_total` counters from one micro-service, chart the success ratio alongside server response codes, and screenshot the first divergence you find.  
 :::
 
-### Image Embed  
-```yaml
-panel_id: 1
-```  
 ![Ava greets you on a Nairobi rooftop at sunrise](images/ch01_p01_rooftop_intro.png){width=550px}
 
 :::slap  
@@ -118,10 +119,6 @@ Dialogues spark.
 **Try This:** Inject a JavaScript RUM beacon to timestamp `loadEventEnd – navigationStart`, push to `/rum`, and plot p99 alongside server metrics.  
 :::
 
-### Image Embed  
-```yaml
-panel_id: 2
-```  
 ![Split scene of bank queue vs phone payment failure](images/ch01_p02_branch_split.png){width=550px}
 
 :::proverb  
@@ -173,10 +170,6 @@ fi
 **Try This:** Add MTBU panel to your “SRE Overview” dashboard, threshold at 30 days, and page SRE lead if it dips.  
 :::
 
-### Image Embed  
-```yaml
-panel_id: 3
-```  
 ![War-room burnout, Ava wrist-slaps uptime banner](images/ch01_p03_hero_burnout.png){width=550px}
 
 :::slap  
@@ -222,10 +215,6 @@ Dialogue:
 **Try This:** Add a `verify-slo` stage to one GitHub Actions pipeline and demo a red build to leadership.  
 :::
 
-### Image Embed  
-```yaml
-panel_id: 4
-```  
 ![Ava leads team up metric-labelled staircase](images/ch01_p04_sre_stairs.png){width=550px}
 
 :::proverb  
@@ -282,11 +271,7 @@ Dialogue:
 :::exercise  
 **Try This:** Pair the Error-Budget meter to the SLO above and watch real-time burn during next deploy.  
 :::
-
-### Image Embed  
-```yaml
-panel_id: 5
-```  
+  
 ![Phone overlay shows SLI thermometer and red latency bar](images/ch01_p05_sli_phone_overlay.png){width=550px}
 
 :::slap  
@@ -344,10 +329,6 @@ if (( $(echo "$burn > 0.90" | bc -l) )); then exit 1; fi
 **Try This:** Create one Sloth SLO file, run `sloctl check`, and paste its JSON output into your team chat.  
 :::
 
-### Image Embed  
-```yaml
-panel_id: 6
-```  
 ![Executive boardroom with SLO contract](images/ch01_p06_slo_contract.png){width=550px}
 
 :::proverb  
@@ -400,10 +381,6 @@ Dialogue:
 **Try This:** Configure dual burn-rate alert (1 h, 6 h) for one SLO and page yourself when both fire.  
 :::
 
-### Image Embed  
-```yaml
-panel_id: 7
-```  
 ![Ava on tight-rope with piggy-bank net](images/ch01_p07_error_budget_tightrope.png){width=550px}
 
 :::slap  
