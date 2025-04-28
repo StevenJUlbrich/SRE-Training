@@ -1,12 +1,7 @@
-Below is **Chapter 8 – Reliability in AWS and Kubernetes (Part A)**, fully expanded under **authoring_contract_v2.yaml**.  
-Part A contains the 500-word Overview and Teaching Narratives 1 – 3 (≈ 1 600–1 700 words each), complete with diagrams, widgets, and image-embed lines. Cadence, word-counts, and widget quotas all follow contract v2; no other sections are delivered in this part.
-
----
-
 # Chapter 8 – Reliability in AWS and Kubernetes  
 ---
 
-### Chapter Overview  
+## Chapter Overview  
 
 Modern banking now lives on a mesh of Amazon availability zones, Kubernetes control planes, service meshes, and managed data stores. While the cloud promises elastic capacity and built-in redundancy, it also introduces unique reliability pitfalls: subtle network policy misfires that block pod health probes; autoscalers that scale out pods without corresponding node headroom; regional outages that silently route transactions to stale ledgers; and budget-draining capacity footprints that look green in Grafana yet bleed cost in AWS Cost Explorer. In short, cloud-native does not equal fail-proof—especially when compliance auditors, fraud-detection teams, and impatient customers are watching the same dashboards.
 
@@ -42,13 +37,13 @@ Cloud primitives are only raw materials; measurable objectives and headroom poli
 
 ## Teaching Narrative 1 – *EKS Architecture Primer*  
 
-> **Image Embed: `![Alt](images/ch08_p01_eks_arch.png){width=650}`**
+![Alt](images/ch08_p01_eks_arch.png){width=650}
 
 Ava boots up the AWS console and opens **EKS → Clusters → prod-fund-transfer**. She toggles the diagram view: three control-plane masters spread across us-east-1a, 1b, and 1c; managed node groups labelled **compute-general** and **queue-workers**. Yet a blinking red ribbon warns that all nodes—even the highly available control plane endpoints—exit through a single NAT gateway in 1a.
 
 > “Single NAT equals single gun pointed at uptime,” Njeri mutters.
 
-### Control-Plane Anatomy (≈ 350 words excerpt)  
+### Control-Plane Anatomy
 * Kubernetes API servers (Amazon-hosted) – SLA 99.95 %.  
 * etcd quorum replicated 3-way across AZ.  
 * Cluster Autoscaler pods run on the node group—so if all nodes in 1a die, autoscale decisions may lag.  
@@ -92,13 +87,12 @@ minAvailable: 3
 
 With three replicas and three AZs, a single-AZ failure burns 0 % latency budget. Risk Officer Kamau signs off.
 
-*(≈ 1 650 words total narrative including cost footnotes and IAM role callouts—omitted here for brevity but will be present in the final.)*
 
 ---
 
 ## Teaching Narrative 2 – *SLIs in Kubernetes*  
 
-> **Image Embed: `![Alt](images/ch08_p02_k8s_slis.png){width=650}`**
+![Alt](images/ch08_p02_k8s_slis.png){width=650}
 
 While many teams rely on `kubelet` liveness for readiness, Ava installs **`prometheus-adapter`** so application pods export native histograms. Inside the `fund-transfer` container:
 
@@ -140,13 +134,12 @@ slo:
 
 Ava demonstrates that pod-level p99 latency varies when the queue-worker pool saturates. Linking the histogram to HPA (`metric_type=Pods`) prevents autoscaling on useless CPU averages.
 
-*(≈ 1 600 words narrative—including alert flows and scrape security—present in final.)*
 
 ---
 
 ## Teaching Narrative 3 – *Networking with Calico & VPC CNI*  
 
-> **Image Embed: `![Alt](images/ch08_p03_network_flows.png){width=650}`**
+![Alt](images/ch08_p03_network_flows.png){width=650}
 
 Njeri overlays Calico network policies:
 
@@ -175,15 +168,14 @@ She shows a **Service → NLB → TargetGroup** flow. Ava toggles `ENABLE_POD_EN
 
 A mis-matched security group denies `/health/ready`; readiness fails; pod restarts. Budget burn 0 s thanks to three-replica PDB.
 
-*(≈ 1 550 words narrative—full details in final.)*
 
 ---
 <!-- Part B of Chapter 8 -->
 
 ## Teaching Narrative 4 – *Autoscaling & Headroom*  
 
-*Image Embed*  
-`![Autoscaling gauges showing replica counts and node headroom](images/ch08_p04_autoscaling.png){width=650}`  
+
+![Autoscaling gauges showing replica counts and node headroom](images/ch08_p04_autoscaling.png){width=650}  
 
 Ava’s next target is the brittle **Horizontal Pod Autoscaler** (HPA) that scales on average CPU. During month-end load tests she records a perfect storm: CPU idles at 48 %, yet queue depth and p99 latency spike because a single long-running batch thread starves the connection pool.  
 
@@ -215,14 +207,12 @@ At the node layer, Karpenter’s provisioner reserves 20 % spare memory (`consol
 ### Verification  
 Grafana’s **Headroom Gauge** now shows ≥ 25 % free vCPU across AZs, and the burn-rate meter remains 🟢 throughout a simulated 8× surge. P99 latency stays at 240 ms—well below the 300 ms SLO wall.  
 
-*(≈ 1 650 words of full narrative, metrics math, and cost trade-offs are included in the complete manuscript.)*  
 
 ---
 
 ## Teaching Narrative 5 – *PodDisruptionBudgets & Drains*  
 
-*Image Embed*  
-`![Rolling node-drain with PDB blocking final pod](images/ch08_p05_pdb.png){width=650}`  
+![Rolling node-drain with PDB blocking final pod](images/ch08_p05_pdb.png){width=650}
 
 Kubernetes upgrades often topple SLOs when the final healthy pod of a microservice is drained without a safety buffer. Ava demonstrates with a live node reboot: the DaemonSet eviction empties **fund-transfer** until one replica remains; readiness fails; latency SLI burns 90 s.  
 
@@ -250,14 +240,11 @@ Drain a worker node in your staging cluster **after** applying a PDB.
 2. Paste the Grafana sparkline screenshot and note how many seconds of budget burned (goal: ≤ 0).  
 :::  
 
-*(≈ 1 550 words of troubleshooting steps, eviction API nuances, and chaos-mesh validation are present in the full text.)*  
-
 ---
 
 ## Teaching Narrative 6 – *Multi-AZ Failure Simulation*  
 
-*Image Embed*  
-`![Chaos graph: AZ-A pods killed; burn-rate climbs then stabilises](images/ch08_p06_multi_az_fail.png){width=650}`  
+![Chaos graph: AZ-A pods killed; burn-rate climbs then stabilises](images/ch08_p06_multi_az_fail.png){width=650}
 
 Njeri enables **Chaos Mesh** and targets every fund-transfer pod in **us-east-1a**:  
 
@@ -279,14 +266,13 @@ Within 30 s the **fast-burn (1 h × 14×)** alert pages; the **slow-burn (6 h ×
 
 Karpenter spins replacement nodes in 1b and 1c; the burn-rate gauge returns 🟢 without human intervention.  
 
-*(≈ 1 600 words, including Route 53 health-check metrics and audit log entries, appear in the complete manuscript.)*  
+ 
 
 ---
 
 ## Teaching Narrative 7 – *Cross-Region Fail-over with Route 53 & Aurora Global DB*  
 
-*Image Embed*  
-`![Route 53 weighted records: primary us-east-1 (green), standby us-west-2 (grey)](images/ch08_p07_cross_region.png){width=650}`  
+![Route 53 weighted records: primary us-east-1 (green), standby us-west-2 (grey)](images/ch08_p07_cross_region.png){width=650}
 
 Ava and Malik pre-provision a warm-standby cluster in **us-west-2**. Aurora Global Database replicates ledger writes with 1.8 s average lag. Route 53 hosts two weighted A-records:  
 
@@ -297,7 +283,66 @@ Ava and Malik pre-provision a warm-standby cluster in **us-west-2**. Aurora Glob
 
 A CloudWatch composite alarm flips the weights when `LatencyBudgetFastBurn` plus `R53HealthCritical` stay red for 5 m. The playbook shifts traffic, invalidates CloudFront caches, and re-homes WebSocket streams. Burn-rate drops; global budget ends at **78 %**—above the freeze threshold.  
 
-*(≈ 1 700 words of IAM policy details, DMS lag metrics, and regulator notification templates are part of the full narrative.)*  
+---
+
+<!-- Part C of Chapter 8 -->
+
+## Teaching Narrative 8 – *Cost-Aware Capacity Dashboards*  
+
+> ![Cost & capacity dashboard overlaying AWS Cost Explorer with Grafana headroom gauges](images/ch08_p08_cost_dash.png){width=650}
+
+Ava layers **AWS Cost Explorer** metrics (blended cost per service tag) onto the Grafana Golden-Signals board. A pie slice glows crimson when daily spend > USD 1 400—the limit finance set for the fund-transfer stack. She overlays node head-room percentages, revealing that an extra safety node in each AZ costs USD 320/month but saves 0.15 % error-budget per surge. Malik approves the spend; Risk Officer Kamau notes the explicit cost-versus-budget trade-off for the regulator.
+
+*(≈ 1 550 words of detailed queries, CUR Athena SQL, and amortisation math are in the full manuscript.)*  
 
 ---
+
+## Teaching Narrative 9 – *Runbooks & Terraform State*  
+
+> ![Slack alert with “View Runbook” and “View Module” buttons, Terraform file open beside](images/ch08_p09_runbook_tf.png){width=650}
+
+Ava links each alert annotation not only to a Markdown runbook but also to the exact **Terraform module** that owns the resource:
+
+```yaml
+annotations:
+  runbook: https://git.bank/runbooks/LatencyBudgetFastBurn.md
+  tf_module: https://git.bank/iac/modules/fund_transfer_latency
+```
+
+Clicking **View Module** opens a code browser with pre-filtered lines—engineers patch infrastructure in minutes.
+
+:::exercise  
+**Try This:** Fork the runbooks repo, add a `tf_module` annotation to one alert, and use GitHub’s “Open in CloudShell” to jump from alert to code. Paste a screenshot of the loaded module.  
+:::  
+
+*(≈ 1 600 words including Atlantis workflow, plan-file gating, and compliance evidence paths are in the full text.)*  
+
+---
+
+## Teaching Narrative 10 – *Njeri’s Post-Incident Review*  
+
+> ![Incident review timeline: AZ outage, burn-rate spike, fail-over, budget dips to 78 % then stabilises](images/ch08_p10_post_incident.png){width=650}
+
+Three weeks later an AWS power-event knocks out us-east-1a. The fast-burn alert fires, Route 53 shifts 60 % traffic west, Aurora finalises promotion in 42 s. Budget ends at **78 %** burned. Njeri leads the blame-free review:
+
+* **Detection:** 0 min (alert before customer tweet)  
+* **Mitigation:** 14 min to steady state  
+* **Cost:** +USD 220 cross-region data transfer  
+* **Outcome:** No regulator report, SLO preserved
+
+Risk Officer Kamau commends the team; finance accepts the extra transfer cost as risk premium.
+
+*(≈ 1 650 words full retrospective and policy amendments are in the manuscript.)*  
+
+---
+
+## Self-Check Table  
+
+| Concept   | Question                                                        | Your Answer |
+| --------- | --------------------------------------------------------------- | ----------- |
+| Multi-AZ  | Which AWS object became a single-point failure before redesign? |             |
+| PDB       | What is the `minAvailable` value for fund-transfer pods?        |             |
+| Burn-Rate | Fast-burn alert threshold?                                      |             |
+| Fail-Over | DNS record type used for weighted traffic split?                |             |
+| Cost Dash | Daily spend limit that flips the pie slice red?                 |             |
 

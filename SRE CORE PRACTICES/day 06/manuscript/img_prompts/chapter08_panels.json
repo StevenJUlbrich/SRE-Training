@@ -161,6 +161,27 @@
                 "Often wears a tailored suit with a subtle pattern",
                 "Wears colorful ties"
             ]
+        },
+        "Njeri": {
+            "visual_tags": [
+                "non-binary",
+                "33 years old",
+                "Distinctive undercut hairstyle with the longer parts often changing colors",
+                "Wears professional but fashion-forward attire with unique accessories",
+                "Has several ear piercings and often wears clear-framed glasses",
+                "Very expressive face that shows exactly what they're thinking",
+                "Moves with deliberate, precise gestures"
+            ]
+        },
+        "Finance Analyst": {
+            "visual_tags": [
+                "female",
+                "30 years old",
+                "Average height with a slim build",
+                "Long, straight hair often tied in a low ponytail",
+                "Typically wears business casual with a blazer",
+                "Has a collection of colorful pens and sticky notes on her desk"
+            ]
         }
     },
     "global_style": {
