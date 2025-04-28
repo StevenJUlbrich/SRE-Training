@@ -1,4 +1,187 @@
 {
+    "characters": {
+        "Ava": {
+            "visual_tags": [
+                "38-year-old Kenyan woman",
+                "athletic build, 5'7\" (170 cm)",
+                "rich dark-brown complexion, warm round face, high cheekbones",
+                "shoulder-length natural dreadlocks with subtle red highlights",
+                "large expressive brown eyes, rectangular reading glasses (sometimes)",
+                "tailored pants or pencil skirt; colourful blouse with Kente/Kitenge patterns",
+                "hand-crafted wooden bangle, simple gold studs, smartwatch",
+                "small scar over right eyebrow, circuit-tattoo on right wrist",
+                "moves with confident, purposeful posture; frequent animated hand gestures"
+            ]
+        },
+        "Customer": {
+            "visual_tags": [
+                "young aldult",
+                "modern clothing style",
+                "mobile device in hand screen visible",
+                "expressing frustration"
+            ]
+        },
+        "Engineers": {
+            "visual_tags": [
+                "diverse group of engineers",
+                "various ages and styles",
+                "some in casual attire",
+                "others in sre-branded shirts"
+            ]
+        },
+        "Learners": {
+            "visual_tags": [
+                "diverse group of learners",
+                "various ages and styles",
+                "some in casual attire",
+                "others in company-branded shirts"
+            ]
+        },
+        "Learner": {
+            "visual_tags": [
+                "young adult",
+                "casual attire",
+                "looking at a laptop screen with a surprised expression"
+            ]
+        },
+        "Daniel": {
+            "visual_tags": [
+                " male",
+                "26 years old",
+                "Lanky with a runner's physique",
+                "Typically wears casual attire with tech company hoodies",
+                "Has a small tattoo of a circuit board pattern on his forearm",
+                "Short, curly hair with a slight wave",
+                "Light brown skin tone with a few freckles on his cheeks"
+            ]
+        },
+        "Malik": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "Tall (6'2\") with a lean, runner's build",
+                "Closely-cropped salt-and-pepper hair",
+                "Square jawline with a neatly trimmed beard",
+                "Often wears button-up shirts with rolled sleeves and khaki trousers",
+                "Has distinctive rectangular glasses and a vintage analog watch"
+            ]
+        },
+        "Jamal": {
+            "visual_tags": [
+                " male",
+                "35 years old",
+                "Stocky build with broad shoulders",
+                "Shaved head and a friendly, open face",
+                "Has a distinctive scar above his left eyebrow from a childhood accident",
+                "Typically wears casual tech company attire with colorful sneakers",
+                "Uses a wheelchair due to a spinal injury from a car accident five years ago"
+            ]
+        },
+        "Wanjiru": {
+            "visual_tags": [
+                "Female",
+                "24 years old",
+                "Petite with a youthful appearance",
+                "Short natural hair with a small section dyed purple",
+                "Often wears smart business casual with colorful scarves",
+                "Always has stickers on her laptop representing various tech communities",
+                "Constantly taking notes on a tablet with a digital pen"
+            ]
+        },
+        "Emmanuel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "Medium height with a solid build",
+                "Closely-cropped hair and neat goatee",
+                "Often looks tired but determined",
+                "Typically wears business casual with a bank ID badge",
+                "Has a collection of motivational phone backgrounds"
+            ]
+        },
+        "Zuri": {
+            "visual_tags": [
+                "Female",
+                "27 years old",
+                "Average height with an athletic build",
+                "Long braids often styled in creative updos with colorful beads",
+                "Round face with dimples and expressive eyebrows",
+                "Favors bright, contemporary business casual with statement jewelry",
+                "Always has multiple devices and a digital notebook",
+                "Energetic body language and rapid-fire speech pattern"
+            ]
+        },
+        "Marketing Lead": {
+            "visual_tags": [
+                "male",
+                "40 years old",
+                "Tall and slightly overweight with a round face",
+                "Receding Hairline, Grey hair",
+                "Often wears a blazer over a casual shirt",
+                "Has a penchant for colorful ties and pocket squares"
+            ]
+        },
+        "Risk Officer": {
+            "visual_tags": [
+                "Female",
+                "35 years old",
+                "Dark complexsion with a warm smile",
+                "Short, curly hair with a few streaks of grey",
+                "Typically wears tailored suits with bold patterns",
+                "Has a collection of unique brooches representing different cultures"
+            ]
+        },
+        "Aisha": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "Tall with an elegant presence",
+                "Wears a colorful hijab that complements her business attire",
+                "Has rectangular glasses that she frequently adjusts when thinking",
+                "Carries a notebook with perfectly organized sections and color coding",
+                "Very precise hand gestures when explaining concepts"
+            ]
+        },
+        "Risk Officer Kamau": {
+            "visual_tags": [
+                "male",
+                "38 years old",
+                "Average height with a stocky build",
+                "Short, neatly combed hair with a slight wave",
+                "Often wears a tailored suit with a subtle pattern",
+                "Has a distinctive watch with multiple dials and a leather strap"
+            ]
+        },
+        "Finance Rep": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "Tall and slightly overweight with a round face",
+                "Short, neatly combed hair with a slight wave",
+                "Often wears a tailored suit with a subtle pattern",
+                "Wears colorful ties"
+            ]
+        }
+    },
+    "global_style": {
+        "style": "Render a Modern Graphic Novel with overall style aims for a distinctive, professional look that is approachable and technically accurate, drawing inspiration from educational graphic novels. It blends modern tech aesthetics with Kenyan-influenced design elements. The characters are designed to be relatable and aspirational, with a focus on diversity and representation. The environments reflect a blend of modern tech and traditional Kenyan elements, creating a unique visual identity. The art direction emphasizes clarity and precision, ensuring that technical concepts are easily understood while maintaining an engaging narrative flow.",
+        "line_style": "The recommended line style features clean, medium-weight lines with selective detail. The art direction includes semi-realistic facial expressions and body language (not overly cartoonish) and slightly stylized proportions for expressiveness. Technical elements should have a crisp, precise representation.",
+        "palette": [
+            "Primary Colors: Deep Indigo Blue (#2D3E50) for reliability and the banking sector, Vibrant Orange (#E67E22) drawing from Kenyan textiles and representing innovation, and Teal (#1ABC9C) for metrics and technical elements.",
+            "Supporting Colors: Warm Gray (#95A5A6) for backgrounds, Soft White (#ECF0F1) for text backgrounds, and Accent Red (#E74C3C) for alerts and warning states. This palette balances professional credibility with vibrant elements reflecting Ava's personality and heritage."
+        ],
+        "atmosphere": "Create through the environment and setting, which include modern tech environments with subtle African architectural elements, the Nairobi skyline featuring recognizable landmarks, and banking environments that mix traditional and modern tech elements.",
+        "speech_bubble_font": "clean comic lettering",
+        "text_padding_px": 5,
+        "bubble_avoid_edges": true,
+        "narration_box_position": "top",
+        "ensure_text_visible": true
+    },
+    "layout_rules": {
+        "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
+        "narration_box_position": "top",
+        "text_padding_px": 5
+    },
     "panels": [
         {
             "panel": 1,
