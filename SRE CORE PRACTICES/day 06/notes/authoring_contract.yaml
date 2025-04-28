@@ -44,39 +44,57 @@ authoring_contract:
       check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by a Markdown image line in the main content Markdown."
 
     allowed_inline_widgets: # Whitelist of custom markdown widget types.
+      - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
       - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
       - "Error Budget Meter"      # :::budget ... :::
       - "Wrist-Slap Moment"       # :::slap ... :::
       - "Nairobi Proverb"         # :::proverb ... :::
       - "Try This"                # :::exercise ... :::
-      - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
+      
     widget_syntax_hint: | # Hint for how to format inline widgets
       Use containers like
         :::wisdom
         **SRE Wisdom:** "Reliability you can measure ..."
         :::
+      Use fenced containers for widgets, e.g.
+      :::diagram
+      ```mermaid
+      sequenceDiagram
+        autonumber
+        Client->>API: POST /loan
+        API->>DB: INSERT row
+        DB-->>API: 201
+        API-->>Client: 200 OK
+      ```
+      :::
     try_this_frequency: # Specific rule for the "Try This" widget.
       per_chapter: true
       description: "The 'Try This' widget must be included at least once per chapter."
     split_delivery: # Rule for splitting large chapters into parts
       description: |
-        If the markdown output for a single chapter is expected to exceed
-        **15 000 tokens** (≈ 11 000 words including markup) **or**
-        **300 markdown lines**, the assistant MUST deliver the chapter in
-        multiple sequential parts within the same conversation thread.
         • Each part must begin with: <!-- Part A of Chapter <Number> -->  
-        • Each part must end   with: <!-- End Part A -->  
+        • Each part must end with: <!-- End Part A -->  
         • Parts must be labelled consecutively (Part A, Part B, Part C …).  
         • Every part must, on its own, respect heading order, cadence, widget-placement, and storytelling-ratio rules.  
         • The final part must include the chapter’s self-check table.
         • Every part must, on its own, respect the heading order,
         • cadence, widget-placement, and storytelling-ratio rules.
         • The final part must include the chapter’s self-check table.
+        If the markdown output for a single chapter is expected to exceed
+        **15 000 tokens** (≈ 11 000 words including markup) **or**
+        **300 markdown lines**, the assistant MUST deliver the chapter in
+        multiple sequential parts within the same conversation thread.
       max_tokens_per_part: 10_000   # soft cap for each conversational message
       naming_convention: "Part A, Part B, Part C, …"
       non_blocking: true  # Failure to split is not a content error but may breach delivery constraints
       check: "If the chapter exceeds 15 000 tokens or 300 lines, it must be split into multiple parts, each with correct heading order and cadence."
-
+    diagram_frequency:
+      per_unit_max: 1          # at most one Mermaid diagram per Teaching Narrative
+      description: |
+        Mermaid diagrams are optional but encouraged for flow- or state-heavy
+        concepts. A maximum of one Diagram widget may appear inside each
+        Teaching Narrative section to avoid visual overload.
+        If a diagram is used, it should be placed at the end of the Teaching Narrative section, before any image embeds or widgets.
 
   response_schema:
     # These define the main headings and their required order in the Markdown output sections that follow the Chapter Header.
@@ -193,6 +211,7 @@ authoring_contract:
     - "Only whitelisted widgets appear, using correct container syntax."
     - "'Try This' widget is included at least once per chapter."
     - "Chapters exceeding 15 000 tokens or 300 lines are split into labelled parts with correct comment markers."
+    - "If present, Mermaid diagrams are wrapped in a :::diagram widget, compile without errors, and no more than one appears per Teaching Narrative section."
 
 
   ambiguity_handling:
