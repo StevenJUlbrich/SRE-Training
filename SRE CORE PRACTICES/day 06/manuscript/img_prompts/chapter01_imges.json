@@ -58,105 +58,86 @@
     "text_padding_px": 5
   },
   "panels": [
-    {
-      "panel": 1,
-      "filename": "ch01_p01_rooftop_intro.png",
-      "scene_description": "Dawn panorama of Nairobi skyline. Ava stands front‑left on a coworking terrace, holding her 'Reliability you can measure' mug; indigo/orange palette.",
-      "characters_in_frame": ["ava"],
-      "speech_bubbles": {
-        "ava": "Morning, team. Let’s trade frantic fixes for measurable reliability."
-      },
-      "narration": "Silicon Savannah awakens."
-    },
-    {
-      "panel": 2,
-      "filename": "ch01_p02_banking_shift.png",
-      "scene_description": "Split panel: Left—1980s bank branch queue; Right—2025 customer frowning at phone displaying 'Transaction Failed'. Ava inset between, arms folded.",
-      "characters_in_frame": ["ava", "customer"],
-      "speech_bubbles": {
-        "ava": "Banking expectations changed—metrics didn’t keep up."
-      },
-      "narration": "From marble lobbies to mobile failures."
-    },
-    {
-      "panel": 3,
-      "filename": "ch01_p03_hero_burnout.png",
-      "scene_description": "War‑room at 03:17: tired engineers, pizza boxes, banner shows 99.999% uptime. Ava slaps her wrist while pointing at banner.",
-      "characters_in_frame": ["ava", "engineers"],
-      "speech_bubbles": {
-        "ava": "99.999 % of what, exactly?"
-      },
-      "narration": "Heroic firefighting is unsustainable."
-    },
-    {
-      "panel": 4,
-      "filename": "ch01_p04_sre_stairs.png",
-      "scene_description": "Metric‑labelled staircase: Incident Response → Monitoring → Testing → Prevention → Design for Reliability. Ava guides learners up steps.",
-      "characters_in_frame": ["ava", "learners"],
-      "speech_bubbles": {
-        "ava": "Heroes respond; architects anticipate."
-      },
-      "narration": "Climbing the SRE habit stack."
-    },
-    {
-      "panel": 5,
-      "filename": "ch01_p05_sli_thermometer.png",
-      "scene_description": "Close‑up: mobile phone overlayed with thermometer gauge labelled 'SLI'. Ava points with stylus.",
-      "characters_in_frame": ["ava"],
-      "speech_bubbles": {
-        "ava": "Measure what the user feels—nothing less."
-      },
-      "narration": "Service Level Indicators."
-    },
-    {
-      "panel": 6,
-      "filename": "ch01_p06_slo_contract.png",
-      "scene_description": "Conference table with executives; glowing contract icon shows '99.9 % in <500 ms'. Ava holds stopwatch.",
-      "characters_in_frame": ["ava", "engineers"],
-      "speech_bubbles": {
-        "ava": "An SLO turns numbers into promises."
-      },
-      "narration": "Service Level Objectives."
-    },
-    {
-      "panel": 7,
-      "filename": "ch01_p07_error_budget_tightrope.png",
-      "scene_description": "Ava balances on tightrope between towers labelled Innovation and Stability; piggy‑bank net below reads 'Error Budget'.",
-      "characters_in_frame": ["ava"],
-      "speech_bubbles": {
-        "ava": "Spend risk wisely—or deployments freeze."
-      },
-      "narration": "Error Budgets: innovation currency."
-    },
-    {
-      "panel": 8,
-      "filename": "ch01_p08_regulation_towers.png",
-      "scene_description": "Huge stack of banking regulations looms over city; Ava stands with clipboard; customers below.",
-      "characters_in_frame": ["ava"],
-      "speech_bubbles": {
-        "ava": "Reliability isn’t just goodwill—it’s compliance."
-      },
-      "narration": "Banking context & regulation."
-    },
-    {
-      "panel": 9,
-      "filename": "ch01_p09_tooling_workshop.png",
-      "scene_description": "Workshop table of labelled tools: Prometheus wrench, Grafana monitor, Splunk logbook, AWS cloud gear, K8s cog. Ava wearing safety goggles.",
-      "characters_in_frame": ["ava"],
-      "speech_bubbles": {
-        "ava": "Tools enable; discipline delivers."
-      },
-      "narration": "Observability toolkit."
-    },
-    {
-      "panel": 10,
-      "filename": "ch01_p10_roadmap_sign.png",
-      "scene_description": "Road sign with arrows to Metrics, SLOs, Error Budgets, Tooling, Governance. Ava points down the road; sunrise ahead.",
-      "characters_in_frame": ["ava"],
-      "speech_bubbles": {
-        "ava": "Pole pole—one reliable milestone at a time."
-      },
-      "narration": "The journey ahead."
-    }
-  ]
+{
+"panel": 1,
+"filename": "ch01_p01_rooftop_intro.png",
+"scene_description": "Rooftop sunrise over Nairobi tech district. Ava greets the reader with her 'Reliability you can measure' mug; indigo sky, teal dashboards faintly projected behind her.",
+"characters_in_frame": ["ava"],
+"speech_bubbles": {"ava": "Morning! Let’s trade green graphs for real reliability."},
+"narration": "Chapter 1 • Opening Compass"
+},
+{
+"panel": 2,
+"filename": "ch01_p02_branch_split.png",
+"scene_description": "Split panel: 1985 velvet-rope bank queue on left; 2025 cafe customer staring at spinning mobile payment on right.",
+"characters_in_frame": ["ava", "customer"],
+"speech_bubbles": {"ava": "Latency is the new queue length."},
+"narration": "Contrast of Eras"
+},
+{
+"panel": 3,
+"filename": "ch01_p03_hero_burnout.png",
+"scene_description": "War‑room at 03:17. Pager lights flash red. Ava slaps a 99.999% uptime banner off the wall.",
+"characters_in_frame": ["ava", "ops_lead"],
+"speech_bubbles": {"ava": "Uptime trophies don’t feed customers—speed does."},
+"narration": "Hero Culture Exposed"
+},
+{
+"panel": 4,
+"filename": "ch01_p04_sre_stairs.png",
+"scene_description": "Five-step staircase labelled Incident Response, Monitoring, Testing, Prevention, Design for Reliability; Ava leads team upward.",
+"characters_in_frame": ["ava", "team"],
+"speech_bubbles": {"ava": "Climb with metrics or slide in myths."},
+"narration": "SRE Staircase"
+},
+{
+"panel": 5,
+"filename": "ch01_p05_sli_phone_overlay.png",
+"scene_description": "Smartphone overlay with red latency bar and thermometer icon; background shows nervous customer.",
+"characters_in_frame": ["ava", "customer"],
+"speech_bubbles": {"ava": "Percentiles, not averages!"},
+"narration": "SLI Spotlight"
+},
+{
+"panel": 6,
+"filename": "ch01_p06_slo_contract.png",
+"scene_description": "Executive boardroom. Ava points to a glowing contract icon beside a stopwatch showing 30‑day window.",
+"characters_in_frame": ["ava", "executive"],
+"speech_bubbles": {"ava": "An SLO is a promise you can’t afford to break."},
+"narration": "SLO Defined"
+},
+{
+"panel": 7,
+"filename": "ch01_p07_error_budget_tightrope.png",
+"scene_description": "Ava balances on a tight‑rope labelled Innovation ↔ Stability, with an orange piggy‑bank safety net below.",
+"characters_in_frame": ["ava"],
+"speech_bubbles": {"ava": "Spend budget wisely—deployments depend on it."},
+"narration": "Error Budget in Action"
+},
+{
+"panel": 8,
+"filename": "ch01_p08_compliance_tower.png",
+"scene_description": "Towering stacks of compliance binders overshadow Ava holding a latency report.",
+"characters_in_frame": ["ava"],
+"speech_bubbles": {"ava": "Regulators don’t grade on a curve."},
+"narration": "Banking Compliance Context"
+},
+{
+"panel": 9,
+"filename": "ch01_p09_toolbench.png",
+"scene_description": "Workshop bench with labelled tools: Prometheus wrench, Loki screwdriver, Tempo hammer; Ava hands PromQL wrench to junior dev.",
+"characters_in_frame": ["ava", "junior_dev"],
+"speech_bubbles": {"ava": "Choose one source of truth for each pillar."},
+"narration": "SRE Tooling Toolbox"
+},
+{
+"panel": 10,
+"filename": "ch01_p10_roadmap.png",
+"scene_description": "Road sign under acacia tree pointing to Metrics, SLO Governance, Tracing, Incident Command, Culture.",
+"characters_in_frame": ["ava"],
+"speech_bubbles": {"ava": "Our journey continues—pole pole to mastery."},
+"narration": "Novella Roadmap"
+}
+]
+
 }

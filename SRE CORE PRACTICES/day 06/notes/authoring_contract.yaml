@@ -1,98 +1,128 @@
 authoring_contract:
+  # The primary output format is now Markdown, structured into sections defined by headings_in_order.
+  output_format: "Markdown"
+
   response_schema:
+    # These define the main headings and their required order in the Markdown output sections that follow the Chapter Header.
     headings_in_order:
       - "🎯 Learning Objective"
       - "✅ Takeaway"
-      - "🚦 Applied Example"    # <-- New section for real-world examples
-      - "Teaching Narrative"     # <-- Renamed from Prose
-      - "Image Embed"          # This section will now contain a reference to external image data
-    heading_content_schema: # Define the expected structure under each heading type in the main content YAML
-      "🎯 Learning Objective": {type: string, description: "The learning objective for the chapter or section."}
-      "✅ Takeaway":           {type: string, description: "The key takeaway or summary of the chapter or section."}
-      "🚦 Applied Example": # Schema for the new Applied Example block
-        type: object
-        required:
-          - query_log_snippet # Key for the technical snippet
-          - user_impact_note # Key for the user impact
-        properties:
-          query_log_snippet: {type: string, description: "A real-world query, log sample, or incident snippet (fenced code block recommended).", format: "code"}
-          user_impact_note: {type: string, description: "A one-line note explaining the user impact of the example."}
-        description: "A block showing a real query, log sample, or incident snippet with a 1-line user impact note, directly after each Takeaway."
-      "Teaching Narrative":    {type: string, description: "Detailed narrative prose content focusing on teaching."}
-      "Image Embed":
-        type: object # Expecting a YAML object (key-value pair) to reference external panel data
-        required: [panel_id]
-        properties:
-          panel_id: {type: integer, description: "References a panel definition by its unique 'panel' identifier in the external image data file."}
+      - "🚦 Applied Example"    # <-- Section for real-world examples
+      - "Teaching Narrative"     # <-- Main narrative and technical content section
+      - "Image Embed"          # This indicates where an image/diagram should be embedded, referencing external data.
 
-  # Removed panel_json_schema as the schema for panel data is defined in the external_image_data_schema section
+  # Removed heading_content_schema as content structure within sections is now defined by markdown_content_rules.
+
+  markdown_content_rules:
+    description: |
+      Rules governing the types of markdown elements and content allowed within the sections defined by headings_in_order.
+      Content within sections should flow naturally, incorporating paragraphs, code blocks, lists, blockquotes, images, and widgets as needed, following the cadence and prose requirements.
+    allowed_elements: # Types of markdown/content elements that can be used within sections
+      - "Paragraph"
+      - "Fenced Code Block"     # ```language...```
+      - "Inline Code"           # `code`
+      - "Blockquote"            # > text
+      - "List"                  # -, *, + or 1., 2.
+      - "Table"                 # | Header | ...
+      - "Markdown Image"        # ![alt](url){attributes}
+      - "Mermaid Diagram"       # ```mermaid ... ```
+      - "Allowed Inline Widget" # Custom :::widget::: blocks
 
   prose_requirements:
-    word_band: {min: 7800, max: 10000, description: "The total word count for the entire novella's prose content."}
-    chunk_size: {min: 400, max: 600, description: "The target word count range for each individual prose block."}
-    storytelling_ratio: # Replaces tech_scene_ratio to emphasize narrative balance
+    word_band: {min: 7800, max: 10000, description: "The total word count for the entire novella's prose content (excluding code blocks, tables, etc.)."}
+    chunk_size: {min: 800, max: 1500, description: "The target word count range for the prose content *within* each Teaching Narrative section (excluding code blocks, tables, etc.)."} # Increased chunk size range
+    storytelling_ratio: # Balances technical instruction with narrative/scene-setting within Teaching Narrative blocks.
       description: |
-        Each Teaching Narrative block must balance technical instruction with scene-setting and storytelling.
-        The scene-setting and storytelling content should be at least 20 % but not exceed 40 % to ensure sufficient technical depth.
-      min_scene_pct: 20
+        Within each Teaching Narrative section, the content must balance technical instruction (approx. 60-70%) with scene-setting, storytelling, dialogue, and reader engagement (approx. 30-40%).
+        Importantly, technical content should be integrated into the narrative flow, presented in a conversational style, and woven into storytelling elements rather than listed or explained separately in a dry manner. Explicit "Scene (X%)" and "Technical (Y%)" labels should NOT be included in the generated Markdown output. The ratio should be achieved implicitly through content composition.
+      min_scene_pct: 30
       max_scene_pct: 40
-    banking_context_anchor: # New rule to enforce banking relevance - moved description under the key
+    banking_context_anchor: # Enforces banking relevance.
       value: true
       description: "Ensures that each major unit or section of content is clearly tied back to banking industry concepts or examples."
-    voice_guideline: # New rules for mandatory persona elements
-      description: "Specific elements that must be included in the narrative voice."
-      must_include_per_unit:  # at least one element per Teaching Narrative
+    voice_guideline: # Rules for mandatory persona elements.
+      description: "Specific elements that must be included in the narrative voice to enhance conversational and mentoring tone. Placement for some elements is specified in format_rules."
+      must_include_per_unit: # Requires at least one of these elements within each unit/Teaching Narrative section.
         - "Swahili proverb"
         - "Wrist-Slap Moment"
+        - "Dialogue Line"   # At least two lines of character dialogue (Ava + other)
+        - "Learner Prompt"  # A direct question or reflective challenge to the reader
     perspective: "second-person teacher + narrative examples"
     prose_style: |
-      Fully narrative, conversational, detailed, and engaging. The conversational tone should feel like a mentor directly speaking to the reader, incorporating dialogue-rich examples and anecdotes. Explicitly avoid bullet points or lists unless necessary.
+      Fully narrative, conversational, detailed, and engaging. The conversational tone should feel like a mentor directly speaking to the reader, actively incorporating dialogue, relatable anecdotes, rhetorical questions, and direct prompts to the reader. Technical details and explanations should be seamlessly integrated into this narrative and conversational flow. Explicitly avoid bullet points or lists unless strictly necessary for clarity of technical steps or examples.
       Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate, fulfilling the voice guidelines.
-      # Removed duplicate description key here
 
   format_rules:
+    chapter_header_format: # Defined above for organization
+      description: "Each chapter's Markdown file must begin with a Chapter Header line."
+      format: "# Chapter <Number> – <Chapter Title>" # Example format
+      check: "Each Markdown file for a chapter starts with a correctly formatted Chapter Header line."
+    section_sequence: # Hint for the overall sequence of main sections/headings per unit.
+      pattern_hint: "(Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+"
+      description: "The suggested sequence of main sections (defined by headings_in_order) within each unit or chapter, following the Chapter Header."
+    cadence:
+      description: "Describes the typical alternation of key content elements *within* the Teaching Narrative sections and Image Embeds/Diagrams."
+      pattern: |
+        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget) # Alternating narrative blocks with images/diagrams, followed optionally by a voice widget.
+      max_consecutive_narrative_blocks: 1 # Cannot have two large narrative blocks without an image/diagram in between.
+      max_consecutive_images: 1 # Cannot have two images/diagrams without narrative in between.
     markdown_image_embed:
       description: |
-        After every Image Embed section (which references a panel ID from the external image data file), include a Markdown image reference line using the filename from the referenced panel:
-        ![Alt text](images/&lt;filename&gt;){width=&lt;px&gt;}
-      check: "Each Image Embed section in the main content YAML must be immediately followed by a matching Markdown image line referencing the correct filename from the external data."
-    cadence:
-      description: "The overall flow of content sections, starting with introductory elements, followed by alternating Teaching Narrative blocks and Image Embeds."
-      pattern_hint: "LO → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+" # Hint for the overall sequence structure
-      max_consecutive_prose: # Moved description under the key
-        value: 1
-        description: "Maximum number of consecutive Teaching Narrative blocks allowed."
-      max_consecutive_images: # Moved description under the key
-        value: 1
-        description: "Maximum number of consecutive Image Embed sections allowed."
+        When an Image Embed is required by the cadence, include a Markdown image reference line using the filename from the referenced panel in the external data file:
+        ![Alt text](images/<filename>){width=<px>}
+      check: "Each conceptual 'Image Embed' point in the cadence must be represented by a Markdown image line referencing an existing panel by filename from the external data."
+    voice_widget_placement: # New rule for specific voice widget placement
+      description: |
+        "Swahili proverb" and "Wrist-Slap Moment" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
+      check: "Swahili proverb and Wrist-Slap Moment widgets in the Markdown output are correctly placed after a related image embed when applicable."
     panel_ratio:
       min_images: 6
       max_images: 15
-      description: "The minimum and maximum number of static image panels required for the entire novella."
-      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by an Image Embed section in the main content YAML."
-    allowed_inline_widgets: # New rule for allowed inline elements
+      description: "The minimum and maximum number of static image panels required for the entire novella (defined in the external image data file)."
+      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by a Markdown image line in the main content Markdown."
+    allowed_inline_widgets: # Whitelist of custom markdown widget types.
       - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
       - "Error Budget Meter"      # :::budget ... :::
       - "Wrist-Slap Moment"       # :::slap ... :::
       - "Nairobi Proverb"         # :::proverb ... :::
       - "Try This"                # :::exercise ... :::
-      - "Diagram"                 # fenced ```mermaid``` or image
+      - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
     widget_syntax_hint: | # Hint for how to format inline widgets
-      Use containers like
+      Use fenced containers like
         :::wisdom
         **SRE Wisdom:** "Reliability you can measure ..."
         :::
+    try_this_frequency: # Specific rule for the "Try This" widget.
+      per_unit: true
+      description: "The 'Try This' widget must be included at least once per unit or chapter."
+    split_delivery:
+      description: |
+        If the markdown output for a single chapter is expected to exceed
+        **15 000 tokens** (≈ 11 000 words including markup) **or**
+        **300 markdown lines**, the assistant MUST deliver the chapter in
+        multiple sequential parts within the same conversation thread.
+        • Each part must begin with an HTML comment marker:
+            <!-- Part A of Chapter <Number> -->
+        • Each part must end with:
+            <!-- End Part A -->
+        • Parts must be labelled consecutively (Part A, Part B, Part C …).
+        • Every part must, on its own, respect the heading order,
+          cadence, widget-placement, and storytelling-ratio rules.
+        • The final part must include the chapter’s self-check table.
+      max_tokens_per_part: 10_000   # soft cap for each conversational message
+      naming_convention: "Part A, Part B, Part C, …"
+      non_blocking: true  # Failure to split is not a content error but may breach delivery constraints
 
   visual_guidelines:
     palette_style_ref: "house_palette_line_style.md"
     description: "Reference file for the visual color palette and line style."
-    prefer_diagrams: "mermaid" # Note: Mermaid diagrams are inline and don't use the external JSON file for definition
+    prefer_diagrams: "mermaid" # Note: Mermaid diagrams are inline Markdown and don't use the external JSON file for definition.
     character_presence:
       primary: "ava"
       rule: "At least 50 % of panels defined in the external image data file include Ava to anchor teaching voice"
       description: "Rule for including the primary character Ava in a majority of static panels."
 
-  # Section describing the schema of the external image data file (kept from previous version)
+  # Section describing the schema of the external image data file (remains the same as it defines the source data for images)
   external_image_data_schema:
     description: |
       A separate file (e.g., JSON) will contain an array of panel definitions that will be used by an external application to generate images. The structure and required fields for each panel object within this file are defined here.
@@ -115,7 +145,7 @@ authoring_contract:
           description: "The suggested filename for the generated image file (e.g., chXX_pNN_description.png). This filename is used in the Markdown image reference in the main content YAML."
         scene_description:
           type: string
-          description: "A clear and detailed description of the visual scene for image generation, including environment, character actions/expressions, and any on-screen text or labels."
+          description: "A clear and detailed description of the visual scene for image generation, including environment, character actions/expressions, and any on-screen text or labels. Ensure this description is detailed enough for image generation." # Enhanced description
         speech_bubbles:
           type: object
           description: "Dialogue text for characters within the panel, keyed by character name or identifier."
@@ -126,26 +156,31 @@ authoring_contract:
           nullable: true
 
   consistency_checklist:
-    - "Headings present & in required order in the main content YAML (Learning Objective, Takeaway, Applied Example, Teaching Narrative, Image Embed)" # Updated headings check
-    - "Word count within 7800–10000 band in the main content YAML prose"
-    - "Cadence pattern reflects the sequence of Learning Objective, Takeaway, Applied Example, and alternating Teaching Narrative/Image Embed blocks" # Updated cadence check
-    - "Image count 6–15 in the external image data file's panels array"
-    - "Mermaid diagrams as 'inline diagrams' that don't count against the static-panel quota (these appear directly as code blocks in the main content YAML, not in the external data file)"
-    - "Image Embed sections in main content YAML reference existing panels by 'panel_id' in the external image data file"
-    - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema"
-    - "Each Image Embed section in the main content YAML is immediately followed by a matching Markdown image line referencing the correct filename from the external data"
-    - "Mermaid blocks compile correctly (if used in the main content YAML)"
-    - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array"
-    - "Teaching Narrative blocks meet storytelling_ratio (20-40% scene)"
-    - "Banking context anchor is present per unit/section" # New checklist item for banking relevance
-    - "Voice guideline elements (Swahili proverb OR Wrist-Slap Moment) are included per unit/section" # New checklist item for voice elements
-    - "Applied Example block is present directly after each Takeaway and matches its schema" # New checklist item for Applied Example
-    - "Teaching Narrative explicitly detailed, narrative, conversational, without superficial summaries or excessive bullet points in the main content YAML" # Updated heading name
-    - "Only whitelisted widgets appear, using correct container syntax"
+    # Checks for the final Markdown output structure and content.
+    - "Chapter Header line is present and correctly formatted at the start of each chapter file."
+    - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter."
+    - "Word count within 7800–10000 band in the main content Markdown prose (excluding code, tables, etc.)."
+    - "Prose word count within each Teaching Narrative section is between 800 and 1500 words (excluding code, tables, etc.)." # Updated checklist item for chunk size adherence
+    - "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
+    - "Image count 6–15 in the external image data file's panels array."
+    - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
+    - "Each conceptual 'Image Embed' point in the cadence is represented by a Markdown image line referencing an existing panel by filename from the external data."
+    - "Mermaid diagrams compile correctly (if used as inline code blocks)."
+    - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
+    - "Teaching Narrative sections meet storytelling_ratio (30-40% scene, 60-70% tech), **without explicit Scene/Technical labels**."
+    - "Banking context anchor is clearly present per unit/section."
+    - "Voice guideline elements (Swahili proverb OR Wrist-Slap Moment OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
+    - "Swahili proverb and Wrist-Slap Moment widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
+    - "Applied Example block is present directly after each Takeaway section and matches its conceptual content (code snippet + user impact note)."
+    - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
+    - "Only whitelisted widgets appear, using correct container syntax."
+    - "'Try This' widget is included at least once per unit/chapter."
+    - "Chapters exceeding 15 000 tokens are delivered in sequential parts with correct Part markers"
+
 
   ambiguity_handling:
     explicit_instruction: |
-      If uncertain about the level of detail required, how to reference external image data using 'panel_id', how to use inline widgets, how to apply storytelling/banking context/voice guidelines, or any other rule, explicitly pause and request clarification—never default to condensed or overly summarized output.
+      If uncertain about the level of detail required for prose narratives, how to integrate technical content conversationally, how to apply storytelling/banking context/voice guidelines (including widget placement), how to use inline widgets, how to reference external image data, or any other rule for generating the Markdown output, explicitly pause and request clarification—never default to condensed or overly summarized output.
 
   escalation_rule: |
     If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
