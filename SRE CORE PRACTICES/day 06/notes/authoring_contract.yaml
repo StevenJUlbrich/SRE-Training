@@ -70,7 +70,7 @@ authoring_contract:
         • Every part must, on its own, respect heading order, cadence, widget-placement, and storytelling-ratio rules.  
         • The final part must include the chapter’s self-check table.
         • Every part must, on its own, respect the heading order,
-          cadence, widget-placement, and storytelling-ratio rules.
+        • cadence, widget-placement, and storytelling-ratio rules.
         • The final part must include the chapter’s self-check table.
       max_tokens_per_part: 10_000   # soft cap for each conversational message
       naming_convention: "Part A, Part B, Part C, …"

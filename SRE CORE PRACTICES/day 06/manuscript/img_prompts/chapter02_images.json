@@ -12,95 +12,192 @@
                 "small scar over right eyebrow, circuit-tattoo on right wrist",
                 "moves with confident, purposeful posture; frequent animated hand gestures"
             ]
-            },
+        },
         "customer": {
             "visual_tags": [
-            "diverse individual",
-            "younge age and styles",
-            "with mobile devices showing payment failures"
+                "diverse individual",
+                "younge age and styles",
+                "with mobile devices showing payment failures"
             ]
         },
         "engineers": {
             "visual_tags": [
-            "diverse group of engineers",
-            "various ages and styles",
-            "some in casual attire",
-            "others in sre-branded shirts"
+                "diverse group of engineers",
+                "various ages and styles",
+                "some in casual attire",
+                "others in sre-branded shirts"
             ]
         },
         "learners": {
             "visual_tags": [
-            "diverse group of learners",
-            "various ages and styles",
-            "some in casual attire",
-            "others in company-branded shirts"
+                "diverse group of learners",
+                "various ages and styles",
+                "some in casual attire",
+                "others in company-branded shirts"
+            ]
+        },
+        "ops_engineer": {
+            "visual_tags": [
+              "A focused operations engineer with rectangular glasses and a confident posture, wearing business casual attire with an ID badge and smartwatch.",
+              "They have a slightly tired but alert expression,",
+              "carrying a laptop adorned with cloud platform stickers and a coffee mug emblazoned with a reliability slogan"
+            ]
+        },
+        "compliance_officer": {
+            "visual_tags": [
+                "A compliance officer with a professional demeanor, wearing a tailored suit and glasses.",
+                "They have a clipboard or tablet in hand, with a focused expression,",
+                "and are often seen reviewing documents or checking compliance metrics."
+            ]
+        },
+        "junior_engineer": {
+            "visual_tags": [
+                "A junior engineer with a curious expression, wearing casual attire and a company-branded hoodie.",
+                "They have a laptop open in front of them, with a mix of excitement and confusion on their face.",
+                "Often depicted with a notepad or tablet, taking notes or asking questions."
             ]
         }
     },
     "global_style": {
         "style": "Render a Modern Graphic Novel with overall style aims for a distinctive, professional look that is approachable and technically accurate, drawing inspiration from educational graphic novels. It blends modern tech aesthetics with Kenyan-influenced design elements. The characters are designed to be relatable and aspirational, with a focus on diversity and representation. The environments reflect a blend of modern tech and traditional Kenyan elements, creating a unique visual identity. The art direction emphasizes clarity and precision, ensuring that technical concepts are easily understood while maintaining an engaging narrative flow.",
         "line_style": "The recommended line style features clean, medium-weight lines with selective detail. The art direction includes semi-realistic facial expressions and body language (not overly cartoonish) and slightly stylized proportions for expressiveness. Technical elements should have a crisp, precise representation.",
-        "palette": ["Primary Colors: Deep Indigo Blue (#2D3E50) for reliability and the banking sector, Vibrant Orange (#E67E22) drawing from Kenyan textiles and representing innovation, and Teal (#1ABC9C) for metrics and technical elements.", "Supporting Colors: Warm Gray (#95A5A6) for backgrounds, Soft White (#ECF0F1) for text backgrounds, and Accent Red (#E74C3C) for alerts and warning states. This palette balances professional credibility with vibrant elements reflecting Ava's personality and heritage."    ],
+        "palette": [
+            "Primary Colors: Deep Indigo Blue (#2D3E50) for reliability and the banking sector, Vibrant Orange (#E67E22) drawing from Kenyan textiles and representing innovation, and Teal (#1ABC9C) for metrics and technical elements.",
+            "Supporting Colors: Warm Gray (#95A5A6) for backgrounds, Soft White (#ECF0F1) for text backgrounds, and Accent Red (#E74C3C) for alerts and warning states. This palette balances professional credibility with vibrant elements reflecting Ava's personality and heritage."
+        ],
         "atmosphere": "Create through the environment and setting, which include modern tech environments with subtle African architectural elements, the Nairobi skyline featuring recognizable landmarks, and banking environments that mix traditional and modern tech elements.",
         "speech_bubble_font": "clean comic lettering",
         "text_padding_px": 5,
         "bubble_avoid_edges": true,
         "narration_box_position": "top",
         "ensure_text_visible": true
-      },
+    },
     "layout_rules": {
         "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
         "narration_box_position": "top",
         "text_padding_px": 5
-      },
+    },
     "panels": [
-      {
-        "panel": 1,
-        "filename": "ch02_p01_customer_journey.png",
-        "scene_description": "Horizontal infographic: mobile user taps ‘Pay’; flow arrows through API Gateway, micro‑services, ledger DB, notification service, back to user. Ava at bottom with laser pointer. Teal/indigo palette, crisp line art, cel shading; subtle Kenyan kitenge pattern border.",
-        "characters_in_frame": ["ava"],
-        "speech_bubbles": { "ava": "Trace every hop—because users feel every hop." },
-        "narration": "A payment’s real journey is longer than a single API call." 
-      },
-      {
-        "panel": 2,
-        "filename": "ch02_p02_latency_overlay.png",
-        "scene_description": "Same journey now overlaid with red latency bars (900 ms at DB, 700 ms at fraud‑check). Stopwatch icons. Ava inset eye‑brow raised.",
-        "characters_in_frame": ["ava"],
-        "speech_bubbles": { "ava": "Users don’t queue on JVM heap—they queue right here." },
-        "narration": "Latency has an address—pin it." 
-      },
-      {
-        "panel": 3,
-        "filename": "ch02_p03_green_vs_red.png",
-        "scene_description": "Split frame: Left—NOC wall green dashboards; Right—customer phone ‘Payment Failed’. Ava between panels wrist‑slap pose.",
-        "characters_in_frame": ["ava", "customer"],
-        "speech_bubbles": { "ava": "Green dashboards ≠ happy customers." },
-        "narration": "Host metrics alone can deceive." 
-      },
-      {
-        "panel": 4,
-        "filename": "ch02_p04_golden_signals.png",
-        "scene_description": "Four circular gauges labelled Rate, Errors, Duration, Saturation; Ava points to Errors gauge spiking. Background faint grid of payment icons.",
-        "characters_in_frame": ["ava"],
-        "speech_bubbles": { "ava": "Four signals—one story: user experience." },
-        "narration": "Golden Signals, banking style." 
-      },
-      {
-        "panel": 5,
-        "filename": "ch02_p05_sli_checklist.png",
-        "scene_description": "Whiteboard with three SLI candidates; Ava ticks user‑centric one, crosses host‑centric one. Learner peers nodding.",
-        "characters_in_frame": ["ava", "learners"],
-        "speech_bubbles": { "ava": "If the user can’t sense it, it’s not an SLI." },
-        "narration": "Designing solid indicators." 
-      },
-      {
-        "panel": 6,
-        "filename": "ch02_p06_case_fix.png",
-        "scene_description": "Dashboard ‘Before / After’ split: left red error columns, right green post‑fix; Error‑Budget meter from 20 % → 80 %. Ava thumbs‑up.",
-        "characters_in_frame": ["ava"],
-        "speech_bubbles": { "ava": "Measure, fix, confirm—repeat." },
-        "narration": "Closing the loop." 
-      }
+        {
+            "panel": 1,
+            "filename": "ch02_p01_spike_dashboard.png",
+            "scene_description": "Split dashboard: left pane shows server CPU graph flat green, right pane shows p99 latency graph spiking red at 07:00; Ava stands pointing at the red spike while a junior engineer stares, confused.",
+            "characters_in_frame": [
+                "ava",
+                "junior_engineer"
+            ],
+            "speech_bubbles": {
+                "ava": "See? Green servers, red customers.",
+                "junior_engineer": "Our CPU's fine—why are payments timing‑out?"
+            },
+            "narration": "Latency spike contradicts host metrics"
+        },
+        {
+            "panel": 2,
+            "filename": "ch02_p02_red_use_map.png",
+            "scene_description": "Service map of Matunda Bank's payment mesh; each node tagged with RED or USE metric icons; Ava overlays colour layers explaining flow.",
+            "characters_in_frame": [
+                "ava"
+            ],
+            "speech_bubbles": {
+                "ava": "Every hop gets a Rate, Error, Duration – or it doesn’t ship."
+            },
+            "narration": "RED/USE metric overlay"
+        },
+        {
+            "panel": 3,
+            "filename": "ch02_p03_histogram_buckets.png",
+            "scene_description": "Bar ladder comparing default 10\u202fs Prometheus buckets (few tall bars) vs custom sub‑second buckets (granular); Ava holds a magnifying glass over the 1‑2\u202fs region.",
+            "characters_in_frame": [
+                "ava"
+            ],
+            "speech_bubbles": {
+                "ava": "Granularity reveals pain the averages hide."
+            },
+            "narration": "Histogram hygiene"
+        },
+        {
+            "panel": 4,
+            "filename": "ch02_p04_budget_meter.png",
+            "scene_description": "Grafana gauge marked Error Budget: needle moving from green to amber; piggy‑bank icon losing coins; Ava points while ops lead sweats.",
+            "characters_in_frame": [
+                "ava",
+                "ops_lead"
+            ],
+            "speech_bubbles": {
+                "ava": "65\u202f% spent—freeze before it’s gone!"
+            },
+            "narration": "Live error‑budget meter"
+        },
+        {
+            "panel": 5,
+            "filename": "ch02_p05_burn_rate_alert.png",
+            "scene_description": "Dual sparkline dashboard: 1\u202fh burn‑rate crosses red line while 6\u202fh also rising; PagerDuty icon pings once (not flood). Ava thumbs‑up.",
+            "characters_in_frame": [
+                "ava"
+            ],
+            "speech_bubbles": {
+                "ava": "One page, not fifty."
+            },
+            "narration": "Noise‑cut burn‑rate alert"
+        },
+        {
+            "panel": 6,
+            "filename": "ch02_p06_sre_overview.png",
+            "scene_description": "Clean 3‑panel Grafana board: latency heatmap, success ratio gauge, budget meter; compliance officer snaps a screenshot.",
+            "characters_in_frame": [
+                "ava",
+                "compliance_officer"
+            ],
+            "speech_bubbles": {
+                "compliance_officer": "Perfect for the CBK audit file."
+            },
+            "narration": "Human‑readable SRE overview"
+        },
+        {
+            "panel": 7,
+            "filename": "ch02_p07_tuning_drill.png",
+            "scene_description": "Before/after latency sparkline overlay: red spikes shrink after bucket change; junior engineer fist‑bumps Ava.",
+            "characters_in_frame": [
+                "ava",
+                "junior_engineer"
+            ],
+            "speech_bubbles": {
+                "junior_engineer": "Abandon dropped 5\u202f%!"
+            },
+            "narration": "Metric tuning drill"
+        },
+        {
+            "panel": 8,
+            "filename": "ch02_p08_next_chapter_teaser.png",
+            "scene_description": "Road sign pointing to Chapter 3 – SLO Governance; sunset backdrop; Ava waves the reader onward.",
+            "characters_in_frame": [
+                "ava"
+            ],
+            "speech_bubbles": {
+                "ava": "Next: policies that enforce these numbers."
+            },
+            "narration": "Teaser for Chapter 3"
+        },
+        {
+            "panel": 9,
+            "filename": "ch02_p09_zoom_in_bucket_math.png",
+            "scene_description": "Small inset panel: whiteboard math deriving bucket boundaries (<2\u202fs need 0.2\u202fs granularity).",
+            "characters_in_frame": [
+                "ava"
+            ],
+            "speech_bubbles": {
+                "ava": "0.2\u202fs buckets catch the real tail."
+            },
+            "narration": "Bucket math zoom‑in"
+        },
+        {
+            "panel": 10,
+            "filename": "ch02_p10_dual_burn_lines.png",
+            "scene_description": "Small call‑out: overlay graph showing 1\u202fh vs 6\u202fh burn‑rate diverging; red threshold line.",
+            "characters_in_frame": [],
+            "speech_bubbles": {},
+            "narration": "Dual burn‑rate call‑out"
+        }
     ]
-  }
+}
