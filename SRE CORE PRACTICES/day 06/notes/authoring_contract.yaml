@@ -56,8 +56,28 @@ authoring_contract:
         **SRE Wisdom:** "Reliability you can measure ..."
         :::
     try_this_frequency: # Specific rule for the "Try This" widget.
-      per_unit: true
-      description: "The 'Try This' widget must be included at least once per unit or chapter."
+      per_chapter: true
+      description: "The 'Try This' widget must be included at least once per chapter."
+    split_delivery: # Rule for splitting large chapters into parts
+      description: |
+        If the markdown output for a single chapter is expected to exceed
+        **15 000 tokens** (≈ 11 000 words including markup) **or**
+        **300 markdown lines**, the assistant MUST deliver the chapter in
+        multiple sequential parts within the same conversation thread.
+        • Each part must begin with an HTML comment marker:
+            • Each part must end with:
+            <!-- End Part A -->
+            • Each part must begin with an HTML comment marker:
+            <!-- Part A of Chapter <Number> -->
+            • Parts must be labelled consecutively (Part A, Part B, Part C …).
+        • Every part must, on its own, respect the heading order,
+          cadence, widget-placement, and storytelling-ratio rules.
+        • The final part must include the chapter’s self-check table.
+      max_tokens_per_part: 10_000   # soft cap for each conversational message
+      naming_convention: "Part A, Part B, Part C, …"
+      non_blocking: true  # Failure to split is not a content error but may breach delivery constraints
+      check: "If the chapter exceeds 15 000 tokens or 300 lines, it must be split into multiple parts, each with correct heading order and cadence."
+
 
   response_schema:
     # These define the main headings and their required order in the Markdown output sections that follow the Chapter Header.
@@ -86,7 +106,7 @@ authoring_contract:
       - "Allowed Inline Widget" # Custom :::widget::: blocks
 
   prose_requirements:
-    word_band: {min: 7800, max: 10000, description: "The total word count for the entire *chapter* prose content (excluding code blocks, tables, etc.)."}
+    word_band: {min: 9200, max: 15000, description: "The total word count for the entire *chapter* prose content (excluding code blocks, tables, etc.)."}
     chunk_size: {min: 1200, max: 1500, description: "The target word count range for the prose content *within* each Teaching Narrative section (excluding code blocks, tables, etc.)."} # Increased chunk size range significantly
     storytelling_ratio: # Balances technical instruction with narrative/scene-setting within Teaching Narrative blocks.
       description: |
@@ -157,7 +177,7 @@ authoring_contract:
     - "Chapter Header line is present and correctly formatted at the start of each chapter file."
     - "Chapter Overview is present, correctly placed (after header, before first main section heading), and meets the length and content requirements." # New checklist item for overview
     - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview." # Updated check
-    - "Word count within 7800–10000 band in the main content Markdown prose (excluding code, tables, etc.)."
+    - "Word count within 9200–15000 band in the main content Markdown prose (excluding code, tables, etc.)."
     - "Prose word count within each Teaching Narrative section is between 1200 and 1500 words (excluding code, tables, etc.)." # Updated checklist item for chunk size adherence
     - "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
     - "Image count 6–15 in the external image data file's panels array."
@@ -172,7 +192,8 @@ authoring_contract:
     - "Applied Example block is present directly after each Takeaway section and matches its conceptual content (code snippet + user impact note)."
     - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
     - "Only whitelisted widgets appear, using correct container syntax."
-    - "'Try This' widget is included at least once per unit/chapter."
+    - "'Try This' widget is included at least once per chapter."
+
 
   ambiguity_handling:
     explicit_instruction: |
