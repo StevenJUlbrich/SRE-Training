@@ -102,21 +102,7 @@ Management accepts 99.9 %—ambitious but not fantasy.
 
 Ava draws a 2×2 matrix: **short vs long window** on one axis, **high vs low target** on the other. Short windows catch micro-regressions but punish seasonality; long windows even out spikes but mask week-end drift.
 
-Mermaid diagram:
 
-:::diagram  
-```mermaid
-quadrantChart
-  title SLO Design Space
-  x-axis Short Window --> Long Window
-  y-axis Low Target --> High Target
-  data
-    "Loose": [0.3,0.3]
-    "Aggressive": [0.8,0.8]
-    "Stretch": [0.8,0.3]
-    "Masking": [0.3,0.8]
-```  
-:::
 
 They simulate three-day vs thirty-day windows. The three-day variant would have frozen deploys six times last quarter; the thirty-day froze once. Balance: pick 30-day window, 99.9 % target. Ember agrees.
 
