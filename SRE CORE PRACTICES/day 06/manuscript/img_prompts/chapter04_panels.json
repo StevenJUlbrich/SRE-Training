@@ -1,0 +1,120 @@
+{
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch04_p01_indicators_to_objectives.png",
+            "scene_description": "Conference table; Ava draws SLO formula while Aisha and Emmanuel watch graphs.",
+            "characters_in_frame": [
+                "Ava",
+                "Aisha",
+                "Emmanuel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Indicator plus percentage equals a promise.",
+                "Aisha": "And the 0.1 % is our runway."
+            },
+            "narration": "Linking SLIs to SLO targets."
+        },
+        {
+            "panel": 2,
+            "filename": "ch04_p02_historical_analysis.png",
+            "scene_description": "Violin chart of latency tails; Ava points at crimson extreme; Aisha notes budget burn.",
+            "characters_in_frame": [
+                "Ava",
+                "Aisha"
+            ],
+            "speech_bubbles": {
+                "Ava": "Historic tail dictates realistic target.",
+                "Aisha": "67 % budget burned—stretch but feasible."
+            },
+            "narration": "Mining history to size error budgets."
+        },
+        {
+            "panel": 3,
+            "filename": "ch04_p03_target_window.png",
+            "scene_description": "Quadrant matrix on screen; Ava moves sticky from masking to stretch quadrant.",
+            "characters_in_frame": [
+                "Ava",
+                "Emmanuel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Long window smooths noise; high target raises bar.",
+                "Emmanuel": "Stretch, not fantasy."
+            },
+            "narration": "Choosing percentage and window."
+        },
+        {
+            "panel": 4,
+            "filename": "ch04_p04_stakeholder_comms.png",
+            "scene_description": "Stakeholder meeting; risk officer scowls, marketing lead curious; Aisha presents badge.",
+            "characters_in_frame": [
+                "Aisha",
+                "Risk Officer",
+                "Marketing Lead",
+                "Ava"
+            ],
+            "speech_bubbles": {
+                "Aisha": "99.9 % isn’t perfection; it’s honesty.",
+                "Risk Officer": "And the failure slice?"
+            },
+            "narration": "Winning cross-functional approval."
+        },
+        {
+            "panel": 5,
+            "filename": "ch04_p05_sloth_tooling.png",
+            "scene_description": "Terminal shows `sloth generate`; Ava wrist-slaps Emmanuel’s sample file.",
+            "characters_in_frame": [
+                "Ava",
+                "Emmanuel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Measure your own history!",
+                "Emmanuel": "Copy-paste bad—got it."
+            },
+            "narration": "Generating Prometheus rules from SLO YAML."
+        },
+        {
+            "panel": 6,
+            "filename": "ch04_p06_version_control.png",
+            "scene_description": "GitHub PR with green checks; Ava reviews; learner waits.",
+            "characters_in_frame": [
+                "Ava",
+                "Learner"
+            ],
+            "speech_bubbles": {
+                "Ava": "Badge CI passed—nice.",
+                "Learner": "SLO-as-code feels powerful."
+            },
+            "narration": "Version-controlled SLOs."
+        },
+        {
+            "panel": 7,
+            "filename": "ch04_p07_governance.png",
+            "scene_description": "Dashboard with error-budget meter; headroom needle in green; Ava explains to risk.",
+            "characters_in_frame": [
+                "Ava",
+                "Risk Officer"
+            ],
+            "speech_bubbles": {
+                "Risk Officer": "Meter amber triggers freeze?",
+                "Ava": "Exactly—before users feel pain."
+            },
+            "narration": "Governance policy in action."
+        },
+        {
+            "panel": 8,
+            "filename": "ch04_p08_aisha_budget_decision.png",
+            "scene_description": "War-room screen shows 62 % budget burned; Aisha decides freeze; team nods.",
+            "characters_in_frame": [
+                "Aisha",
+                "Ava",
+                "Emmanuel"
+            ],
+            "speech_bubbles": {
+                "Aisha": "Hotfix only—feature deploys frozen.",
+                "Ava": "Good budget stewardship."
+            },
+            "narration": "First real budget decision."
+        }
+    ]
+}
