@@ -171,5 +171,93 @@
         "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
         "narration_box_position": "top",
         "text_padding_px": 5
-    }
+    },
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch05_p01_why_budgets.png",
+            "scene_description": "Night war-room; Daniel’s laptop shows red latency graph; Ava points to budget meter.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Each deploy spends trust.",
+                "Daniel": "Didn’t know we had an overdraft!"
+            },
+            "narration": "Introducing error-budget concept."
+        },
+        {
+            "panel": 2,
+            "filename": "ch05_p02_budget_math.png",
+            "scene_description": "Whiteboard table of target vs seconds; Risk Officer Kamau ponders while Ava explains.",
+            "characters_in_frame": [
+                "Ava",
+                "Aisha",
+                "Risk Officer Kamau"
+            ],
+            "speech_bubbles": {
+                "Ava": "Lower target, higher runway—but less trust.",
+                "Kamau": "Balance cost and reliability."
+            },
+            "narration": "Calculating budget seconds."
+        },
+        {
+            "panel": 3,
+            "filename": "ch05_p03_burn_rate.png",
+            "scene_description": "Grafana burn-rate sparkline spikes; Ava and Daniel tweak alert thresholds.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Daniel": "14× pages in one hour?",
+                "Ava": "Empty budget in a day—yes."
+            },
+            "narration": "Configuring burn-rate alerts."
+        },
+        {
+            "panel": 4,
+            "filename": "ch05_p04_policy_tree.png",
+            "scene_description": "Decision tree flowchart; Ava wrist-slaps Daniel’s hand hovering over deploy button.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Freeze—budget 84 % burned.",
+                "Daniel": "Feature can wait."
+            },
+            "narration": "Applying freeze policy."
+        },
+        {
+            "panel": 5,
+            "filename": "ch05_p05_budget_dashboard.png",
+            "scene_description": "Composite dashboard: budget dial, burn-rate line, freeze badge; Slack bot post on side monitor.",
+            "characters_in_frame": [
+                "Ava",
+                "Marketing Lead"
+            ],
+            "speech_bubbles": {
+                "Marketing Lead": "Green badge boosts store rating!",
+                "Ava": "Honesty sells reliability."
+            },
+            "narration": "Communicating budget status company-wide."
+        },
+        {
+            "panel": 6,
+            "filename": "ch05_p06_daniel_freeze.png",
+            "scene_description": "War-room screen shows 18 % budget left; Daniel signs FREEZE.md while Ava nods.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel",
+                "Aisha"
+            ],
+            "speech_bubbles": {
+                "Daniel": "Freeze in place—hot-fix only.",
+                "Ava": "Wise call. Budget heals trust."
+            },
+            "narration": "Daniel’s first budget-driven freeze."
+        }
+    ]
 }

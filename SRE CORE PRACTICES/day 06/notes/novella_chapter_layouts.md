@@ -61,14 +61,14 @@ Here's a proposed chapter breakdown for the complete illustrated novella, target
 - Containerized reliability practices
 - Platform-specific considerations
 - Njeri (network engineer) connects infrastructure to application reliability
-- Use a minimum of 8 Panles
+- Use a minimum of 10 Panles
 
 **Chapter 9: SRE for Critical Banking Functions**
 - Transaction processing reliability
 - Account management service SLOs
 - Payment system reliability
 - Jamal (Customer Experience Director) shares real customer impact stories
-- Use a minimum of 6 Panles
+- Use a minimum of 12 Panles
 
 ### PART III: MASTERY (Advanced Tier)
 
@@ -84,14 +84,14 @@ Here's a proposed chapter breakdown for the complete illustrated novella, target
 - Measuring and communicating reliability
 - SLOs in marketing and customer trust
 - Strategic reliability investments
-- Use a minimum of 6 Panles
+- Use a minimum of 10 Panles
 
 **Chapter 12: Building an SRE Culture**
 - From knowledge to culture change
 - Training and mentoring others
 - The future of banking reliability
 - The learner characters show their growth and new capabilities
-- Use a minimum of 6 Panles
+- Use a minimum of 10 Panles
 
 **Appendix: Practical Worksheets and Resources** 
 - SLI/SLO worksheets

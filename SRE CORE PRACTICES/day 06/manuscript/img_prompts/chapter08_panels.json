@@ -1,0 +1,145 @@
+{
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch08_p01_eks_arch.png",
+            "scene_description": "EKS multi-AZ architecture diagram on screen; Ava and Njeri discuss NAT bottleneck.",
+            "characters_in_frame": [
+                "Ava",
+                "Njeri"
+            ],
+            "speech_bubbles": {
+                "Ava": "Single NAT, single point of failure.",
+                "Njeri": "Let’s add gateway per AZ."
+            },
+            "narration": "Mapping the initial cluster."
+        },
+        {
+            "panel": 2,
+            "filename": "ch08_p02_k8s_slis.png",
+            "scene_description": "Grafana p99 latency panel, readiness probes; Ava points to bucket lines.",
+            "characters_in_frame": [
+                "Ava",
+                "Njeri"
+            ],
+            "speech_bubbles": {
+                "Ava": "Latency buckets beat CPU.",
+                "Njeri": "Autoscaler will love this."
+            },
+            "narration": "Instrumenting SLIs."
+        },
+        {
+            "panel": 3,
+            "filename": "ch08_p03_network_flows.png",
+            "scene_description": "Calico policy diagram; ENI icons; Njeri explains flows to Ava.",
+            "characters_in_frame": [
+                "Ava",
+                "Njeri"
+            ],
+            "speech_bubbles": {
+                "Njeri": "Policy allows only queue port.",
+                "Ava": "And latency drops 7 ms."
+            },
+            "narration": "Hardening networking."
+        },
+        {
+            "panel": 4,
+            "filename": "ch08_p04_autoscaling.png",
+            "scene_description": "Autoscaling gauges; Ava wrist-slaps CPU metric.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "CPU is vanity!",
+                "Daniel": "Switching to latency."
+            },
+            "narration": "Smart autoscaling."
+        },
+        {
+            "panel": 5,
+            "filename": "ch08_p05_pdb.png",
+            "scene_description": "Node drain animation stalls at last pod; Ava shows PDB config.",
+            "characters_in_frame": [
+                "Ava",
+                "Learner"
+            ],
+            "speech_bubbles": {
+                "Learner": "Drain blocked?",
+                "Ava": "PDB saving budget."
+            },
+            "narration": "Protecting pods during maintenance."
+        },
+        {
+            "panel": 6,
+            "filename": "ch08_p06_multi_az_fail.png",
+            "scene_description": "Chaos Mesh red X on AZ-A; burn-rate gauge amber; Ava & Njeri calm.",
+            "characters_in_frame": [
+                "Ava",
+                "Njeri"
+            ],
+            "speech_bubbles": {
+                "Njeri": "Budget burn 11 %.",
+                "Ava": "Within tolerance."
+            },
+            "narration": "Simulating AZ outage."
+        },
+        {
+            "panel": 7,
+            "filename": "ch08_p07_cross_region.png",
+            "scene_description": "Route 53 weighted records; Aurora Global DB replica; Malik observing.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Malik": "Fail-over in 42 s!",
+                "Ava": "SLO intact."
+            },
+            "narration": "Cross-region resilience."
+        },
+        {
+            "panel": 8,
+            "filename": "ch08_p08_cost_dash.png",
+            "scene_description": "Cost Explorer pie overlay; finance analyst nods; Ava explains.",
+            "characters_in_frame": [
+                "Ava",
+                "Finance Analyst"
+            ],
+            "speech_bubbles": {
+                "Finance Analyst": "Cost spike justified.",
+                "Ava": "Trust isn’t free."
+            },
+            "narration": "Cost-aware dashboards."
+        },
+        {
+            "panel": 9,
+            "filename": "ch08_p09_runbook_tf.png",
+            "scene_description": "Slack alert with runbook & module buttons; Daniel clicks.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Daniel": "Straight to code!",
+                "Ava": "Faster fixes."
+            },
+            "narration": "Runbook + IaC link."
+        },
+        {
+            "panel": 10,
+            "filename": "ch08_p10_post_incident.png",
+            "scene_description": "Incident timeline on monitor; Ava, Njeri, Kamau reviewing.",
+            "characters_in_frame": [
+                "Ava",
+                "Njeri",
+                "Risk Officer Kamau"
+            ],
+            "speech_bubbles": {
+                "Kamau": "Budget at 78 %—good call.",
+                "Njeri": "Runbook followed perfectly."
+            },
+            "narration": "Post-incident review."
+        }
+    ]
+}

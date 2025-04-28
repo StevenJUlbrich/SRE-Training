@@ -151,6 +151,16 @@
                 "Often wears a tailored suit with a subtle pattern",
                 "Has a distinctive watch with multiple dials and a leather strap"
             ]
+        },
+        "Finance Rep": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "Tall and slightly overweight with a round face",
+                "Short, neatly combed hair with a slight wave",
+                "Often wears a tailored suit with a subtle pattern",
+                "Wears colorful ties"
+            ]
         }
     },
     "global_style": {
@@ -171,5 +181,176 @@
         "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
         "narration_box_position": "top",
         "text_padding_px": 5
-    }
+    },
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch06_p01_prom_install.png",
+            "scene_description": "Daniel installs Prometheus; Ava points at secure TLS settings.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "TLS first, metrics second.",
+                "Daniel": "Copy that!"
+            },
+            "narration": "Secure Prometheus setup."
+        },
+        {
+            "panel": 2,
+            "filename": "ch06_p02_grafana_dash.png",
+            "scene_description": "Grafana dashboard with golden-signal gauges; Malik impressed.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Malik": "CEO will like this.",
+                "Ava": "Keep it green."
+            },
+            "narration": "Storytelling dashboards."
+        },
+        {
+            "panel": 3,
+            "filename": "ch06_p03_splunk_query.png",
+            "scene_description": "Splunk SPL window; error-latency chart spikes red.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Silent errors revealed.",
+                "Daniel": "Correlation FTW."
+            },
+            "narration": "Hunting unknowns."
+        },
+        {
+            "panel": 4,
+            "filename": "ch06_p04_signal_flow.png",
+            "scene_description": "Mermaid sequence on screen; Ava wrist-slaps Daniel.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Label your jobs!",
+                "Daniel": "Ouch—fixing!"
+            },
+            "narration": "End-to-end golden signals."
+        },
+        {
+            "panel": 5,
+            "filename": "ch06_p05_burn_alert.png",
+            "scene_description": "Slack alert message; Ava and Daniel celebrate successful test.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Daniel": "Alert fired!",
+                "Ava": "Budget guard online."
+            },
+            "narration": "Burn-rate alerting."
+        },
+        {
+            "panel": 6,
+            "filename": "ch06_p06_boardroom_tv.png",
+            "scene_description": "Boardroom TV shows simplified KPIs; Marketing Lead smiles.",
+            "characters_in_frame": [
+                "Ava",
+                "Marketing Lead",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Marketing Lead": "Shiny and clear!",
+                "Ava": "Truth sells."
+            },
+            "narration": "Exec-friendly dashboards."
+        },
+        {
+            "panel": 7,
+            "filename": "ch06_p07_security.png",
+            "scene_description": "Risk Officer Kamau checks cipher list; Ava thumbs-up.",
+            "characters_in_frame": [
+                "Ava",
+                "Risk Officer Kamau"
+            ],
+            "speech_bubbles": {
+                "Kamau": "Compliance passes.",
+                "Ava": "Onward!"
+            },
+            "narration": "Securing the stack."
+        },
+        {
+            "panel": 8,
+            "filename": "ch06_p08_malik_rollout.png",
+            "scene_description": "Malik selfie with green budget dial; Ava beside him.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Malik": "Prod telemetry live!",
+                "Ava": "Trust illuminated."
+            },
+            "narration": "Production rollout success."
+        },
+        {
+            "panel": 9,
+            "filename": "ch06_p09_alertmanager_routing.png",
+            "scene_description": "Alertmanager routing tree; exec Slack message preview.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Ava": "Execs see only the worst.",
+                "Malik": "Signal over noise."
+            },
+            "narration": "Routing critical alerts."
+        },
+        {
+            "panel": 10,
+            "filename": "ch06_p10_grafana_oncall.png",
+            "scene_description": "Grafana OnCall escalation chain UI; phones buzz.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Daniel": "Escalation works!",
+                "Ava": "Sleep preserved."
+            },
+            "narration": "On-call escalations."
+        },
+        {
+            "panel": 11,
+            "filename": "ch06_p11_splunk_correlation.png",
+            "scene_description": "Splunk glass-table linking metrics-logs-traces; nodes glow red.",
+            "characters_in_frame": [
+                "Ava",
+                "Learner"
+            ],
+            "speech_bubbles": {
+                "Learner": "Found the rogue queue!",
+                "Ava": "Correlation wins."
+            },
+            "narration": "Multi-source correlation."
+        },
+        {
+            "panel": 12,
+            "filename": "ch06_p12_cost_capacity.png",
+            "scene_description": "Pie chart of TSDB chunks; finance rep nods.",
+            "characters_in_frame": [
+                "Ava",
+                "Finance Rep"
+            ],
+            "speech_bubbles": {
+                "Finance Rep": "Telemetry cost under control.",
+                "Ava": "Savings never rot."
+            },
+            "narration": "Cost & capacity dashboards."
+        }
+    ]
 }

@@ -151,6 +151,16 @@
                 "Often wears a tailored suit with a subtle pattern",
                 "Has a distinctive watch with multiple dials and a leather strap"
             ]
+        },
+        "Finance Rep": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "Tall and slightly overweight with a round face",
+                "Short, neatly combed hair with a slight wave",
+                "Often wears a tailored suit with a subtle pattern",
+                "Wears colorful ties"
+            ]
         }
     },
     "global_style": {
@@ -171,5 +181,148 @@
         "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
         "narration_box_position": "top",
         "text_padding_px": 5
-    }
+    },
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch07_p01_threshold_pain.png",
+            "scene_description": "Heat-map of noisy CPU alerts vs real incidents; Ava critiques.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "Noise isn’t reliability.",
+                "Daniel": "I’m drowning in pages!"
+            },
+            "narration": "Threshold alert failure."
+        },
+        {
+            "panel": 2,
+            "filename": "ch07_p02_mwmb_theory.png",
+            "scene_description": "Whiteboard MWMB rectangles; Ava explains, Zuri listens.",
+            "characters_in_frame": [
+                "Ava",
+                "Zuri"
+            ],
+            "speech_bubbles": {
+                "Ava": "Short & fast, long & slow.",
+                "Zuri": "Dual lenses—got it."
+            },
+            "narration": "MWMB concept."
+        },
+        {
+            "panel": 3,
+            "filename": "ch07_p03_prom_rules.png",
+            "scene_description": "VS Code with Prometheus rules; Ava and Zuri discussing.",
+            "characters_in_frame": [
+                "Ava",
+                "Zuri"
+            ],
+            "speech_bubbles": {
+                "Zuri": "Reload green!",
+                "Ava": "Math beats magic."
+            },
+            "narration": "Writing burn-rate rules."
+        },
+        {
+            "panel": 4,
+            "filename": "ch07_p04_routing_silence.png",
+            "scene_description": "Alertmanager UI routing tree; Ava shows silence window.",
+            "characters_in_frame": [
+                "Ava",
+                "Zuri"
+            ],
+            "speech_bubbles": {
+                "Ava": "Exec spam-free.",
+                "Zuri": "Maintenance muted."
+            },
+            "narration": "Routing & silencing."
+        },
+        {
+            "panel": 5,
+            "filename": "ch07_p05_alert_fatigue.png",
+            "scene_description": "Pile of old alerts in trash can; Ava wrist-slaps duplicate rule.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "One signal, one action!",
+                "Daniel": "Deleting duplicates."
+            },
+            "narration": "Combatting alert fatigue."
+        },
+        {
+            "panel": 6,
+            "filename": "ch07_p06_slack_pager.png",
+            "scene_description": "Slack & PagerDuty notifications side-by-side; Zuri smiles.",
+            "characters_in_frame": [
+                "Ava",
+                "Zuri"
+            ],
+            "speech_bubbles": {
+                "Zuri": "Everything linked!",
+                "Ava": "Communication solved."
+            },
+            "narration": "Integration success."
+        },
+        {
+            "panel": 7,
+            "filename": "ch07_p07_live_burn_dash.png",
+            "scene_description": "Grafana burn-rate gauge flips red; Risk Officer calm.",
+            "characters_in_frame": [
+                "Ava",
+                "Risk Officer Kamau"
+            ],
+            "speech_bubbles": {
+                "Kamau": "One clear signal.",
+                "Ava": "Pages with purpose."
+            },
+            "narration": "Live burn-rate dashboard."
+        },
+        {
+            "panel": 8,
+            "filename": "ch07_p08_runbook_link.png",
+            "scene_description": "Slack alert message with Runbook link highlighted; Daniel clicks.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Daniel": "Fix steps here.",
+                "Ava": "Less guessing."
+            },
+            "narration": "Runbook auto-linking."
+        },
+        {
+            "panel": 9,
+            "filename": "ch07_p09_retrospective.png",
+            "scene_description": "Incident review dashboard; Ava, Zuri, Kamau discuss.",
+            "characters_in_frame": [
+                "Ava",
+                "Zuri",
+                "Risk Officer Kamau"
+            ],
+            "speech_bubbles": {
+                "Ava": "Pain vs noise = 1 : 0.",
+                "Kamau": "Budget rule proved."
+            },
+            "narration": "Retrospective insights."
+        },
+        {
+            "panel": 10,
+            "filename": "ch07_p10_continuous_tuning.png",
+            "scene_description": "Graph of noise ratio dropping; Ava and Malik high-five.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Malik": "Noise down to 18 %!",
+                "Ava": "Garden pruned."
+            },
+            "narration": "Continuous tuning."
+        }
+    ]
 }
