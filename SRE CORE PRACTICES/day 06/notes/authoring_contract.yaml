@@ -2,6 +2,63 @@ authoring_contract:
   # The primary output format is now Markdown, structured into sections defined by headings_in_order.
   output_format: "Markdown"
 
+  format_rules:
+    chapter_header_format: # Rule for the chapter header line at the very top
+      description: "Each chapter's Markdown file must begin with a Chapter Header line."
+      format: "# Chapter <Number> – <Chapter Title>" # Example format
+      check: "Each Markdown file for a chapter starts with a correctly formatted Chapter Header line."
+
+    chapter_overview_format: # New rule for the introductory chapter overview
+      description: |
+        A brief introductory overview for the chapter, placed after the Chapter Header and any initial horizontal rule, and before the first main section heading (🎯 Learning Objective).
+        This overview should orient the learner, highlight key concepts, establish banking context, introduce or reference Ava as the guide, set expectations, and connect the chapter to the broader journey.
+      length: {min_paragraphs: 1, max_paragraphs: 3}
+      check: "The Chapter Overview is present, correctly placed, and meets the length and content requirements."
+
+    section_sequence: # Hint for the overall sequence of main sections/headings per unit.
+      pattern_hint: "(Chapter Header → Optional Initial Content/Overview → Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+" # Updated pattern hint
+      description: "The suggested sequence of main sections (defined by headings_in_order) within each unit or chapter, following the Chapter Header and Overview."
+
+    cadence:
+      description: "Describes the typical alternation of key content elements *within* the Teaching Narrative sections and Image Embeds/Diagrams."
+      pattern: |
+        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget) # Alternating narrative blocks with images/diagrams, followed optionally by a voice widget.
+      max_consecutive_narrative_blocks: 1 # Cannot have two large narrative blocks without an image/diagram in between.
+      max_consecutive_images: 1 # Cannot have two images/diagrams without narrative in between.
+
+    markdown_image_embed:
+      description: |
+        When an Image Embed is required by the cadence, include a Markdown image reference line using the filename from the referenced panel in the external data file:
+        ![Alt text](images/<filename>){width=<px>}
+      check: "Each conceptual 'Image Embed' point in the cadence must be represented by a Markdown image line referencing an existing panel by filename from the external data."
+
+    voice_widget_placement: # New rule for specific voice widget placement
+      description: |
+        "Swahili proverb" and "Wrist-Slap Moment" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
+      check: "Swahili proverb and Wrist-Slap Moment widgets in the Markdown output are correctly placed after a related image embed when applicable."
+
+    panel_ratio:
+      min_images: 6
+      max_images: 15
+      description: "The minimum and maximum number of static image panels required for the entire *chapter* (defined in the external image data file)."
+      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by a Markdown image line in the main content Markdown."
+
+    allowed_inline_widgets: # Whitelist of custom markdown widget types.
+      - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
+      - "Error Budget Meter"      # :::budget ... :::
+      - "Wrist-Slap Moment"       # :::slap ... :::
+      - "Nairobi Proverb"         # :::proverb ... :::
+      - "Try This"                # :::exercise ... :::
+      - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
+    widget_syntax_hint: | # Hint for how to format inline widgets
+      Use containers like
+        :::wisdom
+        **SRE Wisdom:** "Reliability you can measure ..."
+        :::
+    try_this_frequency: # Specific rule for the "Try This" widget.
+      per_unit: true
+      description: "The 'Try This' widget must be included at least once per unit or chapter."
+
   response_schema:
     # These define the main headings and their required order in the Markdown output sections that follow the Chapter Header.
     headings_in_order:
@@ -29,13 +86,13 @@ authoring_contract:
       - "Allowed Inline Widget" # Custom :::widget::: blocks
 
   prose_requirements:
-    word_band: {min: 7800, max: 10000, description: "The total word count for the entire novella's prose content (excluding code blocks, tables, etc.)."}
-    chunk_size: {min: 800, max: 1500, description: "The target word count range for the prose content *within* each Teaching Narrative section (excluding code blocks, tables, etc.)."} # Increased chunk size range
+    word_band: {min: 7800, max: 10000, description: "The total word count for the entire *chapter* prose content (excluding code blocks, tables, etc.)."}
+    chunk_size: {min: 1200, max: 1500, description: "The target word count range for the prose content *within* each Teaching Narrative section (excluding code blocks, tables, etc.)."} # Increased chunk size range significantly
     storytelling_ratio: # Balances technical instruction with narrative/scene-setting within Teaching Narrative blocks.
       description: |
-        Within each Teaching Narrative section, the content must balance technical instruction (approx. 60-70%) with scene-setting, storytelling, dialogue, and reader engagement (approx. 30-40%).
+        Within each Teaching Narrative section, the content must balance technical instruction (approx. 60-80%) with scene-setting, storytelling, dialogue, and reader engagement (approx. 20-40%).
         Importantly, technical content should be integrated into the narrative flow, presented in a conversational style, and woven into storytelling elements rather than listed or explained separately in a dry manner. Explicit "Scene (X%)" and "Technical (Y%)" labels should NOT be included in the generated Markdown output. The ratio should be achieved implicitly through content composition.
-      min_scene_pct: 30
+      min_scene_pct: 20
       max_scene_pct: 40
     banking_context_anchor: # Enforces banking relevance.
       value: true
@@ -52,66 +109,6 @@ authoring_contract:
       Fully narrative, conversational, detailed, and engaging. The conversational tone should feel like a mentor directly speaking to the reader, actively incorporating dialogue, relatable anecdotes, rhetorical questions, and direct prompts to the reader. Technical details and explanations should be seamlessly integrated into this narrative and conversational flow. Explicitly avoid bullet points or lists unless strictly necessary for clarity of technical steps or examples.
       Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate, fulfilling the voice guidelines.
 
-  format_rules:
-    chapter_header_format: # Defined above for organization
-      description: "Each chapter's Markdown file must begin with a Chapter Header line."
-      format: "# Chapter <Number> – <Chapter Title>" # Example format
-      check: "Each Markdown file for a chapter starts with a correctly formatted Chapter Header line."
-    section_sequence: # Hint for the overall sequence of main sections/headings per unit.
-      pattern_hint: "(Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+"
-      description: "The suggested sequence of main sections (defined by headings_in_order) within each unit or chapter, following the Chapter Header."
-    cadence:
-      description: "Describes the typical alternation of key content elements *within* the Teaching Narrative sections and Image Embeds/Diagrams."
-      pattern: |
-        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget) # Alternating narrative blocks with images/diagrams, followed optionally by a voice widget.
-      max_consecutive_narrative_blocks: 1 # Cannot have two large narrative blocks without an image/diagram in between.
-      max_consecutive_images: 1 # Cannot have two images/diagrams without narrative in between.
-    markdown_image_embed:
-      description: |
-        When an Image Embed is required by the cadence, include a Markdown image reference line using the filename from the referenced panel in the external data file:
-        ![Alt text](images/<filename>){width=<px>}
-      check: "Each conceptual 'Image Embed' point in the cadence must be represented by a Markdown image line referencing an existing panel by filename from the external data."
-    voice_widget_placement: # New rule for specific voice widget placement
-      description: |
-        "Swahili proverb" and "Wrist-Slap Moment" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
-      check: "Swahili proverb and Wrist-Slap Moment widgets in the Markdown output are correctly placed after a related image embed when applicable."
-    panel_ratio:
-      min_images: 6
-      max_images: 15
-      description: "The minimum and maximum number of static image panels required for the entire novella (defined in the external image data file)."
-      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by a Markdown image line in the main content Markdown."
-    allowed_inline_widgets: # Whitelist of custom markdown widget types.
-      - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
-      - "Error Budget Meter"      # :::budget ... :::
-      - "Wrist-Slap Moment"       # :::slap ... :::
-      - "Nairobi Proverb"         # :::proverb ... :::
-      - "Try This"                # :::exercise ... :::
-      - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
-    widget_syntax_hint: | # Hint for how to format inline widgets
-      Use fenced containers like
-        :::wisdom
-        **SRE Wisdom:** "Reliability you can measure ..."
-        :::
-    try_this_frequency: # Specific rule for the "Try This" widget.
-      per_unit: true
-      description: "The 'Try This' widget must be included at least once per unit or chapter."
-    split_delivery:
-      description: |
-        If the markdown output for a single chapter is expected to exceed
-        **15 000 tokens** (≈ 11 000 words including markup) **or**
-        **300 markdown lines**, the assistant MUST deliver the chapter in
-        multiple sequential parts within the same conversation thread.
-        • Each part must begin with an HTML comment marker:
-            <!-- Part A of Chapter <Number> -->
-        • Each part must end with:
-            <!-- End Part A -->
-        • Parts must be labelled consecutively (Part A, Part B, Part C …).
-        • Every part must, on its own, respect the heading order,
-          cadence, widget-placement, and storytelling-ratio rules.
-        • The final part must include the chapter’s self-check table.
-      max_tokens_per_part: 10_000   # soft cap for each conversational message
-      naming_convention: "Part A, Part B, Part C, …"
-      non_blocking: true  # Failure to split is not a content error but may breach delivery constraints
 
   visual_guidelines:
     palette_style_ref: "house_palette_line_style.md"
@@ -158,16 +155,17 @@ authoring_contract:
   consistency_checklist:
     # Checks for the final Markdown output structure and content.
     - "Chapter Header line is present and correctly formatted at the start of each chapter file."
-    - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter."
+    - "Chapter Overview is present, correctly placed (after header, before first main section heading), and meets the length and content requirements." # New checklist item for overview
+    - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview." # Updated check
     - "Word count within 7800–10000 band in the main content Markdown prose (excluding code, tables, etc.)."
-    - "Prose word count within each Teaching Narrative section is between 800 and 1500 words (excluding code, tables, etc.)." # Updated checklist item for chunk size adherence
+    - "Prose word count within each Teaching Narrative section is between 1200 and 1500 words (excluding code, tables, etc.)." # Updated checklist item for chunk size adherence
     - "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
     - "Image count 6–15 in the external image data file's panels array."
     - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
     - "Each conceptual 'Image Embed' point in the cadence is represented by a Markdown image line referencing an existing panel by filename from the external data."
     - "Mermaid diagrams compile correctly (if used as inline code blocks)."
     - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
-    - "Teaching Narrative sections meet storytelling_ratio (30-40% scene, 60-70% tech), **without explicit Scene/Technical labels**."
+    - "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**."
     - "Banking context anchor is clearly present per unit/section."
     - "Voice guideline elements (Swahili proverb OR Wrist-Slap Moment OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
     - "Swahili proverb and Wrist-Slap Moment widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
@@ -175,8 +173,6 @@ authoring_contract:
     - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
     - "Only whitelisted widgets appear, using correct container syntax."
     - "'Try This' widget is included at least once per unit/chapter."
-    - "Chapters exceeding 15 000 tokens are delivered in sequential parts with correct Part markers"
-
 
   ambiguity_handling:
     explicit_instruction: |
