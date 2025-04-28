@@ -154,131 +154,120 @@
     "panels": [
         {
             "panel": 1,
-            "filename": "ch03_p01_good_indicator.png",
-            "scene_description": "Night office: Emmanuel scrolls logs; Ava shows PromQL graph on laptop.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "One SLI beats ten thousand log lines.",
-                "Emmanuel": "Daylight indeed!"
-            },
-            "narration": "Introducing the power of a single indicator."
-        },
-        {
-            "panel": 2,
-            "filename": "ch03_p02_golden_signals.png",
-            "scene_description": "Sankey diagram with coloured ribbons; Ava explains golden signals.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel",
-                "Daniel"
-            ],
-            "speech_bubbles": {
-                "Ava": "Latency, traffic, errors, saturation—your system’s vital signs.",
-                "Daniel": "And in banking, each has a price tag."
-            },
-            "narration": "Mapping golden signals to banking flow."
-        },
-        {
-            "panel": 3,
-            "filename": "ch03_p03_latency_percentiles.png",
-            "scene_description": "Histogram chart; Ava points at p99 bar; Emmanuel nods.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "The tail tells the truth.",
-                "Emmanuel": "Mean masked our pain!"
-            },
-            "narration": "Percentiles expose hidden latency."
-        },
-        {
-            "panel": 4,
-            "filename": "ch03_p04_traffic_labels.png",
-            "scene_description": "Dashboard shows per-segment traffic spike; Ava slaps wrist.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "High-cardinality labels? Budget burner!",
-                "Emmanuel": "I’ll aggregate by segment."
-            },
-            "narration": "Label hygiene for sustainable metrics."
-        },
-        {
-            "panel": 5,
-            "filename": "ch03_p05_error_ratio.png",
-            "scene_description": "Error ratio graph spikes red; Ava highlights stage failures.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "Silent failures hide behind 200 OK.",
-                "Emmanuel": "Ratio SLI reveals them."
-            },
-            "narration": "Detecting multi-stage errors."
-        },
-        {
-            "panel": 6,
-            "filename": "ch03_p06_saturation_headroom.png",
-            "scene_description": "Gauge shows headroom 3 %; Ava looks stern; Emmanuel worried.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "Zero headroom, zero hope.",
-                "Emmanuel": "Scaling read replicas now!"
-            },
-            "narration": "Headroom SLI prevents capacity crises."
-        },
-        {
-            "panel": 7,
-            "filename": "ch03_p07_banking_slis.png",
-            "scene_description": "Matrix of banking-specific SLIs; Ava circles balance-visible metric.",
+            "filename": "ch02_p01_moments.png",
+            "scene_description": "Crowded branch queue; mobile spinner visible in foreground while Ava and Wanjiru observe.",
             "characters_in_frame": [
                 "Ava",
                 "Wanjiru"
             ],
             "speech_bubbles": {
-                "Ava": "This one guards the customer’s heartbeat.",
-                "Wanjiru": "Balance visible ≤ 5 s it is."
+                "Ava": "Latency where it hurts—the customer’s heartbeat.",
+                "Wanjiru": "Spinner’s passing three seconds…"
             },
-            "narration": "Prioritising banking SLIs."
+            "narration": "Identifying micro-moments that define trust."
         },
         {
-            "panel": 8,
-            "filename": "ch03_p08_otlp_instrumentation.png",
-            "scene_description": "Code editor displays OTEL span; Ava tutors learner.",
+            "panel": 2,
+            "filename": "ch02_p02_signals_vs_sentiment.png",
+            "scene_description": "Split screen: left golden-signal graphs, right Twitter feed exploding with complaints; Ava points between.",
             "characters_in_frame": [
                 "Ava",
-                "Learner"
+                "Wanjiru",
+                "Emmanuel"
             ],
             "speech_bubbles": {
-                "Ava": "Instrument once, observe forever.",
-                "Learner": "Metrics flowing!"
+                "Ava": "Metrics say green, sentiment screams red!",
+                "Emmanuel": "We’re missing the human layer."
             },
-            "narration": "Adding OTEL instrumentation."
+            "narration": "Contrasting system metrics with human sentiment."
         },
         {
-            "panel": 9,
-            "filename": "ch03_p09_emmanuel_dashboard.png",
-            "scene_description": "Conference room: Emmanuel presents green dashboard; Ava smiles.",
+            "panel": 3,
+            "filename": "ch02_p03_journey_whiteboard.png",
+            "scene_description": "Whiteboard swim-lanes filled with sticky notes of pain scores; Ava, Wanjiru and Malik annotate.",
             "characters_in_frame": [
                 "Ava",
-                "Emmanuel",
+                "Wanjiru",
+                "Malik"
+            ],
+            "speech_bubbles": {
+                "Ava": "Mark balance-visible red—highest pain.",
+                "Malik": "Cost column next?"
+            },
+            "narration": "Journey-mapping workshop in action."
+        },
+        {
+            "panel": 4,
+            "filename": "ch02_p04_time_to_trust.png",
+            "scene_description": "Distributed-trace waterfall shows 2 s gap; Ava slaps wrist playfully while Daniel watches.",
+            "characters_in_frame": [
+                "Ava",
                 "Daniel"
             ],
             "speech_bubbles": {
-                "Emmanuel": "Latency 260 ms, success-ratio 99.96 %.",
-                "Ava": "Now ditch that average widget."
+                "Ava": "API latency ≠ Experience latency!",
+                "Daniel": "TtT tells the truth."
             },
-            "narration": "First SLI review success."
+            "narration": "Revealing hidden latency after request completes."
+        },
+        {
+            "panel": 5,
+            "filename": "ch02_p05_friction_heatmap.png",
+            "scene_description": "Large cost heat-map projected; red square over balance-visible step; Ava, Emmanuel and a learner react.",
+            "characters_in_frame": [
+                "Ava",
+                "Emmanuel",
+                "Learner"
+            ],
+            "speech_bubbles": {
+                "Emmanuel": "We’re bleeding 1.8 M shillings?",
+                "Ava": "Pain has a price-tag."
+            },
+            "narration": "Quantifying revenue loss of friction points."
+        },
+        {
+            "panel": 6,
+            "filename": "ch02_p06_personas_channels.png",
+            "scene_description": "Tableau of four persona cards; graphs overlay channel spikes; Ava gestures to mobile while Zuri listens.",
+            "characters_in_frame": [
+                "Ava",
+                "Zuri"
+            ],
+            "speech_bubbles": {
+                "Zuri": "ATM looks fine—mobile doesn’t.",
+                "Ava": "Segment your SLIs by channel."
+            },
+            "narration": "Channel segmentation reveals uneven reliability."
+        },
+        {
+            "panel": 7,
+            "filename": "ch02_p07_sli_selection.png",
+            "scene_description": "Matrix board with high-impact cells highlighted; Ava circles balance-visible cell and Wanjiru nods.",
+            "characters_in_frame": [
+                "Ava",
+                "Wanjiru"
+            ],
+            "speech_bubbles": {
+                "Ava": "Start here—highest pain, high feasibility.",
+                "Wanjiru": "Balance visible ≤ 5 s—got it."
+            },
+            "narration": "Prioritising SLI candidates."
+        },
+        {
+            "panel": 8,
+            "filename": "ch02_p08_stakeholder_buyin.png",
+            "scene_description": "Conference demo: green Trust-Thermometer badge on big screen; Ava, Malik, risk officer and marketing lead celebrate.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik",
+                "Risk Officer",
+                "Marketing Lead"
+            ],
+            "speech_bubbles": {
+                "Marketing Lead": "We can showcase that badge!",
+                "Ava": "Reliability sells itself when users trust you."
+            },
+            "narration": "Cross-functional buy-in for experience-centric SLOs."
         }
     ]
 }

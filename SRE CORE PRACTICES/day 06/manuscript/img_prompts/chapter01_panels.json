@@ -13,7 +13,7 @@
                 "moves with confident, purposeful posture; frequent animated hand gestures"
             ]
         },
-        "Customer": {
+        "customer": {
             "visual_tags": [
                 "young aldult",
                 "modern clothing style",
@@ -21,7 +21,7 @@
                 "expressing frustration"
             ]
         },
-        "Engineers": {
+        "engineers": {
             "visual_tags": [
                 "diverse group of engineers",
                 "various ages and styles",
@@ -29,7 +29,7 @@
                 "others in sre-branded shirts"
             ]
         },
-        "Learners": {
+        "learners": {
             "visual_tags": [
                 "diverse group of learners",
                 "various ages and styles",
@@ -98,38 +98,6 @@
                 "Typically wears business casual with a bank ID badge",
                 "Has a collection of motivational phone backgrounds"
             ]
-        },
-        "Zuri": {
-            "visual_tags": [
-                "Female",
-                "27 years old",
-                "Average height with an athletic build",
-                "Long braids often styled in creative updos with colorful beads",
-                "Round face with dimples and expressive eyebrows",
-                "Favors bright, contemporary business casual with statement jewelry",
-                "Always has multiple devices and a digital notebook",
-                "Energetic body language and rapid-fire speech pattern"
-            ]
-        },
-        "Marketing Lead": {
-            "visual_tags": [
-                "male",
-                "40 years old",
-                "Tall and slightly overweight with a round face",
-                "Receding Hairline, Grey hair",
-                "Often wears a blazer over a casual shirt",
-                "Has a penchant for colorful ties and pocket squares"
-            ]
-        },
-        "Risk Officer": {
-            "visual_tags": [
-                "Female",
-                "35 years old",
-                "Dark complexsion with a warm smile",
-                "Short, curly hair with a few streaks of grey",
-                "Typically wears tailored suits with bold patterns",
-                "Has a collection of unique brooches representing different cultures"
-            ]
         }
     },
     "global_style": {
@@ -154,131 +122,104 @@
     "panels": [
         {
             "panel": 1,
-            "filename": "ch03_p01_good_indicator.png",
-            "scene_description": "Night office: Emmanuel scrolls logs; Ava shows PromQL graph on laptop.",
+            "filename": "ch01_p01_intro.png",
+            "scene_description": "Ava stands before a wall-sized heat-map of pager alerts. Daniel, Emmanuel, and Jamal sit at a conference table in a modern Nairobi tech hub. Ava points a laser at a bright red square.",
             "characters_in_frame": [
                 "Ava",
-                "Emmanuel"
+                "Daniel",
+                "Emmanuel",
+                "Jamal"
             ],
             "speech_bubbles": {
-                "Ava": "One SLI beats ten thousand log lines.",
-                "Emmanuel": "Daylight indeed!"
+                "Ava": "This red block is every payday outage—847 timeouts in a single hour!",
+                "Daniel": "No wonder the pager ruins Fridays…"
             },
-            "narration": "Introducing the power of a single indicator."
+            "narration": "From firefighting to promises: Ava reveals the hidden cost of reactive ops."
         },
         {
             "panel": 2,
-            "filename": "ch03_p02_golden_signals.png",
-            "scene_description": "Sankey diagram with coloured ribbons; Ava explains golden signals.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel",
-                "Daniel"
-            ],
-            "speech_bubbles": {
-                "Ava": "Latency, traffic, errors, saturation—your system’s vital signs.",
-                "Daniel": "And in banking, each has a price tag."
-            },
-            "narration": "Mapping golden signals to banking flow."
-        },
-        {
-            "panel": 3,
-            "filename": "ch03_p03_latency_percentiles.png",
-            "scene_description": "Histogram chart; Ava points at p99 bar; Emmanuel nods.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "The tail tells the truth.",
-                "Emmanuel": "Mean masked our pain!"
-            },
-            "narration": "Percentiles expose hidden latency."
-        },
-        {
-            "panel": 4,
-            "filename": "ch03_p04_traffic_labels.png",
-            "scene_description": "Dashboard shows per-segment traffic spike; Ava slaps wrist.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "High-cardinality labels? Budget burner!",
-                "Emmanuel": "I’ll aggregate by segment."
-            },
-            "narration": "Label hygiene for sustainable metrics."
-        },
-        {
-            "panel": 5,
-            "filename": "ch03_p05_error_ratio.png",
-            "scene_description": "Error ratio graph spikes red; Ava highlights stage failures.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "Silent failures hide behind 200 OK.",
-                "Emmanuel": "Ratio SLI reveals them."
-            },
-            "narration": "Detecting multi-stage errors."
-        },
-        {
-            "panel": 6,
-            "filename": "ch03_p06_saturation_headroom.png",
-            "scene_description": "Gauge shows headroom 3 %; Ava looks stern; Emmanuel worried.",
-            "characters_in_frame": [
-                "Ava",
-                "Emmanuel"
-            ],
-            "speech_bubbles": {
-                "Ava": "Zero headroom, zero hope.",
-                "Emmanuel": "Scaling read replicas now!"
-            },
-            "narration": "Headroom SLI prevents capacity crises."
-        },
-        {
-            "panel": 7,
-            "filename": "ch03_p07_banking_slis.png",
-            "scene_description": "Matrix of banking-specific SLIs; Ava circles balance-visible metric.",
+            "filename": "ch01_p02_customer_focus.png",
+            "scene_description": "Busy bank branch: teller Wanjiru serves customers while a mobile phone in the foreground spins on 'Processing transfer…'. Ava appears in a small inset giving guidance.",
             "characters_in_frame": [
                 "Ava",
                 "Wanjiru"
             ],
             "speech_bubbles": {
-                "Ava": "This one guards the customer’s heartbeat.",
-                "Wanjiru": "Balance visible ≤ 5 s it is."
+                "Ava": "Banking users don’t care about servers—they care about this loading wheel.",
+                "Emmanuel": "So our metrics must match their experience."
             },
-            "narration": "Prioritising banking SLIs."
+            "narration": "Customer-centric reliability begins with the user journey, not CPU graphs."
         },
         {
-            "panel": 8,
-            "filename": "ch03_p08_otlp_instrumentation.png",
-            "scene_description": "Code editor displays OTEL span; Ava tutors learner.",
+            "panel": 3,
+            "filename": "ch01_p03_sli_dashboard.png",
+            "scene_description": "Close-up of a Grafana dashboard showing a green latency-ratio gauge. Ava and Daniel discuss the screen; Ava’s fingertip hovers over the 0.999 line.",
+            "characters_in_frame": [
+                "Ava",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Ava": "This ratio is the heartbeat of fund-transfer latency.",
+                "Daniel": "What if we tighten it to 200 ms?"
+            },
+            "narration": "Unpacking the SLI that will power every later objective."
+        },
+        {
+            "panel": 4,
+            "filename": "ch01_p04_slo_whiteboard.png",
+            "scene_description": "Ava sketches a percentile curve on a whiteboard, drawing a dotted SLO line at 300 ms. Malik and Jamal observe, pens in hand.",
+            "characters_in_frame": [
+                "Ava",
+                "Malik",
+                "Jamal"
+            ],
+            "speech_bubbles": {
+                "Ava": "Set the SLO just above historical p99—ambitious, not impossible.",
+                "Malik": "So 300 ms becomes our public promise."
+            },
+            "narration": "Drafting a measurable objective grounded in real data."
+        },
+        {
+            "panel": 5,
+            "filename": "ch01_p05_budget_meter.png",
+            "scene_description": "A large red-to-green dial labelled 'Error-Budget Meter' glows on a screen. Ava playfully slaps her wrist while a learner winces.",
             "characters_in_frame": [
                 "Ava",
                 "Learner"
             ],
             "speech_bubbles": {
-                "Ava": "Instrument once, observe forever.",
-                "Learner": "Metrics flowing!"
+                "Ava": "Burn 31 % of budget on day 2? Freeze deploys—now!",
+                "Learner": "But marketing promised a Friday launch…"
             },
-            "narration": "Adding OTEL instrumentation."
+            "narration": "Error budgets turn goodwill into a quantitative safety valve."
         },
         {
-            "panel": 9,
-            "filename": "ch03_p09_emmanuel_dashboard.png",
-            "scene_description": "Conference room: Emmanuel presents green dashboard; Ava smiles.",
+            "panel": 6,
+            "filename": "ch01_p06_end_to_end_panel.png",
+            "scene_description": "Composite Grafana dashboard: SLI gauge, SLO sparkline, and error-budget burn-rate chart. Ava leans over a learner’s laptop.",
             "characters_in_frame": [
                 "Ava",
-                "Emmanuel",
-                "Daniel"
+                "Learner"
             ],
             "speech_bubbles": {
-                "Emmanuel": "Latency 260 ms, success-ratio 99.96 %.",
-                "Ava": "Now ditch that average widget."
+                "Ava": "All three widgets in one view—act before customers ever feel pain.",
+                "Learner": "I can finally see trouble coming!"
             },
-            "narration": "First SLI review success."
+            "narration": "Correlating indicator, objective, and budget on a single glass pane."
+        },
+        {
+            "panel": 7,
+            "filename": "ch01_p07_commitment.png",
+            "scene_description": "GitHub pull-request page with a green 'Merged' badge showing 99.95 % compliance. Ava gives Wanjiru a thumbs-up.",
+            "characters_in_frame": [
+                "Ava",
+                "Wanjiru"
+            ],
+            "speech_bubbles": {
+                "Ava": "Our first reliability commitment is live—nice work!",
+                "Wanjiru": "Let’s keep that badge green."
+            },
+            "narration": "The team’s inaugural SLO merges, signalling a new era of accountable reliability."
         }
     ]
 }

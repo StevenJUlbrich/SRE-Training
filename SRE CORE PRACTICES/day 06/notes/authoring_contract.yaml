@@ -168,6 +168,7 @@ authoring_contract:
         - panel
         - filename
         - scene_description
+        - characters_in_frame
         - speech_bubbles
         - narration
       properties:
@@ -180,6 +181,12 @@ authoring_contract:
         scene_description:
           type: string
           description: "A clear and detailed description of the visual scene for image generation, including environment, character actions/expressions, and any on-screen text or labels. Ensure this description is detailed enough for image generation." # Enhanced description
+        characters_in_frame:
+          type: array
+          items:
+            type: string
+            description: "List of characters present in the panel, including Ava and any other characters. This helps to ensure character presence in the generated image."
+            uniqueItems: true
         speech_bubbles:
           type: object
           description: "Dialogue text for characters within the panel, keyed by character name or identifier."
@@ -213,6 +220,46 @@ authoring_contract:
     - "Chapters exceeding 15 000 tokens or 300 lines are split into labelled parts with correct comment markers."
     - "If present, Mermaid diagrams are wrapped in a :::diagram widget, compile without errors, and no more than one appears per Teaching Narrative section."
 
+  pre_submission_audit:
+  description: |
+    Before delivering any chapter or section for user review, the assistant must perform and submit a full pre-submission audit.
+    This audit must evaluate compliance against every item in the 'consistency_checklist'.
+    The audit must include a ✅/❌ status for each checklist item and highlight any gaps.
+    If any item is ❌, the assistant must halt delivery and fix issues until 100% compliance is achieved.
+    Only then can the draft be presented for user approval.
+  blocking_force_split: true
+  checklist_required: true
+  user_confirmation_required: true
+
+  user_signoff_per_stage:
+    description: |
+      After completing each major stage (Scaffold Approval, Full Prose + Diagrams, Final Checklist Audit),
+      the assistant must explicitly pause and await User Approval before proceeding.
+      No automatic continuation is allowed without explicit written signoff from the user.
+    blocking: true
+
+force_split_large_chapters:
+  description: |
+    If a chapter exceeds 15,000 tokens or 300 markdown lines, the assistant must split into parts.
+    The 'non_blocking' flag for split_delivery is overridden: splitting is mandatory.
+  blocking: true
+
+applied_example_wordcount:
+  description: |
+    Each 'Applied Example' section must contain at least 150 words (excluding headings).
+  blocking: true
+
+dialogue_line_requirement:
+  description: |
+    Each Teaching Narrative section must contain at least two character dialogue exchanges
+    (i.e., four separate lines: two Ava, two learner/other) to reinforce conversational style.
+  blocking: true
+
+prose_depth_validation:
+  description: |
+    Beyond mere word count, each Teaching Narrative section must demonstrate clear technical teaching depth
+    and banking context relevance. Fluff or filler will be treated as non-compliance.
+  blocking: true
 
   ambiguity_handling:
     explicit_instruction: |
