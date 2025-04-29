@@ -11,9 +11,19 @@ authoring_contract:
     chapter_overview_format: # Modified: increased paragraph count
       description: |
         A brief introductory overview for the chapter, placed after the Chapter Header and any initial horizontal rule, and before the first main section heading (🎯 Learning Objective).
-        This overview should orient the learner, highlight key concepts, establish banking context, introduce or reference Ava as the guide, set expectations, and connect the chapter to the broader journey.
+        This overview should orient the learner, highlight key concepts, establish banking context, introduce or reference Hector as the guide, set expectations, and connect the chapter to the broader journey.
       length: {min_paragraphs: 2, max_paragraphs: 5}
       check: "The Chapter Overview is present, correctly placed, and meets the length and content requirements."
+    
+    panel_beat_structure:
+      description: |
+        Each chapter must include a panel-by-panel beat map that aligns visuals, narrative beats, and instructional outcomes. This supports visual-narrative cohesion and storyboard fidelity.
+      required: true
+
+    chapter_visual_integrity:
+      description: |
+        Every chapter must define between 6–15 panels. Each panel must have a scene, instructional beat, learner involvement (if present), and either a system event, narrative conflict, or resolution. This ensures panel density is appropriate for visual pacing.
+      enforced: true
 
     section_sequence: # Hint for the overall sequence of main sections/headings per unit.
       pattern_hint: "(Chapter Header → Optional Initial Content/Overview → Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+" # Updated pattern hint
@@ -34,8 +44,8 @@ authoring_contract:
 
     voice_widget_placement: # New rule for specific voice widget placement
       description: |
-        "Swahili proverb" and "Wrist-Slap Moment" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
-      check: "Swahili proverb and Wrist-Slap Moment widgets in the Markdown output are correctly placed after a related image embed when applicable."
+        "Hector Aphorism" and "System Failure Anecdote" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
+      check: "Hector Aphorism and System Failure Anecdote widgets in the Markdown output are correctly placed after a related image embed when applicable."
 
     panel_ratio:
       min_images: 6
@@ -47,14 +57,21 @@ authoring_contract:
       - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
       - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
       - "Error Budget Meter"      # :::budget ... :::
-      - "Wrist-Slap Moment"       # :::slap ... :::
-      - "Nairobi Proverb"         # :::proverb ... :::
+      - "Incident Flashback"      # :::slap ... :::
+      - "hector quote"         # :::proverb ... :::
       - "Try This"                # :::exercise ... :::
+      - "Learner Reflection"  # :::reflection ... ::: block. Used for learner insights at chapter end or post-lesson analysis.
       
     widget_syntax_hint: | # Hint for how to format inline widgets
       Use containers like
         :::wisdom
         **SRE Wisdom:** "Reliability you can measure ..."
+        :::
+        :::hector quote
+        **Hector says:** "If your telemetry doesn’t snitch, your outage will."
+        :::
+        :::incident flashback
+        **Postmortem Recap:** The DB failover failed to trigger because someone hardcoded the heartbeat monitor to `/dev/null`.
         :::
       Use fenced containers for widgets, e.g.
       :::diagram
@@ -137,24 +154,40 @@ authoring_contract:
     voice_guideline: # Rules for mandatory persona elements.
       description: "Specific elements that must be included in the narrative voice to enhance conversational and mentoring tone. Placement for some elements is specified in format_rules."
       must_include_per_unit: # Requires at least one of these elements within each unit/Teaching Narrative section.
-        - "Swahili proverb"
-        - "Wrist-Slap Moment"
-        - "Dialogue Line"   # At least two lines of character dialogue (Ava + other)
+        - "Hector Aphorism"
+        - "System Failure Anecdote"
+        - "Dialogue Line"   # At least two lines of character dialogue (Primary Character + other)
         - "Learner Prompt"  # A direct question or reflective challenge to the reader
     perspective: "second-person teacher + narrative examples"
     prose_style: |
       Fully narrative, conversational, detailed, and engaging. The conversational tone should feel like a mentor directly speaking to the reader, actively incorporating dialogue, relatable anecdotes, rhetorical questions, and direct prompts to the reader. Technical details and explanations should be seamlessly integrated into this narrative and conversational flow. Explicitly avoid bullet points or lists unless strictly necessary for clarity of technical steps or examples.
-      Integrate storytelling elements, vivid descriptions, and Kenyan analogies or cultural references where appropriate, fulfilling the voice guidelines.
+      Integrate ulturally grounded analogies depending on the guide character references where appropriate, fulfilling the voice guidelines.
 
 
   visual_guidelines:
-    palette_style_ref: "house_palette_line_style.md"
+    palette_style_ref: {
+      hector: "hector_palette_style.md"
+    } # Reference file for the visual color palette and line style.
     description: "Reference file for the visual color palette and line style."
     prefer_diagrams: "mermaid" # Note: Mermaid diagrams are inline Markdown and don't use the external JSON file for definition.
     character_presence:
-      primary: "ava"
-      rule: "At least 50 % of panels defined in the external image data file include Ava to anchor teaching voice"
-      description: "Rule for including the primary character Ava in a majority of static panels."
+      primary: "hector" # Primary character in the story 
+      rule: "At least 50 % of panels defined in the external image data file include Hector to anchor teaching voice"
+      description: "Rule for including the primary character Hector in a majority of static panels."
+    scene_sync:
+      description: |
+        All panels must map back to one or more elements in the chapter beat map. Panel IDs in external_image_data must correlate with labeled instructional beats.
+      required: true
+
+  panel_roles_required:
+    description: |
+      Every panel beat map must include the following elements:
+      - ✅ At least 1 Hector-led insight or correction — Hector must visibly drive or resolve a critical concept
+      - ✅ At least 1 learner mistake, gap, or false assumption — to build tension and model the learning journey
+      - ✅ At least 1 observability technique used meaningfully (log example, trace comparison, dashboard correction, etc.)
+      These ensure panel progression, emotional engagement, and instructional pacing are upheld across all visual storylines.
+    check: true
+
 
   # Section describing the schema of the external image data file (remains the same as it defines the source data for images)
   external_image_data_schema:
@@ -185,7 +218,7 @@ authoring_contract:
           type: array
           items:
             type: string
-            description: "List of characters present in the panel, including Ava and any other characters. This helps to ensure character presence in the generated image."
+            description: "List of characters present in the panel, including Hector and any other characters. This helps to ensure character presence in the generated image."
             uniqueItems: true
         speech_bubbles:
           type: object
@@ -208,11 +241,11 @@ authoring_contract:
     - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
     - "Each conceptual 'Image Embed' point in the cadence is represented by a Markdown image line referencing an existing panel by filename from the external data."
     - "Mermaid diagrams compile correctly (if used as inline code blocks)."
-    - "Ava appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
+    - "Hector appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
     - "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**."
     - "Banking context anchor is clearly present per unit/section."
-    - "Voice guideline elements (Swahili proverb OR Wrist-Slap Moment OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
-    - "Swahili proverb and Wrist-Slap Moment widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
+    - "Voice guideline elements (Hector Aphorism OR System Failure Anecdote OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
+    - "Hector Aphorism and System Failure Anecdote widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
     - "Applied Example block is present directly after each Takeaway section and matches its conceptual content (code snippet + user impact note)."
     - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
     - "Only whitelisted widgets appear, using correct container syntax."
@@ -252,7 +285,7 @@ applied_example_wordcount:
 dialogue_line_requirement:
   description: |
     Each Teaching Narrative section must contain at least two character dialogue exchanges
-    (i.e., four separate lines: two Ava, two learner/other) to reinforce conversational style.
+    (i.e., four separate lines: two Hector, two learner/other) to reinforce conversational style.
   blocking: true
 
 prose_depth_validation:

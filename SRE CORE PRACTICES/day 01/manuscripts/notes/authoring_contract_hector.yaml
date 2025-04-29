@@ -1,0 +1,119 @@
+authoring_contract:
+  output_format: "Markdown"
+
+  format_rules:
+    chapter_header_format:
+      description: "Each chapter's Markdown file must begin with a Chapter Header line."
+      format: "# Chapter <Number> – <Chapter Title>"
+      check: "Each Markdown file for a chapter starts with a correctly formatted Chapter Header line."
+
+    chapter_overview_format:
+      description: |
+        A brief introductory overview for the chapter, placed after the Chapter Header and any initial horizontal rule, and before the first main section heading (🎯 Learning Objective).
+        This overview should orient the learner, highlight key concepts, establish banking context, introduce or reference Hector as the guide, set expectations, and connect the chapter to the broader journey.
+      length: {min_paragraphs: 2, max_paragraphs: 5}
+      check: "The Chapter Overview is present, correctly placed, and meets the length and content requirements."
+
+    section_sequence:
+      pattern_hint: "(Chapter Header → Optional Initial Content/Overview → Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+"
+      description: "The suggested sequence of main sections (defined by headings_in_order) within each unit or chapter, following the Chapter Header and Overview."
+
+    cadence:
+      description: "Describes the typical alternation of key content elements *within* the Teaching Narrative sections and Image Embeds/Diagrams."
+      pattern: |
+        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget)
+      max_consecutive_narrative_blocks: 1
+      max_consecutive_images: 1
+
+    markdown_image_embed:
+      description: |
+        When an Image Embed is required by the cadence, include a Markdown image reference line using the filename from the referenced panel in the external data file:
+        ![Alt text](images/<filename>){width=<px>}
+      check: "Each conceptual 'Image Embed' point in the cadence must be represented by a Markdown image line referencing an existing panel by filename from the external data."
+
+    voice_widget_placement:
+      description: |
+        "Hector Aphorism" and "System Failure Anecdote" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
+      check: "Hector Aphorism and System Failure Anecdote widgets in the Markdown output are correctly placed after a related image embed when applicable."
+
+    panel_ratio:
+      min_images: 6
+      max_images: 15
+      description: "The minimum and maximum number of static image panels required for the entire *chapter* (defined in the external image data file)."
+      check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by a Markdown image line in the main content Markdown."
+
+    allowed_inline_widgets:
+      - "Diagram"
+      - "SRE Wisdom Box"
+      - "Error Budget Meter"
+      - "Incident Flashback"
+      - "hector quote"
+      - "Try This"
+
+    widget_syntax_hint: |
+      Use containers like
+        :::wisdom
+        **SRE Wisdom:** "Reliability you can measure ..."
+        :::
+        :::hector quote
+        **Hector says:** "If your telemetry doesn’t snitch, your outage will."
+        :::
+        :::incident flashback
+        **Postmortem Recap:** The DB failover failed to trigger because someone hardcoded the heartbeat monitor to `/dev/null`.
+        :::
+      Use fenced containers for widgets, e.g.
+      :::diagram
+      ```mermaid
+      sequenceDiagram
+        autonumber
+        Client->>API: POST /loan
+        API->>DB: INSERT row
+        DB-->>API: 201
+        API-->>Client: 200 OK
+      ```
+      :::
+
+    split_delivery:
+      description: |
+        • Each part must begin with: <!-- Part A of Chapter <Number> -->  
+        • Each part must end with: <!-- End Part A -->  
+        • Parts must be labelled consecutively (Part A, Part B, Part C …).  
+        • Every part must, on its own, respect heading order, cadence, widget-placement, and storytelling-ratio rules.  
+        • The final part must include the chapter's self-check table.
+      max_tokens_per_part: 10000
+      naming_convention: "Part A, Part B, Part C, …"
+      non_blocking: true
+      check: "If the chapter exceeds 24 000 tokens or 360 lines, it must be split into multiple parts, each with correct heading order and cadence."
+
+  consistency_checklist:
+    - "Chapter Header line is present and correctly formatted at the start of each chapter file."
+    - "Chapter Overview is present, correctly placed (after header, before first main section heading), and meets the length and content requirements."
+    - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview."
+    - "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)."
+    - "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code, tables, etc.)."
+    - "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
+    - "Image count 6–15 in the external image data file's panels array."
+    - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
+    - "Each conceptual 'Image Embed' point in the cadence is represented by a Markdown image line referencing an existing panel by filename from the external data."
+    - "Mermaid diagrams compile correctly (if used as inline code blocks)."
+    - "Hector appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
+    - "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**."
+    - "Banking context anchor is clearly present per unit/section."
+    - "Voice guideline elements (Hector Aphorism OR System Failure Anecdote OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
+    - "Hector Aphorism and System Failure Anecdote widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
+    - "Applied Example block is present directly after each Takeaway section and matches its conceptual content."
+    - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary."
+    - "Only whitelisted widgets appear, using correct container syntax."
+    - "'Try This' widget is included at least once per chapter."
+    - "Chapters exceeding 24 000 tokens or 360 lines are split into labelled parts with correct comment markers."
+    - "If present, Mermaid diagrams are wrapped in a :::diagram widget, compile without errors, and no more than one appears per Teaching Narrative section."
+
+  pre_submission_audit:
+    description: |
+      Before delivering any chapter or section for user review, the assistant must perform and submit a full pre-submission audit.
+      This audit must evaluate compliance against every item in the 'consistency_checklist'.
+      The audit must include a ✅/❌ status for each checklist item and highlight any gaps.
+      If any item is ❌, the assistant must halt delivery and fix issues until 100% compliance is achieved.
+    blocking_force_split: true
+    checklist_required: true
+    user_confirmation_required: true

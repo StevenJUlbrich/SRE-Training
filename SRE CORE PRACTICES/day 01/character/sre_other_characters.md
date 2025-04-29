@@ -1,71 +1,62 @@
-## 1. Malik Odhiambo
+## ✅ Existing SRE & Specialist Cast Review
 
-**Physical Description:**
-- male
-- 42 years old
-- Tall (6'2") with a lean, runner's build
-- Closely-cropped salt-and-pepper hair
-- Square jawline with a neatly trimmed beard
-- Often wears button-up shirts with rolled sleeves and khaki trousers
-- Has distinctive rectangular glasses and a vintage analog watch
-- Speaks with a deep, measured voice and precise diction
+### 🔹 Malik Odhiambo – *The Institutional Architect*
+- Former banking CTO → now a highly structured SRE consultant
+- Dry humor, methodical, prefers patterns over chaos
+- Anchor for long-term thinking, ideal mentor foil to someone like Danny
+- 📘 Ideal for: case studies, policy discussion, and bridging legacy systems
 
-**Personality:**
-- Former banking CTO turned SRE consultant
-- Methodical, detail-oriented, and extremely patient
-- Loves using historical analogies to explain complex concepts
-- Slightly formal in manner but with a dry, unexpected sense of humor
-- Brings decades of banking technology experience and institutional knowledge
-- Tends to document everything meticulously
-- Known for his phrase: "Reliability is built on a foundation of proven patterns"
+### 🔹 Zuri Wanjiku – *The Modern DevOps Lead*
+- Former startup founder, bright visual flair, high energy
+- Pushes cutting-edge automation and AI tools
+- Great tech-intensity counterbalance to Malik
+- 📘 Ideal for: microservice reliability, CI/CD, fast-iteration scenes
 
-## 2. Zuri Wanjiku
+### 🔹 Jamal Kimeu – *The User Advocate*
+- Wheelchair-using Customer Experience Director
+- Warm, empathetic, speaks for the customer in SRE discussions
+- Brings lived experience to reliability debates
+- 📘 Ideal for: scenes about SLOs, product/service UX, or incident comms
 
-**Physical Description:**
-- Female
-- 27 years old
-- Average height with an athletic build
-- Long braids often styled in creative updos with colorful beads
-- Round face with dimples and expressive eyebrows
-- Favors bright, contemporary business casual with statement jewelry
-- Always has multiple devices and a digital notebook
-- Energetic body language and rapid-fire speech pattern
+---
 
-**Personality:**
-- Former startup founder, now DevOps lead at a digital payment platform
-- Innovative, tech-forward, and constantly learning
-- Brings cutting-edge practices from the fintech world
-- Enthusiastic about automation and AI-assisted SRE
-- Sometimes impatient with legacy systems and processes
-- Natural bridge between development and operations teams
-- Known for her catchphrase: "Let's build the solution, not manage the problem"
+## 🧠 Suggested New Cast (3 Fresh Profiles)
 
-## 3. Jamal Kimeu
+Let’s expand your adult cast with a balance of technical mentors, risk/finance voices, and diverse SRE personas. Here’s a fresh draft:
 
-**Physical Description:**
-- male
-- 35 years old
-- Stocky build with broad shoulders
-- Shaved head and a friendly, open face
-- Has a distinctive scar above his left eyebrow from a childhood accident
-- Typically wears casual tech company attire with colorful sneakers
-- Uses a wheelchair due to a spinal injury from a car accident five years ago
-- Has a warm, resonant voice and infectious laugh
+---
 
-**Personality:**
-- Customer Experience Director at a major African bank
-- Empathetic, user-focused, and excellent at translating technical concepts for non-technical audiences
-- Former customer service representative who worked his way up
-- Brings the crucial perspective of how reliability impacts real customers
-- Natural mediator between technical and business teams
-- Passionate about accessibility in both technology and physical spaces
-- Known for his phrase: "Reliability isn't measured in uptime—it's measured in customer trust"
+### 🔧 4. **Lucía Torres** – *The Risk Lens*
 
-These characters could play various roles in your training materials:
-- Providing different perspectives on SRE concepts
-- Representing different stakeholders in banking scenarios
-- Appearing in case studies or role-play exercises
-- Contributing specific expertise in supplementary sections
-- Creating natural dialogue and different teaching styles to complement Ava's approach
+**Role**: Head of Risk Engineering, Mexico Division  
+**Age**: 50  
+**Visuals**: Wears sharply tailored suits in muted earth tones. Silver hair pulled into a no-nonsense bun. Carries a mechanical pencil and leather portfolio.  
+**Personality**: Meticulous, principled, and quietly authoritative. Sees reliability through the lens of risk tolerance and regulation.  
+**Catchphrase**: *“Every system lies. The question is how loudly and when.”*  
+**Great for**: SLO negotiation scenes, regulatory risk analysis, incident simulations with business stakes
 
-Each character brings their own background, expertise, and personality that could help illustrate different aspects of SRE in the banking industry while maintaining global balance and representation.
+---
+
+### ⚙️ 5. **Gabriel Martínez** – *The Telemetry Engineer*
+
+**Role**: Staff Observability Engineer at LatinCloud  
+**Age**: 41  
+**Visuals**: Wears dark hoodies, always with noise-canceling headphones around his neck. Sports a subtle tattoo of a waveform.  
+**Personality**: Soft-spoken, deeply technical. Lives inside dashboards. Gets animated when discussing tracing strategies.  
+**Catchphrase**: *“Logs are for when you’re scared. Metrics are for when you’re wise.”*  
+**Great for**: Teaching sessions on instrumentation, or walking a junior (e.g., Sofia) through data structures.
+
+---
+
+### 🗣️ 6. **Ana Mendoza** – *The Tech Comms Lead*
+
+**Role**: Internal Comms & Incident Lead at a Tier 1 bank  
+**Age**: 35  
+**Visuals**: Oversized glasses, bold lipstick, always typing on a phone or tablet. Stylish but efficient.  
+**Personality**: Fast-talker, loves structure, always thinking about messaging during chaos. Balances brand protection with transparency.  
+**Catchphrase**: *“You don’t just fix outages. You narrate them.”*  
+**Great for**: Incident postmortems, cross-team simulations, building narrative trust in technical reporting
+
+---
+
+Would you like these added into your canvas with their own “SRE Cast Reference” markdown file? Or would you prefer to bundle them with the learners under a unified character doc?
