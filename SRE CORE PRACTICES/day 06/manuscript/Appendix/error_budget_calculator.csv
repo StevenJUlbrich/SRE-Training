@@ -1,0 +1,2 @@
+SLO_Objective_%,Time_Window_days,Total_Requests,Error_Budget_reqs,Error_Budget_seconds
+99.9,30,100000000,=C2*(1-A2/100),=E2

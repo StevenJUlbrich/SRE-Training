@@ -1,0 +1,12 @@
+# ---- Blank SLO YAML Template ----
+service: <service-name>
+slo:
+  name: <human-readable name>
+  objective: <99, 99.9, etc.>
+  time_window: <30d, 7d, etc.>
+  description: <text>
+  sli:
+    events:
+      total_query: <PromQL for total events>
+      error_query: <PromQL for bad events>
+# ---------------------------------

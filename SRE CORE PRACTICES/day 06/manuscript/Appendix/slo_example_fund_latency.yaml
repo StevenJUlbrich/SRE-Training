@@ -1,0 +1,17 @@
+service: fund-transfer
+slo:
+  name: "p99 latency <= 300 ms"
+  objective: 99.9
+  time_window: 30d
+  description: "Customers should see 99.9 % of transfers complete under 300 ms."
+  sli:
+    events:
+      total_query: sum(rate(fund_transfer_latency_seconds_bucket[5m]))
+      error_query: sum(rate(fund_transfer_latency_seconds_bucket{le="0.3"}[5m])) == 0
+burnalerts:
+  fast:
+    window: 1h
+    burn_rate: 14
+  slow:
+    window: 6h
+    burn_rate: 2
