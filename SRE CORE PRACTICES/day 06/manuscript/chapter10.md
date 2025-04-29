@@ -38,7 +38,7 @@ During the next payday, actual peak hits 2 360 TPS; pods auto-scale from 18 → 
 
 ---
 
-## Teaching Narrative 1 – *Reactive vs Proactive* (≈ 1 660 words)
+## Teaching Narrative 1 – *Reactive vs Proactive
 
 > ![Cost line shoots up during reactive scale-out; proactive forecast would have smoothed cost and head-room.](images/ch10_p01_reactive_vs_proactive.png){width=650}
 
@@ -58,7 +58,7 @@ Reactive scaling equals “borrow reliability at loan-shark rates.” Proactive 
 
 ---
 
-## Teaching Narrative 2 – *Demand Forecasting 101* (≈ 1 690 words)
+## Teaching Narrative 2 – *Demand Forecasting 101
 
 > ![Prophet forecast chart with weekly seasonality bands.](images/ch10_p02_forecast.png){width=650}
 
@@ -102,7 +102,7 @@ Forecast CSV lands in `capacity-plans/2025-Q3/forecast.csv`; a Git pre-commit ho
 
 ---
 
-## Teaching Narrative 3 – *Head-Room SLOs* (≈ 1 650 words)
+## Teaching Narrative 3 – *Head-Room SLOs* 
 
 > ![Head-room gauge showing 25 % buffer; Ava explains to Achieng.](images/ch10_p03_headroom_slo.png){width=650}
 
@@ -353,39 +353,4 @@ Roadmap bullets:
 * Explore multi-cloud buffer via Outposts to satisfy East-Africa data-residency bill now in parliament.
 
 Ava ends with a Swahili toast: “Mtaka cha mvunguni, sharti ainame—whoever wants what’s under the bed must bend.” Proactive planning is the bend that saves the nine.
-
----
-
-## Self-Check Table  (re-shown for completeness)
-
-| Concept       | Question                             | Your Answer |
-| ------------- | ------------------------------------ | ----------- |
-| Regression    | Which variable captured cache churn? |             |
-| Head-room SLO | Minimum spare vCPU %?                |             |
-| Multi-AZ      | Cost premium vs single-AZ?           |             |
-| Savings Plan  | Discount % chosen?                   |             |
-| Load Test     | Head-room dipped to what %?          |             |
-
----
-
-### chapter10_panels.json  (populated)
-
-```json
-{
-  "panels": [
-    {"panel":1,"filename":"ch10_p01_reactive_vs_proactive.png","scene_description":"Cost spike line vs smooth forecast ref; Ava points; Daniel worried.","characters_in_frame":["Ava","Daniel"],"speech_bubbles":{"Ava":"Panic tax here.","Daniel":"Forecast would’ve saved us."},"narration":"Reactive vs proactive cost."},
-    {"panel":2,"filename":"ch10_p02_forecast.png","scene_description":"Prophet chart with seasonality bands; Raj explains; Ava nods.","characters_in_frame":["Ava","Raj"],"speech_bubbles":{"Raj":"P95 peak at 2 450 TPS.","Ava":"Plan for it—now."},"narration":"Demand forecasting."},
-    {"panel":3,"filename":"ch10_p03_headroom_slo.png","scene_description":"Head-room gauge 25 %; Ava explains to CFO Achieng.","characters_in_frame":["Ava","Achieng"],"speech_bubbles":{"Ava":"Buffer protects latency.","Achieng":"Premium accepted."},"narration":"Head-room SLOs."},
-    {"panel":4,"filename":"ch10_p04_cap_model.png","scene_description":"Regression scatter & line; Ava wrist-slaps CPU-only rule.","characters_in_frame":["Ava","Engineer"],"speech_bubbles":{"Ava":"Model the work, not CPU!","Engineer":"Updating formula."},"narration":"Capacity model."},
-    {"panel":5,"filename":"ch10_p05_multi_az_cost.png","scene_description":"Table comparing single vs multi-AZ cost; Ava & CFO.","characters_in_frame":["Ava","Achieng"],"speech_bubbles":{"Achieng":"+12 % cost.","Ava":"Pays for resilience."},"narration":"Multi-AZ placement."},
-    {"panel":6,"filename":"ch10_p06_savings_plan.png","scene_description":"Savings-Plan bar chart; Ava & Achieng handshake.","characters_in_frame":["Ava","Achieng"],"speech_bubbles":{"Achieng":"15 % cost drop!","Ava":"Savings Plan locked."},"narration":"FinOps strategy."},
-    {"panel":7,"filename":"ch10_p07_load_test.png","scene_description":"k6 ramp + ChaosMesh pod kill; SRE watches gauges.","characters_in_frame":["Ava","Learner"],"speech_bubbles":{"Learner":"Latency 286 ms—SLO safe!","Ava":"Head-room held."},"narration":"Load-test validation."},
-    {"panel":8,"filename":"ch10_p08_runbook_pr.png","scene_description":"GitHub PR diff; Ava and Achieng approving.","characters_in_frame":["Ava","Achieng"],"speech_bubbles":{"Ava":"Plan merged.","Achieng":"Budget honoured."},"narration":"Capacity runbook PR."},
-    {"panel":9,"filename":"ch10_p09_autoscaling_guards.png","scene_description":"Guard-rail diagram; Ava configures limits.","characters_in_frame":["Ava","Raj"],"speech_bubbles":{"Raj":"Scale-in floor set.","Ava":"Wallet safe."},"narration":"Autoscaling guard-rails."},
-    {"panel":10,"filename":"ch10_p10_seasonal_overlay.png","scene_description":"Calendar heat-map; Marketing rep present.","characters_in_frame":["Ava","Marketing Rep"],"speech_bubbles":{"Marketing Rep":"Promo flagged.","Ava":"Capacity re-forecasted."},"narration":"Seasonal overlay."},
-    {"panel":11,"filename":"ch10_p11_quarter_review.png","scene_description":"Quarterly dashboard; CFO smiles.","characters_in_frame":["Ava","Achieng"],"speech_bubbles":{"Achieng":"KPIs green.","Ava":"Plan approved."},"narration":"Quarterly review."},
-    {"panel":12,"filename":"ch10_p12_futureproof.png","scene_description":"Roadmap slide; Ava presents future steps.","characters_in_frame":["Ava","Raj"],"speech_bubbles":{"Ava":"Next—multi-cloud buffer.","Raj":"Onward to 2026."},"narration":"Future-proofing."}
-  ]
-}
-```
 
