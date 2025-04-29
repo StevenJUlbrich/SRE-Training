@@ -55,8 +55,8 @@
 - **Visual Metaphors**:
   - Metrics = pulse; logs = timeline; traces = diagnosis map
   - Visuals should favor *diagnosis and clarity* over metaphorical abstraction
-   - Banking metaphors that translate technical concepts into financial terms
-   - Clear visual distinction between "theory" sections and "practical application" sections
+  - Banking metaphors that translate technical concepts into financial terms
+  - Clear visual distinction between "theory" sections and "practical application" sections
 ---
 
 This style emphasizes modern professionalism, technical authority, and visual clarity — Hector’s world doesn’t use flair to teach; it uses facts, and it’s built to survive the next failure.
