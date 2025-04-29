@@ -1,337 +1,283 @@
-# Chapter 2 – Understanding the User Lens
+<!-- Part A of Chapter 2 -->
 
+# Chapter 2 – Understanding Your Users’ Experience  
+---
 
-> **Ava check‑in:** *“Metrics without a user are numbers without context—today we graft the context back on.”*
+### Chapter Overview  
+
+Banking reliability isn’t measured in server-room decibels but in heartbeats and sighs. Picture a Nairobi commuter tapping **“Send ₵4 500”** at 07:58, glancing at the matatu conductor, then refreshing her phone every half-second until the spinner vanishes. Those nerve-wracking seconds—**moments that matter**—shape brand loyalty far more than any uptime graph. In this chapter Ava Kimani guides you through mapping those moments, separating system metrics from user emotions, and turning empathy into precise, experience-centric SLIs.
 
 ---
 
-## 1 · Reality Check: The Forgotten Customer 
+## 🎯 Learning Objective  
 
-**🎯 Learning Objective:** Diagnose the hidden delta between infrastructure health indicators and real‑world customer experience.
+Define a retail-bank customer journey, locate the emotional high-stakes touchpoints, and convert them into SLIs that capture **time-to-trust** rather than CPU idle time.
 
-**✅ Takeaway:** If a single user sees an error while every host shines green, your observability stack is lying—fix the lens, not the user.
+## ✅ Takeaway  
 
----
+Customers remember feelings, not log lines. Quantify the feelings (with latency, success-ratio and visibility metrics) and you can guard them with data.
 
-### 1.1 Morning Commute, Mission‑Critical Airtime
+## 🚦 Applied Example  
 
-07 : 58, Haile Selassie Avenue. **Linet Mwangi** juggles one phone, one paper coffee cup, and a backpack strap. Her telco bundle expired overnight; topping‑up airtime before an 08 : 30 Zoom call with a London client is non‑negotiable. She opens the “QuickPay” widget, hits **Pay KES 250**, and watches the spinner pirouette. Five seconds later a red toast slides down: **“Payment failed — try again later.”**
+On payday, many Kenyans receive an in-app push notification—**“Salary deposited!”**—seconds after their company batch file posts to the core-bank queue. But ledger replication sometimes lags; the balance widget still shows last month’s figure and a rent auto-debit fires, triggering an overdraft fee.  
 
-Two floors above the Matunda Bank atrium, the **NOC wall** cycles metrics:
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| CPU util | 41 % | ✅ |
-| JVM heap | 58 % | ✅ |
-| Disk latency | 1.8 ms | ✅ |
-| 5xx per minute | 0.01 % | ✅ |
-| Synthetic /healthz | 200 OK | ✅ |
-
-A junior analyst, **Kevin**, logs the hour as “Stable”.
-
-> *Footsteps.*  Ava bursts in, travel mug in hand, dreadlocks tied back, a rubber band of post‑it notes around her wrist. She points at the pristine wall.  *“Stable for whom? Linet is southbound on the 43 bus tweeting #MatundaFail.”*  Wrist‑slap.
-
-### 1.2 The Invisible Failure Path
-
-Kevin queries *fraud‑check‑service* logs:  
 ```
-07:58:22Z  WARN FraudScore timeout 1500ms user_id=988721 trx_id=77aa…
-07:58:23Z  ERROR FraudScore failed after retries user_id=988721 … HTTP 502
+Timeline (seconds)
+0  | Payroll job inserts credit row
+1  | Push notification dispatched ✅
+4  | Replication delay …
+8  | Balance API returns stale data ❌
+15 | Auto-debit hits, fee posted 😡
 ```
-The median compute host never broke a sweat; the *edge* spent the error budget.
 
-**Failure cascade:**
-1. Fraud‑score model in GPU pool caused GPU context switch spike.  
-2. Fraud‑check requests timed‑out at 1 500 ms; API gateway retried twice.  
-3. After 3 000 ms gateway returned 502.  
-4. Mobile SDK interpreted 502 as fatal, no internal retry.  
-5. Linet’s UX displayed generic error.
+Ava’s draft SLO:
 
-**Cost of a blind spot:** KES 250 seems trivial; but 38 000 similar failures per hour correlate to ~KES 9 M lost interchange and immeasurable churn.
+```yaml
+slo: "Balance visible within 5 s after credit POST 99.5% over 30d"
+indicator:
+  numerator: count_success(balance_api_latency_seconds_bucket{le="5"})
+  denominator: count_total(balance_api_requests_total)
+```
 
-{{WISDOM_BOX}}
-
-> **SRE Wisdom #12 —** *“If the customer felt it but your dashboard didn’t, your dashboard is wrong.”* — Ava Kimani
-
-### 1.3 Quick Audit – Are You Measuring Users or Hosts?
-
-| Question | If **No** → Action |
-|----------|-------------------|
-| Do you record end‑to‑end latency perceived by SDK? | Add client‑side spans via OpenTelemetry. |
-| Do you tag logs with `user_id` or `journey_id`? | Inject correlation IDs. |
-| Do you store per‑journey success %, not per‑API? | Aggregate spans into traces. |
-| Does your NOC wall surface p99 *journey* latency? | Replace host widget with RED/USE dashboards. |
-
-Take 15 minutes: answer **Yes** or **No**; each **No** is a reliability debt line‑item.
+Miss the SLO and you hemorrhage trust—and overdraft investigations cost KSh 120 per case.
 
 ---
 
-## 2 · Mapping the End‑to‑End Journey 
+## Teaching Narrative 1 – *Moments That Matter*  
 
-**🎯 Learning Objective:** Construct a canonical service map that captures every hop, protocol, and datastore in a critical banking workflow, and attach observability hooks aligned to that map.
+It’s Friday 16:20. Teller windows glow amber in the low sun. **Wanjiru**, junior developer on rotation at a downtown branch, watches a queue coil toward the door. A boy waves school-fee cash; his mother stares at her frozen phone.  
 
-**✅ Takeaway:** Journeys don’t stop at micro‑service borders; SILOs in code equal SILOs in telemetry—make the map first, then the metrics.
+**Ava (whispering):** “See that spinner?”  
+**Wanjiru:** “API latency’s fine; logs show 230 ms.”  
+**Ava:** “Latency where? Between gateway and microservice—not gateway and mother’s heartbeat.”  
 
-![Journey map](images/ch02_p01_customer_journey.png){width=550px}
+Ava opens her laptop, runs `traceroute –T` between phone and ledger, revealing a four-hop detour through a creaky firewall. She overlays the hops on a heat-map of emotional states—green calm, red anxiety.  
 
-### 2.1 Swim‑Lane Anatomy
+> **Scene (technical):** She correlates branch Wi-Fi RTT data with queue abandonment stats—1 % of customers bail for every additional second their balance is invisible.  
 
-| Lane | Component | Typical Latency Budget | Failure Modes | Primary Hook |
-|------|-----------|------------------------|---------------|--------------|
-| **Device** | SDK + TLS handshake | 50 ms | DNS cache miss, captive portal | RUM beacon (`first_paint`, `ttfb`) |
-| **Edge / CDN** | TLS terminate, WAF | 20 ms | Rule mis‑match 403 | CDN Real‑User Monitoring logs |
-| **API Gateway** | AuthN+AuthZ, routing, rate‑limit | 40 ms | expired JWT, quota breach | Counter `auth_fail_total` |
-| **Business‑logic svc** | Fraud‑check, scoring | 150 ms | GPU stall, model up‑rev | Histogram `svc_latency_bucket` |
-| **Ledger** | ACID DB commit | 40 ms | lock contention | Wait‑events via pg_stat_activity |
-| **Cache + MQ** | Redis, Kafka | 5 ms | saturation, backpressure | `redis_cmd_duration_seconds` |
-| **Notification** | SMS vendor, APNs | 100 ms | vendor 5xx, throttling | External SLI via webhooks |
-| **Client Confirmation** | Toast, push notif | 0 ms (async) | APNs token invalid | Delivery receipts |
+She introduces the term **“micro-moment”**: the smallest slice of time in which your brand can delight or disappoint. For a balance check the micro-moment spans **tap → updated figure**.  
 
-Summed ideal budget: 405 ms — still under the 500 ms aspirational SLO. *Everything else is latency tax.*
+Formula:
 
-### 2.2 Visualising Critical Paths
+```
+time_to_trust = t_visible - t_intent
+```
 
-Ava introduces **Mermaid sequence diagrams** rendered in Grafana 9.  Example:
+≥ 6 s triggers “doubt” per UX lab. Ava sketches five mobile moments: login, balance, fund-transfer, bill-pay receipt, push-alert confirmation. The team will measure each.  
+
+![Alt text](images/ch02_p01_moments.png){width=600}
+
+---
+
+## Teaching Narrative 2 – *Golden Signals vs Human Sentiment*  
+
+**Emmanuel** projects Prometheus graphs: CPU 25 %, p99 latency 280 ms, error 0.07 %. Everything looks green. Yet Twitter searches for *#KCBDelay* spike 200 %.  
+
+**Ava:** “Golden signals are necessary but not sufficient.”  
+**Daniel:** “So what fills the gap?”  
+**Ava:** “Sentiment signals: abandonment rate, repeat taps, complaint tweets.”  
+
+:::diagram  
 ```mermaid
-sequenceDiagram
-  autonumber
-  participant U as User SDK
-  participant G as API Gateway
-  participant F as FraudSvc
-  participant L as LedgerDB
-  participant N as NotifySvc
-  U->>+G: POST /pay
-  G->>+F: score(trx)
-  F-->>-G: score=0.7 (1 200 ms)
-  G->>+L: INSERT trx
-  L-->>-G: 201 (45 ms)
-  G->>+N: push_confirm
-  N-->>-G: 200 (120 ms)
-  G-->>-U: 200 OK (total 1 415 ms)
-```
-Grafana renders spans colour‑coded by time; any hop > 400 ms glows amber.
+graph LR
+  A(Golden Signals<br/>Latency/Traffic/Errors/Saturation)
+  B(Sentiment Signals<br/>Spinner duration, repeat click count, tweets/min)
+  C(Experience SLI)
+  A --> C
+  B --> C
+```  
+:::
 
-### 2.3 Tagging Spans and Metrics
+She layers sentiment curves atop system metrics: as latency climbs from 280 → 320 ms, complaints **exponentially** rise. They plot Pearson r = 0.88.  
 
-Ava’s rule: *“If you can’t join it, you can’t correlate it.”* Mandate:
-- Every span carries `journey_id`, `user_tier` (e.g., gold vs basic), `segment` (fraud, ledger).  
-- Metrics are labelled identically (`{journey_id="$id", segment="fraud"}`).  
-- Logs include the same IDs for downstream analysis.
+**Swahili proverb break:**  
 
-**Prometheus exemplar support** ties the span ID back to trace UI with one click.
+:::proverb  
+> “Aliyesikia, ameona.” — *He who listens has already seen.* When customers speak, graphs should echo.  
+:::  
 
-### 2.4 Observability Hook Examples
+Ava crystallises an **Experience Pyramid**: hardware → service → feature → emotion. CPU sits at the base; trust crowns the top. Measure at every tier, but set **SLOs near the crown**.  
 
-**Fraud‑check latency histogram**
-```promql
-histogram_quantile(0.99, sum(rate(fraud_score_duration_seconds_bucket[5m])) by (le,segment))
-```
-**End‑to‑end SLI**
-```promql
-sum(rate(journey_complete_total{status="success"}[5m]))
-  /
-sum(rate(journey_complete_total[5m]))
-```
-**Capacity alert for GPU saturation**
-```promql
-max_over_time(gpu_mem_used_bytes[1h])
-  / max_over_time(gpu_mem_total_bytes[1h]) > 0.9
-```
-
-### 2.5 *Try This* — Journey Gap Analysis
-1. Export your top 10 revenue‑impact workflows from product analytics.  
-2. Draw a swim‑lane map; annotate observability hooks.  
-3. Score each hop **0 = none**, **1 = host metric only**, **2 = hop metric**, **3 = user‑visible SLI**.  
-4. Total < 70? You have blind spots; prioritise instrumenting by revenue weight.
-
-{{TRY_THIS}}
+![Alt text](images/ch02_p02_signals_vs_sentiment.png){width=600}
 
 ---
 
-## 3 · Where Metrics Lie 
+## Teaching Narrative 3 – *Journey-Mapping Workshop*  
 
-**🎯 Learning Objective:** Deconstruct common telemetry fallacies and implement statistical guard‑rails (percentiles, histogram buckets, SLO windows) that expose user pain.
+Whiteboard markers squeak as Ava draws swim-lanes: **User**, **Mobile App**, **API**, **Core Bank**, **SMS Gateway**. For each lane she plots intent, action, feedback.  
 
-**✅ Takeaway:** Averages flatter spikes, synthetic probes skip complexity, and host dashboards sedate incident response; percentiles, burn‑rates, and user‑journey SLIs restore truth.
+**Ava:** “Let’s annotate the balance-check journey.”  
+**Wanjiru:** “Intent at t=0, spinner until ledger reply, success toast.”  
+**Ava:** “Where’s the first emotional peak?”  
+**Wanjiru:** “When spinner passes 3 s—anxiety climbs.”  
+**Ava:** “Mark it red.”  
 
-### 3.1 Mean Time to Mislead
+They attach sticky-notes with pain scores.  
 
-Imagine five payments: 100 ms, 110 ms, 105 ms, 4 900 ms, 5 100 ms.  
-**Mean:** 2 263 ms  
-**Median:** 110 ms  
-If SLO criterion = p50 < 300 ms you’d celebrate; 40 % of your customers rage‑quit.
-
-Ava runs a Jupyter notebook projecting churn probability vs 99th‑percentile latency. The curve is exponential: every 250 ms after 1 s doubles attrition in mobile e‑commerce.
-
-### 3.2 Histogram Hygiene
-
-Prometheus defaults: 0.005, 0.01, 0.025, 0.05, … but banking latencies hover 200–2 000 ms. Buckets mis‑represent heavy tails. Ava’s recipe:
-```yaml
-buckets: [0.05,0.1,0.15,0.2,0.35,0.5,0.75,1,1.5,2,3,5]
 ```
-Then `histogram_quantile(0.995, …)` provides real 99.5th percentile.
-
-### 3.3 Multi‑Window, Multi‑Burn‑Rate Alerts
-
-Host alerts fire on CPU > 90 % for 5 m. Useless. Instead:
-```yaml
-- alert: PaymentLatency_BurnRate
-  expr: (
-      sum(rate(journey_latency_bucket{le="2"}[1m]))
-        / sum(rate(journey_latency_count[1m]))
-    ) < 0.993
-  for: 2m  # fast window
-- alert: PaymentLatency_BurnRate
-  expr: (
-      sum(rate(journey_latency_bucket{le="2"}[1h]))
-        / sum(rate(journey_latency_count[1h]))
-    ) < 0.993
-  for: 1h  # slow window
+Step               Pain (1–5)  Metric gap?
+Open App           2           First-paint not tracked
+Login              3           Biometric fallback missing
+Balance Visible    4           No end-to-end latency SLI
+Transfer Receipt   5           Push-alert vs ledger gap
 ```
-PagerDuty triggers only when both windows breach—cuts noise by 80 %.
 
-### 3.4 Synthetic Limitations
+Determining **SLI Candidates**:  
 
-Ping‑dom pings `/healthz` every minute. Fraud‑check, ledger, SMS vendor, and GPU anomalies never execute. Ava duplicates synthetic production traffic, including RSA signing, to a shadow environment; same JWT, rate limits, caches. Synthetic failure rates track real‑user failures within ±3 bps.
+* *Balance-visible latency* (`balance_visible≤5 s`)  
+* *Receipt delivery lag* (`sms_confirm≤8 s`)  
+* *Spinner abandon rate* (`tap_abort_ratio≤0.02`)  
 
-**Key metric:** `synthetic_to_real_failure_ratio` — if synthetic misses > 0.8 of real failures, refine the script.
+**Dialogue exchange extended:**  
 
-{{WRIST_SLAP}}
+**Malik:** “Should we SLI every red step?”  
+**Ava:** “Pole pole, ndio mwendo. Start with the largest pain-weighted cost.”  
+**Malik:** “So balance visible wins.”  
+**Ava:** “Exactly—high pain and high frequency.”  
 
-> *“If your synthetic always passes, either your script is naive or your site is down.”*
+![Alt text](images/ch02_p03_journey_whiteboard.png){width=600}
+
+:::dialogue  
+**Ava:** “Data tells you **what**, journey maps tell you **why**.”  
+**Learner:** “And together they decide **where** to invest.”  
+:::
 
 ---
 
-## 4 · The Four Golden Signals – Banking Edition 
+## Teaching Narrative 4 – *Capturing “Time to Trust”*  
 
-**🎯 Learning Objective:** Operationalise Golden Signals with thresholds and windows that satisfy regulators and customers.
+Developers often brag about **request latency** while ignoring **acknowledgment latency**. Ava coins **TtT** (Time-to-Trust): the interval from intent to verifiable completion.  
 
-**✅ Takeaway:** Finance demands stricter error ceilings and deterministic latency; wire Golden Signals to error budgets, not abstract SLAs.
+Formula:
 
-![Golden Signals](images/ch02_p04_golden_signals.png){width=550px}
-
-### 4.1 Rate – The Pulse of Revenue
-
-Define *effective transaction rate* (**ETR**): `successful_trx / window`. Low ETR at constant inbound volume => hidden errors. Ava sets a critical alert when ETR drops by 30 % in 5 min *and* burn rate > 2 ×.
-
-### 4.2 Errors – Weighted by Value
-
-Not all failures equal. Ava assigns **impact weights**:
-- KES 0 – 5 K trx failure → weight 1  
-- KES 5 K – 250 K → weight 3  
-- > 250 K → weight 9  
-Error SLI calculates `sum(weighted_failures)/sum(weighted_total)`.
-
-### 4.3 Duration – Customer Tolerance Curve
-
-A/B tests show 80 % of premium customers abandon at 1.8 s. Ava sets dual SLO: p99 < 2 s and p90 < 1.2 s. Faster cohort keeps VIP churn < 0.5 % / month.
-
-### 4.4 Saturation – Beyond CPU
-
-Key saturations:
-- **Database connection pool** (max 500). Alert at 85 % for 10 s.  
-- **Kafka partitions lag**. Lag > 1 K messages for 1 min triggers scale‑out.  
-- **SMS vendor TPS quota**. Expose via pull exporter; page at 90 %.
-
-### 4.5 Error‑Budget Integration
-
-For each signal define **budget depletion rate**:
-```math
-burn_rate = error_minutes / ( budget_minutes / period_elapsed )
 ```
-Ava demos a Grafana panel: Burn rate 4 × means budget will exhaust in 7 h; CI pipeline auto‑sets `canary=true` to false.
+TtT = t_feedback - t_intent
+```
 
-{{NAIROBI_PROVERB}}
+where *feedback* is a balance change, receipt toast, or SMS.  
 
-> *“Mtaka cha mvunguni sharti ainame.”* (Whoever wants what is under the bed must bend for it.)  
-> **Meaning:** To reach lower latency and higher trust, you must bow to disciplined measurement.
+She instruments the mobile client to emit a synthetic **UX-span** tagged `intent_id`. Span pairs with server logs; distributed-trace waterfall now shows a 2 s gap after 0.3 s request.  
+
+**Ava (slaps wrist):** “Average API_latency 280 ms is a vanity metric if TtT is 2 s!”  
+**Daniel:** “CPU’s 15 %; we’re fine.”  
+**Ava:** “Let me stop you right there. *Watoto wa mjini hawalali na njaa.* City kids don’t sleep hungry; customers won’t tolerate hidden latency.”  
+
+She correlates TtT > 5 s with a 12 % rise in abandoned transfers, equating to KSh 4 M monthly lost float revenue.  
+
+![Alt text](images/ch02_p04_time_to_trust.png){width=600}
+
+:::slap  
+*Playfully slaps wrist* “Stop worshipping CPU graphs—worship your customer’s patience threshold!”  
+:::
 
 ---
 
-## 5 · Designing First SLIs 
+<!-- End Part A -->
 
-**🎯 Learning Objective:** Produce production‑ready SLIs, align them with SLOs, compute budgets, and integrate into CI/CD.
+<!-- Part B of Chapter 2 -->
 
-**✅ Takeaway:** Good SLIs are SMART (Specific, Measurable, Actionable, Reliable, Timely) and live in code—never spreadsheets.
+### Teaching Narrative 5 – *Quantifying Friction Points*  <!-- ≈ 1 300 words -->
+Ava exports two weeks of mobile-app session traces into DuckDB and runs a heat-map query that charts **step-duration (x)** against **drop-off ratio (y)**.  The darkest cell hovers over *Balance Visible > 5 s*.  She converts the heat map into shillings by multiplying each abandoned session’s lost interchange revenue (KSh 23 average) and discovers a hidden ≈ KSh 1.8 million monthly leak.
 
-![SLI Checklist](images/ch02_p05_sli_checklist.png){width=550px}
+“Pain has a price-tag,” she says, projecting a color-bar legend that starts at **green = KSh 0** and ends at **scarlet = KSh 100 000** per hour.  A silent gasp ripples across the room.
 
-### 5.1 SLI Schema
+> **Technical aside** – She shows the SQL that bins latency into 0.5-second buckets, joins with outcome codes, and aggregates by hour:
 
-```json
-{
-  "sli_id": "payment_latency_lt_2000ms",
-  "description": "p99 latency for end‑to‑end payments < 2 s",
-  "measurement": {
-    "source": "Prometheus",
-    "query_good": "sum(rate(journey_latency_bucket{le=\"2\"}[5m]))",
-    "query_total": "sum(rate(journey_latency_count[5m]))"
-  },
-  "ownership": {
-    "team": "Payments SRE",
-    "contact": "#payments‑sre‑alerts"
-  }
-}
+```sql
+WITH bins AS (
+  SELECT
+    width_bucket(latency_ms, 0, 10000, 20) AS bucket,
+    COUNT(*)                     AS hits,
+    SUM(CASE WHEN succeeded THEN 0 ELSE 1 END) AS failures
+  FROM ux_spans
+  WHERE name = 'balance_visible'
+  GROUP BY bucket)
+SELECT
+  bucket*500   AS upper_ms,
+  failures*23  AS shillings_lost
+FROM bins;
 ```
-Checked into Git; CI prevents merge if query_total absent.
 
-### 5.2 Rolling SLI Audit
+The class now attaches **cost values** to every sticky note on the journey board.
 
-Cron job `sli‑lint` reads each SLI, executes queries, reports:
-- **cardinality** (label explosion > 10 K = warning)  
-- **data freshness** (stale > 15 m = critical)  
-- **volatility** (stddev > 10 × median = noisy)  
-Weekly MR posted with improvement suggestions.
+![Alt text](images/ch02_p05_friction_heatmap.png){width=600}
 
-### 5.3 PromQL Pattern Library
-
-| Pattern | Purpose | Snippet |
-|---------|---------|---------|
-| RED success | Rate of good vs bad | `sum(rate(http_requests_total{code=~\"2..\"}[5m]))` |
-| USE saturation | Resource utilisation | `node_filesystem_avail_bytes / node_filesystem_size_bytes` |
-| Deduplicated errors | Collapse retries | `sum(rate(errors_total{retry="false"}[5m]))` |
-| Client‑side RUM | JS beacon percentile | `histogram_quantile(0.95, …)` |
-
-Ava insists each new service selects patterns from library; no bespoke snowflake queries without review.
-
-{{ERROR_BUDGET_METER}}
-
-Current meter now reflects SLI #1 (latency) and SLI #2 (weighted errors); Jenkins pushes status to Confluence daily.
+:::exercise
+**Learner Prompt:**  
+Export your own last-month traces. Rank the three costliest friction points and propose which one deserves an SLI first.  Include a back-of-envelope ROI.
+:::
 
 ---
 
-## 6 · Mini Case Study & Exercise 
+### Teaching Narrative 6 – *Segmentation: Personas & Channels*  <!-- ≈ 1 300 words -->
+Reliability perceptions vary by channel.  Ava introduces **four personas**:
 
-**🎯 Learning Objective:** Apply multi‑signal burn‑rate analysis and fast rollback strategy to regain error budget.
+| Persona | Channel | Moment-of-Truth |
+|---------|---------|-----------------|
+| *Commuter Kofi* | Mobile LTE | Tap-to-balance |
+| *Merchant Amina* | POS | Authorization time |
+| *Branch Elder Nyaga* | Teller | Paper receipt |
+| *ATM Student Zuri* | ATM | Cash-dispense delay |
 
-**✅ Takeaway:** A live incident is a classroom—capturing metrics before, during, after is the exam review that cements learning.
+She filters `ux_spans` by `device_type` and plots p95 TtT for each persona.  Mobile TtT spikes at evening rush hour, while POS spikes Sunday market mornings.
 
-### 6.1 Mpesa‑Lite Incident Timeline
+Dialogue exchange:
 
-| Time | Event | Metric change | Action |
-|------|-------|---------------|--------|
-| 10:00 | Feature flag 10 % traffic | p99 latency +140 ms | Observe |
-| 10:07 | Twitter complaints start | error SLI deteriorates 0.1 → 0.6 % | Alert (burn rate 3 ×) |
-| 10:09 | Decision meeting | **Stop canary**  | flag to 0 % |
-| 10:14 | Latency drops | p99 back to 450 ms | Start root‑cause |
-| 10:25 | GPU saturation found | 95 % util | Scale GPU pool |
-| 10:40 | Re‑canary at 5 % traffic | burn rate 0.2 × | Monitor |
-| 11:15 | Full traffic | Latency steady | Close incident |
+**Zuri (DevOps lead):** “Do we need separate SLIs for each persona?”  
+**Ava:** “Focus on any segment whose TtT p99 already exceeds your global SLO.  One broken segment taints the brand for all.”
 
-### 6.2 Exercise – Your Turn
+She demos `histogram_quantile()` over a label-split Prometheus histogram and adds **channel dimension** to Grafana templating.  CTO Malik sees that ATM latency is fine yet mobile bleeds trust; he approves budget for CDN edge nodes.
 
-1. Simulate traffic burst with `hey` generating 300 RPS to fraud service.  
-2. Inject 600 ms delay via `tc qdisc add`.  
-3. Observe SLI changes in Grafana.  
-4. Adjust threshold from 2 s → 1.2 s; watch how error budget depletes faster.  
-5. Record timeline in the table format above.
+![Alt text](images/ch02_p06_personas_channels.png){width=600}
 
-![Case fix](images/ch02_p06_case_fix.png){width=550px}
+---
 
-**Reflection questions**
-- Did your burn‑rate alert fire before Twitter?  
-- How many budget minutes did you burn?  
-- How would you automate rollback next time?
+### Teaching Narrative 7 – *Selecting Experience-Centric SLIs*  <!-- ≈ 1 300 words -->
+Ava prints a 4×4 matrix—rows are journey steps, columns are candidate metrics (latency, success, visibility-delay, sentiment).  Each cell scores *Impact × Feasibility*.  The highest composite: **Balance Visible ≤ 5 s**.
 
-{{TRY_THIS}}
+:::diagram
+```mermaid
+flowchart TB
+  subgraph Matrix
+    A1["Login<br/>Latency"]:::low
+    A2["Login<br/>Success"]:::med
+    B1["Balance<br/>Latency"]:::high
+    B2["Balance<br/>Visibility"]:::high
+    C1["Transfer<br/>Latency"]:::med
+    C2["Transfer<br/>Receipt"]:::high
+  end
+  style Matrix fill:none,stroke:none
+  classDef high fill:#ffce00;
+  classDef med  fill:#a0d2ff;
+  classDef low  fill:#e0e0e0;
+```
+:::
 
+She drafts three SLIs:
+
+```
+balance_visible_latency_p95 ≤ 3 s
+transfer_receipt_delay_p99 ≤ 8 s
+spinner_abandon_ratio ≤ 0.02
+```
+
+**Wanjiru:** “Two latency, one ratio—good mix?”  
+**Ava:** “Yes, latency measures speed, ratio measures trust.” 
+
+![Alt text](images/ch02_p07_sli_selection.png){width=600}
+
+---
+
+### Teaching Narrative 8 – *Winning Buy-In Across the Bank*  <!-- ≈ 1 300 words -->
+Ava schedules a cross-functional **Reliability Road-show**: risk, customer-care, marketing, core-bank ops.  She shows each stakeholder a mocked-up “Trust Thermometer” badge: green when SLO ≥ 99.5 %, amber 99–99.5, red < 99.  Marketing loves the badge for app-store screenshots; risk loves that overdraft complaints drop when badge is green.
+
+She automates a Slack bot that posts daily TtT compliance to #cx-health.  At 08:15 Monday the badge flips amber.  Teller Wanjiru triggers a feature flag rollback before Twitter notices; the badge returns green by 08:25.
+
+![Alt text](images/ch02_p08_stakeholder_buyin.png){width=600}
+
+:::exercise
+**Try This:**  
+Create a “Trust Thermometer” proof-of-concept for your ATM cash-out flow.  Post daily compliance to a shared channel and record stakeholder reactions.
+:::
+
+---

@@ -1,215 +1,261 @@
-# Chapter 1 – The Reliability Revolution
+<!-- Part A of Chapter 1 -->
 
-## Welcome to the World of Measurable Reliability
+# Chapter 1 – The Reliability Revolution  
+---
 
-Good morning, afternoon, or evening—depending on when you're reading this! I'm Ava Kimani, coming to you from sunny Nairobi. For the past 15 years, I've been on the frontlines of reliability engineering, watching it transform from a reactive scramble to a precise discipline. Today, I'll be your guide as we embark on this journey from production support to becoming true guardians of reliability.
+### Chapter Overview  
+The every work text message used to own you. Every shrill beep dragged you from family dinners, commuter trains, or the fragile edge of sleep. But banking customers never saw the chaos—only the silence that followed a frozen ATM or a spinning mobile progress wheel. Those days of firefighting first and asking questions later are ending. Site Reliability Engineering rewrites the story: we replace reactive heroism with measurable, contract-like promises and an explicit “innovation budget” you can spend without betraying trust. Your mentor, **Ava Kimani**, will guide you through the first three pillars of that promise—**Service-Level Indicators, Objectives, and Error Budgets**—using the familiar example of a retail-bank fund-transfer API.  
 
-*Ever Notices a slide with "100% uptime" written on it* - *Playfully slaps wrist* 
-
->Let's start by clearing away some misconceptions. If you've come here looking for the secret to perfect reliability, I'm afraid you're in for disappointment. Perfect reliability doesn't exist—and chasing it is not only futile but actively harmful to your organization. What we're after is something far more valuable: reliability you can measure, understand, and improve systematically.
+![Ava_Introduction](images/ch01_p00_Ava.png){width=500px}
 
 ---
 
-## 1 · Opening Anecdote 
+## 🎯 Learning Objective  
+By the end of this chapter you will be able to **define SLIs, SLOs, and Error Budgets, explain their business value for a mobile-banking app, and outline how an error budget converts reliability from superstition into strategy.**
 
-![Ava greets the dawn](images/ch01_p01_intro_skyline.png){width=550}
+## ✅ Takeaway  
+Reliability is not perfection; it’s a **quantified commitment**—“We move money in < 300 ms 99.9 % of the time”—backed by an explicit allowance for the 0.1 % of failures that fuel innovation.
 
-Nairobi’s first light spills across the rooftops like a promise. Ava Kimani stands on the edge of a coworking terrace, nursing her battered ceramic mug—the one that reads **Reliability you can measure** in flaking gold letters. Below her, the *Silicon Savannah* revs awake: boda‑boda couriers weaving through traffic, fibre backbones humming alive, fintech dashboards blinking from the glass façades of digital banks.
+## 🚦 Applied Example  
+On Monday morning the Mobile-Banking team publishes its first SLO:
 
-> ***“For fifteen years,”*** Ava tells us, ***“I’ve watched ops teams chase outages the way kids chase fireflies—frantic, dazzled, never in control. Today we trade the chase for a compass.”***  She taps the rim of her mug once, a metronome for the lesson to come.  In that tap lives her philosophy: **a rhythm of observation, decision, action, reflection—measured, repeated, improved.**
+```yaml
+apiVersion: sloth.dev/v1
+kind: PrometheusServiceLevel
+metadata:
+  name: fund-transfer-latency-slo
+spec:
+  service: fund-transfer
+  slo: "p99 latency under 300 ms 99.9 % of rolling 30 days"
+  objectives:
+    - ratioMetrics:
+        errors:
+          prometheus: sum(rate(http_server_latency_seconds_bucket{le="0.300",job="fund-transfer"}[5m]))
+        total:
+          prometheus: sum(rate(http_server_requests_total{job="fund-transfer"}[5m]))
+```
 
-The air carries the metallic trill of the first commuter train. On her smartwatch: 04:59 UTC+3. A push notification flares—*checkout‑service v2.9.3 deployed*. She smiles, but not because deployments excite her. They *inform* her. "Changes autograph every incident," she’ll soon remind the reader.
-
-{{WISDOM_BOX}}
-
-> **SRE Wisdom:** *“Reliability isn’t a line of hope in a status page—it’s the slope of continuous improvement.”*  ─ **Ava Kimani**
-
----
-
-## 2 · From Branch Queues to 24×7 Mobile
-
-![Old vs new banking](images/ch01_p02_crisis_split.png){width=550px}
-
-In 1985 banking success meant a marble lobby, polished brass pens, and a velvet rope that parted when the manager finally called, *Next!*  In 2005, it meant a hallway of ATMs with a “24‑hour” neon sign. The banking industry has undergone a seismic shift. In 2025, success is a user who never thinks about banking at all—because the payment accepted, the balance updated, the fraud check cleared *while they waited for a latte*.
-
- Today's customers expect to access their accounts, make payments, and apply for loans 24/7 from their mobile devices. Their expectations have never been higher, and the cost of reliability failures has never been steeper.
-
-Yet inside many institutions, monitoring screens still zoom in on server CPU, disk I/O, JVM heap. Users queue invisibly at the *experience* level, not the infrastructure level. That disconnect is the breeding ground for the midnight outage we’re about to witness.
-
-A Kenyan coffee farmer finishes uploading a produce‑loan application on his phone. **SUBMIT** spins … spins … fails. Across the split panel, a branch in downtown Nairobi shows customers frowning as a teller apologises for “system latency.” The underlying call is the same gRPC micro‑transaction API, failing silently behind a wall of green host status LEDs.
-
-**Cost of one misaligned metric:** revenue? big. Customer trust? bigger. Regulatory headache? colossal.
-
-{{NAIROBI_PROVERB}}
-
-> *“Kuteleza si kuanguka.”* (Slipping isn’t the same as falling.)  
-> **Lesson:** Minor glitches warn you before the precipice—*if* you’re listening at the right layer.
+For customers, that YAML is invisible—but its consequences are not. Dip below 99.9 % and transfers stall, scripts retry, call-center queues swell, and trust erodes. Stay above it, and product managers green-light a risky encryption upgrade because **0.1 % of timeouts are already priced into user expectations**. The SLO becomes both shield and scalpel: shielding users from excess pain while carving out safe space for change.
 
 ---
 
-## 3 · Heroic Firefighting vs Sustainable Reliability
+### Teaching Narrative 1 – *From Pager Duty to Promises*  
 
-![Hero burnout](images/ch01_p03_hero_burnout.png){width=600px}
+Ava adjusted her glasses and projected a heatmap of three years’ after-hours pager alerts onto the wall of the Nairobi innovation hub. Red squares bled across Fridays at 16:00 like spilled ink.  
 
-Scene: 03:17. Pager sirens strobe red across a war‑room. Two engineers slump over keyboards littered with cling‑film pizza and half‑drunk maziwa chai. A banner on the big screen reads **99.999 % Uptime (month‑to‑date)**—a vanity relic. Meanwhile, a service map pulses crimson where payment calls time‑out.
+“Look at that,” she said. “Every payday, the fund-transfer service buckles. You scramble, you patch, and still users tweet screenshots of spinning wheels.”  
 
-Ava swings in, wrist raised—*slap!* She taps the uptime figure as if brushing dust from a trophy.
+**Jamal (Customer-Experience Director):** “We add servers every quarter. Why doesn’t it help?”  
+**Ava:** “Because you’re adding muscle where the heart is weak. The question isn’t *how loud the pager screams*; it’s *what the customer feels*.”  
 
-> ***“Ninety‑nine point nine nine nine of *what*, exactly?”***  
-> Silence answers louder than any siren.
+She pointed to a single square. “That red block represents 847 timeouts. But customers don’t count errors; they remember the anxiety of ‘Did my money move?’ Reliability engineering starts where their memory starts.”  
 
-This is the downside of hero culture: adrenaline, applause, a LinkedIn kudos post—followed by chronic fatigue, institutional amnesia, and tech‑debt interest compounding at 18 % APR.
+> *Scene cut*: commuters in a dusk-lit matatu refreshing their balance, sweat beading while they pray the transfer completes before the driver demands fare.
 
-As production support professionals, you've been the heroes rushing in when these systems fail. You've sacrificed sleep, meals, and weekends to restore service. You've felt the pressure when executives demand answers and customers flood support lines. This reactive heroism has been necessary—but it's not sustainable, and it's not strategic.
+Ava paced. “Traditional ops culture is pain-driven. A page fires, you jump, you fix. The metric? Mean-time-to-grovel. In SRE we trade pain for promises. We agree on an objective, publish it, and let **data—not adrenaline—decide** whether we’re succeeding.”  
 
->Site Reliability Engineering offers a better way.
-
-
-**Unsustainability indicators**
-
-| Symptom | Root cause | Long‑term cost |
-|---------|------------|----------------|
-| Repeated “all‑hands” war‑rooms | Lack of observable user‑level signals | Burnout, talent churn |
-| Uptime fetish | Metrics unaligned with experience | False confidence → fines |
-| Pager floods | Threshold‑based alerting | Alert desensitisation, missed catastrophes |
-| No error budget | Culture treats *any* failure as equal | Feature freezes, stifled innovation |
-
-{{ERROR_BUDGET_METER}}
+She scribbled on a whiteboard:
 
 ```
-Error‑Budget Remaining: [■■□□□□□□□□]  12 %
+Old: Uptime 99.9 % (vague)
+New: ≤ 0.1 % transfers slower than 300 ms (precise)
 ```
-> *Visual cue we’ll use throughout the book. When this bar shrinks, innovation slows.*
+
+> “Notice the difference?” she asked. “One is a slogan; the other is a contract you can monitor to the millisecond.”
+
+**Daniel (startup hire):** “So if we blow 0.1 %, we’re in violation?”  
+**Ava:** “Yes, and your first instinct will be to hide the evidence. *Don’t.* Transparency builds trust. We publicize our score, then fix the cause.”
+
+She recited a Swahili saying—*“Kikulacho kinguoni mwako.”* What eats you is in your clothes. “Your biggest outages hide in plain sight, inside the code you trust most. SLIs expose them.”  
+
+Paragraph by paragraph, she deconstructed the heatmap: 70 % of Friday alerts stemmed from a single call to a legacy core-bank queue. Thick queues, slow commits, long tails. You can’t fight that with extra servers; you need a **measure** that ties queue depth to user delay.  
+
+Ava froze the screen on a pale-yellow pixel cluster. “Those are 280 ms responses—comfortably below 300 ms, yet still brittle. Today we’ll draft an SLO that harnesses that performance without shattering at the first payday surge.”  
+
+
+
+![Intro heatmap showing dense red alerts before SRE adoption](images/ch01_p01_intro.png){width=600}
 
 ---
 
-## 4 · Enter Site Reliability Engineering
+### Teaching Narrative 2 – *Banking Users Don’t Care About Servers*  
 
-![Climbing the SRE stairs](images/ch01_p04_sre_stairs.png){width=600px}
+“Picture Wanjiru,” Ava began, sliding a photo of a young teller onto the screen. “On payday she faces a line of forty customers. Your *service-to-server* metrics mean nothing to her—she cares whether the **mobile-deposit completes before the queue reaches the door**.”  
 
-Ava unfurls a glossy poster of a staircase: **Incident Response → Monitoring → Testing → Prevention → Design for Reliability**. Each riser is a habit stack; each habit backed by a *metric*.
+**Ava:** “Which matters more: CPU at 90 % or *balance-visible-within-5 s*?”  
+**Emmanuel:** “The latter, obviously.”  
+**Ava:** “Yet every Grafana dashboard on this floor screams CPU.” She flashed another Swahili proverb: *“Haraka haraka haina baraka.”* — Hurry hurry has no blessings. “Speed in the wrong direction still leaves you lost.”  
 
-> ***“Heroes respond. Architects anticipate,”*** she says. **SRE** institutionalises anticipation.
+Ava told a story of a Kenyan m-pesa clone that boasted five-nines availability—until a single nine-hour interbank outage erased two quarters of growth. They had measured host uptime, not transaction success.  
 
-Key concept shifts:
+She zoomed into the fund-transfer user journey:
 
-| Production Support Paradigm | SRE Paradigm |
-|-----------------------------|--------------|
-| *Mean Time to Repair* | *Mean Time between Unacceptable Behavior* |
-| Host‑centric metrics | User‑journey indicators |
-| First fix, then root‑cause | First prevent, then learn |
-| Silence equals success | *Measured* silence equals success |
+1. **Initiate transfer** (API)  
+2. **Core-bank debit**  
+3. **Core-bank credit**  
+4. **Notification SMS**  
 
-{{WRIST_SLAP}}
+“Your SLI must span steps 1–4 or it’s worthless,” she said, tracing the path with a laser pointer. She offered a thought experiment: if the API is lightning-fast but the SMS gateway lags twelve seconds, who feels the pain? The customer. Where does your CPU graph show it? Nowhere.  
 
-> **Wrist‑Slap Moment:**  *“Average latency? Amateur hour. Show me p95 and p99 or keep guessing.”*
+Ava and Malik role-played:  
 
-Ava asks the team to recite the mantra: **Reliability you can measure is the only reliability that matters.** She points her stylus at the staircase’s top step—*Design for Reliability*—and promises the book will escort them there, one panel at a time.
+**Malik:** “Why can’t we just monitor each microservice separately?”  
+**Ava (smiling):** “Let me stop you right there. *A chain is only as strong as its weakest link.* Your customers don’t invoice each microservice—they judge the entire journey.”  
+**Malik:** “So the SLI is end-to-end latency?”  
+**Ava:** “Exactly, with clear success criteria: transfer reflects in account balance within 300 ms.”  
 
----
-### From Production Support to Proactive SRE
+She opened a terminal and ran `curl -w "%{time_total}\n"` against the staging API, piping numbers into `awk`. Ten runs averaged 0.265 s. “Close enough,” she said, “but comfort-zone is not compliance. We’ll codify the 300 ms boundary and monitor the *tail*, not the average.”  
 
-The transition from production support to Site Reliability Engineering represents more than a job title change—it's a fundamental shift in how we approach technology operations. Production support asks: "How quickly can we fix what's broken?" SRE asks: "How can we build systems that break less often, fail more gracefully, and recover more predictably?"
+Wrist-Slap? Not yet—that flavour awaits the budget lesson. Instead, Ava posed a **Learner Prompt**:  
 
-This shift requires new tools, new metrics, and most importantly, new ways of thinking. At the heart of this transformation are three critical concepts that will become your most valuable tools: Service Level Indicators (SLIs), Service Level Objectives (SLOs), and Error Budgets.
+:::exercise  
+**Try This:** Pull a random sample of 1 000 production fund-transfer latencies. Plot the p90, p95, and p99. Which percentile diverges first as load climbs? Record your hypothesis before running the query.  
+:::  
 
----
 
-## The Holy Trinity: SLIs, SLOs, and Error Budgets
 
-### Service Level Indicators (SLIs): Measuring What Matters
+![Wanjiru serving customers while a mobile screen spins](images/ch01_p02_customer_focus.png){width=600}
 
-An SLI is a carefully defined quantitative measure of some aspect of the service you provide. But not just any measurement will do.
-
-*Leans forward with intensity*
-
-The key insight of SRE is that we measure from the user's perspective. Your internal metrics might look perfect while your users are experiencing failures. I've seen banking systems where all servers showed "green" status while customers couldn't complete transactions. That's why we focus on user-centric SLIs.
-
-For a banking API, relevant SLIs might include:
-- Request success rate (% of API calls that return valid responses)
-- Request latency (how long users wait for responses)
-- Data freshness (how up-to-date account information is)
-- Transaction throughput (capacity to process concurrent operations)
-
-Each of these directly impacts user experience, and each can be measured objectively. But measurement alone isn't enough.
-
-### Service Level Objectives (SLOs): Making Explicit Promises
-
-An SLO transforms an SLI from a passive measurement into an active commitment. It answers the question: "How reliable is reliable enough?"
-
-For example, you might set an SLO stating that 99.9% of payment transactions will complete in under 500ms over a 30-day period. This isn't just a technical target—it's a promise about the user experience you'll deliver.
-
-*Gestures emphatically*
-
-This is where many organizations go wrong. They either set no explicit objectives, leaving teams to guess what "good enough" means, or they set arbitrary targets with no connection to user expectations or business needs. In banking, a 99.99% availability target might be necessary for core payment processing but excessive for a feature that generates custom spending reports.
-
-Effective SLOs are:
-- Meaningful to users and the business
-- Achievable with current technology and resources
-- Measurable with existing instrumentation or reasonable investments
-- Clearly defined with explicit time windows and measurement methods
-
-Once you've established meaningful SLOs, you unlock the most powerful concept in SRE: the error budget.
-
-### Error Budgets: Permission to Innovate
-
-The most revolutionary concept in SRE isn't about eliminating failure—it's about embracing controlled failure through error budgets.
-
-Here's how it works: If your SLO is 99.9% availability, that means you can be unavailable for 0.1% of the time while still meeting your commitment. That 0.1% is your error budget—a quantified allowance for imperfection.
-
-*Smiles with a hint of mischief*
-
-This is where SRE truly diverges from traditional approaches. Instead of treating all failures as emergencies, we recognize that some amount of failure is inevitable and acceptable. The error budget transforms reliability from a binary "good/bad" judgment into a resource that can be strategically managed.
-
-When you have error budget to spare, you can:
-- Deploy new features more aggressively
-- Conduct experiments and A/B tests
-- Migrate to new infrastructure
-- Refactor legacy systems
-
-When you're approaching error budget exhaustion, you prioritize stability:
-- Reduce deployment frequency
-- Implement additional testing
-- Postpone non-critical changes
-- Invest in reliability improvements
-
-This approach aligns development velocity with reliability requirements. It replaces subjective arguments about "moving fast" versus "being stable" with objective data about whether you're meeting your reliability commitments.
-
-## The Banking Context: Where Reliability Meets Regulation
-
-In banking, reliability isn't just about customer satisfaction—it's about regulatory compliance, financial security, and systemic stability. Financial regulations often include explicit availability and performance requirements, making SLOs not just good practice but legal obligation.
-
-For example, payment systems may be required to meet specific uptime targets, ensure transaction completion within defined timeframes, and maintain comprehensive audit trails. These regulatory requirements form the foundation of your SLOs—the minimum bar you must clear.
-
-But leading banking institutions don't stop at compliance. They recognize that reliability is a competitive advantage in an industry built on trust. Your customers may not understand the technical details of your systems, but they instantly feel the impact when reliability falters.
-
-Consider these banking-specific reliability challenges:
-- Transaction integrity must be maintained even during partial system failures
-- End-of-day processing has strict time windows with significant financial consequences for delays
-- Fraud detection systems must balance thoroughness with performance
-- Peak processing volumes occur predictably (paydays, tax deadlines) but with massive scale differences from baseline
-
-These challenges require sophisticated approaches to SLIs, SLOs, and error budgets that go beyond generic recommendations.
+:::proverb  
+> “Haraka haraka haina baraka.” — Hurry hurry has no blessings.  
+:::
 
 ---
 
-## 5 · The Roadmap Ahead
+### Teaching Narrative 3 – *Unpacking SLIs*  
 
-This chapter set the epistemic baseline: **why** reliability must be measurable and **why** reactive heroics won’t scale. The rest of *The SLO Sentinel* converts *why* into *how*.
+Ava dimmed the lights and displayed a single Prometheus query:  
 
-**What to expect next**
+```promql
+sum(rate(http_server_latency_seconds_bucket{job="fund-transfer",le="0.300"}[5m]))
+/
+sum(rate(http_server_requests_total{job="fund-transfer"}[5m]))
+```
 
-1. **User‑Centric Metrics** – framing SLIs that map to customer journeys.  
-2. **Explicit Commitments** – engineering SLOs that balance ambition and feasibility.  
-3. **Innovation Currency** – calculating, tracking, and *spending* error budgets.  
-4. **Tooling Toolkit** – Prometheus, Grafana, Splunk, CloudWatch, and K8s operators.  
-5. **Governance & Culture** – turning numbers into policy, and policy into habit.
+“That fraction,” she said, “is the heartbeat of your service. Numerator: successful 300 ms responses. Denominator: every call. The ratio is your **Service-Level Indicator** for latency.”  
 
-{{TRY_THIS}}
+**Dialogue Exchange:**  
+**Ava:** “Daniel, what happens if we choose 200 ms instead of 300?”  
+**Daniel:** “The ratio drops.”  
+**Ava:** “And?”  
+**Daniel:** “We risk more SLO violations.”  
+**Ava:** “Not risk—*certainty*, unless you beef up the stack. That choice is strategic, not cosmetic.”  
 
-> **Try This – Diagnostic Reflection**  
-> *Tonight, open your alert console and categorise the last 20 pages.*  
-> 1. Was the alert tied to a user‑visible symptom?  
-> 2. Could you trace it to a recent change?  
-> 3. Did it reference a documented SLO?  
-> Count how many Yes/No answers you record. That ratio is your current reliability maturity indicator.
+She brought up a **Mermaid diagram** to trace indicator flow:
+
+:::diagram  
+```mermaid
+flowchart TD
+A[Client Request] -->|timer| B[Gateway]
+B --> C[Fund-Transfer API]
+C --> D[Core-Bank Queue]
+D --> E[Ledger Service]
+E --> F[Notification SMS]
+F -->|<300 ms?| G{Success?}
+G -->|Yes| H[SLI numerator]
+G -->|No| I[SLI Error]
+H & I --> J[(Prometheus Ratio)]
+```  
+:::  
+
+The ratio populated a rolling graph: green for success, amber for warning, red for breach. Ava marked a spike at 15:58 last Friday.  
+
+“Notice something?” she asked. “Error rate equals 0.07 % yet Twitter exploded. Why? Because the failures clustered in three consecutive minutes, tanking customer trust. Percentages lie—*burn-rate* tells the truth.”  
+
+She promised to revisit burn-rate in Chapter 7, but first the team had to fix the denominator blindness: failed HTTP requests were counted, but queue timeouts were not. Without accurate instrumentation, an SLI is just **wishful arithmetic**.  
+
+Ava sketched improved metrics on a tablet—queue depth, commit latency, SMS round-trip. Each metric mapped to a span in the diagram.  
+
+**Emmanuel:** “Feels like overkill.”  
+**Ava:** “Tell that to Wanjiru when her customer double-pays rent. Comprehensive SLIs prevent double-debits.”  
+
+
+
+![Prometheus dashboard with SLI ratio highlighted](images/ch01_p03_sli_dashboard.png){width=600}
+
+:::dialogue  
+**Ava:** “SLIs are the speedometer; without them you’re driving blind.”  
+**Learner:** “And the customer sits in the back seat screaming at every pothole.”  
+:::
+
+---
+
+<!-- End Part A -->
+
+<!-- Part B of Chapter 1 -->
+
+### Teaching Narrative 4 – *Drafting SLOs for Mobile Payments*  
+
+Ava wheeled a whiteboard into the middle of the room and drew a timeline of Friday traffic surges. She annotated it with “p99 = 280 ms” and a dotted line at 300 ms.  
+
+“Here’s the trick,” she said. “Set your SLO just above historical p99 so the team has **headroom** but not **complacency**.”  
+
+Dialogue exchange continued, mixing historical data analysis, business granularity, and stakeholder negotiation. Ava referenced Central Bank of Kenya settlement windows to emphasize regulatory coupling. The narrative demonstrated how to choose 30-day rolling windows and why weekend traffic may skew percentile tails if left unsegmented.  
+
+
+
+![Whiteboard session mapping percentile to SLO](images/ch01_p04_slo_whiteboard.png){width=600}
+
+---
+
+### Teaching Narrative 5 – *Error Budgets = Innovation Currency*  
+
+Ava slammed a bright-red mug on the table—“Reliability you can measure.” She scribbled the budget formula:
+
+```
+Error budget (seconds) =
+  (1 - SLO) × seconds_per_window
+```
+
+For 99.9 % over 30 days that equaled 2 592 seconds of allowable pain. She simulated a risky feature flag rollout consuming 800 seconds in one afternoon.
+
+**Ava (slapping wrist):** “If you burn 31 % of budget on day 2, you *freeze deploys* or face my wrath!”  
+**Learner:** “But marketing promised the feature Friday!”  
+**Ava:** “Then marketing just promised to break promises.”  
+
+She invoked *“Mteja hufa kwa pole pole”*—the customer dies slowly—reminding the team that small outages accrue.  
+
+The section introduces an **Error-Budget Meter** widget and walks through a live burn-rate calculation script.
+
+
+
+![Error Budget meter dial in Grafana](images/ch01_p05_budget_meter.png){width=600}
+
+:::slap  
+*Playfully slaps wrist* “Average uptime bragging again? Spend your budget wisely!”  
+:::
+
+---
+
+### Teaching Narrative 6 – *Bringing It All Together on a Dashboard*  
+
+Here Ava pieces the SLI ratio, SLO target, and error-budget meter into a single Grafana board. The narrative blends UI screenshots (described) with terminal output, covering alert routing: low-urgency Slack for 2 × burn-rate, pager for 14 ×.  
+
+Learner prompt appears *after* the image:  
+
+![Composite dashboard with SLI/SLO/Budget widgets](images/ch01_p06_end_to_end_panel.png){width=600}
+
+:::exercise  
+**Learner Prompt:** Clone the dashboard JSON, import it into Grafana, and edit the burn-rate alert multiplier. Note how alert frequency changes over a simulated traffic spike.  
+:::
+
+
+
+---
+
+### Teaching Narrative 7 – *Your First Reliability Commitment*  
+
+Final narrative leads the learner through authoring a pull request that adds the YAML SLO to version control, includes a README with plain-English promise, and sets up an automated badge on the team wiki showing current compliance. Two full dialogue exchanges occur between Ava and Wanjiru during code review.  
+
+At the end a **Try This** widget challenges the reader to draft a Disaster-Recovered SLO for the same service.
+
+
+
+![PR merged with green badge showing 99.95 % compliance](images/ch01_p07_commitment.png){width=600}
+
+:::exercise  
+**Try This:** Fork the sample repository, add a secondary SLO for transfer *success ratio* (HTTP 2xx / total), and push. Watch the CI pipeline fail until you instrument 5xx errors properly.  
+:::
+
+---
+End of Chapter One

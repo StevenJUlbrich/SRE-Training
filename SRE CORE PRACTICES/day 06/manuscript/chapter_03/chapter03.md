@@ -1,300 +1,240 @@
-# Chapter 3 – From SLOs to Error‑Budget Governance
+# Chapter 3 – Measuring What Matters: SLIs  
 
 
-## 1 · Why Governance?  *(≈ 1 150 w)*
+## Chapter Overview  
 
-**🎯 Learning Objective:** Explain why SLOs must be backed by codified policies, automatic triggers, and clear human ownership to create meaningful reliability outcomes.
+Emmanuel, a night-shift production-support veteran, has spent years parsing endless log scrolls after midnight batch failures. Ava Kimani promises to swap his flashlight for **Service-Level Indicators (SLIs)**—high-fidelity, quantitative beacons that reveal systemic truth long before an outage trends on X. In this chapter you will learn how the **four golden signals** (latency, traffic, errors, saturation) translate into banking-specific SLIs such as *balance-visible latency* and *queue-depth headroom*. By the end, Emmanuel’s pager will chirp not because servers scream, but because carefully chosen ratios whisper risk.
 
-**✅ Takeaway:** Error‑budget figures alone are inert; governance converts numbers into enforceable actions that protect users and empower innovation.
+---
 
-### 1.1 The Illusion of Safe Numbers
+## 🎯 Learning Objective  
 
-> *Ava strides into the Monday reliability review clutching a thick folder.*  “Last quarter we exhausted 12 error budgets, froze three product lines, and still shipped 41 features. How? Governance. Without it, these numbers would be trivia plastered on a slide deck.”
+Design, instrument, and validate SLIs—rooted in latency, traffic, errors, and saturation—that expose user-impacting degradation in retail-banking systems before customers feel pain.
 
-SLOs are commitments: *99.90 % payments in < 500 ms*. When real‑world traffic breaches that promise, somebody must decide **what happens next**. If no policy exists, disagreement erupts: product managers push new marketing campaigns, SREs demand a feature freeze, finance wants risk quantified, and suddenly uptime becomes a board‑level shouting match.
+## ✅ Takeaway  
 
-Governance pre‑decides the trade‑off: *If error‑budget burn‑rate > 2 × for 60 min, freeze deploys and page product leadership.* This removes politics from minute‑by‑minute reliability decisions.
+A single well-designed SLI is worth a thousand grep commands; it frames reality in a ratio the whole bank can understand.
 
-### 1.2 Governance Stack
+## 🚦 Applied Example  
 
-1. **Policy Definition** – A YAML or JSON spec stored in Git that binds thresholds to actions.
-2. **Automated Detection** – Prometheus or Datadog expressions calculating burn rate over 30 m/2 h/6 h/24 h windows.
-3. **Execution Hooks** – CI/CD gates, feature‑flag toggles, deployment throttles.
-4. **Escalation Paths** – Slack bots, PagerDuty schedules, RACI mapping.
-5. **Review Cadence** – Weekly error‑budget reports, quarterly SLO reset.
+Friday evening traffic spikes 6 × normal. Grafana shows CPU at 42 %, yet users report stalled fund transfers. Ava overlays a rolling **p99 latency SLI**—300 ms objective, now 470 ms—and an **error-ratio SLI**—99.9 % objective, now 98.2 %. System metrics looked calm because thread pools queued requests; the SLI ratios exposed the truth. After readjusting pool limits the indicators return green within 12 minutes—five hours before the first pager would normally fire.
 
+---
+
+## Teaching Narrative 1 – *What Makes a Good Indicator?*  
+
+Emmanuel’s eyes blur while tailing `corebank.log`. It’s 02:07 AM and a deluge of “timeout waiting for debit confirmation” lines scroll by. Ava slides in a chair, coffee mug steaming.  
+
+**Ava:** “Logs after midnight? Pole sana, but there’s a smarter way.”  
+**Emmanuel:** “Logs tell me everything.”  
+**Ava:** “They tell you **what** happened, not **how often** or **how bad**.”  
+
+She types a single PromQL expression:
+
+```promql
+1 - (sum(rate(corebank_errors_total[5m]))
+     / sum(rate(corebank_requests_total[5m])))
+```
+
+A green line hovers at 99.98 %. Ava flips a toggle to view **p99 latency**: 295 ms—close to the 300 ms objective.
+
+> **Scene:** Emmanuel realises that two numbers—latency p99 and success-ratio—capture more truth than ten thousand log lines.
+
+**Dialogue exchange continues**:
+
+**Emmanuel:** “So an SLI is just a query?”  
+**Ava:** “A query with purpose: business relevance, clear thresholds, and historical context.”  
+**Emmanuel:** “Logs feel like candles. This is daylight.”  
+**Ava:** “Karibu—welcome to proactive ops.”  
+
+She summarises SLI criteria—*valid*, *reliable*, *signal-to-noise*, *scalable*, *cheap to gather*. Together they label Emmanuel’s query: **valid & cheap**. Ava challenges him to refine cardinality for scale.
+
+![Alt text](images/ch03_p01_good_indicator.png){width=600}
+
+---
+
+## Teaching Narrative 2 – *The Four Golden Signals in Banking*  
+
+Ava projects a Sankey diagram of a payment journey: mobile app → gateway → microservice → core bank → regulator feed. Overlaid are coloured ribbons representing **Latency**, **Traffic**, **Errors**, **Saturation**.
+
+She narrates:
+
+* **Latency:** user perceives delay, regulator perceives SLA breach.  
+* **Traffic:** request volume predicts capex; volume surges precede saturation.  
+* **Errors:** HTTP 5xx, business-logic rejections, fraud blocks.  
+* **Saturation:** thread pools, DB connections, MQ depth.
+
+**Swahili proverb moment**:  
+
+:::proverb  
+> “Ukiona vyaelea, vimeundwa.” — *If it floats, someone built it carefully.* A healthy metric floats because you engineered for it, not by chance.  
+:::
+
+Ava demonstrates a Grafana dashboard where each golden-signal panel turns amber exactly one minute before Twitter complaints spike, aligning technical and sentiment signals. Emmanuel sees correlation 0.91 between saturation headroom < 10 % and complaint surge.
+
+![Alt text](images/ch03_p02_golden_signals.png){width=600}
+
+---
+
+## Teaching Narrative 3 – *Latency: Beyond the Mean*  
+
+**Ava:** “Averages are a liar’s comfort blanket.” She draws three distributions—slow tail, bimodal, Gaussian—each with the same mean but wildly different p99. Using `histogram_quantile()` she compares p95 and p99 curves:
+
+```promql
+histogram_quantile(0.99,
+  sum(rate(api_latency_seconds_bucket{le!="+Inf"}[5m])) by (le))
+```
+
+Emmanuel overlays payroll-day data: p50 90 ms, p95 260 ms, p99 600 ms. The mean hides the pain. Ava introduces **SLO tight coupling**: objective at 300 ms demands SLI at p99 not mean.  
+
+Mermaid diagram shows bucket selection funnel.
+
+:::diagram  
 ```mermaid
-flowchart LR
-  A[SLO Metric Streams] --> B{Burn‑rate > 1×?}
-  B -- No --> C[Deploy as normal]
-  B -- Yes --> D{Burn‑rate > 2×?}
-  D -- No --> E[Auto‑slow deploy cadence]
-  D -- Yes --> F[Freeze pipeline & notify Slack]
-  style A fill:#1ABC9C,color:#fff
-  style B fill:#FEEBC8,stroke:#E67E22
-  style D fill:#FADBD8,stroke:#E74C3C
-```
+graph TD
+  A[All Requests] -->|Bucket ≤ 100ms| B[Green]
+  A -->|100–300ms| C[Yellow]
+  A -->|>300ms| D["Red (SLO breach)"]
+```  
+:::
 
-*Panel P1 shows Ava tapping the ****Freeze**** node with her pointer, rubber‑duck Murphy wearing a tiny judge’s wig on her shoulder.*
+**Dialogue**:
 
-### 1.3 Common Anti‑Patterns
+**Emmanuel:** “Why not p100?”  
+**Ava:** “p100 waits for the weirdest millisecond in a year; monitoring must allow innovation.”  
 
-| Symptom                                     | Root Cause                           | Consequence                        | Governance Fix                              |
-| ------------------------------------------- | ------------------------------------ | ---------------------------------- | ------------------------------------------- |
-| **SLO breach, but deploys continue**        | No CI gate linked to burn‑rate       | Budget crashes → user churn        | Add `burn‑rate‑gate` job in pipeline        |
-| **Random freeze decisions**                 | No tiered threshold ladder           | Developers distrust SRE            | Document Observe → Throttle → Freeze policy |
-| **False sense of safety from long windows** | 30‑day burn‑rate hides fast failures | Massive outages before alert fires | Add fast 30 m window and composite rule     |
+Ava closes with a math exercise converting percentile walls into error-budget consumption.
 
-{{WISDOM\_BOX}}
-
-> **SRE Wisdom #15 –** *“Governance is the brake that lets you drive fast without crashing.”*
+![Alt text](images/ch03_p03_latency_percentiles.png){width=600}
 
 ---
 
-## 2 · Drafting Error‑Budget Policy  *(≈ 1 350 w)*
+## Teaching Narrative 4 – *Traffic & Cardinality*  
 
-**🎯 Learning Objective:** Author a three‑tier policy (Observe, Throttle, Freeze) with YAML snippets, Git review process, and Slack bot integration.
+Saturday night promotions triple request volume. Grafana’s traffic graph looks smooth—until Ava zooms by `customer_segment`. The *youth-promo* segment spikes 12 × average.
 
-**✅ Takeaway:** Policies belong in version control, reviewed by cross‑functional peers, and executed automatically.
+She warns about high-cardinality metrics: adding `user_id` labels multiplies time-series 10 000 ×. Prometheus scrapes bloat; long-term store costs soar.
 
-### 2.1 Policy YAML Schema
+**Ava (slaps wrist):** “Stop exporting `user_id` as a label—store it in logs if needed!”  
 
-```yaml
-policy_id: payments‑slo‑v2
-slo_ref: latency‑500ms‑p99
-windows:
-  fast: 30m
-  slow: 6h
-thresholds:
-  observe: 1.0   # burn‑rate>1x
-  throttle: 1.5  # burn‑rate>1.5x
-  freeze: 2.0    # burn‑rate>2x
-actions:
-  observe:
-    - slack_notify: "#payments‑alerts"
-  throttle:
-    - set_pipeline_cadence: 120m
-    - slack_notify: "#payments‑alerts"
-  freeze:
-    - disable_pipeline: true
-    - feature_flag: "mpesa‑lite=false"
-    - slack_notify: "#payments‑alerts"
-owners:
-  responsible: SRE‑Payments
-  accountable: Dir‑Engineering‑Payments
-  consulted: Product‑Payments
-  informed: Finance
+Emmanuel refactors:
+
+```prometheus
+# GOOD
+http_requests_total{endpoint="/transfer",segment="youth_promo"}
+
+# BAD
+http_requests_total{endpoint="/transfer",user_id="4389211"}
 ```
 
-`policy‑linter` Git hook validates the schema before merge. Each PR requires 👍 from SRE + Product.
+They draft a **traffic SLI** measuring requests/sec per segment with label cardinality < 200.
 
-### 2.2 Policy Flow (Mermaid Sequence)
+![Alt text](images/ch03_p04_traffic_labels.png){width=600}
 
-```mermaid
-sequenceDiagram
-  participant Prom as Prometheus
-  participant EB  as BudgetCalc
-  participant CI  as Buildkite
-  participant FF  as FeatureFlagSvc
-  participant Slack
-  Prom->>EB: burn‑rate query`   
-  EB-->>CI: pass
-  Prom-->>EB: burn 1.6×
-  EB-->>CI: throttle cadence 2h
-  EB-->>Slack: "Cadence throttled"
-  Prom-->>EB: burn 2.3×
-  EB-->>CI: freeze
-  EB-->>FF: disable mpesa‑lite
-  EB-->>Slack: "Pipeline frozen & feature flagged off"
-```
-
-*Panel P2 shows Ava holding a giant red “Pause” stamp slamming onto a CI job.*
-
-### 2.3 RACI Deep Dive
-
-| Role            | Authority            | Responsibility       | Escalation           |
-| --------------- | -------------------- | -------------------- | -------------------- |
-| **SRE**         | Freeze decision      | Burn‑rate monitoring | Page 24 × 7          |
-| **Product**     | Roadmap & trade‑offs | Approve re‑enable    | Business hours Slack |
-| **Engineering** | Implement fixes      | Lower burn‑rate      | On‑call rotation     |
-| **Finance**     | Quantify impact      | Track lost revenue   | Quarterly review     |
-
-Ava emphasises the **A** in SRE for freeze. *“One neck to ring, one gavel to drop.”*
+:::slap  
+Average throughput without segmentation? Vanity!  
+:::
 
 ---
 
-## 3 · Multi‑Team Ownership  *(≈ 1 150 w)*
-
-**🎯 Learning Objective:** Operationalise RACI with real on‑call rota, Slack channels, and escalation matrix.
-
-**✅ Takeaway:** Ownership clarity reduces MTTR by eliminating decision friction.
-
-```mermaid
-classDiagram
-  class Product{<<A>>}
-  class SRE{<<R>>}
-  class Engineering{<<C>>}
-  class Finance{<<I>>}
-  Product<|--SRE
-  Engineering<|--SRE
-  Finance<|--Product
-```
-
-### 3.1 On‑Call Schedule
-
-| Day       | Tier‑1       | Tier‑2      | Product Escalation |
-| --------- | ------------ | ----------- | ------------------ |
-| Mon – Fri | SRE‑Payments | Lead Eng    | Dir‑Product        |
-| Sat – Sun | SRE‑on‑duty  | DBA‑on‑duty | VP‑Product         |
-
-On freeze, PagerDuty auto‑pages Tier‑2 after 15 min; if burn‑rate continues 3 × for 1 h, it pages VP‑Product.
-
-### 3.2 Slack Channel Topology
-
-```
-#payments‑alerts   <-- bot posts burn‑rate
-#payments‑warroom  <-- incident comms
-#payments‑product  <-- product decisions
-```
-
-Ava’s panel P3 shows her pointing to a war‑room Slack message “Freeze enacted: bug‑1234 latency spike”.
+<!-- End Part A -->
 
 ---
 
-## 4 · Automating Budget Enforcement  *(≈ 1 350 w)*
+<!-- Part B of Chapter 3 -->
 
-**🎯 Learning Objective:** Integrate Prometheus burn‑rate expressions with Buildkite, Argo‑Rollouts, and LaunchDarkly.
+## Teaching Narrative 5 – *Errors: Detecting Silent Failures*  
 
-**✅ Takeaway:** Automation enforces policy at machine speed, limiting blast radius.
+Logs show zero HTTP 5xx, yet balance mismatches climb. Ava introduces **multi-stage error SLIs**: core-bank queue rejects, fraud-rule denials, third-party SMS failures.
 
-### 4.1 Buildkite Gate Plugin
+PromQL:
 
-```bash
-steps:
-  - command: "./ci/test.sh"
-    plugins:
-      - myorg/burn‑rate‑gate#v1.0:
-          prometheus_url: http://prometheus:9090
-          query: 'burn_rate_payments_30m'
-          window: '30m'
-          slo_target: 0.999
-          threshold: 1.0
-          action: warn
+```promql
+sum(rate(stage_fail_total{stage=~"corebank|fraud|sms"}[5m]))
+/
+sum(rate(stage_requests_total[5m]))
 ```
 
-`action: warn` posts to Slack but lets deploy continue at Observe level.
+The ratio spikes from 0.1 % to 1.8 % during a hardware wallet rollout.
 
-### 4.2 Argo Rollouts
+Dialogue:
 
-```yaml
-analysis:
-  templates:
-    - templateName: burn‑rate‑analysis
-  args:
-    - name: burn_rate
-      value: >
-        {{(query "burn_rate_payments_30m") | printf "%.2f"}}
-  successCondition: "burn_rate < 1.0"
-  failureCondition: "burn_rate > 2.0"
-```
+**Ava:** “HTTP 200 can hide broken business logic.”  
+**Emmanuel:** “Silent failure SLI—nice.”  
 
-If `failureCondition` met, rollout aborts and reverts.
-
-### 4.3 LaunchDarkly Flag Rule
-
-Flag **mpesa‑lite‑traffic** percentage is dynamically reduced by a Lambda function triggered by SNS on freeze.
-
-*Ava panel P4 shows LaunchDarkly UI slider dropping from 20 % to 0 %.*
+![Alt text](images/ch03_p05_error_ratio.png){width=600}
 
 ---
 
-## 5 · Financial Lens – Reliability vs Revenue  *(≈ 950 w)*
+## Teaching Narrative 6 – *Saturation & Headroom*  
 
-**🎯 Learning Objective:** Model revenue retained vs innovation velocity across burn‑rate levels.
+Ava defines **headroom** as `1 - current_util / max_util`. She graphs DB connection-pool utilisation: weekday headroom 40 %, month-end 3 %. They set a **headroom SLI** ≤ 20 % triggers orange, ≤ 10 % red.
 
-**✅ Takeaway:** Sweet spot often at 97 – 99.9 % reliability where features still ship rapidly.
+Dialogue:
 
-```mermaid
-xychart-beta
-  title "Revenue & Velocity vs Error-Budget Spend"
-  x-axis "Budget Spent %" 0 100
-  y-axis "Index (base=100)" 0 120
-  series "Revenue" 0:100,10:101,20:104,30:108,40:112,50:115,60:116,70:116,80:115,90:113,100:110
-  series "Velocity" 0:10,10:30,20:50,30:70,40:80,50:88,60:90,70:80,80:60,90:40,100:15
+**Ava:** “Headroom is hope measured.”  
+**Emmanuel:** “Zero headroom, zero hope.”  
+
+They provision read-replicas, headroom jumps to 35 %.
+
+![Alt text](images/ch03_p06_saturation_headroom.png){width=600}
+
+:::dialogue  
+**Ava:** “Plan capacity while customers still smile.”  
+**Emmanuel:** “And before risk starts frowning.”  
+:::
+
+---
+
+## Teaching Narrative 7 – *Banking-Specific SLIs*  
+
+Ava showcases three specialist indicators:
+
+1. **Balance-visible latency** (`balance_visible ≤ 5 s p99 ≥ 99 %`).  
+2. **Funds-settled lag** (`settle_lag_seconds p95 ≤ 2 s`).  
+3. **FX-quote freshness** (quote age ≤ 30 s).
+
+She maps each to user trust with line-graphs overlaying complaint rates.
+
+![Alt text](images/ch03_p07_banking_slis.png){width=600}
+
+---
+
+## Teaching Narrative 8 – *Instrumenting with Prometheus & OpenTelemetry*  
+
+Code snippet adds OTEL span `fund_transfer` with attribute `country=KEN` and `success=true`. Exporter scrapes counters and histograms:
+
+```go
+lat := prometheus.NewHistogramVec(prometheus.HistogramOpts{
+  Name: "fund_transfer_latency_seconds",
+  Buckets: prometheus.ExponentialBuckets(0.05, 2, 10),
+}, []string{"status"})
 ```
 
-If XYChart unsupported, panel P5 shows the line graph screenshot.
+Grafana dashboard displays span waterfall and histogram. Learner prompt follows.
+
+![Alt text](images/ch03_p08_otlp_instrumentation.png){width=600}
+
+:::exercise  
+**Learner Prompt:** Instrument queue-depth gauge `/metrics`, plot p95, and link to saturation headroom alert.  
+:::
 
 ---
 
-## 6 · Advanced Alerting – Four‑Window Burn Rates  *(≈ 850 w)*
+## Teaching Narrative 9 – *Emmanuel’s First SLI Review*  
 
-**🎯 Learning Objective:** Configure 30 m/2 h/6 h/24 h burn‑rate rule per Google Golden Signals SLO workbook.
+One week later Emmanuel presents a dashboard: latency p99 260 ms, success-ratio 99.96 %, headroom 35 %. Ava smiles—then slaps his wrist for still using average latency in a corner widget.
 
-**✅ Takeaway:** Composite rule catches fast breaches and long drifts while muting flapping noise.
+**Ava:** “Average? Throw it away—or at least grey it out.”  
+**Emmanuel:** “Old habits—but I’ve seen the light.”  
 
-Mermaid Gantt above visualises depletion timeline.
+Try This widget invites the reader to create a review checklist.
 
-Alertmanager example:
+![Alt text](images/ch03_p09_emmanuel_dashboard.png){width=600}
 
-```yaml
-- alert: Payments_Burn_Rate
-  expr: burn_rate_payments_30m > 1 and burn_rate_payments_2h > 1
-  for: 5m
-  labels:
-    severity: page
-  annotations:
-    summary: "Payments SLO burn rate across fast windows"
-```
+:::exercise  
+**Try This:** Draft an SLI review checklist for your service and present at stand-up.  
+:::
 
-Panel P6 is a Grafana dashboard snapshot with four burn‑rate plots.
 
----
 
-## 7 · Case Study – Trading Platform Outage  *(≈ 1 100 w)*
-
-**🎯 Learning Objective:** Walk through a real freeze event and governance‑driven resolution.
-
-**✅ Takeaway:** Data overrides emotion: freeze enacted in 2 min without executive debate.
-
-Incident timeline panel P6 depicts:
-
-1. **09:58** CPU core dump in pricing engine.
-2. Burn‑rate spikes 2.7 ×.
-3. Pipeline auto‑frozen, traffic throttled by 60 %.
-4. SRE mitigates by scaling read replicas.
-5. Burn‑rate returns < 0.7 × after 18 min.
-6. Product signs off unfreeze.
-
-Post‑mortem template links, cost table panel P11 shows downtime = 18 min, lost fees = \$42 K, saved future risk = \$250 K.
-
----
-
-## 8 · Cultural Embedding: Playbooks & Rituals  *(≈ 950 w)*
-
-**🎯 Learning Objective:** Transform governance from rulebook to organisational habit via docs, ceremonies, and tooling.
-
-**✅ Takeaway:** Runbooks, blameless RCAs, and quarterly reliability reviews engrain policy.
-
-Panel P7 covers the playbook; panel P8 comic shows Ava slamming a gavel at a retro.
-
-### 8.1 Runbook Skeleton
-
-| Section    | Purpose                  |
-| ---------- | ------------------------ |
-| Context    | SLO, owner, links        |
-| Diagnosis  | Quick queries            |
-| Mitigation | Throttle, rollback steps |
-| Validation | Burn‑rate back to green  |
-| Timeline   | Record of events         |
-
-### 8.2 Quarterly Reliability Review Agenda
-
-1. Compare SLO targets to actual.
-2. Renegotiate targets with product.
-3. Review policy thresholds.
-4. Identify tooling gaps.
-
-{{NAIROBI\_PROVERB}}
-
-> *“Samaki mkunje angali mbichi.”* (Bend the fish while it is fresh.) – Build habits early while the SRE program is young.
