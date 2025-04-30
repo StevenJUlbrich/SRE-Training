@@ -254,16 +254,14 @@ authoring_contract:
 
   consistency_checklist:
     structure:
-      - id: header_line_format
-        text: "Chapter Header line is present and correctly formatted at the start of each chapter file."
+      - "Chapter Header line is present and correctly formatted at the start of each chapter file."
       - id: chapter_overview_required
         text: >
           The Chapter Overview must appear immediately after the Chapter Header
           and before the 🎯 Learning Objective section. It must contain between
           2 and 5 paragraphs, introduce Hector, set a banking context, and
           establish narrative stakes. Absence or misplacement results in ❌ audit status.
-      - id: heading_sequence_valid
-        text: "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview."
+      - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview."
       - id: section_presence_enforcement
         text: >
           Each section defined in 'headings_in_order' must appear
@@ -273,16 +271,11 @@ authoring_contract:
           before delivering any part as complete.
 
     prose:
-      - id: total_word_band_compliance
-        text: "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)."
-      - id: section_chunk_wordcount
-        text: "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code blocks, tables, etc.)."
-      - id: storytelling_ratio_compliance
-        text: "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**."
-      - id: banking_context_visible
-        text: "Banking context anchor is clearly present per unit/section."
-      - id: prose_depth_and_style
-        text: "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
+      - "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)."
+      - "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code blocks, tables, etc.)."
+      - "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**."
+      - "Banking context anchor is clearly present per unit/section."
+      - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
       - id: auto_expand_on_wordcount_deficit
         text: >
           If checklist row 4 (total chapter prose 12 000–18 000 words) is ❌,
@@ -303,18 +296,13 @@ authoring_contract:
           until the total chapter prose falls within the valid band and row 4 becomes ✅.
 
     narrative_voice:
-      - id: voice_guideline_usage
-        text: "Voice guideline elements (Hector Aphorism OR System Failure Anecdote OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
-      - id: voice_widget_positioning
-        text: "Hector Aphorism and System Failure Anecdote widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
-      - id: widget_whitelist_check
-        text: "Only whitelisted widgets appear, using correct container syntax."
-      - id: try_this_presence
-        text: "'Try This' widget is included at least once per chapter."
+      - "Voice guideline elements (Hector Aphorism OR System Failure Anecdote OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
+      - "Hector Aphorism and System Failure Anecdote widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
+      - "Only whitelisted widgets appear, using correct container syntax."
+      - "'Try This' widget is included at least once per chapter."
 
     applied_examples:
-      - id: applied_example_placement
-        text: "Applied Example block is present directly after each Takeaway section and matches its conceptual content (code snippet + user impact note)."
+      - "Applied Example block is present directly after each Takeaway section and matches its conceptual content (code snippet + user impact note)."
       - id: applied_example_context_check
         text: >
           The 'Applied Example' must not appear before the initial
@@ -324,10 +312,8 @@ authoring_contract:
           prose to establish why the example matters.
 
     visuals_and_diagrams:
-      - id: image_count_range
-        text: "Image count 6–15 in the external image data file's panels array."
-      - id: external_data_schema_conformity
-        text: "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
+      - "Image count 6–15 in the external image data file's panels array."
+      - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
       - id: detailed_scene_description_required
         text: >
           Each panel's 'scene_description' in the external image data JSON must be a
@@ -335,20 +321,14 @@ authoring_contract:
           actions or expressions, any visual props or interfaces (e.g., dashboards,
           whiteboards, alerts), and the emotional tone or narrative stakes.
           Descriptions shorter than 10 words are considered ❌.
-      - id: image_embed_reference
-        text: "Each conceptual 'Image Embed' point in the cadence is represented by a Markdown image line referencing an existing panel by filename from the external data."
-      - id: mermaid_validity
-        text: "Mermaid diagrams compile correctly (if used as inline code blocks)."
-      - id: mermaid_wrapper_limit
-        text: "If present, Mermaid diagrams are wrapped in a :::diagram widget, compile without errors, and no more than one appears per Teaching Narrative section."
-      - id: hector_panel_majority
-        text: "Hector appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
+      - "Each conceptual 'Image Embed' point in the cadence is represented by a Markdown image line referencing an existing panel by filename from the external data."
+      - "Mermaid diagrams compile correctly (if used as inline code blocks)."
+      - "If present, Mermaid diagrams are wrapped in a :::diagram widget, compile without errors, and no more than one appears per Teaching Narrative section."
+      - "Hector appears in ≥ 50 % of panels defined in the external image data file's 'panels' array."
 
     pacing_and_cadence:
-      - id: cadence_flow_check
-        text: "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
-      - id: token_split_compliance
-        text: "Chapters exceeding 24 000 tokens or 360 lines are split into labelled parts with correct comment markers."
+      - "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
+      - "Chapters exceeding 24 000 tokens or 360 lines are split into labelled parts with correct comment markers."
 
     behavioral:
       - id: scaffold_and_sequence_protocol
