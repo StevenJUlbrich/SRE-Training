@@ -1,29 +1,40 @@
 authoring_contract:
+  # The primary output format is now Markdown, structured into sections defined by headings_in_order.
   output_format: "Markdown"
 
   format_rules:
-    chapter_header_format:
+    chapter_header_format: # Rule for the chapter header line at the very top
       description: "Each chapter's Markdown file must begin with a Chapter Header line."
-      format: "# Chapter <Number> – <Chapter Title>"
+      format: "# Chapter <Number> – <Chapter Title>" # Example format
       check: "Each Markdown file for a chapter starts with a correctly formatted Chapter Header line."
 
-    chapter_overview_format:
+    chapter_overview_format: # Modified: increased paragraph count
       description: |
         A brief introductory overview for the chapter, placed after the Chapter Header and any initial horizontal rule, and before the first main section heading (🎯 Learning Objective).
         This overview should orient the learner, highlight key concepts, establish banking context, introduce or reference Hector as the guide, set expectations, and connect the chapter to the broader journey.
       length: {min_paragraphs: 2, max_paragraphs: 5}
       check: "The Chapter Overview is present, correctly placed, and meets the length and content requirements."
+    
+    panel_beat_structure:
+      description: |
+        Each chapter must include a panel-by-panel beat map that aligns visuals, narrative beats, and instructional outcomes. This supports visual-narrative cohesion and storyboard fidelity.
+      required: true
 
-    section_sequence:
-      pattern_hint: "(Chapter Header → Optional Initial Content/Overview → Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+"
+    chapter_visual_integrity:
+      description: |
+        Every chapter must define between 6–15 panels. Each panel must have a scene, instructional beat, learner involvement (if present), and either a system event, narrative conflict, or resolution. This ensures panel density is appropriate for visual pacing.
+      enforced: true
+
+    section_sequence: # Hint for the overall sequence of main sections/headings per unit.
+      pattern_hint: "(Chapter Header → Optional Initial Content/Overview → Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+" # Updated pattern hint
       description: "The suggested sequence of main sections (defined by headings_in_order) within each unit or chapter, following the Chapter Header and Overview."
 
     cadence:
       description: "Describes the typical alternation of key content elements *within* the Teaching Narrative sections and Image Embeds/Diagrams."
       pattern: |
-        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget)
-      max_consecutive_narrative_blocks: 1
-      max_consecutive_images: 1
+        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget) # Alternating narrative blocks with images/diagrams, followed optionally by a voice widget.
+      max_consecutive_narrative_blocks: 1 # Cannot have two large narrative blocks without an image/diagram in between.
+      max_consecutive_images: 1 # Cannot have two images/diagrams without narrative in between.
 
     markdown_image_embed:
       description: |
@@ -31,7 +42,7 @@ authoring_contract:
         ![Alt text](images/<filename>){width=<px>}
       check: "Each conceptual 'Image Embed' point in the cadence must be represented by a Markdown image line referencing an existing panel by filename from the external data."
 
-    voice_widget_placement:
+    voice_widget_placement: # New rule for specific voice widget placement
       description: |
         "Hector Aphorism" and "System Failure Anecdote" widgets, when used to fulfill the voice_guideline, should be placed immediately after the Markdown image reference line they relate to in the cadence, if an image follows the Teaching Narrative block.
       check: "Hector Aphorism and System Failure Anecdote widgets in the Markdown output are correctly placed after a related image embed when applicable."
@@ -42,15 +53,16 @@ authoring_contract:
       description: "The minimum and maximum number of static image panels required for the entire *chapter* (defined in the external image data file)."
       check: "Total panel definitions in the external image data file must satisfy min_images ≤ n ≤ max_images and each must be referenced by a Markdown image line in the main content Markdown."
 
-    allowed_inline_widgets:
-      - "Diagram"
-      - "SRE Wisdom Box"
-      - "Error Budget Meter"
-      - "Incident Flashback"
-      - "hector quote"
-      - "Try This"
-
-    widget_syntax_hint: |
+    allowed_inline_widgets: # Whitelist of custom markdown widget types.
+      - "Diagram"                 # fenced ```mermaid``` or image (Mermaid also explicitly preferred)
+      - "SRE Wisdom Box"          # fenced block :::wisdom ... :::
+      - "Error Budget Meter"      # :::budget ... :::
+      - "Incident Flashback"      # :::slap ... :::
+      - "hector quote"         # :::proverb ... :::
+      - "Try This"                # :::exercise ... :::
+      - "Learner Reflection"  # :::reflection ... ::: block. Used for learner insights at chapter end or post-lesson analysis.
+      
+    widget_syntax_hint: | # Hint for how to format inline widgets
       Use containers like
         :::wisdom
         **SRE Wisdom:** "Reliability you can measure ..."
@@ -72,25 +84,179 @@ authoring_contract:
         API-->>Client: 200 OK
       ```
       :::
-
-    split_delivery:
+    try_this_frequency: # Specific rule for the "Try This" widget.
+      per_chapter: true
+      description: "The 'Try This' widget must be included at least once per chapter."
+    split_delivery: # Modified: adjusted token limits to accommodate increased word count
       description: |
         • Each part must begin with: <!-- Part A of Chapter <Number> -->  
         • Each part must end with: <!-- End Part A -->  
         • Parts must be labelled consecutively (Part A, Part B, Part C …).  
         • Every part must, on its own, respect heading order, cadence, widget-placement, and storytelling-ratio rules.  
         • The final part must include the chapter's self-check table.
-      max_tokens_per_part: 10000
+        • Every part must, on its own, respect the heading order,
+        • cadence, widget-placement, and storytelling-ratio rules.
+        • The final part must include the chapter's self-check table.
+        If the markdown output for a single chapter is expected to exceed
+        **24 000 tokens** (≈ 18 000 words including markup) **or**
+        **360 markdown lines**, the assistant MUST deliver the chapter in
+        multiple sequential parts within the same conversation thread.
+      max_tokens_per_part: 10_000   # soft cap for each conversational message
       naming_convention: "Part A, Part B, Part C, …"
-      non_blocking: true
+      non_blocking: true  # Failure to split is not a content error but may breach delivery constraints
       check: "If the chapter exceeds 24 000 tokens or 360 lines, it must be split into multiple parts, each with correct heading order and cadence."
+    diagram_frequency:
+      per_unit_max: 1          # at most one Mermaid diagram per Teaching Narrative
+      description: |
+        Mermaid diagrams are optional but encouraged for flow- or state-heavy
+        concepts. A maximum of one Diagram widget may appear inside each
+        Teaching Narrative section to avoid visual overload.
+        If a diagram is used, it should be placed at the end of the Teaching Narrative section, before any image embeds or widgets.
+
+  learner_reflection_guideline:
+    description: |
+      If a learner character experiences a clear moment of failure, growth, or realization during a narrative sequence,
+      the section should conclude with a `:::reflection` widget block.
+      
+      These moments are optional per panel but encouraged across the chapter. Use them to:
+      - Show evolving understanding or emotion
+      - Surface learner self-talk and metacognition
+      - Reinforce the chapter’s takeaway through a junior SRE’s lens
+
+      Examples:
+        - After Wanjiru misinterprets a log line and learns why trace IDs matter
+        - When Manu realizes a quiet alert led to 200+ transaction failures
+        - When Sofia connects user complaints to dashboard latency
+
+    check: |
+      At least one `:::reflection` block must appear per chapter. If a Teaching Narrative contains multiple learner inflection points,
+      preference is given to placing a reflection near the emotional or conceptual resolution.
+
+
+
+  response_schema:
+    # These define the main headings and their required order in the Markdown output sections that follow the Chapter Header.
+    headings_in_order:
+      - "🎯 Learning Objective"
+      - "✅ Takeaway"
+      - "🚦 Applied Example"    # <-- Section for real-world examples
+      - "Teaching Narrative"     # <-- Main narrative and technical content section
+      - "Image Embed"          # This indicates where an image/diagram should be embedded, referencing external data.
+
+  # Removed heading_content_schema as content structure within sections is now defined by markdown_content_rules.
+
+  markdown_content_rules:
+    description: |
+      Rules governing the types of markdown elements and content allowed within the sections defined by headings_in_order.
+      Content within sections should flow naturally, incorporating paragraphs, code blocks, lists, blockquotes, images, and widgets as needed, following the cadence and prose requirements.
+    allowed_elements: # Types of markdown/content elements that can be used within sections
+      - "Paragraph"
+      - "Fenced Code Block"     # ```language...```
+      - "Inline Code"           # `code`
+      - "Blockquote"            # > text
+      - "List"                  # -, *, + or 1., 2.
+      - "Table"                 # | Header | ...
+      - "Markdown Image"        # ![alt](url){attributes}
+      - "Mermaid Diagram"       # ```mermaid ... ```
+      - "Allowed Inline Widget" # Custom :::widget::: blocks
+
+  prose_requirements:
+    word_band: {min: 12000, max: 18000, description: "The total word count for the entire *chapter* prose content (excluding code blocks, tables, etc.)."} # Modified: increased word count range
+    chunk_size: {min: 1500, max: 2100, description: "The target word count range for the prose content *within* each Teaching Narrative section (excluding code blocks, tables, etc.)."} # Modified: increased chunk size range
+    storytelling_ratio: # Balances technical instruction with narrative/scene-setting within Teaching Narrative blocks.
+      description: |
+        Within each Teaching Narrative section, the content must balance technical instruction (approx. 60-80%) with scene-setting, storytelling, dialogue, and reader engagement (approx. 20-40%).
+        Importantly, technical content should be integrated into the narrative flow, presented in a conversational style, and woven into storytelling elements rather than listed or explained separately in a dry manner. Explicit "Scene (X%)" and "Technical (Y%)" labels should NOT be included in the generated Markdown output. The ratio should be achieved implicitly through content composition.
+      min_scene_pct: 20
+      max_scene_pct: 40
+    banking_context_anchor: # Enforces banking relevance.
+      value: true
+      description: "Ensures that each major unit or section of content is clearly tied back to banking industry concepts or examples."
+    voice_guideline: # Rules for mandatory persona elements.
+      description: "Specific elements that must be included in the narrative voice to enhance conversational and mentoring tone. Placement for some elements is specified in format_rules."
+      must_include_per_unit: # Requires at least one of these elements within each unit/Teaching Narrative section.
+        - "Hector Aphorism"
+        - "System Failure Anecdote"
+        - "Dialogue Line"   # At least two lines of character dialogue (Primary Character + other)
+        - "Learner Prompt"  # A direct question or reflective challenge to the reader
+    perspective: "second-person teacher + narrative examples"
+    prose_style: |
+      Fully narrative, conversational, detailed, and engaging. The conversational tone should feel like a mentor directly speaking to the reader, actively incorporating dialogue, relatable anecdotes, rhetorical questions, and direct prompts to the reader. Technical details and explanations should be seamlessly integrated into this narrative and conversational flow. Explicitly avoid bullet points or lists unless strictly necessary for clarity of technical steps or examples.
+      Integrate ulturally grounded analogies depending on the guide character references where appropriate, fulfilling the voice guidelines.
+
+
+  visual_guidelines:
+    palette_style_ref: {
+      hector: "hector_palette_style.md"
+    } # Reference file for the visual color palette and line style.
+    description: "Reference file for the visual color palette and line style."
+    prefer_diagrams: "mermaid" # Note: Mermaid diagrams are inline Markdown and don't use the external JSON file for definition.
+    character_presence:
+      primary: "hector" # Primary character in the story 
+      rule: "At least 50 % of panels defined in the external image data file include Hector to anchor teaching voice"
+      description: "Rule for including the primary character Hector in a majority of static panels."
+    scene_sync:
+      description: |
+        All panels must map back to one or more elements in the chapter beat map. Panel IDs in external_image_data must correlate with labeled instructional beats.
+      required: true
+
+  panel_roles_required:
+    description: |
+      Every panel beat map must include the following elements:
+      - ✅ At least 1 Hector-led insight or correction — Hector must visibly drive or resolve a critical concept
+      - ✅ At least 1 learner mistake, gap, or false assumption — to build tension and model the learning journey
+      - ✅ At least 1 observability technique used meaningfully (log example, trace comparison, dashboard correction, etc.)
+      These ensure panel progression, emotional engagement, and instructional pacing are upheld across all visual storylines.
+    check: true
+
+
+  # Section describing the schema of the external image data file (remains the same as it defines the source data for images)
+  external_image_data_schema:
+    description: |
+      A separate file (e.g., JSON) will contain an array of panel definitions that will be used by an external application to generate images. The structure and required fields for each panel object within this file are defined here.
+    file_format: "JSON (array of objects)"
+    array_name: "panels"
+    items:
+      type: object
+      required:
+        - panel
+        - filename
+        - scene_description
+        - characters_in_frame
+        - speech_bubbles
+        - narration
+      properties:
+        panel:
+          type: integer
+          description: "The unique identifier for the panel in sequence across the entire novella. This ID is used for referencing from the main content YAML."
+        filename:
+          type: string
+          description: "The suggested filename for the generated image file (e.g., chXX_pNN_description.png). This filename is used in the Markdown image reference in the main content YAML."
+        scene_description:
+          type: string
+          description: "A clear and detailed description of the visual scene for image generation, including environment, character actions/expressions, and any on-screen text or labels. Ensure this description is detailed enough for image generation." # Enhanced description
+        characters_in_frame:
+          type: array
+          items:
+            type: string
+            description: "List of characters present in the panel, including Hector and any other characters. This helps to ensure character presence in the generated image."
+            uniqueItems: true
+        speech_bubbles:
+          type: object
+          description: "Dialogue text for characters within the panel, keyed by character name or identifier."
+          # Detailed schema for speech_bubbles content can be added here if needed
+        narration:
+          type: string
+          description: "Optional narration text that appears within the panel itself (distinct from prose narration)."
+          nullable: true
 
   consistency_checklist:
+    # Checks for the final Markdown output structure and content.
     - "Chapter Header line is present and correctly formatted at the start of each chapter file."
-    - "Chapter Overview is present, correctly placed (after header, before first main section heading), and meets the length and content requirements."
+    - "Chapter Overview is present, correctly placed (after header, before first main section heading), and meets the length and content requirements." # Updated to reflect new requirements
     - "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview."
-    - "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)."
-    - "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code, tables, etc.)."
+    - "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)." # Modified: updated word count range
+    - "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code, tables, etc.)." # Modified: updated chunk size
     - "Cadence pattern within sections alternates narrative blocks/elements with image embeds/diagrams, followed optionally by voice widgets."
     - "Image count 6–15 in the external image data file's panels array."
     - "Each panel definition object in the external image data file's 'panels' array matches the external_image_data_schema."
@@ -101,19 +267,109 @@ authoring_contract:
     - "Banking context anchor is clearly present per unit/section."
     - "Voice guideline elements (Hector Aphorism OR System Failure Anecdote OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
     - "Hector Aphorism and System Failure Anecdote widgets are correctly placed after a related image embed when applicable, as per voice_widget_placement rule."
-    - "Applied Example block is present directly after each Takeaway section and matches its conceptual content."
-    - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary."
+    - "Applied Example block is present directly after each Takeaway section and matches its conceptual content (code snippet + user impact note)."
+    - "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
     - "Only whitelisted widgets appear, using correct container syntax."
     - "'Try This' widget is included at least once per chapter."
-    - "Chapters exceeding 24 000 tokens or 360 lines are split into labelled parts with correct comment markers."
+    - "Chapters exceeding 24 000 tokens or 360 lines are split into labelled parts with correct comment markers." # Modified: updated token limits
     - "If present, Mermaid diagrams are wrapped in a :::diagram widget, compile without errors, and no more than one appears per Teaching Narrative section."
 
   pre_submission_audit:
+  description: |
+    Before delivering any chapter or section for user review, the assistant must perform and submit a full pre-submission audit.
+    This audit must evaluate compliance against every item in the 'consistency_checklist'.
+    The audit must include a ✅/❌ status for each checklist item and highlight any gaps.
+    If any item is ❌, the assistant must halt delivery and fix issues until 100% compliance is achieved.
+    Only then can the draft be presented for user approval.
+  blocking_force_split: true
+  checklist_required: true
+  user_confirmation_required: true
+
+  format: |
+    :::audit
+    # ✅ AI Self-Check Audit – Chapter [X]: *<Insert Title Here>*
+
+    ## 📋 Structural Requirements
+    - [ ] Chapter header format matches `# Chapter <Number> – <Chapter Title>`
+    - [ ] Chapter overview is 2–5 paragraphs, introduces Hector, sets banking context
+    - [ ] Sections follow proper order:
+      - 🎯 Learning Objective
+      - ✅ Takeaway
+      - 🚦 Applied Example
+      - Teaching Narrative
+      - Image Embed
+
+    ## 🎨 Panel Beat Compliance
+    - [ ] Panel count is between 6–15
+    - [ ] Each panel includes:
+      - [ ] Scene/setting description
+      - [ ] Instructional outcome
+      - [ ] Hector voice line or presence
+      - [ ] Learner challenge or error
+      - [ ] One observability element (log, metric, trace)
+    - [ ] Beat map aligns with visual IDs (scene_sync)
+    - [ ] Panel supports a banking reliability scenario
+
+    ## 💬 Narrative & Voice Integration
+    - [ ] At least one **Hector Aphorism**
+    - [ ] At least one **System Failure Anecdote**
+    - [ ] At least one **Learner Prompt** or reflection moment
+    - [ ] At least one **Dialogue exchange** (Hector + learner)
+
+    ## 🛠️ Observability Techniques
+    - [ ] Logs are shown or described with context
+    - [ ] Metrics reflect system or business performance
+    - [ ] Traces show timing across services
+    - [ ] At least one alert example or postmortem theme used
+
+    ## 📚 Widgets & Inline Elements
+    - [ ] Includes at least one `:::Try This` widget
+    - [ ] Includes at least one other inline widget (e.g., `:::diagram`, `:::reflection`)
+    - [ ] All widgets follow formatting syntax defined in `widget_syntax_hint`
+
+    ## 📊 Banking Relevance
+    - [ ] At least one metric, event, or trace reflects a **banking-specific issue** (e.g., failed login, wire transfer, payment processing)
+    - [ ] Applied example directly ties to real-world financial operations
+
+    ## 🧠 Final Reflection
+    - [ ] Chapter includes a closing line from Hector or learner insight (use `:::reflection` block if applicable)
+    - [ ] All panel beats support the takeaway
+    - [ ] The chapter reads like Hector taught it
+:::
+
+  user_signoff_per_stage:
     description: |
-      Before delivering any chapter or section for user review, the assistant must perform and submit a full pre-submission audit.
-      This audit must evaluate compliance against every item in the 'consistency_checklist'.
-      The audit must include a ✅/❌ status for each checklist item and highlight any gaps.
-      If any item is ❌, the assistant must halt delivery and fix issues until 100% compliance is achieved.
-    blocking_force_split: true
-    checklist_required: true
-    user_confirmation_required: true
+      After completing each major stage (Scaffold Approval, Full Prose + Diagrams, Final Checklist Audit),
+      the assistant must explicitly pause and await User Approval before proceeding.
+      No automatic continuation is allowed without explicit written signoff from the user.
+    blocking: true
+
+force_split_large_chapters:
+  description: |
+    If a chapter exceeds 24,000 tokens or 360 markdown lines, the assistant must split into parts.
+    The 'non_blocking' flag for split_delivery is overridden: splitting is mandatory.
+  blocking: true
+
+applied_example_wordcount:
+  description: |
+    Each 'Applied Example' section must contain at least 150 words (excluding headings).
+  blocking: true
+
+dialogue_line_requirement:
+  description: |
+    Each Teaching Narrative section must contain at least two character dialogue exchanges
+    (i.e., four separate lines: two Hector, two learner/other) to reinforce conversational style.
+  blocking: true
+
+prose_depth_validation:
+  description: |
+    Beyond mere word count, each Teaching Narrative section must demonstrate clear technical teaching depth
+    and banking context relevance. Fluff or filler will be treated as non-compliance.
+  blocking: true
+
+  ambiguity_handling:
+    explicit_instruction: |
+      If uncertain about the level of detail required for prose narratives, how to integrate technical content conversationally, how to apply storytelling/banking context/voice guidelines (including widget placement), how to use inline widgets, how to reference external image data, or any other rule for generating the Markdown output, explicitly pause and request clarification—never default to condensed or overly summarized output.
+
+  escalation_rule: |
+    If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.

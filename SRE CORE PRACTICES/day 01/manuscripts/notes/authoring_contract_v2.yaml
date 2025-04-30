@@ -264,6 +264,58 @@ authoring_contract:
   checklist_required: true
   user_confirmation_required: true
 
+  format: |
+    :::audit
+    # ✅ AI Self-Check Audit – Chapter [X]: *<Insert Title Here>*
+
+    ## 📋 Structural Requirements
+    - [ ] Chapter header format matches `# Chapter <Number> – <Chapter Title>`
+    - [ ] Chapter overview is 2–5 paragraphs, introduces Hector, sets banking context
+    - [ ] Sections follow proper order:
+      - 🎯 Learning Objective
+      - ✅ Takeaway
+      - 🚦 Applied Example
+      - Teaching Narrative
+      - Image Embed
+
+    ## 🎨 Panel Beat Compliance
+    - [ ] Panel count is between 6–15
+    - [ ] Each panel includes:
+      - [ ] Scene/setting description
+      - [ ] Instructional outcome
+      - [ ] Hector voice line or presence
+      - [ ] Learner challenge or error
+      - [ ] One observability element (log, metric, trace)
+    - [ ] Beat map aligns with visual IDs (scene_sync)
+    - [ ] Panel supports a banking reliability scenario
+
+    ## 💬 Narrative & Voice Integration
+    - [ ] At least one **Hector Aphorism**
+    - [ ] At least one **System Failure Anecdote**
+    - [ ] At least one **Learner Prompt** or reflection moment
+    - [ ] At least one **Dialogue exchange** (Hector + learner)
+
+    ## 🛠️ Observability Techniques
+    - [ ] Logs are shown or described with context
+    - [ ] Metrics reflect system or business performance
+    - [ ] Traces show timing across services
+    - [ ] At least one alert example or postmortem theme used
+
+    ## 📚 Widgets & Inline Elements
+    - [ ] Includes at least one `:::Try This` widget
+    - [ ] Includes at least one other inline widget (e.g., `:::diagram`, `:::reflection`)
+    - [ ] All widgets follow formatting syntax defined in `widget_syntax_hint`
+
+    ## 📊 Banking Relevance
+    - [ ] At least one metric, event, or trace reflects a **banking-specific issue** (e.g., failed login, wire transfer, payment processing)
+    - [ ] Applied example directly ties to real-world financial operations
+
+    ## 🧠 Final Reflection
+    - [ ] Chapter includes a closing line from Hector or learner insight (use `:::reflection` block if applicable)
+    - [ ] All panel beats support the takeaway
+    - [ ] The chapter reads like Hector taught it
+:::
+
   user_signoff_per_stage:
     description: |
       After completing each major stage (Scaffold Approval, Full Prose + Diagrams, Final Checklist Audit),
