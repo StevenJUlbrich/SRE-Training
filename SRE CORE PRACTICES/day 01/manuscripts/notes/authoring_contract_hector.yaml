@@ -314,7 +314,6 @@ authoring_contract:
       - Passed: [count]
       - Failed: [count]
       - Skipped: [count]
-
     narrative_voice:
       - id: voice_guideline_usage
         text: "Voice guideline elements (Hector Aphorism OR System Failure Anecdote OR Dialogue Line OR Learner Prompt) are included as appropriate within each unit/Teaching Narrative section."
@@ -380,20 +379,6 @@ authoring_contract:
           the assistant must pause and request user confirmation before
           generating the external image panel data. JSON generation must not
           begin until explicit user signoff is received.
-
-
-    audit_summary:
-      description: |
-        When presenting a self-check audit, include a summary block at the end with counts:
-        - ✅ Passed
-        - ❌ Failed
-        - ⏸️ Skipped
-        If any ❌ is present, generation must pause and retry/fix content.
-      format: |
-        ## ✅ Audit Summary
-        - Passed: [count]
-        - Failed: [count]
-        - Skipped: [count]
 
   markdown_validator:
     description: |
@@ -477,32 +462,32 @@ authoring_contract:
       No automatic continuation is allowed without explicit written signoff from the user.
     blocking: true
 
-force_split_large_chapters:
-  description: |
-    If a chapter exceeds 24,000 tokens or 360 markdown lines, the assistant must split into parts.
-    The 'non_blocking' flag for split_delivery is overridden: splitting is mandatory.
-  blocking: true
+  force_split_large_chapters:
+    description: |
+      If a chapter exceeds 24,000 tokens or 360 markdown lines, the assistant must split into parts.
+      The 'non_blocking' flag for split_delivery is overridden: splitting is mandatory.
+    blocking: true
 
-applied_example_wordcount:
-  description: |
-    Each 'Applied Example' section must contain at least 150 words (excluding headings).
-  blocking: true
+  applied_example_wordcount:
+    description: |
+      Each 'Applied Example' section must contain at least 150 words (excluding headings).
+    blocking: true
 
-dialogue_line_requirement:
-  description: |
-    Each Teaching Narrative section must contain at least two character dialogue exchanges
-    (i.e., four separate lines: two Hector, two learner/other) to reinforce conversational style.
-  blocking: true
+  dialogue_line_requirement:
+    description: |
+      Each Teaching Narrative section must contain at least two character dialogue exchanges
+      (i.e., four separate lines: two Hector, two learner/other) to reinforce conversational style.
+    blocking: true
 
-prose_depth_validation:
-  description: |
-    Beyond mere word count, each Teaching Narrative section must demonstrate clear technical teaching depth
-    and banking context relevance. Fluff or filler will be treated as non-compliance.
-  blocking: true
+  prose_depth_validation:
+    description: |
+      Beyond mere word count, each Teaching Narrative section must demonstrate clear technical teaching depth
+      and banking context relevance. Fluff or filler will be treated as non-compliance.
+    blocking: true
 
-  ambiguity_handling:
-    explicit_instruction: |
-      If uncertain about the level of detail required for prose narratives, how to integrate technical content conversationally, how to apply storytelling/banking context/voice guidelines (including widget placement), how to use inline widgets, how to reference external image data, or any other rule for generating the Markdown output, explicitly pause and request clarification—never default to condensed or overly summarized output.
+    ambiguity_handling:
+      explicit_instruction: |
+        If uncertain about the level of detail required for prose narratives, how to integrate technical content conversationally, how to apply storytelling/banking context/voice guidelines (including widget placement), how to use inline widgets, how to reference external image data, or any other rule for generating the Markdown output, explicitly pause and request clarification—never default to condensed or overly summarized output.
 
-  escalation_rule: |
-    If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
+    escalation_rule: |
+      If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
