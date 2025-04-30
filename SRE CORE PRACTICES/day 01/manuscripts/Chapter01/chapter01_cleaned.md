@@ -1,7 +1,4 @@
 # Chapter&nbsp;1 – **“The Site Is Down” Isn’t a Root Cause**  
-*Part A — Teaching Narrative A (Panels 1–3)*  
-
----
 
 ## Chapter Overview  
 At 02 : 57 a.m. on a quiet Tuesday, the payments backbone of MidWest Union Bank suddenly stalls. Dashboard tiles across the NOC glow a reassuring forest-green, yet branch ATMs spit out *“Service unavailable”* receipts and the mobile-deposit flow rejects every check image with HTTP 500. Within four minutes, a million-dollar payroll batch hangs in limbo, and the incident channel is filling with customer-support escalations.
@@ -28,7 +25,7 @@ This opening chapter drops learners straight into that failure. They’ll sit be
 
 ---
 
-## 🚦 Applied Example — *Payroll Paralysis* (≈ 180 words)  
+## 🚦 Applied Example — *Payroll Paralysis*
 At 03 : 02 a.m. Central, `payment-service-v1` in *us-east-1a* flips from 68 req/s to 0. Geneos still shows a healthy 15 % “database time” metric —because that graph is wired to an *unused* read-replica that kept idling happily. Meanwhile, the primary RDS writer receives a schema-migrating DDL statement from a batch job and locks the `transactions` table. Every API call that needs a write now fails with `HTTP 500 – lock wait timeout`. The on-call runbook says *“verify CPU < 80 % and memory < 75 % — if true, restart pods.”* Wanjiru restarts two pods, the dashboard greens refresh…but lock contention remains and the incident grows.
 
 Learners will deconstruct this timeline, identify the blind spots (no error budget alert, no **trace → query lock** correlation), and propose instrumentation that would have exposed the row-lock wait within seconds.
@@ -49,7 +46,7 @@ sequenceDiagram
 
 ---
 
-## Teaching Narrative A – *The Pager Screams* (≈ 1 350 words)
+## Teaching Narrative A – *The Pager Screams*
 
 ### Panel 1 — *“All Green, All Gone”*  
 ![Panel 1 – The Pager Screams](path/to/panel1.png)  
@@ -90,7 +87,7 @@ The conference bridge opens. Senior VP of Digital Banking, Manu Ramirez, joins s
 
 Wanjiru shares her screen. Manu sees green graphs and frowns: *“Why is the alert red when Geneos is green?”* The incident commander (IC) marks *Telemetry gap suspected* on the timeline. Learners reading this scene should feel the tension: the team fights **cognitive blindness** caused by shallow monitoring. We annotate the panel with a sidebar explaining *false negatives*:
 
-> **:::incident flashcard:::**  
+> **Widget — :::incident flashcard:::**  
 > **Dashboards Lie When**  
 > 1. The metric isn’t wired to the true dependency (wrong DB node).  
 > 2. The probe implements *availability*, not *correctness*.  

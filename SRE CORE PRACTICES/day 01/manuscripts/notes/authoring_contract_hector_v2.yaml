@@ -1,0 +1,328 @@
+authoring_contract:
+  output_format: "Markdown"
+
+  format_rules:
+    chapter_header_format:
+      description: "Each chapter's Markdown file must begin with a Chapter Header line."
+      format: "# Chapter <Number> – <Chapter Title>"
+      check: "Each Markdown file for a chapter starts with a correctly formatted Chapter Header line."
+
+    chapter_overview_format:
+      description: |
+        A brief introductory overview for the chapter, placed after the Chapter Header and any initial horizontal rule, and before the first main section heading (🎯 Learning Objective).
+        This overview should orient the learner, highlight key concepts, establish banking context, introduce or reference Hector as the guide, set expectations, and connect the chapter to the broader journey.
+      length: {min_paragraphs: 2, max_paragraphs: 5}
+      check: "The Chapter Overview is present, correctly placed, and meets the length and content requirements."
+
+    panel_beat_structure:
+      description: |
+        Each chapter must include a panel-by-panel beat map that aligns visuals, narrative beats, and instructional outcomes.
+      required: true
+
+    chapter_visual_integrity:
+      description: |
+        Every chapter must define between 6–15 panels, each with a scene, instructional beat, and system/learner/narrative dimension.
+      enforced: true
+
+    section_sequence:
+      pattern_hint: "(Chapter Header → Optional Initial Content/Overview → Learning Objective → Takeaway → Applied Example → (Teaching Narrative → Image Embed)+ )+"
+      description: "The suggested sequence of main sections within each unit or chapter."
+
+    cadence:
+      description: "Describes the alternation of content in Teaching Narrative sections."
+      pattern: |
+        (Narrative Prose + Integrated Technical Elements + Inline Widgets → Image Embed/Diagram → Optional Voice Widget)
+      max_consecutive_narrative_blocks: 1
+      max_consecutive_images: 1
+
+    markdown_image_embed:
+      description: |
+        When an Image Embed is required by cadence, use the format:
+        ![Alt text](images/<filename>){width=<px>}
+      check: "Each embed must use a valid filename from the panel data."
+
+    voice_widget_placement:
+      description: |
+        Voice widgets like "Hector Aphorism" or "System Failure Anecdote" must follow the related image embed.
+      check: "Voice widgets are placed immediately after the image they relate to."
+
+    panel_ratio:
+      min_images: 6
+      max_images: 15
+      description: "The image panel count for each chapter."
+      check: "Image count in external file must match."
+
+    allowed_inline_widgets:
+      - "Diagram"
+      - "SRE Wisdom Box"
+      - "Error Budget Meter"
+      - "Incident Flashback"
+      - "hector quote"
+      - "Try This"
+      - "Learner Reflection"
+      - "debug pattern"  
+
+    widget_syntax_hint:
+      description: |
+        Use containers like:
+        :::debug pattern
+        **Pattern Name:** Green Wall Fallacy
+
+        **Description:** When your dashboards only show replica stats, they’ll lie during primary write failures.
+
+        **Example Fix:** Connect primary node metrics to wall displays and add error-rate overlays from traceable sources.
+        :::
+        :::wisdom
+        **SRE Wisdom:** "Reliability you can measure ..."
+        :::
+        :::hector quote
+        **Hector says:** "If your telemetry doesn’t snitch, your outage will."
+        :::
+        :::incident flashback
+        **Postmortem Recap:** The DB failover failed to trigger because someone hardcoded the heartbeat monitor to `/dev/null`.
+        :::
+        :::diagram
+        ```mermaid
+        sequenceDiagram
+          autonumber
+          Client->>API: POST /loan
+          API->>DB: INSERT row
+          DB-->>API: 201
+          API-->>Client: 200 OK
+        ```
+        :::
+    debug_pattern_guideline:
+      description: |
+        Use `:::debug pattern` boxes to extract reusable diagnostic anti-patterns, incident smells, or recovery tactics.
+        They must include:
+        - A short **Pattern Name**
+        - A brief **Description** of the failure mode
+        - A concrete **Example Fix**
+        Place after a narrative beat where learners encountered a blind spot or fix.
+      check: "Each `debug pattern` box follows the format and teaches a reusable diagnosis or fix."
+
+    try_this_frequency:
+      per_chapter: true
+      description: "The 'Try This' widget must be included at least once per chapter."
+
+    split_delivery:
+      description: |
+        Chapters expected to exceed 24k tokens or 360 lines must be split into multiple parts.
+      max_tokens_per_part: 10000
+      naming_convention: "Part A, Part B, Part C, …"
+      non_blocking: true
+      check: "Split must occur if limits are exceeded."
+
+  diagram_frequency:
+    per_unit_max: 2
+    description: |
+      Max of two Mermaid diagrams per Teaching Narrative section.
+
+  learner_reflection_guideline:
+    description: |
+      If a learner experiences a key insight or realization, include a `:::reflection` block near that section.
+    check: "At least one `:::reflection` block per chapter."
+
+  response_schema:
+    headings_in_order:
+      - "🎯 Learning Objective"
+      - "✅ Takeaway"
+      - "🚦 Applied Example"
+      - "Teaching Narrative"
+      - "Image Embed"
+
+  markdown_content_rules:
+    description: "Markdown content must follow allowed elements."
+    allowed_elements:
+      - "Paragraph"
+      - "Fenced Code Block"
+      - "Inline Code"
+      - "Blockquote"
+      - "List"
+      - "Table"
+      - "Markdown Image"
+      - "Mermaid Diagram"
+      - "Allowed Inline Widget"
+
+  prose_requirements:
+    word_band: {min: 12000, max: 18000}
+    chunk_size: {min: 1500, max: 2100}
+    storytelling_ratio:
+      description: "Balance narrative and technical content."
+      min_scene_pct: 20
+      max_scene_pct: 40
+    banking_context_anchor:
+      value: true
+    voice_guideline:
+      must_include_per_unit:
+        - "Hector Aphorism"
+        - "System Failure Anecdote"
+        - "Dialogue Line"
+        - "Learner Prompt"
+    perspective: "second-person teacher + narrative examples"
+    prose_style: |
+      Fully narrative, conversational, and integrated with technical content. Avoid bullet points unless required.
+
+  visual_guidelines:
+    palette_style_ref: {hector: "hector_palette_style.md"}
+    description: "Reference file for the visual color palette."
+    prefer_diagrams: "mermaid"
+    character_presence:
+      primary: "hector"
+      rule: "At least 50 % of panels must include Hector."
+    scene_sync:
+      description: |
+        Panels must match chapter beat map.
+      required: true
+
+  panel_roles_required:
+    description: |
+      Panels must include:
+      - One Hector-led correction
+      - One learner mistake or tension
+      - One observability technique
+    check: true
+
+  external_image_data_schema:
+    description: "Defines schema for panel images."
+    file_format: "JSON (array of objects)"
+    array_name: "panels"
+    items:
+      type: object
+      required:
+        - panel
+        - filename
+        - scene_description
+        - characters_in_frame
+        - speech_bubbles
+        - narration
+      properties:
+        panel:
+          type: integer
+        filename:
+          type: string
+        scene_description:
+          type: string
+          minLength: 10
+          maxLength: 500
+        characters_in_frame:
+          type: array
+          items:
+            type: string
+            uniqueItems: true
+        speech_bubbles:
+          type: object
+        narration:
+          type: string
+          nullable: true
+
+  consistency_checklist:
+    structure:
+      - id: header_line_format
+        text: "Chapter Header line is correctly formatted."
+      - id: chapter_overview_required
+        text: "Chapter Overview is present and meets requirements."
+      - id: heading_sequence_valid
+        text: "All required sections appear in correct order."
+      - id: section_presence_enforcement
+        text: "All sections defined in headings_in_order appear once and in order."
+
+    prose:
+      - id: total_word_band_compliance
+        text: "Chapter word count is within range."
+      - id: section_chunk_wordcount
+        text: "Each Teaching Narrative is within chunk size."
+      - id: storytelling_ratio_compliance
+        text: "Teaching Narrative meets storytelling ratio."
+      - id: banking_context_visible
+        text: "Banking context is clearly present."
+      - id: prose_depth_and_style
+        text: "Prose is detailed, narrative, and integrated."
+      - id: auto_expand_on_wordcount_deficit
+        text: "Chapter is expanded if under minimum."
+      - id: part_word_guarantee
+        text: "Each continuation part adds ≥ 2000 words if needed."
+
+  audit_summary:
+    description: |
+      Include a summary block at the end of each audit.
+    format: |
+      ## ✅ Audit Summary
+      - Passed: [count]
+      - Failed: [count]
+      - Skipped: [count]
+    narrative_voice:
+      - id: voice_guideline_usage
+        text: "Voice guideline elements are used."
+      - id: voice_widget_positioning
+        text: "Voice widgets are correctly placed."
+      - id: widget_whitelist_check
+        text: "Only whitelisted widgets are used."
+      - id: try_this_presence
+        text: "At least one 'Try This' is present."
+
+  markdown_validator:
+    description: "Validates all required elements and section order."
+    output: JSON or tabular audit with per-rule ID status (✅/❌/⏸️).
+
+  pre_submission_audit:
+    description: |
+      Perform this audit before any chapter is shown to the user.
+    blocking_force_split: true
+    checklist_required: true
+    user_confirmation_required: true
+    escalation_rule: |
+      If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
+      If checklist row 4 is ❌ and no additional Part is generated, raise a policy violation and initiate automatic expansion without user prompt.
+
+  format: |
+    :::audit
+    # ✅ AI Self-Check Audit – Chapter [X]: *<Insert Title Here>*
+
+    ## 📋 Structural Requirements
+    - [ ] Chapter header format matches `# Chapter <Number> – <Chapter Title>`
+    - [ ] Chapter overview is 2–5 paragraphs, introduces Hector, sets banking context
+    - [ ] Sections follow proper order:
+      - 🎯 Learning Objective
+      - ✅ Takeaway
+      - 🚦 Applied Example
+      - Teaching Narrative
+      - Image Embed
+
+    ## 🎨 Panel Beat Compliance
+    - [ ] Panel count is between 6–15
+    - [ ] Each panel includes:
+      - [ ] Scene/setting description
+      - [ ] Instructional outcome
+      - [ ] Hector voice line or presence
+      - [ ] Learner challenge or error
+      - [ ] One observability element (log, metric, trace)
+    - [ ] Beat map aligns with visual IDs (scene_sync)
+    - [ ] Panel supports a banking reliability scenario
+
+    ## 💬 Narrative & Voice Integration
+    - [ ] At least one **Hector Aphorism**
+    - [ ] At least one **System Failure Anecdote**
+    - [ ] At least one **Learner Prompt** or reflection moment
+    - [ ] At least one **Dialogue exchange** (Hector + learner)
+
+    ## 🛠️ Observability Techniques
+    - [ ] Logs are shown or described with context
+    - [ ] Metrics reflect system or business performance
+    - [ ] Traces show timing across services
+    - [ ] At least one alert example or postmortem theme used
+
+    ## 📚 Widgets & Inline Elements
+    - [ ] Includes at least one `:::Try This` widget
+    - [ ] Includes at least one other inline widget (e.g., `:::diagram`, `:::reflection`)
+    - [ ] All widgets follow formatting syntax defined in `widget_syntax_hint`
+
+    ## 📊 Banking Relevance
+    - [ ] At least one metric, event, or trace reflects a **banking-specific issue**
+    - [ ] Applied example directly ties to real-world financial operations
+
+    ## 🧠 Final Reflection
+    - [ ] Chapter includes a closing line from Hector or learner insight
+    - [ ] All panel beats support the takeaway
+    - [ ] The chapter reads like Hector taught it
+    :::
