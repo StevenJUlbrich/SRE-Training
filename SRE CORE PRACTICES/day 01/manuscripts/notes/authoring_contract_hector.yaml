@@ -309,8 +309,6 @@ authoring_contract:
       - ❌ Failed
       - ⏸️ Skipped
       If any ❌ is present, generation must pause and retry/fix content.
-      If checklist row 4 is ❌ and no additional Part is generated, raise a
-      policy violation and initiate automatic expansion without user prompt.
     format: |
       ## ✅ Audit Summary
       - Passed: [count]
