@@ -344,7 +344,7 @@
                 "lean build with a formal presence",
                 "medium length hair salt-and-pepper hair",
                 "button-up shirt with rolled sleeves, digital watch",
-                "distinguished yet approachable",
+                "distinguished yet approachable"
             ]
         }
     },
@@ -359,13 +359,68 @@
         "text_padding_px": 5,
         "bubble_avoid_edges": true,
         "narration_box_position": "top",
-        "ensure_text_visible": true,
-        "eye_detail": "eyes must be fully illustrated with visible irises and reflection; never black dots or cartoon ovals. Eyes must reflect character emotion—focus, concern, skepticism, curiosity—as appropriate to the scene."
+        "ensure_text_visible": true
     },
     "layout_rules": {
         "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
-        "speech_point": "point to the character speaking",
         "narration_box_position": "top",
         "text_padding_px": 5
-    }
+    },
+    "panels": [
+        {
+            "panel": 4,
+            "filename": "ch01_p04.png",
+            "scene_description": "Hector draws three-circle Venn",
+            "characters_in_frame": [
+                "Hector",
+                "Wanjiru"
+            ],
+            "speech_bubbles": {
+                "Hector": "One pillar is a stool…"
+            },
+            "narration": null
+        },
+        {
+            "panel": 5,
+            "filename": "ch01_p05.png",
+            "scene_description": "Breaker metric turns red",
+            "characters_in_frame": [
+                "Hector",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Juana": "Found the breaker!",
+                "Hector": "Metrics are the siren…"
+            },
+            "narration": null
+        },
+        {
+            "panel": 6,
+            "filename": "ch01_p06.png",
+            "scene_description": "Jaeger waterfall red span",
+            "characters_in_frame": [
+                "Danny",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Danny": "Trace IDs flowing!",
+                "Hector": "Name the killer."
+            },
+            "narration": null
+        },
+        {
+            "panel": 7,
+            "filename": "ch01_p07.png",
+            "scene_description": "Unified dashboard healthy",
+            "characters_in_frame": [
+                "Hector",
+                "Wanjiru"
+            ],
+            "speech_bubbles": {
+                "Wanjiru": "Green ≠ good",
+                "Hector": "Make it confess."
+            },
+            "narration": "Lesson locked in."
+        }
+    ]
 }
