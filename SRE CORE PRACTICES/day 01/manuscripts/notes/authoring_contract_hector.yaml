@@ -255,17 +255,17 @@ authoring_contract:
   consistency_checklist:
     structure:
       - id: header_line_format
-        text: "Chapter Header line is present and correctly formatted at the start of each chapter file."
+        text: "Chapter Header line is present and correctly formatted at the start of each chapter file." 
       - id: chapter_overview_required
-        text: >
+        text: > 
           The Chapter Overview must appear immediately after the Chapter Header
           and before the 🎯 Learning Objective section. It must contain between
           2 and 5 paragraphs, introduce Hector, set a banking context, and
           establish narrative stakes. Absence or misplacement results in ❌ audit status.
       - id: heading_sequence_valid
-        text: "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview."
+        text: "Main sections (defined by headings_in_order) are present and in the required sequence per unit/chapter, following the Chapter Header and Overview." 
       - id: section_presence_enforcement
-        text: >
+        text: > 
           Each section defined in 'headings_in_order' must appear
           exactly once and in the correct order in the Markdown output.
           Absence or misplacement of any section results in ❌ audit status.
@@ -274,17 +274,17 @@ authoring_contract:
 
     prose:
       - id: total_word_band_compliance
-        text: "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)."
+        text: "Word count within 12000–18000 band in the main content Markdown prose (excluding code, tables, etc.)." 
       - id: section_chunk_wordcount
-        text: "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code blocks, tables, etc.)."
+        text: "Prose word count within each Teaching Narrative section is between 1500 and 2100 words (excluding code blocks, tables, etc.)." 
       - id: storytelling_ratio_compliance
-        text: "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**."
+        text: "Teaching Narrative sections meet storytelling_ratio (20-40% scene, 60-80% tech), **without explicit Scene/Technical labels**." 
       - id: banking_context_visible
-        text: "Banking context anchor is clearly present per unit/section."
+        text: "Banking context anchor is clearly present per unit/section." 
       - id: prose_depth_and_style
-        text: "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**"
+        text: "Teaching Narrative prose is explicitly detailed, narrative, conversational, and avoids superficial summaries or excessive bullet points unless necessary. **Technical content is integrated into this narrative flow.**" 
       - id: auto_expand_on_wordcount_deficit
-        text: >
+        text: > 
           If checklist row 4 (total chapter prose 12 000–18 000 words) is ❌,
           the assistant MUST automatically generate additional, contract-compliant
           prose—using deep-dive sections, appendices, or extended narratives—until
@@ -292,7 +292,7 @@ authoring_contract:
           permission; it must continue writing and updating the audit in the same
           turn, even if that requires multiple consecutive messages.
       - id: part_word_guarantee
-        text: >
+        text: > 
           If the chapter is being delivered in multiple parts due to size constraints,
           and checklist row 4 (total chapter prose 12 000–18 000 words) is still ❌,
           then each additional part (Part B onward) MUST contain a minimum of
@@ -301,6 +301,21 @@ authoring_contract:
           token-wasting fluff or over-fragmentation. The assistant must continue
           expanding with content-rich narrative, technical depth, and banking relevance
           until the total chapter prose falls within the valid band and row 4 becomes ✅.
+
+  audit_summary:
+    description: |
+      When presenting a self-check audit, include a summary block at the end with counts:
+      - ✅ Passed
+      - ❌ Failed
+      - ⏸️ Skipped
+      If any ❌ is present, generation must pause and retry/fix content.
+      If checklist row 4 is ❌ and no additional Part is generated, raise a
+      policy violation and initiate automatic expansion without user prompt.
+    format: |
+      ## ✅ Audit Summary
+      - Passed: [count]
+      - Failed: [count]
+      - Skipped: [count]
 
     narrative_voice:
       - id: voice_guideline_usage
@@ -363,11 +378,33 @@ authoring_contract:
           • Await user validation
           • Proceed with Part B, Part C, etc., repeating audit and validation at each step.
 
-          Only after the final part is approved and all checklist items are ✅,
-          the assistant will generate the JSON image panel data according to
-          the `external_image_data_schema`. This ensures visual assets align
-          precisely with prose beats and narrative flow.
+          After the final part is approved and all checklist items are ✅,
+          the assistant must pause and request user confirmation before
+          generating the external image panel data. JSON generation must not
+          begin until explicit user signoff is received.
 
+
+    audit_summary:
+      description: |
+        When presenting a self-check audit, include a summary block at the end with counts:
+        - ✅ Passed
+        - ❌ Failed
+        - ⏸️ Skipped
+        If any ❌ is present, generation must pause and retry/fix content.
+      format: |
+        ## ✅ Audit Summary
+        - Passed: [count]
+        - Failed: [count]
+        - Skipped: [count]
+
+  markdown_validator:
+    description: |
+      A validator script (external or embedded) must be able to:
+      - Parse each Markdown chapter.
+      - Locate all required sections in `headings_in_order`.
+      - Validate compliance against each `consistency_checklist` ID.
+      - Emit a summary log for QA.
+    output: JSON or tabular audit with per-rule ID status (✅/❌/⏸️).
 
   pre_submission_audit:
   description: |
@@ -379,6 +416,11 @@ authoring_contract:
   blocking_force_split: true
   checklist_required: true
   user_confirmation_required: true
+  escalation_rule: |
+    If any checklist item fails, return the checklist table with ❌ items
+    and halt content generation until resolved.
+    If checklist row 4 is ❌ and no additional Part is generated, raise a
+    policy violation and initiate automatic expansion without user prompt.
 
   format: |
     :::audit
