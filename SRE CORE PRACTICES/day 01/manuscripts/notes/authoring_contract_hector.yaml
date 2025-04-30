@@ -407,20 +407,18 @@ authoring_contract:
     output: JSON or tabular audit with per-rule ID status (✅/❌/⏸️).
 
   pre_submission_audit:
-  description: |
-    Before delivering any chapter or section for user review, the assistant must perform and submit a full pre-submission audit.
-    This audit must evaluate compliance against every item in the 'consistency_checklist'.
-    The audit must include a ✅/❌ status for each checklist item and highlight any gaps.
-    If any item is ❌, the assistant must halt delivery and fix issues until 100% compliance is achieved.
-    Only then can the draft be presented for user approval.
-  blocking_force_split: true
-  checklist_required: true
-  user_confirmation_required: true
-  escalation_rule: |
-    If any checklist item fails, return the checklist table with ❌ items
-    and halt content generation until resolved.
-    If checklist row 4 is ❌ and no additional Part is generated, raise a
-    policy violation and initiate automatic expansion without user prompt.
+    description: |
+      Before delivering any chapter or section for user review, the assistant must perform and submit a full pre-submission audit.
+      This audit must evaluate compliance against every item in the 'consistency_checklist'.
+      The audit must include a ✅/❌ status for each checklist item and highlight any gaps.
+      If any item is ❌, the assistant must halt delivery and fix issues until 100% compliance is achieved.
+      Only then can the draft be presented for user approval
+    blocking_force_split: true
+    checklist_required: true
+    user_confirmation_required: true
+    escalation_rule: |
+      If any checklist item fails, return the checklist table with ❌ items and halt content generation until resolved.
+      If checklist row 4 is ❌ and no additional Part is generated, raise a policy violation and initiate automatic expansion without user prompt.
 
   format: |
     :::audit
