@@ -1,0 +1,131 @@
+{
+  "panels": [
+    {
+      "panel": 1,
+      "filename": "ch03_p1.png",
+      "scene_description": "03:14 UTC in the dimly lit NOC. Fluorescent ceiling tubes hum while a massive wall‑mounted terminal renders Splunk live‑tail in retro green‑on‑black. Lines scream past at 3 k/second—`DEBUG payments.*`—like Matrix glyphs. Disk‑IO and Kafka in‑topic gauges blink crimson at 95 MB/s and 14 k msg/s, spilling to a sidebar alert: *Indexer queue saturation 87 %*. Leonel, hoodie half‑zipped, proudly gestures at the torrent. Manu shields her eyes from the flicker. A single red **ERROR**—`NullPointerException at DebitProcessor`—flashes then vanishes. Hector strides in holding a chipped mug, shadow stretching across the consoles. He kills the tail with **Ctrl‑C**, types a severity filter (`level>=WARN AND service=payments`) plus a `fields transactionId,amount` extractor. The screen collapses to three precise lines, each highlighted amber. The room’s neon reflection fades from frantic to focused.",
+      "characters_in_frame": [
+        "Hector",
+        "Leonel",
+        "Manu"
+      ],
+      "speech_bubbles": {
+        "Leonel": "Beautiful, isn’t it?",
+        "Manu": "Beautiful—or blinding?",
+        "Hector": "Visibility isn’t the same as clarity."
+      },
+      "narration": "Disk IO throttles, burying the one ERROR that mattered until Hector filters the noise."
+    },
+    {
+      "panel": 2,
+      "filename": "ch03_p2.png",
+      "scene_description": "Same NOC, five minutes later. A 3 × 2 array of 55‑inch Grafana screens dominates the left wall, all traffic lights green. The primary panel—*payments_latency_p95*—shows a smooth teal ribbon at 120 ms under an SLA band. To the right, a Zendesk heat‑map on a secondary monitor pulses hot red with 200+ 'Transfer Failed' tickets. Wanjiru, headset around her neck, scrolls frantic customer chats. Manu toggles dashboard variables in confusion. Aisha leans over the console: 'Latency isn’t lying; it’s answering the wrong question.' Hector overlays the new `payments_failure_ratio` metric as a rust‑red spike climbing 250 fails/min at exactly 02:15. The once tranquil graph now screams at the team.",
+      "characters_in_frame": [
+        "Hector",
+        "Manu",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Wanjiru": "Customers can’t complete transfers!",
+        "Hector": "Metrics disconnected from reality are just static art."
+      },
+      "narration": "Overlaying the business‑risk metric reveals user pain hidden beneath nominal latency."
+    },
+    {
+      "panel": 3,
+      "filename": "ch03_p3.png",
+      "scene_description": "Manu rolls a swivel chair to Wanjiru’s station. Dual 27‑inch monitors glow; one shows a `grep -R \"TX-977af\" /var/log/payments` returning *0 matches*. The other displays a plain INFO line `Debit OK amount=25000`. No IDs, no structure. Wanjiru’s shoulders slump. On a shared screen Hector demonstrates the new JSON encoder: log preview updates live in Splunk’s dark theme: `{\"ts\":\"2025-05-01T02:14:35Z\",\"level\":\"INFO\",\"service\":\"debit\",\"transactionId\":\"TX-977af\",\"traceId\":\"b783cf\",\"amount\":25000,\"status\":\"OK\"}`. The entry is highlighted and clickable—trace opens in Tempo on click. Leonel watches the delta side‑by‑side—old log in dull gray, new log in vibrant System Blue with key names in Deep Amber.",
+      "characters_in_frame": [
+        "Hector",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Wanjiru": "How does a transfer vanish?",
+        "Hector": "The system just learned to sign its work."
+      },
+      "narration": "The missing correlation fields explain why previous searches returned nothing."
+    },
+    {
+      "panel": 4,
+      "filename": "ch03_p4.png",
+      "scene_description": "A digital whiteboard spans half the back wall. Hector sketches three perfect circles using house palette colors: charcoal for **Logs**, slate for **Metrics**, and system blue for **Traces**. Animated software fills each region with subtle texture—scribbles, halftones, jitter—to signify their individual pitfalls. The overlapping center glows Deep Amber and is labeled *Root Cause Detection*. The surrounding overlaps are tinted Rust Red, labeled 'Random Noise', 'False Calm', 'Silent Scream' mirroring earlier Venn metaphors. The team stands silhouetted, each face lit by the amber core. Clara snaps a photo for the run‑book.",
+      "characters_in_frame": [
+        "Hector",
+        "Clara",
+        "Manu",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Hector": "Coverage is meaningless without intersection."
+      },
+      "narration": "The absent amber overlap underscores why today’s telemetry failed them."
+    },
+    {
+      "panel": 5,
+      "filename": "ch03_p5.png",
+      "scene_description": "Clara zooms into a cluttered Grafana panel. The title field overflows: `service_latency_time_chart_thing--copy`. Legend columns bleed off‑screen; the graph renders 47 series in neon spaghetti. She circles the metric and throws a question to the room. Leonel lifts an apologetic hand. Hector leans in, pointing to Prometheus metadata: `HELP` and `TYPE` lines are missing. Clara brings up VS Code on a shared screen: a PR diff renames the metric to `payments_request_latency_seconds`; adds `team=\"payments\"` and `slo=\"p95_lt_300ms\"`; strips `pod` and `instance` labels. Side panel shows Prometheus `series` API shrinking from **16384 → 6**. The refreshed Grafana panel now shows a single turquoise line with SLA shading, axis labeled *seconds*, and an explicit legend.",
+      "characters_in_frame": [
+        "Hector",
+        "Clara",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Clara": "Whose chart thing is this?",
+        "Hector": "Metric hygiene is dental care for dashboards."
+      },
+      "narration": "Metric naming, units, and ownership snap into place, cutting cardinality 2 700‑fold."
+    },
+    {
+      "panel": 6,
+      "filename": "ch03_p6.png",
+      "scene_description": "Night deepens; the team clusters at a standing desk—five laptops daisy‑chained to a 49‑inch ultrawide. Hector dictates the *Telemetry Definition of Done* on a shared Etherpad, bullet points in bold teal. Clara runs Go tests; green ticks cascade as structured log helpers compile. Wanjiru commits a `logfmt` wrapper; Leonel prunes Prometheus `pod` labels from Helm templates. A translucent flashback overlay shows last quarter’s disk‑full incident: gray tones depict DEBUG logs filling storage, WAL stalls causing a $460 k penalty. The overlay fades as current code replaces chaos with structure.",
+      "characters_in_frame": [
+        "Hector",
+        "Clara",
+        "Manu",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Manu": "But DEBUG helps somebody someday—",
+        "Hector": "Not until it buries the outage."
+      },
+      "narration": "Mob refactor turns telemetry from liability into searchable, owned assets."
+    },
+    {
+      "panel": 7,
+      "filename": "ch03_p7.png",
+      "scene_description": "02:28 UTC. Grafana refreshes: a crisp Deep Amber bar graph (`db_retry_total`) overlays a scarlet line (`auth_failure_ratio`). The two shapes rise and fall in perfect unison over a 30‑second window. Wanjiru clicks a bar; Tempo pops open a trace waterfall—frontend → auth‑svc → ledger‑db—span 8e12c3 highlighted red with retry tags. A mini‑timeline floats above: latencies stack, showing ledger connection resets at +450 ms. Dashboard background uses house Slate Gray; spikes are accent Red.",
+      "characters_in_frame": [
+        "Hector",
+        "Wanjiru",
+        "Clara"
+      ],
+      "speech_bubbles": {
+        "Wanjiru": "It’s the same trace ID!",
+        "Hector": "When the system whispers, you can hear the pattern."
+      },
+      "narration": "Clean telemetry reveals causal sync between DB retries and auth failures."
+    },
+    {
+      "panel": 8,
+      "filename": "ch03_p8.png",
+      "scene_description": "Dawn paints the skyline outside the panoramic window in soft orange. Dashboards now display calm greens and blues. A central display shows a composite view: left pane—filtered logs with structured fields; center—metrics trend stable; right—trace timeline collapsed. Hector, blazer back on, cradles the final coffee dregs. Leonel, exhausted but wiser, leans against the console sipping water. Manu stretches, sunlight catching her relieved smile. A sticky note on the console reads: *Add failure‑ratio SLO to runbook*. The team breathes synchronously—systems and people alike stabilised.",
+      "characters_in_frame": [
+        "Hector",
+        "Leonel",
+        "Manu",
+        "Wanjiru",
+        "Clara"
+      ],
+      "speech_bubbles": {
+        "Hector": "Logs are the mouth, metrics the mood, traces the memory.",
+        "Leonel": "So… less karaoke, more confession?"
+      },
+      "narration": "Chapter closes on tranquility earned through clarity, setting stage for alerting reforms."
+    }
+  ]
+}

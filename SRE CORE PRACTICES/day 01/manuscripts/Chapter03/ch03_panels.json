@@ -1,0 +1,131 @@
+{
+  "panels": [
+    {
+      "panel": 1,
+      "filename": "ch03_p1.png",
+      "scene_description": "Leonel streams a 3,000‑line DEBUG log tail on a wall terminal; Hector intervenes, filtering to WARN+ entries while Manu watches.",
+      "characters_in_frame": [
+        "Hector",
+        "Leonel",
+        "Manu"
+      ],
+      "speech_bubbles": {
+        "Leonel": "Beautiful, isn’t it?",
+        "Manu": "Beautiful—or blinding?",
+        "Hector": "Visibility isn’t the same as clarity."
+      },
+      "narration": "Disk IO spikes and a critical ERROR line slips by, buried in noise."
+    },
+    {
+      "panel": 2,
+      "filename": "ch03_p2.png",
+      "scene_description": "Grafana latency graph shows green; Wanjiru reads a live chat feed glowing red with user complaints as Hector overlays failure metrics.",
+      "characters_in_frame": [
+        "Hector",
+        "Manu",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Wanjiru": "Customers can’t complete transfers.",
+        "Hector": "Metrics disconnected from reality are just static art."
+      },
+      "narration": "Overlay exposes a spike in failed‑transaction rate hidden beneath nominal latency."
+    },
+    {
+      "panel": 3,
+      "filename": "ch03_p3.png",
+      "scene_description": "Wanjiru struggles to grep for a transaction ID in unstructured logs; Hector demonstrates JSON log format with correlation IDs.",
+      "characters_in_frame": [
+        "Hector",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Wanjiru": "How does a transfer vanish?",
+        "Hector": "The system just learned to sign its work."
+      },
+      "narration": "Before/after log snippet floats beside them, highlighting added fields."
+    },
+    {
+      "panel": 4,
+      "filename": "ch03_p4.png",
+      "scene_description": "Digital whiteboard displays three circles—Logs, Metrics, Traces—converging on Root Cause Detection; team observes silently.",
+      "characters_in_frame": [
+        "Hector",
+        "Clara",
+        "Manu",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Hector": "Coverage is meaningless without intersection."
+      },
+      "narration": "Diagram glows amber at the center, representing the missing overlap."
+    },
+    {
+      "panel": 5,
+      "filename": "ch03_p5.png",
+      "scene_description": "Clara points at a nonsense metric name on a cluttered dashboard; Hector winces while Leonel shrugs.",
+      "characters_in_frame": [
+        "Hector",
+        "Clara",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Clara": "Whose chart thing is this?",
+        "Hector": "Metric hygiene is dental care for dashboards."
+      },
+      "narration": "PR diff sidebar shows rename to payments_request_latency_seconds with owner tag."
+    },
+    {
+      "panel": 6,
+      "filename": "ch03_p6.png",
+      "scene_description": "Team mob‑programs a telemetry refactor at shared terminals; code diff shows structured logs and reduced Prometheus labels.",
+      "characters_in_frame": [
+        "Hector",
+        "Clara",
+        "Manu",
+        "Wanjiru",
+        "Leonel"
+      ],
+      "speech_bubbles": {
+        "Manu": "But DEBUG helps somebody someday—",
+        "Hector": "Not until it buries the outage."
+      },
+      "narration": "Old disk‑space incident flashback hovers ghost‑like in the background."
+    },
+    {
+      "panel": 7,
+      "filename": "ch03_p7.png",
+      "scene_description": "New dashboard juxtaposes auth failure line with DB retries bars; Wanjiru clicks a bar to open a correlated trace waterfall.",
+      "characters_in_frame": [
+        "Hector",
+        "Wanjiru",
+        "Clara"
+      ],
+      "speech_bubbles": {
+        "Wanjiru": "It’s the same trace ID!",
+        "Hector": "When the system whispers, you can hear the pattern."
+      },
+      "narration": "Timeline diagram annotates synchronized spikes at precise timestamps."
+    },
+    {
+      "panel": 8,
+      "filename": "ch03_p8.png",
+      "scene_description": "Sunrise filters into the NOC; Hector delivers closing metaphor over stabilized dashboards as Leonel sips resigned coffee.",
+      "characters_in_frame": [
+        "Hector",
+        "Leonel",
+        "Manu",
+        "Wanjiru",
+        "Clara"
+      ],
+      "speech_bubbles": {
+        "Hector": "Logs are the mouth, metrics the mood, traces the memory.",
+        "Leonel": "So… less karaoke, more confession?"
+      },
+      "narration": "Composite observability view (log, metric, trace) framed on the main screen."
+    }
+  ]
+}
