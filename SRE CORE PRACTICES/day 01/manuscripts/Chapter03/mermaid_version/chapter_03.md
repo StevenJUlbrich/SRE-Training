@@ -121,28 +121,6 @@ The room dims; Hector flips a digital whiteboard. Three circles bloom in **Slate
 
 He overlays today’s incident: metrics flagged nothing, verbose logs hid context, traces weren’t wired. The intersection is blank—no overlap, no truth. The team stares, chastened.  
 
-:::diagram  
-```mermaid
-vennDiagram
-    title Logs, Metrics, Traces
-    A[Logs]
-    B[Metrics]
-    C[Traces]
-    A:::logs
-    B:::metrics
-    C:::traces
-    A & B:::noise Intersection
-    A & C:::noise Intersection
-    B & C:::noise Intersection
-    A & B & C:::signal Root Cause Detection
-    classDef logs fill:#1C1C1E,color:#EDEDED;
-    classDef metrics fill:#3E4A59,color:#EDEDED;
-    classDef traces fill:#3478F6,color:#EDEDED;
-    classDef signal fill:#C97E38,color:#1C1C1E;
-    classDef noise fill:#8B2E2E,color:#EDEDED;
-```  
-:::  
-
 ### Image Embed  
 ![Panel 4 – Hector Steps In](images/ch03_p4.png){width=600}
 
@@ -274,15 +252,19 @@ Hector nods, a rare half-smile flickering. “When your system finally *whispers
 
 :::diagram  
 ```mermaid
+    %%{init: { 'theme': 'base', 'themeVariables': { 'cScale0': '#00ff00', 'cScale1': '#ffff00', 'cScale2': '#ff9000','fontFamily': 'arial','fontSize':'18px' } } }%%
 timeline
     title Auth Failures vs DB Retries
-    02:27:55 : auth OK
-    02:28:05 : db retry #1
-    02:28:10 : auth fail burst
-    02:28:14 : db retry #2
-    02:28:15 : auth fail burst peaks
-    02:28:20 : ledger connection reset logged
-    02:28:23 : trace 8e12c3 errors out
+    section Success Events
+        02#58;27#58;55 : auth OK
+    section Warning Events
+        02#58;28#58;05 : db retry #1
+        02#58;28#58;14 : db retry #2
+    section Error Events
+        02#58;28#58;10 : auth fail burst
+        02#58;28#58;15 : auth fail burst peaks
+        02#58;28#58;20 : ledger connection reset logged
+        02#58;28#58;23 : trace 8e12c3 errors out
 ```  
 :::  
 
