@@ -1,12 +1,7 @@
-For an illustrated novella combining prose and graphic panels to teach SRE concepts with Ava as our guide, I'd recommend targeting approximately:
+For an illustrated novella combining prose and graphic panels to teach SRE concepts , I'd recommend targeting approximately:
 
-**Page Count:** 80-120 pages
 
-**Word Count:** 20,000-30,000 words
-
-This length would provide several advantages:
-
-1. **Digestible Sections:** The content could be divided into 10-12 chapters of 7-10 pages each, making it easy to consume in multiple sittings
+1. **Digestible Sections:** The content could be divided into 10-12 , making it easy to consume in multiple sittings
 
 2. **Sufficient Depth:** This length allows enough space to cover the beginner concepts thoroughly while providing meaningful introductions to intermediate and advanced topics
 
