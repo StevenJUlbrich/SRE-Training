@@ -1,17 +1,17 @@
 {
     "characters": {
-        "Hector": {
+        "Hector Alvarez": {
             "visual_tags": [
                 "49-year-old Mexican man",
                 "medium build, 5'10\" (178 cm)",
                 "weathered medium-brown complexion, angular face with defined jawline",
                 "short, neatly trimmed salt-and-pepper beard with clean jawline — always visible, never stubbled or long",
-                "facial hair consistency required: Hector never appears clean-shaven",
+                "facial hair consistency required: Hector Alvarez never appears clean-shaven",
                 "intense dark brown eyes with visible crow's feet, serious and analytical expression",
                 "dark henley shirt, dark technical jeans, red RHEL baseball cap",
-                "required: Hector always wears a baseball cap, never a beanie or other headwear",
-                "required: Hector's baseball cap is always red, never any other color",
-                "required: Hector's baseball cap is always a RHEL baseball cap, never any other brand",
+                "required: Hector Alvarez always wears a baseball cap, never a beanie or other headwear",
+                "required: Hector Alvarez's baseball cap is always red, never any other color",
+                "required: Hector Alvarez's baseball cap is always a RHEL baseball cap, never any other brand",
                 "stainless steel mechanical watch, ceramic black coffee mug",
                 "modern ops workspace with dark dashboards and telemetry monitors",
                 "mechanical keyboard with no RGB lighting, leather notebook on desk",
@@ -42,7 +42,7 @@
                 "uses a wheelchair"
             ]
         },
-        "Wanjiru": {
+        "Wanjiru Maina": {
             "visual_tags": [
                 "female",
                 "24 years old",
@@ -53,7 +53,7 @@
                 "stickers on laptop"
             ]
         },
-        "Emmanuel": {
+        "Emmanuel \"Manu\" Gitonga": {
             "visual_tags": [
                 "male",
                 "31 years old",
@@ -103,6 +103,38 @@
                 "slightly overweight",
                 "short neatly combed hair",
                 "tailored suits with colorful ties"
+            ]
+        },
+        "Ops Lead": {
+            "visual_tags": [
+                "non-binary",
+                "24 years old",
+                "5'8\"",
+                "athletic build",
+                "short hair dyed in bright colors",
+                "quirky t-shirts with tech humor"
+            ]
+        },
+        "Dev Lead": {
+            "visual_tags": [
+                "non-binary",
+                "32 years old",
+                "5'9\"",
+                "tall and lanky",
+                "medium-length black hair often in a bun",
+                "stylish glasses",
+                "business casual with a tech twist"
+            ]
+        },
+        "Net-Eng": {
+            "visual_tags": [
+                "38 years old",
+                "5'10\"",
+                "stocky build",
+                "round face with a friendly demeanor",
+                "short hair with a slight wave",
+                "casual tech attire with a hint of geeky flair",
+                "often seen with a tablet or laptop"
             ]
         },
         "Njeri": {
@@ -303,7 +335,7 @@
                 "frequently gesturing or carrying a laptop"
             ]
         },
-        "Juana": {
+        "Juana Torres": {
             "visual_tags": [
                 "female",
                 "34 years old",

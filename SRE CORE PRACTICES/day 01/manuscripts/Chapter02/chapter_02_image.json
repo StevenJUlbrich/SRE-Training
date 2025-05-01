@@ -1,0 +1,137 @@
+{
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "images/panel1_mystery_crash.png",
+            "scene_description": "Early-morning Nairobi HQ: muted-olive cubicles and charcoal dashboards glow as Manu squints at a flat CPU graph while a teller’s escalation ticket pops up on Slack.",
+            "characters_in_frame": [
+                "Emmanuel \"Manu\" Gitonga",
+                "Wanjiru Maina"
+            ],
+            "speech_bubbles": {
+                "Manu": "CPU’s fine. Memory’s fine.",
+                "Slack-popup": "Ticket #5219 – wire transfers failing!"
+            },
+            "narration": "A user scream versus a green dashboard—the first hint that the system’s lying."
+        },
+        {
+            "panel": 2,
+            "filename": "images/panel2_dashboard_deceit.png",
+            "scene_description": "Same control room, angle on a wall-mounted Geneos screen awash in slate-gray steadiness while Juana projects real-time 500-error counts in deep amber.",
+            "characters_in_frame": [
+                "Wanjiru Maina",
+                "Juana Torres",
+                "Emmanuel \"Manu\" Gitonga"
+            ],
+            "speech_bubbles": {
+                "Wanjiru": "Error-rate panel shows zero.",
+                "Juana": "Dashboard must be wired to the wrong metric."
+            },
+            "narration": "Resource graphs stay serene while customer transactions burn."
+        },
+        {
+            "panel": 3,
+            "filename": "images/panel3_missing_trace.png",
+            "scene_description": "Close-up on Juana’s terminal: log lines scroll in off-white monospace, each missing a trace_id; charcoal shadows frame her focused eyes behind the screen glow.",
+            "characters_in_frame": [
+                "Juana Torres",
+                "Emmanuel \"Manu\" Gitonga",
+                "Wanjiru Maina"
+            ],
+            "speech_bubbles": {
+                "Juana": "Classic. Someone clipped trace injection again."
+            },
+            "narration": "Without span context, every log is a dead letter."
+        },
+        {
+            "panel": 4,
+            "filename": "images/panel4_config_regression.png",
+            "scene_description": "Flashback inset: a junior dev unchecks ‘enableTracing’ in a pull-request diff; foreground shows current Git blame view in system blue highlighting the change.",
+            "characters_in_frame": [
+                "Juana Torres",
+                "Emmanuel \"Manu\" Gitonga",
+                "Wanjiru Maina"
+            ],
+            "speech_bubbles": {
+                "Manu": "We chased metrics for twenty minutes…",
+                "Juana": "The clue was sitting in Git history."
+            },
+            "narration": "A silent feature-flag turns observability off at the source."
+        },
+        {
+            "panel": 5,
+            "filename": "images/panel5_blame_game.png",
+            "scene_description": "War-room Slack projected large: multicolored chat bubbles overlap; ops, dev, and infra leads fling blame while Wanjiru watches, arms folded, under harsh overhead light.",
+            "characters_in_frame": [
+                "Wanjiru Maina",
+                "Ops Lead",
+                "Dev Lead",
+                "Net-Eng"
+            ],
+            "speech_bubbles": {
+                "Ops Lead": "DB timeouts—infra latency!",
+                "Dev Lead": "Your nodes starve the JVM!",
+                "Net-Eng": "Traceroute’s clean—check the app toggle."
+            },
+            "narration": "When nobody can see the bug, everybody becomes the bug."
+        },
+        {
+            "panel": 6,
+            "filename": "images/panel6_hector_steps_in.png",
+            "scene_description": "Lights dim; only a projector beam cuts the charcoal room. Hector, in a battered RHEL cap, slams a red-outlined outage timeline onto the table.",
+            "characters_in_frame": [
+                "Hector Alvarez",
+                "Juana Torres",
+                "Emmanuel \"Manu\" Gitonga",
+                "Wanjiru Maina"
+            ],
+            "speech_bubbles": {
+                "Hector": "You built a house without smoke detectors."
+            },
+            "narration": "Hector reframes the incident: instrumentation is part of the feature."
+        },
+        {
+            "panel": 7,
+            "filename": "images/panel7_corrected_view.png",
+            "scene_description": "Grafana-Tempo explodes in system-blue nodes; the ledger span glows rust-red at 1 290 ms. Juana overlays the once-empty trace map for stark contrast.",
+            "characters_in_frame": [
+                "Juana Torres",
+                "Emmanuel \"Manu\" Gitonga",
+                "Wanjiru Maina",
+                "Hector Alvarez"
+            ],
+            "speech_bubbles": {
+                "Manu": "That ledger hop is 7× slower!",
+                "Wanjiru": "And every failed wire dies right there."
+            },
+            "narration": "Restored spans reveal the true bottleneck in seconds."
+        },
+        {
+            "panel": 8,
+            "filename": "images/panel8_team_realization.png",
+            "scene_description": "CI dashboard with a bright-green ‘Telemetry Gate ✔’ badge; Manu and Wanjiru fist-bump while Hector watches, half-smile hidden behind a coffee mug.",
+            "characters_in_frame": [
+                "Emmanuel \"Manu\" Gitonga",
+                "Wanjiru Maina",
+                "Juana Torres",
+                "Hector Alvarez"
+            ],
+            "speech_bubbles": {
+                "Wanjiru": "Telemetry first, feature second."
+            },
+            "narration": "The team commits guard-rails ensuring spans can never go dark again."
+        },
+        {
+            "panel": 9,
+            "filename": "images/panel9_closing_shot.png",
+            "scene_description": "Dawn filters through office blinds; dashboards rest quiet. Hector, silhouetted in muted olive sunrise, locks a whiteboard and exits with purposeful stride.",
+            "characters_in_frame": [
+                "Hector Alvarez"
+            ],
+            "speech_bubbles": {
+                "Hector": "If the problem can’t be seen, the problem will be you."
+            },
+            "narration": "Chapter close: observability is the contract between truth and teams."
+        }
+    ]
+}
