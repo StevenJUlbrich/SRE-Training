@@ -1,0 +1,106 @@
+{
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch1_p1_pager-screams.png",
+            "scene_description": "Wide shot inside a dim Geneos NOC washed in charcoal-black and slate-gray; wall-sized dashboard throws sickly System-Blue/neon-green glow. Manu stands foreground, face tinted emerald; rain-striped window reveals Mexico-City skyline. Phone erupts Rust-Red PagerDuty banner while graphs stay calm. Medium-weight inks, sparse halftone, Rust-Red accents break the palette.",
+            "characters_in_frame": [
+                "Manu"
+            ],
+            "speech_bubbles": {
+                "Manu": "Maybe the alert's false… the graph is green."
+            },
+            "narration": "Critical alert hits even though every tile glows green."
+        },
+        {
+            "panel": 2,
+            "filename": "ch1_p2_dashboard-dissonance.png",
+            "scene_description": "Three-quarter angle on Wanjiru hunched at a floating workstation; flawless teal CPU graph dominates charcoal monitor. Hector leans over, battered RHEL cap shadowing eyes, finger stabbing an empty log terminal. Ambient slate-gray, System-Blue gridlines reflected in their glasses. Thin-to-medium ink lines, subtle halftone stress lines amplify tension.",
+            "characters_in_frame": [
+                "Wanjiru",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Wanjiru": "Metrics say fine, but transfers fail!",
+                "Hector": "Did you check logs, or are we just admiring the light show?"
+            },
+            "narration": "The ‘green wall’ hides real errors."
+        },
+        {
+            "panel": 3,
+            "filename": "ch1_p3_hector-venn.png",
+            "scene_description": "Low-angle close-up of Hector sketching a Venn on dark-slate board with Off-White marker—Logs, Metrics, Traces—center blank. Rust-Red Xs brand each circle. Manu, Wanjiru, Juana watch, half-lit by dashboard glow behind. Medium-weight line art, muted-olive shadows, tiny droplets of marker ink for grit.",
+            "characters_in_frame": [
+                "Hector",
+                "Manu",
+                "Wanjiru",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Hector": "CPU looks fine on a corpse, too."
+            },
+            "narration": "Why correlation, not color, reveals root cause."
+        },
+        {
+            "panel": 4,
+            "filename": "ch1_p4_three-pillars.png",
+            "scene_description": "Pulled-back frame: the same Venn now projected large; each pillar softly tinted desaturated System-Blue, overlaid with vivid Rust-Red X stickers. Behind it the neon-green Geneos wall flickers—a visual dissonance. Hector hoists his coffee thermos like evidence. Palette: charcoal, off-white text, rust highlights; clean inks, minimal cross-hatch.",
+            "characters_in_frame": [
+                "Hector",
+                "Manu",
+                "Wanjiru",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Hector": "Exhibit A: a green dashboard that let four million dollars evaporate."
+            },
+            "narration": "Dashboard metrics prove unreliable without context."
+        },
+        {
+            "panel": 5,
+            "filename": "ch1_p5_trace-synthesis.png",
+            "scene_description": "Split-screen composition: left, terminal on charcoal shows Fluent Bit config in Off-White monospace; right, JSON log with Deep-Amber trace_id highlight. Background Jaeger UI blurred, single span burning Rust-Red. Juana types mid-foreground; Manu & Wanjiru reflected in glass. Medium-precision inks guide eye from config → trace.",
+            "characters_in_frame": [
+                "Juana",
+                "Manu",
+                "Wanjiru",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Manu": "That one ID just told us who, where, and why.",
+                "Hector": "Your logs can finally testify in court."
+            },
+            "narration": "Trace synthesis stitches context across the stack."
+        },
+        {
+            "panel": 6,
+            "filename": "ch1_p6_reflection-doc.png",
+            "scene_description": "Conference-table scene; projector washes Off-White doc titled “We Were Blind Because…” onto slate-gray wall. Three olive bullet gaps and a blank ‘Fix by Friday’ column glow. Hector silhouette points marker; Rust-Red mug on table. Dawn-blue rim-light through blinds; clean lines, soft halftone shadows evoke quiet reckoning.",
+            "characters_in_frame": [
+                "Hector",
+                "Manu",
+                "Wanjiru",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Hector": "Shame is the chisel that shapes better systems."
+            },
+            "narration": "Team records observability debt and fixes."
+        },
+        {
+            "panel": 7,
+            "filename": "ch1_p7_lesson-locked.png",
+            "scene_description": "Wide sunrise panel; pale amber light spills across NOC desks. Geneos screen now overlays Rust-Red error spike tapering to slate. Paper diagram “Correlated = Confessed” taped with red gaffer to bezel. Hector sip-profile foreground; Wanjiru, Manu, Juana exhale in background. Palette warms: deep-indigo shadows, teal UI accents; crisp ink lines.",
+            "characters_in_frame": [
+                "Hector",
+                "Wanjiru",
+                "Manu",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Hector": "Site is healthy—and provably so."
+            },
+            "narration": "Correlated telemetry restores trust and closes the incident."
+        }
+    ]
+}
