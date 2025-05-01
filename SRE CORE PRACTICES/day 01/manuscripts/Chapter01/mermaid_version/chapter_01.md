@@ -141,14 +141,7 @@ Hector opens a whiteboard, sketching three intersecting circles labeled *Logs, M
 
 He underlines: *Observability = correlation.*
 
-:::diagram  
-```mermaid
-vennDiagram
-    title Three Pillars of Observability
-    A[Logs] B[Metrics] C[Traces]
-    A & B & C: True Root Cause Detection
-```  
-:::
+![venndiagram](images/chp1_venndiagram.png){width=600}
 
 ![Alt text: Hector’s hand-drawn Venn diagram looms behind a distraught team](images/ch1_p3_hector-venn.png){width=640}
 
