@@ -1,0 +1,122 @@
+{
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch4_p1_all_night_alarm.png",
+            "scene_description": "Interior, 02:47 AM. Daniel’s one-room Nairobi flat is lit only by the red (#8B2E2E) PagerDuty banner reflecting off a charcoal-black (#1C1C1E) wall. A mug steams beside a battered laptop; CPU chart hovers at 87 %. Slack overlay floats ghost-like above the phone, Hector’s avatar framed in off-white text bubbles, emphasizing midnight tension.",
+            "characters_in_frame": [
+                "Daniel",
+                "Juana",
+                "Hector (avatar)"
+            ],
+            "speech_bubbles": {
+                "Juana": "Let me guess. Geneos rule from 2009?",
+                "Daniel": "Legacy spreadsheet said CPU cost money. So we page.",
+                "Juana-2": "Users cost more. Where’s their metric in that alert?",
+                "Hector": "Daniel, stop admiring server sweat. If customers aren’t screaming, go back to bed."
+            },
+            "narration": "Static thresholds jolt Daniel awake while customers sleep fine."
+        },
+        {
+            "panel": 2,
+            "filename": "ch4_p2_false_positives.png",
+            "scene_description": "Early-morning Mexico-City NOC. Slate-gray (#3E4A59) dashboards tower over rows of dim monitors. Sunrise streaks muted olive (#586E4B) across a window. A wall-mounted bar chart—alert counts in Rust Red—dwarfs a flat green incident line. Clara circles the spike with a stylus; Daniel rubs his eyes under fluorescent glare.",
+            "characters_in_frame": [
+                "Clara",
+                "Juana",
+                "Daniel",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Clara": "Fifty-three alerts from one rule?",
+                "Juana": "Check the comment timestamp. Fourteen years ago.",
+                "Daniel": "Better safe than sorry?",
+                "Hector": "Geneos rules don’t fix modern risk. They just remind you how old your runbooks are."
+            },
+            "narration": "Alert fatigue turns critical signals into background noise."
+        },
+        {
+            "panel": 3,
+            "filename": "ch4_p3_symptoms_vs_signals.png",
+            "scene_description": "Split-screen projection: top half shows benign CPU spike graph shaded muted-olive; bottom half blazes red error-rate line and scrolling customer-complaint ticker. Aisha stands mid-frame, back-lit by dashboard glow, while Hector leans into the contrasting panels like a coach dissecting game film.",
+            "characters_in_frame": [
+                "Aisha",
+                "Clara",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Aisha": "We alerted on the lungs wheezing, not the heart stopping.",
+                "Clara": "So we page on pain, not panting?",
+                "Hector": "Correct. Monitor the scream, not the sweat."
+            },
+            "narration": "Team learns to pivot from machine signals to customer symptoms."
+        },
+        {
+            "panel": 4,
+            "filename": "ch4_p4_burn_rate.png",
+            "scene_description": "Conference room, dim except for a wall-scale line chart: gentle teal slope (Service A) versus cliff-steep Rust Red (Service B). Deep Amber timestamp ticks underline urgency. Hector, coffee mug raised, silhouettes against the graph; Clara’s tablet mirrors the same burn-rate figures in miniature.",
+            "characters_in_frame": [
+                "Hector",
+                "Clara",
+                "Juana",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Hector": "CPU didn’t move, but your trust balance is draining. That slope is your mortgage rate on failure.",
+                "Clara": "So the alert fires earlier for Service B?"
+            },
+            "narration": "Burn-rate visual reveals how fast reliability credit evaporates."
+        },
+        {
+            "panel": 5,
+            "filename": "ch4_p5_fixing_noise.png",
+            "scene_description": "Close-up of Clara’s stylus tapping a tablet split vertically: left column dull gray YAML (‘BEFORE’), right column bright System Blue (#3478F6) highlighting runbook links (‘AFTER’). Juana’s reflection appears in the glass; Hector’s thumbs-up hovers just out of focus at frame edge.",
+            "characters_in_frame": [
+                "Clara",
+                "Daniel",
+                "Juana",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Daniel": "One metric, zero context… until now.",
+                "Juana": "Pager to trace in a single click—finally.",
+                "Hector": "Alerts should arrive with directions, not riddles."
+            },
+            "narration": "Team rewrites static alert into SLO burn-rate rule with links."
+        },
+        {
+            "panel": 6,
+            "filename": "ch4_p6_test_drill.png",
+            "scene_description": "Dusk-lit war room. Teal-hued dashboards glow; a single red banner (‘DRILL’) pulses across center screen. Sofia’s finger hovers over a chaos-switch panel. Daniel, centered, follows a trace map branching in Deep Amber spans, while Hector watches with arms crossed, back-lit by dashboard halos.",
+            "characters_in_frame": [
+                "Sofia",
+                "Daniel",
+                "Clara",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Sofia": "Drill is live—error rate climbing.",
+                "Daniel": "Clicking trace… found the failing gRPC call.",
+                "Hector": "That, kids, is an alert that earns its decibels."
+            },
+            "narration": "Staged failure proves the new alert fires once and guides instant fix."
+        },
+        {
+            "panel": 7,
+            "filename": "ch4_p7_lesson_locked.png",
+            "scene_description": "Bright off-white conference area; morning light diffuses through glass. A large banner ‘Quality Beats Quantity’ hangs above. Team signs a parchment-style ‘Alert Litmus’ document atop a slate-gray table. Deep-olive plants soften the scene; Hector’s RHEL cap and silver watch gleam in foreground.",
+            "characters_in_frame": [
+                "Hector",
+                "Aisha",
+                "Daniel",
+                "Clara",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Hector": "No alert ships until it answers the litmus.",
+                "Aisha": "Here’s to quieter pagers—and happier customers."
+            },
+            "narration": "Chapter closes with team committing to outcome-focused alerting."
+        }
+    ]
+}
