@@ -3,11 +3,11 @@
         {
             "panel": 1,
             "filename": "ch4_p1_all_night_alarm.png",
-            "scene_description": "Interior, 02:47 AM. Daniel’s one-room Nairobi flat is lit only by the red (#8B2E2E) PagerDuty banner reflecting off a charcoal-black (#1C1C1E) wall. A mug steams beside a battered laptop; CPU chart hovers at 87 %. Slack overlay floats ghost-like above the phone, Hector’s avatar framed in off-white text bubbles, emphasizing midnight tension.",
+            "scene_description": "Interior, 02:47 AM. Daniel’s one-room Nairobi flat is lit only by the red (#8B2E2E) PagerDuty banner reflecting off a charcoal-black (#1C1C1E) wall. A mug steams beside a battered laptop; CPU chart hovers at 87 %. Slack overlay floats ghost-like above the phone, Hector’s avatar framed in off-white text bubble, emphasizing midnight tension.",
             "characters_in_frame": [
                 "Daniel",
                 "Juana",
-                "Hector (avatar)"
+                "Hector"
             ],
             "speech_bubbles": {
                 "Juana": "Let me guess. Geneos rule from 2009?",
@@ -104,7 +104,7 @@
         {
             "panel": 7,
             "filename": "ch4_p7_lesson_locked.png",
-            "scene_description": "Bright off-white conference area; morning light diffuses through glass. A large banner ‘Quality Beats Quantity’ hangs above. Team signs a parchment-style ‘Alert Litmus’ document atop a slate-gray table. Deep-olive plants soften the scene; Hector’s RHEL cap and silver watch gleam in foreground.",
+            "scene_description": "Bright off-white conference area. morning light diffuses through glass. A large banner ‘Quality Beats Quantity’ hangs above. Team signs a parchment-style ‘Alert Litmus’ document atop a slate-gray table. Deep-olive plants soften the scene; Hector’s RHEL cap and silver watch gleam in foreground.",
             "characters_in_frame": [
                 "Hector",
                 "Aisha",
@@ -113,8 +113,8 @@
                 "Juana"
             ],
             "speech_bubbles": {
-                "Hector": "No alert ships until it answers the litmus.",
-                "Aisha": "Here’s to quieter pagers—and happier customers."
+                "Hector": "No alert ships until it answers the litmus test.",
+                "Aisha": "Here’s to quieter pagers and happier customers."
             },
             "narration": "Chapter closes with team committing to outcome-focused alerting."
         }
