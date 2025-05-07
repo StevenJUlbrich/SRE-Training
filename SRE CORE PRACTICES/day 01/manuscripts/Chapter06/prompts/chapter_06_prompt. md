@@ -1,0 +1,89 @@
+## ✅ MASTER CHAPTER GENERATION PROMPT – CHAPTER 6
+
+You are generating Chapter 6 of an illustrated, instructional novella about observability and SRE systems in banking. This chapter focuses on metric design, cardinality, naming, and diagnostic clarity.
+
+---
+
+### 📁 Required References
+
+Use ONLY the following files:
+
+* `authoring_contract_hector_v2.yaml` – structure, prose style, widgets, pacing【304†source】
+* `chapter_6_outline.md` – primary concepts, panel beats, teaching sequences, artifact expectations【new】
+* `hector_alvarez_persona.md` + `hector_alvaz_quotes_catch-phrases.md` – tone, delivery, emotional rhythm【309†source】【311†source】
+* `junior_characters.md`, `sre_other_characters.md` – learner arc and cast constraints【307†source】【306†source】
+* `house_palette_line_style_hector.md` – visual clarity and diagrammatic tone【308†source】
+
+---
+
+### ❌ DO NOT:
+
+* Add panels beyond the 9 defined in the outline
+* Add quizzes, labs, or bonus scenes
+* Include characters not in the provided cast
+* Invent new metrics or tools not described in the outline
+
+---
+
+### 🧱 STRUCTURE:
+
+Start with:
+
+```markdown
+# Chapter 6 – “Metrics Aren’t Just Numbers — They’re Clues”
+```
+
+Then follow the section structure from `authoring_contract_hector_v2.yaml`. Each panel must:
+
+* Align to the beat-to-concept map in `chapter_6_outline.md`
+* Include a 1–2 paragraph scene and dialogue (minimum)
+* Integrate technical artifacts (CLI/code/logs/diagram) as defined
+* Include one properly styled widget per teaching sequence (reflection, debug, try this, etc.)
+
+Target **12,000–18,000 narrative words**, excluding CLI/code blocks.
+
+---
+
+### ✍️ STYLE & VOICE:
+
+* Hector’s tone: strategic, dry, direct
+* Let Sofia voice curiosity, Clara voice clarity, Wanjiru voice business impact
+* Keep scenes realistic, observability-focused, and concept-driven
+* Ensure diagrams and log excerpts reinforce each teaching beat
+
+---
+
+### 🧠 INTRODUCTION REQUIREMENTS
+
+The Chapter Overview must:
+
+* Be 5 paragraphs
+* Introduce the idea that metrics, when misunderstood, create false confidence
+* Explain what cardinality, naming, and diagnostic signal mean in a banking stack
+* Describe a real consequence of telemetry overload or useless visualizations
+* Preview how clarity comes from better metric structure—not more graphs
+
+---
+
+### 🧪 VALIDATION CHECKLIST (POST-GENERATION)
+
+Ensure:
+
+* Panel count = 9
+* One widget per teaching sequence is embedded
+* At least one diagram (Mermaid or image) supports metric hierarchy
+* Chapter overview is 5 paragraphs, banking-relevant, teaching-focused
+* Narrative length = 12,000–18,000 (excluding CLI/code)
+
+---
+
+### 🧪 BEGIN GENERATION:
+
+Do not invent structure or characters. Generate using the teaching arc in the outline.
+Start from:
+
+```markdown
+# Chapter 6 – “Metrics Aren’t Just Numbers — They’re Clues”
+```
+
+Continue through all 9 panels. End with a learner reflection and a Hector aphorism.

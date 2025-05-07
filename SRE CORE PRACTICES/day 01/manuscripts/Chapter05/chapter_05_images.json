@@ -1,0 +1,158 @@
+{
+    "panels": [
+        {
+            "panel": 1,
+            "filename": "ch5_panel1_dashboard_chaos.png",
+            "scene_description": "Interior: windowless Geneos war-room lit only by 24 wall-mounted dashboards washed in System Blue (#3478F6) and Ash Gray (#B0B4B9). The panels overflow with unlabeled gauges and line charts that pulse like city neon. Hector (charcoal-black RHEL cap, silver watch catching the glow) steps forward and yanks the HDMI cable—screens snap to charcoal black (#1C1C1E), leaving a single emergency light that casts long shadows and silhouettes Wanjiru’s tense posture. Steam curls from Hector’s off-white ceramic mug on a cluttered oak table covered in scribbled post-its. Atmosphere: sudden hush, visual focus on stark contrast between former blue glare and now dim red EXIT sign.",
+            "characters_in_frame": [
+                "Hector",
+                "Wanjiru"
+            ],
+            "speech_bubbles": {
+                "Wanjiru": "Which panel actually tells me why the ATMs aren't working?",
+                "Hector": "Better black than blind. Start with what you know."
+            },
+            "narration": "Dashboards stay green while customers decline—cognitive overload sets incident tone."
+        },
+        {
+            "panel": 2,
+            "filename": "ch5_panel2_blame_begins.png",
+            "scene_description": "Open-plan ops floor with rows of matte-black monitors. Daniel, sleeves rolled up, jabs a finger at a flat teal latency graph on his screen while Njeri swivels from her standing desk. Her display shows a terminal running an mtr trace in bright System Blue on charcoal background. Fluorescent ceiling lights reflect on polished concrete, muted olive (#586E4B) cable bundles snake under desks. A wall clock reads 05:07. Daniel’s coffee cup tips, spilling a thin line of Rust Red (#8B2E2E) across a notebook titled ‘MPLS Incidents’.",
+            "characters_in_frame": [
+                "Hector",
+                "Daniel",
+                "Njeri"
+            ],
+            "speech_bubbles": {
+                "Daniel": "Must be the network again.",
+                "Njeri": "Traceroute’s spotless—let’s not indict Layer 1 without evidence.",
+                "Hector": "Assumptions are the first thing to fail."
+            },
+            "narration": "Network blame emerges despite clean metrics; Hector challenges bias."
+        },
+        {
+            "panel": 3,
+            "filename": "ch5_panel3_five_sins.png",
+            "scene_description": "Mobile whiteboard parked in front of frosted-glass wall. In thick Rust Red marker, five icons are drawn: broken chain, ringing bell, corked bottle, hollow green circle, tangled cable. Each icon has bold charcoal labels in Hector’s angular handwriting. Learner laptops sit open on a slate-gray conference table; reflections of the red icons shimmer on screens. Overhead pendant lamps create soft pools of off-white (#EDEDED) light, highlighting dust motes and anxious expressions.",
+            "characters_in_frame": [
+                "Hector",
+                "Juana",
+                "Aisha",
+                "Wanjiru",
+                "Daniel"
+            ],
+            "speech_bubbles": {
+                "Hector": "Every outage I’ve survived traces back to these five mistakes."
+            },
+            "narration": "Hector reveals Five Observability Sins, tying them to current outage."
+        },
+        {
+            "panel": 4,
+            "filename": "ch5_panel4_ownerless_metric.png",
+            "scene_description": "Close-up of Clara at a curved ultrawide monitor displaying Grafana. A sizzling Rust Red spike dominates the graph; a tooltip hovers showing label ‘latency_avg_all’. The sidebar reveals empty ‘Owner’ field. Inset window shows GitHub PR diff with new YAML labels (owner_team: core-apps, runbook_url:) highlighted in vibrant System Blue. Background: server-rack LEDs blink muted olive, a subtle hum suggests constant production load.",
+            "characters_in_frame": [
+                "Clara",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Clara": "No owner, no page—no fix.",
+                "Hector": "An orphan metric is a street rumor."
+            },
+            "narration": "Metric lacks ownership, delaying response; CI policy created."
+        },
+        {
+            "panel": 5,
+            "filename": "ch5_panel5_orphaned_alerts.png",
+            "scene_description": "Juana’s smartphone foreground: dark-mode alert banner (‘atm_txn_5xx_rate > 2%’) pulses Rust Red. Behind, her laptop shows a 404 browser tab with broken-page icon. Daniel types furiously on a charcoal keyboard; his terminal lists curl checks returning 404 in red text. Sticky notes in System Blue circle a hastily drawn table: Alert | URL | Owner. Overhead, a digital wall clock flips to 06:12, underlining urgency.",
+            "characters_in_frame": [
+                "Juana",
+                "Daniel",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Juana": "Great, a riddle alert.",
+                "Hector": "An alert without action is a loud opinion."
+            },
+            "narration": "Orphaned alert slows triage; team mandates alert-runbook index."
+        },
+        {
+            "panel": 6,
+            "filename": "ch5_panel6_logs_lie.png",
+            "scene_description": "Dual-pane tmux spread across Manu’s 32-inch monitor. Left pane: rapid INFO lines in dull gray, right pane: single JSON log entry with fields color-coded (trace_id in System Blue, error in Rust Red). Jaeger UI floats semi-transparent above in augmented-reality style, showing waterfall bars in deep amber (#C97E38). Empty Red Bull can balanced on monitor base, fluorescent reflection highlighting Manu’s furrowed brow.",
+            "characters_in_frame": [
+                "Manu",
+                "Juana",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Manu": "The logs tell me nothing.",
+                "Hector": "A log without context is a liar."
+            },
+            "narration": "Contextless logs hide divide-by-zero; OpenTelemetry schema unearths root cause."
+        },
+        {
+            "panel": 7,
+            "filename": "ch5_panel7_uptime_success.png",
+            "scene_description": "Glass conference wall used as whiteboard: funnel diagram sketched in System Blue lines with Rust Red ‘X’ at Fee Calculation step. Aisha stands pointing with stylus; dual 27-inch monitors display side-by-side Grafana dashboards: left panel bright green 100 % uptime badge; right panel charcoal graph plunging to 0 % success rate. Morning light diffuses through high windows, illuminating muted olive potted plants on shelf.",
+            "characters_in_frame": [
+                "Aisha",
+                "Wanjiru",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Aisha": "Our definition of 'healthy' forgot the human.",
+                "Hector": "SLIs measure promises, not pulses."
+            },
+            "narration": "Team pivots from raw uptime to customer-success SLI."
+        },
+        {
+            "panel": 8,
+            "filename": "ch5_panel8_not_network.png",
+            "scene_description": "Large 4K monitor shows Slack thread with Daniel’s ‘MPLS spike?’ message. Overlay window: spreadsheet checklist with green check-marks beside ‘Packet Loss’ and ‘Interface Errors’. Njeri stands arms crossed, Ethernet cable draped theatrically over one hand. Background LED strip fades System Blue to indicate calm network health. Daniel, slightly slumped, holds coffee-stained notebook, eyes apologetic.",
+            "characters_in_frame": [
+                "Njeri",
+                "Daniel",
+                "Hector"
+            ],
+            "speech_bubbles": {
+                "Njeri": "Numbers clear the cables of all charges.",
+                "Hector": "Prove—don’t presume—before you pull cables."
+            },
+            "narration": "Network bias debunked; checklist institutionalized."
+        },
+        {
+            "panel": 9,
+            "filename": "ch5_panel9_outage_replay.png",
+            "scene_description": "Darkened room now theatre-style. Projector casts Mermaid sequence diagram onto 10-foot screen; red Lava-Glow (#8B2E2E) tags mark each sin beside arrows. Rows of ops chairs occupied by team—faces lit in System Blue highlights. Hector stands stage-right, laser pointer tracing delay minutes along a side timeline. Empty pizza boxes on back table imply long shift.",
+            "characters_in_frame": [
+                "Hector",
+                "Juana",
+                "Aisha",
+                "Clara",
+                "Daniel",
+                "Wanjiru",
+                "Njeri"
+            ],
+            "speech_bubbles": {
+                "Hector": "Memorize these numbers; auditors will ask."
+            },
+            "narration": "End-to-end replay quantifies cost of each sin."
+        },
+        {
+            "panel": 10,
+            "filename": "ch5_panel10_closing.png",
+            "scene_description": "Close-quarters shot of whiteboard now covered in System Blue sticky notes, each labeled with an action item and bold red checkmark. Hector presses final checkmark with Rust Red marker, cap brim low. Side screen shows first ATM dispensing $20—cash notes illuminated by off-white ATM light. Omar clutches notebook titled ‘Lava-Proof Checklist’. Room lighting shifts to warm amber, signaling resolution.",
+            "characters_in_frame": [
+                "Hector",
+                "Omar",
+                "Manu",
+                "Juana"
+            ],
+            "speech_bubbles": {
+                "Omar": "What if we miss a sin next time?",
+                "Hector": "Volcanoes don’t grant second warnings."
+            },
+            "narration": "Chapter closes with accountability and a lava-proof mandate."
+        }
+    ]
+}

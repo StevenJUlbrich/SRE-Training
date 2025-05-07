@@ -4,7 +4,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 
 ## PART I: OBSERVABILITY FOUNDATIONS – Beginner Tier
 
-### Chapter 1: **"The Site Is Down" Isn't a Root Cause**
+###  1: **"The Site Is Down" Isn't a Root Cause**
 - Introduce Hector and his anti-fluff attitude
 - Observability vs Monitoring (with Geneos context)
 - Why banking uptime requires understanding *why*, not just *what*
