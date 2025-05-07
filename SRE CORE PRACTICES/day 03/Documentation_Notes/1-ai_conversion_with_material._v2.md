@@ -62,6 +62,34 @@ I understand you're looking for a clear, structured sequence of prompts that you
    4. How to connect Logs and Logging Systems to banking business metrics and outcomes
    ```
 
+
+## Missing Prompts   (try to be flexable on the focus material level)
+
+6. **Focus Distribution Prompt**:
+   ```
+   For Step 6, let's ensure we maintain the proper balance in our content.
+
+   Please review our outline and confirm:
+   1. How we'll maintain the 85% focus on core SRE Logs and Logging Systems concepts
+   2. How we'll integrate the 15% supporting context and banking-specific applications
+   3. Where we need to adjust technical depth versus practical application
+   4. How to balance theoretical concepts with concrete examples
+   ```
+
+7. **Learning Progression Prompt**:
+   ```
+   For Step 7, let's organize our chapters to create a clear learning journey.
+
+   Please review our chapter sequence and:
+   1. Confirm the progression from fundamental to advanced concepts
+   2. Identify key dependencies between chapters
+   3. Suggest how to integrate key concepts with their technical implementation
+   4. Recommend any reorganization needed for optimal learning flow
+   ```
+
+Thank you for catching this oversight. The complete prompt sequence should include all 14 steps from the process to ensure we're following the methodology correctly and not missing any important planning elements.
+
+
 ## Scaffold Development Prompts
 
 6. **Pre-Scaffold Prompt for Chapter 1**:
@@ -73,7 +101,7 @@ I understand you're looking for a clear, structured sequence of prompts that you
    2. A vivid scene description for each panel showing the concept in action
    3. A teaching narrative for each panel explaining the core SRE concept
 
-   Remember to maintain our banking industry focus and ensure logical progression between panels.
+   Remember to maintain our banking and similar industry focus and ensure logical progression between panels.
    ```
 
 7. **Complete Scaffold Prompt for Chapter 1**:
@@ -84,7 +112,7 @@ I understand you're looking for a clear, structured sequence of prompts that you
    1. A common example of the problem in a banking context
    2. SRE best practices with evidence-based investigation approaches
    3. Banking business impact analysis
-   4. Implementation guidance with 5 specific actionable steps
+   4. Implementation guidance with specific actionable steps. Range from 3 to 8 steps.
 
    Maintain the 85/15 balance between core SRE content and supporting narrative.
    ```
