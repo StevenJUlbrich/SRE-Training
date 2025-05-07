@@ -1,0 +1,629 @@
+{
+    "characters": {
+        "Hector": {
+            "visual_tags": [
+                "49-year-old Mexican man",
+                "medium build, 5'10\" (178 cm)",
+                "weathered medium-brown complexion",
+                "angular face with defined jawline",
+                "short, neatly trimmed salt-and-pepper beard",
+                "eye color intense hazel with visible crow's feet",
+                "serious and analytical expression",
+                "dark henley shirt",
+                "dark technical jeans",
+                "red RHEL baseball cap"
+            ],
+            "required_constraints": [
+                "Never appears clean-shaven",
+                "Always wears a baseball cap, never a beanie or other headwear",
+                "Baseball cap is always red, never any other color",
+                "Baseball cap is always a RHEL baseball cap, never any other brand"
+            ],
+            "motion_rules": "Moves with intentional, focused energy; rarely gestures unless explaining failure.",
+            "voice_tone": "Serious, analytical, sarcastic when annoyed or unimpressed.",
+            "prop_loadout": [
+                "stainless steel mechanical watch",
+                "ceramic black coffee mug",
+                "mechanical keyboard with no RGB lighting",
+                "leather notebook on desk"
+            ],
+            "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated."
+        },
+        "Daniel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "5'2\"",
+                "lanky with a runner's physique",
+                "casual attire with tech company hoodies",
+                "short, curly hair with slight wave",
+                "light brown skin with a few freckles",
+                "eye color light blue"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": "Dry, nerdy, often ironic",
+            "prop_loadout": [
+                "circuit board tattoo on forearm",
+                "earbuds (frequently half-in)"
+            ],
+            "appearance": "An overcaffeinated SRE in constant tension between sarcasm and stress."
+        },
+        "Juana": {
+            "visual_tags": [
+                "female",
+                "34 years old",
+                "5'7\"",
+                "calm body language",
+                "subtle intensity",
+                "short cropped blond hair",
+                "eye color icy blue",
+                "minimal makeup",
+                "tech-ready attire"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Stands still with intentional presence; tends to hover behind dashboards.",
+            "voice_tone": "Calm, direct, always a slight smile",
+            "prop_loadout": [
+                "tablet",
+                "alert screen"
+            ],
+            "appearance": "Quietly competent and always ready to call out bad monitoring logic."
+        },
+        "Clara": {
+            "visual_tags": [
+                "female",
+                "37 years old",
+                "5'6\"",
+                "sharp posture",
+                "eye color dark brown",
+                "solid-color blouse",
+                "simple jewelry",
+                "structured business casual"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Decisive; gestures with stylus more than hands.",
+            "voice_tone": "Smart, clipped, task-focused",
+            "prop_loadout": [
+                "tablet",
+                "stylus"
+            ],
+            "appearance": "Always mid-analysis, rarely idle. Her default mode is 'just solved a thing.'"
+        },
+        "Aisha": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "5'8\"",
+                "tall with elegant presence",
+                "colorful hijab",
+                "eye color deep brown",
+                "business attire",
+                "rectangular glasses"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Moves with grace, confident in pauses.",
+            "voice_tone": "Measured, empathetic, strategic",
+            "prop_loadout": [
+                "color-coded notebook"
+            ],
+            "appearance": "Blends visual order and emotional clarity — the steady signal in alert noise."
+        },
+        "Claudia": {
+            "visual_tags": [
+                "female",
+                "34 years old",
+                "5'6\"",
+                "short, curly hair with slight wave",
+                "eye color green",
+                "energetic modern appearance",
+                "tech accessories",
+                "two-tone laptop case"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Animated; taps feet when impatient.",
+            "voice_tone": "Upbeat, slightly chaotic, deeply engaged",
+            "prop_loadout": [
+                "laptop case",
+                "wireless earbuds"
+            ],
+            "appearance": "An ops optimist with too many dashboards and not enough hands."
+        },
+        "Jamal": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\"",
+                "stocky build with broad shoulders",
+                "shaved head and friendly, open face",
+                "eye color light brown",
+                "distinctive scar above left eyebrow",
+                "casual tech attire with colorful sneakers",
+                "uses a wheelchair"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Wanjiru": {
+            "visual_tags": [
+                "female",
+                "24 years old",
+                "5'1\"",
+                "petite with youthful appearance",
+                "short natural hair dyed partially purple",
+                "eye color dark brown",
+                "smart business casual with colorful scarves",
+                "stickers on laptop"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Emmanuel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "5'7\"",
+                "solid build",
+                "closely-cropped dark hair and neat goatee",
+                "eye color dark brown",
+                "business casual with bank ID badge",
+                "motivational phone backgrounds"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Zuri": {
+            "visual_tags": [
+                "female",
+                "27 years old",
+                "5'6\"",
+                "athletic build",
+                "long braids with colorful beads",
+                "eye color dark brown",
+                "bright contemporary business casual"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Risk Officer Kamau": {
+            "visual_tags": [
+                "male",
+                "38 years old",
+                "5'8\"",
+                "stocky build",
+                "short neatly combed hair",
+                "tailored suit"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Finance Rep": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "slightly overweight",
+                "short neatly combed hair",
+                "tailored suits with colorful ties"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Ops Lead": {
+            "visual_tags": [
+                "non-binary",
+                "24 years old",
+                "5'8\"",
+                "athletic build",
+                "short hair dyed in bright colors",
+                "quirky t-shirts with tech humor"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Dev Lead": {
+            "visual_tags": [
+                "non-binary",
+                "32 years old",
+                "5'9\"",
+                "tall and lanky",
+                "medium-length black hair often in a bun",
+                "eye color deep blue",
+                "stylish glasses",
+                "business casual with a tech twist"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Net-Eng": {
+            "visual_tags": [
+                "38 years old",
+                "5'10\"",
+                "stocky build",
+                "round face with a friendly demeanor",
+                "short hair with a slight wave",
+                "eye color dark brown",
+                "casual tech attire with a hint of geeky flair",
+                "often seen with a tablet or laptop"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Njeri": {
+            "visual_tags": [
+                "non-binary",
+                "33 years old",
+                "5'6\"",
+                "undercut hairstyle often changing colors",
+                "eye color deep blue",
+                "fashion-forward attire",
+                "clear-framed glasses",
+                "expressive face"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Finance Analyst": {
+            "visual_tags": [
+                "female",
+                "30 years old",
+                "5'5\"",
+                "slim build",
+                "long straight hair tied in low ponytail",
+                "business casual with colorful pens"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Junior Dev": {
+            "visual_tags": [
+                "female",
+                "25 years old",
+                "5'2\"",
+                "short and petite",
+                "short curly hair with streaks of color",
+                "eye color light brown",
+                "oversized hoodies and jeans"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Raj": {
+            "visual_tags": [
+                "male",
+                "30 years old",
+                "5'7\"",
+                "short curly hair",
+                "eye color dark brown",
+                "average height",
+                "sport jackets and jeans",
+                "geeky watch designs"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Achieng": {
+            "visual_tags": [
+                "female",
+                "28 years old",
+                "5'6\"",
+                "solid build",
+                "medium length hair often styled in a bun",
+                "eye color dark brown",
+                "modern business suit"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Engineer": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'2\"",
+                "petite",
+                "simple, practical clothing",
+                "quirky pins on backpack"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Sifuna": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\"",
+                "strong build",
+                "precisely styled medium length dark brown hair",
+                "eye color hazel",
+                "crisp dress shirt"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Emily": {
+            "visual_tags": [
+                "female",
+                "28 years old",
+                "5'5\"",
+                "slim build",
+                "long straight hair black tied in low ponytail",
+                "eye color dark brown",
+                "business casual",
+                "Boston local style"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Developer": {
+            "visual_tags": [
+                "male",
+                "25 years old",
+                "5'6\"",
+                "petite",
+                "short curly hair",
+                "eye color green",
+                "hoodies and jeans"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Lucia": {
+            "visual_tags": [
+                "female",
+                "52 years old",
+                "5'5\"",
+                "polished but approachable",
+                "gray-streaked bun",
+                "eye color light blue",
+                "sharp navy business suit",
+                "carries leather folio"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Gabriel": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "5'10\"",
+                "thin-framed glasses",
+                "eye color light blue",
+                "serious posture",
+                "pinstripe suit",
+                "silver lapel pin"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Alejandro": {
+            "visual_tags": [
+                "male",
+                "39 years old",
+                "6'0\"",
+                "lean and analytical",
+                "short beard",
+                "eye color hazel",
+                "tactical watch"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Marisol": {
+            "visual_tags": [
+                "female",
+                "41 years old",
+                "5'7\"",
+                "graceful",
+                "eye color green",
+                "vibrant silk scarf",
+                "meticulous appearance"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Danny": {
+            "visual_tags": [
+                "male",
+                "26 years old",
+                "height 5'11\"",
+                "lanky with a runner's physique",
+                "casual attire with tech company poloshirts",
+                "short, blond hair with slight wave",
+                "eye color dark brown"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Omar": {
+            "visual_tags": [
+                "male",
+                "28 years old",
+                "5'10\"",
+                "extroverted, confident stance",
+                "medium brown skin, buzzed haircut",
+                "eye color brown",
+                "layered tech-casual outfit (button-up over tee)",
+                "often wearing earbuds or carrying a tablet"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Sofia": {
+            "visual_tags": [
+                "female",
+                "25 years old",
+                "5'4\"",
+                "slim build, soft movements",
+                "eye color icy blue",
+                "long dark hair tied back, practical clothing",
+                "usually with a notepad or pen",
+                "quiet demeanor, observant expression"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Leonel": {
+            "visual_tags": [
+                "male",
+                "30 years old",
+                "5'9\"",
+                "slightly disheveled, eager look",
+                "eye color hazel",
+                "t-shirt with metrics jokes",
+                "casual hoodie, glasses often askew",
+                "frequently gesturing or carrying a laptop"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Malik": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "6'2\"",
+                "lean build with a formal presence",
+                "closely-cropped salt-and-pepper hair",
+                "eye color deep blue",
+                "button-up shirt with rolled sleeves, analog watch",
+                "square jaw, distinguished yet approachable"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Ana": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'5\"",
+                "bold lipstick, oversized glasses",
+                "eye color dark brown",
+                "always with a phone or stylus-equipped tablet",
+                "styled tech-casual, fitted jacket or vest",
+                "fast-moving and expressive posture"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Manu": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "6'2\"",
+                "lean build with a formal presence",
+                "medium length hair salt-and-pepper hair",
+                "eye color deep blue",
+                "button-up shirt with rolled sleeves, digital watch",
+                "distinguished yet approachable"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        }
+    },
+    "global_style": {
+        "style": "Render a modern graphic narrative grounded in clarity, consequence, and production-grade realism. The visual style is clean and minimal—focused not on server rooms or racks, but on the humans diagnosing uptime in the systems that matter. Interfaces are dark-mode, dashboards muted, telemetry is visualized with intention. The world is not high drama; it’s quiet tension—laptops open, dashboards glowing, eyes scanning for truth beneath the noise. Characters appear in tech-forward settings: reliability war rooms, digital operations suites, observability-first product teams. No flashy gimmicks. Just smart people fighting complex systems—with data, with judgment, and with just enough sarcasm to survive.",
+        "line_style": "Clean, medium-weight lines. Semi-realistic proportions with expressive facial and body language.",
+        "palette": [
+            "Primary Colors: Charcoal Black (#1C1C1E), Rust Red (#8B2E2E), Slate Gray (#3E4A59). Supporting: Ash Gray (#B0B4B9), Muted Olive (#586E4B), Off-White (#EDEDED). Highlights: Deep Amber (#C97E38), System Blue (#3478F6)."
+        ],
+        "atmosphere": "Minimalist but rich: dark telemetry, clean light, digital, high-stakes. A modern workspace designed for clarity: dark dashboards, isolated lighting, filtered daylight (if visible), and wall-mounted screens with muted telemetry. The tone is quiet vigilance. Systems hum; tension builds in the questions no one wants to ask out loud.",
+        "speech_bubble_font": "clean comic lettering",
+        "text_padding_px": 5,
+        "bubble_avoid_edges": true,
+        "narration_box_position": "top",
+        "ensure_text_visible": true,
+        "eye_detail": "eyes must be fully illustrated with visible irises and reflection; never black dots or cartoon ovals. Eyes must reflect character emotion—focus, concern, skepticism, curiosity—as appropriate to the scene."
+    },
+    "layout_rules": {
+        "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
+        "speech_point": "point to the character speaking",
+        "narration_box_position": "top",
+        "text_padding_px": 5
+    }
+}

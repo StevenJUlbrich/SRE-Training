@@ -33,10 +33,6 @@ This document supplements the Hector-led SRE training materials by providing an 
 - Quiet, insightful, detail-oriented
 - Catchphrase: *"The network isn't the problem… but it might be part of the solution."*
 
----
-
-## 🔧 New Cast Additions
-
 ### 6. **Clara Delgado** – *The Skeptic QA*
 - 37, former test engineer, tablet-and-stylus always ready
 - Challenges every SRE claim unless backed by logs
@@ -64,18 +60,3 @@ This document supplements the Hector-led SRE training materials by providing an 
 - Trusts silence more than uptime reports
 - Catchphrase: *"If it hasn’t woken you at 3am, it’s not real."*
 
----
-
-## 🗂️ Usage Guidance
-- These characters can appear in voice widgets (e.g. `:::learner perspective`), dialogue, or reflection prompts.
-- Consider mapping each learner to key SRE topics:
-  - **Wanjiru** → Alert fatigue, deployment
-  - **Manu** → Monitoring vs. observability
-  - **Aisha** → SLAs vs. SLOs
-  - **Danny** → Automation, scripting
-  - **Njeri** → Networking, resilience
-  - **Clara** → Failure testing, dashboards
-  - **Omar** → Incident comms, cultural handoff
-  - **Sofia** → Metrics, tracing
-
-This document ensures tonal and character consistency across modules and chapters.
