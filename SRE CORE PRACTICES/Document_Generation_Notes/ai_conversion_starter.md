@@ -1,5 +1,3 @@
-To build an effective interaction for creating SRE training materials with an AI that has no history of our conversation, I recommend structuring the conversation like this:
-
 # Initial Approach for SRE Training Material Development
 
 ## Starting the Conversation
