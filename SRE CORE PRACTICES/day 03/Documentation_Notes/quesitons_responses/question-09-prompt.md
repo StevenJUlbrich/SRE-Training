@@ -70,7 +70,7 @@ let's expand our pre-scaffold into a complete scaffold following chapter_layout.
    1. A common example of the problem in a banking context
    2. SRE best practices with evidence-based investigation approaches
    3. Banking business impact analysis
-   4. Implementation guidance with specific actionable steps. Range from 3 to 8 steps.
+   4. Implementation guidance with specific actionable steps. Range from 3 to 5 steps.
 
    Maintain the 85/15 balance between core SRE content and supporting narrative.
 
