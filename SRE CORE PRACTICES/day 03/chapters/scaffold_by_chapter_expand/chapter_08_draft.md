@@ -1,5 +1,3 @@
-I'll expand the Chapter 8 scaffold into a complete scaffold following the chapter_layout.md template, adding the required elements for each panel while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 8: Log-Based Alerting - From Reactive to Proactive
 
 ## Panel 1: The Alerting Evolution - Beyond Threshold Monitoring

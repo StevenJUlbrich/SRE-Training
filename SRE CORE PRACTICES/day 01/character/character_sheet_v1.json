@@ -1,0 +1,148 @@
+{
+    "characters": {
+        "Malik": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "6'2\" lean build",
+                "salt-and-pepper hair, closely cropped",
+                "deep blue eyes",
+                "rolled-sleeve dress shirts",
+                "analog watch"
+            ],
+            "required_constraints": [
+                "Always carries a pen",
+                "Never checks dashboards during meetings—relies on printed reports"
+            ],
+            "motion_rules": "Moves with slow authority, gestures sparingly for emphasis.",
+            "voice_tone": "Measured, dry, occasionally deadpan",
+            "prop_loadout": [
+                "leather-bound legacy migration notebook",
+                "pen with engraved initials",
+                "printed SLO docs"
+            ],
+            "appearance": "Legacy-systems whisperer with a strategist’s calm and CTO scars to prove it.",
+            "catchphrase": "Let’s not confuse new with better."
+        },
+        "Zuri": {
+            "visual_tags": [
+                "female",
+                "27 years old",
+                "5'6\" athletic build",
+                "long braids with colorful beads",
+                "eye color dark brown",
+                "bright, modern business attire"
+            ],
+            "required_constraints": [
+                "Always brings AI automation pitch deck",
+                "Never uses the same tool stack twice in a row"
+            ],
+            "motion_rules": "Quick, confident steps; always half a thought ahead.",
+            "voice_tone": "Fast, energetic, jargon-heavy",
+            "prop_loadout": [
+                "smartwatch",
+                "wireless earbuds",
+                "laptop with dark-mode IDE"
+            ],
+            "appearance": "Modern DevOps lead who believes every manual process is an insult to evolution.",
+            "catchphrase": "Can we automate this, or are we just bored?"
+        },
+        "Jamal": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\" stocky build",
+                "uses wheelchair",
+                "shaved head",
+                "light brown eyes",
+                "friendly face",
+                "colorful sneakers"
+            ],
+            "required_constraints": [
+                "Always advocates for user empathy",
+                "Never dismisses frontline feedback"
+            ],
+            "motion_rules": "Leans forward when speaking, relaxed posture when listening.",
+            "voice_tone": "Warm, empathetic, persuasive",
+            "prop_loadout": [
+                "incident summary printouts",
+                "notepad with customer quotes",
+                "coffee with 2 sugars"
+            ],
+            "appearance": "Customer advocate who humanizes the metrics and translates alerts into emotions.",
+            "catchphrase": "What would the user say about this graph?"
+        },
+        "Lucia": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "5'5\" polished presence",
+                "gray-streaked bun",
+                "light blue eyes",
+                "navy business suit",
+                "leather folio"
+            ],
+            "required_constraints": [
+                "Only uses mechanical pencils",
+                "Always references risk matrix before SLO talks"
+            ],
+            "motion_rules": "Upright, no wasted movement; scans rooms with quiet authority.",
+            "voice_tone": "Crisp, principled, exacting",
+            "prop_loadout": [
+                "risk ledger",
+                "compliance checklists",
+                "mechanical pencil"
+            ],
+            "appearance": "Senior risk engineer with a courtroom vibe and zero tolerance for guesswork.",
+            "catchphrase": "Every system lies. The question is how loudly and when."
+        },
+        "Gabriel": {
+            "visual_tags": [
+                "male",
+                "41 years old",
+                "5'10\"",
+                "dark hoodie",
+                "noise-canceling headphones",
+                "eye color light blue",
+                "waveform tattoo on inner wrist"
+            ],
+            "required_constraints": [
+                "Only speaks when tracing",
+                "Never appears without some data visualization nearby"
+            ],
+            "motion_rules": "Hunched over dashboards; eyes dart between graphs.",
+            "voice_tone": "Quiet, focused, intensity just under the surface",
+            "prop_loadout": [
+                "headphones",
+                "dual-monitor setup",
+                "hand-drawn trace diagrams"
+            ],
+            "appearance": "Observability savant who sees systems in waveform and dreams in latency.",
+            "catchphrase": "Logs are for when you're scared. Metrics are for when you're wise."
+        },
+        "Ana": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'5\"",
+                "oversized glasses",
+                "dark lipstick",
+                "fast-moving",
+                "stylus-equipped tablet"
+            ],
+            "required_constraints": [
+                "Tablet always within arm’s reach",
+                "Never repeats the same phrasing twice"
+            ],
+            "motion_rules": "Rapid taps on tablet; walks and talks simultaneously.",
+            "voice_tone": "Fast, witty, process-driven",
+            "prop_loadout": [
+                "incident comms templates",
+                "reputation risk heatmap",
+                "speech-to-text assistant"
+            ],
+            "appearance": "Comms lead who controls chaos through structure and speaks fluent outage.",
+            "catchphrase": "You don’t just fix outages. You narrate them."
+        }
+    }
+}

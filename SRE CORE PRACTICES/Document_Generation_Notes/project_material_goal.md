@@ -1,4 +1,5 @@
 metric 101+ Curriculum: A Hybrid Graphic Novel Approach
+
 Project Vision
 The Metric Curriculum is an innovative educational initiative that transforms complex Site Reliability Engineering (SRE) concepts into an engaging hybrid graphic novel format. This curriculum aims to bridge the gap between traditional IT operations monitoring (like ITRS Geneos) and modern metric practices for production support professionals in the banking industry.
 Core Project Goals

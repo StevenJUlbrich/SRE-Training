@@ -1,5 +1,3 @@
-I'll expand the Chapter 7 scaffold into a complete scaffold following the chapter_layout.md template. For each panel, I'll add the four additional sections you requested while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 7: Troubleshooting with Logs - The SRE Methodology
 
 ## Panel 1: The Reactive Trap - Moving Beyond "Search and Hope"

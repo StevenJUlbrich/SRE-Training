@@ -1,5 +1,3 @@
-I'll expand the Chapter 11 scaffold into a complete layout following the template, adding all the requested elements while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 11: Logs and Error Budgets - Quantifying Reliability
 
 ## Panel 1: The Reliability Revolution - Moving Beyond Binary Uptime

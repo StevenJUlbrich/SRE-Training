@@ -1,5 +1,3 @@
-I'll expand the Chapter 5 scaffold into a complete scaffold following the chapter_layout.md structure. I'll add the requested elements for each panel while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 5: Centralized Logging Architecture - From Silos to Systems
 
 ## Panel 1: The Fragmentation Problem - When Logs Live Everywhere

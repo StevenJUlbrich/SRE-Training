@@ -1,0 +1,171 @@
+{
+    "characters": {
+        "Wanjiru": {
+            "visual_tags": [
+                "female",
+                "24 years old",
+                "5'1\" petite frame",
+                "short natural hair with purple dye streak",
+                "eye color dark brown",
+                "tech-smart casual with colorful scarves",
+                "stickers on laptop",
+                "freckles"
+            ],
+            "required_constraints": [
+                "Always asks follow-up questions",
+                "Laptop is stickered, never pristine",
+                "Prefers keyboard shortcuts, never uses trackpad"
+            ],
+            "motion_rules": "Animated hands when learning; leans forward when curious.",
+            "voice_tone": "Bright, inquisitive, occasionally overwhelmed",
+            "prop_loadout": [
+                "sticker-covered laptop",
+                "multicolor pens",
+                "annotated printouts of logs"
+            ],
+            "appearance": "Eager junior dev with the energy of someone who hasn't been broken by prod yet.",
+            "catchphrase": "But why does it work that way in production?"
+        },
+        "Emmanuel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "5'7\" solid build",
+                "closely cropped hair and trimmed goatee",
+                "light brown eyes",
+                "button-up shirts with rolled sleeves",
+                "slightly weary expression"
+            ],
+            "required_constraints": [
+                "Always wears ID badge",
+                "Carries pager even when off-call"
+            ],
+            "motion_rules": "Moves deliberately; slight limp from years of 3am troubleshooting marathons.",
+            "voice_tone": "Calm, resigned, quietly skeptical",
+            "prop_loadout": [
+                "bank ID badge",
+                "production runbook",
+                "cracked-screen Android phone"
+            ],
+            "appearance": "Mid-career support hero with one eye on the logs and one on his exit plan.",
+            "catchphrase": "There’s always a hidden dependency..."
+        },
+        "Aisha": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "5'8\" tall with elegant presence",
+                "colorful hijab",
+                "eye color deep brown",
+                "neat business attire",
+                "rectangular glasses"
+            ],
+            "required_constraints": [
+                "Hijab always coordinated with outfit",
+                "Takes paper notes, never types during calls"
+            ],
+            "motion_rules": "Composed, measured movements; often pauses before responding thoughtfully.",
+            "voice_tone": "Empathetic, strategic, and articulate",
+            "prop_loadout": [
+                "color-coded notebook",
+                "tablet with CRM dashboard"
+            ],
+            "appearance": "Strategic analyst who always brings the conversation back to human impact.",
+            "catchphrase": "How would we explain this to the customer?"
+        },
+        "Danny": {
+            "visual_tags": [
+                "male",
+                "26 years old",
+                "5'11\" lanky",
+                "tech startup hoodies",
+                "tattoo peeking out from sleeve",
+                "short blond hair, wavy",
+                "eye color dark brown"
+            ],
+            "required_constraints": [
+                "Never uses GUIs when a CLI exists",
+                "Always carries at least one device that’s jailbroken"
+            ],
+            "motion_rules": "Fast-twitch energy, always fidgeting with shell scripts or API clients.",
+            "voice_tone": "Casual, confident, automation-obsessed",
+            "prop_loadout": [
+                "custom mechanical keyboard",
+                "USB-to-everything adapter",
+                "forearm circuit tattoo"
+            ],
+            "appearance": "DevOps rebel who believes every incident is just one YAML file away from resolution.",
+            "catchphrase": "There’s definitely a script for that."
+        },
+        "Njeri": {
+            "visual_tags": [
+                "non-binary",
+                "33 years old",
+                "5'6\"",
+                "undercut hairstyle dyed teal",
+                "eye color deep blue",
+                "minimalist, functional clothing"
+            ],
+            "required_constraints": [
+                "Never speaks unless it's important",
+                "Always has cable tester or ping console open"
+            ],
+            "motion_rules": "Moves slowly, precisely; often pauses mid-sentence to think.",
+            "voice_tone": "Low, deliberate, deeply focused",
+            "prop_loadout": [
+                "network topology sketchpad",
+                "laptop with three terminal windows open"
+            ],
+            "appearance": "Quiet network engineer with a deep philosophical bent about infrastructure.",
+            "catchphrase": "The network isn't the problem… but it might be part of the solution."
+        },
+        "Clara": {
+            "visual_tags": [
+                "female",
+                "37 years old",
+                "5'6\"",
+                "sharp posture",
+                "eye color dark brown",
+                "blouse and tablet ensemble",
+                "simple silver necklace"
+            ],
+            "required_constraints": [
+                "Stylus always in hand",
+                "Never trusts undocumented metrics"
+            ],
+            "motion_rules": "Points with stylus instead of finger; stillness used as judgment.",
+            "voice_tone": "Precise, analytical, never rushed",
+            "prop_loadout": [
+                "stylus",
+                "QA test harness app",
+                "personal severity tracker"
+            ],
+            "appearance": "QA specialist with a stare that could make a flaky service apologize.",
+            "catchphrase": "Prove it in logs, or I’m not changing my mind."
+        },
+        "Omar": {
+            "visual_tags": [
+                "male",
+                "28 years old",
+                "5'10\" extroverted",
+                "buzzed haircut",
+                "eye color brown",
+                "tech-casual with layered shirts",
+                "smirking by default"
+            ],
+            "required_constraints": [
+                "Always repeats question for clarity",
+                "Carries tablet even to lunch"
+            ],
+            "motion_rules": "Leans in to speak, expressive hands when explaining",
+            "voice_tone": "Friendly, persuasive, occasionally cheeky",
+            "prop_loadout": [
+                "tablet",
+                "incident translation guide",
+                "sticky notes with analogies"
+            ],
+            "appearance": "Bridge-builder between devs and humans; good at PR, better at empathy.",
+            "catchphrase": "So… what would we tell users about this?"
+        }
+    }
+}

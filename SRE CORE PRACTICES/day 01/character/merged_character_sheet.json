@@ -1,0 +1,92 @@
+{
+    "characters": {
+        "Hector": {
+            "visual_tags": [
+                "49-year-old Mexican man",
+                "medium build, 5'10\" (178 cm)",
+                "weathered medium-brown complexion",
+                "angular face with defined jawline",
+                "short, neatly trimmed salt-and-pepper beard",
+                "eye color intense hazel with visible crow's feet",
+                "serious and analytical expression",
+                "dark henley shirt",
+                "dark technical jeans",
+                "red RHEL baseball cap"
+            ],
+            "required_constraints": [
+                "Never appears clean-shaven",
+                "Always wears a baseball cap, never a beanie or other headwear",
+                "Baseball cap is always red, never any other color",
+                "Baseball cap is always a RHEL baseball cap, never any other brand"
+            ],
+            "motion_rules": "Moves with intentional, focused energy; rarely gestures unless explaining failure.",
+            "voice_tone": "Serious, analytical, sarcastic when annoyed or unimpressed.",
+            "prop_loadout": [
+                "stainless steel mechanical watch",
+                "ceramic black coffee mug",
+                "mechanical keyboard with no RGB lighting",
+                "leather notebook on desk"
+            ],
+            "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated."
+        },
+        "OtherCharacter1": {
+            "visual_tags": [
+                "Example visual tag 1",
+                "Example visual tag 2"
+            ],
+            "required_constraints": [
+                "Example constraint 1",
+                "Example constraint 2"
+            ],
+            "motion_rules": "Example motion rules.",
+            "voice_tone": "Example voice tone.",
+            "prop_loadout": [
+                "Example prop 1",
+                "Example prop 2"
+            ],
+            "appearance": "Example appearance description."
+        },
+        "OtherCharacter2": {
+            "visual_tags": [
+                "Example visual tag A",
+                "Example visual tag B"
+            ],
+            "required_constraints": [
+                "Example constraint A",
+                "Example constraint B"
+            ],
+            "motion_rules": "Example motion rules for character 2.",
+            "voice_tone": "Example voice tone for character 2.",
+            "prop_loadout": [
+                "Example prop A",
+                "Example prop B"
+            ],
+            "appearance": "Example appearance description for character 2."
+        }
+    },
+    "global_style": {
+        "font": "Arial",
+        "color_scheme": {
+            "background": "#FFFFFF",
+            "text": "#000000"
+        },
+        "spacing": {
+            "line_height": "1.5",
+            "margin": "10px"
+        }
+    },
+    "layout_rules": {
+        "header": {
+            "alignment": "center",
+            "font_size": "20px"
+        },
+        "body": {
+            "alignment": "left",
+            "font_size": "14px"
+        },
+        "footer": {
+            "alignment": "right",
+            "font_size": "12px"
+        }
+    }
+}

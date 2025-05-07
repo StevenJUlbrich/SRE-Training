@@ -180,4 +180,12 @@ let's expand our pre-scaffold into a complete scaffold following chapter_layout.
 
 =========================================================	
 
-chapter_15_scaffold.md
+let's expand our pre-scaffold into a complete scaffold following chapter_layout.md.
+
+   For each panel in Chapter chapter_15_scaffold.md, please add:
+   1. A common example of the problem in a banking context
+   2. SRE best practices with evidence-based investigation approaches
+   3. Banking business impact analysis
+   4. Implementation guidance with specific actionable steps. Range from 3 to 8 steps.
+
+   Maintain the 85/15 balance between core SRE content and supporting narrative.
