@@ -71,6 +71,7 @@
    2. How we'll integrate the 20% supporting context and banking-specific applications
    3. Where we need to adjust technical depth versus practical application
    4. How to balance theoretical concepts with concrete examples
+   5. Incorporate the material found in Audience_Analysis-Traces _Distributed_Tracing_Training.md
    ```
 
 7. **Learning Progression Prompt**:
@@ -91,7 +92,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
 
 6. **Pre-Scaffold Prompt for Chapter 1**:
    ```
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 1: [CHAPTER TITLE].
+   Moving to Step 8, let's develop the pre-scaffold for Chapter 1: From Monitoring to Observability.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 5-7 key concepts in this chapter
