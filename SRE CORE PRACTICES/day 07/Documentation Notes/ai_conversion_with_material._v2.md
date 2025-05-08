@@ -17,7 +17,7 @@ I understand you're looking for a clear, structured sequence of prompts that you
 
 2. **Topic Definition Prompt**:
    ```
-   Based on the framework in the documents provided, I'd like to develop SRE training materials on Incident Response for banking professionals transitioning from production support roles. 
+   Based on the framework in the documents provided, I'd like to develop SRE training materials on 'Incident Response' for banking professionals transitioning from production support roles. 
 
    Let's begin with Step 1 and 2 from our process: defining the SRE topic and application domain. Please help me clearly define:
    1. The scope and boundaries of Incident Response
@@ -33,11 +33,11 @@ I understand you're looking for a clear, structured sequence of prompts that you
 
    Please create a chapter outline for our SRE training on Incident Response that:
    - Progresses from fundamental to advanced concepts
-   - Covers approximately 10-15 chapters
+   - Covers approximately 8 to 10 chapters
    - Follows a logical learning progression
    - Addresses the specific needs of production support professionals moving to SRE roles
 
-   For each chapter, provide a title and 1-2 sentence description of content focus.
+   For each chapter, provide a title and 2-4 sentence description of content focus.
    ```
 
 4. **Audience Analysis Prompt**:
@@ -113,7 +113,8 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
    1. Panel titles for 5-7 key concepts in this chapter
    2. A vivid scene description for each panel showing the concept in action
    3. A teaching narrative for each panel explaining the core SRE concept
-   4. Leverage the recommendations from question_07_Learning_Progression.md as necessary
+   4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
+   5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
 
    ======================================================
    ```
