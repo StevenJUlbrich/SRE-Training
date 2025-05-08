@@ -17,10 +17,10 @@ I understand you're looking for a clear, structured sequence of prompts that you
 
 2. **Topic Definition Prompt**:
    ```
-   Based on the framework in the documents provided, I'd like to develop SRE training materials on 'Incident Response' for banking professionals transitioning from production support roles. 
+   Based on the framework in the documents provided, I'd like to develop SRE training materials on 'Cost-Aware Observability' for banking professionals transitioning from production support roles. 
 
    Let's begin with Step 1 and 2 from our process: defining the SRE topic and application domain. Please help me clearly define:
-   1. The scope and boundaries of Incident Response
+   1. The scope and boundaries of 'Cost-Aware Observability'
    2. The core principles and concepts to be covered
    3. The specific banking/financial services context we'll apply it to
    ```
@@ -31,13 +31,13 @@ I understand you're looking for a clear, structured sequence of prompts that you
    ```
    Now let's move to Step 3: generating a high-level outline. 
 
-   Please create a chapter outline for our SRE training on Incident Response that:
+   Please create a chapter outline for our SRE training on 'Cost-Aware Observability' that:
    - Progresses from fundamental to advanced concepts
-   - Covers approximately 8 to 10 chapters
+   - Covers approximately 8-12 chapters
    - Follows a logical learning progression
    - Addresses the specific needs of production support professionals moving to SRE roles
 
-   For each chapter, provide a title and 2-4 sentence description of content focus.
+   For each chapter, provide a title and 2-3 sentence description of content focus.
    ```
 
 4. **Audience Analysis Prompt**:
@@ -45,7 +45,7 @@ I understand you're looking for a clear, structured sequence of prompts that you
    For Step 4, let's refine our outline based on audience analysis.
 
    Please identify:
-   1. Knowledge gaps that production support professionals likely have about Incident Response
+   1. Knowledge gaps that production support professionals likely have about 'Cost-Aware Observability'
    2. Existing skills they can leverage in learning this material
    3. Necessary mindset shifts from reactive to proactive operations
    4. How we should adjust terminology and examples for this audience
@@ -57,9 +57,9 @@ I understand you're looking for a clear, structured sequence of prompts that you
 
    Please suggest:
    1. Banking-specific examples for each chapter
-   2. Industry regulations or compliance factors relevant to Incident Response
+   2. Industry regulations or compliance factors relevant to 'Cost-Aware Observability'
    3. Banking systems where these concepts are particularly important
-   4. How to connect Incident Response to banking business metrics and outcomes
+   4. How to connect 'Cost-Aware Observability' to banking business metrics and outcomes
    5. How the content should be tailored to the concerns in question_04_response_Audience_Analysis.md
    ```
 
@@ -70,10 +70,12 @@ I understand you're looking for a clear, structured sequence of prompts that you
    For Step 6, let's ensure we maintain the proper balance in our content.
 
    Please review our outline and confirm:
-   1. How we'll maintain the 85% focus on core SRE Incident Response concepts
+   1. How we'll maintain the 85% focus on core SRE 'Cost-Aware Observability' concepts
    2. How we'll integrate the 15% supporting context and banking-specific applications
    3. Where we need to adjust technical depth versus practical application
    4. How to balance theoretical concepts with concrete examples based on question_05_response_Domain_Adaptation.md
+   5. Provide the response in Artifact
+
    ```
 
 7. **Learning Progression Prompt**:
@@ -86,7 +88,7 @@ I understand you're looking for a clear, structured sequence of prompts that you
    3. Suggest how to integrate key concepts with their technical implementation
    4. Recommend any reorganization needed for optimal learning flow
    5. Use the information from question_06_response_Focus_Distribution.md
-   6. Responsed in Artifact if possible
+   6. Respond in Artifact if possible.
    ```
 
 Thank you for catching this oversight. The complete prompt sequence should include all 14 steps from the process to ensure we're following the methodology correctly and not missing any important planning elements.
@@ -133,7 +135,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
    Maintain the 85/15 balance between core SRE content and supporting narrative.
    ```
 
-   ```ascii
+      ```ascii
    =================================================================\1\n
    Let's expand our pre-scaffold into a complete scaffold following chapter_layout.md.
 
@@ -147,7 +149,6 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
       Maintain the 85/15 balance between core SRE content and supporting narrative.
    Please provide the new document in Artifacts
    =================================================================\1\n\r\n
-   ```
 
 ## Content Generation Prompts
 

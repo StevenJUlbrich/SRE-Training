@@ -1,7 +1,7 @@
 # Chapter 1: From Monitoring to Observability - The SRE Mindset Shift
 
 ## Panel 1: The Green Wall Fallacy - When All Dashboards Lie
-**Scene Description**: A tired banking system engineer named Manu is sitting in a dimly lit operations center at 2:57 AM, surrounded by multiple monitors displaying green status indicators across all systems. His phone is buzzing with alerts about customer complaints, while a confused look crosses his face as he mutters, "But everything looks green..." On his screen, we see a chat message from the customer service team: "URGENT: Corporate customers reporting payment failures, but all our monitors show green!"
+**Scene Description**: A tired banking system engineer  is sitting in a dimly lit operations center at 2:57 AM, surrounded by multiple monitors displaying green status indicators across all systems. His phone is buzzing with alerts about customer complaints, while a confused look crosses his face as he mutters, "But everything looks green..." On his screen, we see a chat message from the customer service team: "URGENT: Corporate customers reporting payment failures, but all our monitors show green!"
 
 ### Teaching Narrative
 The transition from traditional monitoring to SRE thinking begins with understanding the limitations of traditional dashboards. The Green Wall Fallacy occurs when your monitoring dashboards show all systems as healthy (green) while real users experience failures. This disconnect happens because traditional monitoring focuses on system-level metrics (CPU, memory, disk space) rather than customer experience metrics. 
