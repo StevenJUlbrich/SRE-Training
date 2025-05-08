@@ -1,5 +1,61 @@
 # Chapter 4: Customer-Centric Measurement (RED Method)
 
+## Chapter Overview: Customer-Centric Measurement (RED Method)
+
+This chapter explores the RED Method—Rate, Errors, Duration—as a framework for understanding system performance from the customer’s point of view. Where USE focuses on system internals, RED reveals what the user experiences, mapping failures, slowness, and demand patterns directly to customer satisfaction and business outcomes. Set in banking scenarios, this chapter highlights how technical teams can stop obsessing over green dashboards and start measuring what actually matters: whether people can complete tasks, how often things go wrong, and how long it all takes. If your system looks healthy but your customers are angry, RED is how you figure out why.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Define the three pillars of the RED Method: Rate, Errors, and Duration.
+2. Map RED metrics to actual customer journeys across digital channels.
+3. Measure errors in terms of customer impact, not just technical status codes.
+4. Track journey-based duration metrics including perceived wait times.
+5. Use rate metrics to identify shifting customer demand and channel strain.
+6. Build RED dashboards that highlight drop-off points and customer pain.
+7. Translate RED metrics into business KPIs for executive alignment.
+
+## Key Takeaways
+
+* **Green Dashboards, Red Faces**: Just because your system is "up" doesn’t mean your customers are sticking around. RED metrics show you why they’re leaving.
+* **Not All Errors Are Equal**: A successful API call that leads to a failed experience is just a stealth failure in fancy clothes.
+* **Time Is Subjective, Especially When You're Waiting**: Measuring actual duration isn't enough—you have to capture how long it *feels* when nothing is happening.
+* **Traffic Doesn’t Lie, But It Does Confuse**: Rate spikes aren’t always a win—they can signal broken experiences, marketing mismatches, or desperate retries.
+* **Your Funnel Is Leaking**: RED metrics let you measure where, when, and how people abandon your carefully crafted customer journeys.
+* **Translation Is the Final Step**: If your metrics can't speak to your executives in dollars, churn, or growth—you’re not done yet.
+* **Business Outcomes Demand Business Metrics**: RED helps SREs and product owners finally speak the same language: customer impact.
+
+It’s time to stop admiring your uptime and start measuring your letdowns.
+
+
+## Chapter Overview: Resource-Focused Measurement (USE Method)
+
+This chapter introduces the USE Method—Utilization, Saturation, and Errors—as a systematic framework for resource-level telemetry in complex systems. Moving beyond traditional CPU and memory monitoring, it uncovers how banking systems can experience severe failures due to overlooked resource constraints. From disk I/O saturation to connection pool exhaustion, the chapter presents real-world examples and structured practices that show why comprehensive resource visibility is essential. The chapter equips teams to map, measure, and monitor every layer of infrastructure and application architecture to find root causes before they escalate into business-impacting failures.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Define the three pillars of the USE Method: Utilization, Saturation, and Errors.
+2. Apply USE methodology to all system resources—not just the obvious ones.
+3. Detect hidden constraints using saturation metrics and queue depths.
+4. Extend resource monitoring to application-level constraints (e.g., thread pools, connection limits).
+5. Construct a measurement matrix that covers system layers from hardware to middleware.
+6. Correlate constraints across components to identify cascading failures.
+7. Prioritize root-cause bottlenecks over symptomatic performance issues.
+
+## Key Takeaways
+
+* **Most Problems Aren’t Where You’re Looking**: Just because your CPU isn’t on fire doesn’t mean everything’s fine. Bottlenecks are shy.
+* **Saturation Is the Canary in the Coal Mine**: It tells you where queues are building, and where your next 3 AM page is coming from.
+* **If It Can Queue, It Can Kill You**: Disk writes, DB connections, message queues—all innocent-looking until they clog up and ruin your batch window.
+* **USE Your Head**: Stop staring at 40% CPU dashboards like they owe you answers. Build full resource inventories and measure everything.
+* **Applications Have Bottlenecks Too**: Thread pools and connection pools need as much love (and scrutiny) as your servers.
+* **The Matrix Is Real**: Build a measurement matrix so you can find blind spots before they find you.
+* **Fix the Cause, Not the Echo**: Don’t throw memory at a queueing problem or scale your way out of a lock—you’ll just look busy while doing nothing useful.
+
+
 ## Panel 1: Through the Customer's Eyes
 
 **Scene Description**: UX researchers and SREs collaborating on metrics dashboard showing customer journey through digital account opening process with RED metrics overlaid. Visual displays a multi-step customer journey map with Rate, Error, and Duration measurements at each step.

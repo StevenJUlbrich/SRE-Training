@@ -1,5 +1,34 @@
 # Chapter 11: Anomaly Detection and Alerting
 
+## Chapter Overview: Anomaly Detection and Alerting
+
+This chapter finally gets to the part where your alerts either ruin your weekend or save your bacon. Static thresholds? Yeah, those belong in the museum of ancient ops. We’re talking context-aware baselines, machine learning for fraud pattern recognition, alert correlation so your team stops chasing 30 ghosts, and notification routing that doesn’t wake up the intern for a disk warning. From detection to triage to feedback loops, this chapter builds the system that separates signal from noise—and does it before your customers tell you something’s broken.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Implement context-aware thresholds that adapt to normal business patterns.
+2. Use machine learning to detect multi-dimensional anomalies in complex systems.
+3. Correlate alerts into meaningful incidents that guide root cause analysis.
+4. Build signal processing pipelines that refine raw telemetry into useful alerts.
+5. Design alert taxonomies to prioritize responses based on impact.
+6. Route notifications intelligently to the right teams and channels.
+7. Create feedback loops that improve detection quality after each incident.
+
+## Key Takeaways
+
+* **Static Thresholds Are for Statues**: Business-aware, time-sensitive, context-rich thresholds only, please.
+* **If ML Isn’t Helping You Find Weirdness, It’s Just Buzzword Confetti**: Use it or lose to smarter fraudsters.
+* **Correlation Isn’t Optional—It’s How You Stop Fighting 17 Fires That Are Actually One**: Alert grouping is ops hygiene.
+* **Telemetry Without Processing Is Just Expensive Noise**: Build pipelines that *refine*, not just collect.
+* **An Alert Without Context Is Just a Ping in the Void**: Classify, prioritize, escalate like you mean it.
+* **Page the Right Person, Not the Whole Company**: Nobody wants a 3 a.m. SMS about low disk on staging.
+* **If You Don’t Review Alert Quality, You Deserve the Noise**: Every incident is a chance to make your system less annoying.
+
+Welcome to the fine art of yelling only when it matters—and saying something useful when you do.
+
+
 ## Panel 1: The Threshold Dilemma
 
 **Scene Description**: Operations team reviewing alert storm triggered by static thresholds during normal payment processing peak, showing contrast with context-aware thresholds. Visual displays dozens of false positive alerts flooding dashboards during expected business peak alongside a context-aware approach that recognizes normal patterns versus true anomalies.

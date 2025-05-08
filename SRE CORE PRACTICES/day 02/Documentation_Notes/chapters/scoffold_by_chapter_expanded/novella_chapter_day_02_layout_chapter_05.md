@@ -1,5 +1,34 @@
 # Chapter 5: Defining Service Quality (SLIs, SLOs, SLAs)
 
+ ## Chapter Overview: Defining Service Quality (SLIs, SLOs, SLAs)
+
+This chapter defines how we measure, target, and communicate service quality through Service Level Indicators (SLIs), Objectives (SLOs), and Agreements (SLAs). It walks through the journey from raw technical data to metrics that reflect real customer experience, and finally to targets that balance risk, cost, and competitiveness. Set in financial services, it illustrates how misplaced metrics and unrealistic targets create compliance nightmares, customer attrition, and executive confusion. From error budgets to dashboard translation, this chapter turns metric spaghetti into reliability linguine your execs can actually digest.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Define SLIs, SLOs, and SLAs and describe how they relate to one another.
+2. Design SLIs that reflect actual customer experience, not just system status.
+3. Set differentiated SLOs based on service criticality and business impact.
+4. Integrate technical SLOs with regulatory requirements and SLAs.
+5. Use error budgets to manage trade-offs between reliability and innovation.
+6. Build rigorous SLI evaluation frameworks to avoid vanity metrics.
+7. Translate technical metrics into business terms for executive decision-making.
+
+## Key Takeaways
+
+* **Not All Metrics Matter**: Just because it’s measurable doesn’t mean it’s meaningful. Pick SLIs that reflect what customers actually care about.
+* **Five Nines Is Not a Religion**: You’re not being holy, you’re being expensive. Calibrate SLOs based on business value, not superstition.
+* **Compliance Doesn’t Care About Your Dashboards**: If your metrics don’t align with regulatory definitions, you’re not compliant, you’re just optimistic.
+* **Error Budgets Aren’t Just Math, They’re Therapy**: They give your dev and ops teams a shared reality where trade-offs can happen without crying.
+* **Vanity Metrics Are the Worst Kind of Self-Care**: Pretty graphs that don’t reflect customer pain are just digital lies we tell ourselves.
+* **SLOs Are Not Set-and-Forget**: Review them regularly or risk clinging to outdated targets while the market laps you.
+* **If the Execs Don’t Get It, You Didn’t Finish**: Technical metrics must become business language. Otherwise, you’re not communicating—you’re flexing.
+
+Congratulations, you're now slightly less likely to ruin your SLAs with good intentions and bad telemetry.
+
+
 ## Panel 1: What Really Matters?
 
 **Scene Description**: Team brainstorming session defining critical service metrics for ATM network, transforming technical measurements into customer experience indicators. Visual shows whiteboard journey from raw metrics to meaningful indicators with team members evaluating different measurement options.

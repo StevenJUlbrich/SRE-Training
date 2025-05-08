@@ -1,5 +1,34 @@
 # Chapter 6: Metrics Collection and Storage
 
+## Chapter Overview: Metrics Collection and Storage
+
+This chapter dives into the gritty reality of collecting, storing, and managing metrics in complex, high-stakes environments like banking. Because what good are your precious SLIs and SLOs if they vanish into the void or drown in a flood of cardinality? Covering everything from instrumentation gaps and metric overloads to retention policies, sampling strategies, and security nightmares, this chapter teaches you how to make your metrics useful instead of just expensive. It’s not glamorous work, but it’s the plumbing of observability—and if you mess it up, everything floods.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Design and implement effective instrumentation across technical and business dimensions.
+2. Manage metric cardinality to prevent overload, cost spikes, and incident blindness.
+3. Choose appropriate storage solutions for time-series metrics, enabling historical analysis.
+4. Align metrics retention policies with compliance requirements and analytical needs.
+5. Integrate metrics across diverse platforms for end-to-end visibility.
+6. Apply sampling strategies that balance visibility and performance in high-volume environments.
+7. Implement security controls across the metrics pipeline to protect sensitive data.
+
+## Key Takeaways
+
+* **If You Don’t Instrument It, It Didn’t Happen**: Your debugging can't be data-driven if there’s no data to drive with.
+* **Drowning in Metrics Is Not the Same as Observability**: Cardinality chaos is real. Most of your metrics are digital hoarding.
+* **Storage Isn’t a Dumpster, It’s a Strategy**: Retention policies should be based on regulation and value, not vibes.
+* **No History, No Pattern, No Insight**: You can’t spot trends if your database has the memory of a goldfish.
+* **Silos Make Incidents Longer and Jobs Sadder**: Metrics integration isn’t optional in multi-platform systems. It's survival.
+* **Sample Smart, Not Dumb**: Sampling lets you see the forest *and* enough trees to dodge the weird ones.
+* **Security Isn’t Optional When You’re Logging Bank Data**: If your metrics leak account numbers, congratulations, you now have two incidents.
+
+Measure responsibly—or prepare for a very expensive lesson in regret.
+
+ 
 ## Panel 1: The Missing Piece
 
 **Scene Description**: Developer and SRE reviewing code for new payment service, discovering critical gaps in performance measurement instrumentation. The scene shows split screens with code before and after instrumentation, with the SRE pointing out key measurement points that were overlooked in the original implementation.

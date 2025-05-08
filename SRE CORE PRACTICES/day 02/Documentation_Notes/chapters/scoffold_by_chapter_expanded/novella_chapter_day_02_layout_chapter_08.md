@@ -1,5 +1,34 @@
 # Chapter 8: Metrics in CI/CD Pipeline
 
+## Chapter Overview: Metrics in CI/CD Pipeline
+
+This chapter slams the brakes on blind deployments by injecting metrics directly into the CI/CD pipeline. It’s not enough for your code to work—now it has to *perform*, *scale*, and *not wreck production*. You’ll learn how to trap regressions before they escape, launch changes with surgical precision, and convert chaos into resilience with metrics as your guide. Whether it’s a latency spike hiding in your PR or a canary deployment gasping under fraud detection load, this chapter turns your release pipeline into an observability gauntlet.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Integrate automated performance validation into CI/CD pipelines.
+2. Deploy with confidence using metric-driven canary strategies.
+3. Define and enforce performance budgets for system components.
+4. Use deployment guardrails to detect and recover from emerging problems.
+5. Apply performance profiling to pinpoint optimization opportunities.
+6. Conduct chaos experiments with real-time metrics to verify resilience.
+7. Create feedback loops that improve future release accuracy and testing.
+
+## Key Takeaways
+
+* **Functional Tests Are the Minimum, Not the Finish Line**: Your code may work, but does it *work well*?
+* **Metrics Are Your Canary’s Nervous System**: No metrics, no signal, no rollback until it’s too late.
+* **Performance Budgets Prevent Feature Bloat from Becoming Performance Rot**: Set limits before launch, or suffer the lag.
+* **Guardrails Aren’t Just for Kids**: They’re how grown-up systems survive adult-sized traffic.
+* **Profiling Isn’t Premature Optimization—It’s Preventive Clarity**: Know your limits before your users hit them.
+* **Controlled Failure Is the Only Real Proof of Resilience**: If you haven’t tested your failover, you don’t have one.
+* **Postmortems Without Feedback Are Just Digital Eulogies**: Compare, learn, improve—or keep making the same mistakes in more expensive ways.
+
+CI/CD without metrics is just "Ctrl+Ship and Pray." Let’s be better than that.
+
+
 ## Panel 1: The Prevented Outage
 
 **Scene Description**: Release pipeline automatically blocking code change that passed functional tests but caused latency regression in payment processing. Visual shows deployment pipeline with automated performance gates highlighting the regression with historical comparison data, while developers analyze the performance impact before it reaches production.

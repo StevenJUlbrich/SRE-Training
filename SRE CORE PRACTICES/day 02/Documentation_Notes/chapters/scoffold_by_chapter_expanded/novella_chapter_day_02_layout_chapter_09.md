@@ -1,5 +1,35 @@
 # Chapter 9: Banking-Specific Metrics
 
+## Chapter Overview: Banking-Specific Metrics
+
+This chapter is where SRE metrics put on a pinstripe suit and start talking about fraud, liquidity, and audit trails. Generic monitoring won’t cut it here—this is where your dashboards need to understand finance as well as they understand uptime. From the Black Friday card bottlenecks to the compliance officer’s favorite kind of bedtime reading (audit trail completeness), this chapter tackles the high-stakes, heavily regulated, and money-moving specifics of banking observability.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Design throughput and bottleneck metrics for financial transaction flows.
+2. Balance fraud detection with customer experience using precision/recall analysis.
+3. Implement predictive metrics for batch processing completion.
+4. Build audit trail completeness, integrity, and access metrics.
+5. Visualize and manage regulatory reporting readiness.
+6. Monitor money movement for settlement, liquidity, and exception handling.
+7. Integrate security metrics across protection, vulnerability, and operations.
+
+## Key Takeaways
+
+* **Banking Metrics Speak in Dollars and Deadlines**: Missing a batch job isn’t just an ops failure—it’s a regulatory offense.
+* **Throughput Isn’t Just Volume—It’s a Funnel**: Every blocked card transaction during a shopping peak is a lost sale *and* a customer complaint.
+* **False Positives Are Expensive in Emotion, Not Just Revenue**: Declining legit transactions is how you lose trust you can’t buy back.
+* **If You Can’t Predict It, You Can’t Prevent It**: Batch job slippage should never be a surprise.
+* **Audit Metrics Are the Evidence You Didn’t Screw Up**: No logs? No integrity? No defense.
+* **Compliance Isn’t a Checkbox—It’s a Calendar**: Late filings make regulators grumpy. Nobody wants a grumpy regulator.
+* **Liquidity Visibility Is Table Stakes**: You can’t manage what you can’t see settling.
+* **Security Posture Metrics Shouldn’t Be a Secret**: Measure protection, patching, and privilege—or pray quietly and hope nothing happens.
+
+Welcome to metrics with money, law, and customer trust on the line. Don’t blink.
+
+
 ## Panel 1: The Black Friday Survival
 
 **Scene Description**: Team preparing for peak shopping season with transaction funnel metrics dashboard showing previous year's bottlenecks in credit card authorization flow. Visual displays hourly transaction volume patterns with capacity thresholds and historical bottleneck points highlighted, while team members discuss mitigation strategies for anticipated peaks.

@@ -1,5 +1,34 @@
 # Chapter 10: Infrastructure-Specific Metrics 
 
+## Chapter Overview: Infrastructure-Specific Metrics
+
+This chapter descends into the infrastructure underworld, where metrics don’t just show performance—they expose lies. Whether it’s a hypervisor silently throttling your trades, Kubernetes playing musical chairs with your pods, or your cloud bill gaslighting you with unused resources, this chapter shines a light into the murky depths of compute, container, and cloud operations. It teaches you to monitor where the magic *actually* happens, which is often three layers below where you’re looking.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Monitor virtualization layers to detect hypervisor-level performance constraints.
+2. Analyze container metrics across pods, nodes, and clusters in orchestrated environments.
+3. Connect cloud performance and cost metrics to drive financial efficiency.
+4. Track multi-region replication and failover readiness with resilience metrics.
+5. Trace hybrid transaction flows across on-prem and cloud systems.
+6. Apply Infrastructure as Code metrics for deployment reliability and consistency.
+7. Forecast capacity needs with trend-based and business-aligned planning.
+
+## Key Takeaways
+
+* **Your App Isn't Slow. Your Hypervisor Is Passive-Aggressive**: Look below the VM for the real problem.
+* **Kubernetes Isn’t Confusing—Until You Have to Debug It**: Understand the layers or get used to guessing.
+* **Cloud Metrics Should Come With Price Tags**: Performance without cost context is just expensive trivia.
+* **Failover That Works Only on Paper Doesn’t Work**: Replication status ≠ recovery readiness.
+* **Your Monitoring Ends Where the Outage Begins**: Hybrid systems demand end-to-end tracing or enjoy prolonged misery.
+* **If Your IaC Pipeline Doesn’t Track Drift, You’re Building Chaos**: Deployment success is more than “it ran.”
+* **Capacity Planning Isn’t a Crystal Ball—It’s a Graph**: Trends, not vibes.
+
+Infrastructure isn’t just pipes and servers. It’s where your SLAs go to die when you stop watching.
+
+
 ## Panel 1: The Virtual Mystery
 
 **Scene Description**: Infrastructure team investigating trading platform performance inconsistencies using hypervisor-level metrics revealing resource contention patterns. Visual displays multi-layer monitoring showing application metrics appearing normal while hypervisor-level metrics reveal CPU scheduling delays and resource contention invisible to guest operating systems.

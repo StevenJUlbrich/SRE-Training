@@ -1,5 +1,34 @@
 # Chapter 12: Metrics-Driven Incident Response
 
+## Chapter Overview: Metrics-Driven Incident Response
+
+This chapter throws you into the fire—and then hands you a dashboard. Welcome to incident response where metrics don’t just explain what happened—they steer the ship. You’ll learn how to measure impact before your CTO yells, coordinate recovery while everyone’s watching, and triage like your budget depends on it (because it does). If your playbook starts with guesswork and ends in a Slack apology, this is your upgrade. It’s about response built on data, recovery guided by metrics, and learning that sticks.
+
+## Learning Objectives
+
+By the end of this chapter, readers will be able to:
+
+1. Assess customer, financial, and regulatory impact with real-time metrics.
+2. Build incident-specific dashboards for coordinated response and recovery.
+3. Translate technical impact into business-language metrics for communication.
+4. Prioritize response with a triage framework based on quantifiable consequences.
+5. Monitor recovery progress across services, backlogs, and dependencies.
+6. Run effective, blameless retrospectives using metric-driven lifecycle analysis.
+7. Create and use pattern libraries for rapid diagnosis of recurring failures.
+
+## Key Takeaways
+
+* **“It’s broken” isn’t helpful—tell me *how bad* and *for whom***: Impact metrics are the difference between firefighting and incident leadership.
+* **Operational dashboards ≠ War room dashboards**: Incident metrics need their own spotlight.
+* **Speak Finance, not Infrastructure**: Metrics have to talk to execs, customers, and regulators, not just engineers.
+* **Priority Isn’t a Gut Feeling**: Use impact + recovery complexity, not alert volume.
+* **Fixing isn’t Finishing**: Measure your way through recovery, not just to it.
+* **Retrospectives That Don’t Learn Are Just Story Time**: Metrics turn “blameless” into “better.”
+* **Don’t Just Investigate—Recognize**: Pattern libraries make response smarter, faster, and more consistent.
+
+Every incident is a test of your systems, your process, and your nerves. Metrics give you a fighting chance at passing all three.
+
+
 ## Panel 1: How Bad Is It?
 
 **Scene Description**: Incident commander assessing payment gateway outage impact using service dependency map with affected components and customer impact metrics. Visual shows comprehensive impact dashboard with transaction volume affected, customer segments impacted, financial exposure estimates, and critical path visualization highlighting dependencies of the disrupted payment service.

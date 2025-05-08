@@ -1,5 +1,42 @@
 # Chapter 1: Fundamentals of SRE Metrics
 
+## **Chapter Overview: "Fundamentals of SRE Metrics"**
+
+This chapter introduces the critical shift from traditional infrastructure-focused monitoring to outcome-based metrics that actually reflect customer experience and business impact. Set within high-stakes financial services environments, it explores how superficial metrics give a false sense of system health, leading to outages, failed transactions, and regulatory violations. Using scenes, examples, and practical frameworks, it maps out the evolution from basic monitoring to deep observability, ties in the regulatory dimension, and emphasizes instrumentation at the code level to ensure visibility is embedded, not bolted on.
+
+---
+
+## **Learning Objectives**
+
+By the end of this chapter, readers should be able to:
+
+1. Differentiate between traditional infrastructure metrics and customer-outcome-driven SRE metrics.
+2. Recognize the risks of relying solely on superficial or component-level monitoring.
+3. Describe the metrics evolution pathway: Monitoring → Metrics → Observability.
+4. Design metrics that quantify business impact, customer experience, and regulatory compliance.
+5. Implement Service Level Indicators (SLIs) and Objectives (SLOs) based on service criticality.
+6. Build integrated metrics frameworks that align engineering, business, and compliance requirements.
+7. Apply effective instrumentation strategies directly into service codebases.
+
+---
+
+## **Key Takeaways**
+
+* **Healthy Servers ≠ Happy Customers**: Metrics must measure success from the user's perspective—not just CPU stats that make ops teams feel warm and fuzzy.
+* **You Need to See the Crash Before You Hear It**: True observability lets you *predict* and *understand* failures, not just acknowledge they happened.
+* **Bad Metrics Cost Money**: Especially in banking, where a bad dashboard can cost millions and make regulators pop out of the bushes.
+* **SLIs & SLOs Aren’t Decorations**: They're business-aligned performance contracts, not fantasy football stats for nerds.
+* **Metrics Aren’t Magic Dust**: If you don’t instrument your code with the right hooks, all your dashboards are just pretty lies.
+* **Compliance Metrics Exist to Haunt You**: So integrate them before they integrate you... into an audit report.
+* **Everything Ties to the Customer**: If a metric doesn't inform customer experience or business decision-making, it’s just noise.
+
+---
+
+Need me to slap this into a snazzy slide deck next? Or are we just playing the never-ending “Documentation Olympics”?
+
+
+
+
 ## Panel 1: Why Traditional Metrics Fail
 
 **Scene Description**: Senior SRE explaining to new team member as they both look at two monitors - left showing a dashboard with all green indicators, right showing customer support queue full of transaction failure reports.
