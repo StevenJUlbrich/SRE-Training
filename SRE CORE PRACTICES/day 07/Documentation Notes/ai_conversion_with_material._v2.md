@@ -110,7 +110,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
    Moving to Step 8, let's develop the pre-scaffold for Chapter $1: $2.
 
    Following the chapter_scaffold_layout.md format, please create:
-   1. Panel titles for 5-7 key concepts in this chapter
+   1. Panel titles for 4-7 key concepts in this chapter
    2. A vivid scene description for each panel showing the concept in action
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
