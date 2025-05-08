@@ -120,6 +120,30 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
    Maintain the 85/15 balance between core SRE content and supporting narrative.
    ```
 
+10. **Chapter Template Finalization Prompt**:
+   ```
+   For Step 10, let's finalize our chapter template structure.
+
+   Please review the chapter_layout.md template and confirm:
+   1. Any adjustments needed for our specific [TOPIC]
+   2. How we'll maintain consistency in formatting across all chapters
+   3. The visual presentation standards for each section
+   4. How each component (scene description, teaching narrative, etc.) will serve our learning objectives
+   ```
+
+11. **Chapter Scaffold Application Prompt**:
+   ```
+   For Step 11, let's apply our template to the full Chapter 1 scaffold.
+
+   Please review our complete scaffold and ensure:
+   1. All required sections from the template are properly populated
+   2. The narrative tone remains consistent throughout
+   3. Technical depth is appropriate for our audience
+   4. Banking-specific examples are integrated appropriately in each section
+   5. The overall flow follows a logical progression
+   ```
+
+
 ## Content Generation Prompts
 
 8. **Panel Content Generation Prompt**:
