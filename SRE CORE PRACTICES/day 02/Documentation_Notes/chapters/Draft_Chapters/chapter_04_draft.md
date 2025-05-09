@@ -4,6 +4,8 @@
 
 This chapter explores the RED Method—Rate, Errors, Duration—as a framework for understanding system performance from the customer’s point of view. Where USE focuses on system internals, RED reveals what the user experiences, mapping failures, slowness, and demand patterns directly to customer satisfaction and business outcomes. Set in banking scenarios, this chapter highlights how technical teams can stop obsessing over green dashboards and start measuring what actually matters: whether people can complete tasks, how often things go wrong, and how long it all takes. If your system looks healthy but your customers are angry, RED is how you figure out why.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Build RED dashboards that highlight drop-off points and customer pain.
 7. Translate RED metrics into business KPIs for executive alignment.
 
+---
+
 ## Key Takeaways
 
 - **Green Dashboards, Red Faces**: Just because your system is "up" doesn’t mean your customers are sticking around. RED metrics show you why they’re leaving.
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Translation Is the Final Step**: If your metrics can't speak to your executives in dollars, churn, or growth—you’re not done yet.
 - **Business Outcomes Demand Business Metrics**: RED helps SREs and product owners finally speak the same language: customer impact.
 
-It’s time to stop admiring your uptime and start measuring your letdowns.
+>It’s time to stop admiring your uptime and start measuring your letdowns.
+
+---
 
 ## Chapter Overview: Resource-Focused Measurement (USE Method)
 
@@ -53,6 +59,8 @@ By the end of this chapter, readers will be able to:
 - **Applications Have Bottlenecks Too**: Thread pools and connection pools need as much love (and scrutiny) as your servers.
 - **The Matrix Is Real**: Build a measurement matrix so you can find blind spots before they find you.
 - **Fix the Cause, Not the Echo**: Don’t throw memory at a queueing problem or scale your way out of a lock—you’ll just look busy while doing nothing useful.
+
+---
 
 ## Panel 1: Through the Customer's Eyes
 

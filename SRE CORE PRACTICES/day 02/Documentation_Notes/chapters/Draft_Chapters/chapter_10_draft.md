@@ -4,6 +4,8 @@
 
 This chapter descends into the infrastructure underworld, where metrics don’t just show performance—they expose lies. Whether it’s a hypervisor silently throttling your trades, Kubernetes playing musical chairs with your pods, or your cloud bill gaslighting you with unused resources, this chapter shines a light into the murky depths of compute, container, and cloud operations. It teaches you to monitor where the magic *actually* happens, which is often three layers below where you’re looking.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Apply Infrastructure as Code metrics for deployment reliability and consistency.
 7. Forecast capacity needs with trend-based and business-aligned planning.
 
+---
+
 ## Key Takeaways
 
 - **Your App Isn't Slow. Your Hypervisor Is Passive-Aggressive**: Look below the VM for the real problem.
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **If Your IaC Pipeline Doesn’t Track Drift, You’re Building Chaos**: Deployment success is more than “it ran.”
 - **Capacity Planning Isn’t a Crystal Ball—It’s a Graph**: Trends, not vibes.
 
-Infrastructure isn’t just pipes and servers. It’s where your SLAs go to die when you stop watching.
+>Infrastructure isn’t just pipes and servers. It’s where your SLAs go to die when you stop watching.
+
+---
 
 ## Panel 1: The Virtual Mystery
 

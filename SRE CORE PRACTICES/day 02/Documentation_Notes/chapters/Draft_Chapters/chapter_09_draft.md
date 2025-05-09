@@ -4,6 +4,8 @@
 
 This chapter is where SRE metrics put on a pinstripe suit and start talking about fraud, liquidity, and audit trails. Generic monitoring won’t cut it here—this is where your dashboards need to understand finance as well as they understand uptime. From the Black Friday card bottlenecks to the compliance officer’s favorite kind of bedtime reading (audit trail completeness), this chapter tackles the high-stakes, heavily regulated, and money-moving specifics of banking observability.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Monitor money movement for settlement, liquidity, and exception handling.
 7. Integrate security metrics across protection, vulnerability, and operations.
 
+---
+
 ## Key Takeaways
 
 - **Banking Metrics Speak in Dollars and Deadlines**: Missing a batch job isn’t just an ops failure—it’s a regulatory offense.
@@ -27,7 +31,9 @@ By the end of this chapter, readers will be able to:
 - **Liquidity Visibility Is Table Stakes**: You can’t manage what you can’t see settling.
 - **Security Posture Metrics Shouldn’t Be a Secret**: Measure protection, patching, and privilege—or pray quietly and hope nothing happens.
 
-Welcome to metrics with money, law, and customer trust on the line. Don’t blink.
+>Welcome to metrics with money, law, and customer trust on the line. Don’t blink.
+
+---
 
 ## Panel 1: The Black Friday Survival
 

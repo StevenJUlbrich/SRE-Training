@@ -4,6 +4,8 @@
 
 This chapter introduces the USE Method—Utilization, Saturation, and Errors—as a systematic framework for resource-level telemetry in complex systems. Moving beyond traditional CPU and memory monitoring, it uncovers how banking systems can experience severe failures due to overlooked resource constraints. From disk I/O saturation to connection pool exhaustion, the chapter presents real-world examples and structured practices that show why comprehensive resource visibility is essential. The chapter equips teams to map, measure, and monitor every layer of infrastructure and application architecture to find root causes before they escalate into business-impacting failures.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Correlate constraints across components to identify cascading failures.
 7. Prioritize root-cause bottlenecks over symptomatic performance issues.
 
+---
+
 ## Key Takeaways
 
 - **Most Problems Aren’t Where You’re Looking**: Just because your CPU isn’t on fire doesn’t mean everything’s fine. Bottlenecks are shy.
@@ -25,6 +29,8 @@ By the end of this chapter, readers will be able to:
 - **Applications Have Bottlenecks Too**: Thread pools and connection pools need as much love (and scrutiny) as your servers.
 - **The Matrix Is Real**: Build a measurement matrix so you can find blind spots before they find you.
 - **Fix the Cause, Not the Echo**: Don’t throw memory at a queueing problem or scale your way out of a lock—you’ll just look busy while doing nothing useful.
+
+---
 
 ## Panel 1: The Resource Detective
 

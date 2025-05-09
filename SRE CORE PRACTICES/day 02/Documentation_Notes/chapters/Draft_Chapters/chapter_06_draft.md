@@ -4,6 +4,8 @@
 
 This chapter dives into the gritty reality of collecting, storing, and managing metrics in complex, high-stakes environments like banking. Because what good are your precious SLIs and SLOs if they vanish into the void or drown in a flood of cardinality? Covering everything from instrumentation gaps and metric overloads to retention policies, sampling strategies, and security nightmares, this chapter teaches you how to make your metrics useful instead of just expensive. It’s not glamorous work, but it’s the plumbing of observability—and if you mess it up, everything floods.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Apply sampling strategies that balance visibility and performance in high-volume environments.
 7. Implement security controls across the metrics pipeline to protect sensitive data.
 
+---
+
 ## Key Takeaways
 
 - **If You Don’t Instrument It, It Didn’t Happen**: Your debugging can't be data-driven if there’s no data to drive with.
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Sample Smart, Not Dumb**: Sampling lets you see the forest *and* enough trees to dodge the weird ones.
 - **Security Isn’t Optional When You’re Logging Bank Data**: If your metrics leak account numbers, congratulations, you now have two incidents.
 
-Measure responsibly—or prepare for a very expensive lesson in regret.
+>Measure responsibly—or prepare for a very expensive lesson in regret.
+
+---
 
 ## Panel 1: The Missing Piece
 

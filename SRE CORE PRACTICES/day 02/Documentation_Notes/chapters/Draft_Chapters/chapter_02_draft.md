@@ -4,6 +4,8 @@
 
 This chapter delves into the core telemetry model used in Site Reliability Engineering (SRE): the Four Golden Signals—Latency, Traffic, Errors, and Saturation. With a heavy focus on financial systems, it showcases how each signal can betray a healthy-looking system while hiding catastrophic user failures. The narrative brings out subtle but impactful realities: averages that mislead, errors that aren’t technically errors, and success metrics that quietly fail the business. Through common industry examples, practical implementation tips, and SRE best practices, the chapter urges practitioners to discard vanity metrics and adopt granular, distributional, and business-impact-focused telemetry.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,9 @@ By the end of this chapter, readers will be able to:
 6. Monitor saturation using leading indicators to prevent silent degradation.
 7. Implement dashboards and instrumentation strategies that enable predictive, not reactive, reliability.
 
+---
+
+
 ## Key Takeaways
 
 - **Averages Lie, Percentiles Tell the Truth**: If your latency looks good on average, congratulations—you’re helping no one. The pain lives in the tail.
@@ -25,6 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Business Metrics Trump Technical Vanity**: Who cares if your response time is 200ms if the customer never gets their money?
 - **Four Signals, Infinite Blind Spots**: Until you treat them as connected, you’ll keep missing what matters.
 - **Early Warnings Save Millions**: Waiting for red alerts is amateur hour. Build in the whispers before the scream.
+
+---
+
 
 ## Panel 1: The Deceptive Average (Latency)
 

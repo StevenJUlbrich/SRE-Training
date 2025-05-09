@@ -26,7 +26,7 @@ By the end of this chapter, readers will be able to:
 - **Compliance Isn’t a Blank Check for Overengineering**: Spend wisely, not religiously.
 - **Innovation Needs a Speed Limit**: Error budgets tell you when to go fast—and when to fix your brakes.
 
-This isn’t about spending less. It’s about spending *right*. Let’s give your reliability budget the math it deserves.
+>This isn’t about spending less. It’s about spending *right*. Let’s give your reliability budget the math it deserves.
 
 ## Panel 1: The Million Dollar Minute
 

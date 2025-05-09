@@ -4,6 +4,8 @@
 
 This chapter is the boss level. Welcome to the observability endgame: tracing full transaction journeys, predicting failures before they happen, injecting chaos on purpose, and automating your way out of repetitive incident hell. You’ll go beyond reactive monitoring and into proactive, predictive, and preventative reliability engineering. From machine learning models that spot trouble early to global metrics strategies for hybrid infrastructure, this is where SRE stops being tactical and starts being strategic.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Continuously verify system functionality through automated testing.
 7. Develop specialized metrics for blockchain, AI, and open banking systems.
 
+---
+
 ## Key Takeaways
 
 - **Tracing Reveals What Dashboards Hide**: Bottlenecks don’t respect service boundaries—neither should your visibility.
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Quarterly Testing Is Not Enough**: Trust requires constant verification, not annual rituals.
 - **New Tech, New Metrics**: Blockchain, AI, and APIs have different rules. Measure accordingly.
 
-You’ve built the dashboards. You’ve tuned the alerts. Now it’s time to take the system—and your team—to the next level.
+>You’ve built the dashboards. You’ve tuned the alerts. Now it’s time to take the system—and your team—to the next level.
+
+---
 
 ## Panel 1: The Transaction Journey
 

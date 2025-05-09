@@ -4,6 +4,8 @@
 
 This chapter is the part where the metrics leave the dashboard and crash headfirst into your org chart. Metrics don’t work unless people use them—and people won’t use them unless they trust them, understand them, and see them make their lives better. This is where process, politics, and practicality meet precision. You’ll learn how to build adoption muscle across teams, avoid metrics theater, and scale observability culture from a few nerds with Grafana to an entire company that actually cares.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Drive executive alignment with business-focused dashboards.
 7. Foster a metrics-driven culture that values outcomes over dashboards.
 
+---
+
 ## Key Takeaways
 
 - **Metrics That Aren’t Used Are Just Pretty Lies**: Adoption matters more than fidelity.
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Executive Buy-in Requires Translation, Not Telemetry**: Show them value, not verbosity.
 - **Culture Eats Telemetry for Breakfast**: You’re building behavior, not just exporting time series.
 
-This is the part where metrics get social. Handle with care—and a plan.
+>This is the part where metrics get social. Handle with care—and a plan.
+
+---
 
 ## Panel 1: The Metric Detective
 

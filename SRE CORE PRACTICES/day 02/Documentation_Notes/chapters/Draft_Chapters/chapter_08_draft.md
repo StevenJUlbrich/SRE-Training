@@ -4,6 +4,8 @@
 
 This chapter slams the brakes on blind deployments by injecting metrics directly into the CI/CD pipeline. It’s not enough for your code to work—now it has to *perform*, *scale*, and *not wreck production*. You’ll learn how to trap regressions before they escape, launch changes with surgical precision, and convert chaos into resilience with metrics as your guide. Whether it’s a latency spike hiding in your PR or a canary deployment gasping under fraud detection load, this chapter turns your release pipeline into an observability gauntlet.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Conduct chaos experiments with real-time metrics to verify resilience.
 7. Create feedback loops that improve future release accuracy and testing.
 
+---
+
 ## Key Takeaways
 
 - **Functional Tests Are the Minimum, Not the Finish Line**: Your code may work, but does it *work well*?
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Controlled Failure Is the Only Real Proof of Resilience**: If you haven’t tested your failover, you don’t have one.
 - **Postmortems Without Feedback Are Just Digital Eulogies**: Compare, learn, improve—or keep making the same mistakes in more expensive ways.
 
-CI/CD without metrics is just "Ctrl+Ship and Pray." Let’s be better than that.
+>CI/CD without metrics is just "Ctrl+Ship and Pray." Let’s be better than that.
+
+---
 
 ## Panel 1: The Prevented Outage
 

@@ -4,6 +4,7 @@
 
 This chapter finally gets to the part where your alerts either ruin your weekend or save your bacon. Static thresholds? Yeah, those belong in the museum of ancient ops. We’re talking context-aware baselines, machine learning for fraud pattern recognition, alert correlation so your team stops chasing 30 ghosts, and notification routing that doesn’t wake up the intern for a disk warning. From detection to triage to feedback loops, this chapter builds the system that separates signal from noise—and does it before your customers tell you something’s broken.
 
+---
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +17,7 @@ By the end of this chapter, readers will be able to:
 6. Route notifications intelligently to the right teams and channels.
 7. Create feedback loops that improve detection quality after each incident.
 
+---
 ## Key Takeaways
 
 - **Static Thresholds Are for Statues**: Business-aware, time-sensitive, context-rich thresholds only, please.
@@ -26,8 +28,9 @@ By the end of this chapter, readers will be able to:
 - **Page the Right Person, Not the Whole Company**: Nobody wants a 3 a.m. SMS about low disk on staging.
 - **If You Don’t Review Alert Quality, You Deserve the Noise**: Every incident is a chance to make your system less annoying.
 
-Welcome to the fine art of yelling only when it matters—and saying something useful when you do.
+> Welcome to the fine art of yelling only when it matters—and saying something useful when you do.
 
+---
 ## Panel 1: The Threshold Dilemma
 
 **Scene Description**: Operations team reviewing alert storm triggered by static thresholds during normal payment processing peak, showing contrast with context-aware thresholds. Visual displays dozens of false positive alerts flooding dashboards during expected business peak alongside a context-aware approach that recognizes normal patterns versus true anomalies.

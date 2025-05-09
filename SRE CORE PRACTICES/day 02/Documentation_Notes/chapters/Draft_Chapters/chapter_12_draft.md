@@ -4,6 +4,8 @@
 
 This chapter throws you into the fire—and then hands you a dashboard. Welcome to incident response where metrics don’t just explain what happened—they steer the ship. You’ll learn how to measure impact before your CTO yells, coordinate recovery while everyone’s watching, and triage like your budget depends on it (because it does). If your playbook starts with guesswork and ends in a Slack apology, this is your upgrade. It’s about response built on data, recovery guided by metrics, and learning that sticks.
 
+---
+
 ## Learning Objectives
 
 By the end of this chapter, readers will be able to:
@@ -16,6 +18,8 @@ By the end of this chapter, readers will be able to:
 6. Run effective, blameless retrospectives using metric-driven lifecycle analysis.
 7. Create and use pattern libraries for rapid diagnosis of recurring failures.
 
+---
+
 ## Key Takeaways
 
 - **“It’s broken” isn’t helpful—tell me *how bad* and *for whom***: Impact metrics are the difference between firefighting and incident leadership.
@@ -26,7 +30,9 @@ By the end of this chapter, readers will be able to:
 - **Retrospectives That Don’t Learn Are Just Story Time**: Metrics turn “blameless” into “better.”
 - **Don’t Just Investigate—Recognize**: Pattern libraries make response smarter, faster, and more consistent.
 
-Every incident is a test of your systems, your process, and your nerves. Metrics give you a fighting chance at passing all three.
+>Every incident is a test of your systems, your process, and your nerves. Metrics give you a fighting chance at passing all three.
+
+---
 
 ## Panel 1: How Bad Is It?
 
