@@ -1,6 +1,5 @@
 # Chapter 1: The Cost-Aware Mindset
 
-
 ## Chapter Overview
 
 Welcome to the world where your dashboards bleed money and your “insight” is a haystack of expensive noise. This chapter is a slap in the face to the old-school “collect everything” monitoring religion. In the era of pay-by-the-byte observability, ignorance isn’t bliss—it’s a million-dollar invoice. We’ll show you how unchecked metrics, cargo-cult logging, and high-cardinality stupidity can turn your SRE dreams into a CFO’s nightmare. This isn’t just about technical debt; it’s about financial ruin dressed up as “visibility.” If you want to avoid being the punchline at your next quarterly review, read on and learn to wield observability like a weapon, not a money pit.
