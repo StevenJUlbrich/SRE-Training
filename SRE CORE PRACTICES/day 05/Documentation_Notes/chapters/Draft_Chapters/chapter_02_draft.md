@@ -1,5 +1,3 @@
-I'll expand Chapter 2: The Signal Landscape - Understanding Data Sources by adding the additional sections for each panel, following the chapter_layout.md format while maintaining the 85/15 balance between core SRE concepts and banking narrative.
-
 # Chapter 2: The Signal Landscape - Understanding Data Sources
 
 ## Chapter Overview
