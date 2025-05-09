@@ -32,11 +32,6 @@ By the end of this chapter, readers should be able to:
 
 ---
 
-Need me to slap this into a snazzy slide deck next? Or are we just playing the never-ending “Documentation Olympics”?
-
-
-
-
 ## Panel 1: Why Traditional Metrics Fail
 
 **Scene Description**: Senior SRE explaining to new team member as they both look at two monitors - left showing a dashboard with all green indicators, right showing customer support queue full of transaction failure reports.
