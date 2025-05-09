@@ -1,6 +1,5 @@
 # Chapter 7: Remediation Strategies and Decision-Making
 
-
 ## Chapter Overview
 
 Welcome to the SRE equivalent of “choose your own adventure,” except every choice triggers millions in losses, regulatory headaches, or a social media meltdown. This chapter rips the band-aid off the fantasy that incident remediation is just about “fixing stuff fast.” In the world of banking, every remediation decision is a high-stakes bet—pick wrong, and you’re not just toast, you’re the burnt offering at the next board meeting. We’ll drag you through the war rooms, rollbacks that can vaporize transaction data, “forward fixes” that might save or sink your platform, and the art of containment when your only option is to stop the bleeding. Forget heroics. This is about making cold-blooded, evidence-based decisions while the clock and your CFO are both screaming. If you want to survive (and maybe even look smart), read on.

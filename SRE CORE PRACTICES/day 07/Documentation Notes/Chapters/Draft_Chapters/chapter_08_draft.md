@@ -1,6 +1,5 @@
 # Chapter 8: Blameless Postmortems and Continuous Learning
 
-
 ## Chapter Overview
 
 Welcome to the postmortem autopsy, where we dissect not just bodies, but entire organizational mindsets. If your idea of an incident review is a public hanging followed by everyone pretending it’s business as usual, congratulations: you’re the problem. Blameless postmortems aren’t some HR kumbaya—they’re the only antidote to the blame-driven rot undermining your uptime, your compliance, and your team’s will to live.

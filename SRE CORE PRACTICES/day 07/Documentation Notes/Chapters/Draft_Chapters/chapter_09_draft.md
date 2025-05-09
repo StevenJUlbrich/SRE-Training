@@ -1,6 +1,5 @@
 # Chapter 9: SLOs and Error Budgets in Financial Services
 
-
 ## Chapter Overview
 
 Welcome to the financial services SLO rodeo, where uptime isn’t just a bragging number, it’s the difference between profit and public humiliation. This chapter drives a stake through the heart of vanity monitoring and forces you to stare down the cold reality: nobody cares about your CPU graphs when customers can’t move their money. Forget patting yourself on the back for five nines on the login page—if trades fail or payments die, you’re out millions and your regulator is on speed dial. We’ll show you how to replace your metric spam with SLOs that actually matter, spend error budgets like a ruthless CFO, and tier reliability so you stop gold-plating internal dashboards while your ATM network is on fire. This is SRE for adults: data-driven, business-aware, and allergic to pointless heroics. Read on if you’re ready to align your reliability investments with what actually matters—customer trust, revenue, and keeping the auditors at bay.

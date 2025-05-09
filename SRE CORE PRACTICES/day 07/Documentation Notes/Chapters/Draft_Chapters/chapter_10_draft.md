@@ -1,6 +1,5 @@
 # Chapter 10: Building Resilient Banking Systems
 
-
 ## Chapter Overview
 
 Welcome to the SRE equivalent of a banking boot camp, where “resilience” isn’t some hand-wavy buzzword—it’s the difference between operational survival and public humiliation. Forget green dashboards and feel-good uptime reports. This chapter is your guided tour through the seven deadly sins of banking fragility, and how to actually engineer for the inevitable: things breaking, people panicking, and regulators circling like sharks. If you think resilience is a feature you can bolt on after launch, prepare to have your illusions shattered—along with your next quarterly bonus if you get this wrong. Here, we’re not patching holes after the ship springs a leak. We’re building ships that can take a torpedo, stay afloat, and still deliver champagne to the VIP lounge. Welcome to resilience the way only SREs can deliver: blunt, empirical, and always business-critical.

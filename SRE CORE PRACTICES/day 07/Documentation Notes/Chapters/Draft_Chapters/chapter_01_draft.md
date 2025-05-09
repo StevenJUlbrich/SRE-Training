@@ -1,6 +1,5 @@
 # Chapter 1: From Monitoring to Incident Response
 
-
 ## Chapter Overview
 
 Welcome to the brutal reality of modern SRE: your dashboards are lying, your “root cause” is a fairy tale, and your company’s next million-dollar incident will be detected by a customer tweet before it ever glows red on your NOC wall. This chapter rips apart the cozy delusions of traditional monitoring and drags you—kicking and screaming—into the high-stakes world of evidence-based incident response. We don’t care how green your tiles are; if your customers can’t move money or log in, your “all clear” is a hallucination. This isn’t a gentle mindset shift—it’s a hostile takeover. We’ll show you how to stop worshipping at the altar of component health, break your addiction to hero engineers, and start treating incidents as inevitable, learnable, and—most importantly—preventable. If you want a pat on the back for your uptime, look elsewhere. If you want an unvarnished guide to saving your business from the next silent disaster, keep reading.

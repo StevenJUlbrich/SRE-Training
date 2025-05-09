@@ -1,6 +1,5 @@
 # Chapter 6: Communication During Banking Incidents
 
-
 ## Chapter Overview
 
 Welcome to the war room, where a single wrong email can tank your stock price, land you on a regulator’s naughty list, or spark a customer exodus that makes your CFO sweat blood. This chapter tears apart the fantasy that “just tell everyone everything and hope for the best” works in banking incidents. Instead, we dissect the grim realities of incident comms in financial services: translation between geek and C-suite, keeping customers calm without lying, feeding the regulatory beast, and preventing cross-team chaos from dragging you into the abyss. You’ll learn why “communication is everyone’s job” is a lie, how automation can save your bacon (or cook it), and why postmortems that don’t measure communication are just expensive group therapy. If you’re looking for fluff, close this tab. If you want to stop being the reason your bank trends on Twitter for all the wrong reasons, read on.
@@ -869,3 +868,4 @@ To implement effective communication measurement in your banking organization:
    - Set measurable targets for improvement in key metrics
    - Conduct targeted experiments with new communication approaches
    - Regularly review progress and adjust strategies based on measurement data
+  

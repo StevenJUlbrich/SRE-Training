@@ -1,6 +1,5 @@
 # Chapter 4: Structured Investigation Methodologies
 
-
 ## Chapter Overview
 
 Welcome to the SRE equivalent of CSI: Banking Edition. This chapter is your crash course in not screwing up incident investigations—because in financial systems, wild guessing and “fix and hope” are good ways to set piles of money on fire (and invite the wrath of both customers and regulators). We’re talking about structured methodologies, not the “turn it off and on again” school of ops. You’ll learn to separate signal from noise, hunt down root causes with the scientific method, and preserve evidence like a digital Sherlock Holmes. Think of this as your toolkit for turning outages from expensive whodunits into routine, efficient crime scenes—complete with checklists, reproducible test cases, and zero tolerance for magical thinking. If you’re still treating symptoms or chasing vague log lines, buckle up. This is where SREs become fixers, not firefighters.

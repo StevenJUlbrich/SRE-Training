@@ -1,6 +1,5 @@
 # Chapter 3: Alert Design and Initial Response
 
-
 ## Chapter Overview
 
 Welcome to the SRE house of horrors: Alert Design and Initial Response. Picture this—2:15 AM, a rookie SRE drowning in a relentless tsunami of red notifications while the banking world teeters on the brink of chaos. This chapter takes you on a guided tour through the battleground of alert storms, meaningless metrics, and the fine art of not missing the multi-million-dollar outage hiding behind a "green" dashboard. Forget feel-good theory—this is about building a fortress of actionable alerts, slashing through noise, and turning panicked firefighting into cold, methodical incident triage. If your current alerting strategy is “let’s hope for the best and sort it out later,” buckle up. We’re about to show you how to build systems that don’t just shout—they actually tell you where to aim the fire extinguisher.

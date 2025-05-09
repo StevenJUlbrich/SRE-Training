@@ -1,6 +1,5 @@
 # Chapter 2: The Anatomy of Banking Incidents
 
-
 ## Chapter Overview
 
 Welcome to the autopsy table of banking incidents—where we slice open the mess, poke at the guts, and map out exactly why your "minor" blip cost the bank a few million and a regulatory migraine. This chapter isn’t some academic snooze-fest about theoretical outages. Here, you’ll crawl through the battlefield of banking SRE, where misclassifying an incident is like calling a heart attack a mild cough, and failing to map transaction flows is the equivalent of flying blind in a hurricane. We’re not just talking logs and metrics—we’re talking business carnage, stakeholder freak-outs, and regulatory wolves at the door. If you’re ready to turn incident chaos into actionable, business-aligned SRE muscle, read on. If you’d rather keep firefighting the same old way, good luck—hope you like 3AM escalations and awkward postmortems.

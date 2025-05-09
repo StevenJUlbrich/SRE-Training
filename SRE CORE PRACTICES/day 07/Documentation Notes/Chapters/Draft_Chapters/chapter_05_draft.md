@@ -1,6 +1,5 @@
 # Chapter 5: Incident Command and Coordination
 
-
 ## Chapter Overview
 
 Welcome to the war room, where chaos is currency and your only weapon is organizational clarity. This chapter rips apart the fantasy that SREs can wing it through a high-stakes banking outage with nothing but “team spirit” and caffeine. Instead, we’re serving a brutal reality check: incident response in financial services is a full-contact sport, and the scoreboard is measured in millions of dollars, regulatory beatdowns, and brand damage you can’t walk off.
