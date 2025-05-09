@@ -29,7 +29,7 @@ Welcome to the bloodsport of log analysis, where traditional monitoring is a bli
 - Continuous learning is table stakes. Static models are sitting ducks—fraudsters evolve, and so must your detection.
 - If you’re not measuring business impact—fraud averted, incidents mitigated, regulatory fines dodged—you’re just admiring clever dashboards. Results pay the bills; metrics alone don’t.
 
-In short: Machine learning won’t save you from bad process, lazy feature engineering, or regulatory wrath—but done right, it’s the difference between reading about breaches in the press and being the cautionary tale. Choose wisely.
+>In short: Machine learning won’t save you from bad process, lazy feature engineering, or regulatory wrath—but done right, it’s the difference between reading about breaches in the press and being the cautionary tale. Choose wisely.
 
 ## Panel 1: The Volume Challenge - When Human Analysis Fails
 

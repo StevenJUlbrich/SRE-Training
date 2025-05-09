@@ -34,7 +34,7 @@ By the end of this chapter, you’ll have the tools to stop playing Whac-A-Mole 
 - Rolling this out is a marathon, not a hackathon. Start with what matters, show value fast, and keep momentum or die by committee.
 - If you’re not connecting logs, metrics, and traces, you’re not doing observability—you’re just collecting expensive clutter.
 
-Now, go correlate like your revenue (and your sanity) depends on it—because it does.
+>Now, go correlate like your revenue (and your sanity) depends on it—because it does.
 
 ## Panel 1: The Missing Links - The Distributed Transaction Challenge
 

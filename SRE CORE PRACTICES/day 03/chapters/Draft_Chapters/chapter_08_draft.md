@@ -31,7 +31,7 @@ Welcome to the log-based alerting revolution—where SREs finally stop playing w
 - Alerting is not a set-and-forget project. If you’re not refining, you’re regressing. Nothing ages faster than yesterday’s “perfect” thresholds.
 - Siloed telemetry is a liability. Integrated observability is your insurance against finger-pointing, endless war rooms, and four-hour MTTRs.
 
-In short: log-based alerting is how you stop being a victim of your own dashboards and start running a business that works—for both the bottom line and your sanity. Welcome to the major leagues.
+>In short: log-based alerting is how you stop being a victim of your own dashboards and start running a business that works—for both the bottom line and your sanity. Welcome to the major leagues.
 
 ## Panel 1: The Alerting Evolution - Beyond Threshold Monitoring
 

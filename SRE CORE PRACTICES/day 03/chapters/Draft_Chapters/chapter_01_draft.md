@@ -4,6 +4,8 @@
 
 Welcome to the graveyard shift of banking operations, where green dashboards are the placebo and customer trust is bleeding out somewhere off-screen. This chapter takes a sledgehammer to the myth that “monitoring” means “knowing what’s going on.” You’ll watch as traditional monitoring stares blankly at chaos, while real business-impacting failures party in the logs, unseen by your precious graphs. We’ll drag you, kicking and screaming, from the shallow end of “is the server up?” to the deep, murky waters of “why the hell are my richest customers screaming at 2 AM?” Expect war stories, not vendor slideware. If you’re still clinging to CPU graphs as proof of system health, bring a helmet—it’s going to get messy.
 
+---
+
 ## Learning Objectives
 
 - **Diagnose** the fatal blind spots of traditional monitoring in business-critical systems.
@@ -13,6 +15,8 @@ Welcome to the graveyard shift of banking operations, where green dashboards are
 - **Investigate** incidents using log evidence, not hunches or wishful thinking.
 - **Quantify** the real financial and reputational cost of poor observability (spoiler: it’s ugly).
 - **Evolve** from firefighting with dashboards to proactively preventing disasters with log analytics.
+
+---
 
 ## Key Takeaways
 
@@ -28,7 +32,9 @@ Welcome to the graveyard shift of banking operations, where green dashboards are
 - You don’t get points for “monitoring maturity” if your logs can’t help you answer new questions during an outage. Observability means you’re ready for the unknown, not just the expected.
 - If your incident retrospectives always end with “we need better logging,” congratulations—you’re normal. Now go do something about it.
 
-This chapter isn’t just a call to upgrade your toolchain. It’s a plea to stop treating monitoring as a checkbox and start treating observability as the difference between business survival and public embarrassment.
+>This chapter isn’t just a call to upgrade your toolchain. It’s a plea to stop treating monitoring as a checkbox and start treating observability as the difference between business survival and public embarrassment.
+
+---
 
 ## Panel 1: The Midnight Alert - Limitations of Traditional Monitoring
 

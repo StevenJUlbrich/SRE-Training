@@ -32,7 +32,7 @@ Welcome to the compliance circus: where SREs in banking get a front-row seat to 
 - Treat compliance as a business capability, not a sunk cost. Well-architected logging pays back in fraud detection, customer trust, and operational agility.
 - Regulations never sleep. Build for change, or enjoy spending every year redoing what you thought was “done.” If your architecture can’t flex, your business will break.
 
-In short: Logging for compliance isn’t a checkbox—it’s a survival skill. If your logs can’t stand up to regulators, lawyers, and auditors, neither can you.
+>In short: Logging for compliance isn’t a checkbox—it’s a survival skill. If your logs can’t stand up to regulators, lawyers, and auditors, neither can you.
 
 ## Panel 1: The Regulatory Landscape - Understanding Banking Log Requirements
 

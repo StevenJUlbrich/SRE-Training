@@ -4,6 +4,8 @@
 
 Welcome to log anatomy—where your logs either solve incidents or create them. Think of this chapter as the autopsy table for your data: we’re slicing open log entries to show you what’s really inside (or missing when you need it most). Banking systems are complex, high-stakes beasts; vague logs are the equivalent of a surgeon operating blindfolded. This isn’t about “nice to have” details—it’s about whether you find the root cause in minutes or watch revenue, customers, and your sanity walk out the door. We’ll dissect every critical log element, mock bad practices, and show you why incomplete logs are costing your business real money (and sleep). If you enjoy piecing together incidents like a crime scene, keep logging like it’s 1999. If you want fast, evidence-based troubleshooting and bulletproof observability, read on and get your logging act together.
 
+---
+
 ## Learning Objectives
 
 - **Define** the essential components of a complete log entry for complex, distributed banking systems.
@@ -13,6 +15,8 @@ Welcome to log anatomy—where your logs either solve incidents or create them. 
 - **Structure** error information for immediate diagnosis instead of post-mortem regret.
 - **Adopt** structured logging formats (e.g., JSON) for automation-friendly analysis and reporting.
 - **Assess** your logging practices and chart a practical, staged evolution path toward real observability.
+
+---
 
 ## Key Takeaways
 
@@ -25,6 +29,8 @@ Welcome to log anatomy—where your logs either solve incidents or create them. 
 - Logging isn’t a one-and-done project. It’s an arms race against system complexity and business risk. If you’re not evolving your practices, you’re falling behind.
 - Every hour wasted due to bad logs is money, customer trust, and competitive advantage burned. “We’ll fix it next quarter” is code for “We’re fine with bleeding cash.”
 - You can’t buy observability. You build it—one complete, context-rich, structured log entry at a time. Start now or prepare for post-mortem bingo.
+
+---
 
 ## Panel 1: The Missing Puzzle Piece - Anatomy of a Complete Log Entry
 
