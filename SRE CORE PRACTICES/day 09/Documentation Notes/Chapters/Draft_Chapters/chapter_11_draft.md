@@ -5,6 +5,7 @@
 
 Welcome to the brutal reality of SRE in banking: automation isn’t just a “nice to have”—it’s the only way to stop drowning in the endless sea of manual drudgery, regulatory red tape, and avoidable 3 AM wake-up calls. This chapter is less “Zen and the Art of SRE” and more “How to Stop Being the Human Failsafe for a System Designed by Sadists.” If you’re still clinging to runbooks and heroics, you’re the reliability equivalent of a medieval doctor using leeches. We’ll torch the myth that “manual means safer,” expose the opportunity costs of toil, and show you how automation isn’t just a time-saver—it’s the only lifeline to sanity, scalability, and business survival in financial services. If you’re ready to trade your pager-induced insomnia for a culture that values prevention over firefighting, keep reading. If not, enjoy your next compliance audit and don’t forget to send HR your resignation letter template.
 
+---
 ## Learning Objectives
 
 - **Identify** sources of operational toil and quantify their true cost (including the stuff your manager pretends is “strategic”).
@@ -16,6 +17,7 @@ Welcome to the brutal reality of SRE in banking: automation isn’t just a “ni
 - **Drive** a cultural shift from firefighting to fire prevention, reclaiming your time and your dignity.
 - **Implement** automation governance frameworks that keep regulators happy without reducing engineering to a bureaucratic crawl.
 
+---
 ## Key Takeaways
 
 - Toil isn’t just tedious—it’s the corporate equivalent of lighting money (and talent) on fire. If you’re proud of your “runbook expertise,” you’re a bottleneck, not a hero.
@@ -31,6 +33,7 @@ Welcome to the brutal reality of SRE in banking: automation isn’t just a “ni
 
 In short: automate with purpose, measure what matters, and stop glorifying heroic toil. Your future self—and your sleep schedule—will thank you.
 
+---
 ## Panel 1: The Toil Trap - Recognizing Manual Work That Consumes SRE Resources
 **Scene Description**: In a dimly lit banking operations center, Katherine sits surrounded by multiple monitors, manually restarting several payment processing services. Dark circles under her eyes tell the story of repeated 3 AM wake-up calls. On her desk sits a thick binder labeled "Manual Procedures" next to a half-empty coffee cup. Her phone shows five missed calls from other team members handling different parts of the system. A whiteboard in the background tracks "Incidents This Month" with alarming frequency, while a clock on the wall shows 4:37 AM.
 

@@ -9,6 +9,7 @@ We’ll drag you through the carnage of real banking outages, show you how techn
 
 ---
 
+---
 ## Learning Objectives
 
 - **Reframe** reliability from infrastructure metrics to customer experience, and explain why this shift is non-negotiable.
@@ -22,6 +23,7 @@ We’ll drag you through the carnage of real banking outages, show you how techn
 
 ---
 
+---
 ## Key Takeaways
 
 - Green dashboards are a lie. If your customers are furious, your system is down—no matter what your graphs say.
@@ -38,6 +40,7 @@ We’ll drag you through the carnage of real banking outages, show you how techn
 
 ---
 
+---
 ## Panel 1: Beyond Uptime - The Customer Experience Perspective
 **Scene Description**: A war room during an incident. Several engineers stare at dashboards showing 99.9% uptime across all services, while a large display shows a social media feed filled with customer complaints. A manager points to the contradiction between green dashboards and angry customers, with speech bubbles expressing "Our monitoring says everything's fine, but our customers disagree."
 

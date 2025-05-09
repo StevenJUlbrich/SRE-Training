@@ -5,6 +5,7 @@
 
 Welcome to the dark art of incident communication in SRE: the difference between a coordinated, high-stakes rescue and a clown car pileup. This chapter strips away the feel-good fairy tales and dives straight into the ugly, lucrative reality—where every “maybe” costs thousands, every siloed update fuels regulatory bonfires, and one misplaced blame can tank your talent pipeline. We’re not here for kumbaya trust falls; we’re here to weaponize communication patterns so your next outage doesn’t become a career-ending fiasco (or a headline in the Financial Times). If you want to stop hemorrhaging money, customers, and sanity every time the pager goes off, read on. Otherwise, enjoy the next compliance fine.
 
+---
 ## Learning Objectives
 
 - **Establish** bulletproof, standardized incident kickoff communications that actually prevent chaos, not just check a box.
@@ -15,6 +16,7 @@ Welcome to the dark art of incident communication in SRE: the difference between
 - **Model** and **enforce** blameless communication patterns, turning postmortems into learning opportunities instead of witch hunts.
 - **Implement** robust follow-the-sun handover protocols that don’t lose critical context every time someone’s shift ends (or starts drinking).
 
+---
 ## Key Takeaways
 
 - Unstructured incident comms are a tax on your business—measured in dollars, churn, compliance fines, and public humiliation. Ignore at your peril.
@@ -30,6 +32,7 @@ Welcome to the dark art of incident communication in SRE: the difference between
 
 You want SRE maturity? Nail your incident comms. Everything else is just firefighting with gasoline.
 
+---
 ## Panel 1: The Incident First Responder - Structured Communication Kickoff
 **Scene Description**: A monitoring alert shows a payment processing error spike. Katherine, the on-call SRE, is at her desk with multiple screens. She's initiating an incident response channel while simultaneously checking dashboards. The clock shows 2:17 PM, and her expression is focused but calm. Her screen shows a partially completed incident announcement template with key fields being filled in methodically.
 

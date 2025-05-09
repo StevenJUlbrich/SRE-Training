@@ -5,6 +5,7 @@
 
 Welcome to Collaborative On-Call Practices, where we finally kill the lone-wolf SRE hero myth and bury it with the rest of your burnout-inducing, compliance-failing, career-shortening production support habits. This chapter is your crash course in why going solo in incident response is about as effective as bringing a butter knife to a gunfight—and just as likely to get you (and your business) hurt. We’ll dissect the cost of knowledge hoarding, the pain of documentation scavenger hunts, and the existential dread of waking up at 3AM to fix the same problem for the hundredth time. If you’re ready to swap martyrdom for teamwork, shadowing, and actual engineering progress, read on—because your business, your sleep schedule, and your sanity are all on the line.
 
+---
 ## Learning Objectives
 
 - **Recognize** the hidden costs and business risks of hero-based on-call models (spoiler: it’s more than sleep deprivation).
@@ -16,6 +17,7 @@ Welcome to Collaborative On-Call Practices, where we finally kill the lone-wolf 
 - **Foster** psychological safety, so engineers actually tell you what broke before the regulator finds out.
 - **Engineer** your way out of toil by measuring, prioritizing, and automating away the repetitive pain.
 
+---
 ## Key Takeaways
 
 - The lone-hero model is a business liability, not a badge of honor. If your organization’s uptime depends on one person, you’re already losing—even if you don’t know it yet.
@@ -29,6 +31,7 @@ Welcome to Collaborative On-Call Practices, where we finally kill the lone-wolf 
 - Toil is not a rite of passage. It’s operational debt. If you’re not engineering your way out of repetitive incidents, your competitors (and your attrition rate) will thank you.
 - Business translation: Every hour you spend firefighting manually is an hour your competition spends building features, keeping customers, and sleeping soundly. Choose wisely.
 
+---
 ## Panel 1: Beyond the Hero Model - Shared Responsibility
 **Scene Description**: In a dimly lit operations center at 2AM, we see Katherine, an exhausted on-call engineer, struggling alone with multiple alert screens. Her phone shows 17 unread messages, while dashboards display cascading failures across payment processing systems. In contrast, a second scene shows a modern SRE team in a virtual war room where four engineers collaborate on different aspects of the same incident—one analyzing logs, another communicating with stakeholders, a third running diagnostic tools, and a fourth coordinating the response. The contrast between isolation and collaboration is striking and deliberate.
 

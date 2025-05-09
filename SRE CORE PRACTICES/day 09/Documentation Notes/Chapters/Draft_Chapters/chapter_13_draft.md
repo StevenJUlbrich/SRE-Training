@@ -5,6 +5,7 @@
 
 Welcome to the jungle gym of reliability culture, where green dashboards lull you into a false sense of security and nobody admits mistakes until the regulators are at the door. This chapter rips off the “99.99% uptime” band-aid and exposes the festering wound underneath: a culture that measures everything except what matters. If your idea of “measurement” is counting how many times your team doesn’t screw up—congratulations, you’re tracking your own extinction. Real SREs know that what’s rotting your systems isn’t a missing semicolon, it’s a culture of blame, silence, and metrics gaming. In banking, where regulatory vultures circle and customer trust dies at the speed of a tweet, ignoring cultural indicators is professional malpractice. Here, you’ll learn to weaponize cultural metrics, predict disasters before they go live, and turn measurement into a living, breathing force for business survival. Forget vanity numbers. It's time to measure what actually keeps the lights on and the auditors off your back.
 
+---
 ## Learning Objectives
 
 - **Identify** key cultural indicators that predict reliability risks before technical metrics even blink.
@@ -16,6 +17,7 @@ Welcome to the jungle gym of reliability culture, where green dashboards lull yo
 - **Continuously refine** your measurement systems so your metrics don’t become the next source of technical debt or regulatory embarrassment.
 - **Translate** reliability data into business narratives that secure funding, drive strategic decisions, and maybe—just maybe—get leadership to pay attention.
 
+---
 ## Key Takeaways
 
 - Uptime dashboards are the fig leaf of reliability—covering everything except the real risks.
@@ -30,6 +32,7 @@ Welcome to the jungle gym of reliability culture, where green dashboards lull yo
 - In banking, cultural failures cost more than tech failures—regulators, customers, and your best engineers will all walk away if you ignore this.
 - You can’t PowerPoint your way out of a reliability crisis. But you can use the right metrics—cultural and technical—to prevent one.
 
+---
 ## Panel 1: Beyond Green Dashboards: The Cultural Metrics Revolution
 **Scene Description**: A diverse team is gathered in a modern conference room with large screens displaying various dashboards. The central display shows traditional uptime metrics in green, while side screens show newer visualizations: a "blameless post-mortem count" trend line showing growth, a "time to restore service" graph with improving numbers, and a "proactive changes implemented" chart. Katherine, a senior SRE, is pointing to these side charts while several team members look on with expressions ranging from curiosity to skepticism. A banking executive in the doorway appears surprised at seeing these non-traditional metrics.
 

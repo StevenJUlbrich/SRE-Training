@@ -7,6 +7,7 @@ Welcome to the dirty little secret of banking tech: most organizations treat lea
 
 Here, we torch the myths of “root cause” and “heroic fixes,” expose the business cost of not learning, and show how SREs build organizations that actually improve. We’ll show you how to extract actionable insight from incidents, foster psychological safety so people actually speak up, dismantle knowledge silos, and create feedback loops that do more than just look pretty on dashboards. In banking, failing to learn is a crime against both uptime and the bottom line. So grab your incident retros, your skepticism, and your sense of humor—let’s build a learning organization that actually learns.
 
+---
 ## Learning Objectives
 
 - **Diagnose** why traditional incident reviews fail and how SREs extract real organizational learning from failures.
@@ -18,6 +19,7 @@ Here, we torch the myths of “root cause” and “heroic fixes,” expose the 
 - **Close** learning loops with measurable feedback systems that actually drive improvement.
 - **Scale** learning across teams, regions, and continents, so every mistake is only made once—globally.
 
+---
 ## Key Takeaways
 
 - If your incident review sounds like a police interrogation, enjoy your repeat outages and engineer attrition.
@@ -30,6 +32,7 @@ Here, we torch the myths of “root cause” and “heroic fixes,” expose the 
 - The business cost of not learning is measured in lost revenue, regulatory smackdowns, and customers who never come back. If that doesn’t get your attention, nothing will.
 - If you think “learning organization” means more meetings, congratulations—you’ve already failed. This is about changing how you survive and win in a world that punishes ignorance and rewards adaptation.
 
+---
 ## Panel 1: From Incidents to Insights
 
 **Scene Description**: A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.

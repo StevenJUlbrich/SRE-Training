@@ -7,6 +7,7 @@ Welcome to the jungle, where chasing "five nines" is a religion and outages are 
 
 If you think “perfect reliability” is a virtue, prepare to have your faith shattered and replaced with something far more profitable (and a lot less exhausting). Let’s get dangerous.
 
+---
 ## Learning Objectives
 
 - **Explain** why relentless uptime worship leads to stagnation, burnout, and business losses.
@@ -16,6 +17,7 @@ If you think “perfect reliability” is a virtue, prepare to have your faith s
 - **Invest** your error budget strategically, balancing reliability with innovation and competitive pressure.
 - **Leverage** error budgets as organizational “diplomatic currency” to break down silos, allocate risk, and resolve cross-team conflicts before they hit the boardroom.
 
+---
 ## Key Takeaways
 
 - Chasing “perfect” reliability everywhere is the slowest way to lose customers, burn out staff, and fall behind your competitors. Stop it.
@@ -31,6 +33,7 @@ If you think “perfect reliability” is a virtue, prepare to have your faith s
 
 If you want to be the SRE who stops endless firefighting and actually moves the business, error budgets are your weapon. Wield them.
 
+---
 ## Panel 1: From Uptime Obsession to Intelligent Risk Management
 **Scene Description**: A tense meeting room where Katherine, an SRE lead, stands at a whiteboard that's split into two sections. On the left side is a traditional "99.99% uptime" metric with a red circle around it. On the right side is a colorful error budget visualization showing different services consuming portions of their budgets. Development team members look bewildered while operations staff appear defensive. The room's atmosphere is charged with uncertainty as Katherine gestures to the right side of the board with confidence.
 

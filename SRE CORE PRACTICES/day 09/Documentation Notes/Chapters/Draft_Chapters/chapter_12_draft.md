@@ -7,6 +7,7 @@ Welcome to the resilience testing chapter for banking—where the stakes aren’
 
 ---
 
+---
 ## Learning Objectives
 
 - **Shift** your mindset from “avoid failure” to “engineer for inevitable disaster.”
@@ -20,6 +21,7 @@ Welcome to the resilience testing chapter for banking—where the stakes aren’
 
 ---
 
+---
 ## Key Takeaways
 
 - Traditional QA gives you a false sense of security. Your “perfect” test coverage won’t save you from complex, real-world outages.
@@ -37,6 +39,7 @@ Welcome to the resilience testing chapter for banking—where the stakes aren’
 
 This chapter is a blueprint for SREs who want to keep their jobs and their banks out of the headlines. Ignore it at your own risk.
 
+---
 ## Panel 1: The Unexpected Outage - Beyond Traditional Test Cases
 **Scene Description**: A banking operations center at 3:15 PM on a Friday. Multiple support engineers frantically respond to alerts as a payment processing system unexpectedly fails during peak volume. On wall-mounted displays, transaction success rates plummet from 99.9% to 42% in minutes. Katherine, a seasoned SRE, stands in front of the main dashboard looking contemplative rather than panicked, comparing the failure pattern to documentation in her hand labeled "Last Quarter's Chaos Engineering Report."
 

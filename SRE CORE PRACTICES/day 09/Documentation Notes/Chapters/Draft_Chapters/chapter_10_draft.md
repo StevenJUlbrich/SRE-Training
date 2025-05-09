@@ -5,6 +5,7 @@
 
 Welcome to the chapter where the myth that “customers don’t care about reliability” gets hauled out back and shot. Here, we don’t treat reliability as the awkward stepchild of product development—relegated to the bottom of the backlog, only remembered when Twitter is on fire and support phones are melting. Instead, we’re putting reliability front and center, where it belongs: as a product feature with business weight, customer expectations, and real financial consequences. If you think reliability is just “keeping the lights on,” prepare to have that illusion broken—possibly with the subtlety of a sledgehammer. We’ll dissect how banks (and anyone else with existential uptime needs) get burned by treating reliability as an afterthought, and show you how to weaponize evidence, error budgets, and operational design to make sure “it works” isn’t the least you can say about your product. Ready to stop being the canary in the coal mine? Let’s get clinical.
 
+---
 ## Learning Objectives
 
 - **Articulate** why reliability is a non-negotiable product feature, not an operational afterthought.
@@ -16,6 +17,7 @@ Welcome to the chapter where the myth that “customers don’t care about relia
 - **Manage** reliability work as part of the main product backlog, with clear value statements and prioritization.
 - **Foster** a culture where reliability advocacy isn’t just an SRE’s Sisyphean task but an organization-wide instinct.
 
+---
 ## Key Takeaways
 
 - Reliability is the oxygen of product features: nobody asks for it, but everyone notices when it disappears—and suffocates your business.
@@ -34,6 +36,7 @@ Welcome to the chapter where the myth that “customers don’t care about relia
 
 Now go forth and treat reliability like the profit-preserving, customer-saving, competitive weapon it actually is. Or keep rolling the dice—just don’t be surprised when your luck (and your uptime) runs out.
 
+---
 ## Panel 1: The Feature That Customers Don't Request (Until It's Gone)
 **Scene Description**: A busy financial services meeting room where a product team is reviewing customer feature requests on a digital board. The product manager is highlighting new UI features, payment options, and integration capabilities that customers have explicitly requested. In the corner, Katherine (SRE) is studying a separate dashboard showing system stability metrics and customer complaint patterns. There's a striking contrast between the excitement around new features and the quiet attention to reliability metrics.
 

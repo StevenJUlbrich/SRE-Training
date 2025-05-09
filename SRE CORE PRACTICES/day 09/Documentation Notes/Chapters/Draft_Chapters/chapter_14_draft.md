@@ -5,6 +5,7 @@
 
 Welcome to the world where regulatory compliance and reliability finally stop pretending they’re strangers at a cocktail party. This chapter rips the dusty clipboard out of the compliance officer’s hands and forces compliance to become an engineering discipline—one that’s automated, observable, and as relentless as a risk manager on a caffeine binge. Forget the old ritual of death-by-audit—here, SREs get to turn regulatory headaches into data problems, bake compliance into pipelines, weaponize chaos engineering for real control testing, and integrate regulatory reporting into incident response before the lawyers even know what happened. If you’re allergic to manual checklists, human error, and late-night compliance fire drills, buckle up. We’re about to turn compliance from a bureaucratic tax into an engineering superpower.
 
+---
 ## Learning Objectives
 
 - **Reframe** compliance as an engineering problem, not just a paperwork parade.
@@ -16,6 +17,7 @@ Welcome to the world where regulatory compliance and reliability finally stop pr
 - **Embed** regulatory reporting into incident response workflows so you never miss a deadline (or a fine).
 - **Shift compliance left** by adding automated checks to every stage of your deployment pipeline.
 
+---
 ## Key Takeaways
 
 - Treating compliance as “someone else’s problem” is a direct route to seven-figure fines, public embarrassment, and wasted weekends.
@@ -31,6 +33,7 @@ Welcome to the world where regulatory compliance and reliability finally stop pr
 
 Now, go forth and automate compliance like your bonuses depend on it—because they probably do.
 
+---
 ## Panel 1: Compliance as an Engineering Challenge
 **Scene Description**: A tense meeting room where an SRE team and compliance officers are reviewing a stack of regulatory documentation. Katherine points to a whiteboard showing a Venn diagram with "Reliability Engineering" overlapping with "Regulatory Requirements." Meanwhile, another SRE is demonstrating how their observability dashboards can automatically generate compliance reports. The compliance officers look surprised but interested.
 

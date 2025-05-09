@@ -5,6 +5,7 @@
 
 Welcome to the bloodsport of banking tech: postmortems, blame games, and the Sisyphean quest for reliability. In this chapter, we torch the ancient rituals of finger-pointing and scapegoating, exposing them as the productivity sinkholes and talent repellents they truly are. If you think “blameless culture” is just more HR kumbaya, buckle up. We’ll dissect how blame poisons learning, why psychological safety isn’t just for snowflakes, and how incident reviews should fuel actual system change—not just fuel your cynicism. Prepare to bury “root cause” witch hunts and resurrect real accountability, where the only thing getting punished is systemic stupidity. If you want your bank to survive its next regulatory exam—or just keep your best engineers from rage-quitting—read on.
 
+---
 ## Learning Objectives
 
 - **Diagnose** the toxic symptoms of blame culture and its business impact in banking technology environments.
@@ -15,6 +16,7 @@ Welcome to the bloodsport of banking tech: postmortems, blame games, and the Sis
 - **Transform** incident learnings into concrete, verified system improvements, not just bullet points in forgotten slide decks.
 - **Embed** continuous improvement loops that make reliability gains stick and keep the regulatory wolves at bay.
 
+---
 ## Key Takeaways
 
 - Blame is operational debt. Every finger pointed is a lesson lost, a risk buried, and a resignation letter halfway written.
@@ -32,6 +34,7 @@ Welcome to the bloodsport of banking tech: postmortems, blame games, and the Sis
 
 Welcome to the blameless revolution. Either you build the culture, or the incidents will build it for you—one outage, resignation, and regulatory slap at a time.
 
+---
 ## Panel 1: The Aftermath - Understanding the Cost of Blame
 **Scene Description**: A tense conference room where a postmortem meeting is taking place after a major payment processing outage. Multiple team members sit around a table with defensive body language. In the center, a senior manager points accusingly at a visibly distressed engineer. On a screen behind them, a timeline shows a deployment followed by service degradation. Other engineers are looking down at their laptops or phones, clearly disengaged and avoiding eye contact. On a whiteboard, someone has written "WHO caused this?" with "ROOT CAUSE" underlined several times.
 

@@ -5,6 +5,7 @@
 
 Welcome to the SRE equivalent of an exorcism for legacy IT thinking. This chapter takes a blowtorch to the dogmas of old-school banking ops—where heroics, handoffs, and hiding mistakes pass for culture—and replaces them with the ruthless clarity of reliability engineering. If you think “midnight firefighting” is a badge of honor, or that 99.99% uptime means your customers are happy, brace yourself: you’re about to get a reality check harder than a failed core banking migration. We’ll drag you through the graveyard of brittle processes, misaligned incentives, and monitoring dashboards that lie. Then, we’ll show you how to build a culture where reliability isn’t wishful thinking, but a systemic outcome: measurable, automatable, and business-critical. No more blaming the intern, no more worshipping toil, and no more hiding behind server stats while the customer experience dies in the shadows. This is reliability culture—unvarnished, unmerciful, and your organization’s last shot at surviving the digital banking arms race.
 
+---
 ## Learning Objectives
 
 - **Diagnose** the crippling effects of reactive, hero-based support models and articulate the business case for proactive SRE culture.
@@ -15,6 +16,7 @@ Welcome to the SRE equivalent of an exorcism for legacy IT thinking. This chapte
 - **Balance** reliability and innovation using error budgets, turning “risk management” from a political football into a quantitative discipline.
 - **Measure** what actually matters by shifting from infrastructure metrics to customer-centric observability.
 
+---
 ## Key Takeaways
 
 - Don’t confuse “heroic” with “sustainable”—nobody gets promoted for fixing the same 2AM batch job for the fifth year running.
@@ -28,6 +30,7 @@ Welcome to the SRE equivalent of an exorcism for legacy IT thinking. This chapte
 
 Now, go forth and torch the old ways. The customers (and your sleep schedule) will thank you.
 
+---
 ## Panel 1: The Midnight Alert - From Reactive to Proactive Thinking
 **Scene Description**: A dimly lit operations center at 2:14 AM. Katherine, a production support engineer, is hunched over her laptop, eyes red from fatigue. Multiple monitors surround her, one flashing with urgent alerts. Coffee cups litter the desk. Her phone shows multiple missed calls from her manager. On the main screen, a dashboard shows a critical banking application with transaction failure rates spiking to 37%. Katherine is frantically typing commands, trying different fixes, visibly stressed.
 

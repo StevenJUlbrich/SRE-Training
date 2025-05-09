@@ -5,6 +5,7 @@
 
 Congratulations, you’ve found the real reason SREs have trust issues: **monitoring lies, dashboards gaslight, and “all green” means nothing when the customer is screaming.** This chapter drags you—kicking and cursing—through the ugly truth: legacy monitoring is a placebo, not a cure. Observability isn’t about pretty graphs or CPU percentages—it’s about facing the cold, hard reality that you don’t know what’s broken until your bank bleeds cash and reputation, and some unlucky engineer is manually pasting timestamps into spreadsheets at 3 AM. We’re not here for your comfort. We’re here to expose every illusion, every lazy metric, every “that’s fine” green tile masking a dumpster fire. If you’re still setting alerts on CPU thresholds, you’re not just behind—you’re a liability. Welcome to observability: where the only thing worse than what you see is what you’re missing.
 
+---
 ## Learning Objectives
 
 - **Recognize** the “Green Wall” illusion and **detect** when your dashboards are lying through their teeth.
@@ -16,6 +17,7 @@ Congratulations, you’ve found the real reason SREs have trust issues: **monito
 - **Eliminate** manual incident correlation by **deploying** integrated observability platforms—because your time is worth more than copy-pasting timestamps.
 - **Establish** observability as a continuous, cross-team feedback loop that **informs** product, engineering, and business decisions (not just ops fire drills).
 
+---
 ## Key Takeaways
 
 - “All green” dashboards are the adult version of hiding under the covers—comforting, but you’re still in danger.
@@ -31,6 +33,7 @@ Congratulations, you’ve found the real reason SREs have trust issues: **monito
 
 **Face the facts: in banking, ignorance isn’t bliss—it’s expensive. Observability is your only shot at saving your weekend, your business, and maybe even your job.**
 
+---
 ## Panel 1: The Green Wall Illusion
 
 **Scene Description**: A dimly lit operations center at 3 AM. Katherine, a senior SRE, sits surrounded by multiple glowing monitors displaying green status tiles. Her phone buzzes with alerts while she frantically types commands into a terminal. In contrast to the "all green" dashboards, the terminal shows HTTP 500 errors. In the background, other team members are anxiously watching, their faces illuminated by the green glow of seemingly healthy systems.

@@ -5,6 +5,7 @@
 
 Welcome to the SRE School of Hard Knocks, where the only thing dumber than making a mistake is refusing to learn from it. This chapter takes a flamethrower to the tired “root cause” blame game and replaces it with a forensic fascination for how complex failures actually unfold. Forget the hunt for a single villain; here, incidents are treated like crime scenes in a soap opera—messy, multi-faceted, and starring both humans and machines in equal parts. We’ll dig into why banks keep stepping on the same rakes, why postmortems usually collect dust, and why psychological safety isn’t just a feel-good HR slogan—it's the difference between fixing problems and just pretending you did. If you’re ready to stop playing “Whack-a-Mole: Outage Edition” and start building a system that actually gets smarter with every screw-up (and even every unexpected win), you’re in the right place. Buckle up: this is reliability with teeth.
 
+---
 ## Learning Objectives
 
 - **Diagnose** complex incidents using a contributing factors approach instead of settling for a single “root cause” scapegoat.
@@ -15,6 +16,7 @@ Welcome to the SRE School of Hard Knocks, where the only thing dumber than makin
 - **Build** organizational memory that survives team churn and connects the dots across repeated incidents and near-misses.
 - **Extract** actionable insights from success, not just failure, so you can repeat what works instead of just avoiding pain.
 
+---
 ## Key Takeaways
 
 - The “root cause” is a myth. There’s always a tangle of factors, and if you’re still looking for a single villain, you’re the problem.
@@ -29,6 +31,7 @@ Welcome to the SRE School of Hard Knocks, where the only thing dumber than makin
 
 Now go forth. Break things, study the wreckage, and actually get better. Or keep doing what you’re doing and enjoy your next outage. Your choice.
 
+---
 ## Panel 1: Beyond Root Cause - The Incident as a Learning System
 **Scene Description**: In a softly lit conference room, Katherine (SRE lead) is facilitating a postmortem meeting after a major payment processing outage. The traditional "root cause" section of their template has been replaced with "contributing factors." On the wall, a complex diagram shows multiple intersecting factors with no single "root" highlighted. Team members from development, operations, and business sit around the table, actively engaged rather than defensive. A senior executive observes from the corner, noticeably more curious than angry.
 

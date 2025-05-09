@@ -5,6 +5,7 @@
 
 Welcome to the SRE Hunger Games: Banking Edition. This chapter dismantles the delusion that you can keep your financial systems afloat with a patchwork of siloed teams, mystery meat ownership, and tribal knowledge hoarded by the “Rajivs” of the world. Here, service ownership isn’t a feel-good slogan—it’s a blood pact with your customers, your auditors, and your own sanity. You’ll see why “who owns this?” shouldn’t trigger a boardroom séance and why “we build it, we run it” isn’t just a bumper sticker for Kubernetes evangelists. Prepare to torch the blame game, rip out the duct tape, and face the harsh business reality: nobody cares if your database is fine if customers can’t deposit a check. If you’re allergic to accountability, this chapter will give you hives.
 
+---
 ## Learning Objectives
 
 - **Diagnose** the root causes of service failures in financial systems caused by fragmented ownership and silos.
@@ -16,6 +17,7 @@ Welcome to the SRE Hunger Games: Banking Edition. This chapter dismantles the de
 - **Enforce** production readiness with the discipline of a drill sergeant—no more “YOLO” launches into prod.
 - **Institutionalize** knowledge management so your team’s wisdom doesn’t retire or call in sick.
 
+---
 ## Key Takeaways
 
 - If “everyone owns it,” nobody owns it. Outages don’t care about your org chart.
@@ -33,6 +35,7 @@ Welcome to the SRE Hunger Games: Banking Edition. This chapter dismantles the de
 
 This isn’t a chapter for process tourists. It’s a playbook for SREs who want to sleep at night—and for leaders who know that “good enough” is a financial risk, not a strategy.
 
+---
 ## Panel 1: The Responsibility Gap - From Siloed Support to End-to-End Ownership
 **Scene Description**: A large war room filled with various banking teams during a major incident. Different specialists sit at separate tables - database administrators huddle around monitoring screens, application support teams review logs, network engineers examine topology maps, while business representatives pace anxiously. A payment processing outage timer on a wall screen shows 47 minutes. Multiple teams point at each other, with speech bubbles showing blame-shifting: "The database is responding normally," "The application logs show no errors," "Network latency is within parameters." Meanwhile, a frustrated executive asks, "Who actually owns this service?" No one raises their hand.
 
