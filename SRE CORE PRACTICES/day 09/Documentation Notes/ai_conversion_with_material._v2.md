@@ -1,11 +1,10 @@
-I understand you're looking for a clear, structured sequence of prompts that you can use to replicate this SRE training material development process in the future. Rather than jumping straight to generating content, you want the procedural steps laid out so you can follow them systematically.
-
 # Prompt Sequence for Generating SRE Training Materials
 
 ## Initial Setup Prompts
 
 1. **Framework Establishment Prompt**:
-   ```
+
+   ```prompt
    I'd like to create SRE training materials following a specific framework. I'll provide several template documents that define our approach:
    - chapter_layout.md: The full chapter template
    - chapter_scaffold_layout.md: The simplified scaffold template
@@ -16,11 +15,12 @@ I understand you're looking for a clear, structured sequence of prompts that you
    ```
 
 2. **Topic Definition Prompt**:
-   ```
-   Based on the framework in the documents provided, I'd like to develop SRE training materials on [SPECIFIC SRE TOPIC] for banking professionals transitioning from production support roles. 
+
+   ```prompt
+   Based on the framework in the documents provided, I'd like to develop SRE training materials on 'Culture & Reliability Engineering' for banking professionals transitioning from production support roles. 
 
    Let's begin with Step 1 and 2 from our process: defining the SRE topic and application domain. Please help me clearly define:
-   1. The scope and boundaries of [TOPIC]
+   1. The scope and boundaries of 'Culture & Reliability Engineering'
    2. The core principles and concepts to be covered
    3. The specific banking/financial services context we'll apply it to
    ```
@@ -28,10 +28,11 @@ I understand you're looking for a clear, structured sequence of prompts that you
 ## Outline Development Prompts
 
 3. **High-Level Outline Prompt**:
-   ```
+
+   ```prompt
    Now let's move to Step 3: generating a high-level outline. 
 
-   Please create a chapter outline for our SRE training on [TOPIC] that:
+   Please create a chapter outline for our SRE training on 'Culture & Reliability Engineering' that:
    - Progresses from fundamental to advanced concepts
    - Covers approximately 10-15 chapters
    - Follows a logical learning progression
@@ -41,36 +42,39 @@ I understand you're looking for a clear, structured sequence of prompts that you
    ```
 
 4. **Audience Analysis Prompt**:
-   ```
+
+   ```prompt
    For Step 4, let's refine our outline based on audience analysis.
 
    Please identify:
-   1. Knowledge gaps that production support professionals likely have about [TOPIC]
+   1. Knowledge gaps that production support professionals likely have about 'Culture & Reliability Engineering'
    2. Existing skills they can leverage in learning this material
    3. Necessary mindset shifts from reactive to proactive operations
    4. How we should adjust terminology and examples for this audience
    ```
 
 5. **Domain Adaptation Prompt**:
+
    ```
    For Step 5, let's adapt our outline to the banking/financial services context.
 
    Please suggest:
    1. Banking-specific examples for each chapter
-   2. Industry regulations or compliance factors relevant to [TOPIC]
+   2. Industry regulations or compliance factors relevant to 'Culture & Reliability Engineering'
    3. Banking systems where these concepts are particularly important
-   4. How to connect [TOPIC] to banking business metrics and outcomes
+   4. How to connect 'Culture & Reliability Engineering' to banking business metrics and outcomes
    5. How the content should be tailored to the concerns in question_04_response_Audience_Analysis.md
    ```
 
 ## Missing Prompts
 
 6. **Focus Distribution Prompt**:
+
    ```
    For Step 6, let's ensure we maintain the proper balance in our content.
 
    Please review our outline and confirm:
-   1. How we'll maintain the 85% focus on core SRE [TOPIC] concepts
+   1. How we'll maintain the 85% focus on core SRE 'Culture & Reliability Engineering' concepts
    2. How we'll integrate the 15% supporting context and banking-specific applications
    3. Where we need to adjust technical depth versus practical application
    4. How to balance theoretical concepts with concrete examples based on question_05_response_Domain_Adaptation.md
@@ -79,6 +83,7 @@ I understand you're looking for a clear, structured sequence of prompts that you
    ```
 
 7. **Learning Progression Prompt**:
+
    ```
    For Step 7, let's organize our chapters to create a clear learning journey.
 
@@ -97,6 +102,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
 ## Scaffold Development Prompts
 
 6. **Pre-Scaffold Prompt for Chapter 1**:
+
    ```
    Moving to Step 8, let's develop the pre-scaffold for Chapter 1: [CHAPTER TITLE].
 
@@ -107,22 +113,23 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
 
    Remember to maintain our banking industry focus and ensure logical progression between panels.
    ```
+
    ```ascii
    ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter $1: $2.
+   Let's develop the pre-scaffold for Chapter $1: $2.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
    2. A vivid scene description for each panel showing the concept in action
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
-   5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
-
+   
    ======================================================
    ```
 
 7. **Complete Scaffold Prompt for Chapter 1**:
+
    ```
    Now for Step 9, let's expand our pre-scaffold into a complete scaffold following chapter_layout.md.
 
@@ -154,6 +161,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
 ## Content Generation Prompts
 
 8. **Panel Content Generation Prompt**:
+
    ```
    For Step 12, let's develop the full content for Panel 1: [PANEL TITLE].
 
@@ -169,6 +177,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
    ```
 
 9. **Review and Revision Prompt**:
+
    ```
    For Step 13, let's review Panel 1 against our objectives.
 
@@ -183,6 +192,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
    ```
 
 10. **Iterative Development Prompt**:
+
     ```
     Now that we've completed Panel 1, let's apply what we've learned to Panel 2: [PANEL TITLE].
 
@@ -196,6 +206,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
 ## Chapter Completion Prompts
 
 11. **Chapter Completion Prompt**:
+
     ```
     Now that we've developed all panels for Chapter 1, let's ensure cohesiveness across the entire chapter.
 
@@ -208,6 +219,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
     ```
 
 12. **Next Chapter Initialization Prompt**:
+
     ```
     Let's move to developing Chapter 2: [CHAPTER TITLE].
 
