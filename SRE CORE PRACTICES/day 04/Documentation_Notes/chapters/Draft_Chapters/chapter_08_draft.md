@@ -4,6 +4,7 @@
 
 Welcome to the banking observability arms race—where your legacy tracing stack is a ticking time bomb, compliance is a moving target, and vendor lock-in is just extortion with better branding. This chapter rips the mask off proprietary chaos and hands you the OpenTelemetry playbook for regulated environments. Forget handwringing about “best practices”—we’re talking about slashing incident response times, humiliating vendor reps at negotiation tables, and turning your monitoring system into a compliance officer’s fever dream. From stitching together cross-bank traces like forensic surgeons, to weaponizing standards for future-proofing, we’ll show you how to stop being the punchline of your own war room jokes. If you’re tired of paying ransom to APM vendors, losing sleep over GDPR audits, or fumbling through cross-organizational incidents with nothing but guesswork, buckle up. This is observability for banks who want to stop losing and start playing offense.
 
+---
 ## Learning Objectives
 
 - **Standardize** observability instrumentation using OpenTelemetry to obliterate vendor lock-in and maintenance hell across banking silos.
@@ -14,6 +15,7 @@ Welcome to the banking observability arms race—where your legacy tracing stack
 - **Transform** observability from a cost center to a regulatory asset—impress auditors and terrify competitors.
 - **Future-proof** your observability investment with a standards evolution program that won’t leave you stranded on yesterday’s protocol.
 
+---
 ## Key Takeaways
 
 - “Legacy” tracing means you’re one vendor acquisition away from a seven-figure migraine. Standardize, or prepare to pay.
@@ -26,6 +28,7 @@ Welcome to the banking observability arms race—where your legacy tracing stack
 - Observability standards will change—again and again. Build abstraction layers and a real evolution strategy, or get ready for another “strategic rewrite” every three years.
 - If you’re not actively testing and evolving your standards adoption, you’re volunteering to be tomorrow’s cautionary tale.
 
+---
 ## Panel 1: Standard Adoption in Banking - The OpenTelemetry Revolution
 
 **Scene Description**: A financial technology architecture review board meeting at a global bank. On the main screen, a comparison table shows their legacy proprietary tracing systems versus OpenTelemetry adoption across different banking domains. Architects from various divisions are presenting their migration roadmaps, with some teams already in production while others are in planning phases. A senior architect is demonstrating how a payment processing service instrumented with OpenTelemetry seamlessly integrates with both their existing observability platform and newer cloud-native monitoring tools. The CTO is nodding approvingly as the presenter highlights significant reductions in vendor lock-in risk and maintenance costs since standardizing on OpenTelemetry.

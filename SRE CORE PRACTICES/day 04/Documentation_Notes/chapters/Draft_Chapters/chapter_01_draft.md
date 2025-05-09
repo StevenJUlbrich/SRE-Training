@@ -4,6 +4,7 @@
 
 Welcome to the brutal reality of modern banking operations: your dashboards are green, your customers are screaming, and your CEO is one outage away from hiring a consultant with an even bigger ego. This chapter rips the rose-tinted glasses off traditional monitoring and exposes why your “all systems operational” banners are little more than comfort blankets for the uninformed. Observability isn’t just a buzzword—it’s the difference between finding problems before regulators do, and reading about your failures in tomorrow’s headlines. We’ll drag you through the evolution from naïve metric-chasing to evidence-based, customer-centric, and ruthlessly data-driven SRE practice. If you think CPU graphs save businesses, buckle up: this chapter is about measuring what matters before it bites your bottom line.
 
+---
 ## Learning Objectives
 
 - **Diagnose** the fatal gaps in traditional, infrastructure-centric monitoring and explain why “green” dashboards often mask business meltdowns.
@@ -15,6 +16,7 @@ Welcome to the brutal reality of modern banking operations: your dashboards are 
 - **Balance** data collection, retention, and compliance—maximizing insight without drowning in petabytes or getting fined into oblivion.
 - **Cultivate** an evidence-based culture where data kills opinion, and technical debates are settled by facts, not hierarchy.
 
+---
 ## Key Takeaways
 
 - “All green” dashboards are often a lie. Customers don’t care about your server health—they care about their money moving.
@@ -28,6 +30,7 @@ Welcome to the brutal reality of modern banking operations: your dashboards are 
 - Banks that treat observability as a compliance checkbox get compliance disasters—and customer churn as a bonus.
 - If you’re not fixing your monitoring and observability practice, your competitors (and regulators) will thank you for the business.
 
+---
 ## Panel 1: The Midnight Alert - Limitations of Traditional Monitoring
 
 **Scene Description**: A dimly lit banking operations center at 2:30 AM. A support engineer stares anxiously at multiple dashboards showing all green status indicators while simultaneously fielding angry calls from customers unable to complete international wire transfers. The disconnect between monitoring dashboards and customer reality creates visible confusion and frustration.

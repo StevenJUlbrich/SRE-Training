@@ -4,6 +4,7 @@
 
 Welcome to trace visualization—the MRI machine for your distributed systems, where we stop guessing and start seeing the ugly truth. Forget dashboards that lull you into a false sense of “all green.” Here, we rip the mask off your banking transactions, exposing bottlenecks, zombie dependencies, and that rogue mainframe nobody admits to owning. If you’re still troubleshooting by staring at CPU graphs and tailing logs, you’re bringing a butter knife to a gunfight. This chapter is about using visualizations and context navigation to actually understand what’s happening in your production environment—before your CFO or the regulator does. We’ll show you how to stop playing whack-a-mole with incidents and start doing evidence-based, business-aligned SRE. Buckle up: you’re about to see what your system really looks like, and it isn’t always pretty.
 
+---
 ## Learning Objectives
 
 - **Interpret** distributed tracing visualizations to diagnose transaction flow and bottlenecks across complex service architectures.
@@ -13,6 +14,7 @@ Welcome to trace visualization—the MRI machine for your distributed systems, w
 - **Map** real service dependencies using trace-driven topology, uncovering undocumented, business-critical relationships (and your next legacy nightmare).
 - **Translate** technical traces into business journey maps, making the cost of slow, fragmented customer experiences immediately obvious to everyone—including the suits.
 
+---
 ## Key Takeaways
 
 - “Green” dashboards lie; trace visualizations don’t. If you’re still flying blind, you deserve every 4am incident bridge.
@@ -24,6 +26,7 @@ Welcome to trace visualization—the MRI machine for your distributed systems, w
 - If you skimp on visualization, you’re not just risking uptime—you’re risking business credibility, regulatory wrath, and your own sanity.
 - The only thing worse than not having trace visualization is thinking you don’t need it. Delusion is not a resilience strategy.
 
+---
 ## Panel 1: The Trace Navigator - Understanding Trace Visualization Interfaces
 
 **Scene Description**: A senior SRE and a production support engineer sit together at a workstation with a large monitor showing a distributed tracing dashboard. The screen displays a waterfall-style visualization of a complex international wire transfer transaction, with colorful horizontal bars of different lengths representing spans across multiple banking services. The senior SRE is pointing at specific areas of the visualization while the junior engineer looks on with dawning comprehension.

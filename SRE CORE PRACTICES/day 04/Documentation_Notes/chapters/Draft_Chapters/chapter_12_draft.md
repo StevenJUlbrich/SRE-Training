@@ -4,6 +4,7 @@
 
 Welcome to the harsh reality of modern banking SRE: where your five-nines uptime badge means squat if customers are rage-quitting your app before their mortgage application even loads. This chapter drags banking SLIs out of their cozy server rooms and dumps them into the customer’s lap—where they belong. We’ll rip apart the fantasy that green dashboards equal happy customers, and show you how to weaponize trace data so your reliability metrics actually track with business outcomes, not just server heartbeats. By the end, you’ll know how to measure what matters, cut the “all customers are equal” nonsense, and stop leaking millions through the cracks between technical health and real-world experience. No more hiding behind averages, or pretending that all transaction failures are created equal. It’s time to make your SLIs as ruthless—and as valuable—as your CFO demands.
 
+---
 ## Learning Objectives
 
 - **Transform** technical monitoring by implementing customer-centric, trace-based SLIs that reflect real user experience.
@@ -14,6 +15,7 @@ Welcome to the harsh reality of modern banking SRE: where your five-nines uptime
 - **Quantify** the direct financial impact of reliability improvements so you can finally justify (or slash) those seven-figure budgets.
 - **Engineer** dashboards and alerting systems that measure outcomes, not just process health, and actually inform business decisions.
 
+---
 ## Key Takeaways
 
 - If your dashboards say “all clear” while your app store rating tanks, you’re measuring the wrong things. Customers don’t care about your server uptime—they care about their money moving, fast and error-free.
@@ -29,6 +31,7 @@ Welcome to the harsh reality of modern banking SRE: where your five-nines uptime
 
 If you want your “reliability” to mean anything outside the dev basement, it’s time to start measuring like the business depends on it—because it does.
 
+---
 ## Panel 1: Beyond Availability - Customer-Centric Banking SLIs
 
 **Scene Description**: A service level management workshop at a major bank where product owners and SRE teams are redefining their monitoring approach. The wall displays a dramatic shift in service level indicators: old dashboards showing basic system availability metrics (99.95% uptime) contrasted with new trace-derived SLIs showing customer experience metrics. Engineers are demonstrating how their trace analysis has revealed that despite high system availability, 23% of mobile payment attempts take more than 5 seconds to complete and 12% of wealth management clients experience at least one failed transaction attempt per session. The CTO looks concerned as the data shows excellent technical metrics masking poor customer experience, while a product manager demonstrates how the new trace-based SLIs directly measure what customers actually experience rather than internal system states.

@@ -4,6 +4,7 @@
 
 Welcome to the observability Thunderdome, banking edition. In this chapter, we take distributed tracing—a tool most SaaS engineers treat like a fancy debugger—and throw it into the meat grinder of banking’s hybrid, haunted-house architectures. You’ll chase transactions as they dodge through mainframes older than your parents, squeeze through regulatory bottlenecks, disappear into black-box vendor APIs, and occasionally re-emerge as customer rage-tweets or regulatory fines. Here, “end-to-end visibility” isn’t a slogan—it’s a survival tactic. If you want to keep your bank solvent, your auditors calm, and your customers not storming the call center, you’ll need to master the dark arts of tracing across generations, geographies, and governance. Forget “just install OpenTelemetry”; you’re about to learn why banking observability is where tracing tools go to cry.
 
+---
 ## Learning Objectives
 
 - **Map** hybrid banking architectures, identifying every gnarly technology boundary that mangles trace context.
@@ -16,6 +17,7 @@ Welcome to the observability Thunderdome, banking edition. In this chapter, we t
 - **Trace** scheduled and batch operations, because not everything is a cute HTTP request.
 - **Operationalize** all this without burning out your SREs or bankrupting the bank.
 
+---
 ## Key Takeaways
 
 - Banking architecture is a Frankenstein’s monster. If your tracing can’t cross mainframe/microservice boundaries, you’re blind where it matters most.
@@ -29,6 +31,7 @@ Welcome to the observability Thunderdome, banking edition. In this chapter, we t
 - “Just add tracing” is a fantasy. Effective banking observability requires context hacking, political savvy, and a willingness to wrestle legacy systems until they give up the goods.
 - Every visibility gap is a potential million-dollar loss, regulatory disaster, or PR nightmare. Trace like your job—and your bank’s future—depends on it. Because it does.
 
+---
 ## Panel 1: Banking's Hybrid Landscape - Tracing Across Generational Technologies
 
 **Scene Description**: A sprawling banking data center where old meets new. In the foreground, modern racks of microservice containers and cloud infrastructure. In the background, a mainframe system behind glass walls. Between them, middleware servers forming bridges between eras. An SRE is showing a visualization dashboard to a team of engineers, with trace lines visibly flowing from modern mobile banking services, through various middleware layers, and ultimately reaching legacy mainframe systems for core banking functions.

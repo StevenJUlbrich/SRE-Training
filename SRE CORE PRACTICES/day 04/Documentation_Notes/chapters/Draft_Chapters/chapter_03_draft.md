@@ -4,6 +4,7 @@
 
 Welcome to the forensic autopsy table of distributed systems: trace anatomy. If you think logs and dashboards alone will save you, you’re the next victim in the observability body count. In this chapter, we dissect the vital organs of trace data—spans, context propagation, identifiers, metadata, timing, and error context—revealing why most banks limp along with Frankenstein’d monitoring, unable to find the transaction corpse until the regulator demands a DNA sample. You’ll learn how to stitch together the entire crime scene, following the money trail through every system and proving transaction innocence (or guilt) beyond a shadow of a doubt. If you’re tired of “ghost transactions,” unexplained delays, and mystery failures that drive customers back to the branch, prepare for a crash course in operational forensics—because your business, and your job, depends on getting this right.
 
+---
 ## Learning Objectives
 
 - **Dissect** distributed trace anatomy to expose the critical building blocks for full-stack observability.
@@ -15,6 +16,7 @@ Welcome to the forensic autopsy table of distributed systems: trace anatomy. If 
 - **Model** and propagate error information so root causes stop hiding behind “something went wrong.”
 - **Establish** governance frameworks that ensure your observability doesn’t devolve into yet another compliance checkbox.
 
+---
 ## Key Takeaways
 
 - Logs and metrics alone are like crime scene photos without timestamps—you’ll never find the body, let alone the killer.
@@ -30,6 +32,7 @@ Welcome to the forensic autopsy table of distributed systems: trace anatomy. If 
 
 If you’re still hunting for answers by grepping through logs, you’re not an SRE—you’re just a historian for past outages. Build traces that actually solve business problems, or get ready to explain yourself to the regulator, the CFO, and your former customers.
 
+---
 ## Panel 1: The Anatomy of a Trace - Building Blocks of Observability
 
 ### Common Example of the Problem

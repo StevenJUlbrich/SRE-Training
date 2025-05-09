@@ -6,6 +6,7 @@ Welcome to the observability arms race, where banks can’t afford to fumble in 
 
 We’ll expose the tragic comedy of fragmented monitoring—where “all green” dashboards lull execs into disaster, regulatory requests turn into archaeological digs, and engineers waste career years correlating logs with nothing but caffeine and despair. Then, we’ll show you how to fight back: build unified health models, automate cross-signal correlation, and extract business gold from trace data without the usual instrumentation nightmares. By the end, you’ll see why disconnected observability isn’t just inefficient—it’s a slow-motion trainwreck for banks, their customers, and anyone who values sleep.
 
+---
 ## Learning Objectives
 
 - **Integrate** traces, logs, and metrics into a single, evidence-based investigation flow—so you stop playing “Guess the Root Cause” with half the deck missing.
@@ -16,6 +17,7 @@ We’ll expose the tragic comedy of fragmented monitoring—where “all green�
 - **Debug** incidents with synchronized log-trace views, slashing mean time to resolution and keeping your blood pressure in check.
 - **Govern** observability data with lifecycle policies that satisfy both regulators and finance—no more “storage for everything, useful for nothing.”
 
+---
 ## Key Takeaways
 
 - Fragmented observability is a seven-figure recurring tax on your bank—paid in incident costs, lost customers, and regulatory ulcers.
@@ -30,6 +32,7 @@ We’ll expose the tragic comedy of fragmented monitoring—where “all green�
 
 If you’re still thinking any of this is optional, remember: in banking, “we couldn’t find the logs” is not an acceptable answer—for auditors, customers, or your own job security.
 
+---
 ## Panel 1: The Three Pillars of Observability - Unifying Banking Visibility
 
 **Scene Description**: A banking operations center transformation in progress. One side of the room shows the past: isolated monitoring stations with separate screens for logs, metrics, and the newly added traces, with frustrated engineers switching between systems trying to correlate information manually during an incident. The other side shows the future state being implemented: unified observability workstations where the three data types are seamlessly integrated. A central visualization shows a payment transaction journey with synchronized views—the trace waterfall in the center, with contextually relevant logs automatically appearing alongside specific spans, and metrics dashboards showing system health precisely during the traced transaction's timeframe. An SRE demonstrates how selecting any component in one view automatically highlights related information in the others, creating a coherent understanding impossible with isolated tools.

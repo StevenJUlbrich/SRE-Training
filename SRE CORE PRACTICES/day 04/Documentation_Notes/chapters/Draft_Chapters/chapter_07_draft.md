@@ -4,6 +4,7 @@
 
 Welcome to the dark art of data triage for financial systems—where your dreams of "tracing everything" get obliterated by the cold, hard physics of transaction volume and budget limits. In this chapter, we rip off the Band-Aid and admit what every SRE in banking already knows: you can’t store every span, and if you try, you’ll either blow your budget or kill your observability stack during your next Black Friday. Sampling isn’t a nice-to-have; it’s the difference between actionable insight and a self-inflicted outage. Get ready to cut through the wishful thinking and learn how to sample like a ruthless actuary, not a hopeful intern. We’ll cover how to keep your trace data statistically honest, business-aligned, and regulation-proof—without turning your observability platform into the next operational root cause. If you want to avoid million-dollar mistakes and regulatory migraines, read on.
 
+---
 ## Learning Objectives
 
 - **Diagnose** the hard limits of 100% trace collection in high-volume financial systems (and why naïveté here gets expensive fast).
@@ -14,6 +15,7 @@ Welcome to the dark art of data triage for financial systems—where your dreams
 - **Engineer** retention policies that keep both your SREs and compliance officers from having panic attacks.
 - **Deploy** dynamic sampling controls that keep your observability platform from becoming a single point of failure.
 
+---
 ## Key Takeaways
 
 - Sampling isn’t a feature; it’s a shield against observability-induced outages (and CFO heart attacks). Ignore it, and your platform will eat itself alive.
@@ -27,6 +29,7 @@ Welcome to the dark art of data triage for financial systems—where your dreams
 - Sampling isn’t “set and forget.” If you’re not revisiting your strategy regularly, you’re drifting into irrelevance—or regulatory trouble.
 - In the real world, “trace everything” means “trace nothing when it matters.” Be smarter. Sample like your job depends on it—because in financial services, it does.
 
+---
 ## Panel 1: The Volume Challenge - Why Banking Systems Need Sampling Strategies
 
 **Scene Description**: A bank's operations center with wall displays showing real-time transaction metrics. The screens display staggering numbers: 15,000 payment transactions per second during peak hours, 500,000 API calls per minute across digital channels, and 8 million trace spans being generated every minute. A data engineering team is gathered around a dashboard showing storage projections that indicate without sampling, the bank would need to store 50 terabytes of trace data daily. An SRE is explaining to a group of engineers how this volume makes 100% trace capture technically infeasible and financially impractical, even for a large financial institution.

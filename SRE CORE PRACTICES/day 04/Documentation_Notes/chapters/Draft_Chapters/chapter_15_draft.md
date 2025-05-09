@@ -6,6 +6,7 @@ Welcome to the dark heart of SRE for banking: the art (and agony) of actually tr
 
 This isn’t your typical tracing fairy tale. Here, we force engineers and business folks into the same (occasionally padded) room and make them look at the same data—just from different, mutually unintelligible perspectives. You’ll learn how to build tracing that translates between TCP/IP and EBITDA, how to spot multimillion-dollar mistakes hiding behind pretty latency graphs, and why “single pane of glass” is a myth unless your glass includes business context. Bring your skepticism, your scars, and your best “I told you so” face—because this is where SRE finally meets the bottom line.
 
+---
 ## Learning Objectives
 
 - **Map** technical traces to business transactions, so your optimizations actually matter to the people who fund your salaries.
@@ -17,6 +18,7 @@ This isn’t your typical tracing fairy tale. Here, we force engineers and busin
 - **Experiment** at the component level, isolating what actually moves the needle (because “version B is better” is for amateurs).
 - **Establish** rapid feedback loops that turn real-time trace data into continuous improvement, not quarterly postmortems.
 
+---
 ## Key Takeaways
 
 - Business transaction tracing is not optional—without it, you’re optimizing for vanity metrics while bleeding revenue.
@@ -35,6 +37,7 @@ This isn’t your typical tracing fairy tale. Here, we force engineers and busin
 
 Welcome to the SRE endgame: tracing that gets you invited to the boardroom (and maybe even listened to).
 
+---
 ## Panel 1: Beyond Technical Flows - The Business Transaction Perspective
 
 **Scene Description**: A digital banking strategy session where product leaders and SRE teams are examining a new visualization approach. The screens display the same mortgage application process from two radically different perspectives. On the left, a traditional technical trace shows service calls, API requests, and database operations—comprehensible to engineers but meaningless to business stakeholders. On the right, a business transaction view of the identical data presents a completely different visualization: customer journey stages like "application submission," "document verification," "underwriting," and "decision" with business-relevant metrics for each stage such as completion rates, average times, and customer drop-off points. A product executive points excitedly at clear friction points in the customer journey that were completely invisible in the technical view, while engineers demonstrate how they can instantly shift between perspectives to connect customer experience issues with their technical root causes.

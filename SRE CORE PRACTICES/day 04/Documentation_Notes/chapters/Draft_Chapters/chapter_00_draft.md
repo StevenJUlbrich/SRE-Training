@@ -4,6 +4,7 @@
 
 Welcome to the SRE equivalent of “So, your house isn’t on fire, but your guests are all stuck in the bathroom.” This chapter rips apart the delusion that healthy servers mean happy customers. We dissect the rotten core of traditional production support—where dashboards glow green, but the business is hemorrhaging trust, revenue, and regulatory goodwill. Observability isn’t just a buzzword; it’s about dragging your monitoring out of the Stone Age and shining a light on the tangled mess that is real-world customer experience. Prepare for a ruthless audit of support-as-usual, followed by a blueprint for evolving into a data-driven, business-saving SRE powerhouse. Spoiler alert: ignorance isn’t bliss—it’s expensive.
 
+---
 ## Learning Objectives
 
 - **Diagnose** why “green dashboards” often mean nothing for the actual customer experience.
@@ -16,6 +17,7 @@ Welcome to the SRE equivalent of “So, your house isn’t on fire, but your gue
 - **Evolve** incident response from firefighting to continuous, evidence-based improvement.
 - **Lead** a progressive transformation in support teams without sparking a mass exodus.
 
+---
 ## Key Takeaways
 
 - “All green” dashboards are the adult equivalent of hiding under the covers during a home invasion. Customers don’t care if your CPU is bored—they care if their money disappears.
@@ -28,6 +30,7 @@ Welcome to the SRE equivalent of “So, your house isn’t on fire, but your gue
 - SRE transformation isn’t a magical overnight fix. Change too fast and you hemorrhage staff; too slow and you stagnate. Progress is measured in real capability gains, not tool licenses.
 - Your business case for observability isn’t “it’s cool tech”—it’s “here’s how we stopped losing millions.” If you can’t draw a straight line from your dashboards to dollars, you’re doing it wrong.
 
+---
 ## Panel 1: The Invisible Customer Journey - Beyond Component Health
 
 **Scene Description**: A banking support center where two teams work side by side. The monitoring team stares at dashboards showing all green system metrics (CPU, memory, network) for payment processing systems. Meanwhile, the customer service team's phones light up with complaints about failed mobile transfers despite receiving success messages. The disconnect between system metrics and customer reality is visibly frustrating both teams.

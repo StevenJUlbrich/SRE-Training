@@ -4,6 +4,7 @@
 
 Welcome to the compliance jungle, where regulators prowl and audit trails are the only thing standing between your business and a multimillion-dollar mauling. This chapter rips the mask off traditional, panic-driven compliance and shows how distributed tracing turns compliance from a paper-pushing liability into a living, breathing force multiplier. Forget scrambling through haystacks of logs or praying your documentation matches reality—trace-based compliance means you show, not tell. Regulators want proof? You hit play. Your audit trails don’t just withstand scrutiny; they laugh in the face of tampering. We’ll dissect evidence capture, audit integrity, cross-border regulatory acrobatics, and real-time compliance monitoring—all with the cold-blooded efficiency your CFO and your sleep schedule crave. If you’re still duct-taping logs together or running reporting teams like medieval scribes, buckle up: this is your roadmap out of the dark ages.
 
+---
 ## Learning Objectives
 
 - **Implement** compliance-first tracing that automatically captures regulatory evidence as part of normal business operations.
@@ -15,6 +16,7 @@ Welcome to the compliance jungle, where regulators prowl and audit trails are th
 - **Collaborate** with compliance, engineering, and business teams to map regulatory requirements to trace attributes and evidence flows.
 - **Evaluate** and remediate evidence gaps before they become regulatory nightmares.
 
+---
 ## Key Takeaways
 
 - Most “compliance” documentation is theater—distributed tracing forces you to show your work, not just write fiction for auditors.
@@ -30,6 +32,7 @@ Welcome to the compliance jungle, where regulators prowl and audit trails are th
 
 Welcome to compliance that actually works. Or, as the auditors call it: “about damn time.”
 
+---
 ## Panel 1: From Reactive Documentation to Proactive Evidence - The Compliance Transformation
 
 **Scene Description**: A regulatory examination room at a major bank where compliance officers and technology leaders are presenting their trace-based compliance approach to financial regulators. Instead of the traditional scenario—frantically gathering documentation after receiving examiner requests—the bank team confidently navigates an interactive compliance portal built directly on their tracing platform. Wall screens display comprehensive audit trails of payment transactions automatically captured through distributed tracing, with every regulatory checkpoint, verification step, and compliance decision clearly documented and timestamped. The lead examiner looks impressed as the compliance officer demonstrates how the system provides instant, tamper-evident evidence for any transaction selected, showing the complete chain of regulatory controls in action rather than theoretical documentation of what should happen.

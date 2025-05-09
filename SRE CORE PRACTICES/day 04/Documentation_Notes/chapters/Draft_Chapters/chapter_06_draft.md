@@ -6,6 +6,7 @@ Welcome to the seven-layer cake of tracing hell—served up fresh in banking’s
 
 ______________________________________________________________________
 
+---
 ## Learning Objectives
 
 - **Identify** the highest-value customer journeys in sprawling banking technology stacks and **prioritize** tracing accordingly.
@@ -19,6 +20,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
+---
 ## Key Takeaways
 
 - Start tracing where it matters: Instrument the business-critical flows first or prepare for a parade of half-baked, useless traces.
@@ -32,6 +34,7 @@ ______________________________________________________________________
 - Evidence beats optimism. Every step—prioritization, implementation, validation—should be driven by data, not faith in best practices.
 - Tracing in banking isn’t about chasing cool tech trends—it’s about survival, compliance, and keeping your job when the next outage hits. Treat it accordingly.
 
+---
 ## Panel 1: Instrumentation Strategy - Where to Begin in Complex Banking Environments
 
 **Scene Description**: A whiteboard planning session in a bank's technology center. A diverse team of engineers—representing different banking domains—gather around a system architecture diagram covering an entire wall. The diagram shows the bank's complex technology landscape: mobile apps, web portals, APIs, middleware, payment processing services, core banking systems, and mainframes. An SRE lead is using colored markers to highlight different services, creating a heat map of customer impact. Critical customer journeys are traced in red, showing the highest-priority flows for initial instrumentation, while arrows indicate the planned phased rollout of tracing capabilities across the organization.

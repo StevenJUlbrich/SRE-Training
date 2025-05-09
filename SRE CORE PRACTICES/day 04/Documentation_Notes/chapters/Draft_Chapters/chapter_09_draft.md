@@ -4,6 +4,7 @@
 
 Welcome to the banking sector’s version of CSI: Root Cause Analysis, where every second lost to clueless finger-pointing is a second you’re hemorrhaging cash and customer trust. This chapter rips the mask off traditional incident response — no more dashboard whack-a-mole, no more “it’s not my system” posturing. Instead, you’ll get a guided tour through the forensic science of distributed tracing: the power tool that lets you hunt down invisible bugs, untangle multi-million-dollar transaction failures, and preempt the next headline-grabbing outage before it tanks your quarterly numbers. We’ll dissect real banking horror stories, show you how to kill the blame game, and teach you to weaponize evidence over ego. If you’re still doing postmortems based on war stories and collective amnesia, prepare to have your illusions (and maybe your job security) shattered.
 
+---
 ## Learning Objectives
 
 - **Apply** trace-driven investigation methods to root out causes of complex banking incidents without falling for misleading “green” dashboards.
@@ -14,6 +15,7 @@ Welcome to the banking sector’s version of CSI: Root Cause Analysis, where eve
 - **Leverage** automated root cause detection using ML-powered trace analysis, so you can finally keep up with systems that scale faster than your headcount.
 - **Correlate** technical failures with measurable business impact, ensuring your engineering priorities actually move the revenue needle.
 
+---
 ## Key Takeaways
 
 - Tracing isn’t a nice-to-have; it’s your only shot at surviving modern banking outages. Relying on green dashboards is like checking the weather by looking out one window in a hurricane.
@@ -30,6 +32,7 @@ ______________________________________________________________________
 
 This is the difference between running a resilient bank and running a support group for traumatized engineers. Choose wisely.
 
+---
 ## Panel 1: Beyond the Alert - Trace-Driven Root Cause Analysis
 
 **Scene Description**: A high-intensity incident response room at a major bank. Red alert notifications flash on wall monitors showing a spike in payment processing failures. Instead of frantically checking individual service dashboards, an SRE calmly pulls up a trace visualization of affected transactions. The screen shows a waterfall view of a failed payment journey with a clear visual pattern: every failing transaction shows an unusual timing gap in the same fraud verification service. The SRE expands this service's spans to reveal a deeper trace layer showing database connection pool exhaustion — a root cause invisible in traditional monitoring tools. Other team members look impressed as the SRE rapidly isolates the exact cause without disruptive all-hands investigations.

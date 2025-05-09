@@ -4,6 +4,7 @@
 
 Welcome to the dark underbelly of banking tech, where your architecture diagrams are fairy tales, and reality is a Kafkaesque web of undocumented dependencies, fragile integrations, and third-party wildcards. This chapter rips off the glossy vendor slides and makes you stare at the unfiltered, trace-derived mess that actually runs your financial systems. We’re talking about dependency mapping, critical path analysis, hidden couplings, and all the other fun ways your assumptions are dead wrong—and how that ignorance costs you millions, regulatory smackdowns, and customer rage. If you still trust your service documentation after this, I’ve got a mainframe to sell you.
 
+---
 ## Learning Objectives
 
 - **Map** real service dependencies using distributed tracing, not wishful documentation.
@@ -14,6 +15,7 @@ Welcome to the dark underbelly of banking tech, where your architecture diagrams
 - **Analyze** change impact empirically, predicting real-world blast radius instead of gambling on outdated org charts.
 - **Refactor** architecture with surgical precision, targeting the actual hairballs and bottlenecks that sabotage reliability and scaling.
 
+---
 ## Key Takeaways
 
 - Your architecture docs are bedtime stories. Trace data is the cold, hard truth.
@@ -26,6 +28,7 @@ Welcome to the dark underbelly of banking tech, where your architecture diagrams
 - Wholesale rewrites based on “best practices” are budgetary black holes. Targeted, trace-driven fixes actually move the business needle.
 - In banking, ignorance isn’t bliss—it’s expensive, embarrassing, and often career-limiting.
 
+---
 ## Panel 1: Dependency Mapping - Discovering the True Banking Service Landscape
 
 **Scene Description**: A large conference room where a banking architecture team is gathered around a wall-sized display showing two contrasting service maps of their payment processing system. On the left, their carefully documented reference architecture shows a clean, logical structure with neat service boundaries and clearly defined interactions. On the right, a dynamically generated dependency map created from actual trace data reveals a dramatically different reality—showing dozens of unexpected connections, circular dependencies, shared databases, and legacy systems absent from the official documentation. The team looks both surprised and concerned as they realize the actual system behavior differs significantly from their architectural understanding, with an SRE highlighting critical transaction flows that rely on undocumented service relationships.

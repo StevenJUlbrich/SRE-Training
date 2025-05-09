@@ -4,6 +4,7 @@
 
 Welcome to the ugly underbelly of banking systems—where transactions don’t just “go through,” they embark on a labyrinthine odyssey worthy of a Kafka novel. This chapter rips the blinders off your monitoring dashboard and hands you the ultimate magnifying glass: distributed tracing. Forget staring at green lights while customers rage on Twitter. We’re talking about following every money transfer, loan application, and trade as it slithers through a nest of microservices, legacy monsters, and third-party black boxes. We’ll show you how to expose hidden failures, track down silent transaction killers, and stop playing whack-a-mole with component metrics. If you want to survive the next incident war room with your sanity—and your job—intact, mastering traces is non-negotiable. Buckle up: we’re about to turn “I think it broke somewhere” into “Here’s exactly where, why, and how much it’s costing us.”
 
+---
 ## Learning Objectives
 
 - **Trace** transactions end-to-end across distributed, polyglot banking systems—no more guesswork.
@@ -14,6 +15,7 @@ Welcome to the ugly underbelly of banking systems—where transactions don’t j
 - **Analyze** trace data methodically to extract actionable insights, not just pretty flame graphs.
 - **Translate** technical observability into business impact, so you can justify SRE budgets and fend off compliance auditors.
 
+---
 ## Key Takeaways
 
 - Traces are the crime scene tape for your transactions—follow every bloody footprint, not just the ones that end up on your dashboard.
@@ -29,6 +31,7 @@ Welcome to the ugly underbelly of banking systems—where transactions don’t j
 
 If you’re still treating traces as a “nice to have,” you’re about to get a very expensive education.
 
+---
 ## Panel 1: What Is a Trace? The Digital Footprint of Transactions
 
 **Scene Description**: A banking operations center where an SRE team is gathered around a large display showing a visualization of a single payment transaction flowing through multiple systems. The visualization resembles a timeline with branches, showing how a customer's money transfer request moves from the mobile app through authentication, fraud checks, core banking, and finally to settlement systems. Different colored nodes represent different services, with connecting lines showing the path and timing of the request.

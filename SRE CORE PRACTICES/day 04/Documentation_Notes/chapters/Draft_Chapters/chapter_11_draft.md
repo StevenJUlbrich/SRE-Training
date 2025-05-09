@@ -4,6 +4,7 @@
 
 Welcome to the high-stakes casino of banking performance, where milliseconds aren't just numbers—they're literal bags of money walking out the door. This chapter is a guided tour of how banks regularly lose millions by ignoring the difference between “technically fine” and “actually fast enough to beat the competition.” Here, we rip apart the fantasy that “good enough” monitoring, generic query tuning, or feel-good synthetic testing will save you when Wall Street sharks and impatient customers are circling your systems. We’ll drag you through the real-world trenches: exposing how “minor” inefficiencies metastasize into abandoned transactions, lost revenue, and customers defecting to whoever’s app doesn’t make them wait. Think of this as performance optimization with a spotlight and a sledgehammer—if you’re squeamish about finding out where the actual business pain lives, you’re in the wrong job.
 
+---
 ## Learning Objectives
 
 - **Diagnose** transaction-level performance bottlenecks using distributed tracing, not just guesswork or generic dashboards.
@@ -15,6 +16,7 @@ Welcome to the high-stakes casino of banking performance, where milliseconds are
 - **Apply** asynchronous patterns to workflows, breaking the tyranny of unnecessary customer waiting.
 - **Run** performance tests that mimic the ugly realities of production, not the best-case fantasies of QA engineers.
 
+---
 ## Key Takeaways
 
 - If you’re profiling performance in banking and not using distributed tracing, you’re basically blindfolded and throwing darts at your bonus.
@@ -28,6 +30,7 @@ Welcome to the high-stakes casino of banking performance, where milliseconds are
 - Every millisecond matters, but not every millisecond is worth fixing. Evidence-based SRE means you chase the ones that actually move the business needle, not just the ones that make pretty graphs.
 - If your team can’t trace, measure, and prove the business impact of optimizations, you’re not doing SRE—you’re just doing busywork.
 
+---
 ## Panel 1: Performance Profiling - Where Banking Milliseconds Matter
 
 **Scene Description**: A trading floor optimization lab where engineers and business analysts are studying transaction traces from the bank's equity trading platform. Multiple screens display waterfall visualizations of the same trade execution flow with timing data at millisecond resolution. Engineers have highlighted specific components in the trace where unexpected latency appears - a seemingly innocuous 50ms delay in reference data lookups that occurs consistently. Market analysts demonstrate how this small delay impacts trading execution, showing that during market volatility, competitors execute similar trades 70-100ms faster. A business impact chart reveals that this seemingly minor performance difference translates to approximately $3.2 million in annual trading advantage lost to competitors with more optimized systems.
