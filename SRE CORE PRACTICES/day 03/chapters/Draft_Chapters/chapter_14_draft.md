@@ -1,5 +1,3 @@
-I'll expand Chapter 14's scaffold on "Machine Learning for Log Analysis" by adding the requested sections for each panel while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 14: Machine Learning for Log Analysis - Finding the Needle in the Haystack
 
 ## Chapter Overview

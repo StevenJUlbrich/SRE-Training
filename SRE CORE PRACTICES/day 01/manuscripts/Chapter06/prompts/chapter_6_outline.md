@@ -1,6 +1,6 @@
-## Chapter 6 – “Metrics Aren’t Just Numbers — They’re Clues”
+# Chapter 6 – “Metrics Aren’t Just Numbers — They’re Clues”
 
-### 🧠 Primary Concept
+## 🧠 Primary Concept
 
 **Metrics are not status—they’re storytelling.** What you track is what you believe.
 
@@ -121,14 +121,14 @@ ______________________________________________________________________
 
 ## 📋 Panel Beat-to-Concept Map
 
-| Beat # | Panel Title | Teaching Goal |
+| Beat # | Panel Title              | Teaching Goal                            |
 | ------ | ------------------------ | ---------------------------------------- |
-| 1 | The Phantom Spike | Misleading metrics without user signal |
-| 2 | Cardinality Explosion | High variation breaks aggregation |
-| 3 | The Naming Nightmare | Name = clarity; obfuscation causes delay |
-| 4 | Metric Hygiene Time | Hierarchy supports diagnosis |
-| 5 | Symptoms vs Signals | Surface-level health ≠ real pain |
-| 6 | Dashboard Cleanup Begins | Simplicity = clarity |
-| 7 | Reality Revealed | Correct metrics narrate failure flow |
-| 8 | Lesson Locked In | Signal is what reveals the story |
-| 9 | Epilogue Panel | Reflection on telemetry literacy |
+| 1      | The Phantom Spike        | Misleading metrics without user signal   |
+| 2      | Cardinality Explosion    | High variation breaks aggregation        |
+| 3      | The Naming Nightmare     | Name = clarity; obfuscation causes delay |
+| 4      | Metric Hygiene Time      | Hierarchy supports diagnosis             |
+| 5      | Symptoms vs Signals      | Surface-level health ≠ real pain         |
+| 6      | Dashboard Cleanup Begins | Simplicity = clarity                     |
+| 7      | Reality Revealed         | Correct metrics narrate failure flow     |
+| 8      | Lesson Locked In         | Signal is what reveals the story         |
+| 9      | Epilogue Panel           | Reflection on telemetry literacy         |

@@ -1,5 +1,3 @@
-I'll expand the Chapter 15 scaffold into a complete scaffold following the chapter_layout.md format. For each panel, I'll add the requested elements while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 15: Observability Pipelines - The Future of Banking Logs
 
 ## Chapter Overview

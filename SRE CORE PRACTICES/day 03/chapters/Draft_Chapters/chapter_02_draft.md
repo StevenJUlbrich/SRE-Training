@@ -386,7 +386,7 @@ Log format determines not just how information is stored, but what analysis capa
 
 A large national bank was struggling with troubleshooting issues in their ATM network, which generated millions of transaction logs daily across 4,200 machines. Their legacy logging system produced unstructured text logs with information embedded in variable message formats:
 
-```
+```text
 07/15/2023 08:42:15 - ATM Transaction - Terminal ID: ATM-1234 - Card processed for customer, withdrawal requested for $300.00 - Approved
 07/15/2023 08:45:22 - ATM Transaction - Terminal ID: ATM-2241 - Error processing transaction - Card read error - Customer card returned
 ```
@@ -478,21 +478,21 @@ Log anatomy isn't static—it evolves as systems, technologies, and practices ma
 
 A regional bank recently faced significant challenges during their digital transformation initiative because their logging capabilities varied dramatically across their technology landscape. Their evolutionary stages were clearly visible across different systems:
 
-**Stage 1 - Basic Existence Logging (Core Banking Platform, 1990s)**
+>**Stage 1 - Basic Existence Logging (Core Banking Platform, 1990s)**
 
-```
+```text
 07/15/2023 08:42:15 TRANSACTION COMPLETE
 07/15/2023 08:45:22 TRANSACTION FAILED
 ```
 
-**Stage 2 - Enhanced Basic Logging (ATM Network, 2000s)**
+>**Stage 2 - Enhanced Basic Logging (ATM Network, 2000s)**
 
-```
+```text
 07/15/2023 08:42:15 - ATM-1234 - WITHDRAWAL - $300.00 - APPROVED
 07/15/2023 08:45:22 - ATM-2241 - WITHDRAWAL - $500.00 - FAILED - INSUFFICIENT FUNDS
 ```
 
-**Stage 3 - Early Structured Logging (Online Banking, 2010s)**
+>**Stage 3 - Early Structured Logging (Online Banking, 2010s)**
 
 ```json
 {
@@ -506,7 +506,7 @@ A regional bank recently faced significant challenges during their digital trans
 }
 ```
 
-**Stage 4 - Advanced Observability (Mobile Banking, Current)**
+>**Stage 4 - Advanced Observability (Mobile Banking, Current)**
 
 ```json
 {

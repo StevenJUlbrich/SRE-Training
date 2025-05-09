@@ -48,7 +48,7 @@ A major retail bank recently experienced a critical incident when their wire tra
 
 The operations team immediately began investigating logs, but faced a significant challenge due to unstructured logging formats across their payment processing stack:
 
-```
+```log
 [05/15/2023 14:32:21] PaymentService - Processing international wire transfer #TRX291748365 for customer ID 583921 to SWIFT: DEUTDEFFXXX for EUR 250,000.00
 [2023-05-15T14:32:22.456Z] INFO: TransactionValidator validating transaction with ID TRX291748365
 May 15 14:32:23.789 | ROUTING | Determining correspondent bank for destination DEUTDEFFXXX
@@ -128,7 +128,7 @@ An investment bank's trading platform recently faced a critical incident where c
 
 The order management system used traditional unstructured logging:
 
-```
+```log
 [2023-06-08 09:45:23.456] OrderProcessor - Processing order ID ORD-3947582 for customer ACCT-58294 for symbol AAPL quantity 5000 price market executed at 186.47 exchange NYSE status COMPLETED with commission 250.00 USD
 [2023-06-08 09:47:12.789] OrderProcessor - Processing order ID ORD-3947591 for customer ACCT-62385 for symbol MSFT quantity 2500 price market executed at 337.22 exchange NASDAQ status COMPLETED with commission 175.00 USD
 [2023-06-08 09:48:35.123] OrderProcessor - Processing order ID ORD-3947606 for customer ACCT-71945 for symbol GOOGL quantity 1000 price market executed at 124.67 exchange NASDAQ status COMPLETED with commission 125.00 USD
@@ -537,7 +537,7 @@ A regional bank was experiencing intermittent performance issues with their onli
 
 The initial investigation used traditional text-based log analysis tools, searching for error messages and timeout indicators with increasingly complex regular expressions:
 
-```
+```bash
 grep -E "timeout|exceeded|slow|latency" banking-service.log | grep -v "debug" | sort -k1,2
 ```
 

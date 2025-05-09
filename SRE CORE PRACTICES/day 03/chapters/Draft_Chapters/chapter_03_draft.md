@@ -123,7 +123,7 @@ The support team spent three days attempting to diagnose the issue, restarting s
 
 After enabling DEBUG logging in the production environment, a completely different picture emerged. The DEBUG logs revealed critical details hidden from the standard logging levels:
 
-```
+```log
 2023-04-15 14:32:21.345Z [DEBUG] WireTransferService - Processing transfer request: ID=WT12345, Amount=$1,750,000.00, Destination=DEUTDEFFXXX
 2023-04-15 14:32:21.456Z [DEBUG] WireTransferService - Fraud check initiated: ID=WT12345, CheckType=LARGE_VALUE
 2023-04-15 14:32:23.789Z [DEBUG] WireTransferService - Database query executed: SELECT compliance_status FROM customer_profiles WHERE id=CUS42789, ExecutionTime=1874ms
@@ -203,7 +203,7 @@ A major investment bank's equity trading platform recently experienced a signifi
 
 Three weeks after implementing a comprehensive logging hierarchy with proper WARN level implementation, the monitoring system detected a similar emerging pattern. The WARN logs revealed:
 
-```
+```log
 2023-05-10 09:15:23.456Z [WARN] OrderRoutingService - Market data response time elevated: 235ms (threshold: 200ms), Exchange: NYSE
 2023-05-10 09:18:45.789Z [WARN] OrderRoutingService - Market data response time elevated: 287ms (threshold: 200ms), Exchange: NYSE
 2023-05-10 09:20:12.345Z [WARN] OrderRoutingService - Connection pool utilization high: 82% (threshold: 80%), Pool: market-data-client
@@ -291,7 +291,7 @@ A large commercial bank recently experienced a significant mobile banking outage
 
 The timeline of the incident showed a concerning pattern:
 
-```
+```log
 07:22:15 [ERROR] PaymentService - Unable to process payment for user U12345: Timeout connecting to authorization service
 07:22:43 [ERROR] PaymentService - Unable to process payment for user U35789: Timeout connecting to authorization service
 ... (similar errors repeating)
@@ -377,7 +377,7 @@ After implementing dynamic verbosity, a similar scenario played out very differe
 
 The adaptive logging system captured this diagnostic entry:
 
-```
+```log
 2023-06-15 15:32:45.678Z [INFO] DynamicLoggingManager - Elevated logging level for component 'FraudDetectionService' to DEBUG. Trigger: Declined transaction rate for corporate cards exceeded threshold (current: 4.2%, threshold: 2.5%)
 
 2023-06-15 15:32:45.789Z [DEBUG] FraudDetectionService - Rule evaluation for transaction ID: TX438901, Card type: Corporate, Amount: $8,750.00
@@ -463,11 +463,11 @@ Emergency analysis revealed that the production environment was running with ful
 
 A controlled test confirmed the severe impact of inappropriate logging levels:
 
-| Logging Configuration | Max Throughput | Avg Latency | Memory Usage | CPU Utilization |
+| Logging Configuration  | Max Throughput | Avg Latency | Memory Usage | CPU Utilization |
 | ---------------------- | -------------- | ----------- | ------------ | --------------- |
-| All DEBUG | 820 TPS | 215ms | 82% | 94% |
-| Production-Optimized | 2,240 TPS | 78ms | 45% | 62% |
-| With Dynamic Verbosity | 2,180 TPS | 81ms | 47% | 65% |
+| All DEBUG              | 820 TPS        | 215ms       | 82%          | 94%             |
+| Production-Optimized   | 2,240 TPS      | 78ms        | 45%          | 62%             |
+| With Dynamic Verbosity | 2,180 TPS      | 81ms        | 47%          | 65%             |
 
 After implementing a properly balanced logging strategy—INFO level for normal operations with strategic WARN points and dynamic DEBUG capability for targeted diagnostics—the system successfully handled the promotional traffic with peak throughput of 1,950 TPS, well within the design parameters.
 

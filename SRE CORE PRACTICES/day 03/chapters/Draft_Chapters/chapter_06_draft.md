@@ -522,7 +522,7 @@ A leading payment processor experienced mounting customer complaints about incon
 
 The operations team faced a significant challenge investigating these intermittent performance issues because their logging only captured basic event occurrence without comprehensive timing context:
 
-```
+```log
 2023-07-15 14:32:21.345 INFO PaymentService - Processing payment request for user U12345
 2023-07-15 14:32:24.789 INFO FraudCheckService - Evaluating transaction risk for payment P67890
 2023-07-15 14:32:25.012 INFO AuthorizationService - Authorizing payment P67890
@@ -533,7 +533,7 @@ These logs confirmed transactions were completing successfully but provided no v
 
 After multiple unsuccessful investigation attempts using traditional monitoring, the team implemented comprehensive lifecycle context logging that automatically captured detailed timing information for each processing phase:
 
-```
+```log
 2023-07-15 14:32:21.345 INFO PaymentService - Processing payment request for user U12345, paymentId=P67890, requestStartTime=2023-07-15T14:32:21.345Z
 2023-07-15 14:32:21.456 INFO TokenizationService - Beginning card tokenization, paymentId=P67890, phaseStartTime=2023-07-15T14:32:21.456Z
 2023-07-15 14:32:21.678 INFO TokenizationService - Completed card tokenization, paymentId=P67890, duration=222ms
@@ -656,7 +656,7 @@ A retail bank was experiencing a surge in customer complaints about declined tra
 
 The operations team struggled to perform effective analysis due to missing business context in their technical logs:
 
-```
+```log
 2023-08-24 09:45:32.123 ERROR PaymentService - Transaction declined, transactionId=T1234567, errorCode=INSUFFICIENT_FUNDS
 2023-08-24 10:12:43.456 ERROR PaymentService - Transaction declined, transactionId=T1234568, errorCode=INSUFFICIENT_FUNDS
 2023-08-24 11:37:21.789 ERROR PaymentService - Transaction declined, transactionId=T1234569, errorCode=INSUFFICIENT_FUNDS
@@ -674,7 +674,7 @@ This fragmented process typically took 8-12 minutes per customer inquiry, creati
 
 After implementing business context enrichment, the same transaction logs provided comprehensive information:
 
-```
+```log
 2023-08-24 09:45:32.123 ERROR PaymentService - Transaction declined, transactionId=T1234567, errorCode=INSUFFICIENT_FUNDS, 
 businessContext: {
   "transactionType": "card_payment",
