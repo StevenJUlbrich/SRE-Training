@@ -29,7 +29,7 @@ Their learning journeys could parallel the reader's progression through the begi
 - Learning goal: Wants to build reliability into applications from the start
 - Often says: "But why does it work that way in production?"
 
-## 2. Emmanuel "Manu" Gitonga
+## 2. Emmanuel "Katherine" Gitonga
 
 **Physical Description:**
 - male

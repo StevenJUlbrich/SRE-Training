@@ -20,7 +20,7 @@ This conversation focused on developing comprehensive Site Reliability Engineeri
 
 ### Learner Characters
 1. **Wanjiru Maina** (Female, 24) - Junior developer with strong coding skills but limited ops experience
-2. **Emmanuel "Manu" Gitonga** (Male, 31) - Production support veteran transitioning to SRE
+2. **Emmanuel "Katherine" Gitonga** (Male, 31) - Production support veteran transitioning to SRE
 3. **Aisha Omar** (Female, 29) - Former business analyst bridging business and technical requirements
 4. **Daniel "Danny" Mutua** (Male, 26) - Startup hire adapting to banking environment
 5. **Njeri Wachira** (Non-binary, 33) - Network engineer learning full-stack reliability

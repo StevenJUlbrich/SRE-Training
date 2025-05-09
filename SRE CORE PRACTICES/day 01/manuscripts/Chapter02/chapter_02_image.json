@@ -3,13 +3,13 @@
         {
             "panel": 1,
             "filename": "images/panel1_mystery_crash.png",
-            "scene_description": "Early-morning Nairobi HQ: muted-olive cubicles and charcoal dashboards glow as Manu squints at a flat CPU graph while a teller’s escalation ticket pops up on Slack.",
+            "scene_description": "Early-morning Nairobi HQ: muted-olive cubicles and charcoal dashboards glow as Katherine squints at a flat CPU graph while a teller’s escalation ticket pops up on Slack.",
             "characters_in_frame": [
-                "Emmanuel \"Manu\" Gitonga",
+                "Emmanuel \"Katherine\" Gitonga",
                 "Wanjiru Maina"
             ],
             "speech_bubbles": {
-                "Manu": "CPU’s fine. Memory’s fine.",
+                "Katherine": "CPU’s fine. Memory’s fine.",
                 "Slack-popup": "Ticket #5219 – wire transfers failing!"
             },
             "narration": "A user scream versus a green dashboard—the first hint that the system’s lying."
@@ -21,7 +21,7 @@
             "characters_in_frame": [
                 "Wanjiru Maina",
                 "Juana Torres",
-                "Emmanuel \"Manu\" Gitonga"
+                "Emmanuel \"Katherine\" Gitonga"
             ],
             "speech_bubbles": {
                 "Wanjiru": "Error-rate panel shows zero.",
@@ -35,7 +35,7 @@
             "scene_description": "Close-up on Juana’s terminal: log lines scroll in off-white monospace, each missing a trace_id; charcoal shadows frame her focused eyes behind the screen glow.",
             "characters_in_frame": [
                 "Juana Torres",
-                "Emmanuel \"Manu\" Gitonga",
+                "Emmanuel \"Katherine\" Gitonga",
                 "Wanjiru Maina"
             ],
             "speech_bubbles": {
@@ -49,11 +49,11 @@
             "scene_description": "Flashback inset: a junior dev unchecks ‘enableTracing’ in a pull-request diff; foreground shows current Git blame view in system blue highlighting the change.",
             "characters_in_frame": [
                 "Juana Torres",
-                "Emmanuel \"Manu\" Gitonga",
+                "Emmanuel \"Katherine\" Gitonga",
                 "Wanjiru Maina"
             ],
             "speech_bubbles": {
-                "Manu": "We chased metrics for twenty minutes…",
+                "Katherine": "We chased metrics for twenty minutes…",
                 "Juana": "The clue was sitting in Git history."
             },
             "narration": "A silent feature-flag turns observability off at the source."
@@ -82,7 +82,7 @@
             "characters_in_frame": [
                 "Hector Alvarez",
                 "Juana Torres",
-                "Emmanuel \"Manu\" Gitonga",
+                "Emmanuel \"Katherine\" Gitonga",
                 "Wanjiru Maina"
             ],
             "speech_bubbles": {
@@ -96,12 +96,12 @@
             "scene_description": "Grafana-Tempo explodes in system-blue nodes; the ledger span glows rust-red at 1 290 ms. Juana overlays the once-empty trace map for stark contrast.",
             "characters_in_frame": [
                 "Juana Torres",
-                "Emmanuel \"Manu\" Gitonga",
+                "Emmanuel \"Katherine\" Gitonga",
                 "Wanjiru Maina",
                 "Hector Alvarez"
             ],
             "speech_bubbles": {
-                "Manu": "That ledger hop is 7× slower!",
+                "Katherine": "That ledger hop is 7× slower!",
                 "Wanjiru": "And every failed wire dies right there."
             },
             "narration": "Restored spans reveal the true bottleneck in seconds."
@@ -109,9 +109,9 @@
         {
             "panel": 8,
             "filename": "images/panel8_team_realization.png",
-            "scene_description": "CI dashboard with a bright-green ‘Telemetry Gate ✔’ badge; Manu and Wanjiru fist-bump while Hector watches, half-smile hidden behind a coffee mug.",
+            "scene_description": "CI dashboard with a bright-green ‘Telemetry Gate ✔’ badge; Katherine and Wanjiru fist-bump while Hector watches, half-smile hidden behind a coffee mug.",
             "characters_in_frame": [
-                "Emmanuel \"Manu\" Gitonga",
+                "Emmanuel \"Katherine\" Gitonga",
                 "Wanjiru Maina",
                 "Juana Torres",
                 "Hector Alvarez"

@@ -48,13 +48,13 @@ Financial institutions must recognize that excessive logging isn't just ineffici
 
 ## Scene Description
 
-**The Metrics Don't Match** – Meanwhile, Manu notes the latency graph looks clean… but user complaints are rising. 
+**The Metrics Don't Match** – Meanwhile, Katherine notes the latency graph looks clean… but user complaints are rising. 
    
-*Expanded narrative: At another workstation, Manu studies the system dashboard. "Latency looks completely normal," he reports, pointing to a steady graph line showing response times well within thresholds. He switches to another screen showing the customer support queue. "But complaints about slow transactions have doubled in the last hour." He shakes his head. "Something's wrong with our metrics if users are suffering but our dashboards look fine."*
+*Expanded narrative: At another workstation, Katherine studies the system dashboard. "Latency looks completely normal," he reports, pointing to a steady graph line showing response times well within thresholds. He switches to another screen showing the customer support queue. "But complaints about slow transactions have doubled in the last hour." He shakes his head. "Something's wrong with our metrics if users are suffering but our dashboards look fine."*
 
 ## Teaching Narrative
 
-This scene highlights a critical observability principle: when metrics contradict user experience, the metrics are wrong. Manu's observation exposes the gap between technical measurements and actual customer experience—a gap that often exists because we're measuring the wrong things or measuring them incorrectly.
+This scene highlights a critical observability principle: when metrics contradict user experience, the metrics are wrong. Katherine's observation exposes the gap between technical measurements and actual customer experience—a gap that often exists because we're measuring the wrong things or measuring them incorrectly.
 
 ## Reality Verification Explained
 
@@ -72,7 +72,7 @@ In financial services, this verification is essential. Banking customers experie
 
 ## The Measurement Gap
 
-The contradiction Manu observes—normal latency graphs despite increasing customer complaints—reveals a common measurement gap: technical metrics that fail to capture the actual user experience. This happens through various mechanisms:
+The contradiction Katherine observes—normal latency graphs despite increasing customer complaints—reveals a common measurement gap: technical metrics that fail to capture the actual user experience. This happens through various mechanisms:
 
 - Averages that hide outliers affecting real users
 - Sampling that misses problematic transactions
@@ -91,7 +91,7 @@ To implement effective reality verification in financial systems:
 
 4. **Synthetic Customer Transactions**: Implement continuous testing that simulates real user journeys and reports on actual experience
 
-Manu's observation that "something's wrong with our metrics" represents a crucial shift in thinking—from trusting dashboards to questioning them. This skepticism is the foundation of effective observability, particularly in financial systems where the gap between metrics and reality can have significant business consequences.
+Katherine's observation that "something's wrong with our metrics" represents a crucial shift in thinking—from trusting dashboards to questioning them. This skepticism is the foundation of effective observability, particularly in financial systems where the gap between metrics and reality can have significant business consequences.
 
 ## Panel 3: The Unreadable Log - Structured Context
 

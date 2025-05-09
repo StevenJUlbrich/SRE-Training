@@ -20,7 +20,7 @@ Create a markdown training chapter titled:
 
 This chapter teaches that dashboards showing green don’t mean a system is healthy. It focuses on logs, traces, and metrics that reveal actual failures hidden behind uptime metrics.
 
-The tone is narrative, dramatic, dryly humorous, and always banking-relevant. Use fictional SRE Hector Alvarez as the main teacher. Include a junior engineer (Wanjiru), a VP (Manu), and a DB engineer (Juana).
+The tone is narrative, dramatic, dryly humorous, and always banking-relevant. Use fictional SRE Hector Alvarez as the main teacher. Include a junior engineer (Wanjiru), a VP (Katherine), and a DB engineer (Juana).
 
 ---
 

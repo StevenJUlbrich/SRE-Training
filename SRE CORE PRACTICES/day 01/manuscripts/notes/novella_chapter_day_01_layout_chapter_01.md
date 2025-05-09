@@ -97,9 +97,9 @@ Remember Hector's wisdom: dashboards aren't just for admiring - they're diagnost
 
 ## Scene Desciption
 
-**What's Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Manu says "CPU looks fine though." 
+**What's Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Katherine says "CPU looks fine though." 
    
-   *Expanded narrative: Manu, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
+   *Expanded narrative: Katherine, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
 
 ## Teaching Narrative
 

@@ -1,10 +1,10 @@
 ### Single-Panel Comic Prompt — “Log Context Revelation”
 
 **Scene**  
-- A close-up of Manu’s expansive 32-inch monitor, split into two panes. The left pane displays rapid INFO lines in a dull gray, while the right pane features a single JSON log entry with fields color-coded: `trace_id` in System Blue (#3478F6) and `error` in Rust Red (#8B2E2E). Above the monitor, the Jaeger UI floats in an augmented-reality style, semi-transparent, showcasing waterfall bars in deep amber (#C97E38). An empty Red Bull can is precariously balanced on the monitor base, casting a fluorescent reflection that highlights Manu’s furrowed brow.
+- A close-up of Katherine’s expansive 32-inch monitor, split into two panes. The left pane displays rapid INFO lines in a dull gray, while the right pane features a single JSON log entry with fields color-coded: `trace_id` in System Blue (#3478F6) and `error` in Rust Red (#8B2E2E). Above the monitor, the Jaeger UI floats in an augmented-reality style, semi-transparent, showcasing waterfall bars in deep amber (#C97E38). An empty Red Bull can is precariously balanced on the monitor base, casting a fluorescent reflection that highlights Katherine’s furrowed brow.
 
 **Characters In Frame**  
-1. **Manu** — 50-year-old woman, 6'2", lean build, formal presence, medium-length salt-and-pepper hair, deep blue eyes, wearing a button-up shirt with rolled sleeves.  
+1. **Katherine** — 50-year-old woman, 6'2", lean build, formal presence, medium-length salt-and-pepper hair, deep blue eyes, wearing a button-up shirt with rolled sleeves.  
    - **Appearance:** Distinguished yet approachable, with a focus on the task at hand.  
    - **Motion:** Poised, with a slight lean towards the monitor.  
    - **Props:** Digital watch, monitor setup.
@@ -20,7 +20,7 @@
    - **Props:** Tablet, alert screen.
 
 **Dialogue (Speech Bubbles, Off-White #EDEDED, Tails Pointing to Speakers)**  
-- **Manu:** “The logs tell me nothing.”  
+- **Katherine:** “The logs tell me nothing.”  
 - **Hector:** “A log without context is a liar.”
 
 **Narration**  
@@ -44,7 +44,7 @@
 - **Highlights:** Rust Red #8B2E2E, Deep Amber #C97E38
 
 **Constraints**  
-- Characters arranged left-to-right consistent with speaking order: Manu, Hector, Juana.  
+- Characters arranged left-to-right consistent with speaking order: Katherine, Hector, Juana.  
 - Speech bubbles stay clear of panel edges and ambient elements.  
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.  
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.  

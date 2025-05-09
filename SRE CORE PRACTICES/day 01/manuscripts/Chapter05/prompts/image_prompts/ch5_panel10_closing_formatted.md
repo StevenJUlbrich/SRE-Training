@@ -14,7 +14,7 @@
    - **Motion:** Stands with intentional presence, often hovers behind dashboards.  
    - **Props:** Tablet, alert screen.  
 
-3. **Manu** — 50-year-old woman, 6'2", lean build, medium length salt-and-pepper hair, deep blue eyes, wearing a button-up shirt with rolled sleeves, digital watch.  
+3. **Katherine** — 50-year-old woman, 6'2", lean build, medium length salt-and-pepper hair, deep blue eyes, wearing a button-up shirt with rolled sleeves, digital watch.  
    - **Appearance:** Distinguished yet approachable.  
 
 4. **Omar** — 28-year-old man, 5'10", extroverted, confident stance, medium brown skin, buzzed haircut, brown eyes, wearing a layered tech-casual outfit (button-up over tee), often with earbuds or carrying a tablet.  

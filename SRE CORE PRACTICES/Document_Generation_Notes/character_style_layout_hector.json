@@ -1,0 +1,812 @@
+{
+    "characters": {
+        "Hector": {
+            "visual_tags": [
+                "49-year-old Mexican man",
+                "medium build, 5'10\" (178 cm)",
+                "weathered medium-brown complexion",
+                "angular face with defined jawline",
+                "short, neatly trimmed salt-and-pepper beard",
+                "eye color intense hazel with visible crow's feet",
+                "serious and analytical expression",
+                "dark henley shirt",
+                "dark technical jeans",
+                "red RHEL baseball cap"
+            ],
+            "required_constraints": [
+                "Never appears clean-shaven",
+                "Always wears a baseball cap, never a beanie or other headwear",
+                "Baseball cap is always red, never any other color",
+                "Baseball cap is always a RHEL baseball cap, never any other brand"
+            ],
+            "motion_rules": "Moves with intentional, focused energy; rarely gestures unless explaining failure.",
+            "voice_tone": "Serious, analytical, sarcastic when annoyed or unimpressed.",
+            "prop_loadout": [
+                "stainless steel mechanical watch",
+                "ceramic black coffee mug",
+                "mechanical keyboard with no RGB lighting",
+                "leather notebook on desk"
+            ],
+            "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated.",
+            "role": "SRE Trainer"
+        },
+        "Daniel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "5'2\"",
+                "lanky with a runner's physique",
+                "casual attire with tech company hoodies",
+                "short, curly hair with slight wave",
+                "light brown skin with a few freckles",
+                "eye color light blue"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": "Dry, nerdy, often ironic",
+            "prop_loadout": [
+                "circuit board tattoo on forearm",
+                "earbuds (frequently half-in)"
+            ],
+            "appearance": "An overcaffeinated SRE in constant tension between sarcasm and stress."
+        },
+        "Juana": {
+            "visual_tags": [
+                "female",
+                "34 years old",
+                "5'7\"",
+                "calm body language",
+                "subtle intensity",
+                "short cropped blond hair",
+                "eye color icy blue",
+                "minimal makeup",
+                "tech-ready attire"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Stands still with intentional presence; tends to hover behind dashboards.",
+            "voice_tone": "Calm, direct, always a slight smile",
+            "prop_loadout": [
+                "tablet",
+                "alert screen"
+            ],
+            "appearance": "Quietly competent and always ready to call out bad monitoring logic."
+        },
+        "Claudia": {
+            "visual_tags": [
+                "female",
+                "34 years old",
+                "5'6\"",
+                "short, curly hair with slight wave",
+                "eye color green",
+                "energetic modern appearance",
+                "tech accessories",
+                "two-tone laptop case"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Animated; taps feet when impatient.",
+            "voice_tone": "Upbeat, slightly chaotic, deeply engaged",
+            "prop_loadout": [
+                "laptop case",
+                "wireless earbuds"
+            ],
+            "appearance": "An ops optimist with too many dashboards and not enough hands."
+        },
+        "Ops Lead": {
+            "visual_tags": [
+                "non-binary",
+                "24 years old",
+                "5'8\"",
+                "athletic build",
+                "short hair dyed in bright colors",
+                "quirky t-shirts with tech humor"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Dev Lead": {
+            "visual_tags": [
+                "non-binary",
+                "32 years old",
+                "5'9\"",
+                "tall and lanky",
+                "medium-length black hair often in a bun",
+                "eye color deep blue",
+                "stylish glasses",
+                "business casual with a tech twist"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Net-Eng": {
+            "visual_tags": [
+                "38 years old",
+                "5'10\"",
+                "stocky build",
+                "round face with a friendly demeanor",
+                "short hair with a slight wave",
+                "eye color dark brown",
+                "casual tech attire with a hint of geeky flair",
+                "often seen with a tablet or laptop"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Finance Analyst": {
+            "visual_tags": [
+                "female",
+                "30 years old",
+                "5'5\"",
+                "slim build",
+                "long straight hair tied in low ponytail",
+                "business casual with colorful pens"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Engineer": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'2\"",
+                "petite",
+                "simple, practical clothing",
+                "quirky pins on backpack"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Developer": {
+            "visual_tags": [
+                "male",
+                "25 years old",
+                "5'6\"",
+                "petite",
+                "short curly hair",
+                "eye color green",
+                "hoodies and jeans"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": null,
+            "prop_loadout": [],
+            "appearance": null
+        },
+        "Wanjiru": {
+            "visual_tags": [
+                "female",
+                "24 years old",
+                "5'1\" petite frame",
+                "short natural hair with purple dye streak",
+                "eye color dark brown",
+                "tech-smart casual with colorful scarves",
+                "stickers on laptop",
+                "freckles"
+            ],
+            "required_constraints": [
+                "Always asks follow-up questions",
+                "Laptop is stickered, never pristine",
+                "Prefers keyboard shortcuts, never uses trackpad"
+            ],
+            "motion_rules": "Animated hands when learning; leans forward when curious.",
+            "voice_tone": "Bright, inquisitive, occasionally overwhelmed",
+            "prop_loadout": [
+                "sticker-covered laptop",
+                "multicolor pens",
+                "annotated printouts of logs"
+            ],
+            "appearance": "Eager junior dev with the energy of someone who hasn't been broken by prod yet.",
+            "catchphrase": "But why does it work that way in production?"
+        },
+        "Emmanuel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "5'7\" solid build",
+                "closely cropped hair and trimmed goatee",
+                "light brown eyes",
+                "button-up shirts with rolled sleeves",
+                "slightly weary expression"
+            ],
+            "required_constraints": [
+                "Always wears ID badge",
+                "Carries pager even when off-call"
+            ],
+            "motion_rules": "Moves deliberately; slight limp from years of 3am troubleshooting marathons.",
+            "voice_tone": "Calm, resigned, quietly skeptical",
+            "prop_loadout": [
+                "bank ID badge",
+                "production runbook",
+                "cracked-screen Android phone"
+            ],
+            "appearance": "Mid-career support hero with one eye on the logs and one on his exit plan.",
+            "catchphrase": "There’s always a hidden dependency..."
+        },
+        "Aisha": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "5'8\" tall with elegant presence",
+                "colorful hijab",
+                "eye color deep brown",
+                "neat business attire",
+                "rectangular glasses"
+            ],
+            "required_constraints": [
+                "Hijab always coordinated with outfit",
+                "Takes paper notes, never types during calls"
+            ],
+            "motion_rules": "Composed, measured movements; often pauses before responding thoughtfully.",
+            "voice_tone": "Empathetic, strategic, and articulate",
+            "prop_loadout": [
+                "color-coded notebook",
+                "tablet with CRM dashboard"
+            ],
+            "appearance": "Strategic analyst who always brings the conversation back to human impact.",
+            "catchphrase": "How would we explain this to the customer?"
+        },
+        "Danny": {
+            "visual_tags": [
+                "male",
+                "26 years old",
+                "5'11\" lanky",
+                "tech startup hoodies",
+                "tattoo peeking out from sleeve",
+                "short blond hair, wavy",
+                "eye color dark brown"
+            ],
+            "required_constraints": [
+                "Never uses GUIs when a CLI exists",
+                "Always carries at least one device that’s jailbroken"
+            ],
+            "motion_rules": "Fast-twitch energy, always fidgeting with shell scripts or API clients.",
+            "voice_tone": "Casual, confident, automation-obsessed",
+            "prop_loadout": [
+                "custom mechanical keyboard",
+                "USB-to-everything adapter",
+                "forearm circuit tattoo"
+            ],
+            "appearance": "DevOps rebel who believes every incident is just one YAML file away from resolution.",
+            "catchphrase": "There’s definitely a script for that."
+        },
+        "Njeri": {
+            "visual_tags": [
+                "non-binary",
+                "33 years old",
+                "5'6\"",
+                "undercut hairstyle dyed teal",
+                "eye color deep blue",
+                "minimalist, functional clothing"
+            ],
+            "required_constraints": [
+                "Never speaks unless it's important",
+                "Always has cable tester or ping console open"
+            ],
+            "motion_rules": "Moves slowly, precisely; often pauses mid-sentence to think.",
+            "voice_tone": "Low, deliberate, deeply focused",
+            "prop_loadout": [
+                "network topology sketchpad",
+                "laptop with three terminal windows open"
+            ],
+            "appearance": "Quiet network engineer with a deep philosophical bent about infrastructure.",
+            "catchphrase": "The network isn't the problem… but it might be part of the solution."
+        },
+        "Clara": {
+            "visual_tags": [
+                "female",
+                "37 years old",
+                "5'6\"",
+                "sharp posture",
+                "eye color dark brown",
+                "blouse and tablet ensemble",
+                "simple silver necklace"
+            ],
+            "required_constraints": [
+                "Stylus always in hand",
+                "Never trusts undocumented metrics"
+            ],
+            "motion_rules": "Points with stylus instead of finger; stillness used as judgment.",
+            "voice_tone": "Precise, analytical, never rushed",
+            "prop_loadout": [
+                "stylus",
+                "QA test harness app",
+                "personal severity tracker"
+            ],
+            "appearance": "QA specialist with a stare that could make a flaky service apologize.",
+            "catchphrase": "Prove it in logs, or I’m not changing my mind."
+        },
+        "Omar": {
+            "visual_tags": [
+                "male",
+                "28 years old",
+                "5'10\" extroverted",
+                "buzzed haircut",
+                "eye color brown",
+                "tech-casual with layered shirts",
+                "smirking by default"
+            ],
+            "required_constraints": [
+                "Always repeats question for clarity",
+                "Carries tablet even to lunch"
+            ],
+            "motion_rules": "Leans in to speak, expressive hands when explaining",
+            "voice_tone": "Friendly, persuasive, occasionally cheeky",
+            "prop_loadout": [
+                "tablet",
+                "incident translation guide",
+                "sticky notes with analogies"
+            ],
+            "appearance": "Bridge-builder between devs and humans; good at PR, better at empathy.",
+            "catchphrase": "So… what would we tell users about this?"
+        },
+        "Malik": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "6'2\" lean build",
+                "salt-and-pepper hair, closely cropped",
+                "deep blue eyes",
+                "rolled-sleeve dress shirts",
+                "analog watch"
+            ],
+            "required_constraints": [
+                "Always carries a pen",
+                "Never checks dashboards during meetings—relies on printed reports"
+            ],
+            "motion_rules": "Moves with slow authority, gestures sparingly for emphasis.",
+            "voice_tone": "Measured, dry, occasionally deadpan",
+            "prop_loadout": [
+                "leather-bound legacy migration notebook",
+                "pen with engraved initials",
+                "printed SLO docs"
+            ],
+            "appearance": "Legacy-systems whisperer with a strategist’s calm and CTO scars to prove it.",
+            "catchphrase": "Let’s not confuse new with better."
+        },
+        "Zuri": {
+            "visual_tags": [
+                "female",
+                "27 years old",
+                "5'6\" athletic build",
+                "long braids with colorful beads",
+                "eye color dark brown",
+                "bright, modern business attire"
+            ],
+            "required_constraints": [
+                "Always brings AI automation pitch deck",
+                "Never uses the same tool stack twice in a row"
+            ],
+            "motion_rules": "Quick, confident steps; always half a thought ahead.",
+            "voice_tone": "Fast, energetic, jargon-heavy",
+            "prop_loadout": [
+                "smartwatch",
+                "wireless earbuds",
+                "laptop with dark-mode IDE"
+            ],
+            "appearance": "Modern DevOps lead who believes every manual process is an insult to evolution.",
+            "catchphrase": "Can we automate this, or are we just bored?"
+        },
+        "Jamal": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\" stocky build",
+                "uses wheelchair",
+                "shaved head",
+                "light brown eyes",
+                "friendly face",
+                "colorful sneakers"
+            ],
+            "required_constraints": [
+                "Always advocates for user empathy",
+                "Never dismisses frontline feedback"
+            ],
+            "motion_rules": "Leans forward when speaking, relaxed posture when listening.",
+            "voice_tone": "Warm, empathetic, persuasive",
+            "prop_loadout": [
+                "incident summary printouts",
+                "notepad with customer quotes",
+                "coffee with 2 sugars"
+            ],
+            "appearance": "Customer advocate who humanizes the metrics and translates alerts into emotions.",
+            "catchphrase": "What would the user say about this graph?"
+        },
+        "Lucia": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "5'5\" polished presence",
+                "gray-streaked bun",
+                "light blue eyes",
+                "navy business suit",
+                "leather folio"
+            ],
+            "required_constraints": [
+                "Only uses mechanical pencils",
+                "Always references risk matrix before SLO talks"
+            ],
+            "motion_rules": "Upright, no wasted movement; scans rooms with quiet authority.",
+            "voice_tone": "Crisp, principled, exacting",
+            "prop_loadout": [
+                "risk ledger",
+                "compliance checklists",
+                "mechanical pencil"
+            ],
+            "appearance": "Senior risk engineer with a courtroom vibe and zero tolerance for guesswork.",
+            "catchphrase": "Every system lies. The question is how loudly and when."
+        },
+        "Gabriel": {
+            "visual_tags": [
+                "male",
+                "41 years old",
+                "5'10\"",
+                "dark hoodie",
+                "noise-canceling headphones",
+                "eye color light blue",
+                "waveform tattoo on inner wrist"
+            ],
+            "required_constraints": [
+                "Only speaks when tracing",
+                "Never appears without some data visualization nearby"
+            ],
+            "motion_rules": "Hunched over dashboards; eyes dart between graphs.",
+            "voice_tone": "Quiet, focused, intensity just under the surface",
+            "prop_loadout": [
+                "headphones",
+                "dual-monitor setup",
+                "hand-drawn trace diagrams"
+            ],
+            "appearance": "Observability savant who sees systems in waveform and dreams in latency.",
+            "catchphrase": "Logs are for when you're scared. Metrics are for when you're wise."
+        },
+        "Ana": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'5\"",
+                "oversized glasses",
+                "dark lipstick",
+                "fast-moving",
+                "stylus-equipped tablet"
+            ],
+            "required_constraints": [
+                "Tablet always within arm’s reach",
+                "Never repeats the same phrasing twice"
+            ],
+            "motion_rules": "Rapid taps on tablet; walks and talks simultaneously.",
+            "voice_tone": "Fast, witty, process-driven",
+            "prop_loadout": [
+                "incident comms templates",
+                "reputation risk heatmap",
+                "speech-to-text assistant"
+            ],
+            "appearance": "Comms lead who controls chaos through structure and speaks fluent outage.",
+            "catchphrase": "You don’t just fix outages. You narrate them."
+        },
+        "Emily": {
+            "visual_tags": [
+                "female",
+                "28 years old",
+                "5'5\" slim build",
+                "long straight black hair tied in a low ponytail",
+                "eye color dark brown",
+                "Boston-local business casual",
+                "black blazer over startup T-shirt"
+            ],
+            "required_constraints": [
+                "Always has a notepad nearby",
+                "Never interrupts—lets silence hang like a trap"
+            ],
+            "motion_rules": "Still and observant in meetings, scribbles notes during arguments.",
+            "voice_tone": "Soft-spoken but piercing when focused",
+            "prop_loadout": [
+                "pen and legal pad",
+                "USB keychain with backups",
+                "folded MBTA train map"
+            ],
+            "appearance": "Looks quiet until she casually dismantles your whole sprint logic in one sentence.",
+            "catchphrase": "Have we checked what the user actually does with this?"
+        },
+        "Risk Officer Kamau": {
+            "visual_tags": [
+                "male",
+                "38 years old",
+                "5'8\" stocky build",
+                "short neatly combed hair",
+                "tailored navy suit",
+                "silver tie clip",
+                "sharp, evaluative gaze"
+            ],
+            "required_constraints": [
+                "Always brings a printed copy of the risk matrix",
+                "Never accepts verbal assurances without documentation"
+            ],
+            "motion_rules": "Moves with deliberate formality; slow nods during tense moments.",
+            "voice_tone": "Even, forensic, never speculative",
+            "prop_loadout": [
+                "compliance binder",
+                "data breach incident flowchart",
+                "steel pen"
+            ],
+            "appearance": "Feels like legal counsel but operates like a surgical auditor. Quietly terrifying in meetings.",
+            "catchphrase": "Where’s the documented exception for this risk class?"
+        },
+        "Junior Dev": {
+            "visual_tags": [
+                "female",
+                "25 years old",
+                "5'2\" petite frame",
+                "short curly hair with pink streaks",
+                "eye color light brown",
+                "oversized hoodie with anime pins",
+                "beat-up canvas sneakers"
+            ],
+            "required_constraints": [
+                "Always asks to double-check before pushing",
+                "Never deploys without a buddy check"
+            ],
+            "motion_rules": "Bounces slightly when excited; curls inward when nervous.",
+            "voice_tone": "Earnest, cautious, learning-focused",
+            "prop_loadout": [
+                "sticky note cheat sheet",
+                "half-empty bubble tea",
+                "USB toy on desk with blinking LED"
+            ],
+            "appearance": "New to prod, hungry to learn, and quietly terrified of being blamed for downtime.",
+            "catchphrase": "Is this safe to test in staging first...?"
+        },
+        "Finance Rep": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "slightly overweight",
+                "short neatly combed hair",
+                "tailored suits with colorful ties",
+                "reading glasses perched on nose"
+            ],
+            "required_constraints": [
+                "Always wears a colorful tie",
+                "Never brings a laptop to meetings—only printouts"
+            ],
+            "motion_rules": "Adjusts tie when uncomfortable; slow blinks during technical talk.",
+            "voice_tone": "Measured, cautiously skeptical, thrives on numbers",
+            "prop_loadout": [
+                "binder of quarterly forecasts",
+                "pocket calculator",
+                "legal pad with budget notes"
+            ],
+            "appearance": "Looks like he’s here to say no to your new observability tooling—but only after a long pause.",
+            "catchphrase": "Show me how that improves margin, not morale."
+        },
+        "Alejandro": {
+            "visual_tags": [
+                "male",
+                "39 years old",
+                "6'0\" lean build",
+                "short, trimmed beard",
+                "hazel eyes",
+                "structured button-up with rolled sleeves",
+                "tactical watch"
+            ],
+            "required_constraints": [
+                "Never presents without at least two backup plans",
+                "Always wears his tactical watch, never digital"
+            ],
+            "motion_rules": "Moves with military efficiency; subtle tension in shoulders during strategy shifts.",
+            "voice_tone": "Calm, tactical, and layered with dry judgment",
+            "prop_loadout": [
+                "incident response checklist",
+                "folded paper architecture diagrams",
+                "steel pen that clicks when thinking"
+            ],
+            "appearance": "An engineer who documents outages like field reports and treats root cause like a personal vendetta.",
+            "catchphrase": "We build for failure. The question is: which one are you ignoring today?"
+        },
+        "Marisol": {
+            "visual_tags": [
+                "female",
+                "41 years old",
+                "5'7\" graceful posture",
+                "green eyes",
+                "vibrant silk scarf",
+                "sleek business-casual wrap dress",
+                "meticulous appearance"
+            ],
+            "required_constraints": [
+                "Always wears her signature scarf",
+                "Never speaks until everyone else has weighed in"
+            ],
+            "motion_rules": "Glides rather than walks; tilts head slightly when absorbing information.",
+            "voice_tone": "Measured, elegant, with a quiet gravity",
+            "prop_loadout": [
+                "tablet with color-coded stakeholder maps",
+                "analog journal for personal reflections",
+                "fine-tip pen, always black"
+            ],
+            "appearance": "Her presence calms a room but subtly resets the stakes. People lean in when she starts to speak.",
+            "catchphrase": "What’s the long-term cost of getting this wrong?"
+        },
+        "Sofia": {
+            "visual_tags": [
+                "female",
+                "25 years old",
+                "5'4\" slim build",
+                "icy blue eyes",
+                "long dark hair tied back",
+                "soft, precise movements",
+                "practical clothing",
+                "always with a notepad"
+            ],
+            "required_constraints": [
+                "Always carries a pen she never lends",
+                "Never speaks unless she’s triple-checked her facts"
+            ],
+            "motion_rules": "Moves quietly and efficiently; scribbles constantly but rarely looks down.",
+            "voice_tone": "Soft but sharply observant—like a whisper with consequences",
+            "prop_loadout": [
+                "graph-ruled notebook",
+                "custom log parser scripts on USB",
+                "highlighted incident logs"
+            ],
+            "appearance": "She’s not just watching the systems. She’s watching the watchers, too.",
+            "catchphrase": "I think… there's something weird in the logs, if you zoom in."
+        },
+        "Leonel": {
+            "visual_tags": [
+                "male",
+                "30 years old",
+                "5'9\" slightly disheveled",
+                "hazel eyes",
+                "t-shirt with metrics jokes",
+                "casual hoodie",
+                "glasses often askew",
+                "frequently gesturing or carrying a laptop"
+            ],
+            "required_constraints": [
+                "Always has at least one unused dashboard tab open",
+                "Never deletes old metrics, 'just in case'"
+            ],
+            "motion_rules": "Taps feet when dashboards load slowly; waves hands during explanations.",
+            "voice_tone": "Excitable, verbose, and lovingly obsessive",
+            "prop_loadout": [
+                "laptop with 12 pinned tabs",
+                "dashboard stress ball",
+                "portable monitor just for graphs"
+            ],
+            "appearance": "Looks like he hasn't blinked since the last Grafana update. Loves metrics too much to sleep.",
+            "catchphrase": "But what if we tracked *everything* and then filtered it later?"
+        },
+        "Katherine": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "6'2\" tall and lean",
+                "salt-and-pepper shoulder-length hair",
+                "deep blue eyes",
+                "rolled-sleeve button-up shirt",
+                "digital watch",
+                "imposing but approachable presence"
+            ],
+            "required_constraints": [
+                "Always stands during meetings",
+                "Never answers right away—thinks, then speaks"
+            ],
+            "motion_rules": "Stands with weight shifted to one side; folds arms when thinking.",
+            "voice_tone": "Firm, experienced, quietly motivational",
+            "prop_loadout": [
+                "folded incident playbook",
+                "annotated service diagrams",
+                "checklist card for 'when things go sideways'"
+            ],
+            "appearance": "The kind of senior engineer who leads without announcing it—and gets paged even when she’s not on call.",
+            "catchphrase": "Have we stress-tested the human parts of this system yet?"
+        },
+        "Raj": {
+            "visual_tags": [
+                "male",
+                "30 years old",
+                "5'7\" average height",
+                "short curly hair",
+                "dark brown eyes",
+                "sport jackets over nerdy t-shirts",
+                "quirky watch designs"
+            ],
+            "required_constraints": [
+                "Always checking time but never on his phone",
+                "Never runs a meeting—somehow ends up leading them anyway"
+            ],
+            "motion_rules": "Paces in short bursts when ideating; fidgets with pen caps.",
+            "voice_tone": "Dryly funny, big on analogies, often skeptical",
+            "prop_loadout": [
+                "watch with exposed gears",
+                "folded to-do list in back pocket",
+                "USB drive labeled 'Raj's Stuff v3 FINAL_FINAL'"
+            ],
+            "appearance": "Looks like your dev buddy until he casually rewrites your toolchain for efficiency.",
+            "catchphrase": "If it’s working, why are we still talking about it?"
+        },
+        "Achieng": {
+            "visual_tags": [
+                "female",
+                "28 years old",
+                "5'6\" solid build",
+                "medium length hair in a bun",
+                "dark brown eyes",
+                "modern business suit",
+                "focused, deliberate expression"
+            ],
+            "required_constraints": [
+                "Always speaks second in meetings",
+                "Never makes a claim without a supporting chart"
+            ],
+            "motion_rules": "Walks with confident stride; pauses mid-sentence to let data speak first.",
+            "voice_tone": "Clear, steady, analytical with a slight edge",
+            "prop_loadout": [
+                "folded printouts of performance graphs",
+                "highlighter-coded incident journal",
+                "company-issued laptop with scratched logo sticker"
+            ],
+            "appearance": "Looks like she’s one pivot table away from a breakthrough—and she knows it.",
+            "catchphrase": "There’s a pattern here, and we’re ignoring it."
+        },
+        "Sifuna": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\" strong build",
+                "medium-length dark brown hair precisely styled",
+                "hazel eyes",
+                "crisp dress shirt",
+                "subtle cologne that means business"
+            ],
+            "required_constraints": [
+                "Always restarts meetings that get off-topic",
+                "Never lets an action item go undocumented"
+            ],
+            "motion_rules": "Moves like someone who blocks calendar time for reflection; gestures minimally.",
+            "voice_tone": "Polished, strategic, quietly assertive",
+            "prop_loadout": [
+                "elegant notebook with metal-edged corners",
+                "discreet phone stand",
+                "frictionless pen that no one else is allowed to borrow"
+            ],
+            "appearance": "The unofficial chief of execution. Doesn’t argue—just adjusts course and delivers.",
+            "catchphrase": "Let’s document this, or it didn’t happen."
+        }
+    },
+    "global_style": {
+        "style": "Render a modern graphic narrative grounded in clarity, consequence, and production-grade realism. The visual style is clean and minimal—focused not on server rooms or racks, but on the humans diagnosing uptime in the systems that matter. Interfaces are dark-mode, dashboards muted, telemetry is visualized with intention. The world is not high drama; it’s quiet tension—laptops open, dashboards glowing, eyes scanning for truth beneath the noise. Characters appear in tech-forward settings: reliability war rooms, digital operations suites, observability-first product teams. No flashy gimmicks. Just smart people fighting complex systems—with data, with judgment, and with just enough sarcasm to survive.",
+        "line_style": "Clean, medium-weight lines. Semi-realistic proportions with expressive facial and body language.",
+        "palette": [
+            "Primary Colors: Charcoal Black (#1C1C1E), Rust Red (#8B2E2E), Slate Gray (#3E4A59). Supporting: Ash Gray (#B0B4B9), Muted Olive (#586E4B), Off-White (#EDEDED). Highlights: Deep Amber (#C97E38), System Blue (#3478F6)."
+        ],
+        "atmosphere": "Minimalist but rich: dark telemetry, clean light, digital, high-stakes. A modern workspace designed for clarity: dark dashboards, isolated lighting, filtered daylight (if visible), and wall-mounted screens with muted telemetry. The tone is quiet vigilance. Systems hum; tension builds in the questions no one wants to ask out loud.",
+        "speech_bubble_font": "clean comic lettering",
+        "text_padding_px": 5,
+        "bubble_avoid_edges": true,
+        "narration_box_position": "top",
+        "ensure_text_visible": true,
+        "eye_detail": "eyes must be fully illustrated with visible irises and reflection; never black dots or cartoon ovals. Eyes must reflect character emotion—focus, concern, skepticism, curiosity—as appropriate to the scene."
+    },
+    "layout_rules": {
+        "speech_bubble_font": "clean lettering. Do hyphenate words at the end of lines.",
+        "speech_point": "point to the character speaking",
+        "narration_box_position": "top",
+        "text_padding_px": 5
+    }
+}

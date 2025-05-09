@@ -32,9 +32,9 @@ If a log line can’t change an on-call decision, rotate it out or raise its sig
 Only the final line matters, yet it was paged away by 3,000 DEBUG siblings.  
 
 ### Teaching Narrative  
-Leonel stands before a wall terminal, eyes gleaming as Splunk’s live-tail scrolls like falling code in *The Matrix*. “Beautiful, isn’t it?” he says. Manu squints: “Beautiful? Or blinding?” A sudden spike turns the scroll amber—disk write throttle hits 95 MB/s. The sole ERROR entry—`NullPointerException at DebitProcessor`—flies past, instantly buried.  
+Leonel stands before a wall terminal, eyes gleaming as Splunk’s live-tail scrolls like falling code in *The Matrix*. “Beautiful, isn’t it?” he says. Katherine squints: “Beautiful? Or blinding?” A sudden spike turns the scroll amber—disk write throttle hits 95 MB/s. The sole ERROR entry—`NullPointerException at DebitProcessor`—flies past, instantly buried.  
 
-Hector steps from the doorway, coffee steaming. “Visibility isn’t the same as clarity,” he growls, killing the tail with `Ctrl-C`. He reruns the query, adding a **filter for severity >= WARN** and a **field extractor for `transactionId`**. Splunk now returns *three* lines—one per failed payment. Manu whispers, “We could’ve fixed this forty minutes ago.”  
+Hector steps from the doorway, coffee steaming. “Visibility isn’t the same as clarity,” he growls, killing the tail with `Ctrl-C`. He reruns the query, adding a **filter for severity >= WARN** and a **field extractor for `transactionId`**. Splunk now returns *three* lines—one per failed payment. Katherine whispers, “We could’ve fixed this forty minutes ago.”  
 
 :::hector quote  
 **Hector says:** “If your telemetry doesn’t snitch, your outage will.”  
@@ -57,7 +57,7 @@ Dashboards must reconcile **technical health** with **customer pain**—otherwis
 A Grafana panel shows median latency at **120 ms (green)** while a Zendesk heat-map glows red with 200 support tickets in the same five-minute window.  
 
 ### Teaching Narrative  
-Manu drags Leonel to the observability wall: response-time graphs purr along a safe green band. Meanwhile, Wanjiru reads live chat. “Customers can’t complete transfers.” Manu taps the graph, puzzled. Aisha raises an eyebrow: “Latency isn’t lying; it’s just not answering the right question.”  
+Katherine drags Leonel to the observability wall: response-time graphs purr along a safe green band. Meanwhile, Wanjiru reads live chat. “Customers can’t complete transfers.” Katherine taps the graph, puzzled. Aisha raises an eyebrow: “Latency isn’t lying; it’s just not answering the right question.”  
 
 Hector overlays **failed-transaction-rate** atop latency. The green band vanishes under a sharp rust-red spike—250 fails/min at 02:15 UTC. “Metrics disconnected from reality are just static art,” he says. Wanjiru exhales, finally seeing the mismatch.  
 
@@ -200,7 +200,7 @@ Hector pulls the team into what he calls a **“telemetry mob refactor.”** Mon
 2. Metrics carry ≤ 4 labels; one must be `team`.  
 3. Owners document every metric in `metrics.md` with purpose & unit.  
 
-**Manu** objects: “But DEBUG logs help *somebody* someday.” Hector fires back: “Not until they bury the outage.” He flips an old disk-space incident: DEBUG logs filled the disk, WAL flushes stalled, *auth-service* panicked. The bank missed an ACH window—$460 K in penalty fees. **System Failure Anecdote delivered.**  
+**Katherine** objects: “But DEBUG logs help *somebody* someday.” Hector fires back: “Not until they bury the outage.” He flips an old disk-space incident: DEBUG logs filled the disk, WAL flushes stalled, *auth-service* panicked. The bank missed an ACH window—$460 K in penalty fees. **System Failure Anecdote delivered.**  
 
 Together they rip out naked `printf`s, replace with a **Logfmt** helper:  
 

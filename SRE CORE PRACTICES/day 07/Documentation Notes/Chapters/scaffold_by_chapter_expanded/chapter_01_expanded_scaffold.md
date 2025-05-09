@@ -1,7 +1,7 @@
 # Chapter 1: From Monitoring to Incident Response
 
 ## Panel 1: The Green Wall Fallacy
-**Scene Description**: A bleary-eyed SRE  is jolted awake at 2:57 AM by his pager. He frantically checks his laptop, where a wall of green dashboard tiles contradicts the alert. In the background, a phone rings insistently as customer reports pour in. Manu hovers between trusting his dashboard or investigating further, illustrating the critical moment of decision between monitoring mindset and incident response mindset.
+**Scene Description**: A bleary-eyed SRE  is jolted awake at 2:57 AM by his pager. He frantically checks his laptop, where a wall of green dashboard tiles contradicts the alert. In the background, a phone rings insistently as customer reports pour in. Katherine hovers between trusting his dashboard or investigating further, illustrating the critical moment of decision between monitoring mindset and incident response mindset.
 
 ### Teaching Narrative
 The transition from monitoring to incident response begins with overcoming the "Green Wall Fallacy" - the dangerous assumption that green dashboards mean everything is functioning properly. This fundamental shift requires developing evidence-based skepticism about monitoring systems themselves.

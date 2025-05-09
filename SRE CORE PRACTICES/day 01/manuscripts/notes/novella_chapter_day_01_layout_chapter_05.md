@@ -224,13 +224,13 @@ The broken link Juana encounters represents a common breakdown in alert manageme
 
 ## Scene Description
 
-**Sin #3: Logs That Lie** – Manu highlights a 500 error log… with no trace ID, no request path, and no helpful message. "This might as well be in Morse code." 
+**Sin #3: Logs That Lie** – Katherine highlights a 500 error log… with no trace ID, no request path, and no helpful message. "This might as well be in Morse code." 
    
-*Expanded narrative: Manu finally locates log entries from the failing payment transactions. He projects them onto the screen: `ERROR 500: Request failed.` Nothing more—no transaction details, no customer information, no error codes from downstream systems. "This might as well be in Morse code," he says in frustration. "It tells us something failed but nothing about what, why, or how to fix it. The logs exist but tell us nothing useful—they lie by omission."*
+*Expanded narrative: Katherine finally locates log entries from the failing payment transactions. He projects them onto the screen: `ERROR 500: Request failed.` Nothing more—no transaction details, no customer information, no error codes from downstream systems. "This might as well be in Morse code," he says in frustration. "It tells us something failed but nothing about what, why, or how to fix it. The logs exist but tell us nothing useful—they lie by omission."*
 
 ## Teaching Narrative
 
-This scene exposes yet another critical anti-pattern: logs that create the illusion of visibility while providing no actionable information. Manu's discovery demonstrates how minimal error messages without context create a dangerous situation—the appearance of logging without the substance of observability.
+This scene exposes yet another critical anti-pattern: logs that create the illusion of visibility while providing no actionable information. Katherine's discovery demonstrates how minimal error messages without context create a dangerous situation—the appearance of logging without the substance of observability.
 
 ## Telemetry Integrity Explained
 
@@ -248,7 +248,7 @@ In financial services, telemetry integrity is particularly critical. When paymen
 
 ## The Lie of Omission
 
-Manu's characterization of logs "lying by omission" highlights a subtle but critical distinction. Logs can be technically present and accurate but still fundamentally dishonest in their practical effect. When logs omit essential context, they create a false impression of visibility while actually obscuring understanding.
+Katherine's characterization of logs "lying by omission" highlights a subtle but critical distinction. Logs can be technically present and accurate but still fundamentally dishonest in their practical effect. When logs omit essential context, they create a false impression of visibility while actually obscuring understanding.
 
 ## Banking Implementation Guidance
 
@@ -262,7 +262,7 @@ To maintain telemetry integrity in financial systems:
 
 4. **Log Quality Monitoring**: Implement processes to detect and address deterioration in log quality
 
-The generic "ERROR 500: Request failed" message Manu discovers represents a complete telemetry integrity failure. In financial systems, this failure has consequences beyond operational inefficiency—it creates regulatory exposure by preventing proper documentation and understanding of transaction failures.
+The generic "ERROR 500: Request failed" message Katherine discovers represents a complete telemetry integrity failure. In financial systems, this failure has consequences beyond operational inefficiency—it creates regulatory exposure by preventing proper documentation and understanding of transaction failures.
 
 ## Panel 7: Sin #4: Uptime Without User Success - Customer-Centric Observability
 

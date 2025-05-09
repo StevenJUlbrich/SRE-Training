@@ -38,7 +38,7 @@ Learners should walk away understanding:
 - **Artifact**: Log stream full of irrelevant DEBUG, no context fields
 
 ### Panel 2 – The Metrics Don’t Match
-- **Scene**: Manu points to latency graphs; Wanjiru shows user complaints
+- **Scene**: Katherine points to latency graphs; Wanjiru shows user complaints
 - **Teaching Moment**: Metrics disconnected from experience
 - **Widget**: Reflection — “When did your metrics last contradict your users?”
 - **Artifact**: Response time graph vs. support ticket heatmap

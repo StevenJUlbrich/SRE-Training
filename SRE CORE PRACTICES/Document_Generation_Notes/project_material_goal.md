@@ -47,7 +47,7 @@ This hybrid format combines the depth of written instruction with the visual eng
 Panel 1: The Pager Screams - Understanding the Green Wall Fallacy
 Teaching Narrative
 When the pager wakes you at 02:57 AM, your first instinct is to trust your dashboards. This is a dangerous impulse that experienced SREs must overcome.
-In this critical scenario, Manu made a fundamental mistake that production support professionals transitioning to SRE roles often make: trusting dashboard colors over evidence. When his monitoring systems showed green while users reported failures, he hesitated and questioned the alert rather than the dashboard.
+In this critical scenario, Katherine made a fundamental mistake that production support professionals transitioning to SRE roles often make: trusting dashboard colors over evidence. When his monitoring systems showed green while users reported failures, he hesitated and questioned the alert rather than the dashboard.
 The Green Wall Fallacy Explained
 The Green Wall Fallacy is a common observability anti-pattern where monitoring systems display a "wall of green" tiles suggesting everything is functioning normally, while critical services are actually failing. This happens because:
 
@@ -55,9 +55,9 @@ Misaligned Measurement Focus: The dashboard is monitoring secondary indicators (
 Replica vs. Primary Blindness: The systems are only measuring health signals from replicas or read paths, completely missing failures in primary write paths.
 Lag in Signal Propagation: The dashboards may report historical or cached data that hasn't updated to reflect current reality.
 
-Manu's reflexive thought ("Maybe the alert's false... the graph is green") demonstrates a monitoring mindset rather than an observability mindset. In monitoring, we trust the dashboard. In observability, we trust the evidence.
+Katherine's reflexive thought ("Maybe the alert's false... the graph is green") demonstrates a monitoring mindset rather than an observability mindset. In monitoring, we trust the dashboard. In observability, we trust the evidence.
 SRE Best Practice: Evidence-Based Investigation
-Notice that Manu ultimately does the right thing by testing the actual endpoint with a curl command, which reveals the truth immediately: HTTP 500. This direct testing approach should be your first response, not your last resort.
+Notice that Katherine ultimately does the right thing by testing the actual endpoint with a curl command, which reveals the truth immediately: HTTP 500. This direct testing approach should be your first response, not your last resort.
 Banking Impact
 In financial systems, this fallacy is particularly dangerous. While dashboards glow green, real money transfers are failing, ATMs are rejecting withdrawals, and customer trust is eroding by the second. The regulatory and financial impact grows exponentially with each minute of misdiagnosis.
 Implementation Guidance:

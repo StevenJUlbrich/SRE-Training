@@ -1,14 +1,14 @@
 # Chapter 4: Structured Investigation Methodologies
 
 ## Panel 1: Beyond Symptoms - The Scientific Method for Incident Investigation
-**Scene Description**: In a dimly lit incident war room, Manu stands at a whiteboard divided into columns labeled "Observations," "Hypotheses," "Tests," and "Results." Digital clocks showing different time zones hang on the wall, with one prominently displaying "Incident Duration: 47 minutes." Team members in various states of focus—some examining dashboards, others scrolling through logs—watch as Manu draws connections between observed symptoms and possible causes, methodically crossing out disproven hypotheses while highlighting a promising lead about transaction database locks.
+**Scene Description**: In a dimly lit incident war room, Katherine stands at a whiteboard divided into columns labeled "Observations," "Hypotheses," "Tests," and "Results." Digital clocks showing different time zones hang on the wall, with one prominently displaying "Incident Duration: 47 minutes." Team members in various states of focus—some examining dashboards, others scrolling through logs—watch as Katherine draws connections between observed symptoms and possible causes, methodically crossing out disproven hypotheses while highlighting a promising lead about transaction database locks.
 
 ### Teaching Narrative
 When faced with a banking system incident, the natural human impulse is to jump directly to fixing what looks broken. This reactive approach, while understandable, often leads to treating symptoms rather than identifying true root causes. 
 
 The scientific method—a cornerstone of structured investigation in SRE—transforms incident response from reactive firefighting to systematic problem-solving. By clearly separating observations (what we know) from hypotheses (what we think might be happening), we create a foundation for evidence-based decision-making.
 
-In this scene, Manu demonstrates the disciplined approach that distinguishes SRE investigators from traditional operations teams. Rather than immediately implementing fixes based on the most obvious symptoms, he's guiding the team through a methodical process: documenting observed behaviors, generating multiple plausible hypotheses, designing specific tests to validate or disprove each hypothesis, and recording results to narrow down the investigation.
+In this scene, Katherine demonstrates the disciplined approach that distinguishes SRE investigators from traditional operations teams. Rather than immediately implementing fixes based on the most obvious symptoms, he's guiding the team through a methodical process: documenting observed behaviors, generating multiple plausible hypotheses, designing specific tests to validate or disprove each hypothesis, and recording results to narrow down the investigation.
 
 This structured approach prevents common pitfalls like confirmation bias (looking only for evidence that supports your initial guess) and premature remediation (fixing symptoms while leaving root causes intact). For banking systems where incorrect remediation can compound financial impact, this methodical approach isn't just good practice—it's essential for maintaining system integrity during incident resolution.
 

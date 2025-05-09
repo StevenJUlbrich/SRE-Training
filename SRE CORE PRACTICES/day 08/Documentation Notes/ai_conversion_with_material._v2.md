@@ -145,6 +145,7 @@ Thank you for catching this oversight. The complete prompt sequence should inclu
       2. SRE best practices with evidence-based investigation approaches
       3. Banking business impact analysis
       4. Implementation guidance with 5 specific actionable steps
+      5. Generate the response in Artifact if possible
 
       Maintain the 85/15 balance between core SRE content and supporting narrative.
    Please provide the new document in Artifacts

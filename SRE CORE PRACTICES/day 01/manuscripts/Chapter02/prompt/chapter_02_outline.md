@@ -33,7 +33,7 @@ Learner should walk away understanding:
 
 ### Teaching Moment
 - **Concept**: Failure without traceability is indistinguishable from magic
-- **Context**: Wanjiru and Manu are looking at clean metrics; users are screaming
+- **Context**: Wanjiru and Katherine are looking at clean metrics; users are screaming
 
 ### Graphic Panel: “The Mystery Crash”
 - Agent call transcript + green dashboard + `curl` returns 200 but no confirmation
@@ -119,7 +119,7 @@ Who gets blamed first when your observability fails? Who should?
 
 ## 👤 Character Learning Beat
 - **Wanjiru**: struggles to explain the failure without traces
-- **Manu**: trusts CPU/memory; learns observability regression is a risk
+- **Katherine**: trusts CPU/memory; learns observability regression is a risk
 - **Juana**: shows how it *should’ve* worked
 - **Hector**: defines tracing as the postmortem you can run live
 

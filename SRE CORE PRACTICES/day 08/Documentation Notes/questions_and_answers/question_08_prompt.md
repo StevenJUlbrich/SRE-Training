@@ -3,7 +3,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 1: The Cost-Aware Mindset.
+   Let's develop the pre-scaffold for Chapter 1: The Cost-Aware Mindset.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -11,6 +11,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -20,7 +21,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 2: Observability Economics 101.
+   Let's develop the pre-scaffold for Chapter 2: Observability Economics 101.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -28,6 +29,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -37,7 +39,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 3: Beyond the Green Wall.
+   Let's develop the pre-scaffold for Chapter 3: Beyond the Green Wall.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -45,6 +47,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -54,7 +57,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 4: Volumetric Awareness.
+   Let's develop the pre-scaffold for Chapter 4: Volumetric Awareness.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -62,6 +65,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -71,7 +75,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 5: Retention Strategies.
+   Let's develop the pre-scaffold for Chapter 5: Retention Strategies.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -79,6 +83,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -88,7 +93,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 6: Cardinality Management.
+   Let's develop the pre-scaffold for Chapter 6: Cardinality Management.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -96,6 +101,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -105,7 +111,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 7: Intelligent Sampling.
+   Let's develop the pre-scaffold for Chapter 7: Intelligent Sampling.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -113,6 +119,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -122,7 +129,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 8: Instrumentation Governance.
+   Let's develop the pre-scaffold for Chapter 8: Instrumentation Governance.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -130,6 +137,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -139,7 +147,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 9: Distributed System Efficiency.
+   Let's develop the pre-scaffold for Chapter 9: Distributed System Efficiency.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -147,6 +155,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -156,7 +165,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 10: Dynamic Observability Controls.
+   Let's develop the pre-scaffold for Chapter 10: Dynamic Observability Controls.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -164,6 +173,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -173,7 +183,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 11: Observability as a Service.
+   Let's develop the pre-scaffold for Chapter 11: Observability as a Service.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -181,6 +191,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -190,7 +201,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 12: Observability Economics: Advanced.
+   Let's develop the pre-scaffold for Chapter 12: Observability Economics: Advanced.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -198,6 +209,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 
@@ -207,7 +219,7 @@
 
 ===================================================
 
-   Moving to Step 8, let's develop the pre-scaffold for Chapter 13: Building a Cost-Aware Observability Culture.
+   Let's develop the pre-scaffold for Chapter 13: Building a Cost-Aware Observability Culture.
 
    Following the chapter_scaffold_layout.md format, please create:
    1. Panel titles for 4-7 key concepts in this chapter
@@ -215,6 +227,7 @@
    3. A teaching narrative for each panel explaining the core SRE concept
    4. Review and Leverage the recommendations from question_07_Learning_Progression.md as necessary
    5. Review and leverage the chapters summaries from question_07_response_chapter_summary.md
+   6. Generate the response in Artifact if possible.
 
 ======================================================
 

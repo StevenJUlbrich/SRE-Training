@@ -93,11 +93,11 @@ Identify a dashboard in your system that reports health based on replica nodes o
 
 ### Teaching Moment
 - **Concept**: Dashboards measure liveness, not customer trust.
-- **Bridge**: Manu interprets "CPU looks fine" as "the system is fine."
+- **Bridge**: Katherine interprets "CPU looks fine" as "the system is fine."
 
 ### Graphic Panel: “Dashboard Dissonance”
 - Wanjiru shares her screen with the team.
-- All tiles green. Manu frowns: “Everything looks fine… right?”
+- All tiles green. Katherine frowns: “Everything looks fine… right?”
 - **Caption**: “The deeper the green, the louder the lie.”
 
 ### Widget: Hector Quote
@@ -176,7 +176,7 @@ Inject a `trace_id` field into one of your existing log formats using your loggi
 
 ## 👤 Character Learning Beat
 - **Wanjiru** panics: tools show green, but customer complaints are real.
-- **Manu** focuses on CPU/memory: “Should we fail over to a bigger node?”
+- **Katherine** focuses on CPU/memory: “Should we fail over to a bigger node?”
 - **Juana**: reads vague logs, frustrated by lack of trace IDs.
 - **Hector**: teaches the “green wall fallacy,” explains how telemetry should confess, not conceal.
 

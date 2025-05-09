@@ -14,7 +14,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 #### Panel-by-Panel Beat Map
 1. **The Pager Screams** – Hector gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
 2. **Wanjiru Panics** – Wanjiru stares at metrics she doesn't understand while a VP yells about failing transactions. Visual: Slack alerts, Geneos blinking, her mouse hovering uncertainly.
-3. **What’s Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Manu says "CPU looks fine though."
+3. **What’s Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Katherine says "CPU looks fine though."
 4. **The Dashboard Is Lying** – Hector walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?"
 5. **Context is Missing** – Juana shows the logs: missing trace IDs, vague errors. “Nice. It broke, and it didn’t even tell us who it killed.”
 6. **Monologue from Hector** – He points to each pillar (Logs, Metrics, Traces) and explains what they could’ve revealed. Dramatic diagram in background.
@@ -25,11 +25,11 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 ### Chapter 2: **The Problem Isn’t Always the Problem**
 - What production support knows that devs forget
 - Teaching telemetry: logs, metrics, and traces
-- Wanjiru and Manu get burned by an untraceable config push
+- Wanjiru and Katherine get burned by an untraceable config push
 - Juana shows what *should* have been in the logs
 
 #### Panel-by-Panel Beat Map
-1. **The Mystery Crash** – A customer service agent reports failed wire transfers. Manu is already looking at CPU usage.
+1. **The Mystery Crash** – A customer service agent reports failed wire transfers. Katherine is already looking at CPU usage.
 2. **Dashboard Deceit, Part II** – CPU and memory are stable. Wanjiru shrugs. “Geneos isn’t showing anything weird.”
 3. **The Missing Trace** – Juana suggests tracing the request path. No trace data is found. “No trace ID in logs. Classic.”
 4. **What They Missed** – We flash back to a config push. Visual: a developer unchecked 'enableTracing=true'.
@@ -49,7 +49,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 
 #### Panel-by-Panel Beat Map
 1. **Death by Verbose Logging** – Leonel shows off a beautiful but bloated log stream. “We log everything!” he grins. Sofia raises an eyebrow.
-2. **The Metrics Don’t Match** – Meanwhile, Manu notes the latency graph looks clean… but user complaints are rising.
+2. **The Metrics Don’t Match** – Meanwhile, Katherine notes the latency graph looks clean… but user complaints are rising.
 3. **The Unreadable Log** – Wanjiru attempts to find a user error but is blocked by irrelevant debug logs and missing correlation IDs.
 4. **Hector Steps In** – He draws three overlapping circles labeled Logs, Metrics, Traces. “If they don’t intersect, they don’t help.”
 5. **Metric Hygiene Clinic** – Clara points out a metric labeled `service_latency_time_chart_thing`. Hector winces audibly.
@@ -92,7 +92,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 3. **The Five Sins** – Hector slams down a whiteboard with the five sins of banking observability. “Every one of these has ruined a production system I’ve seen.”
 4. **Sin #1: Ownerless Metrics** – Clara shows a graph of `latency_avg_all` and nobody can say who owns it. “Guess who gets paged? Everyone.”
 5. **Sin #2: Orphaned Alerts** – Juana responds to a noisy alert only to discover there’s no runbook. “Awesome. It’s a riddle now.”
-6. **Sin #3: Logs That Lie** – Manu highlights a 500 error log… with no trace ID, no request path, and no helpful message. “This might as well be in Morse code.”
+6. **Sin #3: Logs That Lie** – Katherine highlights a 500 error log… with no trace ID, no request path, and no helpful message. “This might as well be in Morse code.”
 7. **ATM Outage Replay** – The scene flashes back to a real outage. Metrics showed normal, logs were incomplete, alerts fired late.
 8. **Lesson Locked In** – Hector’s closing line: “Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming.”
 

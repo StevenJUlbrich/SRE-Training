@@ -12,7 +12,7 @@ This document supplements the Hector-led SRE training materials by providing an 
 - Strong in coding, weak in ops
 - Catchphrase: *"But why does it work that way in production?"*
 
-### 2. **Emmanuel “Manu” Gitonga** – *The Tired Support Hero*
+### 2. **Emmanuel “Katherine” Gitonga** – *The Tired Support Hero*
 - 31, mid-career, bank production support background
 - Wise but reactive, struggles with SLO thinking
 - Catchphrase: *"There’s always a hidden dependency…"*

@@ -178,13 +178,13 @@ Thought for 29 seconds
 
 #### Teaching Narrative
 
-**Timestamp 07 : 02.** Manu’s Splunk console scrolls faster than his caffeine-twitching eyes can follow. The log channel `atm-gateway.prod` pumps out thirty-six **INFO** events per second—all boilerplate:
+**Timestamp 07 : 02.** Katherine’s Splunk console scrolls faster than his caffeine-twitching eyes can follow. The log channel `atm-gateway.prod` pumps out thirty-six **INFO** events per second—all boilerplate:
 
 ```
 2025-05-06T12:02:14Z msg="handler complete" status=200 latency=4ms
 ```
 
-Yet customers are still walking away empty-handed. Manu filters for `result=500` and gets only eight hits—useless, context-free lines:
+Yet customers are still walking away empty-handed. Katherine filters for `result=500` and gets only eight hits—useless, context-free lines:
 
 ```
 2025-05-06T12:02:37Z txn-id=- result=500 msg="Internal error"
@@ -213,7 +213,7 @@ The difference is visceral: the second line offers a surgical path from ATM to f
 
 > **Hector, after four seconds of silence:** “A log without context is a liar that swears it told you everything.”
 
-Manu unpacks the JSON, pivots on `trace_id`, and finally renders an end-to-end waterfall inside Jaeger: **gateway → fee-calculator → ledger**. The bad division lives in the fee-calculator. MTTR just collapsed from hours to minutes—once the logs started telling the truth.
+Katherine unpacks the JSON, pivots on `trace_id`, and finally renders an end-to-end waterfall inside Jaeger: **gateway → fee-calculator → ledger**. The bad division lives in the fee-calculator. MTTR just collapsed from hours to minutes—once the logs started telling the truth.
 
 \:::debug pattern
 **Pattern Name:** Incomplete Log Entry

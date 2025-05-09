@@ -78,14 +78,14 @@
         {
             "panel": 6,
             "filename": "ch5_panel6_logs_lie.png",
-            "scene_description": "Dual-pane tmux spread across Manu’s 32-inch monitor. Left pane: rapid INFO lines in dull gray, right pane: single JSON log entry with fields color-coded (trace_id in System Blue, error in Rust Red). Jaeger UI floats semi-transparent above in augmented-reality style, showing waterfall bars in deep amber (#C97E38). Empty Red Bull can balanced on monitor base, fluorescent reflection highlighting Manu’s furrowed brow.",
+            "scene_description": "Dual-pane tmux spread across Katherine’s 32-inch monitor. Left pane: rapid INFO lines in dull gray, right pane: single JSON log entry with fields color-coded (trace_id in System Blue, error in Rust Red). Jaeger UI floats semi-transparent above in augmented-reality style, showing waterfall bars in deep amber (#C97E38). Empty Red Bull can balanced on monitor base, fluorescent reflection highlighting Katherine’s furrowed brow.",
             "characters_in_frame": [
-                "Manu",
+                "Katherine",
                 "Juana",
                 "Hector"
             ],
             "speech_bubbles": {
-                "Manu": "The logs tell me nothing.",
+                "Katherine": "The logs tell me nothing.",
                 "Hector": "A log without context is a liar."
             },
             "narration": "Contextless logs hide divide-by-zero; OpenTelemetry schema unearths root cause."
@@ -145,7 +145,7 @@
             "characters_in_frame": [
                 "Hector",
                 "Omar",
-                "Manu",
+                "Katherine",
                 "Juana"
             ],
             "speech_bubbles": {

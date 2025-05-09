@@ -3,15 +3,15 @@
     {
       "panel": 1,
       "filename": "ch03_p1.png",
-      "scene_description": "Leonel streams a 3,000‑line DEBUG log tail on a wall terminal; Hector intervenes, filtering to WARN+ entries while Manu watches.",
+      "scene_description": "Leonel streams a 3,000‑line DEBUG log tail on a wall terminal; Hector intervenes, filtering to WARN+ entries while Katherine watches.",
       "characters_in_frame": [
         "Hector",
         "Leonel",
-        "Manu"
+        "Katherine"
       ],
       "speech_bubbles": {
         "Leonel": "Beautiful, isn’t it?",
-        "Manu": "Beautiful—or blinding?",
+        "Katherine": "Beautiful—or blinding?",
         "Hector": "Visibility isn’t the same as clarity."
       },
       "narration": "Disk IO spikes and a critical ERROR line slips by, buried in noise."
@@ -22,7 +22,7 @@
       "scene_description": "Grafana latency graph shows green; Wanjiru reads a live chat feed glowing red with user complaints as Hector overlays failure metrics.",
       "characters_in_frame": [
         "Hector",
-        "Manu",
+        "Katherine",
         "Wanjiru",
         "Leonel"
       ],
@@ -54,7 +54,7 @@
       "characters_in_frame": [
         "Hector",
         "Clara",
-        "Manu",
+        "Katherine",
         "Wanjiru",
         "Leonel"
       ],
@@ -85,12 +85,12 @@
       "characters_in_frame": [
         "Hector",
         "Clara",
-        "Manu",
+        "Katherine",
         "Wanjiru",
         "Leonel"
       ],
       "speech_bubbles": {
-        "Manu": "But DEBUG helps somebody someday—",
+        "Katherine": "But DEBUG helps somebody someday—",
         "Hector": "Not until it buries the outage."
       },
       "narration": "Old disk‑space incident flashback hovers ghost‑like in the background."
@@ -117,7 +117,7 @@
       "characters_in_frame": [
         "Hector",
         "Leonel",
-        "Manu",
+        "Katherine",
         "Wanjiru",
         "Clara"
       ],

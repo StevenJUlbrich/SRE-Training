@@ -14,7 +14,7 @@ This document supplements the Hector-led SRE training materials by providing an 
 - Strong in coding, weak in ops
 - Catchphrase: *"But why does it work that way in production?"*
 
-### 2. **Emmanuel “Manu” Gitonga** – *The Tired Support Hero*
+### 2. **Emmanuel “Katherine” Gitonga** – *The Tired Support Hero*
 - 31, mid-career, bank production support background
 - Wise but reactive, struggles with SLO thinking
 - Catchphrase: *"There’s always a hidden dependency…"*
@@ -72,7 +72,7 @@ This document supplements the Hector-led SRE training materials by providing an 
 - These characters can appear in voice widgets (e.g. `:::learner perspective`), dialogue, or reflection prompts.
 - Consider mapping each learner to key SRE topics:
   - **Wanjiru** → Alert fatigue, deployment
-  - **Manu** → Monitoring vs. observability
+  - **Katherine** → Monitoring vs. observability
   - **Aisha** → SLAs vs. SLOs
   - **Danny** → Automation, scripting
   - **Njeri** → Networking, resilience

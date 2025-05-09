@@ -73,7 +73,7 @@ Learners should walk away understanding:
 
 ### Panel 6 – Sin #3: Logs That Lie
 
-* **Scene**: Manu shows useless 500 error: no trace, no ID
+* **Scene**: Katherine shows useless 500 error: no trace, no ID
 * **Teaching Moment**: Omission is a form of telemetry failure
 * **Widget**: Debug Pattern — Incomplete Log Entry
 * **Artifact**: Log before/after with missing/requested fields

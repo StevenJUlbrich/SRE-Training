@@ -25,16 +25,16 @@ You’ll curl a failing endpoint, inspect replica-only dashboards, and watch Hec
 ### Teaching Narrative
 
 *02:57 AM, Mexico City.*  
-Rain needles the glass of a twenty-second-floor NOC. Inside, the glow of a Geneos wallboard could light a small club. Every tile pulses charcoal black and neon green—a disco of “OK.” Yet Emmanuel “Manu” Gitonga’s phone explodes with PagerDuty sirens.  
+Rain needles the glass of a twenty-second-floor NOC. Inside, the glow of a Geneos wallboard could light a small club. Every tile pulses charcoal black and neon green—a disco of “OK.” Yet Emmanuel “Katherine” Gitonga’s phone explodes with PagerDuty sirens.  
 > **PagerDuty**: *PAYMENT-SERVICE error rate > 5 % in us-west-2.*  
 > **Slack #bank-alerts**: *Transfers failing. Deposits missing.*  
 
-Manu stumbles toward the dashboards, pupils dilated. CPU stable at 32 %. Memory flat. Replica query latency? A tranquil 18 ms. He exhales:  
-> **Manu (muttering):** “Maybe the alert’s false… The graph is green.”  
+Katherine stumbles toward the dashboards, pupils dilated. CPU stable at 32 %. Memory flat. Replica query latency? A tranquil 18 ms. He exhales:  
+> **Katherine (muttering):** “Maybe the alert’s false… The graph is green.”  
 
 But ten floors below, ATMs spit *Service Unavailable* receipts. Users tweet screenshots; the bank’s social team scrambles. Monitoring says *what*—“Service is up.” Users scream *why*—“Money is gone.”  
 
-Manu runs `curl -s -o /dev/null -w "%{http_code}\n" https://api.bank.local/payments` and the terminal prints **500** in blood-red text. He pivots to Kubernetes logs:
+Katherine runs `curl -s -o /dev/null -w "%{http_code}\n" https://api.bank.local/payments` and the terminal prints **500** in blood-red text. He pivots to Kubernetes logs:
 
 ```shell
 kubectl logs deployment/payment-service | grep -i ERROR | head -3
@@ -45,7 +45,7 @@ kubectl logs deployment/payment-service | grep -i ERROR | head -3
 
 No `trace_id`. No user context. Just screams in the dark.
 
-![Alt text: Pager blares while Manu’s face glows green from a lying dashboard](images/ch1_p1_pager-screams.png){width=640}
+![Alt text: Pager blares while Katherine’s face glows green from a lying dashboard](images/ch1_p1_pager-screams.png){width=640}
 
 :::hector quote  
 “Green dashboards and screaming users. Which one do you believe?”   
@@ -112,7 +112,7 @@ Recall a time your dashboard said *healthy* while customers disagreed. What *un-
 
 ### Teaching Narrative
 
-With tension slicing the air, Manu switches to a full-screen terminal. Every POST to `/payments` bombs. He pipes the failing request ID into a log grep:
+With tension slicing the air, Katherine switches to a full-screen terminal. Every POST to `/payments` bombs. He pipes the failing request ID into a log grep:
 
 ```shell
 export RID=82df9
@@ -121,7 +121,7 @@ kubectl logs deployment/payment-service --since=5m \
 No logs found for RID=82df9
 ```
 
-> **Manu (exasperated):** “CPU looks fine though.”  
+> **Katherine (exasperated):** “CPU looks fine though.”  
 > **Hector:** “CPU looks fine on a corpse, too.”  
 
 Juana Torres, the alert whisperer, slides in and scans the container logs. They’re verbose but context-free:
@@ -169,7 +169,7 @@ Sketch the observability Venn diagram and map today’s outage data onto it.
 Hector lifts his coffee thermos like a courtroom exhibit.  
 > **Hector (dry):** “Exhibit A: A *green* dashboard that let four million dollars evaporate.”  
 
-He gestures at the Geneos wall. Manu squints—CPU still 32 %, memory flat, disks purring. 
+He gestures at the Geneos wall. Katherine squints—CPU still 32 %, memory flat, disks purring. 
 
 Hector drags a whiteboard into the aisle and inks three intersecting circles:
 
@@ -286,8 +286,8 @@ Within thirty seconds the `/payments` endpoint fails again—but the log now pri
 
 Juana copies the trace ID into Jaeger. A red span leaps out—`PaymentSvc → DB` stalled for 11 s on `cassandra-prime-01`.
 
-Manu’s mouth hangs open.  
-> **Manu:** “That one ID just told us who, where, and why.”  
+Katherine’s mouth hangs open.  
+> **Katherine:** “That one ID just told us who, where, and why.”  
 > **Hector (half-smile):** “Congratulations. Your logs can finally testify in court.”  
 
 Grafana refreshes; an error-rate panel—now wired to `HTTP_5xx`—flashes Rust Red. The green mirage shatters.
@@ -329,7 +329,7 @@ Draft a personal “green-wall gap” list: three signals you *thought* you had 
 
 ### Teaching Narrative
 
-The war-room lights dim to a midnight hush. Alerts still chirp in distant channels, but the screaming has faded—replaced by the scratching of markers and furious keystrokes. Juana, Wanjiru, and Manu gather around a hastily shared Google Doc titled **“We Were Blind Because…”**.  
+The war-room lights dim to a midnight hush. Alerts still chirp in distant channels, but the screaming has faded—replaced by the scratching of markers and furious keystrokes. Juana, Wanjiru, and Katherine gather around a hastily shared Google Doc titled **“We Were Blind Because…”**.  
 
 > **Wanjiru (typing, voice shaky):**  
 > 1. No `HTTP_5xx` overlay on Geneos.  
@@ -340,7 +340,7 @@ Hector paces slowly, coffee mug orbiting like a pendulum.
 > **Hector (lean, gravel voice):** “Write it all. Shame is the chisel that shapes better systems.”  
 
 He pulls the Doc onto the projector. A blank column awaits **“Fix by Friday”**.  
-> **Manu (sigh):** “Enable error-rate tile, instrument trace IDs, move dashboards to primaries.”  
+> **Katherine (sigh):** “Enable error-rate tile, instrument trace IDs, move dashboards to primaries.”  
 > **Hector (nods):** “Add *owner* for each signal. Otherwise next on-call inherits the same coffin.”  
 
 Juana recalls a 2023 ACH blackout in Bogotá—dashboards serene, transfers lost. The bank paid penalties in seven digits. She adds a bullet: *“Regulatory fines are telemetry invoices.”*  
@@ -381,7 +381,7 @@ curl -s -o /dev/null -w "%{http_code}\n" https://api.bank.local/payments
 200
 ```
 
-A hush. On Grafana, the once-blank error-rate tile now shows a Rust-Red spike from 02:57 to 03:07, then a calming descent toward slate gray. Manu flips to Jaeger; the trace for `d34db33f3c0e4e1b` glows amber but ends cleanly under 450 ms. Logs tell the same tale—`WriteTimeoutException` vanished, `trace_id` threads intact.
+A hush. On Grafana, the once-blank error-rate tile now shows a Rust-Red spike from 02:57 to 03:07, then a calming descent toward slate gray. Katherine flips to Jaeger; the trace for `d34db33f3c0e4e1b` glows amber but ends cleanly under 450 ms. Logs tell the same tale—`WriteTimeoutException` vanished, `trace_id` threads intact.
 
 > **VP (Zoom, exhausted relief):** “We good?”  
 > **Wanjiru (confident for the first time tonight):** “Real-time metrics show zero 5xx for ten minutes. Traces validate payment path. Logs confirm DB writes succeeding.”  

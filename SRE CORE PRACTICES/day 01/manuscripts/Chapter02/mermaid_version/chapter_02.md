@@ -5,7 +5,7 @@
 ### Chapter Overview  
 A banking outage never begins with flames on a dashboard. It starts in the quiet places — a teller noticing failed wire-transfer receipts, a queue lengthening in the background, a lone terminal log winking red and then rolling off the screen. In this chapter Hector Alvarez drags the learner cast through a failure born not of hardware, but of **invisibility**: a single configuration toggle that silenced every trace the system could have shouted. When observability disappears, blame becomes the loudest tool in the room.
 
-Across nine cinematic panels (delivered here in two parts), you will watch Wanjiru, Manu, and Juana confront a mystery crash that looks serene from the outside. You will follow their mis-steps, inspect raw logs with missing trace context, and witness Hector’s uncompromising debrief on why telemetry is an engineering feature—not an afterthought. By the end, you should know how a missing `trace_id` can fracture incident response, and how a single unchecked box (`enableTracing=true`) can buy an outage while nobody’s looking.
+Across nine cinematic panels (delivered here in two parts), you will watch Wanjiru, Katherine, and Juana confront a mystery crash that looks serene from the outside. You will follow their mis-steps, inspect raw logs with missing trace context, and witness Hector’s uncompromising debrief on why telemetry is an engineering feature—not an afterthought. By the end, you should know how a missing `trace_id` can fracture incident response, and how a single unchecked box (`enableTracing=true`) can buy an outage while nobody’s looking.
 
 Part A covers Panels 1–4, guiding you from first symptom through flashback to the silent configuration error. Each panel adheres to the contract cadence: **Learning Objective ▸ Takeaway ▸ Applied Example ▸ Teaching Narrative ▸ Image Embed (+ widget)**, embedding one widget per teaching sequence and ensuring that Hector’s gravel-dry wisdom lands exactly where the outline demands.
 
@@ -30,9 +30,9 @@ curl -X POST https://api.bank.example/v1/wire \
 ```
 
 ### Teaching Narrative  
-It’s 08 : 17 AM when the first teller in the Nairobi branch files an urgent Jira. Wire transfers stall at step two; customer confirmation receipts never print. Manu Gitonga, half a croissant in one hand and a Geneos dashboard on the other, zooms straight into *CPU Utilization*. The graph is flatter than a desert horizon.
+It’s 08 : 17 AM when the first teller in the Nairobi branch files an urgent Jira. Wire transfers stall at step two; customer confirmation receipts never print. Katherine Gitonga, half a croissant in one hand and a Geneos dashboard on the other, zooms straight into *CPU Utilization*. The graph is flatter than a desert horizon.
 
-> Manu (muttering): “CPU’s fine. Memory’s fine. Must be a glitch in the queue.”
+> Katherine (muttering): “CPU’s fine. Memory’s fine. Must be a glitch in the queue.”
 
 Across the aisle Wanjiru Maina pulls up **Payment-Service Error Rate**. Green, steady. No alarms. She shrugs, puzzled. A Slack channel called `#wire-ops` flickers to life with angry emojis from Customer-Care.
 
@@ -74,7 +74,7 @@ Resource steadiness ≠ service correctness. Metrics must align to *business out
 ```
 
 ### Teaching Narrative  
-Geneos glows tranquil. Manu zooms deeper, toggling one-minute resolution. Still nothing. Wanjiru adds a **90-percentile latency** panel. The line wiggles inside tolerance. They exchange a glance — “maybe the teller’s workstation is flaky?”
+Geneos glows tranquil. Katherine zooms deeper, toggling one-minute resolution. Still nothing. Wanjiru adds a **90-percentile latency** panel. The line wiggles inside tolerance. They exchange a glance — “maybe the teller’s workstation is flaky?”
 
 Juana Torres appears, silent as midnight maintenance. She tilts her laptop so the others see a real-time feed of failed HTTP 500s from customer endpoints. Thirty-seven in two minutes.
 
@@ -119,7 +119,7 @@ grep -i "NullPointerException" /var/log/wire-transfer.log | tail -n 3
 Every line identical—same method, same stack trace, **no `trace_id` field**. She tries `kubectl exec` into another pod; same emptiness. The request path is a cul-de-sac.
 
 > Juana (dry): “Classic. Someone clipped trace injection again.”  
-> Manu: “We had spans last sprint. Where’d they go?”  
+> Katherine: “We had spans last sprint. Where’d they go?”  
 > Wanjiru: “Could config have…?”  
 
 Your team just discovered an unobservable failure. Without span context, you cannot stitch together the ledger call, auth service hop, or database rollback that actually blew up. You are chasing ghosts with a flashlight whose batteries died a release ago.
@@ -159,7 +159,7 @@ Juana digs into the previous night’s deployment diff. A junior dev disabled tr
 
 Performance test passed. Tracing died. Production lost its voice.
 
-Manu exhales sharply. “We chased metrics for twenty minutes while the real clue was sitting in Git history.”
+Katherine exhales sharply. “We chased metrics for twenty minutes while the real clue was sitting in Git history.”
 
 Hector steps through the doorway like a human post-mortem.
 
@@ -200,7 +200,7 @@ PM        ▶︎  “Customers still angry. Who owns this?”
 
 ### Teaching Narrative  
 The war-room chat explodes. Ops reposts a “network latency” chart that looks normal. Devs paste a screenshot of pod restarts that also looks normal. Infra counters with a green graph from the load-balancer.  
-Wanjiru whispers, “Is it… possible we’re all staring at the wrong thing?” Manu doesn’t answer—he’s busy drafting a blame matrix for the postmortem.
+Wanjiru whispers, “Is it… possible we’re all staring at the wrong thing?” Katherine doesn’t answer—he’s busy drafting a blame matrix for the postmortem.
 
 Outside the thread, Jamal the Customer-Experience Director sighs: *“Users don’t care which team ‘wins.’ They just want to move money.”* The system is down; careers are up for auction.
 
@@ -239,7 +239,7 @@ Hector enters, drops his mug, and kills the conference-room lights. A single pro
 > **Impact:** 14-hour reconciliation drill, 4 regulators, one 8-figure fine.
 
 He turns to the group. “You’re following the same script—except this time, the auditors are *already on the call*.”  
-Juana gulps; Manu closes his blame spreadsheet. Hector flips to the next slide: a red CI step named **`telemetry-gate`**. It fails commits that disable tracing.
+Juana gulps; Katherine closes his blame spreadsheet. Hector flips to the next slide: a red CI step named **`telemetry-gate`**. It fails commits that disable tracing.
 
 > Hector: “You built a house without smoke detectors. Then argued about who smelled smoke first.”  
 > Wanjiru (quietly): “Let’s install detectors before we rebuild the kitchen.”
@@ -276,7 +276,7 @@ A single end-to-end trace short-circuits hours of speculation.
 Juana toggles the flag, redeploys, and reloads Grafana-Tempo. A vivid service map blossoms: `web` ➔ `auth` ➔ **`ledger-svc` (1 290 ms, red)** ➔ `db`.  
 Hector overlays the pre-fix view—an empty white void—with the new colorful DAG.
 
-> Manu: “That ledger hop is *7×* slower than baseline!”  
+> Katherine: “That ledger hop is *7×* slower than baseline!”  
 > Wanjiru: “And every failed wire dies *right there*.”  
 > Juana: “Telemetry wasn’t the cost. Ignorance was.”
 
@@ -332,12 +332,12 @@ Instrument once; verify always; blame never.
 ```
 
 ### Teaching Narrative  
-Manu commits a guard-rail script; Wanjiru approves within seconds. CI passes. A fresh deploy rolls out; Grafana shows error rate collapsing from **12 %** to **< 0.4 %**.  
+Katherine commits a guard-rail script; Wanjiru approves within seconds. CI passes. A fresh deploy rolls out; Grafana shows error rate collapsing from **12 %** to **< 0.4 %**.  
 Jamal posts in `#wire-ops`: *“Transfers cleared. Customers happy.”*  
 Silence—good silence—fills the room. Juana exhales. Hector merely nods.
 
-Wanjiru turns to Manu: “We didn’t *see* the problem because we never asked the system to speak.”   
-Manu replies: “From now on, telemetry first, feature second.”
+Wanjiru turns to Katherine: “We didn’t *see* the problem because we never asked the system to speak.”   
+Katherine replies: “From now on, telemetry first, feature second.”
 
 :::learner reflection
 List two concrete CI checks you can add *today* that guarantee traces and logs remain correlated after every deploy.

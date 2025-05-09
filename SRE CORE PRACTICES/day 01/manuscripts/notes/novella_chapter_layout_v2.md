@@ -34,9 +34,9 @@ In banking environments, downtime isn't measured just in minutes but in financia
    
    *Expanded narrative: In the operations center, Wanjiru—a recent transfer from traditional IT operations—frantically clicks through Geneos dashboards. Nothing makes sense. All systems show nominal. Yet Slack channels are exploding with executive messages: "40% of international wire transfers failing! What's happening?" Wanjiru's mouse hovers uncertainly between screens. Which metric matters? What should she be looking for?*
 
-3. **What's Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Manu says "CPU looks fine though." 
+3. **What's Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Katherine says "CPU looks fine though." 
    
-   *Expanded narrative: Manu, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
+   *Expanded narrative: Katherine, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
 
 4. **The Dashboard Is Lying** – Hector walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?" 
    
@@ -74,7 +74,7 @@ For banking systems, observability isn't optional—it's a regulatory requiremen
 ### Chapter 2: **The Problem Isn't Always the Problem**
 - What production support knows that devs forget
 - Teaching telemetry: logs, metrics, and traces
-- Wanjiru and Manu get burned by an untraceable config push
+- Wanjiru and Katherine get burned by an untraceable config push
 - Juana shows what *should* have been in the logs
 
 #### Introduction: The Hidden Root Cause
@@ -87,9 +87,9 @@ Systems communicate through telemetry—the collection and transmission of monit
 Banking systems rely on complex configurations that control everything from transaction routing to fraud detection thresholds. A single configuration change can cascade through dozens of interconnected services. Without proper observability, these changes become untraceable "ghosts in the machine"—causing failures that seem to emerge from nowhere.
 
 #### Panel-by-Panel Beat Map
-1. **The Mystery Crash** – A customer service agent reports failed wire transfers. Manu is already looking at CPU usage. 
+1. **The Mystery Crash** – A customer service agent reports failed wire transfers. Katherine is already looking at CPU usage. 
    
-   *Expanded narrative: The customer service line rings incessantly. Agents report that international wire transfers are failing intermittently—customers are seeing confirmations, but funds aren't arriving. In the operations center, Manu immediately pulls up CPU utilization graphs. "Let's see if we're overloaded," he mutters, defaulting to the familiar patterns of traditional monitoring. The graphs show normal utilization patterns. He frowns. "But something's definitely broken."*
+   *Expanded narrative: The customer service line rings incessantly. Agents report that international wire transfers are failing intermittently—customers are seeing confirmations, but funds aren't arriving. In the operations center, Katherine immediately pulls up CPU utilization graphs. "Let's see if we're overloaded," he mutters, defaulting to the familiar patterns of traditional monitoring. The graphs show normal utilization patterns. He frowns. "But something's definitely broken."*
 
 2. **Dashboard Deceit, Part II** – CPU and memory are stable. Wanjiru shrugs. "Geneos isn't showing anything weird." 
    
@@ -159,9 +159,9 @@ Financial institutions face stringent requirements for transaction monitoring, a
    
    *Expanded narrative: Leonel proudly displays his terminal showing thousands of log lines scrolling by at dizzying speed. "We log EVERYTHING!" he proclaims with evident pride. "Every function call, every variable value, every CPU cycle—we've got full visibility!" Sofia, the lead architect, watches the blur of text with a raised eyebrow. She turns to Hector, who looks physically pained by the display. "Visibility isn't the same as clarity," she notes quietly.*
 
-2. **The Metrics Don't Match** – Meanwhile, Manu notes the latency graph looks clean… but user complaints are rising. 
+2. **The Metrics Don't Match** – Meanwhile, Katherine notes the latency graph looks clean… but user complaints are rising. 
    
-   *Expanded narrative: At another workstation, Manu studies the system dashboard. "Latency looks completely normal," he reports, pointing to a steady graph line showing response times well within thresholds. He switches to another screen showing the customer support queue. "But complaints about slow transactions have doubled in the last hour." He shakes his head. "Something's wrong with our metrics if users are suffering but our dashboards look fine."*
+   *Expanded narrative: At another workstation, Katherine studies the system dashboard. "Latency looks completely normal," he reports, pointing to a steady graph line showing response times well within thresholds. He switches to another screen showing the customer support queue. "But complaints about slow transactions have doubled in the last hour." He shakes his head. "Something's wrong with our metrics if users are suffering but our dashboards look fine."*
 
 3. **The Unreadable Log** – Wanjiru attempts to find a user error but is blocked by irrelevant debug logs and missing correlation IDs. 
    
@@ -336,9 +336,9 @@ For financial institutions, observability failures carry regulatory risk beyond 
    
    *Expanded narrative: Juana pulls up the alert that triggered the incident response: "CRITICAL: ATM_SVC_ERROR_RATE > threshold." She clicks the runbook link. Error 404—page not found. She searches the wiki. Nothing. She checks the documentation repository. Empty. "Awesome," she deadpans. "It's not an alert anymore. It's a riddle." She turns to the team. "An alert without a runbook is just a puzzle you're solving at 3 AM while customers get angrier."*
 
-6. **Sin #3: Logs That Lie** – Manu highlights a 500 error log… with no trace ID, no request path, and no helpful message. "This might as well be in Morse code." 
+6. **Sin #3: Logs That Lie** – Katherine highlights a 500 error log… with no trace ID, no request path, and no helpful message. "This might as well be in Morse code." 
    
-   *Expanded narrative: Manu finally locates log entries from the failing ATM transactions. He projects them onto the screen: `ERROR 500: Request failed.` Nothing more—no transaction details, no customer information, no error codes from downstream systems. "This might as well be in Morse code," he says in frustration. "It tells us something failed but nothing about what, why, or how to fix it. The logs exist but tell us nothing useful—they lie by omission."*
+   *Expanded narrative: Katherine finally locates log entries from the failing ATM transactions. He projects them onto the screen: `ERROR 500: Request failed.` Nothing more—no transaction details, no customer information, no error codes from downstream systems. "This might as well be in Morse code," he says in frustration. "It tells us something failed but nothing about what, why, or how to fix it. The logs exist but tell us nothing useful—they lie by omission."*
 
 7. **Sin #4: Uptime Without User Success** – Split screen shows 100% uptime for ATM service but customers unable to withdraw cash. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing." 
    

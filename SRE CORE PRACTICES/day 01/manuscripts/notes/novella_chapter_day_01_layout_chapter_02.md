@@ -4,9 +4,9 @@
 
 ## Scene Description
 
-**The Mystery Crash** – A customer service agent reports failed wire transfers. Manu is already looking at CPU usage. 
+**The Mystery Crash** – A customer service agent reports failed wire transfers. Katherine is already looking at CPU usage. 
    
-*Expanded narrative: The customer service line rings incessantly. Agents report that international wire transfers are failing intermittently—customers are seeing confirmations, but funds aren't arriving. In the operations center, Manu immediately pulls up CPU utilization graphs. "Let's see if we're overloaded," he mutters, defaulting to the familiar patterns of traditional monitoring. The graphs show normal utilization patterns. He frowns. "But something's definitely broken."*
+*Expanded narrative: The customer service line rings incessantly. Agents report that international wire transfers are failing intermittently—customers are seeing confirmations, but funds aren't arriving. In the operations center, Katherine immediately pulls up CPU utilization graphs. "Let's see if we're overloaded," he mutters, defaulting to the familiar patterns of traditional monitoring. The graphs show normal utilization patterns. He frowns. "But something's definitely broken."*
 
 ## Teaching Narrative
 
