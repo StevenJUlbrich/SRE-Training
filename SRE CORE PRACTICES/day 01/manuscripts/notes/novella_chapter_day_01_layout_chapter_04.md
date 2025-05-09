@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**The All-Night Alarm** – Daniel is half-asleep, watching a Geneos alert that has fired 37 times in 12 minutes. His face says: "Please make it stop." 
-   
+**The All-Night Alarm** – Daniel is half-asleep, watching a Geneos alert that has fired 37 times in 12 minutes. His face says: "Please make it stop."
+
 *Expanded narrative: 3:42 AM. Daniel stares at his screen through bloodshot eyes. His phone buzzes again—the 37th alert in 12 minutes. All for the same CPU threshold breach that hasn't actually impacted any customers. His expression conveys pure exhaustion. The pager alert reads: "WARNING: CPU > 85% on auth-service-prod." He sighs heavily, acknowledges the alert, and adds it to his growing incident report. No customers affected, again. No actual impact, again. Just another threshold crossed.*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions must recognize that alert fatigue isn't just an annoyance
 
 ## Scene Description
 
-**False Positives Everywhere** – Juana walks by and glances at the alert rules. "You're getting paged for CPU > 85%? Who trained you—Geneos circa 2009?" 
-   
+**False Positives Everywhere** – Juana walks by and glances at the alert rules. "You're getting paged for CPU > 85%? Who trained you—Geneos circa 2009?"
+
 *Expanded narrative: Juana walks by, notices Daniel's state, and glances at his alert configuration. Her eyes widen. "You're getting paged for CPU > 85%? Who trained you—Geneos circa 2009?" She pulls up a chair. "No wonder you look like you haven't slept in a week." She scrolls through his alert history. "Ninety percent of these never affected a single customer. They're just...noise." Daniel nods wearily. "But how do I know what's important without watching everything?"*
 
 ## Teaching Narrative
@@ -92,8 +92,8 @@ Juana's comment about "Geneos circa 2009" emphasizes how static threshold alerti
 
 ## Scene Description
 
-**Looking for Symptoms, Not Signals** – Aisha shows a past incident where high CPU had no user impact, while an unnoticed error rate spike broke login. 
-   
+**Looking for Symptoms, Not Signals** – Aisha shows a past incident where high CPU had no user impact, while an unnoticed error rate spike broke login.
+
 *Expanded narrative: Aisha, the customer experience lead, joins them with her tablet. "Look at last month's incidents," she says, bringing up comparative graphs. The first shows CPU at 95% for hours with no customer impact whatsoever. The second shows a tiny error rate spike—just 2%—that prevented thousands of customers from logging in. "We had no alert for this," she points to the second graph. "Meanwhile, you got paged 16 times for high CPU that affected nobody. We're measuring machines, not customer experience."*
 
 ## Teaching Narrative
@@ -136,8 +136,8 @@ The contrasting incidents Aisha shows exemplify why financial institutions must 
 
 ## Scene Description
 
-**Burn Rate Awakening** – Hector enters with a diagram showing error budget burn across services. "You don't alert on thresholds. You alert on *threats.*" 
-   
+**Burn Rate Awakening** – Hector enters with a diagram showing error budget burn across services. "You don't alert on thresholds. You alert on *threats.*"
+
 *Expanded narrative: Hector approaches with a printout showing a different type of graph—error budget consumption over time. "You don't alert on thresholds," he explains. "You alert on *threats*—to customer experience, to regulatory compliance, to business operations." He points to steep slopes in the graph. "This is burn rate—how quickly you're consuming your error budget. When this accelerates, real customers are being affected, regardless of what your CPU is doing."*
 
 ## Teaching Narrative
@@ -180,8 +180,8 @@ Hector's burn rate diagram illustrates how this approach captures real problems 
 
 ## Scene Description
 
-**Fixing the Noise** – Clara helps Daniel rewrite the alert using a time-sliced burn rate policy with log links and trace context. 
-   
+**Fixing the Noise** – Clara helps Daniel rewrite the alert using a time-sliced burn rate policy with log links and trace context.
+
 *Expanded narrative: Clara sits with Daniel to rewrite his alerts. They replace the static CPU threshold with: "10% error budget consumed in 5 minutes." They add direct links to relevant logs and traces. They create multi-window alerts that trigger on both fast burns (severe issues) and slow burns (degradation). Each alert includes specific runbook links and impact assessments. "Now you'll only get woken up when something's actually hurting customers," Clara explains. "And when you do, you'll have everything you need to start solving it immediately."*
 
 ## Teaching Narrative
@@ -224,8 +224,8 @@ The alert rewrite that Clara and Daniel perform doesn't just reduce noise—it f
 
 ## Scene Description
 
-**Test Fire Drill** – The team simulates a new incident using the updated alert logic — results are quieter, clearer, and lead directly to the source. 
-   
+**Test Fire Drill** – The team simulates a new incident using the updated alert logic — results are quieter, clearer, and lead directly to the source.
+
 *Expanded narrative: The team runs a fire drill, injecting synthetic errors into the test environment. The new alerts trigger precisely when user experience degrades beyond acceptable levels—not before, not after. Each alert contains exactly the context needed: affected services, impacted customers, relevant logs, trace samples, and runbook links. Daniel follows the embedded information and identifies the simulated root cause in under two minutes. "This is...completely different," he realizes. "The alert isn't just saying something's wrong—it's showing me where to look."*
 
 ## Teaching Narrative
@@ -268,8 +268,8 @@ Daniel's realization that "this is completely different" highlights the transfor
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's monologue: "Bad alerts make good engineers quit. Let's not build alarms. Let's build clarity." 
-   
+**Lesson Locked In** – Hector's monologue: "Bad alerts make good engineers quit. Let's not build alarms. Let's build clarity."
+
 *Expanded narrative: As the team reviews the results, Hector offers a rare smile. "Bad alerts make good engineers quit," he observes. "Let's not build alarms. Let's build clarity." He gestures to the new system. "Every alert should answer three questions: What's broken? Who's affected? Where do I start looking? If it doesn't do that, it's not an alert—it's just noise." Daniel looks at his phone, newly configured with the SLO-based alerts, and for the first time in weeks, feels hope that he might actually sleep through the night.*
 
 ## Teaching Narrative

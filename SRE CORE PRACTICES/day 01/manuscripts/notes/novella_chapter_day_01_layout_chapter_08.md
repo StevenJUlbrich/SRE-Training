@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**Incident Playback Begins** – Juana pulls up logs, traces, and metrics from last week's login outage. "Let's find the failure story." 
-   
+**Incident Playback Begins** – Juana pulls up logs, traces, and metrics from last week's login outage. "Let's find the failure story."
+
 *Expanded narrative: The team gathers in the incident review room, screens displaying data from the previous week's customer login outage. "Let's find the failure story," Juana suggests, queuing up logs, traces, and metrics from the incident period. "We know what happened now—authentication service overload caused by misconfigured connection pooling. But let's analyze not just the technical failure, but our observability failure. Why did it take two hours to identify something that should have been obvious?"*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions should recognize that observability system performance is
 
 ## Scene Description
 
-**Everyone Blames the Logs** – Clara points out timestamps don't align. Omar can't correlate user activity. "Telemetry gaps everywhere." 
-   
+**Everyone Blames the Logs** – Clara points out timestamps don't align. Omar can't correlate user activity. "Telemetry gaps everywhere."
+
 *Expanded narrative: Clara immediately identifies a critical issue: "The timestamps don't align between services. Auth service is in UTC, the API gateway is in local time, and the database is using epoch time." Omar adds another problem: "I can't correlate user sessions across services—the session ID format changes at each boundary." The team builds a list of telemetry gaps: missing context propagation, inconsistent identifiers, uncorrelated error codes. "It's like trying to read a book where every page is in a different language," Wanjiru observes.*
 
 ## Teaching Narrative
@@ -92,8 +92,8 @@ The specific issues identified—misaligned timestamps, changing session IDs, in
 
 ## Scene Description
 
-**The Noise vs. Signal Chart** – Hector draws a 3x3 grid on the whiteboard. "Useful vs Useless. Timely vs Delayed." The team starts sorting their telemetry. 
-   
+**The Noise vs. Signal Chart** – Hector draws a 3x3 grid on the whiteboard. "Useful vs Useless. Timely vs Delayed." The team starts sorting their telemetry.
+
 *Expanded narrative: Hector approaches the whiteboard and draws a grid with two axes: "Useful vs. Useless" horizontally and "Timely vs. Delayed" vertically. "Let's categorize everything we collected during the incident," he instructs. The team begins placing each telemetry source in the appropriate quadrant. CPU metrics: timely but useless. Error logs: useful but delayed. User complaints: timely and useful, but external rather than systemic. The visualization makes the gaps obvious—most of their telemetry falls into the "useless or delayed" categories, explaining why diagnosis took so long.*
 
 ## Teaching Narrative
@@ -136,8 +136,8 @@ The specific categorizations mentioned—"CPU metrics: timely but useless. Error
 
 ## Scene Description
 
-**The Misleading Metric** – Sofia finds a metric that dipped during the outage but was excluded from the dashboard. "It was right here all along." 
-   
+**The Misleading Metric** – Sofia finds a metric that dipped during the outage but was excluded from the dashboard. "It was right here all along."
+
 *Expanded narrative: Sofia, reviewing system metrics not included on the primary dashboard, makes a discovery. "Look at this—connection pool availability dropped to zero right when the problems started." She displays a graph that clearly shows the issue. "The metric existed, but we weren't displaying it anywhere important." Daniel checks the alert configuration. "And we had no alert on it, despite it being a critical resource." Hector nods. "It was right here all along, telling you exactly what was wrong, but you weren't listening."*
 
 ## Teaching Narrative
@@ -180,8 +180,8 @@ The specific hidden metric in this scene—connection pool availability—repres
 
 ## Scene Description
 
-**The Ghost Error** – Juana discovers a silent `403` response path that wasn't logged. Wanjiru adds, "No one even knew that handler existed." 
-   
+**The Ghost Error** – Juana discovers a silent `403` response path that wasn't logged. Wanjiru adds, "No one even knew that handler existed."
+
 *Expanded narrative: Juana uncovers another critical gap by manually tracing requests through the system. "There's an authentication failure path that returns `403 Forbidden` but doesn't generate any log entry." She shows the code responsible—a handler added during the last release but never properly instrumented. Wanjiru looks shocked. "No one even knew that handler existed. It was added as a security fix but never documented or monitored." The team realizes these "ghost errors" were the actual customer experience, despite being completely invisible in their telemetry.*
 
 ## Teaching Narrative
@@ -224,8 +224,8 @@ The specific silent failure discovered—a 403 Forbidden response without loggin
 
 ## Scene Description
 
-**Blame Isn't the Goal** – Hector shuts down the noise: "You're not hunting villains. You're building timelines." 
-   
+**Blame Isn't the Goal** – Hector shuts down the noise: "You're not hunting villains. You're building timelines."
+
 *Expanded narrative: As the discussion heats up and teams begin defending their components, Hector intervenes firmly. "Enough. You're not hunting villains. You're building timelines." He refocuses the group on the core question: "What information did we need that we didn't have? What signals were missing or misleading? Who had partial knowledge that wasn't shared?" He points to the whiteboard. "This isn't about blame. It's about closing observability gaps so you can respond faster next time."*
 
 ## Teaching Narrative
@@ -268,8 +268,8 @@ Financial institutions must recognize that observability culture directly impact
 
 ## Scene Description
 
-**Telemetry Rewrite Planning** – The team builds a table of missing log fields, mismatched metrics, and non-correlated spans. 
-   
+**Telemetry Rewrite Planning** – The team builds a table of missing log fields, mismatched metrics, and non-correlated spans.
+
 *Expanded narrative: The team methodically documents every observability gap exposed during the incident. They create a comprehensive table: missing log fields needed for correlation, metrics that should have been prominently displayed, spans that weren't properly connected across service boundaries. For each gap, they assign clear ownership, implementation priority, and expected business impact. The document transforms from a list of failures into an actionable engineering roadmap for observability improvements.*
 
 ## Teaching Narrative
@@ -312,8 +312,8 @@ Financial institutions should approach observability enhancement as a strategic 
 
 ## Scene Description
 
-**The New Standard** – Clara proposes a new format for logs and a trace ID injection policy. Hector nods. "Now we're getting somewhere." 
-   
+**The New Standard** – Clara proposes a new format for logs and a trace ID injection policy. Hector nods. "Now we're getting somewhere."
+
 *Expanded narrative: Clara steps forward with a concrete proposal: a standardized logging format that ensures consistency across all services, mandatory context fields for correlation, and automatic trace ID injection at service boundaries. She presents detailed implementation specifications and a rollout plan. Hector reviews the documentation with growing approval. "Now we're getting somewhere," he acknowledges. "This isn't just fixing what broke—it's building a system that actively helps you understand what's happening."*
 
 ## Teaching Narrative
@@ -356,8 +356,8 @@ Financial institutions should recognize observability contracts as essential inf
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's monologue: "You don't debug ghosts with flashlights. You build haunted house diagrams—with receipts." 
-   
+**Lesson Locked In** – Hector's monologue: "You don't debug ghosts with flashlights. You build haunted house diagrams—with receipts."
+
 *Expanded narrative: As the team begins implementing the changes, Hector offers his assessment. "You don't debug ghosts with flashlights," he observes. "You build haunted house diagrams—with receipts. Every error leaves evidence if you've designed your system to collect it." He reviews the new observability standards. "Write telemetry like you're going to debug a ghost at 3 a.m.—because you will. Make it tell a story so clear that anyone can follow it, even when they're half-asleep and the system is on fire."*
 
 ## Teaching Narrative
@@ -400,8 +400,8 @@ Financial institutions should approach observability design as a critical aspect
 
 ## Scene Description
 
-**Reflection Panel** – Omar: "This wasn't postmortem. It was confession." Hector: "Good. Now teach the system how to confess sooner." 
-   
+**Reflection Panel** – Omar: "This wasn't postmortem. It was confession." Hector: "Good. Now teach the system how to confess sooner."
+
 *Expanded narrative: As the session concludes, Omar has a realization: "This wasn't really a postmortem, was it? It was more like a confession—admitting all the ways our observability failed us." Hector actually smiles slightly. "Good observation. And confession is the first step toward improvement." He gestures to the implementation plan. "Now teach your system how to confess sooner—before the incident becomes a crisis, before customers notice, before regulators get involved. That's what real observability delivers: early warnings, not just forensic evidence."*
 
 ## Teaching Narrative

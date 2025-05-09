@@ -1,29 +1,31 @@
-# Chapter 4 – “You’re Not Alerting — You’re Alarming”  
+# Chapter 4 – “You’re Not Alerting — You’re Alarming”
 
+## Chapter Overview
 
-## Chapter Overview  
+The first time a Tier-1 banking platform paged Hector for “CPU > 85 %,” no customer ever noticed. The second time it happened, a junior on-call quit on the spot. Static, host-centric alerts like that once made sense in mainframe days, but today’s micro-service meshes evaporate beneath them. Modern incidents hide in the seam between healthy hardware and furious users, so the chapter begins by exposing why old thresholds sleepwalk past real pain. :contentReference[oaicite:0]{index=0}
 
-The first time a Tier-1 banking platform paged Hector for “CPU > 85 %,” no customer ever noticed. The second time it happened, a junior on-call quit on the spot. Static, host-centric alerts like that once made sense in mainframe days, but today’s micro-service meshes evaporate beneath them. Modern incidents hide in the seam between healthy hardware and furious users, so the chapter begins by exposing why old thresholds sleepwalk past real pain.  :contentReference[oaicite:0]{index=0}  
+Traditional alerting pipelines assume resource exhaustion will always precede service failure. Banking stacks disprove that daily: a single mis-timed feature flag burns through a login SLO long before any host feels pressure. When engineers bind alerts to internals—CPU, memory, queue depth—they inherit every false positive those metrics cough up at high load, while missing the low-volume edge cases auditors actually care about.
 
-Traditional alerting pipelines assume resource exhaustion will always precede service failure. Banking stacks disprove that daily: a single mis-timed feature flag burns through a login SLO long before any host feels pressure. When engineers bind alerts to internals—CPU, memory, queue depth—they inherit every false positive those metrics cough up at high load, while missing the low-volume edge cases auditors actually care about.  
+Enter **burn rate**: the speed at which an error budget evaporates. An SLO-aware alert treats “five minutes of 15 % 5xx responses” as a burning fuse, regardless of CPU. By quantifying how quickly customer experience erodes, SLO alerts cut through infrastructure noise and wake the right humans only when failure is *imminent*. Error budgets become the currency of reliability, and burn-rate slopes show when that currency is on fire.
 
-Enter **burn rate**: the speed at which an error budget evaporates. An SLO-aware alert treats “five minutes of 15 % 5xx responses” as a burning fuse, regardless of CPU. By quantifying how quickly customer experience erodes, SLO alerts cut through infrastructure noise and wake the right humans only when failure is *imminent*. Error budgets become the currency of reliability, and burn-rate slopes show when that currency is on fire.  
+This chapter anchors those ideas in a real outage: login requests timed out for 8 % of mobile users while dashboards flashed green. Forty CPU alerts fired; zero user-impact alerts did. We’ll replay that night through Daniel’s exhausted eyes, let Juana surgically dismantle the faulty rules, and watch Hector drop a burn-rate diagram like an accountant revealing fraud.
 
-This chapter anchors those ideas in a real outage: login requests timed out for 8 % of mobile users while dashboards flashed green. Forty CPU alerts fired; zero user-impact alerts did. We’ll replay that night through Daniel’s exhausted eyes, let Juana surgically dismantle the faulty rules, and watch Hector drop a burn-rate diagram like an accountant revealing fraud.  
+By the end, you will rewrite one of your own alerts to measure **threats, not thresholds**. Expect fewer pages at 3 AM—and alerts that actually point to the smoking component.
 
-By the end, you will rewrite one of your own alerts to measure **threats, not thresholds**. Expect fewer pages at 3 AM—and alerts that actually point to the smoking component.  
+______________________________________________________________________
 
----
+## Panel 1 – **The All-Night Alarm**
 
-## Panel 1 – **The All-Night Alarm**  
+### 🎯 Learning Objective
 
-### 🎯 Learning Objective  
-Recognize that a static CPU threshold alert can trigger without any customer impact, creating fatigue and distrust.  
+Recognize that a static CPU threshold alert can trigger without any customer impact, creating fatigue and distrust.
 
-### ✅ Takeaway  
-If an alert can wake you up while the bank’s users remain happy, re-classify it as telemetry—*not* a page.  
+### ✅ Takeaway
 
-### 🚦 Applied Example  
+If an alert can wake you up while the bank’s users remain happy, re-classify it as telemetry—*not* a page.
+
+### 🚦 Applied Example
+
 ```text
 PagerDuty #PD-102233: “db-core-02 CPU > 85 % for 5 m”
 Acknowledged by: Daniel Mutua
@@ -45,13 +47,13 @@ Hector’s avatar appears—a coffee-stained RHEL cap an omen of honesty.
 
 > **Hector:** “Daniel, stop admiring server sweat. If customers aren’t screaming, go back to bed.”
 
-He pastes a screenshot of the login SLI, flat as a calm pulse. “You paged people for *exercise*, not for injury.”&#x20;
+He pastes a screenshot of the login SLI, flat as a calm pulse. “You paged people for *exercise*, not for injury.”&#32;
 
 ### Image Embed
 
 ![Daniel’s phone lit by red PagerDuty banner in a dark studio apartment; CPU graph hovers at 87 %.](images/ch4_p1_all_night_alarm.png){width=600}
 
----
+______________________________________________________________________
 
 ## Panel 2 – **False Positives Everywhere**
 
@@ -82,7 +84,7 @@ Juana taps the rule file onscreen: “Check the comment timestamp. 14 years ago.
 
 Daniel muscles a grin. “Better safe than sorry?” Hector’s laugh ricochets off graphite-painted walls.
 
-> **Hector (Aphorism)**: “Geneos rules don’t fix modern risk. They just remind you how old your runbooks are.”&#x20;
+> **Hector (Aphorism)**: “Geneos rules don’t fix modern risk. They just remind you how old your runbooks are.”&#32;
 
 He toggles an overlay: last quarter’s *ignored* alerts versus mean-time-to-detect. Trendline? Upward misery. The team sees the silent killer: not downtime, but *trust decay*.
 
@@ -90,11 +92,11 @@ He toggles an overlay: last quarter’s *ignored* alerts versus mean-time-to-det
 
 ![Dashboard juxtaposing a skyscraper of alert counts against a flat line of user-impact incidents; Clara circles the spike in red.](images/ch4_p2_false_positives.png){width=600}
 
-\:::hector quote
+:::hector quote
 **Hector says:** “If your pager is louder than your customers, your priorities are upside-down.”
-\:::
+:::
 
----
+______________________________________________________________________
 
 ## Panel 3 – **Looking for Symptoms, Not Signals**
 
@@ -130,31 +132,30 @@ He tells the war story of a London banking outage where CPU thresholds masked a 
 
 ![Split-screen: top shows benign CPU spike, bottom shows red error-rate line spiking with user complaints ticker beside it.](images/ch4_p3_symptoms_vs_signals.png){width=600}
 
-
 **Pattern Name:** Missing Symptom Coverage
 
 **Description:** Alerts monitor resource usage but ignore direct customer pain indicators (error %, latency, abandonment). Engineers drown in noise and miss real outages.
 
 **Example Fix:** Create multi-window burn-rate alerts on `error_rate > 2 %` that fire within 5 minutes and link directly to transaction traces plus runbook steps.
 
-
----
-
-
+______________________________________________________________________
 
 ## Panel 4 – **Burn Rate Awakening**
 
-### 🎯 Learning Objective  
+### 🎯 Learning Objective
+
 Understand **burn rate** as the speed at which an error budget is consumed and why multi-window SLO alerts fire on *risk slope*, not raw error count.
 
-### ✅ Takeaway  
+### ✅ Takeaway
+
 If you know how fast you’re burning reliability credit, you know how long you have before customers riot.
 
-### 🚦 Applied Example  
+### 🚦 Applied Example
+
 ```text
 Service A  ❱ 10 % of 0.1 % error budget consumed in 5 m  →  ⏰ Page
 Service B  ❱ 30 % of 1 % error budget consumed in 30 m →  ⚠️ Ticket
-````
+```
 
 ### Teaching Narrative
 
@@ -170,11 +171,11 @@ Clara whispers, “So the alert fires *earlier* for Service B?” Juana nods: �
 
 ![Mermaid burn-rate diagram—green gentle slope vs red cliff-face steep line.](images/ch4_p4_burn_rate.png){width=600}
 
-\:::incident flashback
+:::incident flashback
 **Postmortem Recap:** In 2023, a Mexican mobile-payments cluster hit a silent 7 % 5xx for 14 minutes. Burn-rate math said *six* minutes of tolerance. The page never came; regulators did.
-\:::
+:::
 
----
+______________________________________________________________________
 
 ## Panel 5 – **Fixing the Noise**
 
@@ -218,21 +219,21 @@ Clara’s stylus taps the “BEFORE” block: “One metric, zero context.” Da
 
 Juana pastes a trace-ID token. “Pager buttons you; click takes you straight to the failing span.” Hector grins—rare, brief.
 
-> **Hector Aphorism:** “Alerts should arrive with directions, not riddles.”&#x20;
+> **Hector Aphorism:** “Alerts should arrive with directions, not riddles.”&#32;
 
 ### Image Embed
 
 ![Side-by-side YAML before/after on Clara’s tablet; Hector’s reflection in the glass giving a thumbs-up.](images/ch4_p5_fixing_noise.png){width=600}
 
-\:::try this
+:::try this
 Rewrite one of your own host-based alerts.
 
 1. Identify the user-visible SLI it *should* protect.
 2. Calculate the **fast-burn** (5 m) and **slow-burn** (30 m) thresholds.
 3. Add a runbook, trace-link template, and customer-impact note. Commit the change.
-   \:::
+   :::
 
----
+______________________________________________________________________
 
 ## Panel 6 – **Test Fire Drill**
 
@@ -267,7 +268,7 @@ Clara clocks the timeline: first byte to fix in seven minutes. She high-fives Ju
 
 ![War-room screen: single red alert banner, trace map open, team relaxed but focused.](images/ch4_p6_test_drill.png){width=600}
 
----
+______________________________________________________________________
 
 ## Panel 7 – **Lesson Locked In**
 
@@ -281,17 +282,17 @@ An alert is production-worthy only if it answers: **What broke? Who’s affected
 
 ### 🚦 Applied Example
 
-| Question        | Example Data in Alert                |
+| Question | Example Data in Alert |
 | --------------- | ------------------------------------ |
-| What broke?     | *Mobile-login SLO fast-burn*         |
-| Who’s affected? | *6 % of sessions → timeouts*         |
-| Next step?      | *Rollback `login-svc` or add 2 pods* |
+| What broke? | *Mobile-login SLO fast-burn* |
+| Who’s affected? | *6 % of sessions → timeouts* |
+| Next step? | *Rollback `login-svc` or add 2 pods* |
 
 ### Teaching Narrative
 
 Hector stands before a fresh standards doc, signatures queued. “No alert ships until it passes the litmus.” Aisha signs first; Daniel scribbles last, exhaustion replaced by relief.
 
-> **Hector (closing grin):** “Let’s not build alarms. Let’s build clarity.”&#x20;
+> **Hector (closing grin):** “Let’s not build alarms. Let’s build clarity.”&#32;
 
 ### Image Embed
 
@@ -301,9 +302,8 @@ Hector stands before a fresh standards doc, signatures queued. “No alert ships
 **Hector says:** “Bad alerts make good engineers quit. Great alerts let them sleep—and still keep their jobs.”
 :::
 
----
+______________________________________________________________________
 
----
+______________________________________________________________________
 
 *End of Chapter 4.*
-

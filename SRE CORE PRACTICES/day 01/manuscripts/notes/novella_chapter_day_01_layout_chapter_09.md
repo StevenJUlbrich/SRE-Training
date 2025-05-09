@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**The Pretty Dashboard** – Leonel presents a stunning dashboard to the team: rainbow gauges, graphs, gradients galore. Everyone stares in polite confusion. 
-   
+**The Pretty Dashboard** – Leonel presents a stunning dashboard to the team: rainbow gauges, graphs, gradients galore. Everyone stares in polite confusion.
+
 *Expanded narrative: Leonel proudly unveils his masterpiece on the main operations display: a spectacular dashboard with rainbow color schemes, animated gauges, 3D charts, and gradient backgrounds. It's visually stunning—a work of digital art. "I've included every metric we collect," he announces proudly. "Over 200 different measurements in real-time!" The team stares in polite confusion. No one wants to ask the obvious question: What are we supposed to learn from this beautiful but overwhelming display?*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions must recognize that dashboards exist to serve operational
 
 ## Scene Description
 
-**The Misleading Calm** – Sofia compares it to user metrics. "It looks clean… but logins are down 6%." 
-   
+**The Misleading Calm** – Sofia compares it to user metrics. "It looks clean… but logins are down 6%."
+
 *Expanded narrative: Sofia quietly opens another screen showing direct user experience metrics. "Your dashboard looks beautiful and shows all systems operating normally," she notes. "But according to our actual user metrics, logins are down 6% compared to normal, and transaction completions have dropped by 8% in the last hour." She switches to the customer support queue. "And we've received 27 reports of slow performance in the last 30 minutes." She looks at Leonel. "So either all our customers are simultaneously imagining problems, or something's wrong that your dashboard isn't showing."*
 
 ## Teaching Narrative
@@ -92,8 +92,8 @@ Financial institutions must recognize that technical metrics only matter insofar
 
 ## Scene Description
 
-**The Anti-Signal** – Hector calls it "dashboard theatre." "You made something pretty. Can it stop a fire?" 
-   
+**The Anti-Signal** – Hector calls it "dashboard theatre." "You made something pretty. Can it stop a fire?"
+
 *Expanded narrative: Hector examines the dashboard with his characteristic directness. "This is dashboard theatre," he declares. "It looks impressive, but it's actually making you less effective." He points to the array of colorful widgets. "With this much visual noise, you'll miss the real signals when they appear. It's like trying to hear a whispered warning in a rock concert." He turns to Leonel. "You made something pretty. Can it stop a fire? Can it tell you, in the first five seconds of looking at it, exactly what's wrong and where to start fixing it? Because that's the only thing that matters at 3 AM when transactions are failing."*
 
 ## Teaching Narrative
@@ -136,8 +136,8 @@ Financial institutions should evaluate dashboards not just on their comprehensiv
 
 ## Scene Description
 
-**Dashboard Autopsy** – Clara highlights 3 charts showing downward trends during last week's outage. None are visible in Leonel's view. 
-   
+**Dashboard Autopsy** – Clara highlights 3 charts showing downward trends during last week's outage. None are visible in Leonel's view.
+
 *Expanded narrative: Clara opens the incident review from the previous week's outage. "Let's do a dashboard autopsy," she suggests. She pulls up three specific metrics that clearly showed developing problems 30 minutes before customer impact: connection pool exhaustion, authentication latency, and transaction error rates. "These signals told the complete story before users started complaining." She switches to Leonel's dashboard and tries to find the same metrics. "But in this view, they're either completely missing or buried on page seven of a dashboard carousel. If we'd been using this during the incident, we would have been blind to the early warning signs."*
 
 ## Teaching Narrative
@@ -180,8 +180,8 @@ Financial institutions should establish failure analysis as a standard part of i
 
 ## Scene Description
 
-**Redesign Begins** – Juana and Omar help reduce panels to just 5: request rate, error rate, latency, business KPI, trace-linked event summary. 
-   
+**Redesign Begins** – Juana and Omar help reduce panels to just 5: request rate, error rate, latency, business KPI, trace-linked event summary.
+
 *Expanded narrative: The team launches into redesigning the dashboard with ruthless prioritization. Juana and Omar lead the effort, eliminating dozens of widgets and focusing on just five critical panels: request rate by service, error rate with customer impact, end-to-end transaction latency, key business metrics (daily active users, transaction volume, completion rate), and a trace-linked event summary showing recent errors with context. "These are the only metrics that directly answer the question 'Is the system working properly for customers?'" Juana explains. "Everything else is diagnostic detail that should be available on drill-down, not front and center."*
 
 ## Teaching Narrative
@@ -224,8 +224,8 @@ Financial institutions should recognize that effective dashboards aren't compreh
 
 ## Scene Description
 
-**Signal Highlighting** – They add change annotations, zoomed time windows, and trace IDs directly into the visuals. 
-   
+**Signal Highlighting** – They add change annotations, zoomed time windows, and trace IDs directly into the visuals.
+
 *Expanded narrative: With the core metrics selected, the team focuses on making them maximally informative. They add change annotations directly on timelines, showing deployments, configuration changes, and scaling events. They implement zoomed time windows that automatically focus on periods with anomalous behavior. They embed trace IDs from failing transactions directly into error rate visualizations, enabling one-click navigation to detailed traces. "The dashboard shouldn't just show there's a problem," Omar explains. "It should tell you when it started, what changed right before it, and give you an immediate path to dive deeper."*
 
 ## Teaching Narrative
@@ -268,8 +268,8 @@ Financial institutions should approach dashboard design not just as data visuali
 
 ## Scene Description
 
-**Before & After** – A side-by-side of Leonel's old vs new version. The "quiet dashboard" has two red blips—and they correlate directly with user complaints. 
-   
+**Before & After** – A side-by-side of Leonel's old vs new version. The "quiet dashboard" has two red blips—and they correlate directly with user complaints.
+
 *Expanded narrative: The team presents a side-by-side comparison of the original dashboard and the redesigned version. The contrast is stark. The original shows a complex array of colorful widgets, most showing healthy green status despite ongoing issues. The new "quiet dashboard" is predominantly empty space with just five key panels. Two clear red spikes stand out on the error rate graph—each perfectly aligned with clusters of customer complaints. "The old dashboard showed everything but told us nothing," Sofia observes. "The new one shows only what matters, but tells us exactly what we need to know, exactly when we need to know it."*
 
 ## Teaching Narrative
@@ -312,8 +312,8 @@ Financial institutions should establish concrete evidence of dashboard effective
 
 ## Scene Description
 
-**Hector's Standard** – He scribbles on the whiteboard: "3 graphs: What broke. When it broke. Why it broke." 
-   
+**Hector's Standard** – He scribbles on the whiteboard: "3 graphs: What broke. When it broke. Why it broke."
+
 *Expanded narrative: Hector approaches the whiteboard and writes a simple standard for dashboard effectiveness. "You need just three things," he explains as he writes. "What broke: which service or component is failing. When it broke: the precise time the issue began and any correlating events. Why it broke: the specific mechanism causing the failure." He caps his marker. "Everything else is diagnostic detail that belongs on drill-down views, not your primary dashboard. If you can answer these three questions in the first thirty seconds, your dashboard works. If not, it's just decoration."*
 
 ## Teaching Narrative
@@ -356,8 +356,8 @@ Financial institutions should establish and document clear observation principle
 
 ## Scene Description
 
-**Final Reflection** – Leonel: "You don't want pretty. You want accurate." Hector: "You want clarity when everything's on fire." 
-   
+**Final Reflection** – Leonel: "You don't want pretty. You want accurate." Hector: "You want clarity when everything's on fire."
+
 *Expanded narrative: As the team implements the new dashboard, Leonel reflects on the transformation. "I get it now," he acknowledges. "You don't want pretty. You want accurate." Hector nods, but corrects slightly: "What you really want is clarity when everything's on fire. A dashboard has one job: to tell you exactly what's wrong and where to start fixing it when an incident is underway. Everything else—analytics, reporting, exploration—belongs in different tools designed for those specific purposes. Dashboards are for emergencies. Design them accordingly."*
 
 ## Teaching Narrative
@@ -400,8 +400,8 @@ Financial institutions should recognize that effective observability requires sp
 
 ## Scene Description
 
-**Lesson Locked In** – Juana: "Less dashboard. More insight." Hector: "Now it tells the truth—whether you like it or not." 
-   
+**Lesson Locked In** – Juana: "Less dashboard. More insight." Hector: "Now it tells the truth—whether you like it or not."
+
 *Expanded narrative: As they activate the new dashboard in production, Juana summarizes the transformation: "Less dashboard. More insight." Hector nods approvingly and adds his characteristic perspective: "Now it tells the truth—whether you like it or not." He looks at the team. "That's the real test of good observability. It doesn't flatter you with green status when things are failing. It doesn't hide problems behind pretty visualizations. It tells you exactly what's happening, especially when that truth is uncomfortable. Because in this business, uncomfortable truths caught early save jobs, money, and customer trust."*
 
 ## Teaching Narrative

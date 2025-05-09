@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**Death by Verbose Logging** – Leonel shows off a beautiful but bloated log stream. "We log everything!" he grins. Sofia raises an eyebrow. 
-   
+**Death by Verbose Logging** – Leonel shows off a beautiful but bloated log stream. "We log everything!" he grins. Sofia raises an eyebrow.
+
 *Expanded narrative: Leonel proudly displays his terminal showing thousands of log lines scrolling by at dizzying speed. "We log EVERYTHING!" he proclaims with evident pride. "Every function call, every variable value, every CPU cycle—we've got full visibility!" Sofia, the lead architect, watches the blur of text with a raised eyebrow. She turns to Hector, who looks physically pained by the display. "Visibility isn't the same as clarity," she notes quietly.*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions must recognize that excessive logging isn't just ineffici
 
 ## Scene Description
 
-**The Metrics Don't Match** – Meanwhile, Katherine notes the latency graph looks clean… but user complaints are rising. 
-   
+**The Metrics Don't Match** – Meanwhile, Katherine notes the latency graph looks clean… but user complaints are rising.
+
 *Expanded narrative: At another workstation, Katherine studies the system dashboard. "Latency looks completely normal," he reports, pointing to a steady graph line showing response times well within thresholds. He switches to another screen showing the customer support queue. "But complaints about slow transactions have doubled in the last hour." He shakes his head. "Something's wrong with our metrics if users are suffering but our dashboards look fine."*
 
 ## Teaching Narrative
@@ -97,8 +97,8 @@ Katherine's observation that "something's wrong with our metrics" represents a c
 
 ## Scene Description
 
-**The Unreadable Log** – Wanjiru attempts to find a user error but is blocked by irrelevant debug logs and missing correlation IDs. 
-   
+**The Unreadable Log** – Wanjiru attempts to find a user error but is blocked by irrelevant debug logs and missing correlation IDs.
+
 *Expanded narrative: Wanjiru attempts to investigate a specific customer complaint. She searches the logs for the customer's transaction ID, only to be met with thousands of results—most completely irrelevant DEBUG statements. "I can't find the actual error," she groans. "There's too much noise, and nothing connects these logs to specific transactions. No correlation IDs, no session context—it's just a flood of disconnected data."*
 
 ## Teaching Narrative
@@ -141,8 +141,8 @@ The logs Wanjiru encounters aren't just poorly structured—they're actively fai
 
 ## Scene Description
 
-**Hector Steps In** – He draws three overlapping circles labeled Logs, Metrics, Traces. "If they don't intersect, they don't help." 
-   
+**Hector Steps In** – He draws three overlapping circles labeled Logs, Metrics, Traces. "If they don't intersect, they don't help."
+
 *Expanded narrative: Hector approaches the whiteboard and draws three circles labeled LOGS, METRICS, and TRACES with a small area where all three intersect. "Observability isn't about volume," he explains. "It's about connection. If your logs don't connect to your metrics, and your metrics don't connect to your traces, they don't help you when it matters. You need all three working together, telling the same story from different perspectives."*
 
 ## Teaching Narrative
@@ -156,6 +156,7 @@ The integration of logs, metrics, and traces creates a comprehensive observabili
 1. **Cross-Pillar Correlation**: The ability to navigate between related logs, metrics, and traces using common identifiers
 
 2. **Complementary Perspectives**: Each pillar provides unique insights that complement the others:
+
    - Logs provide detailed event context
    - Metrics show patterns over time
    - Traces reveal request flows across services
@@ -188,8 +189,8 @@ Hector's statement that "if they don't intersect, they don't help" emphasizes th
 
 ## Scene Description
 
-**Metric Hygiene Clinic** – Clara points out a metric labeled `service_latency_time_chart_thing`. Hector winces audibly. 
-   
+**Metric Hygiene Clinic** – Clara points out a metric labeled `service_latency_time_chart_thing`. Hector winces audibly.
+
 *Expanded narrative: Clara, the observability specialist, projects a list of current metrics onto the screen. She highlights one labeled `service_latency_time_chart_thing`. "What does this actually measure?" she asks the room. Silence. "Who owns it?" More silence. "What's the threshold for concern?" Complete silence. Hector winces audibly. "If you can't answer those questions, the metric is worse than useless—it's misleading," he states. "It gives the illusion of observability without the substance."*
 
 ## Teaching Narrative
@@ -219,6 +220,7 @@ Hector's observation that poor metrics create "the illusion of observability wit
 To implement effective metric hygiene in financial systems:
 
 1. **Naming Convention Standard**: Create and enforce a consistent metric naming pattern that communicates what's measured:
+
    ```
    [domain]_[entity]_[action]_[unit]
    payment_transaction_processing_duration_seconds
@@ -236,8 +238,8 @@ Clara's example metric (`service_latency_time_chart_thing`) reveals multiple fai
 
 ## Scene Description
 
-**Refactoring the Noise** – Team collaboratively rewrites a log format and reduces cardinality on a critical metric. 
-   
+**Refactoring the Noise** – Team collaboratively rewrites a log format and reduces cardinality on a critical metric.
+
 *Expanded narrative: The team gathers around a whiteboard, collaboratively designing new telemetry standards. They create structured JSON log formats with mandatory fields: service name, transaction ID, customer impact indicators. They redefine metrics with clear ownership and purpose documents. They establish cardinality limits to prevent explosion of unique time series. Leonel reluctantly agrees to reduce DEBUG logs by 90%, focusing instead on meaningful transaction context.*
 
 ## Teaching Narrative
@@ -280,8 +282,8 @@ The team's collaborative design session represents a crucial shift from individu
 
 ## Scene Description
 
-**The Ah-Ha Graph** – A new dashboard emerges: minimal, relevant, clear. It shows a real correlation between auth failures and DB retries. 
-   
+**The Ah-Ha Graph** – A new dashboard emerges: minimal, relevant, clear. It shows a real correlation between auth failures and DB retries.
+
 *Expanded narrative: Hours later, a new dashboard takes shape on the main screen—dramatically simpler than before. Just five key metrics, each directly tied to customer experience. Within minutes, a pattern emerges that was invisible in the previous noise: authentication failures correlate perfectly with database connection retries. "There it is," Clara points. "Auth failures are triggering excessive DB connections, creating a cascade." The room falls silent as everyone sees the previously hidden pattern.*
 
 ## Teaching Narrative
@@ -324,8 +326,8 @@ The "ah-ha" moment in this scene represents the ultimate goal of observability: 
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's dry monologue over the scene: "Logs are your system's mouth. Metrics are its mood. Don't confuse ranting with reasoning." 
-   
+**Lesson Locked In** – Hector's dry monologue over the scene: "Logs are your system's mouth. Metrics are its mood. Don't confuse ranting with reasoning."
+
 *Expanded narrative: Hector surveys the team's progress with quiet approval. "Logs are your system's mouth—they tell you what it's experiencing," he observes. "Metrics are its mood—they tell you how it's feeling over time. Traces are its memory—they tell you what happened in what order." He glances at Leonel. "Don't confuse ranting with reasoning. A system that shouts everything communicates nothing."*
 
 ## Teaching Narrative

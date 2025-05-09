@@ -1,10 +1,10 @@
-# Panel 1: The Pager Screams 
+# Panel 1: The Pager Screams
 
 ## Scene Description - Understanding the Green Wall Fallacy
 
-**The Pager Screams** – Hector gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave. 
-   
-   *Expanded narrative: It's 2:17 AM. Hector's phone vibrates violently on his nightstand. He's awake instantly—the practiced reflex of a veteran SRE. The screen shows a critical alert: "PAYMENT-PROCESSOR-PROD: Multiple customer impacts detected." He grabs his laptop, opens the monitoring dashboard. Everything is green. Every. Single. Indicator. Green.*
+**The Pager Screams** – Hector gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
+
+*Expanded narrative: It's 2:17 AM. Hector's phone vibrates violently on his nightstand. He's awake instantly—the practiced reflex of a veteran SRE. The screen shows a critical alert: "PAYMENT-PROCESSOR-PROD: Multiple customer impacts detected." He grabs his laptop, opens the monitoring dashboard. Everything is green. Every. Single. Indicator. Green.*
 
 ### Teaching Narrative - Understanding the Green Wall Fallacy
 
@@ -46,15 +46,15 @@ To prevent Green Wall Fallacy in your financial systems:
 
 Remember: Green dashboards combined with user complaints represent a contradiction that must be resolved - and the users are usually right.
 
----
+______________________________________________________________________
 
-# Panel 2: Wanjiru Panics - Understanding Metric Literacy 
+# Panel 2: Wanjiru Panics - Understanding Metric Literacy
 
 ## Scene Description
 
-**Wanjiru Panics** – Wanjiru stares at metrics she doesn't understand while a VP yells about failing transactions. Visual: Slack alerts, Geneos blinking, her mouse hovering uncertainly. 
-   
-   *Expanded narrative: In the operations center, Wanjiru—a recent transfer from traditional IT operations—frantically clicks through Geneos dashboards. Nothing makes sense. All systems show nominal. Yet Slack channels are exploding with executive messages: "40% of international wire transfers failing! What's happening?" Wanjiru's mouse hovers uncertainly between screens. Which metric matters? What should she be looking for?*
+**Wanjiru Panics** – Wanjiru stares at metrics she doesn't understand while a VP yells about failing transactions. Visual: Slack alerts, Geneos blinking, her mouse hovering uncertainly.
+
+*Expanded narrative: In the operations center, Wanjiru—a recent transfer from traditional IT operations—frantically clicks through Geneos dashboards. Nothing makes sense. All systems show nominal. Yet Slack channels are exploding with executive messages: "40% of international wire transfers failing! What's happening?" Wanjiru's mouse hovers uncertainly between screens. Which metric matters? What should she be looking for?*
 
 ## Teaching Narrative
 
@@ -97,9 +97,9 @@ Remember Hector's wisdom: dashboards aren't just for admiring - they're diagnost
 
 ## Scene Desciption
 
-**What's Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Katherine says "CPU looks fine though." 
-   
-   *Expanded narrative: Katherine, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
+**What's Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Katherine says "CPU looks fine though."
+
+*Expanded narrative: Katherine, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
 
 ## Teaching Narrative
 
@@ -142,9 +142,9 @@ Hector's key insight - "CPU looks fine on a corpse, too" - reminds us that resou
 
 ## Scene Description
 
-**The Dashboard Is Lying** – Hector walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?" 
-   
-   *Expanded narrative: Hector strides in, somehow looking perfectly composed despite the hour. He sips from a steaming coffee mug while surveying the chaos. His eyes move methodically between the frantic team and the cheerfully misleading green dashboard. "Did you check the actual logs," he asks dryly, "or are we just admiring the pretty colors?" The room falls silent.*
+**The Dashboard Is Lying** – Hector walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?"
+
+*Expanded narrative: Hector strides in, somehow looking perfectly composed despite the hour. He sips from a steaming coffee mug while surveying the chaos. His eyes move methodically between the frantic team and the cheerfully misleading green dashboard. "Did you check the actual logs," he asks dryly, "or are we just admiring the pretty colors?" The room falls silent.*
 
 ## Teaching Narrative
 
@@ -155,16 +155,19 @@ The most dangerous monitoring failure isn't when dashboards show red - it's when
 Modern observability relies on three interconnected pillars that together provide a complete system understanding:
 
 1. **Logs**: Detailed records of discrete events and transactions
+
    - What happened at specific points in time
    - Includes context, errors, transaction details
    - Provides investigative depth
 
 2. **Metrics**: Numerical measurements of system behavior
+
    - Aggregated data points over time
    - Shows patterns, trends, and anomalies
    - Provides operational overview
 
 3. **Traces**: End-to-end visibility of transactions across services
+
    - Connects related events across distributed systems
    - Shows timing, dependencies, and bottlenecks
    - Provides causal understanding
@@ -196,9 +199,9 @@ The Three Pillars aren't just technical tools - they're the foundation of a bank
 
 ## Scene Description
 
-**Context is Missing** – Juana shows the logs: missing trace IDs, vague errors. "Nice. It broke, and it didn't even tell us who it killed." 
-   
-   *Expanded narrative: Juana, the senior engineer, pulls up the log viewer. "Here's our problem," she points. The logs show errors, but they're generic—no transaction IDs, no trace context, no correlation identifiers. Just: "ERROR: Transaction failed." Hector looks over her shoulder. "Nice," he deadpans. "It broke, and it didn't even tell us who it killed. How are we supposed to find which transactions failed with this?"*
+**Context is Missing** – Juana shows the logs: missing trace IDs, vague errors. "Nice. It broke, and it didn't even tell us who it killed."
+
+*Expanded narrative: Juana, the senior engineer, pulls up the log viewer. "Here's our problem," she points. The logs show errors, but they're generic—no transaction IDs, no trace context, no correlation identifiers. Just: "ERROR: Transaction failed." Hector looks over her shoulder. "Nice," he deadpans. "It broke, and it didn't even tell us who it killed. How are we supposed to find which transactions failed with this?"*
 
 ## Teaching Narrative
 
@@ -243,9 +246,9 @@ Juana's observation that "It broke, and it didn't even tell us who it killed" hi
 
 ## Scene Description
 
-**Monologue from Hector** – He points to each pillar (Logs, Metrics, Traces) and explains what they could've revealed. Dramatic diagram in background. 
-   
-   *Expanded narrative: Hector moves to the whiteboard and draws three overlapping circles labeled LOGS, METRICS, and TRACES. "This is what you're missing," he explains. "Proper logs would tell us exactly which transactions failed and why. Relevant metrics would show us the error rate spike before customers complained. And traces—" he taps the board emphatically, "—traces would show us exactly where in the transaction flow things went wrong. Without all three connected, you're just guessing. And banking systems don't tolerate guessing."*
+**Monologue from Hector** – He points to each pillar (Logs, Metrics, Traces) and explains what they could've revealed. Dramatic diagram in background.
+
+*Expanded narrative: Hector moves to the whiteboard and draws three overlapping circles labeled LOGS, METRICS, and TRACES. "This is what you're missing," he explains. "Proper logs would tell us exactly which transactions failed and why. Relevant metrics would show us the error rate spike before customers complained. And traces—" he taps the board emphatically, "—traces would show us exactly where in the transaction flow things went wrong. Without all three connected, you're just guessing. And banking systems don't tolerate guessing."*
 
 ## Teaching Narrative
 
@@ -288,9 +291,9 @@ Hector's whiteboard diagram showing the three pillars with "Root Cause Detection
 
 ## Scene Description
 
-**Lesson Locked In** – Wanjiru says, "So… green doesn't mean good." Hector: "Green means the system's lying. Now let's teach it to confess." 
-   
-   *Expanded narrative: Understanding dawns on Wanjiru's face. "So... green doesn't mean good," she says slowly. "It just means we don't know what's bad." Hector nods. "Green means the system's lying to you about its health," he confirms. "Now let's teach it to confess." He opens his laptop and begins typing rapidly, adding structured logging and trace context to the payment service while the team watches, learning.*
+**Lesson Locked In** – Wanjiru says, "So… green doesn't mean good." Hector: "Green means the system's lying. Now let's teach it to confess."
+
+*Expanded narrative: Understanding dawns on Wanjiru's face. "So... green doesn't mean good," she says slowly. "It just means we don't know what's bad." Hector nods. "Green means the system's lying to you about its health," he confirms. "Now let's teach it to confess." He opens his laptop and begins typing rapidly, adding structured logging and trace context to the payment service while the team watches, learning.*
 
 ## Teaching Narrative
 

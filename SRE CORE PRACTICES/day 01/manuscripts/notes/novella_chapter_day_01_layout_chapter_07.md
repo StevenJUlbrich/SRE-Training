@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**The Silent Delay** – A customer's wire transfer takes 12 seconds. The frontend looks fine. Wanjiru notices a sharp drop in user completion rate. 
-   
+**The Silent Delay** – A customer's wire transfer takes 12 seconds. The frontend looks fine. Wanjiru notices a sharp drop in user completion rate.
+
 *Expanded narrative: Customer support escalates a concerning trend: international wire transfers are completing but taking over 12 seconds—far beyond the 3-second target. The frontend application shows no errors or slowdowns. Database metrics look normal. Network latency is stable. Yet Wanjiru notices a troubling pattern in the analytics dashboard: a 40% drop in transfer completion rate. "Users are abandoning the process before it finishes," she explains. "Something's wrong, but our usual metrics show nothing."*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions must recognize that technical success isn't enough—user
 
 ## Scene Description
 
-**Span-Free Zone** – Daniel pulls logs but finds no trace ID. Juana groans: "We deployed without span instrumentation again, didn't we?" 
-   
+**Span-Free Zone** – Daniel pulls logs but finds no trace ID. Juana groans: "We deployed without span instrumentation again, didn't we?"
+
 *Expanded narrative: Daniel attempts to investigate by searching logs for specific transaction IDs. He finds basic error records but no correlation identifiers or trace context. "I can't follow these transactions across services," he reports in frustration. Juana looks over his shoulder and groans: "We deployed without span instrumentation again, didn't we?" She opens the code repository and confirms her suspicion: the OpenTelemetry integration was commented out in the last deployment. "We're flying blind because we deliberately removed our navigation instruments."*
 
 ## Teaching Narrative
@@ -92,8 +92,8 @@ Financial institutions should recognize distributed tracing as essential infrast
 
 ## Scene Description
 
-**The Blame Bounces** – The dev team blames the DB. Infra blames the network. Njeri traces it manually using request headers. 
-   
+**The Blame Bounces** – The dev team blames the DB. Infra blames the network. Njeri traces it manually using request headers.
+
 *Expanded narrative: As the incident escalates, teams fall into familiar patterns: The development team suspects database latency. The database team points to network connectivity. The network team shows normal operations and suggests application inefficiency. Round and round it goes with no resolution. Meanwhile, Njeri takes a different approach—she modifies the frontend to add custom request headers, then traces individual requests manually across each service by correlating timestamps in logs. It's painstaking work, but slowly a pattern emerges.*
 
 ## Teaching Narrative
@@ -136,8 +136,8 @@ Financial institutions must recognize that cross-service visibility isn't just a
 
 ## Scene Description
 
-**The Ghost Span Appears** – Hector walks in, drops a hand-annotated span diagram. "Your request went here, here, here, and exploded here." 
-   
+**The Ghost Span Appears** – Hector walks in, drops a hand-annotated span diagram. "Your request went here, here, here, and exploded here."
+
 *Expanded narrative: Hector arrives, observes the situation briefly, and then places a hand-drawn diagram on the table. It shows a complete transaction flow with precise timing for each service: frontend → auth → ledger → notification. One segment is circled in red: ledger → compliance-check → ledger. "Your request went here, here, here, and exploded here," he explains, pointing to the compliance check service. "The actual processing takes 200ms, but you're waiting 11 seconds for a response because of a retry loop."*
 
 ## Teaching Narrative
@@ -180,8 +180,8 @@ The specific issue Hector identifies—a retry loop in the communication with th
 
 ## Scene Description
 
-**OpenTelemetry Unleashed** – Daniel instrumenting real spans. Juana explains what a `parent_span_id` is while pointing at the new trace view. 
-   
+**OpenTelemetry Unleashed** – Daniel instrumenting real spans. Juana explains what a `parent_span_id` is while pointing at the new trace view.
+
 *Expanded narrative: With the problem identified, the team implements proper instrumentation. Daniel adds OpenTelemetry trace collectors to each service. Juana explains the core concepts as they work: "Every transaction gets a unique trace ID that follows it everywhere. Each service creates spans—records of the work it performed. Each span knows its parent, so we can reconstruct the entire request flow." She displays a visualization of a properly traced transaction, showing the nested hierarchy of spans. "See how you can immediately spot where time is spent and what failed?"*
 
 ## Teaching Narrative
@@ -224,8 +224,8 @@ Financial institutions should approach tracing implementation as a strategic inv
 
 ## Scene Description
 
-**Trace ID Threading** – Njeri adds tracing context to logs and updates correlation logic. Traces now surface slowness in `auth` → `ledger` hops. 
-   
+**Trace ID Threading** – Njeri adds tracing context to logs and updates correlation logic. Traces now surface slowness in `auth` → `ledger` hops.
+
 *Expanded narrative: Njeri enhances the implementation by ensuring consistent context propagation. "The magic happens when everything connects," she explains, showing how trace IDs thread through the entire transaction. She updates logging configurations to include trace and span IDs in every entry. She modifies metrics to include trace sampling. As the changes deploy, the observability tools light up with new insight—immediately highlighting a secondary issue: excessive latency in the handoff between authentication and ledger services that had been completely invisible before.*
 
 ## Teaching Narrative
@@ -268,8 +268,8 @@ The secondary issue Njeri discovers—latency in the handoff between authenticat
 
 ## Scene Description
 
-**Root Cause Found** – A rogue retry loop in `ledger-service` delayed all downstream services. Traces light up with red bars. 
-   
+**Root Cause Found** – A rogue retry loop in `ledger-service` delayed all downstream services. Traces light up with red bars.
+
 *Expanded narrative: With full tracing implemented, the root cause becomes unmistakable. The trace visualization shows the ledger service making repeated calls to the compliance verification API—five retries for every transaction, each with a 2-second timeout. "There it is," Daniel points to the cascade of red bars on the trace visualization. "The compliance service is responding correctly the first time, but the ledger service ignores the response and retries anyway." A configuration parameter was set incorrectly: `retryOnSuccess: true`.*
 
 ## Teaching Narrative
@@ -312,8 +312,8 @@ The visualization of "red bars" on the trace makes a critical point about effect
 
 ## Scene Description
 
-**Lesson Locked In** – Hector: "Tracing is the chalk outline. You want to see where the body dropped. Now you can." 
-   
+**Lesson Locked In** – Hector: "Tracing is the chalk outline. You want to see where the body dropped. Now you can."
+
 *Expanded narrative: As the team deploys the fix and watches transaction times return to normal, Hector offers his assessment. "Tracing is the chalk outline at a crime scene," he observes. "You want to see exactly where the body dropped and how it happened. Logs tell you something died. Metrics tell you when it died. Traces show you the entire sequence of events in perfect detail." He looks at the now-functioning trace visualization. "Now you can see not just that something's wrong, but precisely what's wrong—and how to fix it."*
 
 ## Teaching Narrative

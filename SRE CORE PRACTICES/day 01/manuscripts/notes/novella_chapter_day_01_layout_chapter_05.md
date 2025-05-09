@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**Dashboard Chaos** – Wanjiru is overwhelmed by a Geneos dashboard that has 24 panels, none of them labeled. "Which one tells me why the payments aren't working?" 
-   
+**Dashboard Chaos** – Wanjiru is overwhelmed by a Geneos dashboard that has 24 panels, none of them labeled. "Which one tells me why the payments aren't working?"
+
 *Expanded narrative: The operations center is chaos. Customer calls are pouring in—payments across the region are failing to process. Wanjiru stares helplessly at the primary monitoring dashboard: 24 different panels, most unlabeled, showing graphs and numbers with no clear meaning. "Which one actually tells me why the payments aren't working?" she asks desperately. No one answers. The dashboard is comprehensive but incomprehensible—designed to show everything but revealing nothing.*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions must recognize that during incidents, dashboards serve as
 
 ## Scene Description
 
-**The Blame Begins** – Daniel mutters, "Must be the network again." Njeri's death stare says otherwise. 
-   
+**The Blame Begins** – Daniel mutters, "Must be the network again." Njeri's death stare says otherwise.
+
 *Expanded narrative: Daniel glances at the situation and immediately offers a diagnosis: "Must be the network again." Njeri, the network engineer, turns slowly to face him with a death stare that could melt steel. Her thought bubble reveals network monitoring graphs showing perfectly normal operations across all links. Meanwhile, the blame game escalates around them: "It's the database!" "No, it's the application code!" "Security issue?" "Configuration problem!" Minutes tick by with no actual investigation.*
 
 ## Teaching Narrative
@@ -92,8 +92,8 @@ Njeri's death stare represents the human cost of assumption-based troubleshootin
 
 ## Scene Description
 
-**The Five Sins** – Hector slams down a whiteboard with the five sins of banking observability. "Every one of these has ruined a production system I've seen." 
-   
+**The Five Sins** – Hector slams down a whiteboard with the five sins of banking observability. "Every one of these has ruined a production system I've seen."
+
 *Expanded narrative: Hector enters and immediately takes control. He places a pre-prepared whiteboard against the wall with dramatic emphasis. The heading reads: "THE FIVE DEADLY SINS OF BANKING OBSERVABILITY" with detailed illustrations for each. "Every one of these has ruined a production system I've seen," he announces grimly. "And every one has triggered a regulatory finding. Let's see which ones are killing your payment network right now." The room falls silent as everyone recognizes patterns they've perpetuated.*
 
 ## Teaching Narrative
@@ -136,8 +136,8 @@ Hector's prepared whiteboard illustrates an important principle: anti-pattern re
 
 ## Scene Description
 
-**Sin #1: Ownerless Metrics** – Clara shows a graph of `latency_avg_all` and nobody can say who owns it. "Guess who gets paged? Everyone." 
-   
+**Sin #1: Ownerless Metrics** – Clara shows a graph of `latency_avg_all` and nobody can say who owns it. "Guess who gets paged? Everyone."
+
 *Expanded narrative: Clara points to a metric on the dashboard labeled simply `latency_avg_all`. "Who owns this metric?" she asks. The application team looks at the platform team. The platform team looks at the database team. Everyone shrugs. "What does it actually measure? What's a normal value? What's the threshold for concern?" Still no answers. Clara shakes her head. "Guess who gets paged when it spikes? Everyone. And guess who investigates? No one—because no one knows what it means."*
 
 ## Teaching Narrative
@@ -180,8 +180,8 @@ The vague metric name in Clara's example—`latency_avg_all`—exemplifies poor 
 
 ## Scene Description
 
-**Sin #2: Orphaned Alerts** – Juana responds to a noisy alert only to discover there's no runbook. "Awesome. It's a riddle now." 
-   
+**Sin #2: Orphaned Alerts** – Juana responds to a noisy alert only to discover there's no runbook. "Awesome. It's a riddle now."
+
 *Expanded narrative: Juana pulls up the alert that triggered the incident response: "CRITICAL: PAYMENT_SVC_ERROR_RATE > threshold." She clicks the runbook link. Error 404—page not found. She searches the wiki. Nothing. She checks the documentation repository. Empty. "Awesome," she deadpans. "It's not an alert anymore. It's a riddle." She turns to the team. "An alert without a runbook is just a puzzle you're solving at 3 AM while customers get angrier."*
 
 ## Teaching Narrative
@@ -224,8 +224,8 @@ The broken link Juana encounters represents a common breakdown in alert manageme
 
 ## Scene Description
 
-**Sin #3: Logs That Lie** – Katherine highlights a 500 error log… with no trace ID, no request path, and no helpful message. "This might as well be in Morse code." 
-   
+**Sin #3: Logs That Lie** – Katherine highlights a 500 error log… with no trace ID, no request path, and no helpful message. "This might as well be in Morse code."
+
 *Expanded narrative: Katherine finally locates log entries from the failing payment transactions. He projects them onto the screen: `ERROR 500: Request failed.` Nothing more—no transaction details, no customer information, no error codes from downstream systems. "This might as well be in Morse code," he says in frustration. "It tells us something failed but nothing about what, why, or how to fix it. The logs exist but tell us nothing useful—they lie by omission."*
 
 ## Teaching Narrative
@@ -268,8 +268,8 @@ The generic "ERROR 500: Request failed" message Katherine discovers represents a
 
 ## Scene Description
 
-**Sin #4: Uptime Without User Success** – Split screen shows 100% uptime for payment service but customers unable to complete transactions. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing." 
-   
+**Sin #4: Uptime Without User Success** – Split screen shows 100% uptime for payment service but customers unable to complete transactions. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing."
+
 *Expanded narrative: Aisha displays a troubling comparison on the main screen. On the left: service uptime graphs showing 100% availability for the payment processing service. On the right: successful transaction rate showing near-zero completions. "Your metrics say everything's perfect," she notes. "Meanwhile, not a single customer can complete their transaction." Hector nods grimly. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing. Uptime without user success is just efficiently failing."*
 
 ## Teaching Narrative
@@ -312,8 +312,8 @@ The split screen visualization in this scene provides a powerful reminder of how
 
 ## Scene Description
 
-**Sin #5: "It's Always the Network" Syndrome** – Njeri presents historical data showing 90% of "network issues" were actually application problems. "Stop blaming my network for your code." 
-   
+**Sin #5: "It's Always the Network" Syndrome** – Njeri presents historical data showing 90% of "network issues" were actually application problems. "Stop blaming my network for your code."
+
 *Expanded narrative: Njeri presents her analysis with barely controlled frustration. Her graphs show that over the past year, 90% of incidents initially attributed to "network issues" were ultimately identified as application bugs, configuration errors, or database problems. "Stop blaming my network for your code," she states firmly. "Every minute we spend chasing network ghosts is a minute we're not fixing the actual problem. This isn't troubleshooting—it's superstition."*
 
 ## Teaching Narrative
@@ -356,8 +356,8 @@ Njeri's 90% statistic powerfully illustrates how persistent "network blame" can 
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's closing line: "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming." 
-   
+**Lesson Locked In** – Hector's closing line: "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming."
+
 *Expanded narrative: As the team implements fixes and payment service restoration begins, Hector delivers his final assessment. "Today was expensive—in customer trust, operational costs, and reputation. But the regulatory audit next month will be much worse if these sins aren't addressed." He taps the whiteboard. "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming." The team looks at each other with new understanding—their observability practices aren't just technical challenges but business and regulatory imperatives.*
 
 ## Teaching Narrative

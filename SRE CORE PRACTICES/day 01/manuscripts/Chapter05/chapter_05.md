@@ -1,6 +1,5 @@
 # Chapter 5 – “Patterns to Avoid Like Volcanoes”
 
-
 ## Chapter Overview
 
 ATMs are an oddly intimate part of banking: cold metal, fluorescent glow, and a promise that your cash is as reliable as gravity. When those machines stall, the illusion collapses instantly. In the pre-dawn hours of May 6, the bank’s Mid-West network of 1 127 ATMs simultaneously began declining withdrawals—no public explanation, no red alerts on the ops wall, only a growing queue of angry customers and a trending hashtag.
@@ -13,7 +12,7 @@ Along the way, we expose real-world regulatory stakes. Banking standards such as
 
 Finally, we close with a postmortem that converts frustration into action items: metric ownership maps, alert–runbook indexes, JSON log schemas, and customer-success Service Level Indicators. The volcano erupted once; your task is to keep it dormant by rooting out the Five Sins before they pool into magma again.
 
----
+______________________________________________________________________
 
 ### 🎯 Learning Objective
 
@@ -39,7 +38,7 @@ timeline
 
 *Each milestone intersects at least one of the Five Sins you’re about to dissect.*
 
----
+______________________________________________________________________
 
 ## ### Panel 1 – Dashboard Chaos
 
@@ -57,7 +56,7 @@ You feel the shift—a raw moment where everyone must admit they have *no idea* 
 
 ![Panel 1 – Dashboard Chaos](images/ch5_panel1_dashboard_chaos.png){width=800}
 
----
+______________________________________________________________________
 
 ## ### Panel 2 – The Blame Begins
 
@@ -67,9 +66,9 @@ Lights return on personal monitors. **Daniel** squints at a flat network-latency
 
 Daniel shrugs, doubling down: “Users see timeouts—that screams network.” Njeri’s eyes flash; bias is loud, data is quiet. You catch Hector leaning against a desk, notebook open to scribbled incident timestamps. Without looking up he recites:
 
-\:::hector quote
+:::hector quote
 **Hector says:** “Assumptions are the first thing to fail.”
-\:::
+:::
 
 The room digests the aphorism. To cement the point, Hector drags three graphs onto the central screen: Infrastructure CPU, DB I/O, Application Latency. All three lines are eerily *too* smooth—plateauing exactly at previous-day averages. He circles the flatness. “When customers scream and graphs stay flat, you’re either measuring the wrong thing or not measuring at all.”
 
@@ -81,7 +80,7 @@ Wanjiru whispers to you, “If the network isn’t guilty, what is?” Your answ
 
 *(voice widget already placed above per contract sequence)*
 
----
+______________________________________________________________________
 
 ## ### Panel 3 – The Five Sins
 
@@ -103,7 +102,7 @@ Learners stare at the cost column—each sin a ticking bomb.
 
 ![Panel 3 – The Five Sins](images/ch5_panel3_five_sins.png){width=800}
 
----
+______________________________________________________________________
 
 ## ### Panel 4 – Sin #1: Ownerless Metrics
 
@@ -113,13 +112,13 @@ Learners stare at the cost column—each sin a ticking bomb.
 
 Hector calls it out: “An orphan metric is a street rumor—heard by everyone, answered by no one.” He pulls up the metric’s label set; it lacks `service`, `owner_team`, and `runbook_url`. Clara winces. She opens a pull request right there, adding mandatory labels and a failing CI test for any future unlabeled metric. Action replaces despair.
 
-\:::debug pattern
+:::debug pattern
 **Pattern Name:** Metric with No Owner
 
 **Description:** Graphs that surface without explicit team or service ownership become noise during incidents, lengthening MTTR.
 
 **Example Fix:** Enforce a Prometheus `external_labels` block (`owner_team`, `contact_slack`) at scrape time; reject deployments missing those labels via CI policy.
-\:::
+:::
 
 Learners breathe—the first sin has a visible remedy.
 
@@ -127,7 +126,7 @@ Learners breathe—the first sin has a visible remedy.
 
 ![Panel 4 – Ownerless Metrics](images/ch5_panel4_ownerless_metric.png){width=800}
 
----
+______________________________________________________________________
 
 ## ### Panel 5 – Sin #2: Orphaned Alerts
 
@@ -139,14 +138,14 @@ Hector doesn’t flinch. “An alert without action is a loud opinion.” He ass
 
 Juana drafts a prototype index table:
 
-| Alert Name               | Runbook URL                   | Last Review | Owner     |
+| Alert Name | Runbook URL | Last Review | Owner |
 | ------------------------ | ----------------------------- | ----------- | --------- |
-| `atm_txn_5xx_rate`       | **404**                       | –           | Core Apps |
-| `ledger_rpc_latency_p99` | `/runbooks/ledger_latency.md` | 2025-04-02  | Core Apps |
+| `atm_txn_5xx_rate` | **404** | – | Core Apps |
+| `ledger_rpc_latency_p99` | `/runbooks/ledger_latency.md` | 2025-04-02 | Core Apps |
 
 Daniel scripts a linter to curl every URL, failing CI if status ≥ 400. Progress through automation—a quiet smile from Hector.
 
-\:::try this
+:::try this
 **Exercise:** In your repo, run:
 
 ```bash
@@ -157,7 +156,7 @@ grep -R --include='*.yaml' -e 'runbook:' alert_rules/ \
 ```
 
 Generate a list of dead links, then open pull requests pairing each alert with a **living** runbook that starts with a one-screen “First Five Minutes” section.
-\:::
+:::
 
 #### Image Embed
 
@@ -165,14 +164,13 @@ Generate a list of dead links, then open pull requests pairing each alert with a
 
 *(voice widgets appear later panels, satisfying placement rule)*
 
----
+______________________________________________________________________
+
 **Planning the visual narrative**
 
 I need to focus on ensuring certain elements are included in the panels, like "Logs That Lie," "Uptime ≠ Success," and "It's Always the Network." I should also make sure to follow the structure for the flow, placing voice widgets after image embeds. Panel 8 needs an "incident flashback" after the image, along with reflections and a closing reflection involving Hector. Finally, the external panels should be structured as an array with filenames, scene descriptions, and other specific details for each panel. Lastly, I still need to finalize the word count.
 
-
 Thought for 29 seconds
-
 
 ## ### Panel 6 – Sin #3: Logs That Lie
 
@@ -215,23 +213,23 @@ The difference is visceral: the second line offers a surgical path from ATM to f
 
 Katherine unpacks the JSON, pivots on `trace_id`, and finally renders an end-to-end waterfall inside Jaeger: **gateway → fee-calculator → ledger**. The bad division lives in the fee-calculator. MTTR just collapsed from hours to minutes—once the logs started telling the truth.
 
-\:::debug pattern
+:::debug pattern
 **Pattern Name:** Incomplete Log Entry
 
 **Description:** Events missing trace or transaction identifiers hide causal chains, forcing engineers into regex archaeology.
 
 **Example Fix:** Adopt an **OpenTelemetry log bridge** that injects `trace_id`, `span_id`, and typed error fields automatically; enforce via CI lint.
-\:::
+:::
 
 #### Image Embed
 
 ![Panel 6 – Logs That Lie](images/ch5_panel6_logs_lie.png){width=800}
 
-\:::hector quote
+:::hector quote
 **Hector says:** “Telemetry without context is bad fiction. And fiction won’t release cash.”
-\:::
+:::
 
----
+______________________________________________________________________
 
 ## ### Panel 7 – Sin #4: Uptime ≠ Success
 
@@ -272,11 +270,11 @@ Aisha feels a weight lift: numbers finally align with user pain.
 
 ![Panel 7 – Uptime vs Success](images/ch5_panel7_uptime_success.png){width=800}
 
-\:::incident flashback
+:::incident flashback
 **Failure Anecdote (2019):** A mobile-deposit service boasted 99.99 % uptime while rejecting 12 % of checks due to an OCR bug. Regulators flagged the discrepancy; fines exceeded the service’s annual budget. Lesson: Track *successful outcomes*, not thread pool availability.
-\:::
+:::
 
----
+______________________________________________________________________
 
 ## ### Panel 8 – Sin #5: “It’s Always the Network” Syndrome
 
@@ -284,11 +282,11 @@ Aisha feels a weight lift: numbers finally align with user pain.
 
 **Timestamp 08 : 25.** Daniel circulates a Slack thread claiming MPLS congestion near Milwaukee. Njeri requests traceroutes from three branch routers—latencies steady at **12 ms**, zero retransmits. She overlays **Error Budget Burn** by layer:
 
-| Layer       | New Incidents (24h) | Confirmed Impact |
+| Layer | New Incidents (24h) | Confirmed Impact |
 | ----------- | ------------------- | ---------------- |
-| Application | 7                   | **Yes**          |
-| Database    | 2                   | **Yes**          |
-| Network     | 0                   | No               |
+| Application | 7 | **Yes** |
+| Database | 2 | **Yes** |
+| Network | 0 | No |
 
 Evidence exonerates the cables. Nonetheless, SRE folklore holds that “it’s always DNS or the network.” Daniel apologizes, sheepish.
 
@@ -300,11 +298,11 @@ Hector nods. “Blame is cheap; proof costs curiosity.” He pins a laminated ch
 
 ![Panel 8 – Not the Network](images/ch5_panel8_not_network.png){width=800}
 
-\:::hector quote
+:::hector quote
 **Hector says:** “Prove—don’t presume—before you pull cables.”
-\:::
+:::
 
----
+______________________________________________________________________
 
 ## ### Panel 9 – ATM Outage Replay
 
@@ -332,13 +330,13 @@ sequenceDiagram
 
 Hector annotates each arrow with a red tag matching its sin. He overlays a second timeline mapping **Cost in Minutes**:
 
-| Sin               | Delay Minutes | Stakeholder Impact           |
+| Sin | Delay Minutes | Stakeholder Impact |
 | ----------------- | ------------- | ---------------------------- |
-| Ownerless Metrics | 56            | No owner to triage spike     |
-| Orphaned Alerts   | 68            | Pager w/ 404 slowed response |
-| Logs That Lie     | 91            | Trace lost, blame diffused   |
-| Uptime≠Success    | 75            | Dashboard green-washes pain  |
-| Blame Network     | 90            | 4 engineers chasing ghosts   |
+| Ownerless Metrics | 56 | No owner to triage spike |
+| Orphaned Alerts | 68 | Pager w/ 404 slowed response |
+| Logs That Lie | 91 | Trace lost, blame diffused |
+| Uptime≠Success | 75 | Dashboard green-washes pain |
+| Blame Network | 90 | 4 engineers chasing ghosts |
 
 Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees. Hector closes the diagram and turns: “Memorize these numbers; you’ll recite them to auditors.”
 
@@ -346,7 +344,7 @@ Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees.
 
 ![Panel 9 – Outage Replay](images/ch5_panel9_outage_replay.png){width=800}
 
----
+______________________________________________________________________
 
 ## ### Panel 10 – Lesson Locked In
 
@@ -354,30 +352,28 @@ Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees.
 
 By **09 : 58**, code patches merge, dashboards refresh, and the first ATM dispenses cash in a Chicago vestibule. Relief doesn’t excuse omission. Hector convenes a closure ritual: the whiteboard now lists firm **Action Items**—each sin translated into work:
 
-* **Ownerless Metrics** → Adopt metric-ownership labels, gate via CI
-* **Orphaned Alerts** → Build alert-runbook registry, link-check nightly job
-* **Logs That Lie** → Enforce OpenTelemetry JSON schema, unit-test injections
-* **Uptime ≠ Success** → Publish SLI dashboards & customer-impact pager rules
-* **Blame Network** → Implement cross-layer evidence checklist
+- **Ownerless Metrics** → Adopt metric-ownership labels, gate via CI
+- **Orphaned Alerts** → Build alert-runbook registry, link-check nightly job
+- **Logs That Lie** → Enforce OpenTelemetry JSON schema, unit-test injections
+- **Uptime ≠ Success** → Publish SLI dashboards & customer-impact pager rules
+- **Blame Network** → Implement cross-layer evidence checklist
 
 He initials each item, red marker squeaking—a binding contract. The juniors nod, exhausted but wiser. Omar scribbles in his notebook: *“Telemetry that hides pain is a liability.”* He looks up and asks, “What if we miss a sin next time?”
 
 Hector’s final words cut clean:
 
-\:::hector quote
+:::hector quote
 **Hector says:** “Volcanoes don’t grant second warnings. Build gauges that scream before the lava hits.”
-\:::
+:::
 
 #### Image Embed
 
 ![Panel 10 – Closing](images/ch5_panel10_closing.png){width=800}
 
----
+______________________________________________________________________
 
 ## Postmortem Reflection & Assessment Hook
 
 You have witnessed a full-scale cash outage and mapped each lost minute to an observability sin. **Your mission:** Before the week ends, audit one service you own against Hector’s checklist. Identify the sin lurking closest to eruption and file a pull request that neutralizes it. Share your PR link in the team channel tagged **#lava-proof**. Your manager—and future auditors—will notice.
 
----
-
-
+______________________________________________________________________

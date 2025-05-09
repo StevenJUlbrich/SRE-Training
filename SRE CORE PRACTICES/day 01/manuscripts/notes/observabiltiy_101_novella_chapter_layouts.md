@@ -5,6 +5,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 ## PART I: OBSERVABILITY FOUNDATIONS – Beginner Tier
 
 ### Chapter 1: **"The Site Is Down" Isn't a Root Cause**
+
 - Introduce Hector and his anti-fluff attitude
 - Observability vs Monitoring (with Geneos context)
 - Why banking uptime requires understanding *why*, not just *what*
@@ -12,6 +13,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - 🔥 Hector scorches a rainbow dashboard with no causality
 
 #### Panel-by-Panel Beat Map
+
 1. **The Pager Screams** – Hector gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
 2. **Wanjiru Panics** – Wanjiru stares at metrics she doesn't understand while a VP yells about failing transactions. Visual: Slack alerts, Geneos blinking, her mouse hovering uncertainly.
 3. **What’s Actually Broken?** – A terminal screenshot reveals `payment-service` 500s. Katherine says "CPU looks fine though."
@@ -23,12 +25,14 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - **Min Panels**: 7
 
 ### Chapter 2: **The Problem Isn’t Always the Problem**
+
 - What production support knows that devs forget
 - Teaching telemetry: logs, metrics, and traces
 - Wanjiru and Katherine get burned by an untraceable config push
 - Juana shows what *should* have been in the logs
 
 #### Panel-by-Panel Beat Map
+
 1. **The Mystery Crash** – A customer service agent reports failed wire transfers. Katherine is already looking at CPU usage.
 2. **Dashboard Deceit, Part II** – CPU and memory are stable. Wanjiru shrugs. “Geneos isn’t showing anything weird.”
 3. **The Missing Trace** – Juana suggests tracing the request path. No trace data is found. “No trace ID in logs. Classic.”
@@ -42,12 +46,14 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - **Min Panels**: 9
 
 ### Chapter 3: **Logs That Talk, Metrics That Matter**
+
 - How to move from passive dashboards to diagnostic instrumentation
 - Exposing flawed dashboards ("Everything green, everything broken")
 - Practical logging formats, field selection, and metric taxonomy for banking services
 - Leonel logs too much; Hector responds with dry fury
 
 #### Panel-by-Panel Beat Map
+
 1. **Death by Verbose Logging** – Leonel shows off a beautiful but bloated log stream. “We log everything!” he grins. Sofia raises an eyebrow.
 2. **The Metrics Don’t Match** – Meanwhile, Katherine notes the latency graph looks clean… but user complaints are rising.
 3. **The Unreadable Log** – Wanjiru attempts to find a user error but is blocked by irrelevant debug logs and missing correlation IDs.
@@ -60,12 +66,14 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - **Min Panels**: 8
 
 ### Chapter 4: **You’re Not Alerting — You’re Alarming**
+
 - Burn rate alerts vs static thresholds
 - Alert fatigue and dashboard-overload incidents
 - Juana mentors Daniel on writing real alerts
 - Aisha reframes alert impact in terms of banking operations
 
 #### Panel-by-Panel Beat Map
+
 1. **The All-Night Alarm** – Daniel is half-asleep, watching a Geneos alert that has fired 37 times in 12 minutes. His face says: “Please make it stop.”
 2. **False Positives Everywhere** – Juana walks by and glances at the alert rules. “You’re getting paged for CPU > 85%? Who trained you—Geneos circa 2009?”
 3. **Looking for Symptoms, Not Signals** – Aisha shows a past incident where high CPU had no user impact, while an unnoticed error rate spike broke login.
@@ -77,6 +85,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - **Min Panels**: 7
 
 ### Chapter 5: **Patterns to Avoid Like Volcanoes**
+
 - Common anti-patterns in Geneos dashboards and alerting configs
 - Hector lists 5 banking observability sins:
   - Metrics with no owners
@@ -87,6 +96,7 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - Visual case study: a chaotic dashboard meltdown during an ATM outage
 
 #### Panel-by-Panel Beat Map
+
 1. **Dashboard Chaos** – Wanjiru is overwhelmed by a Geneos dashboard that has 24 panels, none of them labeled. “Which one tells me why the ATMs aren’t working?”
 2. **The Blame Begins** – Daniel mutters, “Must be the network again.” Njeri’s death stare says otherwise.
 3. **The Five Sins** – Hector slams down a whiteboard with the five sins of banking observability. “Every one of these has ruined a production system I’ve seen.”
@@ -98,17 +108,19 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 
 - **Min Panels**: 8
 
----
+______________________________________________________________________
 
 ## PART II: INTERMEDIATE INSTRUMENTATION & ANALYSIS – Tier 2
 
 ### Chapter 6: **Metrics Aren’t Just Numbers — They’re Clues**
+
 - Sofia walks the team through a high-cardinality metric problem
 - Clara challenges poor metric naming and field bloat
 - How Hector tunes metrics to highlight "real-time symptoms, not artifacts"
 - Banking example: Slow balance lookup traced to a cache metric drift
 
 #### Panel-by-Panel Beat Map
+
 1. **The Phantom Spike** – A metric chart shows high CPU, but the system feels fine. Sofia frowns: “Is that real?”
 2. **Cardinality Explosion** – Clara pulls up metrics with thousands of user-tagged variations. Hector mutters, “The dashboard’s bleeding context.”
 3. **The Naming Nightmare** – Daniel shows a widget called `agg_metric_report_perf_multi_v2`. Nobody knows what it means.
@@ -122,12 +134,14 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - **Min Panels**: 9
 
 ### Chapter 7: **Tracing the Money Trail**
+
 - Njeri and Daniel trace a broken multi-service banking transaction
 - Juana explains root causes through span-level context
 - Introduces OpenTelemetry and Hector’s sarcastic history with vendor lock-in
 - Visual path: request → auth → ledger → customer notification
 
 #### Panel-by-Panel Beat Map
+
 1. **The Silent Delay** – A customer’s wire transfer takes 12 seconds. The frontend looks fine. Wanjiru notices a sharp drop in user completion rate.
 2. **Span-Free Zone** – Daniel pulls logs but finds no trace ID. Juana groans: “We deployed without span instrumentation again, didn’t we?”
 3. **The Blame Bounces** – The dev team blames the DB. Infra blames the network. Njeri traces it manually using request headers.
@@ -140,92 +154,101 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - **Min Panels**: 8
 
 ### Chapter 8: **The Lie Detector Test: Postmortem Telemetry**
+
 - Students revisit a simulated incident using observability tools
 - Clara and Omar debate how telemetry helped (and failed)
 - Hector demands a better logging contract across services
 - Teaches "Write telemetry like you’re going to debug a ghost at 3 a.m."
 
 #### Panel-by-Panel Beat Map
-1. **Incident Playback Begins** – Juana pulls up logs, traces, and metrics from last week’s login outage. “Let’s find the failure story.”
-2. **Everyone Blames the Logs** – Clara points out timestamps don’t align. Omar can’t correlate user activity. “Telemetry gaps everywhere.”
-3. **The Noise vs. Signal Chart** – Hector draws a 3x3 grid on the whiteboard. “Useful vs Useless. Timely vs Delayed.” The team starts sorting their telemetry.
-4. **The Misleading Metric** – Sofia finds a metric that dipped during the outage but was excluded from the dashboard. “It was right here all along.”
-5. **The Ghost Error** – Juana discovers a silent `403` response path that wasn’t logged. Wanjiru adds, “No one even knew that handler existed.”
-6. **Blame Isn’t the Goal** – Hector shuts down the noise: “You’re not hunting villains. You’re building timelines.”
-7. **Telemetry Rewrite Planning** – The team builds a table of missing log fields, mismatched metrics, and non-correlated spans.
-8. **The New Standard** – Clara proposes a new format for logs and a trace ID injection policy. Hector nods. “Now we’re getting somewhere.”
-9. **Lesson Locked In** – Hector’s monologue: “You don’t debug ghosts with flashlights. You build haunted house diagrams—with receipts.”
+
+01. **Incident Playback Begins** – Juana pulls up logs, traces, and metrics from last week’s login outage. “Let’s find the failure story.”
+02. **Everyone Blames the Logs** – Clara points out timestamps don’t align. Omar can’t correlate user activity. “Telemetry gaps everywhere.”
+03. **The Noise vs. Signal Chart** – Hector draws a 3x3 grid on the whiteboard. “Useful vs Useless. Timely vs Delayed.” The team starts sorting their telemetry.
+04. **The Misleading Metric** – Sofia finds a metric that dipped during the outage but was excluded from the dashboard. “It was right here all along.”
+05. **The Ghost Error** – Juana discovers a silent `403` response path that wasn’t logged. Wanjiru adds, “No one even knew that handler existed.”
+06. **Blame Isn’t the Goal** – Hector shuts down the noise: “You’re not hunting villains. You’re building timelines.”
+07. **Telemetry Rewrite Planning** – The team builds a table of missing log fields, mismatched metrics, and non-correlated spans.
+08. **The New Standard** – Clara proposes a new format for logs and a trace ID injection policy. Hector nods. “Now we’re getting somewhere.”
+09. **Lesson Locked In** – Hector’s monologue: “You don’t debug ghosts with flashlights. You build haunted house diagrams—with receipts.”
 10. **Reflection Panel** – Omar: “This wasn’t postmortem. It was confession.” Hector: “Good. Now teach the system how to confess sooner.”
 
 - **Min Panels**: 10
 
 ### Chapter 9: **What Good Looks Like (And What It Covers Up)**
+
 - Banking telemetry benchmarks: normal vs suspicious vs real outage
 - Leonel builds the most beautiful dashboard you’ve ever seen — and Hector deletes it
 - Builds a “quiet dashboard” that only glows when the user is in pain
 - Juana shares what *real* signal compression looks like in production
 
 #### Panel-by-Panel Beat Map
-1. **The Pretty Dashboard** – Leonel presents a stunning dashboard to the team: rainbow gauges, graphs, gradients galore. Everyone stares in polite confusion.
-2. **The Misleading Calm** – Sofia compares it to user metrics. “It looks clean… but logins are down 6%.”
-3. **The Anti-Signal** – Hector calls it “dashboard theatre.” “You made something pretty. Can it stop a fire?”
-4. **Dashboard Autopsy** – Clara highlights 3 charts showing downward trends during last week’s outage. None are visible in Leonel’s view.
-5. **Redesign Begins** – Juana and Omar help reduce panels to just 5: request rate, error rate, latency, business KPI, trace-linked event summary.
-6. **Signal Highlighting** – They add change annotations, zoomed time windows, and trace IDs directly into the visuals.
-7. **Before & After** – A side-by-side of Leonel’s old vs new version. The “quiet dashboard” has two red blips—and they correlate directly with user complaints.
-8. **Hector’s Standard** – He scribbles on the whiteboard: “3 graphs: What broke. When it broke. Why it broke.”
-9. **Final Reflection** – Leonel: “You don’t want pretty. You want accurate.” Hector: “You want clarity when everything’s on fire.”
+
+01. **The Pretty Dashboard** – Leonel presents a stunning dashboard to the team: rainbow gauges, graphs, gradients galore. Everyone stares in polite confusion.
+02. **The Misleading Calm** – Sofia compares it to user metrics. “It looks clean… but logins are down 6%.”
+03. **The Anti-Signal** – Hector calls it “dashboard theatre.” “You made something pretty. Can it stop a fire?”
+04. **Dashboard Autopsy** – Clara highlights 3 charts showing downward trends during last week’s outage. None are visible in Leonel’s view.
+05. **Redesign Begins** – Juana and Omar help reduce panels to just 5: request rate, error rate, latency, business KPI, trace-linked event summary.
+06. **Signal Highlighting** – They add change annotations, zoomed time windows, and trace IDs directly into the visuals.
+07. **Before & After** – A side-by-side of Leonel’s old vs new version. The “quiet dashboard” has two red blips—and they correlate directly with user complaints.
+08. **Hector’s Standard** – He scribbles on the whiteboard: “3 graphs: What broke. When it broke. Why it broke.”
+09. **Final Reflection** – Leonel: “You don’t want pretty. You want accurate.” Hector: “You want clarity when everything’s on fire.”
 10. **Lesson Locked In** – Juana: “Less dashboard. More insight.” Hector: “Now it tells the truth—whether you like it or not.”
 
 - **Min Panels**: 10
 
----
+______________________________________________________________________
 
----
+______________________________________________________________________
 
 ## PART III: ADVANCED STRATEGY & SYSTEM THINKING – Tier 3
 
 ### Chapter 10: **Signals, Saturation, and Strategic Silence**
+
 - Clara teaches the team to recognize telemetry saturation in noisy environments
 - Njeri introduces signal decomposition in high-volume fraud detection pipelines
 - Hector explains why systems don’t need to tell you *everything* — just *the right thing, at the right time*
 - Juana demonstrates golden signal mapping for Tier-1 banking services
 
 #### Panel-by-Panel Beat Map
-1. **Signal Storm** – Wanjiru opens a dashboard with over 200 metrics firing at once. “Everything’s blinking, but nothing’s helping.”
-2. **Clara Diagnoses the Noise** – She highlights 8 metrics that contradict each other. “We’ve got telemetry saturation.”
-3. **Hector’s Silence Lesson** – Hector turns off the screen. “Now you’re forced to think. Most of this data is comfort, not clarity.”
-4. **Enter the Fraud Funnel** – Njeri overlays signal decomposition from a fraud detection pipeline. “Three metrics matter. The rest are context, not answers.”
-5. **Missed Signals** – Juana points out an error spike in ACH transaction reversals that no one caught because it wasn’t on a dashboard.
-6. **Metric Reduction War Room** – Team meets to audit all metrics for a Tier-1 banking service. Sofia proposes a ‘must-have’ vs ‘nice-to-have’ model.
-7. **Rebuilding the Noise Floor** – Clara creates visual filters to gray out low-signal graphs. Hector crosses out five and says, “Those never helped us.”
-8. **A Golden Mapping** – Juana presents a cleaned dashboard: latency, error rate, fraud rate, user complaints. “Everything else is decoration.”
-9. **Strategic Silence** – Hector: “A wise system only speaks when it needs to. Your job is to teach it wisdom.”
+
+01. **Signal Storm** – Wanjiru opens a dashboard with over 200 metrics firing at once. “Everything’s blinking, but nothing’s helping.”
+02. **Clara Diagnoses the Noise** – She highlights 8 metrics that contradict each other. “We’ve got telemetry saturation.”
+03. **Hector’s Silence Lesson** – Hector turns off the screen. “Now you’re forced to think. Most of this data is comfort, not clarity.”
+04. **Enter the Fraud Funnel** – Njeri overlays signal decomposition from a fraud detection pipeline. “Three metrics matter. The rest are context, not answers.”
+05. **Missed Signals** – Juana points out an error spike in ACH transaction reversals that no one caught because it wasn’t on a dashboard.
+06. **Metric Reduction War Room** – Team meets to audit all metrics for a Tier-1 banking service. Sofia proposes a ‘must-have’ vs ‘nice-to-have’ model.
+07. **Rebuilding the Noise Floor** – Clara creates visual filters to gray out low-signal graphs. Hector crosses out five and says, “Those never helped us.”
+08. **A Golden Mapping** – Juana presents a cleaned dashboard: latency, error rate, fraud rate, user complaints. “Everything else is decoration.”
+09. **Strategic Silence** – Hector: “A wise system only speaks when it needs to. Your job is to teach it wisdom.”
 10. **Lesson Locked In** – Wanjiru: “Fewer graphs. More truth.” Hector: “You just learned observability minimalism. I’m proud. Don’t make it weird.”
 
 - **Min Panels**: 10
 
 ### Chapter 11: **Hector’s Law: “All Dashboards Are Lying Until Proven Otherwise”**
+
 - Real-time narrative of a service degradation masked by healthy graphs
 - Omar leads incident comms; Wanjiru discovers misaligned SLI assumptions
 - Team audits each dashboard layer — logs, metrics, traces — and fixes visualization lies
 - Zuri challenges the team to build a new standard for dashboard validation
 
 #### Panel-by-Panel Beat Map
-1. **The Green Mirage** – A dashboard lights up green while user complaints flood in. Omar frowns: “That’s not possible. Is this thing even connected?”
-2. **The Wrong SLI** – Wanjiru digs into the configuration. “We’re measuring latency for the cache—not the actual transaction.”
-3. **Misaligned Assumptions** – Clara reviews other dashboards. All of them reference the wrong backend. “We’ve been staring at the wrong truth.”
-4. **Hector Breaks the Spell** – Hector quietly deletes the dashboard in front of everyone. “Start over. This isn’t observability. It’s denial.”
-5. **Rooted in Reality** – Zuri pulls real user metrics: mobile logins, payment confirmation delays. They match none of the current graphs.
-6. **The Redesign Debate** – The team argues over which metrics actually matter. Sofia builds a quick prototype with mobile-first telemetry.
-7. **Dashboard Autopsy** – Hector forces a side-by-side postmortem: “Here’s what we measured. Here’s what failed. See the gap?”
-8. **Validation Layers** – Njeri adds alerts tied to real SLIs. Juana tags trace IDs to validate graph spikes against logs.
-9. **Lesson Locked In** – Hector: “A dashboard is guilty until it proves its truth. Build for the trial, not the praise.”
+
+01. **The Green Mirage** – A dashboard lights up green while user complaints flood in. Omar frowns: “That’s not possible. Is this thing even connected?”
+02. **The Wrong SLI** – Wanjiru digs into the configuration. “We’re measuring latency for the cache—not the actual transaction.”
+03. **Misaligned Assumptions** – Clara reviews other dashboards. All of them reference the wrong backend. “We’ve been staring at the wrong truth.”
+04. **Hector Breaks the Spell** – Hector quietly deletes the dashboard in front of everyone. “Start over. This isn’t observability. It’s denial.”
+05. **Rooted in Reality** – Zuri pulls real user metrics: mobile logins, payment confirmation delays. They match none of the current graphs.
+06. **The Redesign Debate** – The team argues over which metrics actually matter. Sofia builds a quick prototype with mobile-first telemetry.
+07. **Dashboard Autopsy** – Hector forces a side-by-side postmortem: “Here’s what we measured. Here’s what failed. See the gap?”
+08. **Validation Layers** – Njeri adds alerts tied to real SLIs. Juana tags trace IDs to validate graph spikes against logs.
+09. **Lesson Locked In** – Hector: “A dashboard is guilty until it proves its truth. Build for the trial, not the praise.”
 10. **Reflection Panel** – Omar: “We weren’t monitoring systems. We were admiring ideas.” Hector: “And the users noticed.”
 
 - **Min Panels**: 10
 
 ### Chapter 12: **Teaching Systems to Confess**
+
 - Hector walks through instrumentation rewrite of a legacy wire-transfer service
 - Sofia leads tracing and error detection mapping across four interdependent services
 - Team agrees to ship telemetry before they ship code
@@ -233,15 +256,14 @@ This is a Hector-led narrative training track focused entirely on **Observabilit
 - Final learner reflections and personal observability principles
 - **Min Panels**: 12
 
-
-
 ## Core Themes Throughout:
+
 - ☕ Hector is always the main instructor — dry, efficient, unsentimental
 - 🏦 Every chapter centers on a **banking-specific reliability challenge**
 - 🔄 Practical exercises are built in ("Try logging this", "Trace that transaction")
 - 🚫 Rainbow dashboards are treated as comedic red flags
 - 💥 Anti-patterns are treated with Hector’s signature intensity: instructional, but a little terrifying
 
----
+______________________________________________________________________
 
 Would you like to continue into **Part II: Intermediate (Instrumentation & Analysis)** next, or expand any section above with learner cast tie-ins?

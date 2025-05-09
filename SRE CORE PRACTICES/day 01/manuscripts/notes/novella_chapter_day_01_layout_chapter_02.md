@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**The Mystery Crash** – A customer service agent reports failed wire transfers. Katherine is already looking at CPU usage. 
-   
+**The Mystery Crash** – A customer service agent reports failed wire transfers. Katherine is already looking at CPU usage.
+
 *Expanded narrative: The customer service line rings incessantly. Agents report that international wire transfers are failing intermittently—customers are seeing confirmations, but funds aren't arriving. In the operations center, Katherine immediately pulls up CPU utilization graphs. "Let's see if we're overloaded," he mutters, defaulting to the familiar patterns of traditional monitoring. The graphs show normal utilization patterns. He frowns. "But something's definitely broken."*
 
 ## Teaching Narrative
@@ -51,8 +51,8 @@ Remember: In complex financial systems, the visible problem (failed transfers) i
 
 ## Scene Description
 
-**Dashboard Deceit, Part II** – CPU and memory are stable. Wanjiru shrugs. "Geneos isn't showing anything weird." 
-   
+**Dashboard Deceit, Part II** – CPU and memory are stable. Wanjiru shrugs. "Geneos isn't showing anything weird."
+
 *Expanded narrative: Wanjiru cycles through multiple dashboards—CPU usage, memory utilization, network throughput, request counts. All appear normal. "Geneos isn't showing anything weird," she reports, frustration evident in her voice. "Everything's green." She gestures at the monitoring screens. "If something's failing, why isn't anything red? These dashboards cost millions to implement!"*
 
 ## Teaching Narrative
@@ -95,8 +95,8 @@ Financial institutions must recognize that customer truth trumps dashboard truth
 
 ## Scene Description
 
-**The Missing Trace** – Juana suggests tracing the request path. No trace data is found. "No trace ID in logs. Classic." 
-   
+**The Missing Trace** – Juana suggests tracing the request path. No trace data is found. "No trace ID in logs. Classic."
+
 *Expanded narrative: Juana, with her SRE experience, takes a different approach. "Let's trace a failed transaction through the system," she suggests. She asks customer service for a specific failed transaction ID and tries to follow it through the logs. After several minutes of searching, she sighs. "No trace ID in logs. Classic." She explains to the team: "Without trace context, we can't follow the transaction's path. We're blind to what's happening between services."*
 
 ## Teaching Narrative
@@ -144,8 +144,8 @@ The missing trace ID that Juana discovers isn't just a technical oversight—it 
 
 ## Scene Description
 
-**What They Missed** – We flash back to a config push. Visual: a developer unchecked 'enableTracing=true'. 
-   
+**What They Missed** – We flash back to a config push. Visual: a developer unchecked 'enableTracing=true'.
+
 *Expanded narrative: The scene shifts to three days earlier. A developer is making a "minor" configuration change to improve performance. "Tracing adds overhead," he mutters, unchecking the 'enableTracing=true' option in the configuration file. "We don't need this in production." He commits the change with a vague message: "Performance optimizations." No one reviews the implications for observability. No one considers the impact during an incident.*
 
 ## Teaching Narrative
@@ -188,8 +188,8 @@ Financial institutions must recognize that a "performing but blind" system is fu
 
 ## Scene Description
 
-**The Blame Game Begins** – Teams point fingers. The ops lead blames the app; the devs blame the platform. 
-   
+**The Blame Game Begins** – Teams point fingers. The ops lead blames the app; the devs blame the platform.
+
 *Expanded narrative: Back in the present, the incident call has grown tense. The operations lead suggests the application is faulty: "Your code is throwing errors." The development team counters: "The infrastructure must be unstable." The platform team defends: "Our metrics show everything's fine!" The security team interrupts: "Could be a breach attempt." Minutes tick by with no resolution while customers wait for their money to arrive.*
 
 ## Teaching Narrative
@@ -232,8 +232,8 @@ The blame cycle doesn't just delay resolution—it creates regulatory and reputa
 
 ## Scene Description
 
-**Hector Steps In** – "Observability isn't magic. It's preparation. And you didn't prepare." He slams a diagram down. 
-   
+**Hector Steps In** – "Observability isn't magic. It's preparation. And you didn't prepare." He slams a diagram down.
+
 *Expanded narrative: Hector listens silently, then stands. The room quiets. "Observability isn't magic," he says evenly. "It's preparation. And you didn't prepare." He places a diagram on the table showing service dependencies with observability touchpoints highlighted—and critical gaps where telemetry should exist but doesn't. "You can't debug what you can't see, and you chose not to see."*
 
 ## Teaching Narrative
@@ -248,7 +248,7 @@ Observability preparation is the deliberate, proactive design of systems to expo
 
 2. **Visibility Planning**: Identifying critical paths and ensuring they have comprehensive observability coverage
 
-3. **Gap Analysis**: Regularly assessing and addressing observability blind spots 
+3. **Gap Analysis**: Regularly assessing and addressing observability blind spots
 
 4. **Telemetry as Infrastructure**: Treating observability as essential infrastructure, not an optional feature
 
@@ -276,8 +276,8 @@ Financial institutions must recognize that observability isn't an afterthought o
 
 ## Scene Description
 
-**The Corrected View** – Juana overlays what *should* have been captured: key spans, context IDs, and log correlation. 
-   
+**The Corrected View** – Juana overlays what *should* have been captured: key spans, context IDs, and log correlation.
+
 *Expanded narrative: Juana steps forward with a tablet showing an enhanced version of Hector's diagram. "Here's what we should be capturing," she explains, highlighting key points in the transaction flow. "Trace spans between services. Context IDs preserved across boundaries. Correlated logs at each step." She toggles between the current state and the ideal state. "With this in place, we'd have found the issue in seconds, not hours."*
 
 ## Teaching Narrative
@@ -320,8 +320,8 @@ When Juana states "we'd have found the issue in seconds, not hours," she's highl
 
 ## Scene Description
 
-**Team Realization** – Wanjiru: "We didn't *see* the problem. We *caused* it and logged nothing." 
-   
+**Team Realization** – Wanjiru: "We didn't *see* the problem. We *caused* it and logged nothing."
+
 *Expanded narrative: Wanjiru's expression shifts as understanding dawns. "We didn't *see* the problem because we *caused* it," she realizes aloud. "We disabled our own ability to observe, then wondered why we couldn't see." She looks at the configuration change history. "And we logged nothing about the change that would help us connect it to the failures. We've been flying blind by our own choice."*
 
 ## Teaching Narrative
@@ -364,8 +364,8 @@ The realization that "we've been flying blind by our own choice" represents the 
 
 ## Scene Description
 
-**Closing Shot** – Hector sipping coffee: "The system didn't hide the truth. You just didn't teach it how to talk." 
-   
+**Closing Shot** – Hector sipping coffee: "The system didn't hide the truth. You just didn't teach it how to talk."
+
 *Expanded narrative: Hector leans against the wall, sipping his ever-present coffee. "The system didn't hide the truth from you," he observes calmly. "You just didn't teach it how to talk." He nods toward the configuration management screen. "Fix the observability first, then the bug. Otherwise, you'll be here again tomorrow, having the same conversation about a different problem."*
 
 ## Teaching Narrative

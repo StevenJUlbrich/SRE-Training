@@ -4,8 +4,8 @@
 
 ## Scene Description
 
-**The Phantom Spike** – A metric chart shows high CPU, but the system feels fine. Sofia frowns: "Is that real?" 
-   
+**The Phantom Spike** – A metric chart shows high CPU, but the system feels fine. Sofia frowns: "Is that real?"
+
 *Expanded narrative: Sofia stares at a monitoring dashboard showing an alarming CPU spike on the balance lookup service—utilization jumping from 30% to 85% in minutes. Yet customer complaints are nonexistent, and other performance indicators show normal operations. "Is that spike even real?" she wonders aloud. "The system seems fine, customers aren't complaining, but this graph looks like we're about to crash." The team gathers around, trying to reconcile the contradictory signals.*
 
 ## Teaching Narrative
@@ -48,8 +48,8 @@ Financial institutions should recognize that metric reliability isn't just a tec
 
 ## Scene Description
 
-**Cardinality Explosion** – Clara pulls up metrics with thousands of user-tagged variations. Hector mutters, "The dashboard's bleeding context." 
-   
+**Cardinality Explosion** – Clara pulls up metrics with thousands of user-tagged variations. Hector mutters, "The dashboard's bleeding context."
+
 *Expanded narrative: Clara investigates by examining the metric definition itself. Her eyes widen as she discovers the issue. "Look at this—we're tagging CPU metrics with user IDs." She displays the metadata showing thousands of unique time series being generated—one for each active user. Hector looks over her shoulder and mutters, "The dashboard's bleeding context. You've got so many time series that the aggregation is meaningless. No wonder the graph looks unstable."*
 
 ## Teaching Narrative
@@ -92,8 +92,8 @@ The specific example of tagging CPU metrics with user IDs illustrates a common d
 
 ## Scene Description
 
-**The Naming Nightmare** – Daniel shows a widget called `agg_metric_report_perf_multi_v2`. Nobody knows what it means. 
-   
+**The Naming Nightmare** – Daniel shows a widget called `agg_metric_report_perf_multi_v2`. Nobody knows what it means.
+
 *Expanded narrative: As the team continues investigating, Daniel points to another concerning indicator—a metric with the opaque name `agg_metric_report_perf_multi_v2`. "Anyone know what this actually measures?" he asks. Silence. He checks the documentation. Nothing. He asks each team. No one claims ownership. "So we've got a metric important enough to put on our main dashboard, but no one knows what it means or how to interpret changes?" The absurdity of the situation becomes clear.*
 
 ## Teaching Narrative
@@ -123,6 +123,7 @@ Daniel's question about a metric "important enough to put on our main dashboard"
 To implement effective metric taxonomy in financial systems:
 
 1. **Naming Standard**: Create and enforce a consistent naming pattern for all metrics:
+
    ```
    [domain]_[entity]_[action]_[unit]
    payment_transaction_processing_duration_seconds
@@ -140,8 +141,8 @@ The specific example metric (`agg_metric_report_perf_multi_v2`) exhibits multipl
 
 ## Scene Description
 
-**Metric Hygiene Time** – Hector redraws the metric stack on a whiteboard, replacing them with business KPIs and SLO-aligned graphs. 
-   
+**Metric Hygiene Time** – Hector redraws the metric stack on a whiteboard, replacing them with business KPIs and SLO-aligned graphs.
+
 *Expanded narrative: Hector moves to the whiteboard and sketches a new observability hierarchy. At the top: customer-facing metrics like "Balance Lookup Success Rate" and "Average Lookup Time." Below these: service-level indicators like API latency and error rates. At the foundation: resource metrics like CPU and memory. "Your dashboards should reflect this hierarchy," he explains. "Start with what customers experience, then drill down to explain why that experience is changing. Infrastructure metrics support diagnosis but shouldn't drive alerts."*
 
 ## Teaching Narrative
@@ -184,8 +185,8 @@ Financial institutions should recognize that metric hierarchy isn't just about o
 
 ## Scene Description
 
-**Symptoms vs Signals** – Wanjiru points out a real issue: cache miss rate spiked. It correlates with latency, but isn't on the dashboard. 
-   
+**Symptoms vs Signals** – Wanjiru points out a real issue: cache miss rate spiked. It correlates with latency, but isn't on the dashboard.
+
 *Expanded narrative: Wanjiru, working quietly at her terminal, suddenly looks up. "I think I found something." She projects a graph not included on any dashboard: cache miss rate for the account data service. The line shows a dramatic increase beginning exactly when balance lookups started slowing down. "The cache is missing more often, forcing database reads. That explains the latency increase, but this metric isn't on any dashboard." Sofia nods slowly. "We're displaying symptoms like CPU, but not actual signals like cache effectiveness."*
 
 ## Teaching Narrative
@@ -228,8 +229,8 @@ Wanjiru's discovery of the cache miss metric exemplifies the value of functional
 
 ## Scene Description
 
-**Dashboard Cleanup Begins** – Team removes unnecessary panels and renames core metrics. Clara adds a timeline overlay. 
-   
+**Dashboard Cleanup Begins** – Team removes unnecessary panels and renames core metrics. Clara adds a timeline overlay.
+
 *Expanded narrative: The team launches an immediate dashboard renovation. They remove vanity metrics and redundant indicators. They rename obscure metrics with clear, purpose-driven titles. Clara implements a change annotation system showing deployments, configuration changes, and scaling events directly on the graphs. Daniel adds drill-down capabilities linking metrics to relevant logs and traces. The dashboard transforms from a confusing collection of numbers into a diagnostic narrative.*
 
 ## Teaching Narrative
@@ -272,8 +273,8 @@ The team's dashboard renovation demonstrates how visualization design isn't just
 
 ## Scene Description
 
-**Reality Revealed** – The newly trimmed panel layout clearly shows that a cache drift caused the balance lookup issue. 
-   
+**Reality Revealed** – The newly trimmed panel layout clearly shows that a cache drift caused the balance lookup issue.
+
 *Expanded narrative: Within the simplified dashboard, the story becomes clear: A configuration change reduced cache TTL (time-to-live) values, causing excessive cache misses. This increased database load, which affected CPU utilization. The metrics now tell a coherent story—from root cause (configuration change) through mechanism (cache behavior) to symptoms (resource utilization). What was previously a confusing collection of unrelated numbers now reveals a clear narrative about system behavior.*
 
 ## Teaching Narrative
@@ -316,8 +317,8 @@ The cache TTL issue revealed in this scene exemplifies a common class of problem
 
 ## Scene Description
 
-**Lesson Locked In** – Hector: "Metrics are medical charts. If you don't know how to read them, you're just looking at patient doodles." 
-   
+**Lesson Locked In** – Hector: "Metrics are medical charts. If you don't know how to read them, you're just looking at patient doodles."
+
 *Expanded narrative: Hector reviews the team's work with approval. "Metrics are like medical charts," he observes. "They need to tell a coherent story about the patient's condition. If you don't know how to read them—or worse, if they're recording the wrong things—you're just looking at patient doodles." He points to the new dashboard. "Now your metrics tell a story anyone can understand: what happened, when it happened, and why it matters to customers."*
 
 ## Teaching Narrative
@@ -360,8 +361,8 @@ Hector's conclusion that the new dashboard now tells "what happened, when it hap
 
 ## Scene Description
 
-**Epilogue Panel** – Sofia: "We made it less noisy." Hector: "No. You made it *speak.*" 
-   
+**Epilogue Panel** – Sofia: "We made it less noisy." Hector: "No. You made it *speak.*"
+
 *Expanded narrative: As the team implements the fix for the cache configuration issue, Sofia reflects on the transformation. "We made the dashboard less noisy," she observes. Hector shakes his head slightly. "No," he corrects. "You made it *speak*. Before, it was shouting random numbers. Now it's telling you exactly what's happening in language anyone can understand." The final panel shows the dashboard with new, clearly labeled metrics showing healthy operations—and a minor anomaly immediately drawing attention to a potential emerging issue.*
 
 ## Teaching Narrative
