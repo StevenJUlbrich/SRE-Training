@@ -4,6 +4,8 @@
 
 Welcome to the distributed logging circus—where your precious banking transactions disappear faster than a magician’s rabbit and every team swears “it wasn’t us.” Gone are the days when a single grep could save the day; now, your logs are scattered across a digital archipelago of microservices, mainframes, clouds, and legacy hairballs. If you still think traditional logging cuts it, you probably also think Y2K was overblown. This chapter is your crash course in not losing your shirt (or your customers) as you chase transaction ghosts through a maze of disconnected logs, missing context, and timestamp lies. Spoiler: the stakes are real—millions lost, reputations torched, and compliance officers who want your head on a stick. Get ready to stitch together the digital DNA of your business, or enjoy watching your mean-time-to-resolution spiral into the next fiscal year.
 
+---
+
 ## Learning Objectives
 
 - **Diagnose** the root causes of log fragmentation and why monolithic techniques are a career-limiting move in distributed systems.
@@ -16,6 +18,8 @@ Welcome to the distributed logging circus—where your precious banking transact
 - **Automate** anomaly detection to catch fraud and system meltdowns before they show up on CNN.
 - **Debug** distributed flows with full context—no more “well, it works on my microservice.”
 - **Leverage** AI-driven observability to actually keep up with your own transaction scale, and to survive the future.
+
+---
 
 ## Key Takeaways
 
@@ -30,6 +34,8 @@ Welcome to the distributed logging circus—where your precious banking transact
 - Distributed debugging is the difference between “we fixed it before lunch” and “we’re scheduling another cross-team call.”
 - AI-enhanced observability isn’t hype—it’s survival. If your platform generates more logs than your team can read in a lifetime, let the machines do the heavy lifting.
 - Ignore these practices and prepare for painful outages, angry customers, regulatory fines, and the kind of post-mortems that end careers. Your call.
+
+---
 
 ## Panel 1: The Distributed Challenge - When Logs Live Everywhere
 

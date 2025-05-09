@@ -6,6 +6,8 @@ Welcome to the future of banking observability, where passive log hoarding is as
 
 Banks aren’t just fighting for uptime—they’re fighting for survival in a world where milliseconds cost millions and regulatory missteps are career-ending. If you’re still treating your logs like landfill for future archeologists, you’re not just behind—you’re a liability. These pipelines don’t just make your data smarter; they make your business faster, safer, and a hell of a lot more competitive. Buckle up: you’re about to learn how real SREs and engineers build pipelines that don’t just collect logs—they weaponize them.
 
+---
+
 ## Learning Objectives
 
 - **Distinguish** between static log collection and dynamic, stream-based observability pipelines.
@@ -18,6 +20,8 @@ Banks aren’t just fighting for uptime—they’re fighting for survival in a w
 - **Integrate** logs, metrics, and traces for unified, multi-dimensional visibility (and zero excuses).
 - **Scale** observability infrastructure for global, petabyte-class banking operations—without blowing your cloud budget.
 - **Automate** observability operations with intelligent, self-healing, and adaptive systems that keep humans out of the log mines.
+
+---
 
 ## Key Takeaways
 
@@ -32,6 +36,8 @@ Banks aren’t just fighting for uptime—they’re fighting for survival in a w
 - Legacy system integration isn’t optional—unless you want blind spots big enough to drive a regulator’s fine through.
 - Manual observability operations are for masochists. Intelligent automation is the only way to keep up without burning out your team.
 - Bottom line: If your observability doesn’t actively reduce risk, cost, and complexity, you’re doing it wrong. The future belongs to pipelines that don’t just watch—they act.
+
+---
 
 ## Panel 1: The Pipeline Revolution - From Static Collection to Dynamic Streams
 

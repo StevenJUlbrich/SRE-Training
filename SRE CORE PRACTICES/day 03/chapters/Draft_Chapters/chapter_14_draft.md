@@ -4,6 +4,8 @@
 
 Welcome to the bloodsport of log analysis, where traditional monitoring is a blindfolded knife fight and your adversaries—fraudsters, outages, and regulatory fines—aren’t pulling punches. This chapter is your crash course in weaponizing machine learning for log data: not just to survive the data tsunami, but to hunt the anomalies hiding within. Human brains are no match for billions of log lines a day—so unless you’re planning to hire a small nation of analysts, you’ll need algorithms that can spot the real threats hiding in the noise. From feature engineering (the unsung hero, not just “data janitoring”) to explainable AI that won’t get you roasted by compliance, we’ll rip apart the myths of “just add machine learning” and show you how to build systems that actually adapt, learn, and keep you one step ahead of both the bad guys and the auditors. If your idea of fun is chasing ever-shifting patterns through petabytes of logs with a handful of regexes, this chapter isn’t for you. For everyone else: sharpen your pencils, check your cynicism at the door, and let’s get surgical.
 
+---
+
 ## Learning Objectives
 
 - **Diagnose** the cognitive and operational limits of manual log analysis at banking scale.
@@ -15,6 +17,8 @@ Welcome to the bloodsport of log analysis, where traditional monitoring is a bli
 - **Operationalize** ML pipelines, embedding them into real-world workflows for proactive detection and response.
 - **Establish** continuous learning cycles that keep your models ahead of evolving threats (and your competitors).
 - **Measure** what matters: not just ROC curves, but business impact—fraud prevented, incidents resolved, and fines avoided.
+
+--
 
 ## Key Takeaways
 
@@ -30,6 +34,8 @@ Welcome to the bloodsport of log analysis, where traditional monitoring is a bli
 - If you’re not measuring business impact—fraud averted, incidents mitigated, regulatory fines dodged—you’re just admiring clever dashboards. Results pay the bills; metrics alone don’t.
 
 >In short: Machine learning won’t save you from bad process, lazy feature engineering, or regulatory wrath—but done right, it’s the difference between reading about breaches in the press and being the cautionary tale. Choose wisely.
+
+---
 
 ## Panel 1: The Volume Challenge - When Human Analysis Fails
 

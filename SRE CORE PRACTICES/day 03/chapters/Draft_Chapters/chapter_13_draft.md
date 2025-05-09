@@ -4,6 +4,8 @@
 
 Welcome to Log-Driven Development: the step where you finally decide that flying blind in production is not a viable business model. This chapter isn’t about sprinkling a few `console.log`s and hoping for divine intervention when things break. It’s about building observability into your systems from day zero—because in banking, “we’ll add logging later” is code for “enjoy your next multimillion-dollar outage.” We’re dismantling the ancient ritual of treating logs as afterthoughts and transforming them into first-class citizens—right up there with security and uptime. We’ll show you how real organizations shifted left, baked observability into their DNA, and turned production chaos into systematic, evidence-based troubleshooting. Expect war stories, blunt best practices, and a clear message: if your logs aren’t answering business questions, you’re not logging—you’re LARPing as an engineer.
 
+---
+
 ## Learning Objectives
 
 - **Shift** observability left and make it a foundational part of your architecture, not a last-minute Band-Aid.
@@ -16,6 +18,8 @@ Welcome to Log-Driven Development: the step where you finally decide that flying
 - **Test** observability like a product feature, not an afterthought—because hope is not a strategy.
 - **Establish** a ruthless feedback loop, turning incident pain into actionable improvements (before the next post-mortem).
 - **Build** an observability culture where visibility isn’t optional—and nobody gets promoted for hiding production failures.
+
+---
 
 ## Key Takeaways
 
@@ -30,6 +34,8 @@ Welcome to Log-Driven Development: the step where you finally decide that flying
 - Continuous improvement isn’t optional—observability debt compounds faster than your technical debt ever will.
 - Observability culture means the whole org cares about visibility. If it doesn’t, enjoy being everyone’s scapegoat.
 - Logging is now a business asset. If your logs can’t answer customer, regulator, or executive questions, you’re not ready for production—full stop.
+
+---
 
 ## Panel 1: The Observability Shift - Moving Left in the Development Lifecycle
 
