@@ -4,7 +4,8 @@
 
 Welcome to the metric minefield, where one innocent-looking label can nuke your observability bill and bring your monitoring stack to its knees. This chapter slices through the cardinality chaos that lurks behind every “quick win” dashboard improvement or “just add this dimension” pull request. If you’ve ever watched your metrics platform spiral into a cost black hole after a developer decided to tag every user transaction with a unique ID, you’re in the right place. Prepare to learn how to turn the cardinality bomb from an existential threat into a controllable—if still occasionally explosive—tool.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Diagnose** the root causes of cardinality explosions and their real-world consequences in observability systems.
@@ -16,7 +17,8 @@ Welcome to the metric minefield, where one innocent-looking label can nuke your 
 - **Isolate** high-cardinality use cases with architectural and statistical containment strategies.
 - **Deploy** automated guardrails to prevent, detect, and contain cardinality disasters before your CFO finds out.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Cardinality isn’t just a math problem—it’s the silent assassin of your observability budget and reliability.
@@ -30,7 +32,8 @@ Welcome to the metric minefield, where one innocent-looking label can nuke your 
 - Cardinality visibility isn’t optional. If you don’t measure it, you’ll never control it—and you’ll be paying for someone else’s mistakes.
 - The only thing worse than not monitoring your bank is monitoring it so “well” you can’t afford to keep the lights on.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Dimension Explosion
 
 **Scene Description**: A banking SRE team huddles around a massive dashboard covered in red alerts. Their manager bursts into the room waving an invoice. "Our observability costs just increased TEN TIMES overnight!" On the screens, metrics graphs are frozen, query times have skyrocketed, and the team looks bewildered as they scroll through thousands of new metric combinations that appeared after yesterday's deployment. One engineer points to a small code change where a developer added customer account numbers as labels to every transaction metric.

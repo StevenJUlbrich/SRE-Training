@@ -4,7 +4,8 @@
 
 Welcome to the wild world of Volumetric Awareness, where every log line has a price tag and “more data” means “more budget meetings.” If you think observability is just about shoving as much telemetry into a platform as possible, congrats—your next invoice will be a heart attack in PDF form. This chapter drags you out of the “free lunch” era and into the modern, meter-running reality: every debug print, high-cardinality metric, and trace span is a direct hit to your bottom line. We’ll hunt down the silent data gluttons in your stack, torch the myth that all telemetry is valuable, and show you how to forecast, budget, and throttle your way to observability sanity. Spoiler: the answer isn’t “log less”—it’s “log smart, or pay stupid.” Bankers, SREs, and anyone who likes their job should keep reading.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Quantify** telemetry volumes across services and understand the cost mechanics of modern observability platforms.
@@ -15,7 +16,8 @@ Welcome to the wild world of Volumetric Awareness, where every log line has a pr
 - **Set up** proactive, volume-based alerting to catch cost/time bombs before they go thermonuclear.
 - **Design** and operate a telemetry data retention lifecycle that satisfies compliance without funding a storage vendor’s yacht.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Data volume is money—don’t give your observability vendor a bigger bonus than your CEO.
@@ -32,7 +34,8 @@ ______________________________________________________________________
 
 Read this chapter, or keep shoveling cash into the data furnace. Your call.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Data Deluge Dilemma
 
 **Scene Description**: The scene depicts a banking operations center where multiple large wall monitors display rapidly incrementing counters showing data volumes across different systems. A team of engineers stands in shock as they review a massive observability platform bill. One screen prominently displays a graph showing an exponential increase in data ingestion that perfectly correlates with a similar curve on cost projection. In the corner, a junior engineer is frantically enabling verbose logging on yet another service, unaware of the financial implications.

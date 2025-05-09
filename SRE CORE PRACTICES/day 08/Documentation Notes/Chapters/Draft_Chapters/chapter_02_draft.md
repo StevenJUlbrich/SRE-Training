@@ -4,7 +4,8 @@
 
 Welcome to Observability Economics 101, where sticker shock is the new normal and your dashboards double as financial crime scenes. Forget the days of flat-rate monitoring—modern observability platforms are like gym memberships for your data: you pay for every metric you promise you’ll use, but most of it just fattens your bill. This chapter is a brutal exposé on why your shiny new telemetry stack is bankrupting your company faster than you can say “ingest pipeline.” We’ll dissect the cost triplets, expose the cardinality monsters lurking in your metrics, and teach you to wield ROI like a weapon in budget meetings. If you like your SRE with a side of cold, hard financial reality (and a dash of vendor-induced nausea), you’re in the right place.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Diagnose** how the shift to consumption-based observability torpedoes predictable budgets and warps team incentives.
@@ -15,7 +16,8 @@ Welcome to Observability Economics 101, where sticker shock is the new normal an
 - **Implement** governance models that keep observability spend in check—without strangling innovation.
 - **Strategize** vendor selection based on economic fit, not just shiny features or PowerPoint voodoo.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - The “all you can monitor” buffet is dead—every new metric could be eating your lunch (and budget).
@@ -27,7 +29,8 @@ Welcome to Observability Economics 101, where sticker shock is the new normal an
 - Vendors design their pricing to trick you into bad decisions. Read the fine print and model your future bills—or get fleeced.
 - Treat observability as a business investment, not a sunk cost, and you might just keep your monitoring budget (and your job).
 
----
+______________________________________________________________________
+
 ## Panel 1: The Billing Shock
 
 **Scene Description**: A monthly budget review meeting where a CTO, CFO, and SRE director stare in disbelief at a projected chart showing observability costs growing exponentially over six months. The SRE director points to a specific inflection point where costs began accelerating - coinciding with their migration from legacy monitoring tools to a modern observability platform. On the whiteboard, the CFO has written "3x Budget?!" in red marker. The SRE director's laptop shows multiple browser tabs open to pricing pages of different observability vendors, revealing the various consumption-based pricing models.

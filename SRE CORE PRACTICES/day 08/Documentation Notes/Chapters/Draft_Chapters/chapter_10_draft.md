@@ -4,7 +4,8 @@
 
 Welcome to the age of observability with a brain—and a wallet. Forget your “set-and-forget” dashboards and static sampling rates. This chapter is all about dynamic observability controls: the adrenaline shot your telemetry needs to keep up with the real-world chaos of distributed banking systems (and avoid burning your budget to the ground). We’re not here to watch metrics like a bored security guard; we’re building systems that watch themselves, learn from their failures, and know when to dial up or down before you even finish your coffee. Expect feedback loops, cost circuit breakers, and telemetry that chases the problem across your microservices jungle like a bloodhound. If you think “more logs, more better,” prepare to be mugged by reality—and by your CFO.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Implement** adaptive sampling mechanisms that automatically adjust telemetry fidelity based on real-time signals, not wishful thinking.
@@ -15,7 +16,8 @@ Welcome to the age of observability with a brain—and a wallet. Forget your “
 - **Leverage** predictive scaling sensors that anticipate peak loads and adjust observability before things go sideways.
 - **Coordinate** cross-service propagation networks for end-to-end, context-aware diagnostics—because root causes don’t respect service boundaries.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Static sampling is for the lazy—or the soon-to-be-bankrupt. Dynamic observability means you get high-fidelity data only when and where you need it.
@@ -27,7 +29,8 @@ Welcome to the age of observability with a brain—and a wallet. Forget your “
 - Distributed systems mean distributed problems. If your observability doesn’t follow the transaction flow, prepare to chase ghosts.
 - Dynamic observability isn’t a nice-to-have—it’s the difference between catching incidents early and writing postmortems nobody wants to sign their name to.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Adaptive Sampling Gateway
 
 **Scene Description**: In a dimly lit banking operations center, a senior SRE named Maya studies multiple dashboards showing the bank's payment processing system. One dashboard displays a heat map of transaction processing times, with most areas in cool blue. A smaller screen shows a line graph of observability data volume steadily pulsing at a low level. Suddenly, a section of the heat map flashes red, indicating a spike in processing times for international wire transfers. As if responding to this change, the observability data volume graph automatically rises for that specific service, showing increased sampling rates. Maya nods with approval as the system automatically dials up telemetry collection precisely where needed.

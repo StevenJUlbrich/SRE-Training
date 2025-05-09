@@ -4,7 +4,8 @@
 
 Welcome to the Green Wall—the place where dashboards lie, pagers scream, and the only thing more unreliable than your sleep schedule is your monitoring system. This chapter torches the happy illusion that “all green = all good.” If you’ve ever stared at a wall of green tiles while customers rage about broken payments, congratulations: you’ve survived the Green Wall Fallacy. We’re here to teach you to stop trusting pretty colors and start trusting evidence. You’ll learn how to sniff out failures hiding in the shadows, why user complaints beat dashboard metrics every time, and why observability isn’t something you bolt on after launch—it’s survival gear for anyone who wants to keep production upright. Abandon faith in dashboards and embrace ruthless skepticism, because in SRE, the truth isn’t what your tools say—it’s what your users experience.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Identify** the Green Wall Fallacy and its impact on incident response.
@@ -14,7 +15,8 @@ Welcome to the Green Wall—the place where dashboards lie, pagers scream, and t
 - **Implement** the Four Golden Signals to monitor what actually matters for users and the business.
 - **Design** systems with observability as a built-in requirement, not an afterthought.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Trusting a wall of green dashboards over user complaints is a rookie move—don’t be that person.
@@ -26,7 +28,8 @@ Welcome to the Green Wall—the place where dashboards lie, pagers scream, and t
 - Designing for observability isn’t a nice-to-have; it’s table stakes. Retrofitting visibility after launch is just paying off tech debt with interest.
 - In SRE, skepticism isn’t cynicism—it’s your only defense against dashboard-induced delusion. Always verify. Always test. Always believe the user before the UI.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Pager Screams at 3AM
 
 **Scene Description**: In a dimly lit bedroom, Katherine is jolted awake by his pager at 2:57 AM. He scrambles for his laptop, still groggy, and logs into the monitoring dashboard. His face is illuminated by the screen showing a wall of green status indicators despite the critical alert. In a smaller window, users are reporting payment failures. Confusion and doubt cross his face as he mutters, "But everything's green..."

@@ -4,7 +4,8 @@
 
 Welcome to the chapter where we torch the myth that more telemetry equals better observability. If you think “collect everything” is a strategy, you’re probably the reason your CFO keeps antacids in their desk drawer. Intelligent sampling is your ticket off the data hamster wheel—where collecting every log, trace, and metric is a one-way trip to budget hell with zero guaranteed insight. We’ll dissect the two-faced nature of “sampling,” show you why some errors remain invisible in plain sight, and explain how to actually align your observability dollars with business value (instead of just burning them for warmth). Yes, there’s math. Yes, there’s compliance. No, you can’t ignore either. Ready to stop drowning in data lakes and start drinking from an information spring? Read on.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Debunk** the “firehose fallacy” by identifying when 100% data collection is a liability, not an asset.
@@ -15,7 +16,8 @@ Welcome to the chapter where we torch the myth that more telemetry equals better
 - **Deploy** consistent sampling patterns across distributed systems, using context propagation like a grown-up.
 - **Navigate** compliance landmines by separating regulatory retention from engineering telemetry.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Chasing “100% coverage” is just expensive hoarding. Most of your telemetry is white noise.
@@ -30,7 +32,8 @@ Welcome to the chapter where we torch the myth that more telemetry equals better
 
 In short: Intelligent sampling is the only thing keeping observability helpful, affordable, and out of a lawsuit. Use it, or get used to living in the data equivalent of a landfill.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Firehose Fallacy
 
 **Scene Description**: A stressed SRE named Maya stares in dismay at a monitoring dashboard showing a payment processing system generating terabytes of trace data. As transactions spike during a sales event, the observability cost gauge rapidly climbs into the red zone. Meanwhile, her colleague Alex confidently adjusts sampling parameters on a similar system, maintaining full visibility into errors while the cost gauge stays firmly in the green zone.

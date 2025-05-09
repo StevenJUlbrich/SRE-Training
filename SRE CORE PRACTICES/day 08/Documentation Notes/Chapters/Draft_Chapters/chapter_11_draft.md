@@ -4,7 +4,8 @@
 
 Welcome to the Observability Hunger Games—where every team picks their own weapons, nobody speaks the same metrics dialect, and the CFO’s blood pressure charts are the only thing everyone can agree on. This chapter rips apart the farce of do-it-yourself monitoring silos and shows why “Observability as a Service” is the only way to stop bleeding money and start making sense. We’ll expose how centralization beats tribal chaos, how quotas keep telemetry hoarders in check, and how an internal marketplace can finally force teams to justify their existence—or at least their log ingestion rates. Forget wishful thinking; this is the blueprint for turning observability from a cost center into a competitive advantage. Spoiler: It involves more governance, fewer excuses, and dashboards that might actually help during an incident.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Diagnose** the operational and financial carnage caused by fragmented, team-specific observability stacks.
@@ -13,7 +14,8 @@ Welcome to the Observability Hunger Games—where every team picks their own wea
 - **Build** and **maintain** a service catalog that pushes teams toward best-practice, cost-efficient instrumentation.
 - **Navigate** and **leverage** an internal observability marketplace to align technical choices with business value—and expose freeloaders.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - If every team runs its own monitoring circus, congrats: you’ve built a Tower of Babel for both metrics and invoices.
@@ -26,7 +28,8 @@ Welcome to the Observability Hunger Games—where every team picks their own wea
 - Standardization isn’t bureaucracy—it’s the only way incident response, cost management, and business reporting can coexist without fistfights.
 - If your observability approach doesn’t scale, neither will your business. Fix it, or prepare for your next critical incident to become a board-level topic.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Tower of Babel Monitoring
 
 **Scene Description**: In a large banking operations center, six different teams huddle around their own monitoring displays during a critical incident. Each screen shows different dashboards, with completely different metrics and visualizations for the same payment processing system. Team leads argue over conflicting data while business stakeholders grow increasingly frustrated. In the corner, a cost management report shows the bank is paying for seven separate observability platforms, with total costs growing 43% year-over-year.

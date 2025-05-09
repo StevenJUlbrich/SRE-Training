@@ -4,7 +4,8 @@
 
 Welcome to the seven circles of distributed observability hell, also known as “Distributed System Efficiency.” Here’s where your naive telemetry dreams go to die—drowned in a tidal wave of redundant logs, inconsistent metrics, and the kind of context bloat that makes your CFO wake up screaming. This chapter rips the band-aid off the lazy, “just log everything” approach, exposes why your multi-region deployment probably costs more than your last merger, and shames anyone who thinks duplicating canary tests is “best practice.” You’re not running a data landfill; you’re supposed to be running a business. Let’s learn how.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Identify** and **eliminate** redundant telemetry that’s eating your budget for breakfast.
@@ -15,7 +16,8 @@ Welcome to the seven circles of distributed observability hell, also known as �
 - **Reduce** cardinality-induced query meltdowns by governing metadata like an adult.
 - **Deploy** edge aggregation to slash data volume while still catching the real failures.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Duplicate telemetry is not “thoroughness”—it’s a tax on your budget and your sanity.
@@ -27,7 +29,8 @@ Welcome to the seven circles of distributed observability hell, also known as �
 - Edge aggregation: because sending every log line and metric straight to the mothership is for amateurs (and those who hate sleep).
 - Efficient observability isn’t about collecting more—it’s about knowing what not to collect, and when to ramp up detail without torching your margins.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Telemetry Tsunami
 
 **Scene Description**: A banking operations center with multiple monitoring screens showing alerts from different regions simultaneously. Engineers frantically scroll through dashboards as their observability costs graph climbs sharply upward. A senior SRE points to three nearly identical screens showing the same payment processing service logs from different regional deployments, all capturing the same customer journey.

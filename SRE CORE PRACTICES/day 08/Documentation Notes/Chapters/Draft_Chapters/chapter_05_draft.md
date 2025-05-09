@@ -4,7 +4,8 @@
 
 Welcome to the ugly truth behind observability retention: it’s a Kafkaesque tug-of-war between compliance auditors demanding you hoard telemetry until the heat death of the universe, and finance officers threatening to torch your budget if your storage bill ticks up one more byte. Most shops treat data like a hoarder treats old newspapers—never deleting, always paying. This chapter rips apart that all-or-nothing thinking and replaces it with a ruthless, surgical approach: tiered storage, lifecycle management, and selective retention. We’re not here to make compliance happy at the cost of your cloud budget, or vice versa. We’re here to make both possible, and keep your SRE team from being trampled in the stampede. If you’re ready to go from “cost center” to “cost killer,” keep reading.
 
----
+______________________________________________________________________
+
 ## Learning Objectives
 
 - **Diagnose** the true cost drivers in observability storage (hint: it’s not the dashboards).
@@ -16,7 +17,8 @@ Welcome to the ugly truth behind observability retention: it’s a Kafkaesque tu
 - **Classify** observability data across multiple dimensions for precision retention (because not all logs are sacred).
 - **Validate** retention strategies with fire-drill testing, so you don’t get blindsided by an audit.
 
----
+______________________________________________________________________
+
 ## Key Takeaways
 
 - Keeping all data forever is a lazy, expensive cop-out. Don’t be that team.
@@ -31,7 +33,8 @@ Welcome to the ugly truth behind observability retention: it’s a Kafkaesque tu
 
 Welcome to grown-up retention. No more “store everything and pray.” It’s time to get strategic—or get buried by your own data.
 
----
+______________________________________________________________________
+
 ## Panel 1: The Compliance Archive Avalanche
 
 **Scene Description**: An SRE team faces a crisis during a quarterly budget review. Projected screens show exponential cost growth curves for their observability platform. The lead SRE stands before banking executives, explaining a graph showing that 85% of their total observability costs come from storing years of rarely-accessed logs and metrics. On another screen, regulatory requirements for data retention are displayed alongside the ballooning storage costs. Team members look anxious as financial officers question the sustainability of their approach.
