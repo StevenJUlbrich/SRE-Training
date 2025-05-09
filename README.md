@@ -1,6 +1,7 @@
 # SRE DEVELOPMENT PLAN
 
 Guiding Principles
+
 1.	Modular and Iterative Approach
   o	Maintain a clear curriculum breakdown into modules yet allow for overlapping reinforcement and iterative revisits of critical topics.
   o	Integrate more frequent checkpoints to adapt content to the cohort’s progress.

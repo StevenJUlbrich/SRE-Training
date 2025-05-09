@@ -1,4 +1,4 @@
-# Chapter 3: Trace Anatomy and Data Structure.
+# Chapter 3: Trace Anatomy and Data Structure
 
 ## Chapter Overview
 

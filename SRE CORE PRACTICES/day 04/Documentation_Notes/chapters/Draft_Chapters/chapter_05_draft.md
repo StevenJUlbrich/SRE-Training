@@ -1,5 +1,3 @@
-I'll expand Chapter 5: Distributed Tracing in Banking Architectures by adding the requested elements to each panel while maintaining the 85/15 balance between core SRE content and supporting narrative.
-
 # Chapter 5: Distributed Tracing in Banking Architectures
 
 ## Chapter Overview
