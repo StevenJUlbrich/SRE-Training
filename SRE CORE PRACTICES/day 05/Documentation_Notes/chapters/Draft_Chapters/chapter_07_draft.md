@@ -4,6 +4,7 @@
 
 Welcome to the “Automation and Machine Learning in Triage” circus, where SREs juggle incident response, machine learning algorithms, and the ever-fickle whims of banking regulators—all while the business side hurls flaming torches labeled “lost revenue” and “reputation risk.” This chapter is a blunt roadmap for dragging your incident response out of the Stone Age of personal scripts and static PDFs, and into the cold, calculating embrace of automated evidence gathering, ML-driven triage, and self-healing systems. Spoiler: siloed heroics and “tribal knowledge” are for amateurs; real pros build systems that don’t care who’s on call at 2 AM. If you’re still doing root cause by grepping logs and guessing, it’s time to get acquainted with your new robot overlords—just don’t let them run wild without grown-up supervision.
 
+---
 ## Learning Objectives
 
 - **Assess** your organization’s automation maturity and systematically level up from “script hoarder” to “intelligent system operator.”
@@ -14,6 +15,7 @@ Welcome to the “Automation and Machine Learning in Triage” circus, where SRE
 - **Deploy** automated remediation for well-understood incidents, slashing MTTR and keeping your teams out of pager hell.
 - **Establish** a human-machine partnership that combines machine efficiency with human skepticism—avoiding both robotic tunnel vision and human error.
 
+---
 ## Key Takeaways
 
 - Manual incident response is a game of Russian roulette with your business’s reputation. Consistency beats heroics—automate or pay up.
@@ -31,6 +33,7 @@ ______________________________________________________________________
 
 SREs: If you can’t automate it, at least make it suck less. But honestly? You can automate it. Get to work.
 
+---
 ## Panel 1: The Automation Maturity Model - From Scripts to Intelligent Systems
 
 ### Common Example of the Problem

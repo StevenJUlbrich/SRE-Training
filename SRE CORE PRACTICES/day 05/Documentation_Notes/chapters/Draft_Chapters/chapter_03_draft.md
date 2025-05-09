@@ -4,6 +4,7 @@
 
 Welcome to the seven-layer dip of incident response mediocrity: “Alert Classification and Initial Response.” If you thought SRE was just about flipping off pagers and diving into logs, buckle up. This chapter rips apart the fairy tale of binary alerts and exposes the ugly, business-killing consequences of wishful thinking, knee-jerk fixes, and communication disasters. We’ll drag you through the minefields of alert fatigue, misallocated resources, and regulatory facepalms—then show you how the pros (and the merely exhausted) triage, classify, and contain chaos before it destroys your bank’s reputation, balance sheet, or both. Forget best intentions; this is about surviving the blast radius and keeping the C-suite and regulators off your back. Welcome to the grown-up table.
 
+---
 ## Learning Objectives
 
 - **Distinguish** alert severities using business impact, not just technical noise.
@@ -15,6 +16,7 @@ Welcome to the seven-layer dip of incident response mediocrity: “Alert Classif
 - **Execute** containment-first actions to limit damage before blowing your SLA—and your career.
 - **Coordinate** stakeholder communications with the discipline of a PR-crisis pro, not a panicked sysadmin.
 
+---
 ## Key Takeaways
 
 - Not all alerts are emergencies—but treating them like one will turn your team into sleep-deprived zombies and your bank into a punchline.
@@ -30,6 +32,7 @@ Welcome to the seven-layer dip of incident response mediocrity: “Alert Classif
 
 In short: Classify ruthlessly, respond deliberately, contain mercilessly, and communicate like your job depends on it—because it does.
 
+---
 ## Panel 1: Beyond Binary - The Alert Severity Spectrum
 
 **Scene Description**: A banking operations center where a newly implemented alert classification system is in action. Different alerts appear on a central display, automatically categorized with color-coding and priority levels. A senior SRE named Priya demonstrates the system to newer team members, pointing to five distinct severity categories (Critical, High, Medium, Low, Informational) and explaining how each category triggers different response protocols. Team members' devices show different notification patterns based on alert severity, with critical alerts triggering immediate pager notifications while informational alerts quietly populate a dashboard for later review.

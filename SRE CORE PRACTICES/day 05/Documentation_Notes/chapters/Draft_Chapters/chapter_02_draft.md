@@ -6,6 +6,7 @@ Welcome to the Signal Landscape: a vast, noisy wilderness where your banking sys
 
 ______________________________________________________________________
 
+---
 ## Learning Objectives
 
 - **Identify** the four essential data sources—metrics, logs, traces, and events—and explain why relying on one or two is a rookie move.
@@ -18,6 +19,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
+---
 ## Key Takeaways
 
 - Relying on metrics alone is like checking a corpse’s pulse and calling it healthy. Multi-signal observability is the only way to see the whole mess.
@@ -33,6 +35,7 @@ ______________________________________________________________________
 
 If you want to stop being surprised by outages—or worse, by headlines—stop treating monitoring as a checkbox and start treating it as your only defense against chaos. This chapter is your battle plan. Choose to ignore it, and enjoy your next post-mortem.
 
+---
 ## Panel 1: The Four Pillars of Observability
 
 **Scene Description**: A banking operations center where an SRE named Elena explains a new dashboard to her team. The screen is divided into four distinct quadrants, each representing a different data source: logs showing application errors, metrics displaying transaction rates, traces following a payment journey, and events highlighting deployment changes. As Elena points to connections between these quadrants, team members who previously only looked at one data type are visibly having "aha" moments as they see how the complete picture emerges only when all four sources are combined.

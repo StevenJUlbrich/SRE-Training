@@ -4,6 +4,7 @@
 
 Welcome to the brutal reality of measuring and improving triage effectiveness, where vanity metrics go to die and illusions of progress are exposed like a gaping security hole. This chapter rips off the Band-Aid on your dashboards, revealing why “green” KPIs can still spell disaster—and how your SRE team might accidentally be the department of false confidence. We’ll drag you up the metrics food chain: from counting error rates (yawn), to tying MTTR to actual business outcomes (read: money, customers, compliance). Then, we’ll dissect the Four Golden Signals of triage, show you why your postmortems are probably junk, and force you to stare into the abyss of predictive metrics—because nobody wants to be blindsided by the next "surprise" outage. We'll benchmark your performance so you can't hide behind navel-gazing, and then introduce the Improvement Flywheel: the only spinning you should be doing is continuous, systematic advancement. Finally, we’ll slap a maturity model on your operation so you can finally see which fancy dashboards are built on a swamp. If you've ever wondered why your incident metrics look great while reality burns, buckle up. This is your wake-up call.
 
+---
 ## Learning Objectives
 
 - **Map** your entire measurement ecosystem, linking technical, operational, and business metrics so you can prove causality (and not just correlation) to skeptical execs.
@@ -14,6 +15,7 @@ Welcome to the brutal reality of measuring and improving triage effectiveness, w
 - **Institutionalize** the Improvement Flywheel to build self-sustaining, compounding operational capability.
 - **Assess** your organization against a multidimensional maturity model—because excellence isn’t just about shiny tools.
 
+---
 ## Key Takeaways
 
 - “All green” dashboards mean nothing if your customers are rage-tweeting and regulators are circling—metrics must connect to business outcomes, or you’re just playing metrics bingo.
@@ -29,6 +31,7 @@ Welcome to the brutal reality of measuring and improving triage effectiveness, w
 
 Welcome to the grown-up table of SRE. Bring data, bring humility, and leave your vanity metrics at the door.
 
+---
 ## Panel 1: The Measurement Hierarchy - From Technical Metrics to Business Outcomes
 
 **Scene Description**: A banking executive briefing where the SRE team presents a sophisticated metrics dashboard with clearly defined measurement levels. The visualization shows a pyramid structure with technical metrics at the base (error rates, latency, alert volumes), operational metrics in the middle (MTTD, MTTR, escalation frequency), and business outcomes at the top (customer impact, financial consequences, regulatory compliance). SRE Director Leila explains how each metric level connects to the others, demonstrating how improvements in technical and operational metrics ultimately drive positive business outcomes. She highlights a specific incident where reduced mean-time-to-detection directly prevented potential regulatory penalties. The executive team engages with the dashboard, particularly focused on how triage improvements have reduced financial losses from incidents by 42% over the previous quarter. Detailed drill-downs allow them to trace these improvements to specific operational changes in the Integration & Triage process.

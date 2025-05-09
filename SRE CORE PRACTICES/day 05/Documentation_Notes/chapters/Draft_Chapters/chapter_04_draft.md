@@ -4,6 +4,7 @@
 
 Welcome to the dark art of correlation and pattern recognition: the difference between being an SRE who actually solves problems and one who just files tickets until retirement. This chapter drags you, kicking and screaming, out of the stone age of “monitoring” and into a world where timelines, topologies, and statistical voodoo actually help you find what’s broken—before your CFO or a regulator does. We’ll dissect the sacred cows of threshold alerts and siloed dashboards, torch the myth that more metrics mean more clarity, and show you how to build institutional memory so you stop fixing the same mess every quarter. If you want to understand how your banking systems really fail—not just how they look when they’re failing—strap in. This isn’t your boss’s executive summary.
 
+---
 ## Learning Objectives
 
 - **Apply** timeline analysis to expose causality in complex incidents, not just symptom whack-a-mole.
@@ -14,6 +15,7 @@ Welcome to the dark art of correlation and pattern recognition: the difference b
 - **Trace** issues vertically, connecting business-impacting failures to root causes buried four layers deep in the stack.
 - **Document** and **leverage** a pattern library so every engineer, not just the grizzled veterans, can kill recurring incidents on sight.
 
+---
 ## Key Takeaways
 
 - Incidents are rarely single events. Think sequence, not snapshot—or keep rolling back the wrong code for eternity.
@@ -26,6 +28,7 @@ Welcome to the dark art of correlation and pattern recognition: the difference b
 - Every minute you spend on root cause analysis is money, reputation, and compliance risk on the line. Get good at this, or get used to apologies.
 - If you’re not automating, visualizing, and institutionalizing these practices, you’re just playing incident roulette. And the house always wins.
 
+---
 ## Panel 1: Temporal Correlation - The Power of Timeline Analysis
 
 **Scene Description**: A banking incident room where a complex payment processing issue is under investigation. The focal point is an interactive digital timeline spanning multiple displays. Engineers have plotted various system events chronologically: deployment changes, configuration updates, traffic spikes, error rate increases, database slowdowns, and customer complaint surges. A senior SRE named Aisha uses gesture controls to manipulate the timeline, compressing and expanding different time periods. She highlights a critical sequence: a configuration change, followed by a gradual database connection pool exhaustion, culminating in payment failures exactly 27 minutes later. Team members are annotating this sequence, drawing causal connections between events that appeared unrelated when viewed in isolation.

@@ -4,6 +4,7 @@
 
 Welcome to the SRE awakening, where your dashboards are liars, your heroics are overrated, and your instincts are probably making things worse. This chapter is a slap in the face to the old “monitor everything, trust nothing except green lights” mentality. It rips off the Band-Aid of traditional monitoring—exposing the ugly truth that a “green wall” doesn’t mean your customers aren’t hurling their phones across the room. We’ll drag you out of your cozy component silos, force you to connect the dots, and make you document your hard-won wisdom so the next rookie doesn’t reboot the bank by accident. If you’re just trying to lower your MTTR and move on, you’re missing the point: the real win is not having the incident in the first place. This is the Integration & Triage reality check. Leave your dashboards at the door.
 
+---
 ## Learning Objectives
 
 - **Recognize** the Green Wall Fallacy and why dashboards’ green lights are not gospel truth.
@@ -15,6 +16,7 @@ Welcome to the SRE awakening, where your dashboards are liars, your heroics are 
 - **Document** and **share** knowledge so you’re not dependent on local folklore or missing engineers.
 - **Shift** from celebrating fast fixes to actually preventing the same dumpster fire from reigniting.
 
+---
 ## Key Takeaways
 
 - Your dashboards are lying to you. “All green” is just as dangerous as “all red” if you’re blind to customer pain.
@@ -28,6 +30,7 @@ Welcome to the SRE awakening, where your dashboards are liars, your heroics are 
 - Shaving a few minutes off your MTTR means nothing if you’re fighting the same fire every week. Prevention beats heroics, every time.
 - Integration & Triage is not a tool—it’s a mindset. Get skeptical, get methodical, and stop trusting pretty dashboards over ugly truth.
 
+---
 ## Panel 1: The Green Wall Fallacy
 
 **Scene Description**: A bleary-eyed engineer is jolted awake at 2:57 AM by his buzzing pager. He stumbles to his laptop, opens his dashboard, and sees a wall of green metrics while simultaneously receiving frantic messages about a failing payment service. His monitor shows all systems green, yet customers can't complete transactions. The conflict between what the monitoring says and what users experience creates visible confusion on his face as he debates which to trust.

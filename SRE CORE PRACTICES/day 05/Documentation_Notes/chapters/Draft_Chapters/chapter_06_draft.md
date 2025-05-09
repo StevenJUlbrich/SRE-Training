@@ -4,6 +4,7 @@
 
 Welcome to the advanced school of SRE forensics, where gut feelings and hunches are banished to the dark corners of yesterday's war rooms. This chapter is your ticket out of the troubleshooting Stone Age and into the evidence-based big leagues, where every incident is a crime scene and every SRE is part Sherlock Holmes, part data archaeologist. We’re not here to play whack-a-mole with symptoms or chase our tails in endless blame loops—this is about wielding the scientific method, constraint theory, differential diagnosis, and even a little existential self-doubt (hello, confirmation bias!) to outsmart complex banking failures before they outsmart you. If you’re still solving problems by “fixing what feels wrong,” prepare for some uncomfortable truths—and a better way to actually solve the problems that matter.
 
+---
 ## Learning Objectives
 
 - **Apply** the scientific method to incident investigation and demand evidence over intuition.
@@ -14,6 +15,7 @@ Welcome to the advanced school of SRE forensics, where gut feelings and hunches 
 - **Test** and **falsify** your own hypotheses before the universe does it for you, eliminating confirmation bias from your toolkit.
 - **Leverage** collective intelligence—transforming tribal knowledge and cross-team chaos into a single, coherent investigation.
 
+---
 ## Key Takeaways
 
 - Evidence beats ego. Every. Single. Time. If you don’t know, say so, and go find out.
@@ -29,6 +31,7 @@ Welcome to the advanced school of SRE forensics, where gut feelings and hunches 
 
 If you’re still troubleshooting like it’s 2009, congratulations: you’re the incident.
 
+---
 ## Panel 1: The Scientific Method for Incidents - From Observation to Theory
 
 **Scene Description**: A banking war room where a systematic investigation of a trade settlement failure is underway. The front wall displays a structured investigation framework modeled on the scientific method. Team members work through clearly defined stages: Recording objective observations on digital notepads (unusual error patterns in settlement confirmations), formulating multiple hypotheses on a shared board (API rate limiting, data validation issues, timing problems), designing specific tests for each theory, and methodically executing these tests while documenting results. A senior SRE named Omar guides the team, repeatedly redirecting discussions from speculation back to evidence, asking "What do we know for certain?" and "How can we test that theory?" The team adds each verified finding to a growing evidence map, building a fact-based picture of the incident while rigorously distinguishing between confirmed facts and unverified theories.

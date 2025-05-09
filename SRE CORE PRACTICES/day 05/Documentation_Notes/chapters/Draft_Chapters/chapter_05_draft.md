@@ -4,6 +4,7 @@
 
 Welcome to the unsung bloodsport of incident response: escalation and communication. This chapter is your field guide to surviving—and thriving—in the warzone of major banking outages. Forget the gut feelings and “hero coder” fantasies; we’re talking about the industrial-strength machinery of evidence-based escalation, orchestration, and razor-sharp stakeholder comms. Here, intuition is an unreliable narrator, blame is a productivity tax, and “winging it” is how you hemorrhage millions and earn a starring role in regulatory audits. Whether you’re an SRE, team lead, or the poor soul holding the on-call pager, this chapter will teach you how to turn chaos into choreography, confusion into clarity, and finger-pointing into system improvements. Buckle up. The stakes are seven-figure, the regulators are watching, and your reputation is one Slack misfire away from meltdown.
 
+---
 ## Learning Objectives
 
 - **Master** criteria-based escalation so that every decision is grounded in data, not hope or fear.
@@ -14,6 +15,7 @@ Welcome to the unsung bloodsport of incident response: escalation and communicat
 - **Execute** bulletproof escalation handoffs to avoid knowledge black holes during 24x7 incidents.
 - **Analyze** escalation and communication effectiveness post-mortem, and drive relentless, data-driven improvement.
 
+---
 ## Key Takeaways
 
 - Delayed escalation is the root cause of million-dollar outages. "Just five more minutes" is how you end up on the evening news.
@@ -27,6 +29,7 @@ Welcome to the unsung bloodsport of incident response: escalation and communicat
 - In banking, every minute of chaos is a compound interest nightmare. Structured escalation is the only way to keep your job—and maybe the bank’s charter.
 - If you’re not measuring and improving your escalation and communication, you’re not running SRE. You’re just rolling dice and calling it “best effort.”
 
+---
 ## Panel 1: The Decision to Escalate - Knowing When to Expand the Circle
 
 **Scene Description**: A banking operations center where a payment processing incident is unfolding. A team lead named Maya stands at a decision point, consulting an escalation framework displayed on a tablet. The framework shows clear criteria: impact duration exceeding 15 minutes, affecting over 100 high-value clients, failed automatic recovery attempts, and unknown root cause. Team members report their findings against each criterion while a timer shows the incident has passed critical thresholds. Maya makes the decisive call to escalate, activating a well-defined protocol that immediately triggers notifications to additional technical teams, management stakeholders, and the communications team. The scene captures that precise moment of decision, with Maya's confident posture contrasting with the hesitation visible in some junior team members.
