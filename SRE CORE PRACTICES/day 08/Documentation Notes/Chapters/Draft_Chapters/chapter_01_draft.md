@@ -4,6 +4,7 @@
 
 Welcome to the world where your dashboards bleed money and your “insight” is a haystack of expensive noise. This chapter is a slap in the face to the old-school “collect everything” monitoring religion. In the era of pay-by-the-byte observability, ignorance isn’t bliss—it’s a million-dollar invoice. We’ll show you how unchecked metrics, cargo-cult logging, and high-cardinality stupidity can turn your SRE dreams into a CFO’s nightmare. This isn’t just about technical debt; it’s about financial ruin dressed up as “visibility.” If you want to avoid being the punchline at your next quarterly review, read on and learn to wield observability like a weapon, not a money pit.
 
+---
 ## Learning Objectives
 
 - **Recognize** the true costs—financial and technical—of modern observability platforms.
@@ -14,6 +15,7 @@ Welcome to the world where your dashboards bleed money and your “insight” is
 - **Implement** data lifecycle management that slashes costs without sacrificing compliance or utility.
 - **Foster** a culture of cost-aware observability where every engineer actually cares about the bottom line.
 
+---
 ## Key Takeaways
 
 - More data ≠ more insight. It often just means you pay more to be confused faster.
@@ -24,6 +26,7 @@ Welcome to the world where your dashboards bleed money and your “insight” is
 - Governance isn’t bureaucracy, it’s self-defense. Without it, you’re one new dashboard away from a budget incident.
 - Culture eats tooling for breakfast. Until engineers see cost as their problem, you’re just rearranging deck chairs on the Titanic.
 
+---
 ## Panel 1: The Million-Dollar Dashboard
 
 **Scene Description**: A bustling banking operations center where multiple teams stare at wall-mounted screens displaying hundreds of colorful graphs and metrics. In the foreground, a finance manager hands a shocked SRE lead a printout of last month's observability platform bill with a seven-figure total highlighted in red. Other engineers continue adding new metrics to dashboards, unaware of the financial implications of their actions.

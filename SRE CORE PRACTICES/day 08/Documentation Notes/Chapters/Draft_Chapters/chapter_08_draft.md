@@ -4,6 +4,7 @@
 
 Welcome to the Instrumentation Wild West, where more dashboards mean more confusion, not clarity, and your observability bill looks like the GDP of a small country. This chapter rips the rose-colored glasses off the “just collect everything” fantasy and replaces it with the cold, hard reality: too much telemetry is just noise—expensive, paralyzing noise. You’ll learn why herding logs, metrics, and traces without governance is the fastest way to burn out your SREs and your budget. We’ll trade chaos for constitution, cowboying for collaboration, and show you how to wield the tools and processes that transform observability from a liability into a competitive advantage. Don’t worry, there are no silver bullets—just pragmatic, battle-tested governance you’ll wish you’d had before your last 3 a.m. incident.
 
+---
 ## Learning Objectives
 
 - **Diagnose** the root causes and high costs of ungoverned instrumentation (and recognize the smell of data chaos).
@@ -14,6 +15,7 @@ Welcome to the Instrumentation Wild West, where more dashboards mean more confus
 - **Measure** the impact of governance using hard metrics that tie directly to business value and SRE sanity.
 - **Advance** your organization through the real-world maturity model of instrumentation governance, one painful lesson at a time.
 
+---
 ## Key Takeaways
 
 - “Collect everything” is not a strategy. It’s career sabotage and a blank check to your observability vendor.
@@ -27,6 +29,7 @@ Welcome to the Instrumentation Wild West, where more dashboards mean more confus
 - Maturity is earned, not bought. You don’t get predictive, self-healing governance by stapling a linter onto a broken process.
 - If your organization isn’t evolving its governance, you’re not just standing still—you’re actively falling behind. The next incident will make that painfully clear.
 
+---
 ## Panel 1: The Instrumentation Wild West
 
 **Scene Description**: A chaotic war room filled with exhausted SREs staring at screens showing hundreds of dashboards and alerts. One engineer frantically scrolls through thousands of log lines while another desperately tries to make sense of a metrics dashboard with hundreds of unorganized graphs. In the corner, a financial officer holds a printout of an alarming observability bill, trying to get someone's attention. The room represents pure observability chaos - disconnected, overwhelming, and ultimately ineffective despite massive data collection.

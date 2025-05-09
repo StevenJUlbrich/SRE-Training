@@ -4,6 +4,7 @@
 
 Welcome to the bloodsport of modern observability: economics edition. If you thought keeping your logs under control was hard, wait until finance starts asking why your tracing bill looks like the GDP of a small country. This chapter rips the rose-colored glasses off “just collect more telemetry” and drags you—kicking and screaming—into the harsh daylight of cost, value, and accountability. We’re not talking rounding errors here. We’re talking dashboards that put a price tag on every log line, engineers who suddenly care about cardinality, and business leaders who want to see ROI, not just pretty time series. Forget vague “visibility” platitudes; we’re here to weaponize observability data for ruthless efficiency, financial transparency, and—gasp—actual business value. Step inside, and let’s see if your telemetry is worth its weight in cloud bills.
 
+---
 ## Learning Objectives
 
 - **Diagnose** where your observability spending is leaking money and why your CFO is losing sleep.
@@ -14,6 +15,7 @@ Welcome to the bloodsport of modern observability: economics edition. If you tho
 - **Map** observability spending directly to customer journeys and business value streams, exposing what really matters—and what doesn’t.
 - **Create** internal marketplaces that turn telemetry efficiency into a competitive sport, complete with bragging rights and incentives.
 
+---
 ## Key Takeaways
 
 - Observability is not a charity. Every log line, metric, and trace has a price tag—start acting like it.
@@ -25,6 +27,7 @@ Welcome to the bloodsport of modern observability: economics edition. If you tho
 - Internal efficiency markets turn telemetry from a tragedy of the commons into a ruthless, gamified quest for optimization. Slackers get shown the door.
 - If your observability economics aren’t making people uncomfortable, you’re probably doing it wrong.
 
+---
 ## Panel 1: The Telemetry Accountant
 
 **Scene Description**: A senior SRE and a finance analyst stand before a large interactive dashboard displaying complex heat maps of observability costs across different banking systems. The heat map pulses with activity as real-time data flows in, with colored overlays showing cost attributions to various teams. The SRE points to a sudden red spike in the mortgage processing system's section while the finance analyst nods and makes notes on a tablet showing automated cost allocation formulas.
