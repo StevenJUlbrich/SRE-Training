@@ -4,6 +4,7 @@
 
 Welcome to the log apocalypse, where banks drown in oceans of their own data, desperately trying to find the one error message that actually matters. This chapter is a survival guide for SREs trapped in endless terabytes of banking logs, where “more data” often means “less insight” and “more cost.” We’ll rip apart the fantasy that brute-force log collection is good observability, show you how to keep the logs that matter, dump the ones that don’t, and save your business millions (and your sanity) in the process. Sampling, filtering, dynamic verbosity, tiered retention, aggregation, and specialized strategies—these aren’t just buzzwords, they’re how you fight back against the log monster. If your idea of log management is “collect everything and pray,” prepare to have your worldview—and your budget—punched in the face.
 
+---
 ## Learning Objectives
 
 - **Diagnose** log volume crises and identify when “comprehensive” logging becomes a business and reliability liability.
@@ -17,6 +18,7 @@ Welcome to the log apocalypse, where banks drown in oceans of their own data, de
 - **Measure** the real observability impact—connect logging practice to improved operational and financial outcomes.
 - **Prepare** for the future: leverage machine learning and intelligent systems to automate and optimize log volume management.
 
+---
 ## Key Takeaways
 
 - More logs ≠ more insight. If your dashboard is timing out and your storage bill is bigger than your revenue, you’re doing it wrong.
@@ -32,6 +34,7 @@ Welcome to the log apocalypse, where banks drown in oceans of their own data, de
 - Machine learning is coming for your log configs. Either automate and adapt, or prepare to be outpaced by smarter, cheaper, and faster competitors.
 - The bottom line: Strategic log management doesn’t just save money—it’s the difference between identifying fraud in minutes or losing millions while you scroll through irrelevant noise.
 
+---
 ## Panel 1: The Volume Crisis - When Logging Becomes Overwhelming
 
 **Scene Description**: A banking data center where storage and processing systems are visibly overwhelmed by massive log volumes from a high-volume payment processing platform. Engineers review alarming metrics showing exponential log growth—from gigabytes to terabytes daily as transaction volumes increased. Performance dashboards show processing delays in log indexing, skyrocketing storage costs, and query timeouts during critical investigations. A financial visualization displays the direct business impact: increasing infrastructure costs alongside degrading observability effectiveness. Team leaders examine a critical incident post-mortem where investigation was significantly delayed because relevant logs were buried in overwhelming volumes, resulting in extended transaction processing outages.

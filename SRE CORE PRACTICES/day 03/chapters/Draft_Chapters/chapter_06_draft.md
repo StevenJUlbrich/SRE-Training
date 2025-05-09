@@ -8,6 +8,8 @@ Think of your banking platform as a crime scene spread across half the city, wit
 
 By the end of this chapter, you’ll have the tools to stop playing Whac-A-Mole with your incidents and start running real investigations. You’ll also learn how to turn your logs from a liability into an asset, and maybe even impress compliance—if you don’t get the whole thing shut down first.
 
+---
+
 ## Learning Objectives
 
 - **Identify** where and why context breaks down in distributed transaction flows—and what it really costs you.
@@ -20,6 +22,8 @@ By the end of this chapter, you’ll have the tools to stop playing Whac-A-Mole 
 - **Adopt** distributed tracing and visualization that actually helps, not hinders, troubleshooting.
 - **Integrate** context across logs, metrics, and traces for unified observability—no more “island syndrome.”
 - **Drive** implementation with pragmatic, incremental strategies that deliver value before the next re-org kills your funding.
+
+---
 
 ## Key Takeaways
 
@@ -35,6 +39,8 @@ By the end of this chapter, you’ll have the tools to stop playing Whac-A-Mole 
 - If you’re not connecting logs, metrics, and traces, you’re not doing observability—you’re just collecting expensive clutter.
 
 >Now, go correlate like your revenue (and your sanity) depends on it—because it does.
+
+---
 
 ## Panel 1: The Missing Links - The Distributed Transaction Challenge
 

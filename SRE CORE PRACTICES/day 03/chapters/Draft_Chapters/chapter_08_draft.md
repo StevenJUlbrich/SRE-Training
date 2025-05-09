@@ -4,6 +4,8 @@
 
 Welcome to the log-based alerting revolution—where SREs finally stop playing whack-a-mole with CPU dashboards and start monitoring what actually matters: business outcomes. This chapter rips the “all systems green” blindfold off your ops team and drags them into the harsh light of customer reality. We’ll show you how log-based alerts, pattern recognition, and statistical baselines expose those silent failures your metrics have been quietly ignoring. We’re not just talking about catching server hiccups; we’re talking about preventing million-dollar trading errors, stopping fraud before it happens, and keeping your on-call engineers from rage-quitting due to alert spam. If you’re still living in a world where a 90% CPU spike is “critical” but a 15% transaction failure rate is “just a warning,” strap in. This isn’t monitoring for the faint of heart—it’s the blueprint for SREs who want to survive (and thrive) in the real world of digital banking and finance.
 
+---
+
 ## Learning Objectives
 
 - **Implement** log-based alerting focused on business outcomes, not just server metrics.
@@ -16,6 +18,8 @@ Welcome to the log-based alerting revolution—where SREs finally stop playing w
 - **Automate** remediation for well-understood issues so humans can focus on real problems.
 - **Continuously refine** alerting using feedback loops and effectiveness metrics.
 - **Integrate** logs, metrics, and traces for a unified, end-to-end view of your operations.
+
+---
 
 ## Key Takeaways
 
@@ -32,6 +36,8 @@ Welcome to the log-based alerting revolution—where SREs finally stop playing w
 - Siloed telemetry is a liability. Integrated observability is your insurance against finger-pointing, endless war rooms, and four-hour MTTRs.
 
 >In short: log-based alerting is how you stop being a victim of your own dashboards and start running a business that works—for both the bottom line and your sanity. Welcome to the major leagues.
+
+---
 
 ## Panel 1: The Alerting Evolution - Beyond Threshold Monitoring
 
