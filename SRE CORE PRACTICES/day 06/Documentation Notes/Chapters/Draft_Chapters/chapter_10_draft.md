@@ -4,6 +4,7 @@
 
 Welcome to the reliability multiverse, where “available” is just table stakes and single-metric dashboards are for amateurs. This chapter drags you—kicking and screaming—beyond availability into the tangled mess of real-world reliability: latency, throughput, correctness, data quality, and every other way your systems can betray you. We’ll dissect why your “99.95% up” service still sucks for customers, why SLOs that don’t talk to business metrics are a CFO’s nightmare, and why your highest-paying clients expect more than the “good enough” you serve to the masses. Buckle up as we expose the fallacies of one-dimensional thinking, the hazards of static targets, and the laughable inadequacy of reactive alerts. If you’re still bragging about uptime, you’re living in the past. This is advanced reliability engineering—where failure is multidimensional, and success means outsmarting chaos before it eats your business alive.
 
+---
 ## Learning Objectives
 
 - **Expand** your reliability mindset from “Is it up?” to a brutal, multi-dimensional reality that actually reflects customer pain.
@@ -16,6 +17,7 @@ Welcome to the reliability multiverse, where “available” is just table stake
 - **Correlate** technical metrics to business outcomes—speak the CFO’s language or watch your budget evaporate.
 - **Deploy** predictive, machine learning-driven reliability so you prevent outages, not just count them.
 
+---
 ## Key Takeaways
 
 - Availability is just the appetizer; real customer pain comes from the reliability dimensions you’re not measuring.
@@ -29,6 +31,7 @@ Welcome to the reliability multiverse, where “available” is just table stake
 - Next-generation SLOs mean you fix issues before they hit the fan. If you’re not using ML for reliability, you’re playing checkers in a chess tournament.
 - The future of reliability is proactive, predictive, and ruthless about business value. Get there or get comfortable with losing.
 
+---
 ## Panel 1: Beyond Availability - The Multiple Dimensions of Reliability
 
 **Scene Description**: A strategic reliability planning session at the bank's technology headquarters. On a large digital whiteboard, Sofia is expanding the team's reliability framework beyond traditional metrics. A diagram shows "The Reliability Star" with five interconnected dimensions radiating from a central point: Availability, Latency, Throughput, Data Quality, and Correctness. For each dimension, specific banking examples are mapped: payment processing (needs high availability), trading platforms (require low latency), end-of-day batch processing (demands high throughput), account reconciliation (depends on data quality), and regulatory calculations (require correctness). Team members place sticky notes with recent incidents around the star, revealing how single-dimension monitoring missed critical customer impacts. The CTO looks intrigued as Sofia explains how their current reliability approach captures only a fraction of what matters to customers and regulators.

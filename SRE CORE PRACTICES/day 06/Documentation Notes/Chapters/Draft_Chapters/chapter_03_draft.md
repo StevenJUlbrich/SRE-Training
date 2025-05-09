@@ -4,6 +4,7 @@
 
 Welcome to the seven-layer burrito of SLI design—where most organizations drown in metrics and still manage to starve for real insight. This chapter peels back the layers of monitoring delusion: the dashboards that light up like Christmas trees while customers rage-tweet, the averages that hide your worst customers’ pain, the anti-patterns that lull your boss into a false sense of security, and the “improvements” that calcify into technical debt. If you’re still equating CPU graphs with service quality, congratulations: you’re part of the problem. We’re here to teach you how to slice through the noise, expose the real failures, and design SLIs that actually matter—because in banking, the cost of confusion isn’t just downtime; it’s headlines, lawsuits, and your job. Buckle up.
 
+---
 ## Learning Objectives
 
 - **Distinguish** signal from noise in metric selection, focusing on what actually impacts customers (not just what’s easy to measure).
@@ -14,6 +15,7 @@ Welcome to the seven-layer burrito of SLI design—where most organizations drow
 - **Integrate** synthetic and real user monitoring for a holistic, no-excuses view of service health.
 - **Continuously refine** SLIs based on real incidents and changing business realities—because static metrics are just another form of technical debt.
 
+---
 ## Key Takeaways
 
 - “Monitor everything” is not a strategy; it’s a recipe for missing the only metric that matters when the bank’s on fire.
@@ -27,6 +29,7 @@ Welcome to the seven-layer burrito of SLI design—where most organizations drow
 - Every anti-pattern you ignore is a future root cause analysis waiting to happen—except next time, you’ll have to explain it to the CEO.
 - In banking, poor metric selection doesn’t just cost money; it costs trust, compliance, and possibly your next performance review.
 
+---
 ## Panel 1: Signal and Noise - The Art of Metric Selection
 
 **Scene Description**: A banking operations center during a major incident. Multiple dashboards display dozens of graphs and alerts, all flashing red. Two teams of engineers are arguing about which metrics matter, pointing at different screens. In the corner, SRE lead Sofia quietly examines a single clear graph showing customer transaction success rate plummeting while other teams are distracted by system metrics. She's drawing a circle around this graph while crossing out several others. A junior engineer watches her with dawning understanding.

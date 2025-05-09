@@ -4,6 +4,7 @@
 
 Welcome to the SRE Hunger Games, Banking Edition. Here’s where dreams of clean, cloud-native reliability platforms come to die—or at least to be repeatedly mugged by COBOL mainframes, regulatory zealots, and process committees wielding change control spreadsheets like medieval weaponry. This chapter doesn’t sugarcoat the reality: implementing SLI/SLO platforms in banking is a game of chess with a brick wall. You’ll juggle decades-old tech, compliance mandates with the subtlety of a tax audit, and organizational inertia so dense it bends light. But if you want to turn reliability into something more than a buzzword on a board slide, and you enjoy war stories with your best practices, buckle up. We’re taking you from theory to the trenches—where dashboards lie, mainframes don’t play nice, and “quick wins” are always at someone else’s expense.
 
+---
 ## Learning Objectives
 
 - **Map** your entire, ugly banking ecosystem—from shiny microservices to mainframes that predate your first smartphone.
@@ -16,6 +17,7 @@ Welcome to the SRE Hunger Games, Banking Edition. Here’s where dreams of clean
 - **Choose** between building, buying, or cobbling together platforms—without stepping into vendor lock-in quicksand.
 - **Sequence** your implementation roadmap so you actually finish something (and don’t burn out your team or budget).
 
+---
 ## Key Takeaways
 
 - “Big bang” SLI/SLO rollouts in banks end like most big bangs: lots of noise, not much life left after.
@@ -31,6 +33,7 @@ Welcome to the SRE Hunger Games, Banking Edition. Here’s where dreams of clean
 
 This isn’t a chapter for the faint of heart—or anyone allergic to ugly truths. But if you want to make SRE work in banking, this is your field manual. Bring caffeine. Leave illusions at the door.
 
+---
 ## Panel 1: Implementation Strategy - From Theory to Banking Reality
 
 **Scene Description**: A strategic planning session for implementing SLI/SLO platforms across the bank's technology ecosystem. The room's walls display the diverse technology landscape they must incorporate: legacy mainframe systems running core banking functions, mid-tier Java applications handling business logic, modern cloud-native microservices for digital channels, and various third-party integrations. Sofia stands at a whiteboard outlining a pragmatic multi-phase approach, starting with a proof of concept on their payment processing service, then expanding to additional critical systems. Multiple implementation paths are mapped on a decision tree with different branches for various technology stacks. The CTO emphasizes the importance of showing early wins to build organizational momentum. On another wall, a "Platform Selection Criteria" chart evaluates different SLI/SLO tools against banking-specific requirements: compliance capabilities, security certifications, mainframe compatibility, and change management integration. Team leads from different technology domains express both excitement and concerns about implementing reliability measurement in their areas.

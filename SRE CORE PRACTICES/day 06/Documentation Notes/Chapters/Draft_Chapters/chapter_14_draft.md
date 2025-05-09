@@ -4,6 +4,7 @@
 
 Welcome to the twisted funhouse of financial system reliability, where your favorite web-scale SRE playbooks go to die. Forget everything you learned at the last unicorn startup—here, a single “oops” can vaporize millions, trigger regulatory SWAT teams, and send your CEO to a congressional hearing. This chapter rips the rose-tinted glasses off SREs and throws them into the meat grinder of banking reality: ancient mainframes duct-taped to microservices, global transactions ricocheting through a Rube Goldberg maze of time zones, and regulatory demands that make GDPR look like a polite suggestion. If you think reliability is just about five nines, buckle up—here, it’s about perfect reconciliation, forensic audit trails, and not causing the next financial crisis. Ready to trade your chaos monkeys for actual accountability? Let’s get to work.
 
+---
 ## Learning Objectives
 
 - **Identify** the non-negotiable reliability requirements unique to financial systems (spoiler: "eventual consistency" is a dirty word here).
@@ -16,6 +17,7 @@ Welcome to the twisted funhouse of financial system reliability, where your favo
 - **Build** global reliability models that survive time zones, market hours, and regulatory patchwork.
 - **Steer** long-term modernization without causing the next banking apocalypse.
 
+---
 ## Key Takeaways
 
 - “Move fast and break things” is career suicide in banking. Move smart, reconcile everything, and bring receipts.
@@ -29,6 +31,7 @@ Welcome to the twisted funhouse of financial system reliability, where your favo
 - In financial SRE, “good enough” never is. The only thing more expensive than over-engineering is an under-engineered incident.
 - If you’re not measuring, monitoring, and reconciling everything—everywhere, always—someone else (a regulator, a hacker, or a customer) will do it for you. And you won’t like the results.
 
+---
 ## Panel 1: The Unique Reliability Landscape of Financial Systems
 
 **Scene Description**: An architecture review session for the bank's core transaction processing ecosystem. Wall-sized diagrams reveal the extraordinary complexity of their financial infrastructure: decades-old mainframe systems interconnected with modern microservices, batch processes linked to real-time APIs, multiple redundant data centers, specialized financial messaging networks, and intricate integration with external market participants. Sofia highlights the unique reliability challenges this environment presents. Key regulatory requirements are annotated throughout the architecture, showing where financial compliance demands specific reliability controls. The team reviews a "Reliability Constraint Framework" that maps distinctive financial system characteristics: absolute transaction integrity requirements, strict reconciliation needs, complex transaction states, regulatory reporting obligations, and operation across multiple global time zones. Recently hired SRE engineers with experience from tech companies look slightly overwhelmed as they contrast this environment with previous web-scale systems they've managed. A senior architect explains how financial reliability differs fundamentally from many other industries, requiring specialized approaches beyond standard SRE practices.

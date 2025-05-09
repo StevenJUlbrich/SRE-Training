@@ -4,6 +4,7 @@
 
 Welcome to the SLO engineering boot camp, where “reliability” isn’t a sad checkbox at the end of your requirements doc—it’s the main event. This chapter drags reliability out from the janitor’s closet and onto the stage as a product feature, where it belongs. You’ll see why treating reliability as a technical afterthought is the fast lane to customer rage, regulatory slaps, and million-dollar reworks. We’ll slice up SLOs, expose the math behind failure, and laugh at the idea that you can bolt on resilience at the end. Expect tales of banks who learned the hard way that “we’ll fix reliability later” translates to “get ready to hemorrhage users and cash.” By the end, you’ll have the tools (and scars) to make reliability the backbone of your architecture, planning, and org culture—whether the business likes it or not.
 
+---
 ## Learning Objectives
 
 - **Adopt** the product owner mindset to treat reliability as a first-class feature, not an after-hours cleanup job.
@@ -14,6 +15,7 @@ Welcome to the SLO engineering boot camp, where “reliability” isn’t a sad 
 - **Engineer** architectures that are built to hit SLOs, not just impress at conference talks.
 - **Institutionalize** SLO governance so reliability survives reorgs, audits, and the next crop of product managers.
 
+---
 ## Key Takeaways
 
 - Reliability ignored at feature planning is reliability that will burn you in production—publicly, expensively, and repeatedly.
@@ -27,6 +29,7 @@ Welcome to the SLO engineering boot camp, where “reliability” isn’t a sad 
 - If your SLO process can’t survive a regulator or an angry CFO, it’s not real. Fix it before they show up.
 - In banking, unreliability doesn’t just kill trust—it kills revenue, market share, and careers. Treat SLOs as existential, because they are.
 
+---
 ## Panel 1: Reliability as a Feature - The Product Owner Mindset
 
 **Scene Description**: A product planning workshop for a new mobile banking platform. Instead of reliability being relegated to a technical appendix, it's prominently displayed on the main feature board alongside user-facing capabilities. Sofia and the product owner are co-presenting a "Reliability Specification" document with the same level of detail as functional feature specifications. On the wall, user journey maps show reliability requirements at each step: login (99.99%), account overview (99.9%), transaction history (99.5%), and payments (99.95%). Engineers are discussing how these requirements will shape architecture decisions. The product owner points to customer research data showing that reliability is the #1 factor in mobile banking satisfaction, ranked above new features.

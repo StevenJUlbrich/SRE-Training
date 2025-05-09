@@ -4,6 +4,7 @@
 
 Welcome to the SLO Hunger Games, where your service’s fate is determined by numbers, not wishful thinking. This chapter rips the rose-colored glasses off site reliability, exposing SLOs as the brutal, business-driven contracts they are—not the cuddly metrics dashboards you’ve been nursing. Forget vague “uptime” boasts and hand-wavey “good enough” arguments. Here, you’ll learn why “just monitor everything” is a recipe for regulatory fines, customer rage, and operational burnout. We’ll dissect SLOs from every angle: why they exist, what happens when you screw them up, and how to weaponize them for ruthless prioritization. Expect battle scars, not gold stars. If you want to stop firefighting and start engineering like your job—and your company’s reputation—depend on it, read on.
 
+---
 ## Learning Objectives
 
 By the end of this chapter, you will:
@@ -17,6 +18,7 @@ By the end of this chapter, you will:
 - **Sequence** a sane, phased SLO implementation—no more “all services, all at once, all on fire.”
 - **Navigate** the political minefield between what you *promise* (SLAs) and what you can *actually* deliver (SLOs).
 
+---
 ## Key Takeaways
 
 - SLOs aren’t “nice to have”—they’re your only defense against regulatory fines, angry customers, and executive blame games. No SLO? Prepare to play scapegoat.
@@ -34,6 +36,7 @@ ______________________________________________________________________
 
 Remember: SLOs aren’t your friend. They’re your boss, your auditor, and your last line of defense. Ignore them at your peril.
 
+---
 ## Panel 1: From Measurement to Objective - The SLI/SLO Relationship
 
 **Scene Description**: A strategic planning session in a modern bank's technology headquarters. On a large digital whiteboard, Sofia draws a clear progression from raw metrics to SLIs and then to SLOs. For their payment processing service, she shows how the SLI "99.2% of payments processed within 2 seconds" becomes the SLO "99.9% of payments will process within 2 seconds over a 28-day window." Team members look intently at the board as she highlights the gap between current performance and target. A colorful "reliability journey" timeline along the bottom of the board shows incremental targets over the next six months. The bank's CTO stands at the back of the room, nodding approvingly.

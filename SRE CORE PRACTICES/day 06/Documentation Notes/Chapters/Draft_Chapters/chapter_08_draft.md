@@ -4,6 +4,7 @@
 
 Let’s drop the fantasy that you can buy both a Ferrari and an armored tank with a bicycle budget. "Error Budgets: The Currency of Reliability" finally drags banking technology out of the dark ages of “perfect or bust” and into the modern, cutthroat world where reliability is a business lever, not a holy relic. If you think perfection is the gold standard, prepare to watch your innovation pipeline rust shut and your best engineers bail for competitors with fewer meetings and more sense. This chapter is a masterclass in weaponizing error budgets—turning reliability into a calculable, spendable, and, yes, occasionally burnable asset. We’ll expose the real trade-offs, the process deadweight, and the financial self-harm that comes from worshipping uptime at the altar of fear and inertia. Welcome to the real economics of SRE, where every nine you chase has a price—and sometimes, mediocrity is the strategic choice.
 
+---
 ## Learning Objectives
 
 - **Analyze** the "Reliability Paradox" and its consequences for banking tech strategy.
@@ -14,6 +15,7 @@ Let’s drop the fantasy that you can buy both a Ferrari and an armored tank wit
 - **Forecast** error budget trends to predict and avoid self-inflicted disasters, instead of just picking up the pieces.
 - **Quantify** the full economic impact of reliability, connecting uptime, innovation, velocity, and talent to cold, hard business outcomes.
 
+---
 ## Key Takeaways
 
 - Perfect reliability is a myth—and an expensive one. Every extra nine costs you a limb and delivers little but bragging rights.
@@ -27,6 +29,7 @@ Let’s drop the fantasy that you can buy both a Ferrari and an armored tank wit
 
 Now go spend your error budget like a boss, not a bureaucrat.
 
+---
 ## Panel 1: The Reliability Paradox - Perfect Is the Enemy of Good
 
 **Scene Description**: A tense executive meeting at a major bank. On one side of the conference table, the head of digital banking argues passionately for accelerating feature releases to compete with fintech challengers. On the other side, the CIO emphasizes the risks of moving too quickly, pointing to a recent mobile banking outage that affected thousands of customers. Between them stands Sofia, presenting a slide titled "The Reliability Paradox." It shows two diverging lines: as reliability approaches 100%, both the cost and time required increase exponentially while customer-perceived value plateaus. She highlights a "sweet spot" on the graph, suggesting that aiming for perfect reliability actually harms the bank's competitive position. Around the room, executives look intrigued as Sofia introduces the concept of "acceptable imperfection" as the key to balancing innovation and stability.

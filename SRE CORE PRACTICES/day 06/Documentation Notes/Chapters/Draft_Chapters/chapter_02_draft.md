@@ -4,6 +4,7 @@
 
 Welcome to the brutal reality of measuring what matters—where your “green” dashboards mean nothing if your customers are seeing red. This chapter is your crash course in Service-Level Indicators (SLIs): the difference between actually running a reliable, customer-focused banking platform and playing whack-a-mole with meaningless server metrics. Think of SLIs as the lie detector for your technical self-delusion. We’ll shred the old habits of watching CPU graphs while your customers rage-quit over failed payments. You’ll learn how to cut through the noise, pick metrics that actually matter, and stop embarrassing yourself (and your business) in front of the CIO. Spoiler: If your only metric is “it’s up,” you’re already losing money, customers, and regulatory goodwill. Let’s fix that.
 
+---
 ## Learning Objectives
 
 - **Identify** what constitutes a meaningful SLI from the user’s perspective (not your server’s feelings).
@@ -14,6 +15,7 @@ Welcome to the brutal reality of measuring what matters—where your “green”
 - **Implement** black-box and white-box monitoring so you catch failures before your customers do—or your regulator calls.
 - **Prioritize** and **rationalize** SLIs, focusing on coverage, precision, and usefulness instead of metric hoarding.
 
+---
 ## Key Takeaways
 
 - “Healthy” infrastructure metrics mean squat if your customers can’t make a payment. Measure outcomes, not internal comfort food.
@@ -26,6 +28,7 @@ Welcome to the brutal reality of measuring what matters—where your “green”
 - Bad SLIs don’t just waste engineering time—they lose customers, revenue, and regulatory credibility. You might as well set your budget on fire.
 - Every SLI you select is a contract with the business and your customers. Don’t write checks your metrics can’t cash.
 
+---
 ## Panel 1: The User Perspective - Defining Service Through Customer Eyes
 
 **Scene Description**: A diverse group of banking customers stands in front of ATMs and mobile banking interfaces, with thought bubbles showing what they care about: "Will my payment arrive on time?", "How fast will my transfer complete?", "Can I access my account balance right now?", "Will my trading order execute at the price I see?" Behind them, oblivious to these concerns, IT engineers are focused on server metrics on their laptops. SRE Jamila stands between the two groups, sketching a bridge on a transparent board, connecting customer experiences to technical metrics.

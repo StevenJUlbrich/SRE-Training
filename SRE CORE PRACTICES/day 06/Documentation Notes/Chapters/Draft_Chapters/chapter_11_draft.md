@@ -4,6 +4,7 @@
 
 Welcome to the bank boardroom, where reliability meets capitalism and nobody leaves with their illusions intact. This chapter rips off the Band-Aid and exposes the economic guts of reliability engineering—no more hiding behind “nines” or sacred uptime cows. Here, SREs become business assassins, armed with ROI models, downtime cost calculators, and a sixth sense for sniffing out wasted investment. You’ll learn to turn reliability from a cost center everyone loves to ignore into a strategic weapon that slices through budget politics, compliance nightmares, and the fever dreams of overzealous engineers. If you’re still talking about reliability in pure tech jargon, buckle up: we’re rewriting the script in dollars, risk, and competitive advantage. In banking, reliability isn’t just survival—it’s the difference between dominating the market and writing public apology letters.
 
+---
 ## Learning Objectives
 
 - **Translate** technical reliability metrics into blunt business outcomes executives actually care about.
@@ -14,6 +15,7 @@ Welcome to the bank boardroom, where reliability meets capitalism and nobody lea
 - **Integrate** regulatory requirements into reliability economics (before compliance comes knocking with a fine).
 - **Build** multi-dimensional financial frameworks showing how reliability enables, limits, or torpedoes business strategy.
 
+---
 ## Key Takeaways
 
 - The “perfect reliability” fantasy is a budget black hole. Hunt the sweet spot where investment actually pays off.
@@ -31,6 +33,7 @@ ______________________________________________________________________
 
 This chapter isn’t here to make you feel good. It’s here to help you survive—and thrive—by making reliability pay for itself, in language even your most cynical executive can’t ignore.
 
+---
 ## Panel 1: The Business Case for Reliability - Moving Beyond Technical Metrics
 
 **Scene Description**: A tense executive budget meeting at a major bank. On one side of the conference table, the head of digital banking argues passionately for accelerating feature releases to compete with fintech challengers. On the other side, the CIO emphasizes the risks of moving too quickly, pointing to a recent mobile banking outage that affected thousands of customers. Between them stands Sofia, presenting a slide titled "The Reliability Paradox." It shows two diverging lines: as reliability approaches 100%, both the cost and time required increase exponentially while customer-perceived value plateaus. She highlights a "sweet spot" on the graph, suggesting that aiming for perfect reliability actually harms the bank's competitive position. Around the room, executives look intrigued as Sofia introduces the concept of "acceptable imperfection" as the key to balancing innovation and stability.

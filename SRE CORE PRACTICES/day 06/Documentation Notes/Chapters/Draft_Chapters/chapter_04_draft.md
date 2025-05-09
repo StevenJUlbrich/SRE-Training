@@ -4,6 +4,7 @@
 
 Welcome to the bloody battlefield where SLI theory meets the cold, unforgiving reality of banking systems. This chapter doesn’t coddle you with hand-wavy platitudes or one-size-fits-all checklists. Instead, it rips the Band-Aid off the messy, high-stakes business of implementing Service Level Indicators that actually matter. Forget metrics theater and dashboards nobody reads—here, you’ll learn how to build SLIs that survive regulatory audits, market surges, and the ego trips of every stakeholder in your org chart. If you’re here for easy answers or “best practices” that ignore context, close the tab. If you want to stop wasting money on dashboards, avoid regulatory nightmares, and rescue your business from metric spaghetti, keep reading. You’ll need a thick skin, a sharp mind, and a healthy distrust of anyone who says, “just monitor everything.”
 
+---
 ## Learning Objectives
 
 - **Apply** a structured SLI implementation framework (the “canvas”) to avoid ad-hoc metric chaos and cover what actually matters.
@@ -14,6 +15,7 @@ Welcome to the bloody battlefield where SLI theory meets the cold, unforgiving r
 - **Design** dashboards that tell humans (not just machines) what matters, tailored for engineers, ops, business, and execs—because not everyone reads JSON.
 - **Establish** a lifecycle management regime for SLIs so your metrics don’t rot, multiply, or betray you mid-incident.
 
+---
 ## Key Takeaways
 
 - “More metrics” is not a strategy. It’s a tax on your sanity and your cloud bill. Focus on what moves the business needle.
@@ -27,6 +29,7 @@ Welcome to the bloody battlefield where SLI theory meets the cold, unforgiving r
 - The price of sloppy SLI implementation? Millions in losses, furious customers, regulatory pain, and a permanent place on the incident review wall of shame.
 - The reward for getting it right? Faster incident response, fewer outages, happier customers, and a business that trusts its tech. Choose wisely.
 
+---
 ## Panel 1: The SLI Implementation Canvas - A Structured Approach
 
 **Scene Description**: A diverse group of engineers is gathered around a large whiteboard structured like a canvas with sections labeled: "User Journeys," "Critical Capabilities," "Data Sources," "Instrumentation Points," "Collection Methods," and "Visualization." Sofia leads the session, filling in a template for a payment processing service SLI. Team members from different specialties—development, operations, product management, and business analysis—contribute insights to different sections. Colorful sticky notes cluster in each area as they build a comprehensive implementation plan. A "Banking Payment SLI Canvas" document template is visible on a nearby screen.

@@ -4,6 +4,7 @@
 
 Welcome to the SLO-based alerting chapter: a detailed autopsy of everything broken about traditional monitoring, and a practical blueprint for escaping your current alert hell. If you’ve ever felt like your monitoring system was designed by a sadistic AI intent on flooding your inbox at 3 a.m. with “Disk 85% full” and “CPU > 80%” (spoiler: it was), you’re not alone. Here, we torch threshold-based noise, expose how it quietly bankrupts your business and burns out your ops teams, and replace it with a ruthless focus on what actually matters: preventing customer impact. SLO-based alerting isn’t just a technical upgrade — it’s a total shift in mindset, from treating symptoms to fixing root cause, from reactive chaff to predictive signal. You’ll learn how to silence the blaring klaxon of false positives, turn “alert fatigue” into a four-letter word, and align your technical priorities with the things that keep your CFO awake at night. If you’re ready to stop being a human spam filter for your monitoring system and start being the strategic reliability partner your business desperately needs, read on.
 
+---
 ## Learning Objectives
 
 - **Diagnose** alert fatigue and quantify its operational and business fallout using real-world evidence.
@@ -15,6 +16,7 @@ Welcome to the SLO-based alerting chapter: a detailed autopsy of everything brok
 - **Leverage** machine learning and predictive analytics to move from firefighting to proactive reliability management.
 - **Establish** governance, playbooks, and feedback loops that keep your alerting system from devolving back into chaos.
 
+---
 ## Key Takeaways
 
 - Drowning in alerts is not a badge of honor; it’s a symptom of a broken system that’s actively costing your business money, customers, and staff.
@@ -29,6 +31,7 @@ Welcome to the SLO-based alerting chapter: a detailed autopsy of everything brok
 - Alerting is not fire-and-forget. If you’re not reviewing, tuning, and justifying every alert regularly, you’re only one incident away from total operational entropy.
 - In the end, your alerting system should serve your engineers, your customers, and your bottom line. Anything less is just technical theater.
 
+---
 ## Panel 1: The Alert Fatigue Crisis - When Monitoring Becomes Noise
 
 **Scene Description**: A dimly lit operations center at 3 AM. Several bleary-eyed engineers stare at screens filled with dozens of flashing red alerts. Most are labeled with technical metrics: "CPU > 80%", "Disk space 85% full", "Connection count high". The engineers look exhausted and overwhelmed. One wearily dismisses several alerts without investigation, muttering "Just the usual false alarms." Meanwhile, a critical customer-impacting issue—a payment gateway failure—is buried among the noise, its alert indistinguishable from the less important notifications. On a statistics board, numbers reveal the harsh reality: 200+ daily alerts, 95% requiring no action, and an average of 12 minutes to determine if an alert matters. A clock on the wall shows this is the third night shift this week for the team.

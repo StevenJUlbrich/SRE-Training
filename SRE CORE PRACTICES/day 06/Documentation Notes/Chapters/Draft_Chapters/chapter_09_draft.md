@@ -4,6 +4,7 @@
 
 Welcome to the graveyard of good intentions: Error Budget Policies. If you think SLO dashboards and error budgets alone will drag your bank’s reliability out of the gutter, congratulations—you’ve earned the right to watch your metrics become zombie data. This chapter rips the band-aid off the “measure, ignore, repeat” loop and hammers home the brutal truth: reliability doesn’t improve until you turn error budgets into hard policies, enforce them with the ruthlessness of a loan shark, and treat exceptions like fraud attempts. We’ll dissect the anatomy of failure in large, slow-moving orgs and show you how to operationalize error budgets so they actually bite—turning wishful thinking into executive action, credible governance, and the kind of reliability regulators won’t laugh at. Ready to turn your error budget from a wallflower into a bouncer? Read on.
 
+---
 ## Learning Objectives
 
 - **Design** formal error budget policies that connect measurement to mandatory action, not just pretty dashboards.
@@ -14,6 +15,7 @@ Welcome to the graveyard of good intentions: Error Budget Policies. If you think
 - **Automate** policy enforcement so your guidelines become guardrails—unbreakable and auditable, not subject to managerial mood swings.
 - **Continuously improve** policies based on real-world data, not wishful thinking, so your reliability governance evolves instead of fossilizing.
 
+---
 ## Key Takeaways
 
 - Error budgets without enforceable policies are just “management theater”—everyone claps, nobody improves.
@@ -29,6 +31,7 @@ Welcome to the graveyard of good intentions: Error Budget Policies. If you think
 
 Now get out there and make your error budget policy something to fear, not just admire.
 
+---
 ## Panel 1: From Theory to Practice - Operationalizing Error Budgets
 
 **Scene Description**: A technology governance meeting at a major bank where leaders are confronting a recurring problem. On a large display, charts show that despite having error budgets in place for six months, reliability hasn't significantly improved. The data reveals a troubling pattern: teams consistently exceed their budgets with few consequences, essentially treating them as informational rather than actionable. Frustration is visible as the CTO questions the value of their error budget implementation. Sofia stands at the front of the room presenting a new approach titled "Error Budget Policies." She contrasts their current "measurement-only" model with a comprehensive framework showing clear decision thresholds, automated enforcement mechanisms, and a governance structure. On a whiteboard, she lists several recent incidents and demonstrates how formal policies would have changed the outcomes through earlier intervention and more structured responses.
