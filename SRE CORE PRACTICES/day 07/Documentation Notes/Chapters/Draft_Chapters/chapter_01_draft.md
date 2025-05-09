@@ -4,6 +4,7 @@
 
 Welcome to the brutal reality of modern SRE: your dashboards are lying, your “root cause” is a fairy tale, and your company’s next million-dollar incident will be detected by a customer tweet before it ever glows red on your NOC wall. This chapter rips apart the cozy delusions of traditional monitoring and drags you—kicking and screaming—into the high-stakes world of evidence-based incident response. We don’t care how green your tiles are; if your customers can’t move money or log in, your “all clear” is a hallucination. This isn’t a gentle mindset shift—it’s a hostile takeover. We’ll show you how to stop worshipping at the altar of component health, break your addiction to hero engineers, and start treating incidents as inevitable, learnable, and—most importantly—preventable. If you want a pat on the back for your uptime, look elsewhere. If you want an unvarnished guide to saving your business from the next silent disaster, keep reading.
 
+---
 ## Learning Objectives
 
 - **Recognize** and demolish the “Green Wall Fallacy” by validating service health beyond dashboards.
@@ -14,6 +15,7 @@ Welcome to the brutal reality of modern SRE: your dashboards are lying, your “
 - **Embed** a relentless feedback loop that turns every outage into a reliability upgrade.
 - **Measure** what actually matters: customer experience, not just component metrics.
 
+---
 ## Key Takeaways
 
 - “All green” dashboards are security blankets for the naive—trust, but verify with real transactions or get blindsided.
@@ -28,6 +30,7 @@ Welcome to the brutal reality of modern SRE: your dashboards are lying, your “
 
 You wanted irreverence, wit, and zero sugarcoating. There it is—now go fix your monitoring before your next “green” outage.
 
+---
 ## Panel 1: The Green Wall Fallacy
 
 **Scene Description**: A bleary-eyed SRE is jolted awake at 2:57 AM by his pager. He frantically checks his laptop, where a wall of green dashboard tiles contradicts the alert. In the background, a phone rings insistently as customer reports pour in. Katherine hovers between trusting his dashboard or investigating further, illustrating the critical moment of decision between monitoring mindset and incident response mindset.

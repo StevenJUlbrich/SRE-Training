@@ -6,6 +6,7 @@ Welcome to the postmortem autopsy, where we dissect not just bodies, but entire 
 
 This chapter rips apart the myth of “root cause” and exposes why scapegoating junior engineers is a surefire way to sabotage reliability and drive away talent. We’ll drag your sacred cows—like “human error” and “who broke prod”—into the light, torch them, and show you how real SREs convert incidents into actionable intelligence (and maybe regulatory gold stars). If you want a culture where mistakes are hidden, innovation is dead, and the regulators are sharpening their knives, skip this chapter. Everyone else: sharpen your wits and prepare to make your organization uncomfortably accountable.
 
+---
 ## Learning Objectives
 
 - **Recognize** blame culture for the productivity and morale dumpster fire it is.
@@ -16,6 +17,7 @@ This chapter rips apart the myth of “root cause” and exposes why scapegoatin
 - **Build** a learning culture where psychological safety isn’t just lip service, but a force multiplier for reliability.
 - **Integrate** regulatory compliance into your postmortem process so the auditors leave impressed instead of furious.
 
+---
 ## Key Takeaways
 
 - The phrase “human error” is just corporate-speak for “I stopped thinking and started blaming.” If that’s your root cause, your system’s real problem is leadership.
@@ -31,6 +33,7 @@ This chapter rips apart the myth of “root cause” and exposes why scapegoatin
 
 Welcome to the blameless postmortem: check your ego and your pitchfork at the door.
 
+---
 ## Panel 1: The Blame Game Fallacy
 
 **Scene Description**: A tense conference room where team members sit around a table, visibly uncomfortable. A senior manager points accusingly at a junior engineer who shrinks in their chair. Other team members avoid eye contact, while a digital dashboard on the wall shows a graph of a major service outage that affected thousands of banking customers. A whiteboard in the background has "ROOT CAUSE: HUMAN ERROR" written in bold red letters. Through the conference room's glass walls, we can see other team members whispering to each other, appearing relieved they weren't called to this meeting.

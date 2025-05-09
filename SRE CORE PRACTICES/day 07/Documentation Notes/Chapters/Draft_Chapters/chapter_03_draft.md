@@ -4,6 +4,7 @@
 
 Welcome to the SRE house of horrors: Alert Design and Initial Response. Picture this—2:15 AM, a rookie SRE drowning in a relentless tsunami of red notifications while the banking world teeters on the brink of chaos. This chapter takes you on a guided tour through the battleground of alert storms, meaningless metrics, and the fine art of not missing the multi-million-dollar outage hiding behind a "green" dashboard. Forget feel-good theory—this is about building a fortress of actionable alerts, slashing through noise, and turning panicked firefighting into cold, methodical incident triage. If your current alerting strategy is “let’s hope for the best and sort it out later,” buckle up. We’re about to show you how to build systems that don’t just shout—they actually tell you where to aim the fire extinguisher.
 
+---
 ## Learning Objectives
 
 - **Diagnose** alert fatigue and alert storms, and **map** their real-world impact on banking operations.
@@ -16,6 +17,7 @@ Welcome to the SRE house of horrors: Alert Design and Initial Response. Picture 
 - **Document** and **communicate** initial incident assessments to prevent siloed confusion.
 - **Automate** repetitive remediation safely, with self-healing systems that know when to call for backup.
 
+---
 ## Key Takeaways
 
 - You’re not paid to acknowledge 30 alerts at 2 AM—**fix your alert design or keep your résumé updated**.
@@ -33,6 +35,7 @@ Welcome to the SRE house of horrors: Alert Design and Initial Response. Picture 
 
 There you go: brutal, practical, and guaranteed to make an SRE mutter “finally, someone gets it.”
 
+---
 ## Panel 1: The Midnight Alert Avalanche
 
 **Scene Description**: A banking operations center at 2:15 AM. Hector, a new SRE transitioning from production support, sits alone at a monitoring station surrounded by multiple screens. His phone buzzes repeatedly with alerts. The screens show a dashboard for a payment processing system with multiple red indicators. Hector looks overwhelmed, staring at dozens of simultaneous alerts, unsure which ones matter. His expression shows panic as he scrolls through the flood of notifications.

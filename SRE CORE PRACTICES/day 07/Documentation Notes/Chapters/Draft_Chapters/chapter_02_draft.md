@@ -4,6 +4,7 @@
 
 Welcome to the autopsy table of banking incidents—where we slice open the mess, poke at the guts, and map out exactly why your "minor" blip cost the bank a few million and a regulatory migraine. This chapter isn’t some academic snooze-fest about theoretical outages. Here, you’ll crawl through the battlefield of banking SRE, where misclassifying an incident is like calling a heart attack a mild cough, and failing to map transaction flows is the equivalent of flying blind in a hurricane. We’re not just talking logs and metrics—we’re talking business carnage, stakeholder freak-outs, and regulatory wolves at the door. If you’re ready to turn incident chaos into actionable, business-aligned SRE muscle, read on. If you’d rather keep firefighting the same old way, good luck—hope you like 3AM escalations and awkward postmortems.
 
+---
 ## Learning Objectives
 
 By the end of this chapter, you’ll be able to:
@@ -16,6 +17,7 @@ By the end of this chapter, you’ll be able to:
 - **Map** stakeholder impacts so you don’t leave customers, regulators, or internal teams flailing in the dark.
 - **Identify** and **leverage** incident archetypes, so you stop reinventing the wheel every time the same flavor of disaster strikes.
 
+---
 ## Key Takeaways
 
 - Half-baked incident classification is financial roulette—get it wrong, and you’re bleeding cash, customers, or compliance points.
@@ -28,6 +30,7 @@ By the end of this chapter, you’ll be able to:
 - SRE isn’t about fixing what’s broken—it’s about preventing tomorrow’s headlines and next quarter’s audit horror stories.
 - If you think any of this is “just extra process,” you’re already losing the game.
 
+---
 ## Panel 1: The Severity Spectrum - Classifying Banking Incidents
 
 **Scene Description**: A bustling incident response war room where multiple screens display different banking systems in various states of alert. In the center, a diverse team huddles around a large digital board with a color-coded incident classification matrix. One engineer points to a flashing red alert on a payment gateway while another adjusts the incident severity level based on a structured checklist. A clock prominently shows 09:37 AM, and a counter indicates "Customer Impact: 12,450 transactions affected."

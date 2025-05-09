@@ -4,6 +4,7 @@
 
 Welcome to the SRE equivalent of CSI: Banking Edition. This chapter is your crash course in not screwing up incident investigations—because in financial systems, wild guessing and “fix and hope” are good ways to set piles of money on fire (and invite the wrath of both customers and regulators). We’re talking about structured methodologies, not the “turn it off and on again” school of ops. You’ll learn to separate signal from noise, hunt down root causes with the scientific method, and preserve evidence like a digital Sherlock Holmes. Think of this as your toolkit for turning outages from expensive whodunits into routine, efficient crime scenes—complete with checklists, reproducible test cases, and zero tolerance for magical thinking. If you’re still treating symptoms or chasing vague log lines, buckle up. This is where SREs become fixers, not firefighters.
 
+---
 ## Learning Objectives
 
 - **Apply** the scientific method to incident investigation, moving from panic-driven fixes to evidence-based troubleshooting.
@@ -15,6 +16,7 @@ Welcome to the SRE equivalent of CSI: Banking Edition. This chapter is your cras
 - **Construct** minimal, reproducible test cases that turn mysterious outages into testable, fixable bugs.
 - **Deploy** playbooks, tools, and training to institutionalize structured investigation across your organization.
 
+---
 ## Key Takeaways
 
 - If you’re “fixing” symptoms without evidence, you’re not solving problems—you’re just buying time until the next, bigger incident (and possibly a regulatory slap).
@@ -28,6 +30,7 @@ Welcome to the SRE equivalent of CSI: Banking Edition. This chapter is your cras
 - Structured, methodical investigation is the only way to break the cycle of recurring incidents, spiraling costs, and customer rage.
 - “Just do what worked last time” is not a strategy. Build institutional memory and playbooks, or repeat your mistakes forever.
 
+---
 ## Panel 1: Beyond Symptoms - The Scientific Method for Incident Investigation
 
 **Scene Description**: In a dimly lit incident war room, Katherine stands at a whiteboard divided into columns labeled "Observations," "Hypotheses," "Tests," and "Results." Digital clocks showing different time zones hang on the wall, with one prominently displaying "Incident Duration: 47 minutes." Team members in various states of focus—some examining dashboards, others scrolling through logs—watch as Katherine draws connections between observed symptoms and possible causes, methodically crossing out disproven hypotheses while highlighting a promising lead about transaction database locks.

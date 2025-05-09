@@ -4,6 +4,7 @@
 
 Welcome to the financial services SLO rodeo, where uptime isn’t just a bragging number, it’s the difference between profit and public humiliation. This chapter drives a stake through the heart of vanity monitoring and forces you to stare down the cold reality: nobody cares about your CPU graphs when customers can’t move their money. Forget patting yourself on the back for five nines on the login page—if trades fail or payments die, you’re out millions and your regulator is on speed dial. We’ll show you how to replace your metric spam with SLOs that actually matter, spend error budgets like a ruthless CFO, and tier reliability so you stop gold-plating internal dashboards while your ATM network is on fire. This is SRE for adults: data-driven, business-aware, and allergic to pointless heroics. Read on if you’re ready to align your reliability investments with what actually matters—customer trust, revenue, and keeping the auditors at bay.
 
+---
 ## Learning Objectives
 
 - **Identify** customer-critical journeys in financial services and translate them into meaningful SLOs.
@@ -14,6 +15,7 @@ Welcome to the financial services SLO rodeo, where uptime isn’t just a braggin
 - **Implement** robust SLO measurement pipelines that don’t give you false confidence or regulatory migraines.
 - **Integrate** SLOs into business processes so reliability stops being an engineering hobby and starts driving real decisions.
 
+---
 ## Key Takeaways
 
 - Monitoring that misses customer pain is a career-limiting move. Your server can be “green” while your customers rage-quit and move their money elsewhere. Don’t be that bank.
@@ -27,6 +29,7 @@ Welcome to the financial services SLO rodeo, where uptime isn’t just a braggin
 
 In short: if your SLO program isn’t making your business safer, faster, and less expensive to run, you’re doing it wrong. Fix it before the market—or the regulator—fixes you.
 
+---
 ## Panel 1: Beyond Monitoring - The Promise of SLOs
 
 **Scene Description**: In a modern banking operations center, a team gathers around a large display showing a new dashboard. Unlike traditional monitoring screens filled with CPU graphs and server stats, this one prominently features customer-centric metrics with clear thresholds. A senior SRE points to a gauge labeled "Payment Success Rate: 99.95%" while explaining to a mix of operations staff and business stakeholders. The gauge shows a small portion in red labeled "Error Budget: 43% Remaining," with historical trends visible beneath it.

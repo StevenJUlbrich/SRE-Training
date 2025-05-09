@@ -4,6 +4,7 @@
 
 Welcome to the SRE equivalent of a banking boot camp, where “resilience” isn’t some hand-wavy buzzword—it’s the difference between operational survival and public humiliation. Forget green dashboards and feel-good uptime reports. This chapter is your guided tour through the seven deadly sins of banking fragility, and how to actually engineer for the inevitable: things breaking, people panicking, and regulators circling like sharks. If you think resilience is a feature you can bolt on after launch, prepare to have your illusions shattered—along with your next quarterly bonus if you get this wrong. Here, we’re not patching holes after the ship springs a leak. We’re building ships that can take a torpedo, stay afloat, and still deliver champagne to the VIP lounge. Welcome to resilience the way only SREs can deliver: blunt, empirical, and always business-critical.
 
+---
 ## Learning Objectives
 
 - **Diagnose** systemic fragility in banking systems using evidence-based analysis instead of post-mortem bingo.
@@ -15,6 +16,7 @@ Welcome to the SRE equivalent of a banking boot camp, where “resilience” isn
 - **Cultivate** a blameless, learning-driven culture that makes near-misses more valuable than “heroic” firefighting.
 - **Correlate** observability data with real business outcomes so you spot trouble before the CFO does.
 
+---
 ## Key Takeaways
 
 - Banking resilience is a blood sport, not a checkbox. If you’re still “green on the dashboards,” you’re probably green behind the ears.
@@ -31,6 +33,7 @@ Welcome to the SRE equivalent of a banking boot camp, where “resilience” isn
 
 Now, go apply this before your next outage makes the news.
 
+---
 ## Panel 1: Beyond Reactive Fixes - Designing for Resilience
 
 **Scene Description**: A diverse group of engineers is gathered in a modernized war room with interactive displays showing a bank's complex distributed system architecture. Instead of responding to an active incident, they're proactively analyzing a 3D visualization of transaction flows across various banking services. A senior SRE is pointing to potential failure points while development and infrastructure teams take notes. On one wall, a timeline shows past incidents with color-coded resilience improvements implemented after each one.
