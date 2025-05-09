@@ -2,7 +2,7 @@
 
 ______________________________________________________________________
 
-### Chapter Overview
+## Chapter Overview
 
 A banking outage never begins with flames on a dashboard. It starts in the quiet places — a teller noticing failed wire-transfer receipts, a queue lengthening in the background, a lone terminal log winking red and then rolling off the screen. In this chapter Hector Alvarez drags the learner cast through a failure born not of hardware, but of **invisibility**: a single configuration toggle that silenced every trace the system could have shouted. When observability disappears, blame becomes the loudest tool in the room.
 
@@ -116,7 +116,7 @@ A log without a `trace_id` is a postcard with no return address.
 
 ### 🚦 Applied Example
 
-```
+```ascii
 2025-04-30T08:19:12Z ERROR wire-transfer-svc[2388]: 
   message="NullPointerException"
   method="/wire"

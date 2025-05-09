@@ -26,7 +26,7 @@ If a log line can’t change an on-call decision, rotate it out or raise its sig
 
 ### 🚦 Applied Example
 
-```
+```text
 2025-05-01T02:14:32.002Z DEBUG  [payments] Handler entered; state=START
 ...
 2025-05-01T02:14:32.137Z ERROR  [payments] NullPointerException at DebitProcessor
@@ -92,7 +92,8 @@ If you can’t follow a single transaction through your logs in < 5 seconds, you
 
 ### 🚦 Applied Example
 
-```
+```text
+
 INFO 2025-05-01T02:14:35Z  Debit OK amount=25000
 ```
 
@@ -216,7 +217,7 @@ Refactoring telemetry is code work: treat it with the same rigor—reviews, test
 
 **Before – log line:**
 
-```
+```text
 2025-05-01T02:26:11Z DEBUG  processed  ok  21ms
 ```
 

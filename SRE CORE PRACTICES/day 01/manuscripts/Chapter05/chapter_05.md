@@ -40,7 +40,7 @@ timeline
 
 ______________________________________________________________________
 
-## ### Panel 1 – Dashboard Chaos
+### Panel 1 – Dashboard Chaos
 
 #### Teaching Narrative
 
@@ -58,7 +58,7 @@ You feel the shift—a raw moment where everyone must admit they have *no idea* 
 
 ______________________________________________________________________
 
-## ### Panel 2 – The Blame Begins
+### Panel 2 – The Blame Begins
 
 #### Teaching Narrative
 
@@ -78,11 +78,11 @@ Wanjiru whispers to you, “If the network isn’t guilty, what is?” Your answ
 
 ![Panel 2 – The Blame Begins](images/ch5_panel2_blame_begins.png){width=800}
 
-*(voice widget already placed above per contract sequence)*
+(voice widget already placed above per contract sequence)
 
 ______________________________________________________________________
 
-## ### Panel 3 – The Five Sins
+### Panel 3 – The Five Sins
 
 #### Teaching Narrative
 
@@ -104,7 +104,7 @@ Learners stare at the cost column—each sin a ticking bomb.
 
 ______________________________________________________________________
 
-## ### Panel 4 – Sin #1: Ownerless Metrics
+### Panel 4 – Sin #1: Ownerless Metrics
 
 #### Teaching Narrative
 
@@ -128,7 +128,7 @@ Learners breathe—the first sin has a visible remedy.
 
 ______________________________________________________________________
 
-## ### Panel 5 – Sin #2: Orphaned Alerts
+### Panel 5 – Sin #2: Orphaned Alerts
 
 #### Teaching Narrative
 
@@ -138,10 +138,10 @@ Hector doesn’t flinch. “An alert without action is a loud opinion.” He ass
 
 Juana drafts a prototype index table:
 
-| Alert Name | Runbook URL | Last Review | Owner |
+| Alert Name               | Runbook URL                   | Last Review | Owner     |
 | ------------------------ | ----------------------------- | ----------- | --------- |
-| `atm_txn_5xx_rate` | **404** | – | Core Apps |
-| `ledger_rpc_latency_p99` | `/runbooks/ledger_latency.md` | 2025-04-02 | Core Apps |
+| `atm_txn_5xx_rate`       | **404**                       | –           | Core Apps |
+| `ledger_rpc_latency_p99` | `/runbooks/ledger_latency.md` | 2025-04-02  | Core Apps |
 
 Daniel scripts a linter to curl every URL, failing CI if status ≥ 400. Progress through automation—a quiet smile from Hector.
 
@@ -162,29 +162,29 @@ Generate a list of dead links, then open pull requests pairing each alert with a
 
 ![Panel 5 – Orphaned Alerts](images/ch5_panel5_orphaned_alerts.png){width=800}
 
-*(voice widgets appear later panels, satisfying placement rule)*
+(voice widgets appear later panels, satisfying placement rule)
 
 ______________________________________________________________________
 
-**Planning the visual narrative**
+>*Planning the visual narrative**
 
 I need to focus on ensuring certain elements are included in the panels, like "Logs That Lie," "Uptime ≠ Success," and "It's Always the Network." I should also make sure to follow the structure for the flow, placing voice widgets after image embeds. Panel 8 needs an "incident flashback" after the image, along with reflections and a closing reflection involving Hector. Finally, the external panels should be structured as an array with filenames, scene descriptions, and other specific details for each panel. Lastly, I still need to finalize the word count.
 
 Thought for 29 seconds
 
-## ### Panel 6 – Sin #3: Logs That Lie
+### Panel 6 – Sin #3: Logs That Lie
 
 #### Teaching Narrative
 
 **Timestamp 07 : 02.** Katherine’s Splunk console scrolls faster than his caffeine-twitching eyes can follow. The log channel `atm-gateway.prod` pumps out thirty-six **INFO** events per second—all boilerplate:
 
-```
+```text
 2025-05-06T12:02:14Z msg="handler complete" status=200 latency=4ms
 ```
 
 Yet customers are still walking away empty-handed. Katherine filters for `result=500` and gets only eight hits—useless, context-free lines:
 
-```
+```text
 2025-05-06T12:02:37Z txn-id=- result=500 msg="Internal error"
 ```
 
@@ -231,7 +231,7 @@ Katherine unpacks the JSON, pivots on `trace_id`, and finally renders an end-to-
 
 ______________________________________________________________________
 
-## ### Panel 7 – Sin #4: Uptime ≠ Success
+### Panel 7 – Sin #4: Uptime ≠ Success
 
 #### Teaching Narrative
 
@@ -276,17 +276,17 @@ Aisha feels a weight lift: numbers finally align with user pain.
 
 ______________________________________________________________________
 
-## ### Panel 8 – Sin #5: “It’s Always the Network” Syndrome
+### Panel 8 – Sin #5: “It’s Always the Network” Syndrome
 
 #### Teaching Narrative
 
 **Timestamp 08 : 25.** Daniel circulates a Slack thread claiming MPLS congestion near Milwaukee. Njeri requests traceroutes from three branch routers—latencies steady at **12 ms**, zero retransmits. She overlays **Error Budget Burn** by layer:
 
-| Layer | New Incidents (24h) | Confirmed Impact |
+| Layer       | New Incidents (24h) | Confirmed Impact |
 | ----------- | ------------------- | ---------------- |
-| Application | 7 | **Yes** |
-| Database | 2 | **Yes** |
-| Network | 0 | No |
+| Application | 7                   | **Yes**          |
+| Database    | 2                   | **Yes**          |
+| Network     | 0                   | No               |
 
 Evidence exonerates the cables. Nonetheless, SRE folklore holds that “it’s always DNS or the network.” Daniel apologizes, sheepish.
 
@@ -304,7 +304,7 @@ Hector nods. “Blame is cheap; proof costs curiosity.” He pins a laminated ch
 
 ______________________________________________________________________
 
-## ### Panel 9 – ATM Outage Replay
+### Panel 9 – ATM Outage Replay
 
 #### Teaching Narrative
 
@@ -330,13 +330,13 @@ sequenceDiagram
 
 Hector annotates each arrow with a red tag matching its sin. He overlays a second timeline mapping **Cost in Minutes**:
 
-| Sin | Delay Minutes | Stakeholder Impact |
+| Sin               | Delay Minutes | Stakeholder Impact           |
 | ----------------- | ------------- | ---------------------------- |
-| Ownerless Metrics | 56 | No owner to triage spike |
-| Orphaned Alerts | 68 | Pager w/ 404 slowed response |
-| Logs That Lie | 91 | Trace lost, blame diffused |
-| Uptime≠Success | 75 | Dashboard green-washes pain |
-| Blame Network | 90 | 4 engineers chasing ghosts |
+| Ownerless Metrics | 56            | No owner to triage spike     |
+| Orphaned Alerts   | 68            | Pager w/ 404 slowed response |
+| Logs That Lie     | 91            | Trace lost, blame diffused   |
+| Uptime≠Success    | 75            | Dashboard green-washes pain  |
+| Blame Network     | 90            | 4 engineers chasing ghosts   |
 
 Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees. Hector closes the diagram and turns: “Memorize these numbers; you’ll recite them to auditors.”
 
@@ -346,7 +346,7 @@ Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees.
 
 ______________________________________________________________________
 
-## ### Panel 10 – Lesson Locked In
+### Panel 10 – Lesson Locked In
 
 #### Teaching Narrative
 
