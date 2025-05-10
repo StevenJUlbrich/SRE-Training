@@ -20,7 +20,6 @@ By the end of this chapter, readers will be able to:
 
 ---
 
-
 ## Key Takeaways
 
 - **Averages Lie, Percentiles Tell the Truth**: If your latency looks good on average, congratulations—you’re helping no one. The pain lives in the tail.
@@ -32,7 +31,6 @@ By the end of this chapter, readers will be able to:
 - **Early Warnings Save Millions**: Waiting for red alerts is amateur hour. Build in the whispers before the scream.
 
 ---
-
 
 ## Panel 1: The Deceptive Average (Latency)
 
