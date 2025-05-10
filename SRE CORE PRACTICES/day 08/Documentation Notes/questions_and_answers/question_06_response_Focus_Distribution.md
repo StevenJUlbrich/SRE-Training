@@ -182,7 +182,7 @@ To ensure we consistently maintain the proper 85/15 balance throughout the curri
 
 ### Example Panel With Balanced Allocation
 
-**Panel: "The Cardinality Explosion" (Foundation Level)**
+## Panel: "The Cardinality Explosion" (Foundation Level)
 
 ### Scene Description
 

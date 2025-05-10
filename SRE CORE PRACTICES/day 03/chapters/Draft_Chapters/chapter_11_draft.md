@@ -5,6 +5,7 @@
 Welcome to the brutal, data-driven world where your precious “five nines” are nothing more than comforting lies. This chapter rips the band-aid off legacy reliability metrics and exposes the soft underbelly of uptime: customer-impacting failures hiding behind green dashboards. We’re not here to pat you on the back for 99.95% availability while your users rage-tweet about failed transactions. Instead, we weaponize logs, error budgets, and SLOs to drag your reliability practice—kicking and screaming—out of the stone age. Like a bank finally discovering that “the system is up” doesn’t mean “the money moves,” you’ll learn to measure what matters, set targets that actually make sense, and balance the relentless march of features with the cold reality of risk. If you’re still counting HTTP 500s and calling it “customer experience,” prepare to be offended, enlightened, and, most importantly, equipped to fix what’s actually broken.
 
 ---
+
 ## Learning Objectives
 
 - **Distinguish** between vanity uptime metrics and metrics that reflect real customer outcomes.
@@ -19,6 +20,7 @@ Welcome to the brutal, data-driven world where your precious “five nines” ar
 - **Leverage** advanced ML-based prediction to catch reliability issues before they nuke your error budget (and your bonus).
 
 ---
+
 ## Key Takeaways
 
 - “99.9% uptime” is a bedtime story for executives—logs will show you the real horror show.
@@ -38,6 +40,7 @@ Welcome to the brutal, data-driven world where your precious “five nines” ar
 - Don’t bring a status page to a customer trust fight—bring logs, SLIs, and error budgets. Or just bring your resume.
 
 ---
+
 ## Panel 1: The Reliability Revolution - Moving Beyond Binary Uptime
 
 ### Scene Description
