@@ -33,7 +33,6 @@ ______________________________________________________________________
 - Measuring, reporting, and celebrating reliability as a first-class product outcome is how you get buy-in—otherwise, it’s just another invisible cost center.
 - In banking, every reliability misstep gets magnified: more money lost, more customers gone, more auditors sniffing around. Treat reliability as a feature, or the market will do it for you—permanently.
 
-______________________________________________________________________
 
 Now go forth and treat reliability like the profit-preserving, customer-saving, competitive weapon it actually is. Or keep rolling the dice—just don’t be surprised when your luck (and your uptime) runs out.
 

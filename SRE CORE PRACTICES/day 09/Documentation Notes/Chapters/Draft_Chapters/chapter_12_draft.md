@@ -6,7 +6,6 @@ Welcome to the resilience testing chapter for banking—where the stakes aren’
 
 ______________________________________________________________________
 
-______________________________________________________________________
 
 ## Learning Objectives
 
@@ -18,8 +17,6 @@ ______________________________________________________________________
 - **Automate** fault injection to move from “quarterly chaos theater” to continuous, meaningful resilience validation.
 - **Operationalize** chaos engineering to discover the unknown unknowns and make your systems stronger with every test.
 - **Measure** what matters: connect technical resilience to business impact, regulatory relief, and customer trust.
-
-______________________________________________________________________
 
 ______________________________________________________________________
 

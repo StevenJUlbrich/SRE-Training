@@ -32,7 +32,6 @@ ______________________________________________________________________
 - Ownership without evidence-based investigation is just blame, with more paperwork.
 - “We build it, we run it, we improve it” isn’t aspirational. It’s survival. If you want to keep your badge (and your bank’s reputation), act like it.
 
-______________________________________________________________________
 
 This isn’t a chapter for process tourists. It’s a playbook for SREs who want to sleep at night—and for leaders who know that “good enough” is a financial risk, not a strategy.
 

@@ -6,7 +6,6 @@ Welcome to the real world, where 99.99% uptime is just a fantasy your dashboards
 
 We’ll drag you through the carnage of real banking outages, show you how technical tunnel-vision costs millions, and teach you to weaponize SRE best practices that actually protect revenue, reputation, and your sanity. You’ll learn to map customer journeys, craft SLIs that matter, tie reliability to cold, hard cash, and finally shut up those “zero downtime” zealots with data-driven error budgets. Ready to stop being a victim of alert fatigue and start being a champion for your company’s bottom line? Good. Let’s get ruthless about reliability.
 
-______________________________________________________________________
 
 ______________________________________________________________________
 
@@ -20,8 +19,6 @@ ______________________________________________________________________
 - **Benchmark** reliability against competitors to expose market opportunities (and your own blind spots).
 - **Build** customer-centric alerting systems that cut through noise and focus your team on what matters: preventing customer exodus.
 - **Translate** reliability data into business language that gets executive buy-in (and budget) for SRE initiatives.
-
-______________________________________________________________________
 
 ______________________________________________________________________
 
@@ -41,7 +38,6 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-______________________________________________________________________
 
 ## Panel 1: Beyond Uptime - The Customer Experience Perspective
 
