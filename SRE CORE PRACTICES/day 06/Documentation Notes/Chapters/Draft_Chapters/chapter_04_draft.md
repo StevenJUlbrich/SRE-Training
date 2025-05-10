@@ -32,7 +32,9 @@ Welcome to the bloody battlefield where SLI theory meets the cold, unforgiving r
 ---
 ## Panel 1: The SLI Implementation Canvas - A Structured Approach
 
-**Scene Description**: A diverse group of engineers is gathered around a large whiteboard structured like a canvas with sections labeled: "User Journeys," "Critical Capabilities," "Data Sources," "Instrumentation Points," "Collection Methods," and "Visualization." Sofia leads the session, filling in a template for a payment processing service SLI. Team members from different specialties—development, operations, product management, and business analysis—contribute insights to different sections. Colorful sticky notes cluster in each area as they build a comprehensive implementation plan. A "Banking Payment SLI Canvas" document template is visible on a nearby screen.
+### Scene Description
+
+ A diverse group of engineers is gathered around a large whiteboard structured like a canvas with sections labeled: "User Journeys," "Critical Capabilities," "Data Sources," "Instrumentation Points," "Collection Methods," and "Visualization." Sofia leads the session, filling in a template for a payment processing service SLI. Team members from different specialties—development, operations, product management, and business analysis—contribute insights to different sections. Colorful sticky notes cluster in each area as they build a comprehensive implementation plan. A "Banking Payment SLI Canvas" document template is visible on a nearby screen.
 
 ### Teaching Narrative
 
@@ -102,7 +104,9 @@ To implement a structured SLI canvas in your banking environment:
 
 ## Panel 2: Data Source Selection - Finding the Right Signal
 
-**Scene Description**: An architecture review meeting showing a comprehensive diagram of a core banking platform. Engineers have mapped potential SLI data sources with color-coded tags: green for application logs, blue for API endpoints, yellow for database queries, purple for network monitoring. Raj is highlighting the tradeoffs between different sources, pointing to a recent incident where application logs missed a critical failure that was visible at the API gateway. A decision matrix on the wall helps evaluate each potential data source against criteria like "accuracy," "coverage," "collection overhead," and "retention period."
+### Scene Description
+
+ An architecture review meeting showing a comprehensive diagram of a core banking platform. Engineers have mapped potential SLI data sources with color-coded tags: green for application logs, blue for API endpoints, yellow for database queries, purple for network monitoring. Raj is highlighting the tradeoffs between different sources, pointing to a recent incident where application logs missed a critical failure that was visible at the API gateway. A decision matrix on the wall helps evaluate each potential data source against criteria like "accuracy," "coverage," "collection overhead," and "retention period."
 
 ### Teaching Narrative
 
@@ -176,7 +180,9 @@ To implement effective data source selection for your banking SLIs:
 
 ## Panel 3: The Instrumentation Hierarchy - From Custom Code to Platforms
 
-**Scene Description**: A comparative demonstration showing three different approaches to SLI implementation. One engineer shows custom instrumentation code embedded in a banking application, highlighting the precision but significant maintenance overhead. Another demonstrates an agent-based approach using OpenTelemetry collectors deployed across services. A third shows a platform solution with prebuilt banking-specific dashboards. On a large screen, Sofia compares the approaches with a matrix showing "Time to Implement," "Accuracy," "Maintenance Cost," and "Scalability." Different services in their architecture are color-coded based on which approach is most suitable for each component.
+### Scene Description
+
+ A comparative demonstration showing three different approaches to SLI implementation. One engineer shows custom instrumentation code embedded in a banking application, highlighting the precision but significant maintenance overhead. Another demonstrates an agent-based approach using OpenTelemetry collectors deployed across services. A third shows a platform solution with prebuilt banking-specific dashboards. On a large screen, Sofia compares the approaches with a matrix showing "Time to Implement," "Accuracy," "Maintenance Cost," and "Scalability." Different services in their architecture are color-coded based on which approach is most suitable for each component.
 
 ### Teaching Narrative
 
@@ -244,7 +250,9 @@ To implement an effective instrumentation hierarchy for your banking environment
 
 ## Panel 4: Collection Pipeline Design - Scaling for Banking Volumes
 
-**Scene Description**: An operations review meeting focused on a metrics pipeline handling millions of daily banking transactions. Engineers are examining a flow diagram showing how measurement data moves from source systems through collection, processing, storage, and finally to dashboards and alerts. Performance statistics are displayed at each stage. A recent incident timeline is highlighted, showing how the pipeline became overwhelmed during peak trading hours, causing metric delays and alert failures. The team is redesigning critical components, adding buffer capacity and redundancy at key points. On a monitoring screen, throughput tests validate the new design can handle 3x normal peak volume.
+### Scene Description
+
+ An operations review meeting focused on a metrics pipeline handling millions of daily banking transactions. Engineers are examining a flow diagram showing how measurement data moves from source systems through collection, processing, storage, and finally to dashboards and alerts. Performance statistics are displayed at each stage. A recent incident timeline is highlighted, showing how the pipeline became overwhelmed during peak trading hours, causing metric delays and alert failures. The team is redesigning critical components, adding buffer capacity and redundancy at key points. On a monitoring screen, throughput tests validate the new design can handle 3x normal peak volume.
 
 ### Teaching Narrative
 
@@ -318,7 +326,9 @@ To implement a scalable collection pipeline for your banking environment:
 
 ## Panel 5: Validation and Testing - Ensuring SLI Accuracy
 
-**Scene Description**: A controlled testing environment where the team is deliberately introducing failures into a test banking system. Screens show a "Chaos Testing Dashboard" with various failure scenarios being executed: API timeouts, database latency increases, authentication service failures. Beside each test case, the SLI response is displayed and evaluated. Engineer Alex marks some tests as "Detected Correctly" while flagging others with "False Negative" or "Delayed Detection." Jamila is updating SLI implementations based on the findings, adjusting thresholds and collection methods. A checklist titled "SLI Validation" tracks progress across different failure scenarios and banking services.
+### Scene Description
+
+ A controlled testing environment where the team is deliberately introducing failures into a test banking system. Screens show a "Chaos Testing Dashboard" with various failure scenarios being executed: API timeouts, database latency increases, authentication service failures. Beside each test case, the SLI response is displayed and evaluated. Engineer Alex marks some tests as "Detected Correctly" while flagging others with "False Negative" or "Delayed Detection." Jamila is updating SLI implementations based on the findings, adjusting thresholds and collection methods. A checklist titled "SLI Validation" tracks progress across different failure scenarios and banking services.
 
 ### Teaching Narrative
 
@@ -390,7 +400,9 @@ To implement effective SLI validation for your banking services:
 
 ## Panel 6: Making SLIs Accessible - Dashboards and Visualizations
 
-**Scene Description**: A dashboard design workshop where the team is creating visualizations for different audiences. A large display shows three dashboard versions of the same SLIs: a detailed technical dashboard with percentiles and error breakdowns for engineers, a service health summary for operations teams, and a business impact view for executives showing SLIs in terms of transaction values and customer experience. UX designer Maya demonstrates how the dashboards use consistent color schemes and terminology while adapting detail levels. On a whiteboard, principles like "Glanceability," "Progressive Disclosure," and "Business Context" are listed. Team members are using sticky notes to highlight the most important metrics for each audience.
+### Scene Description
+
+ A dashboard design workshop where the team is creating visualizations for different audiences. A large display shows three dashboard versions of the same SLIs: a detailed technical dashboard with percentiles and error breakdowns for engineers, a service health summary for operations teams, and a business impact view for executives showing SLIs in terms of transaction values and customer experience. UX designer Maya demonstrates how the dashboards use consistent color schemes and terminology while adapting detail levels. On a whiteboard, principles like "Glanceability," "Progressive Disclosure," and "Business Context" are listed. Team members are using sticky notes to highlight the most important metrics for each audience.
 
 ### Teaching Narrative
 
@@ -467,7 +479,9 @@ To create effective SLI visualizations for your banking environment:
 
 ## Panel 7: Lifecycle Management - Sustaining SLI Quality
 
-**Scene Description**: A quarterly SLI review meeting showing the evolution of key metrics over time. A timeline on the wall tracks major changes to their payment SLIs, annotated with system changes, incident learnings, and implementation improvements. Team members present before/after comparisons of SLIs that have been refined. A governance board titled "SLI Lifecycle Management" shows processes for proposing, testing, deploying, and retiring metrics. Raj highlights a deprecated SLI that's scheduled for removal, explaining how it's been replaced by more accurate measurements. A calendar shows regular review cycles for different service domains.
+### Scene Description
+
+ A quarterly SLI review meeting showing the evolution of key metrics over time. A timeline on the wall tracks major changes to their payment SLIs, annotated with system changes, incident learnings, and implementation improvements. Team members present before/after comparisons of SLIs that have been refined. A governance board titled "SLI Lifecycle Management" shows processes for proposing, testing, deploying, and retiring metrics. Raj highlights a deprecated SLI that's scheduled for removal, explaining how it's been replaced by more accurate measurements. A calendar shows regular review cycles for different service domains.
 
 ### Teaching Narrative
 

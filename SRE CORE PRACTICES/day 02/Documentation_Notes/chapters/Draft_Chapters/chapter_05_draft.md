@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: What Really Matters?
 
-**Scene Description**: Team brainstorming session defining critical service metrics for ATM network, transforming technical measurements into customer experience indicators. Visual shows whiteboard journey from raw metrics to meaningful indicators with team members evaluating different measurement options.
+### Scene Description
+
+ Team brainstorming session defining critical service metrics for ATM network, transforming technical measurements into customer experience indicators. Visual shows whiteboard journey from raw metrics to meaningful indicators with team members evaluating different measurement options.
 
 ### Teaching Narrative
 
@@ -76,7 +78,9 @@ For ATM networks, SLI alignment directly affects both customer satisfaction and 
 
 ## Panel 2: The Impossible Promise
 
-**Scene Description**: SRE negotiating with product team on realistic objectives for payment systems with reliability vs. innovation trade-offs visualized. Visual shows a graph plotting reliability percentage against cost/innovation impact with "five nines" target highlighted and questioned.
+### Scene Description
+
+ SRE negotiating with product team on realistic objectives for payment systems with reliability vs. innovation trade-offs visualized. Visual shows a graph plotting reliability percentage against cost/innovation impact with "five nines" target highlighted and questioned.
 
 ### Teaching Narrative
 
@@ -119,7 +123,9 @@ For payment systems, appropriate SLO calibration directly impacts both reliabili
 
 ## Panel 3: The Regulatory Review
 
-**Scene Description**: Meeting with compliance team about service guarantees, showing hierarchy diagram with internal SLOs supporting external SLAs and regulatory requirements. Visual illustrates how technical measurements support compliance obligations through a structured framework.
+### Scene Description
+
+ Meeting with compliance team about service guarantees, showing hierarchy diagram with internal SLOs supporting external SLAs and regulatory requirements. Visual illustrates how technical measurements support compliance obligations through a structured framework.
 
 ### Teaching Narrative
 
@@ -162,7 +168,9 @@ Misalignment between technical and regulatory metrics creates significant compli
 
 ## Panel 4: The Error Budget Conversation
 
-**Scene Description**: Development and operations teams reviewing error budget metrics dashboard showing remaining reliability margin and planned feature deployments. Visual displays consumption rate, historical patterns, and release risk assessments that guide decision-making.
+### Scene Description
+
+ Development and operations teams reviewing error budget metrics dashboard showing remaining reliability margin and planned feature deployments. Visual displays consumption rate, historical patterns, and release risk assessments that guide decision-making.
 
 ### Teaching Narrative
 
@@ -205,7 +213,9 @@ For mobile banking platforms, error budget metrics directly impact both reliabil
 
 ## Panel 5: The SLI Workshop
 
-**Scene Description**: Cross-functional team evaluating potential SLIs for a new wealth management platform using critical assessment framework. Visual shows structured evaluation process with candidate metrics being systematically assessed against customer impact, measurement feasibility, and business alignment.
+### Scene Description
+
+ Cross-functional team evaluating potential SLIs for a new wealth management platform using critical assessment framework. Visual shows structured evaluation process with candidate metrics being systematically assessed against customer impact, measurement feasibility, and business alignment.
 
 ### Teaching Narrative
 
@@ -250,7 +260,9 @@ For wealth management platforms, SLI selection directly impacts both customer sa
 
 ## Panel 6: The SLO Review
 
-**Scene Description**: Quarterly service review meeting showing performance metrics trends across critical banking services with adaptation recommendations. Visual displays historical performance versus objectives with seasonal patterns and changing customer expectations highlighted.
+### Scene Description
+
+ Quarterly service review meeting showing performance metrics trends across critical banking services with adaptation recommendations. Visual displays historical performance versus objectives with seasonal patterns and changing customer expectations highlighted.
 
 ### Teaching Narrative
 
@@ -294,7 +306,9 @@ For payment services, SLO alignment directly affects both customer satisfaction 
 
 ## Panel 7: The Dashboard Translation
 
-**Scene Description**: SRE team creating executive SLO dashboards that translate technical metrics into business impact visualizations. Visual shows transformation from technical performance charts to business-focused indicators that executives can immediately understand and act upon.
+### Scene Description
+
+ SRE team creating executive SLO dashboards that translate technical metrics into business impact visualizations. Visual shows transformation from technical performance charts to business-focused indicators that executives can immediately understand and act upon.
 
 ### Teaching Narrative
 

@@ -39,7 +39,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Aftermath - Understanding the Cost of Blame
 
-**Scene Description**: A tense conference room where a postmortem meeting is taking place after a major payment processing outage. Multiple team members sit around a table with defensive body language. In the center, a senior manager points accusingly at a visibly distressed engineer. On a screen behind them, a timeline shows a deployment followed by service degradation. Other engineers are looking down at their laptops or phones, clearly disengaged and avoiding eye contact. On a whiteboard, someone has written "WHO caused this?" with "ROOT CAUSE" underlined several times.
+### Scene Description
+
+ A tense conference room where a postmortem meeting is taking place after a major payment processing outage. Multiple team members sit around a table with defensive body language. In the center, a senior manager points accusingly at a visibly distressed engineer. On a screen behind them, a timeline shows a deployment followed by service degradation. Other engineers are looking down at their laptops or phones, clearly disengaged and avoiding eye contact. On a whiteboard, someone has written "WHO caused this?" with "ROOT CAUSE" underlined several times.
 
 ### Teaching Narrative
 
@@ -101,7 +103,9 @@ To begin transforming a blame culture in banking technology organizations:
 
 ## Panel 2: The Safe Container - Creating Psychological Safety
 
-**Scene Description**: A different postmortem meeting for a similar incident. The room has a collaborative atmosphere with engineers gathered around a digital whiteboard. A facilitator stands beside a visualization showing system interactions rather than a linear timeline. People are actively engaged, with one engineer explaining what they observed during the incident while others ask curious questions. On a screen, the words "What happened?" and "How did the system behave?" are displayed prominently. Sticky notes cover another wall with "contributing factors" rather than "root causes." A manager is nodding supportively as a junior engineer explains a decision they made during the incident.
+### Scene Description
+
+ A different postmortem meeting for a similar incident. The room has a collaborative atmosphere with engineers gathered around a digital whiteboard. A facilitator stands beside a visualization showing system interactions rather than a linear timeline. People are actively engaged, with one engineer explaining what they observed during the incident while others ask curious questions. On a screen, the words "What happened?" and "How did the system behave?" are displayed prominently. Sticky notes cover another wall with "contributing factors" rather than "root causes." A manager is nodding supportively as a junior engineer explains a decision they made during the incident.
 
 ### Teaching Narrative
 
@@ -165,7 +169,9 @@ To build psychological safety in banking technology teams:
 
 ## Panel 3: The Learning Mindset - Turning Incidents into Investments
 
-**Scene Description**: A large team room where engineers and business stakeholders are engaged in reviewing the findings from a recent incident. On digital displays around the room, different visualizations show system architecture, timeline events, and key learnings. A senior leader stands near a board titled "Action Items and Investments" where tasks are being categorized. One engineer is demonstrating a new automated test inspired by the incident, while another shows how monitoring has been enhanced. A product manager and engineer are discussing how to incorporate reliability improvements into the next sprint. The atmosphere is energetic and collaborative, like a workshop rather than a tribunal.
+### Scene Description
+
+ A large team room where engineers and business stakeholders are engaged in reviewing the findings from a recent incident. On digital displays around the room, different visualizations show system architecture, timeline events, and key learnings. A senior leader stands near a board titled "Action Items and Investments" where tasks are being categorized. One engineer is demonstrating a new automated test inspired by the incident, while another shows how monitoring has been enhanced. A product manager and engineer are discussing how to incorporate reliability improvements into the next sprint. The atmosphere is energetic and collaborative, like a workshop rather than a tribunal.
 
 ### Teaching Narrative
 
@@ -231,7 +237,9 @@ To transform incidents into learning investments in a banking environment:
 
 ## Panel 4: The Facilitated Retrospective - Structuring the Learning Process
 
-**Scene Description**: A structured postmortem session in progress with a clearly designated facilitator standing at a digital board. The facilitator is using a template with sections for timeline, contributing factors, and action items. Team members are contributing to a detailed timeline reconstruction showing system events, human actions, and communication points. The facilitator is noting questions that arose during the discussion in a separate area titled "What We Still Don't Know." A technical leader is carefully documenting surprising aspects of the system's behavior during the incident. Various team members hold different colored virtual sticky notes representing different perspectives on the incident. The room has a focused, workshop-like atmosphere.
+### Scene Description
+
+ A structured postmortem session in progress with a clearly designated facilitator standing at a digital board. The facilitator is using a template with sections for timeline, contributing factors, and action items. Team members are contributing to a detailed timeline reconstruction showing system events, human actions, and communication points. The facilitator is noting questions that arose during the discussion in a separate area titled "What We Still Don't Know." A technical leader is carefully documenting surprising aspects of the system's behavior during the incident. Various team members hold different colored virtual sticky notes representing different perspectives on the incident. The room has a focused, workshop-like atmosphere.
 
 ### Teaching Narrative
 
@@ -295,7 +303,9 @@ To implement effective facilitated retrospectives in a banking environment:
 
 ## Panel 5: The Systems Perspective - Beyond Human Error
 
-**Scene Description**: An engineering team gathered around a complex system visualization showing multiple intersecting components, dependencies, and failure pathways. Instead of focusing on a single component or person, they're examining how different parts of the system interact. One engineer is tracing the path of a failed transaction through various services. Another is mapping out how defensive measures failed to catch the issue. A third is demonstrating how monitoring systems showed green status while customers experienced errors. On a nearby screen, someone has diagrammed a "Swiss cheese model" of accident causation showing how multiple holes in defenses lined up. Post-it notes highlight contributing factors rather than individual mistakes.
+### Scene Description
+
+ An engineering team gathered around a complex system visualization showing multiple intersecting components, dependencies, and failure pathways. Instead of focusing on a single component or person, they're examining how different parts of the system interact. One engineer is tracing the path of a failed transaction through various services. Another is mapping out how defensive measures failed to catch the issue. A third is demonstrating how monitoring systems showed green status while customers experienced errors. On a nearby screen, someone has diagrammed a "Swiss cheese model" of accident causation showing how multiple holes in defenses lined up. Post-it notes highlight contributing factors rather than individual mistakes.
 
 ### Teaching Narrative
 
@@ -375,7 +385,9 @@ To implement a systems perspective in a banking environment:
 
 ## Panel 6: The Just Culture - Balancing Accountability and Learning
 
-**Scene Description**: A leadership team is reviewing an incident where an engineer deployed code without following established procedures, resulting in a service outage. Instead of an immediate disciplinary response, they're using a decision tree diagram labeled "Just Culture Algorithm" to analyze the situation. The flowchart shows different branches: human error, at-risk behavior, and reckless behavior, each with different organizational responses. Notes on the whiteboard show they're considering what system factors contributed to the procedural violation: deadline pressure, unclear documentation, and conflicting priorities. A HR representative and a senior technical leader are collaboratively determining the appropriate response, balancing accountability with learning opportunities. In the background, there's evidence that the team is also reviewing the deployment process itself to understand why the safeguards failed.
+### Scene Description
+
+ A leadership team is reviewing an incident where an engineer deployed code without following established procedures, resulting in a service outage. Instead of an immediate disciplinary response, they're using a decision tree diagram labeled "Just Culture Algorithm" to analyze the situation. The flowchart shows different branches: human error, at-risk behavior, and reckless behavior, each with different organizational responses. Notes on the whiteboard show they're considering what system factors contributed to the procedural violation: deadline pressure, unclear documentation, and conflicting priorities. A HR representative and a senior technical leader are collaboratively determining the appropriate response, balancing accountability with learning opportunities. In the background, there's evidence that the team is also reviewing the deployment process itself to understand why the safeguards failed.
 
 ### Teaching Narrative
 
@@ -451,7 +463,9 @@ To implement Just Culture in a banking environment:
 
 ## Panel 7: The Continuous Improvement Loop - From Insights to System Change
 
-**Scene Description**: A visualization of how incident learnings flow through the organization and transform into system improvements. On one wall, insights from recent retrospectives are categorized and prioritized. Engineers are mapping these insights to specific architecture changes, monitoring improvements, and process adjustments. A product manager and engineering lead are updating their roadmap to incorporate reliability work alongside feature development. In another area, a team is conducting a game day exercise simulating conditions from a previous incident to verify their improvements. Management is reviewing reliability metrics that show the impact of recent changes. The entire scene shows the journey from incident to insight to implementation to verification—a complete learning loop.
+### Scene Description
+
+ A visualization of how incident learnings flow through the organization and transform into system improvements. On one wall, insights from recent retrospectives are categorized and prioritized. Engineers are mapping these insights to specific architecture changes, monitoring improvements, and process adjustments. A product manager and engineering lead are updating their roadmap to incorporate reliability work alongside feature development. In another area, a team is conducting a game day exercise simulating conditions from a previous incident to verify their improvements. Management is reviewing reliability metrics that show the impact of recent changes. The entire scene shows the journey from incident to insight to implementation to verification—a complete learning loop.
 
 ### Teaching Narrative
 

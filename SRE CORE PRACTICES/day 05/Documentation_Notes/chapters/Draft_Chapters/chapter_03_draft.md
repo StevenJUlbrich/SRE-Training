@@ -35,7 +35,9 @@ In short: Classify ruthlessly, respond deliberately, contain mercilessly, and co
 ---
 ## Panel 1: Beyond Binary - The Alert Severity Spectrum
 
-**Scene Description**: A banking operations center where a newly implemented alert classification system is in action. Different alerts appear on a central display, automatically categorized with color-coding and priority levels. A senior SRE named Priya demonstrates the system to newer team members, pointing to five distinct severity categories (Critical, High, Medium, Low, Informational) and explaining how each category triggers different response protocols. Team members' devices show different notification patterns based on alert severity, with critical alerts triggering immediate pager notifications while informational alerts quietly populate a dashboard for later review.
+### Scene Description
+
+ A banking operations center where a newly implemented alert classification system is in action. Different alerts appear on a central display, automatically categorized with color-coding and priority levels. A senior SRE named Priya demonstrates the system to newer team members, pointing to five distinct severity categories (Critical, High, Medium, Low, Informational) and explaining how each category triggers different response protocols. Team members' devices show different notification patterns based on alert severity, with critical alerts triggering immediate pager notifications while informational alerts quietly populate a dashboard for later review.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ To implement effective alert classification in your banking environment:
 
 ## Panel 2: First Response Protocol - The Critical First Minutes
 
-**Scene Description**: A financial trading platform incident unfolds as a team follows a structured first response protocol. A large digital timer prominently displays "First Response: 00:03:27" since the critical alert fired. A designated first responder follows a step-by-step checklist projected on a screen: 1) Acknowledge alert, 2) Verify customer impact, 3) Assess scope, 4) Implement containment measures, 5) Decide escalation path. Others in the room are clearly waiting on specific verification steps before beginning their predefined roles. The first responder just completed a direct test of a trading function and is updating the incident status board with impact details rather than immediately diving into diagnostic or repair work.
+### Scene Description
+
+ A financial trading platform incident unfolds as a team follows a structured first response protocol. A large digital timer prominently displays "First Response: 00:03:27" since the critical alert fired. A designated first responder follows a step-by-step checklist projected on a screen: 1) Acknowledge alert, 2) Verify customer impact, 3) Assess scope, 4) Implement containment measures, 5) Decide escalation path. Others in the room are clearly waiting on specific verification steps before beginning their predefined roles. The first responder just completed a direct test of a trading function and is updating the incident status board with impact details rather than immediately diving into diagnostic or repair work.
 
 ### Teaching Narrative
 
@@ -139,7 +143,9 @@ To implement effective first response protocols in your banking environment:
 
 ## Panel 3: The Taxonomy of Failure - Root Cause Categories
 
-**Scene Description**: An incident review meeting where the banking SRE team is categorizing recent alerts using a comprehensive taxonomy visible on a large whiteboard. The taxonomy shows major categories (Infrastructure, Application, Data, Network, Security, External Dependency) with specific subcategories under each. Team members place alert descriptions on the appropriate categories, revealing patterns—most critical incidents cluster under "Data Consistency" and "External API Dependencies." The team leader circles these hot spots, initiating a discussion about systemic improvements while another team member updates a dashboard showing the distribution of alerts across the taxonomy over time, revealing how patterns have shifted following recent architectural changes.
+### Scene Description
+
+ An incident review meeting where the banking SRE team is categorizing recent alerts using a comprehensive taxonomy visible on a large whiteboard. The taxonomy shows major categories (Infrastructure, Application, Data, Network, Security, External Dependency) with specific subcategories under each. Team members place alert descriptions on the appropriate categories, revealing patterns—most critical incidents cluster under "Data Consistency" and "External API Dependencies." The team leader circles these hot spots, initiating a discussion about systemic improvements while another team member updates a dashboard showing the distribution of alerts across the taxonomy over time, revealing how patterns have shifted following recent architectural changes.
 
 ### Teaching Narrative
 
@@ -191,7 +197,9 @@ To implement effective failure taxonomy in your banking environment:
 
 ## Panel 4: Impact Verification - Testing the Customer Experience
 
-**Scene Description**: A payments platform incident room where two distinct approaches to alert handling are visible. In one area, engineers dive deep into system metrics, logs, and internal diagnostics—focused entirely on technical indicators. In another area, a team follows an impact verification process: one person attempts actual banking transactions on a test account, another reviews customer support tickets in real-time, a third examines transaction success rates by region and customer segment, and a fourth runs synthetic user journey tests. This second team has a whiteboard with "Impact Assessment" prominently displayed, showing a methodical process for verifying and quantifying real customer impact before significant diagnostic resources are committed.
+### Scene Description
+
+ A payments platform incident room where two distinct approaches to alert handling are visible. In one area, engineers dive deep into system metrics, logs, and internal diagnostics—focused entirely on technical indicators. In another area, a team follows an impact verification process: one person attempts actual banking transactions on a test account, another reviews customer support tickets in real-time, a third examines transaction success rates by region and customer segment, and a fourth runs synthetic user journey tests. This second team has a whiteboard with "Impact Assessment" prominently displayed, showing a methodical process for verifying and quantifying real customer impact before significant diagnostic resources are committed.
 
 ### Teaching Narrative
 
@@ -243,7 +251,9 @@ To implement effective impact verification in your banking environment:
 
 ## Panel 5: The Decision Matrix - Choosing the Right Response Path
 
-**Scene Description**: A banking operations center where a team responds to a new alert using a structured decision matrix displayed on a central screen. The matrix has axes for "Customer Impact" (None to Severe) and "System Health Risk" (Low to Critical), creating quadrants with different response protocols. A facilitator guides the team through evidence collection for both dimensions, placing the current incident in the "Moderate Impact / High Risk" quadrant based on specific evidence. This placement automatically triggers a predefined response protocol from a playbook, with clear roles and initial steps. Team members reference the matrix to explain their decision to business stakeholders, providing a transparent, evidence-based rationale for the chosen response level.
+### Scene Description
+
+ A banking operations center where a team responds to a new alert using a structured decision matrix displayed on a central screen. The matrix has axes for "Customer Impact" (None to Severe) and "System Health Risk" (Low to Critical), creating quadrants with different response protocols. A facilitator guides the team through evidence collection for both dimensions, placing the current incident in the "Moderate Impact / High Risk" quadrant based on specific evidence. This placement automatically triggers a predefined response protocol from a playbook, with clear roles and initial steps. Team members reference the matrix to explain their decision to business stakeholders, providing a transparent, evidence-based rationale for the chosen response level.
 
 ### Teaching Narrative
 
@@ -295,7 +305,9 @@ To implement effective decision frameworks in your banking environment:
 
 ## Panel 6: Containing the Blast Radius - First Actions That Protect
 
-**Scene Description**: A financial services incident room during the early stages of a major service disruption. Instead of immediately attempting to fix the root cause, the team is implementing containment measures on a large diagram of their banking system architecture. Team members systematically identify and isolate affected components: enabling circuit breakers on problematic API endpoints, diverting traffic from degraded services to healthy alternatives, activating fallback mechanisms for critical transaction flows, and temporarily disabling non-essential features to reduce system load. A "Blast Radius Containment" checklist guides these actions, focusing on limiting impact spread while preserving core functionality. Only after completing these containment measures does the team transition to root cause investigation.
+### Scene Description
+
+ A financial services incident room during the early stages of a major service disruption. Instead of immediately attempting to fix the root cause, the team is implementing containment measures on a large diagram of their banking system architecture. Team members systematically identify and isolate affected components: enabling circuit breakers on problematic API endpoints, diverting traffic from degraded services to healthy alternatives, activating fallback mechanisms for critical transaction flows, and temporarily disabling non-essential features to reduce system load. A "Blast Radius Containment" checklist guides these actions, focusing on limiting impact spread while preserving core functionality. Only after completing these containment measures does the team transition to root cause investigation.
 
 ### Teaching Narrative
 
@@ -347,7 +359,9 @@ To implement effective containment capabilities in your banking environment:
 
 ## Panel 7: Communication Protocols - Keeping Stakeholders Informed
 
-**Scene Description**: A major banking incident is underway with the incident response team working in a dedicated room. Adjacent to their technical workspace is a clearly defined communications station where a designated communications coordinator manages stakeholder updates. Multiple communication channels are visible: a regularly updated status page for customers, an internal dashboard for employees, a regulatory reporting template being completed, and a messaging system for executive updates. The coordinator follows a structured protocol with predefined update frequencies, templated information requirements, and severity-appropriate communication channels. A communication timeline shows consistent, scheduled updates rather than sporadic information releases, with audience-specific messaging clearly differentiated.
+### Scene Description
+
+ A major banking incident is underway with the incident response team working in a dedicated room. Adjacent to their technical workspace is a clearly defined communications station where a designated communications coordinator manages stakeholder updates. Multiple communication channels are visible: a regularly updated status page for customers, an internal dashboard for employees, a regulatory reporting template being completed, and a messaging system for executive updates. The coordinator follows a structured protocol with predefined update frequencies, templated information requirements, and severity-appropriate communication channels. A communication timeline shows consistent, scheduled updates rather than sporadic information releases, with audience-specific messaging clearly differentiated.
 
 ### Teaching Narrative
 

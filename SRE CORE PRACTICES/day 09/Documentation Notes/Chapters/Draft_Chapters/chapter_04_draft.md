@@ -38,7 +38,9 @@ ______________________________________________________________________
 
 ## Panel 1: From Uptime Obsession to Intelligent Risk Management
 
-**Scene Description**: A tense meeting room where Katherine, an SRE lead, stands at a whiteboard that's split into two sections. On the left side is a traditional "99.99% uptime" metric with a red circle around it. On the right side is a colorful error budget visualization showing different services consuming portions of their budgets. Development team members look bewildered while operations staff appear defensive. The room's atmosphere is charged with uncertainty as Katherine gestures to the right side of the board with confidence.
+### Scene Description
+
+ A tense meeting room where Katherine, an SRE lead, stands at a whiteboard that's split into two sections. On the left side is a traditional "99.99% uptime" metric with a red circle around it. On the right side is a colorful error budget visualization showing different services consuming portions of their budgets. Development team members look bewildered while operations staff appear defensive. The room's atmosphere is charged with uncertainty as Katherine gestures to the right side of the board with confidence.
 
 ### Teaching Narrative
 
@@ -96,7 +98,9 @@ To implement error budgets in a banking environment, follow these actionable ste
 
 ## Panel 2: Quantifying the Unquantifiable: Building Your First Error Budget
 
-**Scene Description**: A banking operations center where Raj, a former production support engineer now in SRE, works with Wei, a product manager. They're looking at dashboards showing transaction processing metrics for a payment system. On Raj's screen is a spreadsheet where he's calculating error rates and mapping them to customer impact. Wei points to a specific formula that converts technical failures into a percentage of the error budget consumed. A calendar on the wall shows a 30-day cycle marked "Error Budget Period."
+### Scene Description
+
+ A banking operations center where Raj, a former production support engineer now in SRE, works with Wei, a product manager. They're looking at dashboards showing transaction processing metrics for a payment system. On Raj's screen is a spreadsheet where he's calculating error rates and mapping them to customer impact. Wei points to a specific formula that converts technical failures into a percentage of the error budget consumed. A calendar on the wall shows a 30-day cycle marked "Error Budget Period."
 
 ### Teaching Narrative
 
@@ -154,7 +158,9 @@ To implement your first error budget in a banking environment, follow these prac
 
 ## Panel 3: When the Budget Empties: Implementing Circuit Breakers
 
-**Scene Description**: A bustling trading floor where alarms are sounding. A large dashboard shows an error budget at 98% consumed with warnings flashing. Elena, the SRE on call, is at her workstation initiating a protocol labeled "Error Budget Exhaustion Response." Senior executives look concerned as they gather around her screen while she calmly walks them through a decision tree diagram. In the background, the development team is visibly stopping their deployment activities, closing their laptops, and turning their attention to the reliability signals.
+### Scene Description
+
+ A bustling trading floor where alarms are sounding. A large dashboard shows an error budget at 98% consumed with warnings flashing. Elena, the SRE on call, is at her workstation initiating a protocol labeled "Error Budget Exhaustion Response." Senior executives look concerned as they gather around her screen while she calmly walks them through a decision tree diagram. In the background, the development team is visibly stopping their deployment activities, closing their laptops, and turning their attention to the reliability signals.
 
 ### Teaching Narrative
 
@@ -212,7 +218,9 @@ To implement reliability circuit breakers in a banking environment, follow these
 
 ## Panel 4: Spending the Budget: From Conservation to Strategic Investment
 
-**Scene Description**: A product planning meeting where Tom, the product owner, stands at the front of the room with a chart showing feature delivery velocity increasing over time. Beside him, Priya, the SRE lead, displays another chart showing the error budget consumption at 40% with fluctuations correlating to release cycles. Development and operations team members are seated together at round tables, collaboratively marking features on a roadmap with colored dots indicating "budget impact." The atmosphere is collaborative and strategic rather than adversarial.
+### Scene Description
+
+ A product planning meeting where Tom, the product owner, stands at the front of the room with a chart showing feature delivery velocity increasing over time. Beside him, Priya, the SRE lead, displays another chart showing the error budget consumption at 40% with fluctuations correlating to release cycles. Development and operations team members are seated together at round tables, collaboratively marking features on a roadmap with colored dots indicating "budget impact." The atmosphere is collaborative and strategic rather than adversarial.
 
 ### Teaching Narrative
 
@@ -272,7 +280,9 @@ To implement strategic error budget investment in a banking environment, follow 
 
 ## Panel 5: Error Budgets as Diplomatic Currency: Breaking Down Silos
 
-**Scene Description**: A large conference room where representatives from multiple banking divisions sit around a table. At the center is a digital dashboard showing error budget allocations across different banking services—payments, trading platform, mobile app, and core banking. Hector, now a senior SRE, facilitates a negotiation between division leaders who are discussing trading portions of their error budgets to accommodate different business priorities. A calendar shows quarterly planning cycles with error budget reset points marked clearly. The executives in the room look engaged rather than confrontational.
+### Scene Description
+
+ A large conference room where representatives from multiple banking divisions sit around a table. At the center is a digital dashboard showing error budget allocations across different banking services—payments, trading platform, mobile app, and core banking. Hector, now a senior SRE, facilitates a negotiation between division leaders who are discussing trading portions of their error budgets to accommodate different business priorities. A calendar shows quarterly planning cycles with error budget reset points marked clearly. The executives in the room look engaged rather than confrontational.
 
 ### Teaching Narrative
 

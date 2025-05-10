@@ -2,7 +2,9 @@
 
 ## Panel 1: The Telemetry Tsunami
 
-**Scene Description**: A banking operations center with multiple monitoring screens showing alerts from different regions simultaneously. Engineers frantically scroll through dashboards as their observability costs graph climbs sharply upward. A senior SRE points to three nearly identical screens showing the same payment processing service logs from different regional deployments, all capturing the same customer journey.
+### Scene Description
+
+ A banking operations center with multiple monitoring screens showing alerts from different regions simultaneously. Engineers frantically scroll through dashboards as their observability costs graph climbs sharply upward. A senior SRE points to three nearly identical screens showing the same payment processing service logs from different regional deployments, all capturing the same customer journey.
 
 ### Teaching Narrative
 In distributed banking systems, one of the most insidious observability anti-patterns is the unintentional duplication of telemetry across service instances, regions, and environments. When a single customer transaction flows through multiple microservices deployed across different regions, traditional instrumentation approaches often capture the same information repeatedly at each hop. 
@@ -61,7 +63,9 @@ To reduce telemetry duplication while maintaining essential visibility:
 
 ## Panel 2: Lost in Translation
 
-**Scene Description**: Two banking support teams on a conference call, each looking at different observability dashboards. Team A points at their transaction success metric showing 99.9% availability while Team B's dashboard shows the same service with only 98.5% availability. A customer service representative interrupts with complaints about rejected transactions, while both engineering teams argue about whose metrics are correct.
+### Scene Description
+
+ Two banking support teams on a conference call, each looking at different observability dashboards. Team A points at their transaction success metric showing 99.9% availability while Team B's dashboard shows the same service with only 98.5% availability. A customer service representative interrupts with complaints about rejected transactions, while both engineering teams argue about whose metrics are correct.
 
 ### Teaching Narrative
 In distributed banking systems, observability consistency is just as critical as the data itself. When different teams or regions implement observability inconsistently, the result is often conflicting data that undermines trust and complicates incident response.
@@ -126,7 +130,9 @@ To establish consistent observability across distributed banking systems:
 
 ## Panel 3: The Cross-Service Abyss
 
-**Scene Description**: A senior engineer traces a failed trade execution through multiple banking systems. Her screen shows a transaction flowing from the trading platform through order management, risk checks, market connectivity, and settlement services. While she can see the transaction entered and exited each service, there's a critical gap where the transaction disappeared between services, with no visibility into what went wrong.
+### Scene Description
+
+ A senior engineer traces a failed trade execution through multiple banking systems. Her screen shows a transaction flowing from the trading platform through order management, risk checks, market connectivity, and settlement services. While she can see the transaction entered and exited each service, there's a critical gap where the transaction disappeared between services, with no visibility into what went wrong.
 
 ### Teaching Narrative
 In modern distributed banking systems, one of the most challenging observability problems is maintaining transaction context as requests traverse multiple services. When a trade execution fails, for example, the failure might occur anywhere in a complex chain involving order capture, validation, risk checks, market connectivity, execution, confirmation, and settlement services.
@@ -187,7 +193,9 @@ To establish cost-effective cross-service observability:
 
 ## Panel 4: Regional Deployment Redundancies
 
-**Scene Description**: A global bank's monitoring team reviews their observability platform usage dashboard, showing three nearly identical peaks in data volume across their Americas, EMEA, and APAC environments. The system architect draws attention to a surge in costs where the same canary testing and synthetic transaction monitoring is running at full fidelity in all regions, essentially triplicating observability costs for identical insights.
+### Scene Description
+
+ A global bank's monitoring team reviews their observability platform usage dashboard, showing three nearly identical peaks in data volume across their Americas, EMEA, and APAC environments. The system architect draws attention to a surge in costs where the same canary testing and synthetic transaction monitoring is running at full fidelity in all regions, essentially triplicating observability costs for identical insights.
 
 ### Teaching Narrative
 Financial institutions typically deploy systems across multiple geographic regions for regulatory compliance, disaster recovery, and customer proximity. However, these multi-region deployments often lead to unnecessary observability data duplication when teams implement identical monitoring in each environment.
@@ -250,7 +258,9 @@ To optimize multi-region observability without sacrificing visibility:
 
 ## Panel 5: The Correlation Conundrum
 
-**Scene Description**: An incident response team huddles around screens displaying separate observability dashboards for multiple banking systems. One engineer examines transaction logs from the payment gateway, another reviews infrastructure metrics from the database cluster, while a third scrolls through application performance metrics. Despite having all the data, they struggle to correlate events across these disjointed systems to determine whether database latency spikes caused the payment failures.
+### Scene Description
+
+ An incident response team huddles around screens displaying separate observability dashboards for multiple banking systems. One engineer examines transaction logs from the payment gateway, another reviews infrastructure metrics from the database cluster, while a third scrolls through application performance metrics. Despite having all the data, they struggle to correlate events across these disjointed systems to determine whether database latency spikes caused the payment failures.
 
 ### Teaching Narrative
 One of the most persistent challenges in distributed banking system observability is correlation—connecting events across separate observability domains to establish cause-effect relationships. Traditional approaches create silos between metrics, logs, traces, and events, making it difficult to understand how infrastructure issues impact application performance or how service failures affect customer transactions.
@@ -320,7 +330,9 @@ To establish cost-effective observability correlation:
 
 ## Panel 6: The Metadata Multiplication Effect
 
-**Scene Description**: A senior SRE reviews the metrics from a payment processing platform, noticing that each data point carries extensive duplicate context—each metric includes customer ID, account type, region, product code, and transaction type as labels. The observability cost dashboard shows an exponential growth curve as these high-cardinality dimensions multiply across services, while query performance has degraded to the point where incident dashboards take minutes to load.
+### Scene Description
+
+ A senior SRE reviews the metrics from a payment processing platform, noticing that each data point carries extensive duplicate context—each metric includes customer ID, account type, region, product code, and transaction type as labels. The observability cost dashboard shows an exponential growth curve as these high-cardinality dimensions multiply across services, while query performance has degraded to the point where incident dashboards take minutes to load.
 
 ### Teaching Narrative
 In distributed banking systems, observability data doesn't exist in isolation—it carries context that makes it meaningful. A latency measurement alone provides limited insight, but that same measurement tagged with service name, operation type, and customer segment becomes actionable information. This context-enrichment, however, creates one of the most significant cost drivers in distributed observability: the metadata multiplication effect.
@@ -385,7 +397,9 @@ To implement cost-effective dimensional strategies:
 
 ## Panel 7: The Aggregation Advantage
 
-**Scene Description**: A banking platform team reviews their observability architecture diagram, highlighting a new edge aggregation tier. The diagram shows raw telemetry from hundreds of service instances flowing into local aggregation points that perform initial processing before forwarding to the central observability platform. A cost comparison dashboard demonstrates a 60% reduction in data transmittal and storage costs since implementing this edge processing approach.
+### Scene Description
+
+ A banking platform team reviews their observability architecture diagram, highlighting a new edge aggregation tier. The diagram shows raw telemetry from hundreds of service instances flowing into local aggregation points that perform initial processing before forwarding to the central observability platform. A cost comparison dashboard demonstrates a 60% reduction in data transmittal and storage costs since implementing this edge processing approach.
 
 ### Teaching Narrative
 As banking systems scale to thousands of service instances across multiple regions, the naive approach of sending all raw telemetry directly to centralized observability platforms becomes prohibitively expensive. Every container, function, and service instance generates metrics, logs, and traces, creating a firehose of data that drives exponential cost growth without proportional insight value.

@@ -44,7 +44,9 @@ By the end of this chapter, you’ll have the tools to stop playing Whac-A-Mole 
 
 ## Panel 1: The Missing Links - The Distributed Transaction Challenge
 
-**Scene Description**: A bustling banking operations center where a critical customer issue is under investigation. Screens display fragmented logs from multiple systems involved in a failed international wire transfer. Engineers frantically switch between dashboards for the online banking portal, authentication service, fraud detection system, compliance screening, and payment gateway—each showing isolated parts of the transaction but with no clear way to connect them. A frustrated team leader points at the disconnected logs and exclaims, "We know something failed, but we can't see the complete journey to identify where!"
+### Scene Description
+
+ A bustling banking operations center where a critical customer issue is under investigation. Screens display fragmented logs from multiple systems involved in a failed international wire transfer. Engineers frantically switch between dashboards for the online banking portal, authentication service, fraud detection system, compliance screening, and payment gateway—each showing isolated parts of the transaction but with no clear way to connect them. A frustrated team leader points at the disconnected logs and exclaims, "We know something failed, but we can't see the complete journey to identify where!"
 
 ### Teaching Narrative
 
@@ -133,7 +135,9 @@ The bank calculated that implementing distributed tracing would have reduced the
 
 ## Panel 2: The Correlation ID - Creating Digital Transaction DNA
 
-**Scene Description**: An architectural review where a banking platform engineering team designs their correlation ID implementation. On interactive screens, they trace a mortgage application as it flows through their system. A unique identifier—visibly highlighted in each log entry—connects the application from the web portal, through document processing, credit verification, underwriting, pricing, and approval systems. A demonstration shows how this single identifier instantly filters logs across all systems to reveal the complete mortgage journey, with team members noting how this capability reduces investigation time from hours to seconds.
+### Scene Description
+
+ An architectural review where a banking platform engineering team designs their correlation ID implementation. On interactive screens, they trace a mortgage application as it flows through their system. A unique identifier—visibly highlighted in each log entry—connects the application from the web portal, through document processing, credit verification, underwriting, pricing, and approval systems. A demonstration shows how this single identifier instantly filters logs across all systems to reveal the complete mortgage journey, with team members noting how this capability reduces investigation time from hours to seconds.
 
 ### Teaching Narrative
 
@@ -262,7 +266,9 @@ The bank calculated an ROI of 540% in the first year for their correlation ID in
 
 ## Panel 3: The Propagation Challenge - Maintaining Context Across Boundaries
 
-**Scene Description**: A financial system architecture review where engineers analyze correlation flow across their transaction processing ecosystem. Diagrams show various propagation mechanisms across different interfaces: HTTP headers carrying correlation IDs between web services, message properties maintaining context in asynchronous queues, database fields preserving IDs during persistence, and specialized adapters injecting identifiers into legacy mainframe transactions. A color-coded flow map highlights systems with robust propagation in green, partial implementation in yellow, and gaps in red—with clear correlation between these gaps and the most challenging troubleshooting scenarios.
+### Scene Description
+
+ A financial system architecture review where engineers analyze correlation flow across their transaction processing ecosystem. Diagrams show various propagation mechanisms across different interfaces: HTTP headers carrying correlation IDs between web services, message properties maintaining context in asynchronous queues, database fields preserving IDs during persistence, and specialized adapters injecting identifiers into legacy mainframe transactions. A color-coded flow map highlights systems with robust propagation in green, partial implementation in yellow, and gaps in red—with clear correlation between these gaps and the most challenging troubleshooting scenarios.
 
 ### Teaching Narrative
 
@@ -389,7 +395,9 @@ The card issuer calculated an ROI of 620% for their propagation implementation i
 
 ## Panel 4: Beyond Single IDs - The Context Hierarchy
 
-**Scene Description**: A banking platform development session where architects design an enhanced contextual logging framework. Whiteboard diagrams show a multi-level context hierarchy: global correlation IDs tracking end-to-end customer journeys, session IDs grouping related user activities, request IDs for individual operations, and specialized business context identifiers for particular banking domains. A demonstration shows how this layered approach enables both macro views (all activities in a customer's mortgage application process) and micro views (detailed analysis of a specific document verification step), with each context level providing different analytical capabilities.
+### Scene Description
+
+ A banking platform development session where architects design an enhanced contextual logging framework. Whiteboard diagrams show a multi-level context hierarchy: global correlation IDs tracking end-to-end customer journeys, session IDs grouping related user activities, request IDs for individual operations, and specialized business context identifiers for particular banking domains. A demonstration shows how this layered approach enables both macro views (all activities in a customer's mortgage application process) and micro views (detailed analysis of a specific document verification step), with each context level providing different analytical capabilities.
 
 ### Teaching Narrative
 
@@ -516,7 +524,9 @@ The bank calculated an ROI of 580% for their context hierarchy implementation in
 
 ## Panel 5: The Request Lifecycle Context - Capturing the Complete Timeline
 
-**Scene Description**: A financial technology operations center where engineers analyze performance issues in a payment processing system. Specialized logging displays show complete request lifecycles with automatically captured timing data for each processing stage. Visual timelines highlight duration for authentication, fraud checks, funds availability verification, and settlement handoff—immediately revealing a growing latency issue in the fraud detection service. Performance trend graphs show how this timing data enabled early detection of the degradation pattern before it impacted customers, with calculation of precise performance metrics for each transaction stage.
+### Scene Description
+
+ A financial technology operations center where engineers analyze performance issues in a payment processing system. Specialized logging displays show complete request lifecycles with automatically captured timing data for each processing stage. Visual timelines highlight duration for authentication, fraud checks, funds availability verification, and settlement handoff—immediately revealing a growing latency issue in the fraud detection service. Performance trend graphs show how this timing data enabled early detection of the degradation pattern before it impacted customers, with calculation of precise performance metrics for each transaction stage.
 
 ### Teaching Narrative
 
@@ -650,7 +660,9 @@ The payment processor calculated an ROI of 780% for their lifecycle context impl
 
 ## Panel 6: The Business Context Enrichment - From Technical to Meaningful
 
-**Scene Description**: A customer service resolution scenario where representatives and engineering teams collaborate on a disputed transaction. Their unified dashboard displays logs enriched with business context beyond technical details—showing the transaction type (credit card payment), amount ($1,249.50), merchant information (AirlineBookings.com), customer tier (Platinum), channel (mobile app), and previous attempt history. This enriched view enables immediate understanding of both technical issues and business impact, with filtering capabilities that support analysis patterns relevant to business operations rather than just technical troubleshooting.
+### Scene Description
+
+ A customer service resolution scenario where representatives and engineering teams collaborate on a disputed transaction. Their unified dashboard displays logs enriched with business context beyond technical details—showing the transaction type (credit card payment), amount ($1,249.50), merchant information (AirlineBookings.com), customer tier (Platinum), channel (mobile app), and previous attempt history. This enriched view enables immediate understanding of both technical issues and business impact, with filtering capabilities that support analysis patterns relevant to business operations rather than just technical troubleshooting.
 
 ### Teaching Narrative
 
@@ -801,7 +813,9 @@ The bank calculated an ROI of 840% for their business context implementation in 
 
 ## Panel 7: The Privacy and Security in Contextual Logging - The Regulatory Balance
 
-**Scene Description**: A compliance review session where banking security officers and engineers assess their contextual logging implementation against regulatory requirements. Documentation shows their balanced approach: pseudonymized customer identifiers replacing actual account numbers, tiered access controls restricting who can correlate technical and customer information, field-level encryption for sensitive financial data, and purpose-based access workflows for investigations requiring full context. A demonstration shows how customer service can troubleshoot transaction status without accessing full financial details, while fraud investigation teams can access complete context through authorized, audited workflows.
+### Scene Description
+
+ A compliance review session where banking security officers and engineers assess their contextual logging implementation against regulatory requirements. Documentation shows their balanced approach: pseudonymized customer identifiers replacing actual account numbers, tiered access controls restricting who can correlate technical and customer information, field-level encryption for sensitive financial data, and purpose-based access workflows for investigations requiring full context. A demonstration shows how customer service can troubleshoot transaction status without accessing full financial details, while fraud investigation teams can access complete context through authorized, audited workflows.
 
 ### Teaching Narrative
 
@@ -927,7 +941,9 @@ The bank calculated that the balanced privacy implementation delivered risk-adju
 
 ## Panel 8: The Distributed Tracing - Beyond Correlation to Visualization
 
-**Scene Description**: A banking platform engineering center with advanced observability displays showing distributed trace visualizations of customer transactions. The trace diagram shows a loan application flowing through dozens of microservices—displaying timing, dependencies, and hotspots through intuitive visualizations. Engineers compare current traces with historical baselines, immediately identifying an abnormal latency pattern in the credit verification process. A timeline view shows how they've evolved from basic text logs with correlation IDs to these sophisticated visualizations, with corresponding improvements in troubleshooting efficiency and proactive optimization capabilities.
+### Scene Description
+
+ A banking platform engineering center with advanced observability displays showing distributed trace visualizations of customer transactions. The trace diagram shows a loan application flowing through dozens of microservices—displaying timing, dependencies, and hotspots through intuitive visualizations. Engineers compare current traces with historical baselines, immediately identifying an abnormal latency pattern in the credit verification process. A timeline view shows how they've evolved from basic text logs with correlation IDs to these sophisticated visualizations, with corresponding improvements in troubleshooting efficiency and proactive optimization capabilities.
 
 ### Teaching Narrative
 
@@ -1121,7 +1137,9 @@ The bank calculated an ROI of 380% for their contextual logging implementation b
 
 ## Panel 10: The Future Frontier - Unified Observability Through Context
 
-**Scene Description**: A financial services command center showcasing an integrated observability platform where contextual intelligence connects all telemetry types. Visualization displays show how correlation identifiers link logs, metrics, and traces from a retail banking platform—creating unified visibility across monitoring systems. An incident demonstration shows how engineers pivot seamlessly from performance dashboards showing unusual payment processing latency to correlated logs revealing specific error patterns, to distributed traces visualizing the exact transaction path and bottleneck—all connected through shared context identifiers that bring these separate observability signals into a coherent narrative.
+### Scene Description
+
+ A financial services command center showcasing an integrated observability platform where contextual intelligence connects all telemetry types. Visualization displays show how correlation identifiers link logs, metrics, and traces from a retail banking platform—creating unified visibility across monitoring systems. An incident demonstration shows how engineers pivot seamlessly from performance dashboards showing unusual payment processing latency to correlated logs revealing specific error patterns, to distributed traces visualizing the exact transaction path and bottleneck—all connected through shared context identifiers that bring these separate observability signals into a coherent narrative.
 
 ### Teaching Narrative
 

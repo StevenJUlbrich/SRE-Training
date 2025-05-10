@@ -2,7 +2,9 @@
 
 ## Panel 1: The Green Wall Illusion
 
-**Scene Description**: A dimly lit operations center at 3 AM. Katherine, a senior SRE, sits surrounded by multiple glowing monitors displaying green status tiles. Her phone buzzes with alerts while she frantically types commands into a terminal. In contrast to the "all green" dashboards, the terminal shows HTTP 500 errors. In the background, other team members are anxiously watching, their faces illuminated by the green glow of seemingly healthy systems.
+### Scene Description
+
+ A dimly lit operations center at 3 AM. Katherine, a senior SRE, sits surrounded by multiple glowing monitors displaying green status tiles. Her phone buzzes with alerts while she frantically types commands into a terminal. In contrast to the "all green" dashboards, the terminal shows HTTP 500 errors. In the background, other team members are anxiously watching, their faces illuminated by the green glow of seemingly healthy systems.
 
 ### Teaching Narrative
 
@@ -58,7 +60,9 @@ To overcome the Green Wall Illusion in your banking environment, implement these
 
 ## Panel 2: The Three Pillars Perspective
 
-**Scene Description**: A collaborative war room with a large whiteboard divided into three columns labeled "Logs," "Metrics," and "Traces." Marcus, a production support engineer transitioning to SRE, stands confused in front of scattered, disconnected log entries. Beside him, Zara, a senior SRE, is drawing connecting lines between specific log entries, metric spikes on a graph, and a distributed trace visualization showing the complete journey of a transaction across multiple services. Team members are arranging sticky notes to connect evidence across all three pillars.
+### Scene Description
+
+ A collaborative war room with a large whiteboard divided into three columns labeled "Logs," "Metrics," and "Traces." Marcus, a production support engineer transitioning to SRE, stands confused in front of scattered, disconnected log entries. Beside him, Zara, a senior SRE, is drawing connecting lines between specific log entries, metric spikes on a graph, and a distributed trace visualization showing the complete journey of a transaction across multiple services. Team members are arranging sticky notes to connect evidence across all three pillars.
 
 ### Teaching Narrative
 
@@ -114,7 +118,9 @@ To implement the Three Pillars approach effectively in your banking environment,
 
 ## Panel 3: Cardinality and Dimensionality - Beyond Simple Metrics
 
-**Scene Description**: Two adjacent workstations show dramatically different dashboards. On the left, a simplistic dashboard with basic counters and gauges displays a payment processing service. On the right, a multidimensional dashboard shows the same service with metrics sliced by customer segment, transaction type, geographic region, and device type. A senior engineer is highlighting patterns visible only in the high-cardinality dashboard, pointing to a specific region×device combination where errors are spiking while the aggregate metrics appear normal.
+### Scene Description
+
+ Two adjacent workstations show dramatically different dashboards. On the left, a simplistic dashboard with basic counters and gauges displays a payment processing service. On the right, a multidimensional dashboard shows the same service with metrics sliced by customer segment, transaction type, geographic region, and device type. A senior engineer is highlighting patterns visible only in the high-cardinality dashboard, pointing to a specific region×device combination where errors are spiking while the aggregate metrics appear normal.
 
 ### Teaching Narrative
 
@@ -172,7 +178,9 @@ To implement high-cardinality, multi-dimensional observability in your banking e
 
 ## Panel 4: From Threshold Alerts to Service Level Objectives
 
-**Scene Description**: A split-screen visual shows two approaches to alerting. On the left, a traditional NOC dashboard with threshold-based alerts showing CPU at 87% with a red alert. On the right, an SRE team reviews an SLO dashboard showing that despite high CPU, the service is meeting its 99.9% availability target with 70% of the error budget still available. The team is calmly prioritizing work rather than responding to an alert. Calendar integrations show how these different approaches impact on-call schedules and team focus.
+### Scene Description
+
+ A split-screen visual shows two approaches to alerting. On the left, a traditional NOC dashboard with threshold-based alerts showing CPU at 87% with a red alert. On the right, an SRE team reviews an SLO dashboard showing that despite high CPU, the service is meeting its 99.9% availability target with 70% of the error budget still available. The team is calmly prioritizing work rather than responding to an alert. Calendar integrations show how these different approaches impact on-call schedules and team focus.
 
 ### Teaching Narrative
 
@@ -230,7 +238,9 @@ To implement SLO-based alerting in your banking environment, follow these five a
 
 ## Panel 5: Designing for Unknown Unknowns
 
-**Scene Description**: A whiteboard session shows an SRE team designing a new observability implementation. The whiteboard is divided into two sections: "Known Failure Modes" (with a short list) and "Unknown Unknowns" (with a much longer list of question marks and possibilities). The team is implementing distributed tracing, structured logging patterns, and detailed context propagation. A timeline shows past incidents where the root cause was only discovered after hours of investigation due to insufficient observability.
+### Scene Description
+
+ A whiteboard session shows an SRE team designing a new observability implementation. The whiteboard is divided into two sections: "Known Failure Modes" (with a short list) and "Unknown Unknowns" (with a much longer list of question marks and possibilities). The team is implementing distributed tracing, structured logging patterns, and detailed context propagation. A timeline shows past incidents where the root cause was only discovered after hours of investigation due to insufficient observability.
 
 ### Teaching Narrative
 
@@ -288,7 +298,9 @@ To implement observability for unknown unknowns in your banking environment, fol
 
 ## Panel 6: The Cost of Manual Correlation
 
-**Scene Description**: Two team workflows are contrasted side-by-side. On the left, an exhausted engineer manually copies timestamps from logs into a spreadsheet, cross-referencing with separate metric graphs and trying to construct a timeline of events. Multiple browser tabs, spreadsheets, and dashboard windows create a chaotic workspace. On the right, an integrated observability platform allows an engineer to click on a metric spike, instantly see corresponding logs and traces, and quickly identify the root cause through automated correlation.
+### Scene Description
+
+ Two team workflows are contrasted side-by-side. On the left, an exhausted engineer manually copies timestamps from logs into a spreadsheet, cross-referencing with separate metric graphs and trying to construct a timeline of events. Multiple browser tabs, spreadsheets, and dashboard windows create a chaotic workspace. On the right, an integrated observability platform allows an engineer to click on a metric spike, instantly see corresponding logs and traces, and quickly identify the root cause through automated correlation.
 
 ### Teaching Narrative
 
@@ -353,7 +365,9 @@ To eliminate costly manual correlation in your banking environment, follow these
 
 ## Panel 7: Observability as Continuous Feedback
 
-**Scene Description**: A visualization of a complete development and operations lifecycle. Engineers review observability data during development, testing, deployment, and production phases. A senior SRE presents insights from production observability to product and development teams during sprint planning, influencing feature prioritization and architectural decisions. The scene emphasizes how observability data flows across team boundaries, creating a continuous feedback loop rather than just operational monitoring.
+### Scene Description
+
+ A visualization of a complete development and operations lifecycle. Engineers review observability data during development, testing, deployment, and production phases. A senior SRE presents insights from production observability to product and development teams during sprint planning, influencing feature prioritization and architectural decisions. The scene emphasizes how observability data flows across team boundaries, creating a continuous feedback loop rather than just operational monitoring.
 
 ### Teaching Narrative
 

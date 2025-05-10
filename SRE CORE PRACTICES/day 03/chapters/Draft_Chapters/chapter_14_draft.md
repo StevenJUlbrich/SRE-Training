@@ -39,7 +39,9 @@ Welcome to the bloodsport of log analysis, where traditional monitoring is a bli
 
 ## Panel 1: The Volume Challenge - When Human Analysis Fails
 
-**Scene Description**: A banking security operations center drowning in log data. Visualization screens show the overwhelming scale: 15 billion daily log events flowing from thousands of banking systems, with analysts visibly struggling to keep pace. Multiple screens display manual search attempts with complex queries yielding thousands of results that still require human review. A timeline visualization shows how a sophisticated fraud attempt went undetected for days despite all relevant indicators being present in logs—simply because analysts couldn't find the critical patterns among billions of legitimate entries. The team leader points to growth projections showing log volumes doubling annually while their analyst team remains constant, highlighting the fundamental impossibility of scaling human analysis to match data growth.
+### Scene Description
+
+ A banking security operations center drowning in log data. Visualization screens show the overwhelming scale: 15 billion daily log events flowing from thousands of banking systems, with analysts visibly struggling to keep pace. Multiple screens display manual search attempts with complex queries yielding thousands of results that still require human review. A timeline visualization shows how a sophisticated fraud attempt went undetected for days despite all relevant indicators being present in logs—simply because analysts couldn't find the critical patterns among billions of legitimate entries. The team leader points to growth projections showing log volumes doubling annually while their analyst team remains constant, highlighting the fundamental impossibility of scaling human analysis to match data growth.
 
 ### Teaching Narrative
 
@@ -101,7 +103,9 @@ To address the volume challenge through machine learning approaches:
 
 ## Panel 2: The Pattern Recognition Revolution - From Rules to Learning
 
-**Scene Description**: A banking analytics lab where data scientists compare traditional rule-based approaches with machine learning for transaction log analysis. Split screens demonstrate the fundamental difference: on one side, a security engineer painstakingly writes complex detection rules based on known fraud patterns, while on the other, a machine learning system autonomously identifies unusual behavior clusters without explicit programming. Visualizations show how the ML system discovered a previously unknown mortgage fraud pattern by identifying subtle correlations across application logs, credit check results, and document processing systems—connections too complex for manual rule creation. Performance metrics demonstrate how the learning system continuously improves detection accuracy while adapting to emerging patterns, compared to rule-based approaches that gradually lose effectiveness as tactics evolve.
+### Scene Description
+
+ A banking analytics lab where data scientists compare traditional rule-based approaches with machine learning for transaction log analysis. Split screens demonstrate the fundamental difference: on one side, a security engineer painstakingly writes complex detection rules based on known fraud patterns, while on the other, a machine learning system autonomously identifies unusual behavior clusters without explicit programming. Visualizations show how the ML system discovered a previously unknown mortgage fraud pattern by identifying subtle correlations across application logs, credit check results, and document processing systems—connections too complex for manual rule creation. Performance metrics demonstrate how the learning system continuously improves detection accuracy while adapting to emerging patterns, compared to rule-based approaches that gradually lose effectiveness as tactics evolve.
 
 ### Teaching Narrative
 
@@ -171,7 +175,9 @@ To successfully implement the transition from rules to learning:
 
 ## Panel 3: The Supervised Learning Approach - Classification and Prediction
 
-**Scene Description**: A fraud detection center where machine learning specialists train supervised models on transaction logs. Interactive displays show the training process: historical logs labeled with known outcomes (legitimate transactions versus confirmed fraud), feature extraction identifying relevant signals from raw log data, model training using various algorithms (random forests, neural networks, gradient boosting), and performance validation on holdout datasets. The resulting models automatically classify incoming transactions in real-time, assigning fraud probability scores that prioritize investigation. Performance dashboards demonstrate dramatic improvements over rule-based systems: 83% higher fraud detection rates, 62% fewer false positives, and identification of complex fraud patterns previously missed by traditional approaches.
+### Scene Description
+
+ A fraud detection center where machine learning specialists train supervised models on transaction logs. Interactive displays show the training process: historical logs labeled with known outcomes (legitimate transactions versus confirmed fraud), feature extraction identifying relevant signals from raw log data, model training using various algorithms (random forests, neural networks, gradient boosting), and performance validation on holdout datasets. The resulting models automatically classify incoming transactions in real-time, assigning fraud probability scores that prioritize investigation. Performance dashboards demonstrate dramatic improvements over rule-based systems: 83% higher fraud detection rates, 62% fewer false positives, and identification of complex fraud patterns previously missed by traditional approaches.
 
 ### Teaching Narrative
 
@@ -241,7 +247,9 @@ To successfully implement supervised learning for log analysis:
 
 ## Panel 4: The Unsupervised Learning Advantage - Finding the Unknown Unknown
 
-**Scene Description**: A banking security operations center where analysts use unsupervised learning to discover new attack patterns in authentication logs. Visualization displays show clustering algorithms automatically grouping login behaviors without predefined categories, with distinct user behavior clusters clearly visible. Anomaly detection algorithms highlight unusual access patterns that don't match established behavior models, automatically flagging a subtle but suspicious pattern: seemingly normal authentication requests that deviate from typical behavior in barely perceptible ways. Security analysts investigate these machine-identified anomalies, uncovering a sophisticated credential stuffing attack deliberately designed to evade traditional rule-based detection by maintaining volumes below alerting thresholds—a pattern they acknowledge would likely have remained undetected without the unsupervised learning capabilities.
+### Scene Description
+
+ A banking security operations center where analysts use unsupervised learning to discover new attack patterns in authentication logs. Visualization displays show clustering algorithms automatically grouping login behaviors without predefined categories, with distinct user behavior clusters clearly visible. Anomaly detection algorithms highlight unusual access patterns that don't match established behavior models, automatically flagging a subtle but suspicious pattern: seemingly normal authentication requests that deviate from typical behavior in barely perceptible ways. Security analysts investigate these machine-identified anomalies, uncovering a sophisticated credential stuffing attack deliberately designed to evade traditional rule-based detection by maintaining volumes below alerting thresholds—a pattern they acknowledge would likely have remained undetected without the unsupervised learning capabilities.
 
 ### Teaching Narrative
 
@@ -311,7 +319,9 @@ To successfully implement unsupervised learning for log analysis:
 
 ## Panel 5: The Feature Engineering Challenge - Transforming Logs into Learning Data
 
-**Scene Description**: A banking data science lab where engineers transform raw log data into machine learning features. Visualization screens show the complete transformation pipeline: text processing extracting structured information from unstructured logs, feature extraction creating meaningful signals from raw events (login frequency distributions, transaction amount patterns, timing interval characteristics), feature selection identifying the most predictive attributes, dimensionality reduction techniques finding patterns across hundreds of potential signals, and normalization preparing clean data for model consumption. The team demonstrates how the same raw logs yield dramatically different results based on feature quality—with sophisticated feature engineering revealing patterns completely invisible in basic approaches that use only raw log fields.
+### Scene Description
+
+ A banking data science lab where engineers transform raw log data into machine learning features. Visualization screens show the complete transformation pipeline: text processing extracting structured information from unstructured logs, feature extraction creating meaningful signals from raw events (login frequency distributions, transaction amount patterns, timing interval characteristics), feature selection identifying the most predictive attributes, dimensionality reduction techniques finding patterns across hundreds of potential signals, and normalization preparing clean data for model consumption. The team demonstrates how the same raw logs yield dramatically different results based on feature quality—with sophisticated feature engineering revealing patterns completely invisible in basic approaches that use only raw log fields.
 
 ### Teaching Narrative
 
@@ -381,7 +391,9 @@ To develop effective feature engineering capabilities for log analysis:
 
 ## Panel 6: The Anomaly Detection Imperative - Finding What Doesn't Belong
 
-**Scene Description**: A banking transaction monitoring center where anomaly detection systems analyze payment processing logs in real-time. Interactive displays show multiple detection approaches simultaneously analyzing different pattern dimensions: statistical methods identifying values outside established distributions, clustering techniques flagging events that don't fit known behavior groups, prediction-based approaches highlighting transactions that deviate from expected patterns, and isolation forest algorithms identifying outliers in high-dimensional spaces. Alerts highlight a suspicious pattern invisible to traditional monitoring: a series of international transfers individually within normal parameters but collectively forming an unusual pattern across timing, amounts, and destinations. Investigation confirms a sophisticated money laundering attempt deliberately structured to evade threshold-based detection—identified solely through machine learning anomaly detection recognizing the subtle pattern deviations from normal behavior.
+### Scene Description
+
+ A banking transaction monitoring center where anomaly detection systems analyze payment processing logs in real-time. Interactive displays show multiple detection approaches simultaneously analyzing different pattern dimensions: statistical methods identifying values outside established distributions, clustering techniques flagging events that don't fit known behavior groups, prediction-based approaches highlighting transactions that deviate from expected patterns, and isolation forest algorithms identifying outliers in high-dimensional spaces. Alerts highlight a suspicious pattern invisible to traditional monitoring: a series of international transfers individually within normal parameters but collectively forming an unusual pattern across timing, amounts, and destinations. Investigation confirms a sophisticated money laundering attempt deliberately structured to evade threshold-based detection—identified solely through machine learning anomaly detection recognizing the subtle pattern deviations from normal behavior.
 
 ### Teaching Narrative
 
@@ -451,7 +463,9 @@ To successfully implement anomaly detection for banking logs:
 
 ## Panel 7: The Sequence Matters - Temporal Pattern Analysis
 
-**Scene Description**: A financial crime investigation unit using temporal pattern analysis to identify sophisticated fraud schemes. Timeline visualizations show how sequence analysis algorithms process authentication and transaction logs to identify patterns invisible in isolated events: account takeover attempts characterized by specific sequences of actions, transaction laundering schemes with distinctive timing signatures, and multi-stage attacks with recognizable progression patterns. Investigators review a case where the system automatically identified a complex business email compromise attack through its characteristic sequence—initial reconnaissance followed by targeted phishing, credential theft, account access pattern changes, and finally fraudulent payment attempts. The security lead explains how traditional analysis missed this attack by examining individual events, while temporal pattern analysis revealed the distinctive sequence spanning weeks of subtle activity before the actual fraud attempt.
+### Scene Description
+
+ A financial crime investigation unit using temporal pattern analysis to identify sophisticated fraud schemes. Timeline visualizations show how sequence analysis algorithms process authentication and transaction logs to identify patterns invisible in isolated events: account takeover attempts characterized by specific sequences of actions, transaction laundering schemes with distinctive timing signatures, and multi-stage attacks with recognizable progression patterns. Investigators review a case where the system automatically identified a complex business email compromise attack through its characteristic sequence—initial reconnaissance followed by targeted phishing, credential theft, account access pattern changes, and finally fraudulent payment attempts. The security lead explains how traditional analysis missed this attack by examining individual events, while temporal pattern analysis revealed the distinctive sequence spanning weeks of subtle activity before the actual fraud attempt.
 
 ### Teaching Narrative
 
@@ -524,7 +538,9 @@ To successfully implement temporal pattern analysis for banking logs:
 
 ## Panel 8: The Explainable AI Requirement - Understanding Model Decisions
 
-**Scene Description**: A banking compliance review where machine learning engineers demonstrate explainable AI approaches for transaction monitoring. Interactive displays show how different explanation techniques make model decisions transparent: feature importance visualizations highlighting the log elements most influential in specific fraud predictions, counterfactual explanations demonstrating how different transaction characteristics would change outcomes, local interpretable model-agnostic explanations (LIME) providing rule-based approximations of complex model behavior, and attention mechanisms showing which parts of transaction sequences most influenced classification decisions. A compliance officer tests the system with challenging scenarios, confirming that the models can explain their reasoning in regulatory-compliant, human-understandable terms rather than operating as opaque "black boxes."
+### Scene Description
+
+ A banking compliance review where machine learning engineers demonstrate explainable AI approaches for transaction monitoring. Interactive displays show how different explanation techniques make model decisions transparent: feature importance visualizations highlighting the log elements most influential in specific fraud predictions, counterfactual explanations demonstrating how different transaction characteristics would change outcomes, local interpretable model-agnostic explanations (LIME) providing rule-based approximations of complex model behavior, and attention mechanisms showing which parts of transaction sequences most influenced classification decisions. A compliance officer tests the system with challenging scenarios, confirming that the models can explain their reasoning in regulatory-compliant, human-understandable terms rather than operating as opaque "black boxes."
 
 ### Teaching Narrative
 
@@ -594,7 +610,9 @@ To successfully implement explainable AI for banking log analysis:
 
 ## Panel 9: The Operational Implementation - From Insights to Action
 
-**Scene Description**: A banking platform operations center where machine learning models have been fully integrated into operational workflows. Real-time dashboards show automated systems processing transaction and system logs through multiple analysis layers: anomaly detection automatically identifying unusual patterns, classification models categorizing events by type and severity, root cause analysis suggesting likely failure sources, and prediction models forecasting potential issues before they impact customers. Engineers demonstrate how these capabilities have transformed their operations: from manual log searching during incidents to automated pattern identification that immediately highlights relevant events, from reactive troubleshooting to proactive intervention before customer impact, and from human-scaled analysis to comprehensive processing of billions of log events. Performance metrics show dramatic operational improvements: 74% reduction in mean-time-to-resolution, 68% fewer customer-impacting incidents through early detection, and 92% decrease in false positive alerts compared to traditional rule-based monitoring.
+### Scene Description
+
+ A banking platform operations center where machine learning models have been fully integrated into operational workflows. Real-time dashboards show automated systems processing transaction and system logs through multiple analysis layers: anomaly detection automatically identifying unusual patterns, classification models categorizing events by type and severity, root cause analysis suggesting likely failure sources, and prediction models forecasting potential issues before they impact customers. Engineers demonstrate how these capabilities have transformed their operations: from manual log searching during incidents to automated pattern identification that immediately highlights relevant events, from reactive troubleshooting to proactive intervention before customer impact, and from human-scaled analysis to comprehensive processing of billions of log events. Performance metrics show dramatic operational improvements: 74% reduction in mean-time-to-resolution, 68% fewer customer-impacting incidents through early detection, and 92% decrease in false positive alerts compared to traditional rule-based monitoring.
 
 ### Teaching Narrative
 
@@ -666,7 +684,9 @@ To successfully operationalize machine learning for banking log analysis:
 
 ## Panel 10: The Continuous Learning Cycle - Evolving with Experience
 
-**Scene Description**: A banking analytics center demonstrating their continuous learning implementation for security monitoring. Timeline visualizations show how their fraud detection models have progressively evolved through structured feedback loops: initial models trained on historical data, ongoing performance monitoring tracking detection effectiveness, analyst feedback capturing investigation outcomes, automated retraining incorporating new patterns, and A/B testing validating improvements before full deployment. The security lead demonstrates how this approach has enabled their systems to automatically adapt to emerging threats—showing how models initially missing a novel fraud approach progressively improved detection as feedback mechanisms incorporated new examples, eventually identifying similar attacks with high accuracy without requiring explicit reprogramming. Performance trends confirm continuously improving detection rates even as attack methods evolve, maintaining effectiveness where traditional static approaches would gradually degrade.
+### Scene Description
+
+ A banking analytics center demonstrating their continuous learning implementation for security monitoring. Timeline visualizations show how their fraud detection models have progressively evolved through structured feedback loops: initial models trained on historical data, ongoing performance monitoring tracking detection effectiveness, analyst feedback capturing investigation outcomes, automated retraining incorporating new patterns, and A/B testing validating improvements before full deployment. The security lead demonstrates how this approach has enabled their systems to automatically adapt to emerging threats—showing how models initially missing a novel fraud approach progressively improved detection as feedback mechanisms incorporated new examples, eventually identifying similar attacks with high accuracy without requiring explicit reprogramming. Performance trends confirm continuously improving detection rates even as attack methods evolve, maintaining effectiveness where traditional static approaches would gradually degrade.
 
 ### Teaching Narrative
 

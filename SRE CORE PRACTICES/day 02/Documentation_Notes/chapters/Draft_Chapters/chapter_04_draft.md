@@ -64,7 +64,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: Through the Customer's Eyes
 
-**Scene Description**: UX researchers and SREs collaborating on metrics dashboard showing customer journey through digital account opening process with RED metrics overlaid. Visual displays a multi-step customer journey map with Rate, Error, and Duration measurements at each step.
+### Scene Description
+
+ UX researchers and SREs collaborating on metrics dashboard showing customer journey through digital account opening process with RED metrics overlaid. Visual displays a multi-step customer journey map with Rate, Error, and Duration measurements at each step.
 
 ### Teaching Narrative
 
@@ -103,7 +105,9 @@ In digital account opening, poor customer experience directly impacts new accoun
 
 ## Panel 2: Rate - Understanding the Demand
 
-**Scene Description**: Team analyzing transaction rate metrics across different banking channels during marketing campaign launch. Visual shows multi-channel dashboard comparing mobile, web, branch, and call center transaction volumes with unusual patterns highlighted.
+### Scene Description
+
+ Team analyzing transaction rate metrics across different banking channels during marketing campaign launch. Visual shows multi-channel dashboard comparing mobile, web, branch, and call center transaction volumes with unusual patterns highlighted.
 
 ### Teaching Narrative
 
@@ -143,7 +147,9 @@ For multi-channel banking operations, rate metric gaps directly affect both cust
 
 ## Panel 3: Errors - The Customer Perspective
 
-**Scene Description**: Group reviewing customer-focused error metrics dashboard that classifies failures by impact rather than technical causes. Visual shows error taxonomy with customer impact categories highlighting business process failures invisible to technical monitoring.
+### Scene Description
+
+ Group reviewing customer-focused error metrics dashboard that classifies failures by impact rather than technical causes. Visual shows error taxonomy with customer impact categories highlighting business process failures invisible to technical monitoring.
 
 ### Teaching Narrative
 
@@ -183,7 +189,9 @@ In mortgage processing, error measurement gaps directly affect both customer sat
 
 ## Panel 4: Duration - Time is Money
 
-**Scene Description**: Performance team examining duration metrics for mortgage application process, identifying customer abandonment correlation with processing time. Visual shows step-by-step journey timeline with critical abandonment thresholds highlighted at key decision points.
+### Scene Description
+
+ Performance team examining duration metrics for mortgage application process, identifying customer abandonment correlation with processing time. Visual shows step-by-step journey timeline with critical abandonment thresholds highlighted at key decision points.
 
 ### Teaching Narrative
 
@@ -223,7 +231,9 @@ In mortgage processes, duration perception directly affects both completion rate
 
 ## Panel 5: The Executive View
 
-**Scene Description**: SRE presenting to executive team using business-impact dashboard showing RED metrics translated into revenue, retention, and satisfaction impacts. Visual shows technical metrics transformed into business KPIs that leadership immediately understands.
+### Scene Description
+
+ SRE presenting to executive team using business-impact dashboard showing RED metrics translated into revenue, retention, and satisfaction impacts. Visual shows technical metrics transformed into business KPIs that leadership immediately understands.
 
 ### Teaching Narrative
 

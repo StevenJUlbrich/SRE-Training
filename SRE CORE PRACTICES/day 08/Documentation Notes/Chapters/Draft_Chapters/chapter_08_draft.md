@@ -35,7 +35,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Instrumentation Wild West
 
-**Scene Description**: A chaotic war room filled with exhausted SREs staring at screens showing hundreds of dashboards and alerts. One engineer frantically scrolls through thousands of log lines while another desperately tries to make sense of a metrics dashboard with hundreds of unorganized graphs. In the corner, a financial officer holds a printout of an alarming observability bill, trying to get someone's attention. The room represents pure observability chaos - disconnected, overwhelming, and ultimately ineffective despite massive data collection.
+### Scene Description
+
+ A chaotic war room filled with exhausted SREs staring at screens showing hundreds of dashboards and alerts. One engineer frantically scrolls through thousands of log lines while another desperately tries to make sense of a metrics dashboard with hundreds of unorganized graphs. In the corner, a financial officer holds a printout of an alarming observability bill, trying to get someone's attention. The room represents pure observability chaos - disconnected, overwhelming, and ultimately ineffective despite massive data collection.
 
 ### Teaching Narrative
 
@@ -53,7 +55,9 @@ The fundamental truth of effective observability is counterintuitive: less data,
 
 ## Panel 2: The Observability Constitution
 
-**Scene Description**: A diverse group of engineers, product managers, and financial stakeholders gather around a whiteboard covered with a carefully structured document titled "Observability Constitution." The document outlines clear guidelines for instrumentation standards, naming conventions, and decision frameworks. Throughout the room, smaller working groups review different sections: metric naming patterns, log verbosity controls, and trace sampling guidelines. In the center, a dashboard displays a "governance health score" for different systems, showing the practical impact of these standards.
+### Scene Description
+
+ A diverse group of engineers, product managers, and financial stakeholders gather around a whiteboard covered with a carefully structured document titled "Observability Constitution." The document outlines clear guidelines for instrumentation standards, naming conventions, and decision frameworks. Throughout the room, smaller working groups review different sections: metric naming patterns, log verbosity controls, and trace sampling guidelines. In the center, a dashboard displays a "governance health score" for different systems, showing the practical impact of these standards.
 
 ### Teaching Narrative
 
@@ -71,7 +75,9 @@ A well-crafted Observability Constitution operates as a living agreement that ev
 
 ## Panel 3: The Instrumentation Review Board
 
-**Scene Description**: A scheduled instrumentation review meeting is underway. Three engineers present a proposal for new metrics in a payment processing system while a cross-functional review board listens attentively. On screen, the engineers display their proposal including cardinality estimates, cost projections, and troubleshooting scenarios the new instrumentation would enable. A governance dashboard shows the system's current observability metrics: signal-to-noise ratio, cost per transaction, and alert actionability percentages. Board members ask probing questions about alternatives considered and how the proposal aligns with established standards.
+### Scene Description
+
+ A scheduled instrumentation review meeting is underway. Three engineers present a proposal for new metrics in a payment processing system while a cross-functional review board listens attentively. On screen, the engineers display their proposal including cardinality estimates, cost projections, and troubleshooting scenarios the new instrumentation would enable. A governance dashboard shows the system's current observability metrics: signal-to-noise ratio, cost per transaction, and alert actionability percentages. Board members ask probing questions about alternatives considered and how the proposal aligns with established standards.
 
 ### Teaching Narrative
 
@@ -89,7 +95,9 @@ The IRB process should scale with risk - minor instrumentation changes might und
 
 ## Panel 4: Automated Guardrails
 
-**Scene Description**: An engineer attempts to deploy code containing poorly designed instrumentation that would create thousands of unique metrics. Immediately, a CI/CD pipeline test fails with a detailed report highlighting the potential cardinality explosion. The system automatically suggests alternatives that would deliver similar insights with dramatically lower cardinality. On a nearby screen, a governance dashboard shows dozens of similar violations caught automatically across different teams, with metrics showing the cost savings from prevented instrumentation anti-patterns.
+### Scene Description
+
+ An engineer attempts to deploy code containing poorly designed instrumentation that would create thousands of unique metrics. Immediately, a CI/CD pipeline test fails with a detailed report highlighting the potential cardinality explosion. The system automatically suggests alternatives that would deliver similar insights with dramatically lower cardinality. On a nearby screen, a governance dashboard shows dozens of similar violations caught automatically across different teams, with metrics showing the cost savings from prevented instrumentation anti-patterns.
 
 ### Teaching Narrative
 
@@ -107,7 +115,9 @@ The most sophisticated automated governance systems provide not just validation 
 
 ## Panel 5: The Observability Data Lifecycle
 
-**Scene Description**: A visualization shows the complete lifecycle of observability data flowing through banking systems. At each stage, governance controls are highlighted: generation policies at the source, aggregation and sampling in transit, tiered storage based on query patterns, and finally, automated purging of low-value data. Engineers review a dashboard showing the "Observability Value Index" of different data sources - a composite metric combining query frequency, alert usefulness, and troubleshooting value relative to storage cost. In the background, a governance automation platform adjusts retention policies based on actual usage patterns.
+### Scene Description
+
+ A visualization shows the complete lifecycle of observability data flowing through banking systems. At each stage, governance controls are highlighted: generation policies at the source, aggregation and sampling in transit, tiered storage based on query patterns, and finally, automated purging of low-value data. Engineers review a dashboard showing the "Observability Value Index" of different data sources - a composite metric combining query frequency, alert usefulness, and troubleshooting value relative to storage cost. In the background, a governance automation platform adjusts retention policies based on actual usage patterns.
 
 ### Teaching Narrative
 
@@ -127,7 +137,9 @@ By governing the complete lifecycle, organizations can maintain a healthy observ
 
 ## Panel 6: Metrics for Governance Success
 
-**Scene Description**: A quarterly observability governance review meeting is in progress. On large screens, trend lines show the evolution of key governance metrics: cost per transaction is steadily decreasing, mean time to detection is improving, signal-to-noise ratio is rising, and query performance is getting faster. However, one chart shows increasing observability technical debt in a newly acquired system not yet under governance. A team lead presents a targeted plan to bring this system into compliance while explaining how governance metrics reveal both successes and opportunities for improvement.
+### Scene Description
+
+ A quarterly observability governance review meeting is in progress. On large screens, trend lines show the evolution of key governance metrics: cost per transaction is steadily decreasing, mean time to detection is improving, signal-to-noise ratio is rising, and query performance is getting faster. However, one chart shows increasing observability technical debt in a newly acquired system not yet under governance. A team lead presents a targeted plan to bring this system into compliance while explaining how governance metrics reveal both successes and opportunities for improvement.
 
 ### Teaching Narrative
 
@@ -147,7 +159,9 @@ By consistently tracking these metrics and sharing them transparently, governanc
 
 ## Panel 7: Governance Evolution and Maturity
 
-**Scene Description**: A timeline visualization shows the evolution of a banking organization's observability governance over three years. It begins with basic naming standards, then progresses through increasingly sophisticated stages: automated validation tools, a formal review board, comprehensive lifecycle management, and finally an AI-assisted system that proactively recommends instrumentation improvements. At each stage, key metrics show dramatic improvements in cost efficiency and troubleshooting effectiveness. A maturity model on display shows different teams at various stages of the journey, with clear paths for advancement.
+### Scene Description
+
+ A timeline visualization shows the evolution of a banking organization's observability governance over three years. It begins with basic naming standards, then progresses through increasingly sophisticated stages: automated validation tools, a formal review board, comprehensive lifecycle management, and finally an AI-assisted system that proactively recommends instrumentation improvements. At each stage, key metrics show dramatic improvements in cost efficiency and troubleshooting effectiveness. A maturity model on display shows different teams at various stages of the journey, with clear paths for advancement.
 
 ### Teaching Narrative
 

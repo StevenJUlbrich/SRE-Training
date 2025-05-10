@@ -41,7 +41,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Unexpected Outage - Beyond Traditional Test Cases
 
-**Scene Description**: A banking operations center at 3:15 PM on a Friday. Multiple support engineers frantically respond to alerts as a payment processing system unexpectedly fails during peak volume. On wall-mounted displays, transaction success rates plummet from 99.9% to 42% in minutes. Katherine, a seasoned SRE, stands in front of the main dashboard looking contemplative rather than panicked, comparing the failure pattern to documentation in her hand labeled "Last Quarter's Chaos Engineering Report."
+### Scene Description
+
+ A banking operations center at 3:15 PM on a Friday. Multiple support engineers frantically respond to alerts as a payment processing system unexpectedly fails during peak volume. On wall-mounted displays, transaction success rates plummet from 99.9% to 42% in minutes. Katherine, a seasoned SRE, stands in front of the main dashboard looking contemplative rather than panicked, comparing the failure pattern to documentation in her hand labeled "Last Quarter's Chaos Engineering Report."
 
 ### Teaching Narrative
 
@@ -105,7 +107,9 @@ To implement effective resilience testing beyond traditional QA approaches, foll
 
 ## Panel 2: Designing the Experiment - Hypothesis-Driven Failure Testing
 
-**Scene Description**: A team meeting room with whiteboard walls covered in system diagrams. Hector leads a diverse group of engineers as they map out a banking system's critical paths. On the whiteboard, they've written: "HYPOTHESIS: If the primary payment gateway experiences 30% packet loss, the automatic failover to the secondary gateway will complete within 8 seconds, preventing customer transaction timeouts." Team members are annotating specific components with sticky notes indicating potential failure points, while a compliance officer in the corner reviews a document titled "Safe Testing Boundaries."
+### Scene Description
+
+ A team meeting room with whiteboard walls covered in system diagrams. Hector leads a diverse group of engineers as they map out a banking system's critical paths. On the whiteboard, they've written: "HYPOTHESIS: If the primary payment gateway experiences 30% packet loss, the automatic failover to the secondary gateway will complete within 8 seconds, preventing customer transaction timeouts." Team members are annotating specific components with sticky notes indicating potential failure points, while a compliance officer in the corner reviews a document titled "Safe Testing Boundaries."
 
 ### Teaching Narrative
 
@@ -178,7 +182,9 @@ To implement effective hypothesis-driven resilience testing, follow these five a
 
 ## Panel 3: The Blast Radius - Containing the Impact of Resilience Tests
 
-**Scene Description**: A security operations center with engineers monitoring a testing dashboard. Multiple screens show real-time metrics of a banking authentication service under controlled stress. A prominently displayed diagram shows concentric circles around a "test target" component, with clearly defined boundaries highlighted in red labeled "BLAST RADIUS - DO NOT CROSS." The outermost boundary shows connections to critical systems that must remain untouched: fraud detection, core banking, and regulatory reporting. A timer counts down the remaining test window as engineers compare real-time metrics against predefined abort thresholds.
+### Scene Description
+
+ A security operations center with engineers monitoring a testing dashboard. Multiple screens show real-time metrics of a banking authentication service under controlled stress. A prominently displayed diagram shows concentric circles around a "test target" component, with clearly defined boundaries highlighted in red labeled "BLAST RADIUS - DO NOT CROSS." The outermost boundary shows connections to critical systems that must remain untouched: fraud detection, core banking, and regulatory reporting. A timer counts down the remaining test window as engineers compare real-time metrics against predefined abort thresholds.
 
 ### Teaching Narrative
 
@@ -251,7 +257,9 @@ To implement effective blast radius controls for resilience testing, follow thes
 
 ## Panel 4: Game Day - Orchestrating Human and Technical Responses
 
-**Scene Description**: A pre-launch review meeting for a new mobile banking feature. The room is divided between developers eager to ship (shown with excited expressions and "Launch Now!" mugs) and SRE service owners conducting a methodical readiness assessment (shown with clipboards and "Reliability First" badges). On a large screen, a comprehensive checklist shows categories: "Observability," "Deployment Safety," "Capacity Planning," "Failure Modes," "Data Management," and "Operational Procedures." Some items are checked green, others show amber warnings, and a few critical items remain red. Speech bubbles show an SRE asking: "What happens if the payment gateway timeouts increase during peak holiday shopping?" and "How will we roll back if the feature causes unexpected database load?"
+### Scene Description
+
+ A pre-launch review meeting for a new mobile banking feature. The room is divided between developers eager to ship (shown with excited expressions and "Launch Now!" mugs) and SRE service owners conducting a methodical readiness assessment (shown with clipboards and "Reliability First" badges). On a large screen, a comprehensive checklist shows categories: "Observability," "Deployment Safety," "Capacity Planning," "Failure Modes," "Data Management," and "Operational Procedures." Some items are checked green, others show amber warnings, and a few critical items remain red. Speech bubbles show an SRE asking: "What happens if the payment gateway timeouts increase during peak holiday shopping?" and "How will we roll back if the feature causes unexpected database load?"
 
 ### Teaching Narrative
 
@@ -319,7 +327,9 @@ To implement effective Game Day exercises, follow these five actionable steps:
 
 ## Panel 5: Fault Injection - Moving from Manual to Automated Resilience Testing
 
-**Scene Description**: A software development environment where an SRE team is reviewing code for a new fault injection framework. On one screen, a developer writes a script that will randomly terminate instances in their payment processing cluster. Another screen shows a dashboard of resilience metrics that will be monitored during automated tests. A whiteboard lists different failure types being programmed: "Network Latency Injection," "Dependency Failures," "Resource Exhaustion," and "Clock Skew." A calendar on the wall shows a progression from "Manual Testing Phase" to "Supervised Automation" to "Continuous Resilience Testing."
+### Scene Description
+
+ A software development environment where an SRE team is reviewing code for a new fault injection framework. On one screen, a developer writes a script that will randomly terminate instances in their payment processing cluster. Another screen shows a dashboard of resilience metrics that will be monitored during automated tests. A whiteboard lists different failure types being programmed: "Network Latency Injection," "Dependency Failures," "Resource Exhaustion," and "Clock Skew." A calendar on the wall shows a progression from "Manual Testing Phase" to "Supervised Automation" to "Continuous Resilience Testing."
 
 ### Teaching Narrative
 
@@ -385,7 +395,9 @@ To implement effective automated fault injection testing, follow these five acti
 
 ## Panel 6: Chaos Engineering - Building Antifragile Banking Systems
 
-**Scene Description**: An engineering team's workspace with a wall display showing the architecture of a new digital banking platform. Surrounding the architecture diagram are posters highlighting "Principles of Chaos Engineering" and "Antifragility in Financial Systems." Engineers are gathered around a table reviewing results from automated chaos experiments that ran overnight, showing unexpected resilience gaps in seemingly redundant systems. Post-it notes on the architecture diagram mark components that have been hardened through previous chaos experiments, with metrics showing improved recovery time after each iteration of testing.
+### Scene Description
+
+ An engineering team's workspace with a wall display showing the architecture of a new digital banking platform. Surrounding the architecture diagram are posters highlighting "Principles of Chaos Engineering" and "Antifragility in Financial Systems." Engineers are gathered around a table reviewing results from automated chaos experiments that ran overnight, showing unexpected resilience gaps in seemingly redundant systems. Post-it notes on the architecture diagram mark components that have been hardened through previous chaos experiments, with metrics showing improved recovery time after each iteration of testing.
 
 ### Teaching Narrative
 
@@ -457,7 +469,9 @@ To implement effective Chaos Engineering practices, follow these five actionable
 
 ## Panel 7: Resilience Testing Metrics - Measuring Improvement Over Time
 
-**Scene Description**: A quarterly review meeting where an SRE team presents results from their resilience testing program to executive stakeholders. Slides show year-over-year improvements in key resilience metrics: "Mean Time to Detect Critical Failures: 12min → 3min," "Regional Failover Success Rate: 82% → 99.8%," "Dependency Failure Recovery: 17min → 4min," and "Game Day Mean Time to Repair: 52min → 14min." The most prominent metric shows "Unexpected Production Incidents: 24 → 7" with a note "70% Reduction After Resilience Program Implementation." Banking executives are nodding approvingly while reviewing a document titled "Resilience Testing ROI: Customer Trust and Regulatory Compliance."
+### Scene Description
+
+ A quarterly review meeting where an SRE team presents results from their resilience testing program to executive stakeholders. Slides show year-over-year improvements in key resilience metrics: "Mean Time to Detect Critical Failures: 12min → 3min," "Regional Failover Success Rate: 82% → 99.8%," "Dependency Failure Recovery: 17min → 4min," and "Game Day Mean Time to Repair: 52min → 14min." The most prominent metric shows "Unexpected Production Incidents: 24 → 7" with a note "70% Reduction After Resilience Program Implementation." Banking executives are nodding approvingly while reviewing a document titled "Resilience Testing ROI: Customer Trust and Regulatory Compliance."
 
 ### Teaching Narrative
 

@@ -34,7 +34,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Resource Detective
 
-**Scene Description**: Infrastructure team applying systematic USE method checklist to troubleshoot batch processing failure in core banking system. Visual shows engineers working through a structured evaluation of utilization, saturation, and errors for each system component.
+### Scene Description
+
+ Infrastructure team applying systematic USE method checklist to troubleshoot batch processing failure in core banking system. Visual shows engineers working through a structured evaluation of utilization, saturation, and errors for each system component.
 
 ### Teaching Narrative
 
@@ -73,7 +75,9 @@ For batch reconciliation processes, completion within defined windows directly i
 
 ## Panel 2: The Invisible Bottleneck
 
-**Scene Description**: Team discovering disk I/O saturation during peak write periods causing nightly batch processing failures despite normal CPU and memory metrics. Visual shows contrast between healthy CPU/memory dashboards and critical disk queue metrics.
+### Scene Description
+
+ Team discovering disk I/O saturation during peak write periods causing nightly batch processing failures despite normal CPU and memory metrics. Visual shows contrast between healthy CPU/memory dashboards and critical disk queue metrics.
 
 ### Teaching Narrative
 
@@ -109,7 +113,9 @@ In financial batch processing, invisible bottlenecks directly affect regulatory 
 
 ## Panel 3: Beyond Basic Resources
 
-**Scene Description**: Advanced monitoring discussion with team identifying non-standard resources to measure: connection pools, thread pools, and queue depths in payment processing system. Visual shows resource hierarchy from physical to logical components.
+### Scene Description
+
+ Advanced monitoring discussion with team identifying non-standard resources to measure: connection pools, thread pools, and queue depths in payment processing system. Visual shows resource hierarchy from physical to logical components.
 
 ### Teaching Narrative
 
@@ -150,7 +156,9 @@ In payment authorization systems, application resource constraints directly impa
 
 ## Panel 4: The Measurement Matrix
 
-**Scene Description**: Operations team creating comprehensive resource inventory with USE metrics applied to each component in trading platform. Visual shows structured matrix mapping resources to measurement types across system layers.
+### Scene Description
+
+ Operations team creating comprehensive resource inventory with USE metrics applied to each component in trading platform. Visual shows structured matrix mapping resources to measurement types across system layers.
 
 ### Teaching Narrative
 
@@ -191,7 +199,9 @@ For trading platforms, comprehensive resource visibility directly affects transa
 
 ## Panel 5: Correlating Resource Constraints
 
-**Scene Description**: Performance engineers mapping relationships between resource metrics to identify cascade patterns where one resource constraint triggers others. Visual shows dependency diagram highlighting how database connection limits impact thread pool utilization.
+### Scene Description
+
+ Performance engineers mapping relationships between resource metrics to identify cascade patterns where one resource constraint triggers others. Visual shows dependency diagram highlighting how database connection limits impact thread pool utilization.
 
 ### Teaching Narrative
 

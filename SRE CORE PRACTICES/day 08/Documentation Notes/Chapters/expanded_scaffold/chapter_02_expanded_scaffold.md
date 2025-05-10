@@ -1,7 +1,9 @@
 # Chapter 2: Observability Economics 101
 
 ## Panel 1: The Billing Shock
-**Scene Description**: A monthly budget review meeting where a CTO, CFO, and SRE director stare in disbelief at a projected chart showing observability costs growing exponentially over six months. The SRE director points to a specific inflection point where costs began accelerating - coinciding with their migration from legacy monitoring tools to a modern observability platform. On the whiteboard, the CFO has written "3x Budget?!" in red marker. The SRE director's laptop shows multiple browser tabs open to pricing pages of different observability vendors, revealing the various consumption-based pricing models.
+### Scene Description
+
+ A monthly budget review meeting where a CTO, CFO, and SRE director stare in disbelief at a projected chart showing observability costs growing exponentially over six months. The SRE director points to a specific inflection point where costs began accelerating - coinciding with their migration from legacy monitoring tools to a modern observability platform. On the whiteboard, the CFO has written "3x Budget?!" in red marker. The SRE director's laptop shows multiple browser tabs open to pricing pages of different observability vendors, revealing the various consumption-based pricing models.
 
 ### Teaching Narrative
 The transition from traditional monitoring to modern observability often triggers a profound financial shock for organizations unprepared for fundamentally different economic models. Legacy monitoring tools typically operated on predictable licensing costs - fixed annual fees based on the number of servers or applications monitored, regardless of data volume. In stark contrast, today's observability platforms use consumption-based pricing where costs scale directly with the amount of data ingested, stored, and queried.
@@ -76,7 +78,9 @@ To avoid observability billing shock and establish sustainable economic governan
    - Establish regular economic reviews as part of technical governance
 
 ## Panel 2: The Three Pillars of Cost
-**Scene Description**: An SRE architect stands before a whiteboard divided into three columns labeled: "Ingest," "Storage," and "Query." Each column shows detailed calculations and cost factors for different observability signals. The ingest column highlights per-gigabyte ingestion fees and cardinality impacts. The storage section shows tiered retention costs across hot, warm, and cold storage. The query column illustrates how complex analyses and dashboard refreshes drive computational costs. Team members take notes as the architect explains the multiplicative relationship between these three cost dimensions.
+### Scene Description
+
+ An SRE architect stands before a whiteboard divided into three columns labeled: "Ingest," "Storage," and "Query." Each column shows detailed calculations and cost factors for different observability signals. The ingest column highlights per-gigabyte ingestion fees and cardinality impacts. The storage section shows tiered retention costs across hot, warm, and cold storage. The query column illustrates how complex analyses and dashboard refreshes drive computational costs. Team members take notes as the architect explains the multiplicative relationship between these three cost dimensions.
 
 ### Teaching Narrative
 Modern observability costs are driven by three fundamental dimensions that interact in complex ways: ingestion, storage, and query costs. Understanding each dimension and how they influence total expenditure is essential for effective cost management.
@@ -159,7 +163,9 @@ To effectively manage observability economics across all three cost dimensions, 
    - Develop cross-team knowledge sharing for cost optimization techniques
 
 ## Panel 3: The Unit Economics of Telemetry
-**Scene Description**: A banking platform team conducts a data-driven review of their observability costs. Spreadsheets and diagrams show calculations breaking down costs to the individual metric, log line, and trace span level. A particularly revealing chart compares the per-transaction observability cost across different banking services - showing that credit card processing generates $0.0003 in observability costs per transaction while wealth management costs $0.0052 per interaction. Engineers debate the business justification for these different cost structures based on transaction values and risk profiles.
+### Scene Description
+
+ A banking platform team conducts a data-driven review of their observability costs. Spreadsheets and diagrams show calculations breaking down costs to the individual metric, log line, and trace span level. A particularly revealing chart compares the per-transaction observability cost across different banking services - showing that credit card processing generates $0.0003 in observability costs per transaction while wealth management costs $0.0052 per interaction. Engineers debate the business justification for these different cost structures based on transaction values and risk profiles.
 
 ### Teaching Narrative
 Cost-effective observability requires developing a sophisticated understanding of unit economics - the cost to monitor individual transactions, user sessions, or business operations. This granular perspective transforms abstract platform bills into actionable insights that can drive optimization efforts and enable meaningful cost-benefit analysis.
@@ -240,7 +246,9 @@ To implement effective telemetry unit economics, follow these actionable steps:
    - Create hackathon events focused on unit cost optimization
 
 ## Panel 4: The Cardinality Cost Multiplier
-**Scene Description**: A debugging session where an engineering team investigates an unexpected observability cost spike. They trace it to a recent code change that added a high-cardinality customer ID dimension to a core transaction metric. A visualization shows how this single change caused a metrics explosion from thousands to millions of time series. A cost calculator demonstrates how each additional dimension multiplies rather than adds to the total series count. The team debates alternative approaches that would provide similar analytical capabilities without the cardinality explosion.
+### Scene Description
+
+ A debugging session where an engineering team investigates an unexpected observability cost spike. They trace it to a recent code change that added a high-cardinality customer ID dimension to a core transaction metric. A visualization shows how this single change caused a metrics explosion from thousands to millions of time series. A cost calculator demonstrates how each additional dimension multiplies rather than adds to the total series count. The team debates alternative approaches that would provide similar analytical capabilities without the cardinality explosion.
 
 ### Teaching Narrative
 Cardinality - the number of unique time series generated by metrics - represents one of the most significant and least understood cost drivers in modern observability. Unlike traditional monitoring with fixed metric sets, dimensional metrics create new time series for each unique combination of labels or tags. This can trigger exponential growth when high-cardinality dimensions like user IDs, transaction IDs, or session IDs are added to metrics.
@@ -321,7 +329,9 @@ To effectively manage metric cardinality and prevent cost explosions, implement 
    - Implement regular cardinality reduction targets in technical planning
 
 ## Panel 5: The ROI Framework
-**Scene Description**: A quarterly business review where SRE leadership presents an observability ROI analysis to executive stakeholders. Slides show before-and-after comparisons of key business metrics following observability investments: mean time to detection decreased by 65%, customer-impacting incidents reduced by 38%, and engineer productivity improved by 22%. The presentation includes a detailed ROI calculation comparing observability costs against quantified business benefits, demonstrating a positive return despite significant platform investments. The meeting concludes with approval for continued funding based on demonstrated business value.
+### Scene Description
+
+ A quarterly business review where SRE leadership presents an observability ROI analysis to executive stakeholders. Slides show before-and-after comparisons of key business metrics following observability investments: mean time to detection decreased by 65%, customer-impacting incidents reduced by 38%, and engineer productivity improved by 22%. The presentation includes a detailed ROI calculation comparing observability costs against quantified business benefits, demonstrating a positive return despite significant platform investments. The meeting concludes with approval for continued funding based on demonstrated business value.
 
 ### Teaching Narrative
 For observability to be sustainable, organizations must move beyond viewing it as a pure cost center and develop frameworks that quantify its business value. This return on investment (ROI) approach transforms technical observability decisions into business investments with measurable returns, creating a foundation for strategic decision-making and continued executive support.
@@ -402,7 +412,9 @@ To build an effective observability ROI framework, implement these actionable st
    - Create executive communication frameworks that reinforce value narrative
 
 ## Panel 6: The Budget Governance Model
-**Scene Description**: A monthly observability steering committee meeting where technology and finance leaders review cost metrics and address budget exceptions. Dashboards display observability spending by team, service, and signal type with trend analysis and forecasting. A team lead presents a justification for exceeding their allocation due to a new product launch, requesting a permanent budget adjustment based on transaction volume increases. Committee members evaluate the request against established governance principles and business impact before making a decision. In the background, a wall display shows the organization's documented observability budget governance framework.
+### Scene Description
+
+ A monthly observability steering committee meeting where technology and finance leaders review cost metrics and address budget exceptions. Dashboards display observability spending by team, service, and signal type with trend analysis and forecasting. A team lead presents a justification for exceeding their allocation due to a new product launch, requesting a permanent budget adjustment based on transaction volume increases. Committee members evaluate the request against established governance principles and business impact before making a decision. In the background, a wall display shows the organization's documented observability budget governance framework.
 
 ### Teaching Narrative
 As observability matures from a technical practice to a strategic investment, organizations need formal governance structures that balance innovation, operational requirements, and financial discipline. Effective budget governance creates sustainable frameworks for making observability investment decisions aligned with business priorities rather than reacting to monthly billing surprises.
@@ -483,7 +495,9 @@ To establish effective observability budget governance, implement these actionab
    - Establish recognition for teams demonstrating effective cost management
 
 ## Panel 7: The Vendor Economics
-**Scene Description**: A platform selection committee evaluates proposals from five observability vendors. Whiteboards compare complex pricing structures with dramatically different approaches - some charging primarily for ingestion, others for retention, and some using proprietary units like "containers monitored" or "spans indexed." Financial analysts present five-year TCO projections showing how costs scale under different growth scenarios. The discussion highlights how each pricing model creates different incentives and constraints for observability practices. Team members debate which model best aligns with their strategic observability goals.
+### Scene Description
+
+ A platform selection committee evaluates proposals from five observability vendors. Whiteboards compare complex pricing structures with dramatically different approaches - some charging primarily for ingestion, others for retention, and some using proprietary units like "containers monitored" or "spans indexed." Financial analysts present five-year TCO projections showing how costs scale under different growth scenarios. The discussion highlights how each pricing model creates different incentives and constraints for observability practices. Team members debate which model best aligns with their strategic observability goals.
 
 ### Teaching Narrative
 The observability market encompasses diverse vendor approaches with substantially different economic models that profoundly impact long-term costs and incentives. Understanding these differences is crucial for making strategic platform decisions that align with organizational needs and avoid unexpected financial consequences as observability practices mature.

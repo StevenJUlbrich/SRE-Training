@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Virtual Mystery
 
-**Scene Description**: Infrastructure team investigating trading platform performance inconsistencies using hypervisor-level metrics revealing resource contention patterns. Visual displays multi-layer monitoring showing application metrics appearing normal while hypervisor-level metrics reveal CPU scheduling delays and resource contention invisible to guest operating systems.
+### Scene Description
+
+ Infrastructure team investigating trading platform performance inconsistencies using hypervisor-level metrics revealing resource contention patterns. Visual displays multi-layer monitoring showing application metrics appearing normal while hypervisor-level metrics reveal CPU scheduling delays and resource contention invisible to guest operating systems.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ For trading platforms, virtualization performance directly affects both executio
 
 ## Panel 2: The Container Confusion
 
-**Scene Description**: New SRE puzzled by pod vs. node metrics in Kubernetes, looking at multi-level dashboard showing relationship between different measurement layers. Visual illustrates the container orchestration hierarchy with metrics collected at each level and their relationships highlighted for a payment microservices environment.
+### Scene Description
+
+ New SRE puzzled by pod vs. node metrics in Kubernetes, looking at multi-level dashboard showing relationship between different measurement layers. Visual illustrates the container orchestration hierarchy with metrics collected at each level and their relationships highlighted for a payment microservices environment.
 
 ### Teaching Narrative
 
@@ -138,7 +142,9 @@ For payment microservices, container orchestration visibility directly affects b
 
 ## Panel 3: The Cloud Bill Shock
 
-**Scene Description**: Finance team questioning cloud costs versus performance with metrics dashboard showing resource utilization across AWS services for recently migrated banking components. Visual displays cost optimization metrics highlighting idle resources, overprovisioned services, and utilization patterns with financial impact calculations.
+### Scene Description
+
+ Finance team questioning cloud costs versus performance with metrics dashboard showing resource utilization across AWS services for recently migrated banking components. Visual displays cost optimization metrics highlighting idle resources, overprovisioned services, and utilization patterns with financial impact calculations.
 
 ### Teaching Narrative
 
@@ -189,7 +195,9 @@ For cloud-hosted banking services, cost efficiency directly affects both operati
 
 ## Panel 4: The Multi-Region Resilience
 
-**Scene Description**: Disaster recovery team testing cross-region failover capabilities with metrics dashboard showing replication status and recovery metrics. Visual illustrates comprehensive disaster recovery measurement framework tracking data synchronization, configuration consistency, and recovery capabilities across geographically distributed banking infrastructure.
+### Scene Description
+
+ Disaster recovery team testing cross-region failover capabilities with metrics dashboard showing replication status and recovery metrics. Visual illustrates comprehensive disaster recovery measurement framework tracking data synchronization, configuration consistency, and recovery capabilities across geographically distributed banking infrastructure.
 
 ### Teaching Narrative
 
@@ -240,7 +248,9 @@ For financial institutions, recovery capability directly affects both business c
 
 ## Panel 5: The Hybrid Handoff
 
-**Scene Description**: Operations team managing transaction flows between on-premises and cloud systems with unified metrics showing end-to-end performance across boundaries. Visual displays transaction path visualization spanning traditional data centers and cloud platforms with metrics at each handoff point identifying bottlenecks and latency contributions.
+### Scene Description
+
+ Operations team managing transaction flows between on-premises and cloud systems with unified metrics showing end-to-end performance across boundaries. Visual displays transaction path visualization spanning traditional data centers and cloud platforms with metrics at each handoff point identifying bottlenecks and latency contributions.
 
 ### Teaching Narrative
 
@@ -291,7 +301,9 @@ For hybrid banking architectures, cross-boundary visibility directly affects bot
 
 ## Panel 6: The Infrastructure as Code Metrics
 
-**Scene Description**: DevOps team reviewing deployment success metrics for infrastructure changes with quality gates and validation measurements. Visual shows detailed metrics dashboard for infrastructure deployment pipeline with automated validation results, drift detection, and deployment success rates across different environment types.
+### Scene Description
+
+ DevOps team reviewing deployment success metrics for infrastructure changes with quality gates and validation measurements. Visual shows detailed metrics dashboard for infrastructure deployment pipeline with automated validation results, drift detection, and deployment success rates across different environment types.
 
 ### Teaching Narrative
 
@@ -342,7 +354,9 @@ For financial institutions, infrastructure consistency directly affects both app
 
 ## Panel 7: The Capacity Planning Summit
 
-**Scene Description**: IT and business teams collaborating on future infrastructure requirements using resource trending metrics and business growth projections. Visual shows long-term capacity planning dashboard with historical utilization trends, growth forecasting models, and proactive expansion recommendations based on business projections for digital banking services.
+### Scene Description
+
+ IT and business teams collaborating on future infrastructure requirements using resource trending metrics and business growth projections. Visual shows long-term capacity planning dashboard with historical utilization trends, growth forecasting models, and proactive expansion recommendations based on business projections for digital banking services.
 
 ### Teaching Narrative
 

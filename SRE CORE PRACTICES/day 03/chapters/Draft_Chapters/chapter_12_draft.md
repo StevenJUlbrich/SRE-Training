@@ -39,7 +39,9 @@ Welcome to the distributed logging circus—where your precious banking transact
 
 ## Panel 1: The Distributed Challenge - When Logs Live Everywhere
 
-**Scene Description**: A banking war room during a critical customer-reported issue with international wire transfers. Multiple teams frantically search through disconnected log systems: front-end engineers examining mobile app logs, API teams reviewing gateway services, payment specialists investigating the transaction processor, compliance experts checking sanction screening services, and settlement teams examining core banking systems. Each screen shows isolated fragments of the transaction journey, but no one can reconstruct the complete path. A visual timeline shows the customer's wire transfer vanishing somewhere between systems, with the customer support representative unable to provide status as the troubleshooting enters its third hour.
+### Scene Description
+
+ A banking war room during a critical customer-reported issue with international wire transfers. Multiple teams frantically search through disconnected log systems: front-end engineers examining mobile app logs, API teams reviewing gateway services, payment specialists investigating the transaction processor, compliance experts checking sanction screening services, and settlement teams examining core banking systems. Each screen shows isolated fragments of the transaction journey, but no one can reconstruct the complete path. A visual timeline shows the customer's wire transfer vanishing somewhere between systems, with the customer support representative unable to provide status as the troubleshooting enters its third hour.
 
 ### Teaching Narrative
 
@@ -99,7 +101,9 @@ To implement effective distributed systems logging for banking transactions:
 
 ## Panel 2: The Correlation Identity - Digital Transaction DNA
 
-**Scene Description**: A financial services observability platform where engineers implement a correlation ID strategy. Interactive diagrams show how unique identifiers flow through distributed systems: generated at the customer gateway, propagated through HTTP headers between microservices, preserved in message queue properties during asynchronous operations, maintained through database transactions, and passed to external partner systems through API fields. A real-time demonstration follows a high-value international payment from mobile initiation through final settlement, with the correlation ID visibly connecting log entries across over twenty different services spanning multiple data centers and technology stacks.
+### Scene Description
+
+ A financial services observability platform where engineers implement a correlation ID strategy. Interactive diagrams show how unique identifiers flow through distributed systems: generated at the customer gateway, propagated through HTTP headers between microservices, preserved in message queue properties during asynchronous operations, maintained through database transactions, and passed to external partner systems through API fields. A real-time demonstration follows a high-value international payment from mobile initiation through final settlement, with the correlation ID visibly connecting log entries across over twenty different services spanning multiple data centers and technology stacks.
 
 ### Teaching Narrative
 
@@ -171,7 +175,9 @@ To implement effective correlation identities for distributed banking systems:
 
 ## Panel 3: The Propagation Patterns - Maintaining Context Across Boundaries
 
-**Scene Description**: A banking platform architecture review where engineers analyze correlation propagation mechanisms across different interface types. Technical diagrams detail implementation patterns for diverse boundaries: HTTP headers carrying correlation IDs between REST services, message attributes preserving context in asynchronous queues, database fields maintaining identifiers during storage operations, file naming conventions embedding context in batch processes, and specialized adapters injecting identifiers into legacy mainframe transactions. Implementation code examples show precise propagation techniques for different technologies, while gap analysis highlights integration points requiring enhanced correlation solutions—particularly around third-party services and batch processing boundaries.
+### Scene Description
+
+ A banking platform architecture review where engineers analyze correlation propagation mechanisms across different interface types. Technical diagrams detail implementation patterns for diverse boundaries: HTTP headers carrying correlation IDs between REST services, message attributes preserving context in asynchronous queues, database fields maintaining identifiers during storage operations, file naming conventions embedding context in batch processes, and specialized adapters injecting identifiers into legacy mainframe transactions. Implementation code examples show precise propagation techniques for different technologies, while gap analysis highlights integration points requiring enhanced correlation solutions—particularly around third-party services and batch processing boundaries.
 
 ### Teaching Narrative
 
@@ -246,7 +252,9 @@ To implement effective context propagation across banking system boundaries:
 
 ## Panel 4: The Causality Challenge - Understanding Event Ordering
 
-**Scene Description**: A financial trading platform incident investigation where engineers analyze a complex sequence of events leading to failed trades. Timeline visualization shows the causality challenge: timestamps from different systems showing conflicting event ordering due to clock differences, asynchronous operations creating non-intuitive execution sequences, and parallel processing paths executing simultaneously rather than sequentially. The team demonstrates their causality tracking implementation: vector clocks establishing happens-before relationships between events, logical sequence tracking independent of physical time, and causal chain visualization showing true operation dependencies rather than wall-clock ordering. This enhanced understanding immediately reveals that what appeared to be a random failure was actually a race condition in order validation occurring only under specific timing circumstances.
+### Scene Description
+
+ A financial trading platform incident investigation where engineers analyze a complex sequence of events leading to failed trades. Timeline visualization shows the causality challenge: timestamps from different systems showing conflicting event ordering due to clock differences, asynchronous operations creating non-intuitive execution sequences, and parallel processing paths executing simultaneously rather than sequentially. The team demonstrates their causality tracking implementation: vector clocks establishing happens-before relationships between events, logical sequence tracking independent of physical time, and causal chain visualization showing true operation dependencies rather than wall-clock ordering. This enhanced understanding immediately reveals that what appeared to be a random failure was actually a race condition in order validation occurring only under specific timing circumstances.
 
 ### Teaching Narrative
 
@@ -312,7 +320,9 @@ To implement effective causality tracking for distributed banking systems:
 
 ## Panel 5: The Standardization Imperative - Common Logging Schemas
 
-**Scene Description**: A banking technology governance session where platform architects establish distributed logging standards for their organization. Documentation displays show their standardized log schema: required fields including correlation identifiers, timestamp formats with explicit timezone handling, severity level standardization, service identification conventions, contextual metadata requirements, and structured formatting specifications. Implementation guides demonstrate how these standards apply across different technology stacks—from cloud-native Java services to legacy COBOL systems—with specialized adapters ensuring consistent schema compliance regardless of underlying technology. Compliance dashboards show adoption metrics across the organization, with visible correlation between standardization compliance and reduced MTTR for cross-service incidents.
+### Scene Description
+
+ A banking technology governance session where platform architects establish distributed logging standards for their organization. Documentation displays show their standardized log schema: required fields including correlation identifiers, timestamp formats with explicit timezone handling, severity level standardization, service identification conventions, contextual metadata requirements, and structured formatting specifications. Implementation guides demonstrate how these standards apply across different technology stacks—from cloud-native Java services to legacy COBOL systems—with specialized adapters ensuring consistent schema compliance regardless of underlying technology. Compliance dashboards show adoption metrics across the organization, with visible correlation between standardization compliance and reduced MTTR for cross-service incidents.
 
 ### Teaching Narrative
 
@@ -392,7 +402,9 @@ To implement effective log schema standardization for distributed banking system
 
 ## Panel 6: The Collection Architecture - Bringing Distributed Logs Together
 
-**Scene Description**: A banking observability center where engineers visualize their distributed log collection architecture. Infrastructure diagrams show the complete flow: local agents collecting logs from diverse banking systems, secure transport mechanisms maintaining compliance during transmission, centralized processing normalizing formats and enhancing context, and unified storage creating a complete view across organizational boundaries. Performance dashboards demonstrate how this architecture handles massive scale—ingesting terabytes of daily logs from thousands of components while maintaining near-real-time availability for analysis. Engineers troubleshoot a customer issue by querying this unified collection, instantly retrieving all related logs across dozens of services through a single correlation ID search—resolving in minutes what previously required hours of coordination across multiple teams.
+### Scene Description
+
+ A banking observability center where engineers visualize their distributed log collection architecture. Infrastructure diagrams show the complete flow: local agents collecting logs from diverse banking systems, secure transport mechanisms maintaining compliance during transmission, centralized processing normalizing formats and enhancing context, and unified storage creating a complete view across organizational boundaries. Performance dashboards demonstrate how this architecture handles massive scale—ingesting terabytes of daily logs from thousands of components while maintaining near-real-time availability for analysis. Engineers troubleshoot a customer issue by querying this unified collection, instantly retrieving all related logs across dozens of services through a single correlation ID search—resolving in minutes what previously required hours of coordination across multiple teams.
 
 ### Teaching Narrative
 
@@ -467,7 +479,9 @@ To implement effective collection architecture for distributed banking systems:
 
 ## Panel 7: The Trace Visualization - From Raw Logs to Transaction Stories
 
-**Scene Description**: A banking platform operations center where engineers use advanced trace visualization to investigate a complex mortgage application issue. Interactive displays transform thousands of correlated log entries into intuitive visualizations: timeline views showing the exact sequence of processing steps across twenty different services, hierarchy diagrams revealing the calling relationships between components, duration analysis highlighting unexpected latency in document processing services, and error flow visualization showing how initial validation failures cascaded through downstream systems. The team navigates from high-level transaction overview to specific log details with simple clicks, quickly identifying that a document verification service timeout was causing subtle application state corruption—a root cause that would have been nearly impossible to identify through traditional log analysis.
+### Scene Description
+
+ A banking platform operations center where engineers use advanced trace visualization to investigate a complex mortgage application issue. Interactive displays transform thousands of correlated log entries into intuitive visualizations: timeline views showing the exact sequence of processing steps across twenty different services, hierarchy diagrams revealing the calling relationships between components, duration analysis highlighting unexpected latency in document processing services, and error flow visualization showing how initial validation failures cascaded through downstream systems. The team navigates from high-level transaction overview to specific log details with simple clicks, quickly identifying that a document verification service timeout was causing subtle application state corruption—a root cause that would have been nearly impossible to identify through traditional log analysis.
 
 ### Teaching Narrative
 
@@ -533,7 +547,9 @@ To implement effective trace visualization for distributed banking systems:
 
 ## Panel 8: The Anomaly Detection - Finding Unusual Patterns
 
-**Scene Description**: A financial fraud investigation center where security analysts use distributed logging to identify suspicious transaction patterns. Advanced analytics dashboards process correlated logs across the bank's complete transaction processing ecosystem, automatically highlighting unusual patterns: unexpected service invocation sequences, atypical timing patterns between processing steps, unusual data access patterns, and deviations from historical baseline behavior. Alerts draw attention to a potentially fraudulent wire transfer pattern characterized by unusual verification sequences and timing—identified automatically through pattern analysis despite the transactions individually appearing normal. Security teams investigate using linked visualizations that immediately provide the complete context across all involved systems, quickly confirming and containing the sophisticated attack attempt.
+### Scene Description
+
+ A financial fraud investigation center where security analysts use distributed logging to identify suspicious transaction patterns. Advanced analytics dashboards process correlated logs across the bank's complete transaction processing ecosystem, automatically highlighting unusual patterns: unexpected service invocation sequences, atypical timing patterns between processing steps, unusual data access patterns, and deviations from historical baseline behavior. Alerts draw attention to a potentially fraudulent wire transfer pattern characterized by unusual verification sequences and timing—identified automatically through pattern analysis despite the transactions individually appearing normal. Security teams investigate using linked visualizations that immediately provide the complete context across all involved systems, quickly confirming and containing the sophisticated attack attempt.
 
 ### Teaching Narrative
 
@@ -618,7 +634,9 @@ To implement effective anomaly detection for distributed banking systems:
 
 ## Panel 9: The Debugging Revolution - Reconstructing Transaction Flows
 
-**Scene Description**: A banking platform development environment where engineers demonstrate distributed debugging capabilities. Developers troubleshoot a complex integration issue between the bank's investment platform and third-party market data services. Debugging tools show the complete distributed transaction context: all service interactions captured with full request-response details, data transformations tracked across component boundaries, configuration and environment variables recorded for each processing step, and detailed timing information for every operation. The engineer identifies a subtle data format mismatch between services by comparing request and response payloads across the distributed transaction—instantly resolving an issue that would have required hours of coordinated debugging across multiple teams using traditional approaches.
+### Scene Description
+
+ A banking platform development environment where engineers demonstrate distributed debugging capabilities. Developers troubleshoot a complex integration issue between the bank's investment platform and third-party market data services. Debugging tools show the complete distributed transaction context: all service interactions captured with full request-response details, data transformations tracked across component boundaries, configuration and environment variables recorded for each processing step, and detailed timing information for every operation. The engineer identifies a subtle data format mismatch between services by comparing request and response payloads across the distributed transaction—instantly resolving an issue that would have required hours of coordinated debugging across multiple teams using traditional approaches.
 
 ### Teaching Narrative
 
@@ -691,7 +709,9 @@ To implement effective distributed debugging for banking platforms:
 
 ## Panel 10: The Future Horizon - AI-Enhanced Distributed Observability
 
-**Scene Description**: A banking innovation lab where data scientists and SREs demonstrate next-generation distributed observability capabilities. Advanced visualization displays show AI-enhanced analysis of transaction logs: automated root cause identification pinpointing the most probable failure points in complex distributed transactions, natural language query interfaces allowing plain-English questions about transaction behavior, predictive analytics identifying potential reliability issues before customer impact, and autonomous remediation systems that automatically address common failure patterns based on historical resolution data. A demonstration shows the system proactively identifying an emerging capacity issue in the bank's authentication services based on subtle pattern changes across distributed logs, automatically triggering scaling operations before any customer impact occurs.
+### Scene Description
+
+ A banking innovation lab where data scientists and SREs demonstrate next-generation distributed observability capabilities. Advanced visualization displays show AI-enhanced analysis of transaction logs: automated root cause identification pinpointing the most probable failure points in complex distributed transactions, natural language query interfaces allowing plain-English questions about transaction behavior, predictive analytics identifying potential reliability issues before customer impact, and autonomous remediation systems that automatically address common failure patterns based on historical resolution data. A demonstration shows the system proactively identifying an emerging capacity issue in the bank's authentication services based on subtle pattern changes across distributed logs, automatically triggering scaling operations before any customer impact occurs.
 
 ### Teaching Narrative
 

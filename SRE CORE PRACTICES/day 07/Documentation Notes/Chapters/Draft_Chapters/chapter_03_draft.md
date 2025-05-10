@@ -38,7 +38,9 @@ There you go: brutal, practical, and guaranteed to make an SRE mutter “finally
 ---
 ## Panel 1: The Midnight Alert Avalanche
 
-**Scene Description**: A banking operations center at 2:15 AM. Hector, a new SRE transitioning from production support, sits alone at a monitoring station surrounded by multiple screens. His phone buzzes repeatedly with alerts. The screens show a dashboard for a payment processing system with multiple red indicators. Hector looks overwhelmed, staring at dozens of simultaneous alerts, unsure which ones matter. His expression shows panic as he scrolls through the flood of notifications.
+### Scene Description
+
+ A banking operations center at 2:15 AM. Hector, a new SRE transitioning from production support, sits alone at a monitoring station surrounded by multiple screens. His phone buzzes repeatedly with alerts. The screens show a dashboard for a payment processing system with multiple red indicators. Hector looks overwhelmed, staring at dozens of simultaneous alerts, unsure which ones matter. His expression shows panic as he scrolls through the flood of notifications.
 
 ### Teaching Narrative
 
@@ -92,7 +94,9 @@ To transform alert chaos into structured intelligence, implement these five acti
 
 ## Panel 2: Designing Meaningful Alerts
 
-**Scene Description**: A whiteboard session in a bright conference room. Maya, a senior SRE, leads a workshop with Hector and other team members. On the whiteboard is a diagram showing a banking transaction flow with multiple components. Maya is highlighting specific points in the flow where alerts should be placed. She's drawing connections between user impact and technical metrics. Sample alert templates are visible on one section of the board with the words "ACTIONABLE" and "USER-CENTRIC" underlined.
+### Scene Description
+
+ A whiteboard session in a bright conference room. Maya, a senior SRE, leads a workshop with Hector and other team members. On the whiteboard is a diagram showing a banking transaction flow with multiple components. Maya is highlighting specific points in the flow where alerts should be placed. She's drawing connections between user impact and technical metrics. Sample alert templates are visible on one section of the board with the words "ACTIONABLE" and "USER-CENTRIC" underlined.
 
 ### Teaching Narrative
 
@@ -146,7 +150,9 @@ Transform your alerting approach with these five practical steps:
 
 ## Panel 3: First Responder Protocol
 
-**Scene Description**: Hector's workstation during an active incident. He has a printed checklist labeled "First Responder Protocol" next to his keyboard. On his screen is a structured incident response dashboard showing payment gateway errors. A timer in the corner shows "Incident Duration: 4:32." Hector is methodically following the checklist while simultaneously typing in a team chat. The checklist shows items like "1. Acknowledge alert, 2. Verify customer impact, 3. Classify severity, 4. Notify appropriate teams."
+### Scene Description
+
+ Hector's workstation during an active incident. He has a printed checklist labeled "First Responder Protocol" next to his keyboard. On his screen is a structured incident response dashboard showing payment gateway errors. A timer in the corner shows "Incident Duration: 4:32." Hector is methodically following the checklist while simultaneously typing in a team chat. The checklist shows items like "1. Acknowledge alert, 2. Verify customer impact, 3. Classify severity, 4. Notify appropriate teams."
 
 ### Teaching Narrative
 
@@ -200,7 +206,9 @@ Implement an effective first responder protocol with these five concrete steps:
 
 ## Panel 4: Validating Customer Impact
 
-**Scene Description**: Split screen showing contrast between monitoring dashboards and actual customer experience. On the left side: monitoring dashboards showing mostly green indicators with a few yellow warnings. On the right: a customer trying to complete a mobile banking transfer but receiving an error message. In the foreground, Hector is testing the payment system with actual transactions while looking at both screens, his expression showing the realization that the dashboards aren't reflecting the true customer experience.
+### Scene Description
+
+ Split screen showing contrast between monitoring dashboards and actual customer experience. On the left side: monitoring dashboards showing mostly green indicators with a few yellow warnings. On the right: a customer trying to complete a mobile banking transfer but receiving an error message. In the foreground, Hector is testing the payment system with actual transactions while looking at both screens, his expression showing the realization that the dashboards aren't reflecting the true customer experience.
 
 ### Teaching Narrative
 
@@ -261,7 +269,9 @@ Implement robust customer impact validation with these five practical steps:
 
 ## Panel 5: Alert Severity Classification
 
-**Scene Description**: A team huddle in the operations center. A large display shows a severity classification matrix specific to banking services, with levels from P1 to P5. Each level shows criteria for transaction impact, affected customer segments, and financial implications. Hector is discussing with team members about an ongoing incident, pointing to specific criteria on the matrix to establish the correct severity level. Other team members are adding context about the affected services and estimating impact percentages.
+### Scene Description
+
+ A team huddle in the operations center. A large display shows a severity classification matrix specific to banking services, with levels from P1 to P5. Each level shows criteria for transaction impact, affected customer segments, and financial implications. Hector is discussing with team members about an ongoing incident, pointing to specific criteria on the matrix to establish the correct severity level. Other team members are adding context about the affected services and estimating impact percentages.
 
 ### Teaching Narrative
 
@@ -323,7 +333,9 @@ Implement effective severity classification with these five practical steps:
 
 ## Panel 6: The Initial Assessment
 
-**Scene Description**: Hector at a workstation creating an initial incident document. His screen shows a structured template being filled with preliminary information. Sections include "Affected Services," "Customer Impact," "Initial Timeline," and "Working Hypothesis." A clock on the wall shows 5 minutes have passed since the alert. Multiple team members are joining a video call shown on a secondary monitor, while real-time dashboard data is visible on a third screen.
+### Scene Description
+
+ Hector at a workstation creating an initial incident document. His screen shows a structured template being filled with preliminary information. Sections include "Affected Services," "Customer Impact," "Initial Timeline," and "Working Hypothesis." A clock on the wall shows 5 minutes have passed since the alert. Multiple team members are joining a video call shown on a secondary monitor, while real-time dashboard data is visible on a third screen.
 
 ### Teaching Narrative
 
@@ -385,7 +397,9 @@ Implement effective initial assessment with these five practical steps:
 
 ## Panel 7: Automated Response and Self-Healing Systems
 
-**Scene Description**: A modern NOC with advanced monitoring systems. On the main display is an automated response system showing a payment processing error that was automatically detected and remediated. A timeline shows "Alert Generated 03:42:15," "Automated Recovery Initiated 03:42:18," "Service Restored 03:42:34." Hector and a senior architect are reviewing the automation logs while discussing improvement opportunities. A secondary screen shows code for an automated remediation script.
+### Scene Description
+
+ A modern NOC with advanced monitoring systems. On the main display is an automated response system showing a payment processing error that was automatically detected and remediated. A timeline shows "Alert Generated 03:42:15," "Automated Recovery Initiated 03:42:18," "Service Restored 03:42:34." Hector and a senior architect are reviewing the automation logs while discussing improvement opportunities. A secondary screen shows code for an automated remediation script.
 
 ### Teaching Narrative
 

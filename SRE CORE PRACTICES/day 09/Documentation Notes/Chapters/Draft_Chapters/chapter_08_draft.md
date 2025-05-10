@@ -37,7 +37,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Incident First Responder - Structured Communication Kickoff
 
-**Scene Description**: A monitoring alert shows a payment processing error spike. Katherine, the on-call SRE, is at her desk with multiple screens. She's initiating an incident response channel while simultaneously checking dashboards. The clock shows 2:17 PM, and her expression is focused but calm. Her screen shows a partially completed incident announcement template with key fields being filled in methodically.
+### Scene Description
+
+ A monitoring alert shows a payment processing error spike. Katherine, the on-call SRE, is at her desk with multiple screens. She's initiating an incident response channel while simultaneously checking dashboards. The clock shows 2:17 PM, and her expression is focused but calm. Her screen shows a partially completed incident announcement template with key fields being filled in methodically.
 
 ### Teaching Narrative
 
@@ -91,7 +93,9 @@ Unstructured incident kickoffs in banking environments directly impact the botto
 
 ## Panel 2: Status Updates - The 3x3 Communication Model
 
-**Scene Description**: A virtual war room is in progress with faces on video tiles and a shared collaborative document visible. The incident commander, Marcus, is speaking with a headset on, while using a structured 3x3 template to communicate the current situation. The template has clear sections for "What We Know," "What We Don't Know," and "What We're Doing Next." Team members are adding notes to their respective sections, and a large timer shows that exactly 10 minutes have passed since the last update.
+### Scene Description
+
+ A virtual war room is in progress with faces on video tiles and a shared collaborative document visible. The incident commander, Marcus, is speaking with a headset on, while using a structured 3x3 template to communicate the current situation. The template has clear sections for "What We Know," "What We Don't Know," and "What We're Doing Next." Team members are adding notes to their respective sections, and a large timer shows that exactly 10 minutes have passed since the last update.
 
 ### Teaching Narrative
 
@@ -144,7 +148,9 @@ Ineffective status updates in banking incidents directly impact business outcome
 
 ## Panel 3: The Role of the Incident Commander - Communication Orchestration
 
-**Scene Description**: An incident war room is in full swing with multiple conversations happening. The incident commander, Priya, stands slightly apart, maintaining a holistic view of the situation. She's clearly directing traffic - pointing to one engineer to continue a technical investigation while signaling another to prepare an external communication. On a whiteboard behind her is a clear separation of communication channels: internal technical, executive updates, and customer communications, each with owners assigned.
+### Scene Description
+
+ An incident war room is in full swing with multiple conversations happening. The incident commander, Priya, stands slightly apart, maintaining a holistic view of the situation. She's clearly directing traffic - pointing to one engineer to continue a technical investigation while signaling another to prepare an external communication. On a whiteboard behind her is a clear separation of communication channels: internal technical, executive updates, and customer communications, each with owners assigned.
 
 ### Teaching Narrative
 
@@ -197,7 +203,9 @@ The lack of dedicated incident command in banking environments creates significa
 
 ## Panel 4: Precision Language - Reducing Cognitive Load
 
-**Scene Description**: Two engineers are discussing a database issue during an incident. On the left, a speech bubble shows vague language: "The database seems kind of slow, maybe we should check it out?" On the right, the SRE's speech bubble shows precise language: "DB write latency has increased from 15ms to 250ms over the last 10 minutes, affecting payment submission. I'm checking connection pool metrics now." A thought bubble above other team members shows clearer understanding from the precise communication.
+### Scene Description
+
+ Two engineers are discussing a database issue during an incident. On the left, a speech bubble shows vague language: "The database seems kind of slow, maybe we should check it out?" On the right, the SRE's speech bubble shows precise language: "DB write latency has increased from 15ms to 250ms over the last 10 minutes, affecting payment submission. I'm checking connection pool metrics now." A thought bubble above other team members shows clearer understanding from the precise communication.
 
 ### Teaching Narrative
 
@@ -250,7 +258,9 @@ Imprecise communication during banking incidents creates substantial business im
 
 ## Panel 5: Stakeholder Communication Tiers - Right Information, Right Audience
 
-**Scene Description**: A large screen shows a multi-tier communication strategy in action during a major incident. Different messaging templates are visible for different audiences: technical teams receive detailed diagnostic information, executives see business impact metrics and estimated resolution times, while customer service teams get specific affected functionality and workaround instructions. Each template has distinct language patterns and information density appropriate to its audience.
+### Scene Description
+
+ A large screen shows a multi-tier communication strategy in action during a major incident. Different messaging templates are visible for different audiences: technical teams receive detailed diagnostic information, executives see business impact metrics and estimated resolution times, while customer service teams get specific affected functionality and workaround instructions. Each template has distinct language patterns and information density appropriate to its audience.
 
 ### Teaching Narrative
 
@@ -303,7 +313,9 @@ Inadequate stakeholder communication tiering in banking incidents creates direct
 
 ## Panel 6: Blameless Communication - Language Patterns That Build Trust
 
-**Scene Description**: A postmortem meeting is in progress. On a shared screen, we see before/after examples of incident communication. The "before" example shows blame-oriented language: "John's deployment caused the outage." The "after" shows blameless language: "The deployment process lacked sufficient verification steps to catch the configuration error." The team is actively discussing how language patterns during the incident itself set the stage for effective learning afterward.
+### Scene Description
+
+ A postmortem meeting is in progress. On a shared screen, we see before/after examples of incident communication. The "before" example shows blame-oriented language: "John's deployment caused the outage." The "after" shows blameless language: "The deployment process lacked sufficient verification steps to catch the configuration error." The team is actively discussing how language patterns during the incident itself set the stage for effective learning afterward.
 
 ### Teaching Narrative
 
@@ -356,7 +368,9 @@ Blame-oriented communication during banking incidents creates substantial negati
 
 ## Panel 7: Follow-the-Sun Communications - Handover Protocols
 
-**Scene Description**: Two SREs from different time zones are conducting a structured incident handover. The outgoing engineer in New York is following a checklist while walking through current status with the incoming engineer in Singapore. A shared document shows a formal handover template with sections for incident timeline, current theories, attempted solutions, and planned next steps. Both engineers are adding notes and clarifying points to ensure complete knowledge transfer before responsibility shifts.
+### Scene Description
+
+ Two SREs from different time zones are conducting a structured incident handover. The outgoing engineer in New York is following a checklist while walking through current status with the incoming engineer in Singapore. A shared document shows a formal handover template with sections for incident timeline, current theories, attempted solutions, and planned next steps. Both engineers are adding notes and clarifying points to ensure complete knowledge transfer before responsibility shifts.
 
 ### Teaching Narrative
 

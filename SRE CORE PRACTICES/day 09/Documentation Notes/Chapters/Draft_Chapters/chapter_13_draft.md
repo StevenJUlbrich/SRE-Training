@@ -37,7 +37,9 @@ ______________________________________________________________________
 
 ## Panel 1: Beyond Green Dashboards: The Cultural Metrics Revolution
 
-**Scene Description**: A diverse team is gathered in a modern conference room with large screens displaying various dashboards. The central display shows traditional uptime metrics in green, while side screens show newer visualizations: a "blameless post-mortem count" trend line showing growth, a "time to restore service" graph with improving numbers, and a "proactive changes implemented" chart. Katherine, a senior SRE, is pointing to these side charts while several team members look on with expressions ranging from curiosity to skepticism. A banking executive in the doorway appears surprised at seeing these non-traditional metrics.
+### Scene Description
+
+ A diverse team is gathered in a modern conference room with large screens displaying various dashboards. The central display shows traditional uptime metrics in green, while side screens show newer visualizations: a "blameless post-mortem count" trend line showing growth, a "time to restore service" graph with improving numbers, and a "proactive changes implemented" chart. Katherine, a senior SRE, is pointing to these side charts while several team members look on with expressions ranging from curiosity to skepticism. A banking executive in the doorway appears surprised at seeing these non-traditional metrics.
 
 ### Teaching Narrative
 
@@ -93,7 +95,9 @@ To implement a balanced cultural-technical measurement approach in your banking 
 
 ## Panel 2: Psychological Safety as a Reliability Metric
 
-**Scene Description**: A post-incident review meeting is underway in a banking operations center. Digital screens show system status returning to normal after an incident. Team members are actively contributing to a shared document where they list their own actions during the incident without hesitation. A junior engineer has just admitted to making a configuration change that contributed to the problem, and rather than showing fear, appears relieved. The team lead is nodding appreciatively while adding this information to a "contributing factors" section rather than a "root cause" section. Charts on the wall show "incident detection time" steadily decreasing over months alongside "average contributors per post-mortem" increasing.
+### Scene Description
+
+ A post-incident review meeting is underway in a banking operations center. Digital screens show system status returning to normal after an incident. Team members are actively contributing to a shared document where they list their own actions during the incident without hesitation. A junior engineer has just admitted to making a configuration change that contributed to the problem, and rather than showing fear, appears relieved. The team lead is nodding appreciatively while adding this information to a "contributing factors" section rather than a "root cause" section. Charts on the wall show "incident detection time" steadily decreasing over months alongside "average contributors per post-mortem" increasing.
 
 ### Teaching Narrative
 
@@ -149,7 +153,9 @@ To implement psychological safety as a reliability metric in your banking organi
 
 ## Panel 3: From "Mean Time to Blame" to "Mean Time to Learn"
 
-**Scene Description**: A timeline visualization dominates a war room wall, mapping a recent payment processing incident from detection through resolution. The timeline is annotated with key learning moments rather than pointing to individual actions. Team members are adding sticky notes to specific points on the timeline, capturing insights rather than assigning responsibility. A digital dashboard above shows "Time to First Learning" as 7 minutes (highlighted in green) and "Total Documented Learnings" as 12 (also green). A separate "Knowledge Base Contributions" chart shows an upward trend across weeks. In the corner, a senior manager observes quietly, taking notes rather than directing the process.
+### Scene Description
+
+ A timeline visualization dominates a war room wall, mapping a recent payment processing incident from detection through resolution. The timeline is annotated with key learning moments rather than pointing to individual actions. Team members are adding sticky notes to specific points on the timeline, capturing insights rather than assigning responsibility. A digital dashboard above shows "Time to First Learning" as 7 minutes (highlighted in green) and "Total Documented Learnings" as 12 (also green). A separate "Knowledge Base Contributions" chart shows an upward trend across weeks. In the corner, a senior manager observes quietly, taking notes rather than directing the process.
 
 ### Teaching Narrative
 
@@ -205,7 +211,9 @@ To shift from resolution-focused to learning-focused metrics in your banking org
 
 ## Panel 4: Balancing the Operations-Development Reliability Contract
 
-**Scene Description**: A visual split-screen shows operations and development teams with a "reliability contract" projected between them. On one side, operations engineers are reviewing alerting thresholds and on-call schedules; on the other, developers are examining code quality metrics and deployment frequency data. In the center, a shared dashboard displays "joint reliability metrics" including error budget consumption rates, deployment recovery time, and feature flag usage statistics. Team leaders from both sides are shaking hands while reviewing quarterly reliability objectives, with banking compliance officers nodding approval in the background.
+### Scene Description
+
+ A visual split-screen shows operations and development teams with a "reliability contract" projected between them. On one side, operations engineers are reviewing alerting thresholds and on-call schedules; on the other, developers are examining code quality metrics and deployment frequency data. In the center, a shared dashboard displays "joint reliability metrics" including error budget consumption rates, deployment recovery time, and feature flag usage statistics. Team leaders from both sides are shaking hands while reviewing quarterly reliability objectives, with banking compliance officers nodding approval in the background.
 
 ### Teaching Narrative
 
@@ -261,7 +269,9 @@ To implement balanced reliability contracts in your banking organization:
 
 ## Panel 5: Leading Indicators: The Proactive Measurement Revolution
 
-**Scene Description**: A team is gathered around a "Reliability Early Warning System" dashboard that displays unusual metrics: "question count during planning," "deployment hesitation patterns," "configuration change volume," and "documentation search frequency." A senior SRE is explaining these metrics to banking executives who look intrigued but slightly confused. On a nearby whiteboard, someone has drawn a graph showing how spikes in these leading indicators preceded major incidents by weeks. A junior team member is adding a new proposed indicator to the board labeled "cross-team communication frequency drop" while others discuss its potential predictive value.
+### Scene Description
+
+ A team is gathered around a "Reliability Early Warning System" dashboard that displays unusual metrics: "question count during planning," "deployment hesitation patterns," "configuration change volume," and "documentation search frequency." A senior SRE is explaining these metrics to banking executives who look intrigued but slightly confused. On a nearby whiteboard, someone has drawn a graph showing how spikes in these leading indicators preceded major incidents by weeks. A junior team member is adding a new proposed indicator to the board labeled "cross-team communication frequency drop" while others discuss its potential predictive value.
 
 ### Teaching Narrative
 
@@ -317,7 +327,9 @@ To implement leading cultural indicators in your banking organization:
 
 ## Panel 6: The Continuous Improvement Measurement Framework
 
-**Scene Description**: A retrospective session is underway with team members gathered around a circular timeline showing the past six months of reliability work. At regular intervals, the timeline shows "measurement recalibration" points where metrics themselves were evaluated and adjusted. Various charts show how reliability metrics have evolved: some retired, others modified, new ones introduced. Team members are plotting the next measurement evolution while reviewing how each metric change correlated with reliability improvements. A banking compliance officer is actively participating, helping align internal measurements with external reporting requirements.
+### Scene Description
+
+ A retrospective session is underway with team members gathered around a circular timeline showing the past six months of reliability work. At regular intervals, the timeline shows "measurement recalibration" points where metrics themselves were evaluated and adjusted. Various charts show how reliability metrics have evolved: some retired, others modified, new ones introduced. Team members are plotting the next measurement evolution while reviewing how each metric change correlated with reliability improvements. A banking compliance officer is actively participating, helping align internal measurements with external reporting requirements.
 
 ### Teaching Narrative
 
@@ -373,7 +385,9 @@ To implement continuous improvement measurement frameworks in your banking organ
 
 ## Panel 7: From Measurement to Meaning: The Reliability Storytelling Framework
 
-**Scene Description**: A quarterly business review meeting shows technical and business leaders engaged with reliability data presented not as isolated metrics but as an integrated narrative. Screen displays combine technical indicators with cultural measurements into a coherent story of reliability evolution. Presenters are connecting key metrics to specific business outcomes: customer retention improvements, regulatory compliance achievements, and cost reductions from avoiding incidents. Banking executives are engaged and asking questions about future reliability investments rather than focusing solely on past incidents. Charts show how the organization has evolved from basic uptime metrics to sophisticated cultural indicators over time.
+### Scene Description
+
+ A quarterly business review meeting shows technical and business leaders engaged with reliability data presented not as isolated metrics but as an integrated narrative. Screen displays combine technical indicators with cultural measurements into a coherent story of reliability evolution. Presenters are connecting key metrics to specific business outcomes: customer retention improvements, regulatory compliance achievements, and cost reductions from avoiding incidents. Banking executives are engaged and asking questions about future reliability investments rather than focusing solely on past incidents. Charts show how the organization has evolved from basic uptime metrics to sophisticated cultural indicators over time.
 
 ### Teaching Narrative
 

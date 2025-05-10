@@ -35,7 +35,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Missing Middle - The Full Logging Level Spectrum
 
-**Scene Description**: A banking operations center where a senior SRE reviews logs with a newly transitioned team member. On a large display, they compare two logging configurations from different banking services. The first shows only ERROR and INFO levels, creating large gaps in the narrative. The second displays a complete hierarchy (TRACE, DEBUG, INFO, WARN, ERROR, FATAL) with color-coding. The SRE demonstrates how the complete hierarchy provides a continuous story of a complex mortgage application process, while the binary approach leaves critical gaps in understanding.
+### Scene Description
+
+ A banking operations center where a senior SRE reviews logs with a newly transitioned team member. On a large display, they compare two logging configurations from different banking services. The first shows only ERROR and INFO levels, creating large gaps in the narrative. The second displays a complete hierarchy (TRACE, DEBUG, INFO, WARN, ERROR, FATAL) with color-coding. The SRE demonstrates how the complete hierarchy provides a continuous story of a complex mortgage application process, while the binary approach leaves critical gaps in understanding.
 
 ### Teaching Narrative
 
@@ -109,7 +111,9 @@ The bank calculated that implementing a complete logging hierarchy would have re
 
 ## Panel 2: DEBUG Demystified - The Troubleshooter's Toolkit
 
-**Scene Description**: A detailed view of a banking engineering team during a production investigation. Engineers have enabled DEBUG logging for a payment processing service that's experiencing intermittent failures. The screen fills with detailed transaction flow information showing parameter values, database query details, and third-party API response times. A senior engineer points to a specific DEBUG entry showing an unusual response time pattern from the fraud detection service—information completely absent from the INFO and ERROR logs but crucial to resolving the issue.
+### Scene Description
+
+ A detailed view of a banking engineering team during a production investigation. Engineers have enabled DEBUG logging for a payment processing service that's experiencing intermittent failures. The screen fills with detailed transaction flow information showing parameter values, database query details, and third-party API response times. A senior engineer points to a specific DEBUG entry showing an unusual response time pattern from the fraud detection service—information completely absent from the INFO and ERROR logs but crucial to resolving the issue.
 
 ### Teaching Narrative
 
@@ -191,7 +195,9 @@ The bank calculated that proper DEBUG logging would have reduced the resolution 
 
 ## Panel 3: WARN - The Early Detection System
 
-**Scene Description**: A monitoring center where an automated system highlights WARN-level log entries from a bank's online trading platform during market opening. The WARN messages show gradually increasing response times from a market data provider without actual failures. A timeline visualization shows how these warnings appeared 15 minutes before actual trading errors occurred. An SRE implements a temporary throttling mechanism based on these early warnings, preventing a complete system outage while the underlying issue is addressed.
+### Scene Description
+
+ A monitoring center where an automated system highlights WARN-level log entries from a bank's online trading platform during market opening. The WARN messages show gradually increasing response times from a market data provider without actual failures. A timeline visualization shows how these warnings appeared 15 minutes before actual trading errors occurred. An SRE implements a temporary throttling mechanism based on these early warnings, preventing a complete system outage while the underlying issue is addressed.
 
 ### Teaching Narrative
 
@@ -279,7 +285,9 @@ The bank calculated that the WARN logging implementation delivered an ROI of ove
 
 ## Panel 4: ERROR vs. FATAL - The Critical Distinction
 
-**Scene Description**: A post-incident review where a team analyzes logs from a banking authentication service outage. The screen displays timeline visualizations showing hundreds of ERROR logs for individual authentication failures alongside a single FATAL log marking the point when the service stopped accepting connections entirely. The team leader explains how their alerting treated all errors equally, leading to alert fatigue and delayed response to the truly critical FATAL condition that required immediate intervention.
+### Scene Description
+
+ A post-incident review where a team analyzes logs from a banking authentication service outage. The screen displays timeline visualizations showing hundreds of ERROR logs for individual authentication failures alongside a single FATAL log marking the point when the service stopped accepting connections entirely. The team leader explains how their alerting treated all errors equally, leading to alert fatigue and delayed response to the truly critical FATAL condition that required immediate intervention.
 
 ### Teaching Narrative
 
@@ -361,7 +369,9 @@ The bank calculated that proper severity differentiation would have reduced the 
 
 ## Panel 5: The Dynamic Verbosity Pattern - Adaptive Logging Levels
 
-**Scene Description**: An SRE team managing a credit card processing platform demonstrates their adaptive logging system. On their dashboard, a sudden increase in declined transactions automatically triggers elevated logging levels for affected components, transitioning from INFO to DEBUG for that specific transaction type and customer segment. Logs display the precise moment when increased verbosity was activated and later deactivated after the issue was resolved, showing how the system maintained storage efficiency while providing necessary diagnostic detail exactly when needed.
+### Scene Description
+
+ An SRE team managing a credit card processing platform demonstrates their adaptive logging system. On their dashboard, a sudden increase in declined transactions automatically triggers elevated logging levels for affected components, transitioning from INFO to DEBUG for that specific transaction type and customer segment. Logs display the precise moment when increased verbosity was activated and later deactivated after the issue was resolved, showing how the system maintained storage efficiency while providing necessary diagnostic detail exactly when needed.
 
 ### Teaching Narrative
 
@@ -444,7 +454,9 @@ The company calculated that their investment in dynamic verbosity capabilities a
 
 ## Panel 6: The Production Balancing Act - Performance Impact of Logging Levels
 
-**Scene Description**: A performance testing lab where engineers analyze the impact of different logging configurations on a high-volume payment processing system. Graphs show transaction throughput and latency under various logging configurations. The results clearly demonstrate how excessive TRACE and DEBUG logging reduces throughput by 30% during peak load, while a strategically balanced approach with dynamic verbosity maintains performance while preserving diagnostic capability. A cost analysis shows both the infrastructure expenses and potential revenue impact of different logging strategies.
+### Scene Description
+
+ A performance testing lab where engineers analyze the impact of different logging configurations on a high-volume payment processing system. Graphs show transaction throughput and latency under various logging configurations. The results clearly demonstrate how excessive TRACE and DEBUG logging reduces throughput by 30% during peak load, while a strategically balanced approach with dynamic verbosity maintains performance while preserving diagnostic capability. A cost analysis shows both the infrastructure expenses and potential revenue impact of different logging strategies.
 
 ### Teaching Narrative
 
@@ -529,7 +541,9 @@ The company calculated that implementing performance-aware logging standards and
 
 ## Panel 7: The Logging Level Governance - Standardizing Across the Enterprise
 
-**Scene Description**: A bank's technology governance council reviews their updated logging standards document. The document shows clear definitions for each logging level with banking-specific examples, standardized patterns for implementation across different technology stacks, automated validation tools integrated into CI/CD pipelines, and monitoring dashboards showing compliance across the organization. Team leads discuss how these standardized practices have improved cross-team incident response by creating consistent interpretation of severity levels across previously siloed systems.
+### Scene Description
+
+ A bank's technology governance council reviews their updated logging standards document. The document shows clear definitions for each logging level with banking-specific examples, standardized patterns for implementation across different technology stacks, automated validation tools integrated into CI/CD pipelines, and monitoring dashboards showing compliance across the organization. Team leads discuss how these standardized practices have improved cross-team incident response by creating consistent interpretation of severity levels across previously siloed systems.
 
 ### Teaching Narrative
 

@@ -48,7 +48,9 @@ This hybrid format combines the depth of written instruction with the visual eng
 
 ## Panel 1: Why Traditional Metrics Fail
 
-**Scene Description**: Senior SRE explaining to new team member as they both look at two monitors - left showing a dashboard with all green indicators, right showing customer support queue full of transaction failure reports.
+### Scene Description
+
+ Senior SRE explaining to new team member as they both look at two monitors - left showing a dashboard with all green indicators, right showing customer support queue full of transaction failure reports.
 
 ### Teaching Narrative
 SRE metrics fundamentally differ from traditional IT monitoring by measuring what matters to users rather than infrastructure health. While traditional monitoring captures system state (CPU, memory, disk utilization), SRE metrics measure service outcomes from the customer perspective. These outcome-based metrics create a direct link between technical measurements and business impact, enabling teams to understand if systems are truly meeting user needs regardless of internal component status.

@@ -1,7 +1,9 @@
  # Chapter 4: Volumetric Awareness
 
 ## Panel 1: The Data Deluge Dilemma
-**Scene Description**: The scene depicts a banking operations center where multiple large wall monitors display rapidly incrementing counters showing data volumes across different systems. A team of engineers stands in shock as they review a massive observability platform bill. One screen prominently displays a graph showing an exponential increase in data ingestion that perfectly correlates with a similar curve on cost projection. In the corner, a junior engineer is frantically enabling verbose logging on yet another service, unaware of the financial implications.
+### Scene Description
+
+ The scene depicts a banking operations center where multiple large wall monitors display rapidly incrementing counters showing data volumes across different systems. A team of engineers stands in shock as they review a massive observability platform bill. One screen prominently displays a graph showing an exponential increase in data ingestion that perfectly correlates with a similar curve on cost projection. In the corner, a junior engineer is frantically enabling verbose logging on yet another service, unaware of the financial implications.
 
 ### Teaching Narrative
 Volumetric awareness is the foundation of cost-effective observability. In traditional monitoring environments, data volume rarely translated directly to cost—most tools used flat licensing models regardless of how much data you collected. This fundamental difference is why many teams transitioning to modern observability platforms experience "bill shock."
@@ -17,7 +19,9 @@ Understanding your data generation rate is the first step toward cost control. T
 Without this volumetric understanding, observability costs become unpredictable and often unsustainable. Developing this awareness doesn't mean collecting less data—it means collecting the right data with full understanding of the economic implications.
 
 ## Panel 2: Discovering the Hidden Data Generators
-**Scene Description**: The scene shows an SRE team gathered around a visualization that maps their banking system architecture. Each component is sized proportionally to its observability data production. To everyone's surprise, a seemingly minor authentication microservice appears as the largest element on the diagram, dwarfing even their core transaction processing platform. One engineer points to a small code block on a laptop screen showing a debug statement inside a high-frequency authentication loop.
+### Scene Description
+
+ The scene shows an SRE team gathered around a visualization that maps their banking system architecture. Each component is sized proportionally to its observability data production. To everyone's surprise, a seemingly minor authentication microservice appears as the largest element on the diagram, dwarfing even their core transaction processing platform. One engineer points to a small code block on a laptop screen showing a debug statement inside a high-frequency authentication loop.
 
 ### Teaching Narrative
 The highest volume data generators in your system are rarely the ones you expect. In banking environments, teams often focus their cost-management efforts on obvious high-transaction components like payment processors or trading platforms. However, these well-known high-volume systems usually have mature instrumentation practices.
@@ -33,7 +37,9 @@ Discovering these hidden data generators requires systematic measurement rather 
 Volumetric awareness also means understanding the natural patterns in your data generation. Banking systems typically have predictable patterns tied to business hours, end-of-day processing, month-end closings, and seasonal activities. Establishing these baseline patterns allows teams to quickly identify anomalous data production that might indicate both system issues and unexpected cost increases.
 
 ## Panel 3: Telemetry ROI Analysis
-**Scene Description**: A split-screen view shows two banking incidents side by side. On the left, engineers wade through terabytes of verbose debug logs trying to find the cause of a failed trade reconciliation, with a cost counter rapidly incrementing in the corner. On the right, an SRE quickly identifies a payment failure pattern using a handful of carefully designed metrics and traces, with minimal data volume but maximum insight. A formula appears between the screens showing the relationship between data value, volume, and cost.
+### Scene Description
+
+ A split-screen view shows two banking incidents side by side. On the left, engineers wade through terabytes of verbose debug logs trying to find the cause of a failed trade reconciliation, with a cost counter rapidly incrementing in the corner. On the right, an SRE quickly identifies a payment failure pattern using a handful of carefully designed metrics and traces, with minimal data volume but maximum insight. A formula appears between the screens showing the relationship between data value, volume, and cost.
 
 ### Teaching Narrative
 Not all observability data provides equal value, yet many teams instrument their systems as if it does. The core principle of volumetric awareness is understanding the return on investment (ROI) for different types of telemetry.
@@ -52,7 +58,9 @@ Banking systems, with their high transaction volumes and strict reliability requ
 Developing volumetric awareness means shifting from "more data is better" to "the right data is better." This requires technical understanding of observability systems, business knowledge of what insights matter most, and economic awareness of the cost implications of instrumentation decisions.
 
 ## Panel 4: The Instrumentation Budget
-**Scene Description**: An SRE team is shown in a planning session with a unique dashboard displayed on the wall. Instead of traditional resource metrics, it shows "observability quotas" for each banking service. Team members are allocating limited observability "points" across system components, with heated discussion about which services deserve more telemetry budget. One engineer defends allocating more budget to a seemingly minor service, explaining how its visibility directly impacts customer experience during mortgage applications.
+### Scene Description
+
+ An SRE team is shown in a planning session with a unique dashboard displayed on the wall. Instead of traditional resource metrics, it shows "observability quotas" for each banking service. Team members are allocating limited observability "points" across system components, with heated discussion about which services deserve more telemetry budget. One engineer defends allocating more budget to a seemingly minor service, explaining how its visibility directly impacts customer experience during mortgage applications.
 
 ### Teaching Narrative
 Resource constraints drive innovation. When teams operate with unlimited observability budgets, they rarely develop efficient instrumentation strategies. The instrumentation budget is a powerful concept that forces teams to make deliberate, strategic decisions about where and how to apply observability.
@@ -71,7 +79,9 @@ This budgeting approach naturally shifts teams from indiscriminate instrumentati
 The instrumentation budget concept doesn't reduce overall system visibility. Instead, it creates incentives for teams to implement more efficient observability practices, such as dynamic sampling, targeted logging, and cardinality management—ultimately delivering better insights with lower data volumes.
 
 ## Panel 5: Forecasting Data Volume Changes
-**Scene Description**: The scene depicts an SRE team reviewing a proposed banking app feature that would track detailed customer interactions across all UI elements. A simulation dashboard shows the projected impact on observability data volume and costs. Several alternative instrumentation approaches are displayed with their respective volume projections. The team is evaluating which approach provides necessary visibility for the feature while staying within their volumetric budget.
+### Scene Description
+
+ The scene depicts an SRE team reviewing a proposed banking app feature that would track detailed customer interactions across all UI elements. A simulation dashboard shows the projected impact on observability data volume and costs. Several alternative instrumentation approaches are displayed with their respective volume projections. The team is evaluating which approach provides necessary visibility for the feature while staying within their volumetric budget.
 
 ### Teaching Narrative
 Volumetric awareness isn't just about understanding current data generation—it requires the ability to forecast how system changes will affect future volumes. This predictive capability allows teams to identify potential cost implications before changes are deployed rather than discovering unexpected bills weeks later.
@@ -90,7 +100,9 @@ For banking systems, this forecasting becomes particularly important during plan
 The most sophisticated organizations incorporate observability volume forecasting directly into their development process, making it a standard consideration alongside performance, security, and functionality requirements. This ensures that every new feature or service is designed with appropriate volumetric awareness from inception.
 
 ## Panel 6: Implementing Volume-Based Alerting
-**Scene Description**: An SRE receives an urgent alert on their phone showing "OBSERVABILITY VOLUME ANOMALY" for a critical payment processing service. The attached dashboard shows log volume suddenly increasing at 30x normal rates, well before any customer-impacting symptoms have appeared. The SRE quickly traces the issue to a recently deployed configuration change that accidentally enabled debug logging in production. They correct the configuration before the excessive logging impacts system performance or generates significant costs.
+### Scene Description
+
+ An SRE receives an urgent alert on their phone showing "OBSERVABILITY VOLUME ANOMALY" for a critical payment processing service. The attached dashboard shows log volume suddenly increasing at 30x normal rates, well before any customer-impacting symptoms have appeared. The SRE quickly traces the issue to a recently deployed configuration change that accidentally enabled debug logging in production. They correct the configuration before the excessive logging impacts system performance or generates significant costs.
 
 ### Teaching Narrative
 Reactive cost management is a losing strategy. By the time unusual charges appear on your observability bill, weeks of excessive data collection have already occurred. Volume-based alerting transforms observability cost control from reactive to proactive by detecting data volume anomalies in real-time.
@@ -111,7 +123,9 @@ The most sophisticated implementations incorporate machine learning to detect su
 By treating observability volumes as a first-class metric, teams transform cost management from a monthly surprise to an operational discipline integrated into their standard practices.
 
 ## Panel 7: Data Retention Lifecycle Management
-**Scene Description**: A visualization shows the journey of observability data through its lifecycle in a banking environment. Fresh, high-value data flows into high-performance, high-cost storage. As the data ages, automated policies move it through progressively less expensive tiers with different compression and aggregation levels. At each stage, compliance requirements are checked to ensure regulatory obligations are met. A group of SREs is reviewing data usage patterns to optimize which data deserves premium storage and which can be downsampled earlier.
+### Scene Description
+
+ A visualization shows the journey of observability data through its lifecycle in a banking environment. Fresh, high-value data flows into high-performance, high-cost storage. As the data ages, automated policies move it through progressively less expensive tiers with different compression and aggregation levels. At each stage, compliance requirements are checked to ensure regulatory obligations are met. A group of SREs is reviewing data usage patterns to optimize which data deserves premium storage and which can be downsampled earlier.
 
 ### Teaching Narrative
 Volumetric awareness extends beyond data generation to encompass the entire lifecycle of telemetry data. Many teams focus exclusively on ingest rates while ignoring the cumulative cost of data retention, missing significant optimization opportunities.

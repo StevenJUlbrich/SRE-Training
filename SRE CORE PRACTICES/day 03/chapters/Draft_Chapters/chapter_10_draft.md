@@ -36,7 +36,9 @@ Welcome to the compliance circus: where SREs in banking get a front-row seat to 
 
 ## Panel 1: The Regulatory Landscape - Understanding Banking Log Requirements
 
-**Scene Description**: A bank's compliance office where regulatory experts brief SRE teams on critical logging requirements. Wall displays show an intricate map of overlapping regulations affecting their global operations: SOX requirements for financial reporting, PCI-DSS standards for card data, GDPR and CCPA for personal information, BSA/AML for transaction monitoring, and specific banking regulations across different jurisdictions. Color-coded matrices show how these requirements translate to specific logging mandates for different banking systems—from transaction processing to customer data management. Engineers take notes as compliance officers explain the severe penalties for non-compliance, with specific examples of recent enforcement actions against peer institutions.
+### Scene Description
+
+ A bank's compliance office where regulatory experts brief SRE teams on critical logging requirements. Wall displays show an intricate map of overlapping regulations affecting their global operations: SOX requirements for financial reporting, PCI-DSS standards for card data, GDPR and CCPA for personal information, BSA/AML for transaction monitoring, and specific banking regulations across different jurisdictions. Color-coded matrices show how these requirements translate to specific logging mandates for different banking systems—from transaction processing to customer data management. Engineers take notes as compliance officers explain the severe penalties for non-compliance, with specific examples of recent enforcement actions against peer institutions.
 
 ### Teaching Narrative
 
@@ -74,7 +76,9 @@ To establish comprehensive regulatory compliance in your logging architecture:
 
 ## Panel 2: The Non-Repudiation Imperative - Immutable and Verifiable Logs
 
-**Scene Description**: A financial fraud investigation where auditors analyze suspect transactions using the bank's immutable logging system. Visualization screens show cryptographically-secured transaction logs with visible tamper-evidence protections: hash chains connecting sequential records, digital signatures validating authenticity, and blockchain-inspired verification mechanisms ensuring log integrity. A timeline display demonstrates how investigators can prove exact transaction sequences with cryptographic certainty—confirming both what happened and that the logs themselves haven't been altered. A separate screen shows compliance certification from regulatory authorities validating that the system meets legal requirements for transaction non-repudiation.
+### Scene Description
+
+ A financial fraud investigation where auditors analyze suspect transactions using the bank's immutable logging system. Visualization screens show cryptographically-secured transaction logs with visible tamper-evidence protections: hash chains connecting sequential records, digital signatures validating authenticity, and blockchain-inspired verification mechanisms ensuring log integrity. A timeline display demonstrates how investigators can prove exact transaction sequences with cryptographic certainty—confirming both what happened and that the logs themselves haven't been altered. A separate screen shows compliance certification from regulatory authorities validating that the system meets legal requirements for transaction non-repudiation.
 
 ### Teaching Narrative
 
@@ -112,7 +116,9 @@ To implement effective non-repudiation in your logging infrastructure:
 
 ## Panel 3: The Personal Data Challenge - Privacy Regulations and Logging
 
-**Scene Description**: A data privacy workshop where banking engineers and privacy officers analyze their logging practices against GDPR and CCPA requirements. Interactive screens display logs from different banking systems with personal data highlighted—revealing unexpected personal information in application logs, transaction records, and authentication systems. The privacy officer demonstrates their remediation approach: data minimization policies reducing unnecessary personal information, pseudonymization techniques replacing direct identifiers with tokens, data classification frameworks identifying regulated information types, and right-to-erasure workflows showing how specific customer data can be removed from logs when legally required while maintaining system integrity.
+### Scene Description
+
+ A data privacy workshop where banking engineers and privacy officers analyze their logging practices against GDPR and CCPA requirements. Interactive screens display logs from different banking systems with personal data highlighted—revealing unexpected personal information in application logs, transaction records, and authentication systems. The privacy officer demonstrates their remediation approach: data minimization policies reducing unnecessary personal information, pseudonymization techniques replacing direct identifiers with tokens, data classification frameworks identifying regulated information types, and right-to-erasure workflows showing how specific customer data can be removed from logs when legally required while maintaining system integrity.
 
 ### Teaching Narrative
 
@@ -152,7 +158,9 @@ To implement privacy-compliant logging in banking environments:
 
 ## Panel 4: The Retention Complexity - Balancing Requirements and Costs
 
-**Scene Description**: A bank's data governance meeting where technology and compliance leaders review their log retention strategy. Timeline visualizations show varying retention requirements for different information types: transaction records maintained for 7+ years for regulatory compliance, authentication logs preserved for 2 years for security purposes, and operational system logs kept for 90 days. Cost modeling demonstrates the exponential storage impact of these requirements, with projections showing multi-million dollar expenses for comprehensive retention. Architecture diagrams illustrate their tiered solution: immutable compliant storage for regulated records, cost-optimized archival systems for medium-term retention, and dynamic summarization techniques maintaining essential information while reducing raw storage requirements.
+### Scene Description
+
+ A bank's data governance meeting where technology and compliance leaders review their log retention strategy. Timeline visualizations show varying retention requirements for different information types: transaction records maintained for 7+ years for regulatory compliance, authentication logs preserved for 2 years for security purposes, and operational system logs kept for 90 days. Cost modeling demonstrates the exponential storage impact of these requirements, with projections showing multi-million dollar expenses for comprehensive retention. Architecture diagrams illustrate their tiered solution: immutable compliant storage for regulated records, cost-optimized archival systems for medium-term retention, and dynamic summarization techniques maintaining essential information while reducing raw storage requirements.
 
 ### Teaching Narrative
 
@@ -190,7 +198,9 @@ To implement effective retention management for banking logs:
 
 ## Panel 5: The Access Control Framework - Regulatory-Compliant Log Security
 
-**Scene Description**: A bank security review where compliance officers evaluate access controls for sensitive log data. Security visualization displays show their defense-in-depth approach: role-based access controls restricting log visibility based on job function, purpose-based access requiring documented justification for viewing regulated information, field-level security masking sensitive data elements like account numbers and PINs, comprehensive audit trails tracking every access attempt, and time-bound privileges automatically expiring access grants after investigation completion. A demonstration shows how customer support can view transaction status information needed for their role while more sensitive details remain hidden, with separate specialized workflows for fraud investigation teams that require greater access.
+### Scene Description
+
+ A bank security review where compliance officers evaluate access controls for sensitive log data. Security visualization displays show their defense-in-depth approach: role-based access controls restricting log visibility based on job function, purpose-based access requiring documented justification for viewing regulated information, field-level security masking sensitive data elements like account numbers and PINs, comprehensive audit trails tracking every access attempt, and time-bound privileges automatically expiring access grants after investigation completion. A demonstration shows how customer support can view transaction status information needed for their role while more sensitive details remain hidden, with separate specialized workflows for fraud investigation teams that require greater access.
 
 ### Teaching Narrative
 
@@ -230,7 +240,9 @@ To implement compliant access controls for banking log systems:
 
 ## Panel 6: The Audit Preparation - Evidence Collection and Demonstration
 
-**Scene Description**: A bank's regulatory examination preparation session where compliance teams rehearse their logging controls demonstration for upcoming auditors. Practice screens show how they will present their compliance evidence: sampling frameworks showing systematic log validation across different system types, completeness testing demonstrating 100% capture of required transaction records, retrieval exercises proving ability to locate specific transactions within required timeframes, chain-of-custody documentation showing secure handling of log evidence, and control testing validating that logs accurately reflect actual system operations. Team members simulate auditor questions about specific regulatory requirements, practicing their responses with concrete examples showing how their logging implementation satisfies each mandate.
+### Scene Description
+
+ A bank's regulatory examination preparation session where compliance teams rehearse their logging controls demonstration for upcoming auditors. Practice screens show how they will present their compliance evidence: sampling frameworks showing systematic log validation across different system types, completeness testing demonstrating 100% capture of required transaction records, retrieval exercises proving ability to locate specific transactions within required timeframes, chain-of-custody documentation showing secure handling of log evidence, and control testing validating that logs accurately reflect actual system operations. Team members simulate auditor questions about specific regulatory requirements, practicing their responses with concrete examples showing how their logging implementation satisfies each mandate.
 
 ### Teaching Narrative
 
@@ -268,7 +280,9 @@ To implement effective audit readiness for banking log systems:
 
 ## Panel 7: The Cross-Border Complexity - Multi-Jurisdiction Compliance
 
-**Scene Description**: A global bank's compliance architecture review focusing on their cross-border logging strategy. Geographic visualizations show how different regulatory requirements affect their operations across regions: European operations implementing strict GDPR controls, Asian systems meeting country-specific financial regulations, and North American platforms satisfying diverse federal and state requirements. Implementation diagrams demonstrate their solution: a globally consistent logging architecture with regionally-tuned policies, data residency controls ensuring information remains in appropriate jurisdictions, differential retention implementing varying preservation periods by region, and specialized handling for cross-border transactions spanning multiple regulatory frameworks.
+### Scene Description
+
+ A global bank's compliance architecture review focusing on their cross-border logging strategy. Geographic visualizations show how different regulatory requirements affect their operations across regions: European operations implementing strict GDPR controls, Asian systems meeting country-specific financial regulations, and North American platforms satisfying diverse federal and state requirements. Implementation diagrams demonstrate their solution: a globally consistent logging architecture with regionally-tuned policies, data residency controls ensuring information remains in appropriate jurisdictions, differential retention implementing varying preservation periods by region, and specialized handling for cross-border transactions spanning multiple regulatory frameworks.
 
 ### Teaching Narrative
 
@@ -308,7 +322,9 @@ To implement effective cross-border compliance for banking log systems:
 
 ## Panel 8: The Technical Integration - Compliance by Design
 
-**Scene Description**: A bank's system architecture review where engineering leaders evaluate their regulatory logging implementation across different technology generations. Detailed diagrams show how compliance requirements are integrated into diverse systems: native logging frameworks in modern cloud services implementing regulatory features directly, middleware adapters adding compliance capabilities to commercial banking packages, specialized collectors extracting required information from legacy mainframe systems, and centralized enrichment services adding regulatory metadata to logs from systems with limited native capabilities. Implementation timelines demonstrate their progressive enhancement approach—systematically upgrading logging capabilities across their technology landscape while maintaining continuous compliance through transitional controls.
+### Scene Description
+
+ A bank's system architecture review where engineering leaders evaluate their regulatory logging implementation across different technology generations. Detailed diagrams show how compliance requirements are integrated into diverse systems: native logging frameworks in modern cloud services implementing regulatory features directly, middleware adapters adding compliance capabilities to commercial banking packages, specialized collectors extracting required information from legacy mainframe systems, and centralized enrichment services adding regulatory metadata to logs from systems with limited native capabilities. Implementation timelines demonstrate their progressive enhancement approach—systematically upgrading logging capabilities across their technology landscape while maintaining continuous compliance through transitional controls.
 
 ### Teaching Narrative
 
@@ -346,7 +362,9 @@ To implement effective technical integration for regulatory logging across diver
 
 ## Panel 9: The Business Value Alignment - Beyond Compliance to Advantage
 
-**Scene Description**: A banking executive review where technology and business leaders analyze their regulatory logging investment beyond compliance. ROI visualization displays show how their compliance-driven logging architecture delivers additional business value: enhanced fraud detection capabilities identifying suspicious patterns using the same logs maintained for regulatory purposes, improved customer experience metrics through better transaction visibility, operational efficiency gains from streamlined audit processes, and reduced incident impact through faster troubleshooting. Financial modeling demonstrates how the same logging infrastructure satisfies both compliance mandates and critical business capabilities—transforming what could be viewed as regulatory cost into strategic investment with quantifiable returns beyond avoiding penalties.
+### Scene Description
+
+ A banking executive review where technology and business leaders analyze their regulatory logging investment beyond compliance. ROI visualization displays show how their compliance-driven logging architecture delivers additional business value: enhanced fraud detection capabilities identifying suspicious patterns using the same logs maintained for regulatory purposes, improved customer experience metrics through better transaction visibility, operational efficiency gains from streamlined audit processes, and reduced incident impact through faster troubleshooting. Financial modeling demonstrates how the same logging infrastructure satisfies both compliance mandates and critical business capabilities—transforming what could be viewed as regulatory cost into strategic investment with quantifiable returns beyond avoiding penalties.
 
 ### Teaching Narrative
 
@@ -384,7 +402,9 @@ To implement effective business value alignment for regulatory logging:
 
 ## Panel 10: The Compliance Evolution - Adapting to Regulatory Change
 
-**Scene Description**: A banking regulatory change management session where compliance and technology teams analyze emerging regulations affecting their logging practices. Timeline projections show upcoming requirements with implementation deadlines: new financial monitoring standards requiring additional transaction metadata, expanded privacy regulations affecting log content and processing, and enhanced cybersecurity requirements mandating specific detection capabilities. Architecture diagrams demonstrate their adaptable compliance framework: modular logging components designed for extension, policy-driven controls that can be updated without system redesign, abstraction layers separating regulatory logic from technical implementation, and change impact assessment methodologies predicting how new requirements will affect existing systems. Testing scenarios show how they validate compliance with newly-introduced regulations before enforcement deadlines.
+### Scene Description
+
+ A banking regulatory change management session where compliance and technology teams analyze emerging regulations affecting their logging practices. Timeline projections show upcoming requirements with implementation deadlines: new financial monitoring standards requiring additional transaction metadata, expanded privacy regulations affecting log content and processing, and enhanced cybersecurity requirements mandating specific detection capabilities. Architecture diagrams demonstrate their adaptable compliance framework: modular logging components designed for extension, policy-driven controls that can be updated without system redesign, abstraction layers separating regulatory logic from technical implementation, and change impact assessment methodologies predicting how new requirements will affect existing systems. Testing scenarios show how they validate compliance with newly-introduced regulations before enforcement deadlines.
 
 ### Teaching Narrative
 

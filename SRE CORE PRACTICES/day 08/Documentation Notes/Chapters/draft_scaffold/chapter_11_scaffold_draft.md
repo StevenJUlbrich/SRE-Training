@@ -1,7 +1,9 @@
 # Chapter 11: Observability as a Service
 
 ## Panel 1: The Tower of Babel Monitoring
-**Scene Description**: In a large banking operations center, six different teams huddle around their own monitoring displays during a critical incident. Each screen shows different dashboards, with completely different metrics and visualizations for the same payment processing system. Team leads argue over conflicting data while business stakeholders grow increasingly frustrated. In the corner, a cost management report shows the bank is paying for seven separate observability platforms, with total costs growing 43% year-over-year.
+### Scene Description
+
+ In a large banking operations center, six different teams huddle around their own monitoring displays during a critical incident. Each screen shows different dashboards, with completely different metrics and visualizations for the same payment processing system. Team leads argue over conflicting data while business stakeholders grow increasingly frustrated. In the corner, a cost management report shows the bank is paying for seven separate observability platforms, with total costs growing 43% year-over-year.
 
 ### Teaching Narrative
 The proliferation of team-specific monitoring tools creates a dangerous fragmentation of observability within banking organizations. This "Tower of Babel" effect occurs when different teams independently select, implement, and maintain their own observability solutions—each speaking a different metrics language and incurring separate costs. 
@@ -11,7 +13,9 @@ In the traditional approach, each application team selects their preferred obser
 The SRE solution introduces "Observability as a Service"—a unified internal platform that standardizes how teams instrument, collect, and visualize telemetry data while implementing centralized cost governance. This approach breaks down visibility silos while creating economies of scale for observability investments. By centralizing the expertise, tooling, and governance in a platform team, banks can simultaneously improve system visibility and control runaway costs.
 
 ## Panel 2: The Multi-Tenant Observability Architecture
-**Scene Description**: Inside a modern SRE command center, engineers work at a central platform operations console labeled "ObservBank." On large displays, we see a unified architecture diagram with multiple banking applications feeding telemetry into a centralized collection pipeline. The interface shows distinct workspaces for different teams (Payments, Trading, Retail Banking), each with their own dashboards but clearly built on the same underlying platform. A status panel indicates 24 teams are active, with real-time cost metrics displaying controlled growth despite increasing transaction volumes.
+### Scene Description
+
+ Inside a modern SRE command center, engineers work at a central platform operations console labeled "ObservBank." On large displays, we see a unified architecture diagram with multiple banking applications feeding telemetry into a centralized collection pipeline. The interface shows distinct workspaces for different teams (Payments, Trading, Retail Banking), each with their own dashboards but clearly built on the same underlying platform. A status panel indicates 24 teams are active, with real-time cost metrics displaying controlled growth despite increasing transaction volumes.
 
 ### Teaching Narrative
 The cornerstone of cost-effective observability at scale is a well-designed multi-tenant architecture. Unlike traditional models where each team manages their own telemetry stack, a multi-tenant observability service creates a shared infrastructure that provides isolated workspaces while leveraging common collection, storage, and query capabilities.
@@ -21,7 +25,9 @@ The multi-tenant model brings three transformative advantages to banking observa
 The architecture requires careful design to balance team autonomy with centralized governance. The platform must provide logical separation between teams' data while maintaining the ability to correlate across services. It must offer self-service capabilities for common team needs while providing guardrails against excessive data collection. Most importantly, it must deliver value that incentivizes teams to adopt the shared platform rather than maintain their own siloed solutions.
 
 ## Panel 3: The Quota Management System
-**Scene Description**: A platform engineer demonstrates a new dashboard to application team leaders. The screen shows each banking application's observability usage with clear metrics: "Daily Log Volume," "Active Time Series," and "Trace Span Count." Each team's usage is displayed against their assigned quota with visual indicators showing teams approaching or exceeding their allocations. One application is highlighted in yellow with automated recommendations for reducing cardinality. Another section shows a quota request workflow where teams can apply for increased allocation with business justification.
+### Scene Description
+
+ A platform engineer demonstrates a new dashboard to application team leaders. The screen shows each banking application's observability usage with clear metrics: "Daily Log Volume," "Active Time Series," and "Trace Span Count." Each team's usage is displayed against their assigned quota with visual indicators showing teams approaching or exceeding their allocations. One application is highlighted in yellow with automated recommendations for reducing cardinality. Another section shows a quota request workflow where teams can apply for increased allocation with business justification.
 
 ### Teaching Narrative
 A quota management system forms the technical foundation for cost governance in observability platforms. Without explicit limits, observability consumption naturally expands to consume all available resources—a phenomenon known as "telemetry sprawl." Quotas provide the necessary constraints that drive teams toward efficient instrumentation while ensuring fair resource allocation across the organization.
@@ -31,7 +37,9 @@ Effective quota systems must balance technical enforcement with business flexibi
 The implementation requires three critical components: a real-time usage accounting system that tracks consumption by team and application, a policy engine that evaluates usage against established quotas, and an exception workflow that permits justified quota increases through appropriate approval channels. When properly designed, these systems create the transparency needed for teams to understand their observability consumption patterns and the incentives to optimize their instrumentation practices.
 
 ## Panel 4: The Observability Service Catalog
-**Scene Description**: A developer navigates a clean, well-organized internal portal titled "ObservBank Service Catalog." The interface presents instrumentation packages for different technology stacks with clear documentation, cost implications, and implementation examples. Each package shows standardized metrics, recommended sampling rates, and default dashboard templates specifically designed for banking applications. A "cost calculator" tool allows the developer to estimate observability costs based on expected transaction volumes and selected instrumentation options.
+### Scene Description
+
+ A developer navigates a clean, well-organized internal portal titled "ObservBank Service Catalog." The interface presents instrumentation packages for different technology stacks with clear documentation, cost implications, and implementation examples. Each package shows standardized metrics, recommended sampling rates, and default dashboard templates specifically designed for banking applications. A "cost calculator" tool allows the developer to estimate observability costs based on expected transaction volumes and selected instrumentation options.
 
 ### Teaching Narrative
 A well-designed service catalog transforms how teams approach observability instrumentation. Rather than requiring each team to become experts in telemetry design, the catalog provides pre-packaged, optimized observability solutions that implement best practices while maintaining cost efficiency. This approach dramatically reduces the cognitive overhead for application teams while ensuring consistent, high-quality telemetry across the organization.
@@ -41,7 +49,9 @@ The service catalog concept applies the principle of "shifting left" to observab
 The most effective catalogs provide three layers of abstraction: high-level business-oriented packages (e.g., "Payment Journey Monitoring"), technology-specific implementations (Java, Python, .NET clients), and low-level building blocks for custom needs. Each offering includes clear documentation on implementation, resource consumption, and associated costs. By making the right path the easy path, service catalogs naturally guide teams toward cost-effective instrumentation without requiring expensive enforcement mechanisms.
 
 ## Panel 5: The Internal Observability Marketplace
-**Scene Description**: In a quarterly planning meeting, application and platform teams review an internal dashboard resembling a marketplace. Various observability capabilities are displayed as "products" with associated costs, SLAs, and user ratings. Team representatives discuss their requirements while platform owners present roadmap plans. A management dashboard shows cost trends across the bank, with metrics comparing observability spending to transaction volumes and incident reductions. The marketplace includes both standard platform offerings and specialized team-developed components that others can adopt.
+### Scene Description
+
+ In a quarterly planning meeting, application and platform teams review an internal dashboard resembling a marketplace. Various observability capabilities are displayed as "products" with associated costs, SLAs, and user ratings. Team representatives discuss their requirements while platform owners present roadmap plans. A management dashboard shows cost trends across the bank, with metrics comparing observability spending to transaction volumes and incident reductions. The marketplace includes both standard platform offerings and specialized team-developed components that others can adopt.
 
 ### Teaching Narrative
 The evolution of observability platforms leads naturally to an internal marketplace model that aligns technical capabilities with business value. Unlike traditional platform approaches where teams are simply told what to use, the marketplace creates a value-driven ecosystem where platform teams must justify their offerings and application teams make informed decisions about their observability investments.

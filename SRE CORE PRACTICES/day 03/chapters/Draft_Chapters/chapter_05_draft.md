@@ -41,7 +41,9 @@ Welcome to the grim reality of centralized logging, where the only thing worse t
 
 ## Panel 1: The Fragmentatblem - When Logs Live Everywhere
 
-**Scene Description**: A chaotic banking incident war room where engineers frantically access dozens of different systems to investigate a failed payment processing batch. Some engineers SSH into production servers scrolling through text files, others access specialized mainframe interfaces, and still others log into cloud dashboards. Sticky notes with different server credentials cover monitors, while a whiteboard tracks which of the 30+ systems have been checked. Meanwhile, the incident timer shows that customer payments have been delayed for over an hour while this fragmented investigation continues.
+### Scene Description
+
+ A chaotic banking incident war room where engineers frantically access dozens of different systems to investigate a failed payment processing batch. Some engineers SSH into production servers scrolling through text files, others access specialized mainframe interfaces, and still others log into cloud dashboards. Sticky notes with different server credentials cover monitors, while a whiteboard tracks which of the 30+ systems have been checked. Meanwhile, the incident timer shows that customer payments have been delayed for over an hour while this fragmented investigation continues.
 
 ### Teaching Narrative
 
@@ -166,7 +168,9 @@ The bank calculated that centralized logging would have reduced the investigatio
 
 ## Panel 2: The Collection Challenge - Getting Logs from Source to Center
 
-**Scene Description**: A network operations diagram showing the complex log collection infrastructure of a multinational bank. The visualization highlights diverse log sources (cloud services, on-premises data centers, branch systems, ATM networks) and the specialized collectors deployed for each. Engineers monitor dashboards showing collection pipeline health, with metrics tracking log volume, latency, and delivery guarantees across regions. A zoomed-in view shows how a payment processing system's logs are securely collected, buffered locally during network interruptions, and reliably transmitted to central storage with encryption and compression.
+### Scene Description
+
+ A network operations diagram showing the complex log collection infrastructure of a multinational bank. The visualization highlights diverse log sources (cloud services, on-premises data centers, branch systems, ATM networks) and the specialized collectors deployed for each. Engineers monitor dashboards showing collection pipeline health, with metrics tracking log volume, latency, and delivery guarantees across regions. A zoomed-in view shows how a payment processing system's logs are securely collected, buffered locally during network interruptions, and reliably transmitted to central storage with encryption and compression.
 
 ### Teaching Narrative
 
@@ -318,7 +322,9 @@ The bank calculated that robust log collection would have enabled definitive inv
 
 ## Panel 3: The Transportation Layer - Reliable, Scalable Log Movement
 
-**Scene Description**: A financial data center where engineers analyze the log transportation infrastructure during a simulated disaster recovery exercise. Visualization screens show log data flowing through redundant message queues with guaranteed delivery, automatic failover between data centers, and throttling mechanisms that prevent system overload during traffic spikes. Performance dashboards track throughput, backpressure, and delivery latency across regional processing centers. A team member demonstrates how the system maintains log delivery despite simulated network partitions and server failures, ensuring continuous observability even during major incidents.
+### Scene Description
+
+ A financial data center where engineers analyze the log transportation infrastructure during a simulated disaster recovery exercise. Visualization screens show log data flowing through redundant message queues with guaranteed delivery, automatic failover between data centers, and throttling mechanisms that prevent system overload during traffic spikes. Performance dashboards track throughput, backpressure, and delivery latency across regional processing centers. A team member demonstrates how the system maintains log delivery despite simulated network partitions and server failures, ensuring continuous observability even during major incidents.
 
 ### Teaching Narrative
 
@@ -458,7 +464,9 @@ The bank calculated that robust log transportation would have prevented virtuall
 
 ## Panel 4: The Parsing and Enrichment Engine - Transforming Raw Logs to Valuable Data
 
-**Scene Description**: An observability platform monitoring center where logs visibly transform as they flow through processing pipelines. The visualization shows raw, inconsistently formatted logs from diverse banking systems entering the pipeline, then being normalized into consistent formats, enriched with metadata (service catalog information, deployment details, business context), and enhanced with derived fields (parsed error codes, transaction categories, performance brackets). Engineers configure specialized parsing rules for a newly integrated mortgage processing system, demonstrating how the platform automatically extracts structured fields from semi-structured logs and standardizes formats to match enterprise taxonomy.
+### Scene Description
+
+ An observability platform monitoring center where logs visibly transform as they flow through processing pipelines. The visualization shows raw, inconsistently formatted logs from diverse banking systems entering the pipeline, then being normalized into consistent formats, enriched with metadata (service catalog information, deployment details, business context), and enhanced with derived fields (parsed error codes, transaction categories, performance brackets). Engineers configure specialized parsing rules for a newly integrated mortgage processing system, demonstrating how the platform automatically extracts structured fields from semi-structured logs and standardizes formats to match enterprise taxonomy.
 
 ### Teaching Narrative
 
@@ -610,7 +618,9 @@ The bank calculated an ROI of 640% in the first year for their parsing and enric
 
 ## Panel 5: The Storage Strategy - Balancing Performance, Cost, and Compliance
 
-**Scene Description**: A financial technology architecture review where teams examine their tiered log storage implementation. Diagrams show how log data flows through specialized storage layers: high-performance hot storage for operational troubleshooting, cost-effective warm storage for trend analysis, and compliant cold storage for long-term retention. Performance benchmarks demonstrate query response times for different scenarios, while cost analysis shows storage optimization through compression, field-level retention policies, and automated archival. Compliance officers review how the architecture meets regulatory requirements for immutability, encryption, and retention periods across different log categories.
+### Scene Description
+
+ A financial technology architecture review where teams examine their tiered log storage implementation. Diagrams show how log data flows through specialized storage layers: high-performance hot storage for operational troubleshooting, cost-effective warm storage for trend analysis, and compliant cold storage for long-term retention. Performance benchmarks demonstrate query response times for different scenarios, while cost analysis shows storage optimization through compression, field-level retention policies, and automated archival. Compliance officers review how the architecture meets regulatory requirements for immutability, encryption, and retention periods across different log categories.
 
 ### Teaching Narrative
 
@@ -753,7 +763,9 @@ The bank calculated an ROI of 410% in the first year for their storage optimizat
 
 ## Panel 6: The Query Engine - Turning Log Volumes into Actionable Insights
 
-**Scene Description**: A banking operations center during a critical incident investigation. Analysts interact with a powerful query interface, filtering billions of log entries to isolate a specific customer's failed mortgage payment. The visualization shows how they progressively refine their search: first filtering by system and time range, then by transaction type and status, then by specific error codes, and finally comparing the failed transaction with successful ones sharing similar characteristics. Performance metrics show sub-second response times despite the massive data volume, with specialized indices accelerating common banking query patterns and visualization tools highlighting unusual patterns in the transaction flow.
+### Scene Description
+
+ A banking operations center during a critical incident investigation. Analysts interact with a powerful query interface, filtering billions of log entries to isolate a specific customer's failed mortgage payment. The visualization shows how they progressively refine their search: first filtering by system and time range, then by transaction type and status, then by specific error codes, and finally comparing the failed transaction with successful ones sharing similar characteristics. Performance metrics show sub-second response times despite the massive data volume, with specialized indices accelerating common banking query patterns and visualization tools highlighting unusual patterns in the transaction flow.
 
 ### Teaching Narrative
 
@@ -905,7 +917,9 @@ The bank calculated an ROI of 640% in the first year for their query engine inve
 
 ## Panel 7: The Access Control Framework - Balancing Visibility and Security
 
-**Scene Description**: A banking platform compliance review where security officers evaluate the logging platform's access control mechanisms. Visual displays show their multi-layered security model: role-based access restricting which teams can view specific log types, field-level masking that automatically redacts sensitive data like account numbers and PINs, purpose-based access workflows requiring justification for viewing customer transaction logs, and comprehensive audit trails tracking every log access. A demonstration shows how customer support can view transaction status without seeing full account details, while fraud investigation teams can access complete transaction data through an approved and documented workflow.
+### Scene Description
+
+ A banking platform compliance review where security officers evaluate the logging platform's access control mechanisms. Visual displays show their multi-layered security model: role-based access restricting which teams can view specific log types, field-level masking that automatically redacts sensitive data like account numbers and PINs, purpose-based access workflows requiring justification for viewing customer transaction logs, and comprehensive audit trails tracking every log access. A demonstration shows how customer support can view transaction status without seeing full account details, while fraud investigation teams can access complete transaction data through an approved and documented workflow.
 
 ### Teaching Narrative
 
@@ -1049,7 +1063,9 @@ The bank calculated that the access control framework delivered risk-adjusted va
 
 ## Panel 8: The Alerting and Monitoring Integration - From Passive Storage to Active Intelligence
 
-**Scene Description**: A bank's security operations center where automated log analysis drives real-time alerting. Dashboards show pattern detection algorithms analyzing authentication logs across digital banking platforms, identifying and flagging unusual access patterns for investigation. Timeline visualizations correlate log-based alerts with traditional monitoring metrics, showing how the combined signals detected a sophisticated fraud attempt that individual monitoring systems missed. Security analysts demonstrate how they rapidly pivot from alert to detailed log investigation, following the suspicious activity trail across multiple banking systems through the centralized logging platform.
+### Scene Description
+
+ A bank's security operations center where automated log analysis drives real-time alerting. Dashboards show pattern detection algorithms analyzing authentication logs across digital banking platforms, identifying and flagging unusual access patterns for investigation. Timeline visualizations correlate log-based alerts with traditional monitoring metrics, showing how the combined signals detected a sophisticated fraud attempt that individual monitoring systems missed. Security analysts demonstrate how they rapidly pivot from alert to detailed log investigation, following the suspicious activity trail across multiple banking systems through the centralized logging platform.
 
 ### Teaching Narrative
 
@@ -1194,7 +1210,9 @@ The bank calculated an ROI of 840% in the first year for their alerting integrat
 
 ## Panel 9: The Scaling Challenge - Architecture for Enterprise Financial Institutions
 
-**Scene Description**: A global bank's technology architecture review comparing their logging infrastructure before and after implementing scalable centralized architecture. Before: fragmented systems struggling with reliability and performance issues during peak transaction periods. After: a resilient, distributed architecture handling millions of transactions across multiple continents with consistent performance. Diagrams show the distributed collection network spanning branch systems and data centers, horizontally scalable processing clusters that automatically expand during high-volume periods, and geographically distributed storage maintaining data residency compliance while enabling global search capabilities. Performance metrics demonstrate sub-second query responsiveness even during month-end processing peaks.
+### Scene Description
+
+ A global bank's technology architecture review comparing their logging infrastructure before and after implementing scalable centralized architecture. Before: fragmented systems struggling with reliability and performance issues during peak transaction periods. After: a resilient, distributed architecture handling millions of transactions across multiple continents with consistent performance. Diagrams show the distributed collection network spanning branch systems and data centers, horizontally scalable processing clusters that automatically expand during high-volume periods, and geographically distributed storage maintaining data residency compliance while enabling global search capabilities. Performance metrics demonstrate sub-second query responsiveness even during month-end processing peaks.
 
 ### Teaching Narrative
 
@@ -1342,7 +1360,9 @@ The bank calculated an ROI of 370% in the first year for their scalable architec
 
 ## Panel 10: The Implementation Journey - From Fragmentation to Federation
 
-**Scene Description**: A banking digital transformation program where teams review their centralized logging roadmap and progress. Timeline visualizations show their phased approach: initial implementation focusing on critical customer-facing systems, progressive expansion to supporting services, specialized integration for mainframe core banking platforms, and advanced capabilities like cross-system transaction tracing. Progress metrics highlight both technical achievements (percentage of systems integrated, query performance improvements) and business outcomes (reduced incident resolution time, improved regulatory reporting efficiency). The final roadmap stages show planned machine learning integration for automated anomaly detection across the now-unified logging landscape.
+### Scene Description
+
+ A banking digital transformation program where teams review their centralized logging roadmap and progress. Timeline visualizations show their phased approach: initial implementation focusing on critical customer-facing systems, progressive expansion to supporting services, specialized integration for mainframe core banking platforms, and advanced capabilities like cross-system transaction tracing. Progress metrics highlight both technical achievements (percentage of systems integrated, query performance improvements) and business outcomes (reduced incident resolution time, improved regulatory reporting efficiency). The final roadmap stages show planned machine learning integration for automated anomaly detection across the now-unified logging landscape.
 
 ### Teaching Narrative
 
@@ -1494,7 +1514,9 @@ This expanded scaffold follows the chapter_layout.md structure, adding the commo
 
 ## Panel 2: The Collection Challenge - Getting Logs from Source to Center
 
-**Scene Description**: A network operations diagram showing the complex log collection infrastructure of a multinational bank. The visualization highlights diverse log sources (cloud services, on-premises data centers, branch systems, ATM networks) and the specialized collectors deployed for each. Engineers monitor dashboards showing collection pipeline health, with metrics tracking log volume, latency, and delivery guarantees across regions. A zoomed-in view shows how a payment processing system's logs are securely collected, buffered locally during network interruptions, and reliably transmitted to central storage with encryption and compression.
+### Scene Description
+
+ A network operations diagram showing the complex log collection infrastructure of a multinational bank. The visualization highlights diverse log sources (cloud services, on-premises data centers, branch systems, ATM networks) and the specialized collectors deployed for each. Engineers monitor dashboards showing collection pipeline health, with metrics tracking log volume, latency, and delivery guarantees across regions. A zoomed-in view shows how a payment processing system's logs are securely collected, buffered locally during network interruptions, and reliably transmitted to central storage with encryption and compression.
 
 ### Teaching Narrative
 
@@ -1646,7 +1668,9 @@ The bank calculated that robust log collection would have enabled definitive inv
 
 ## Panel 3: The Transportation Layer - Reliable, Scalable Log Movement
 
-**Scene Description**: A financial data center where engineers analyze the log transportation infrastructure during a simulated disaster recovery exercise. Visualization screens show log data flowing through redundant message queues with guaranteed delivery, automatic failover between data centers, and throttling mechanisms that prevent system overload during traffic spikes. Performance dashboards track throughput, backpressure, and delivery latency across regional processing centers. A team member demonstrates how the system maintains log delivery despite simulated network partitions and server failures, ensuring continuous observability even during major incidents.
+### Scene Description
+
+ A financial data center where engineers analyze the log transportation infrastructure during a simulated disaster recovery exercise. Visualization screens show log data flowing through redundant message queues with guaranteed delivery, automatic failover between data centers, and throttling mechanisms that prevent system overload during traffic spikes. Performance dashboards track throughput, backpressure, and delivery latency across regional processing centers. A team member demonstrates how the system maintains log delivery despite simulated network partitions and server failures, ensuring continuous observability even during major incidents.
 
 ### Teaching Narrative
 
@@ -1786,7 +1810,9 @@ The bank calculated that robust log transportation would have prevented virtuall
 
 ## Panel 4: The Parsing and Enrichment Engine - Transforming Raw Logs to Valuable Data
 
-**Scene Description**: An observability platform monitoring center where logs visibly transform as they flow through processing pipelines. The visualization shows raw, inconsistently formatted logs from diverse banking systems entering the pipeline, then being normalized into consistent formats, enriched with metadata (service catalog information, deployment details, business context), and enhanced with derived fields (parsed error codes, transaction categories, performance brackets). Engineers configure specialized parsing rules for a newly integrated mortgage processing system, demonstrating how the platform automatically extracts structured fields from semi-structured logs and standardizes formats to match enterprise taxonomy.
+### Scene Description
+
+ An observability platform monitoring center where logs visibly transform as they flow through processing pipelines. The visualization shows raw, inconsistently formatted logs from diverse banking systems entering the pipeline, then being normalized into consistent formats, enriched with metadata (service catalog information, deployment details, business context), and enhanced with derived fields (parsed error codes, transaction categories, performance brackets). Engineers configure specialized parsing rules for a newly integrated mortgage processing system, demonstrating how the platform automatically extracts structured fields from semi-structured logs and standardizes formats to match enterprise taxonomy.
 
 ### Teaching Narrative
 
@@ -1938,7 +1964,9 @@ The bank calculated an ROI of 640% in the first year for their parsing and enric
 
 ## Panel 5: The Storage Strategy - Balancing Performance, Cost, and Compliance
 
-**Scene Description**: A financial technology architecture review where teams examine their tiered log storage implementation. Diagrams show how log data flows through specialized storage layers: high-performance hot storage for operational troubleshooting, cost-effective warm storage for trend analysis, and compliant cold storage for long-term retention. Performance benchmarks demonstrate query response times for different scenarios, while cost analysis shows storage optimization through compression, field-level retention policies, and automated archival. Compliance officers review how the architecture meets regulatory requirements for immutability, encryption, and retention periods across different log categories.
+### Scene Description
+
+ A financial technology architecture review where teams examine their tiered log storage implementation. Diagrams show how log data flows through specialized storage layers: high-performance hot storage for operational troubleshooting, cost-effective warm storage for trend analysis, and compliant cold storage for long-term retention. Performance benchmarks demonstrate query response times for different scenarios, while cost analysis shows storage optimization through compression, field-level retention policies, and automated archival. Compliance officers review how the architecture meets regulatory requirements for immutability, encryption, and retention periods across different log categories.
 
 ### Teaching Narrative
 
@@ -2081,7 +2109,9 @@ The bank calculated an ROI of 410% in the first year for their storage optimizat
 
 ## Panel 6: The Query Engine - Turning Log Volumes into Actionable Insights
 
-**Scene Description**: A banking operations center during a critical incident investigation. Analysts interact with a powerful query interface, filtering billions of log entries to isolate a specific customer's failed mortgage payment. The visualization shows how they progressively refine their search: first filtering by system and time range, then by transaction type and status, then by specific error codes, and finally comparing the failed transaction with successful ones sharing similar characteristics. Performance metrics show sub-second response times despite the massive data volume, with specialized indices accelerating common banking query patterns and visualization tools highlighting unusual patterns in the transaction flow.
+### Scene Description
+
+ A banking operations center during a critical incident investigation. Analysts interact with a powerful query interface, filtering billions of log entries to isolate a specific customer's failed mortgage payment. The visualization shows how they progressively refine their search: first filtering by system and time range, then by transaction type and status, then by specific error codes, and finally comparing the failed transaction with successful ones sharing similar characteristics. Performance metrics show sub-second response times despite the massive data volume, with specialized indices accelerating common banking query patterns and visualization tools highlighting unusual patterns in the transaction flow.
 
 ### Teaching Narrative
 
@@ -2233,7 +2263,9 @@ The bank calculated an ROI of 640% in the first year for their query engine inve
 
 ## Panel 7: The Access Control Framework - Balancing Visibility and Security
 
-**Scene Description**: A banking platform compliance review where security officers evaluate the logging platform's access control mechanisms. Visual displays show their multi-layered security model: role-based access restricting which teams can view specific log types, field-level masking that automatically redacts sensitive data like account numbers and PINs, purpose-based access workflows requiring justification for viewing customer transaction logs, and comprehensive audit trails tracking every log access. A demonstration shows how customer support can view transaction status without seeing full account details, while fraud investigation teams can access complete transaction data through an approved and documented workflow.
+### Scene Description
+
+ A banking platform compliance review where security officers evaluate the logging platform's access control mechanisms. Visual displays show their multi-layered security model: role-based access restricting which teams can view specific log types, field-level masking that automatically redacts sensitive data like account numbers and PINs, purpose-based access workflows requiring justification for viewing customer transaction logs, and comprehensive audit trails tracking every log access. A demonstration shows how customer support can view transaction status without seeing full account details, while fraud investigation teams can access complete transaction data through an approved and documented workflow.
 
 ### Teaching Narrative
 
@@ -2377,7 +2409,9 @@ The bank calculated that the access control framework delivered risk-adjusted va
 
 ## Panel 8: The Alerting and Monitoring Integration - From Passive Storage to Active Intelligence
 
-**Scene Description**: A bank's security operations center where automated log analysis drives real-time alerting. Dashboards show pattern detection algorithms analyzing authentication logs across digital banking platforms, identifying and flagging unusual access patterns for investigation. Timeline visualizations correlate log-based alerts with traditional monitoring metrics, showing how the combined signals detected a sophisticated fraud attempt that individual monitoring systems missed. Security analysts demonstrate how they rapidly pivot from alert to detailed log investigation, following the suspicious activity trail across multiple banking systems through the centralized logging platform.
+### Scene Description
+
+ A bank's security operations center where automated log analysis drives real-time alerting. Dashboards show pattern detection algorithms analyzing authentication logs across digital banking platforms, identifying and flagging unusual access patterns for investigation. Timeline visualizations correlate log-based alerts with traditional monitoring metrics, showing how the combined signals detected a sophisticated fraud attempt that individual monitoring systems missed. Security analysts demonstrate how they rapidly pivot from alert to detailed log investigation, following the suspicious activity trail across multiple banking systems through the centralized logging platform.
 
 ### Teaching Narrative
 
@@ -2522,7 +2556,9 @@ The bank calculated an ROI of 840% in the first year for their alerting integrat
 
 ## Panel 9: The Scaling Challenge - Architecture for Enterprise Financial Institutions
 
-**Scene Description**: A global bank's technology architecture review comparing their logging infrastructure before and after implementing scalable centralized architecture. Before: fragmented systems struggling with reliability and performance issues during peak transaction periods. After: a resilient, distributed architecture handling millions of transactions across multiple continents with consistent performance. Diagrams show the distributed collection network spanning branch systems and data centers, horizontally scalable processing clusters that automatically expand during high-volume periods, and geographically distributed storage maintaining data residency compliance while enabling global search capabilities. Performance metrics demonstrate sub-second query responsiveness even during month-end processing peaks.
+### Scene Description
+
+ A global bank's technology architecture review comparing their logging infrastructure before and after implementing scalable centralized architecture. Before: fragmented systems struggling with reliability and performance issues during peak transaction periods. After: a resilient, distributed architecture handling millions of transactions across multiple continents with consistent performance. Diagrams show the distributed collection network spanning branch systems and data centers, horizontally scalable processing clusters that automatically expand during high-volume periods, and geographically distributed storage maintaining data residency compliance while enabling global search capabilities. Performance metrics demonstrate sub-second query responsiveness even during month-end processing peaks.
 
 ### Teaching Narrative
 
@@ -2670,7 +2706,9 @@ The bank calculated an ROI of 370% in the first year for their scalable architec
 
 ## Panel 10: The Implementation Journey - From Fragmentation to Federation
 
-**Scene Description**: A banking digital transformation program where teams review their centralized logging roadmap and progress. Timeline visualizations show their phased approach: initial implementation focusing on critical customer-facing systems, progressive expansion to supporting services, specialized integration for mainframe core banking platforms, and advanced capabilities like cross-system transaction tracing. Progress metrics highlight both technical achievements (percentage of systems integrated, query performance improvements) and business outcomes (reduced incident resolution time, improved regulatory reporting efficiency). The final roadmap stages show planned machine learning integration for automated anomaly detection across the now-unified logging landscape.
+### Scene Description
+
+ A banking digital transformation program where teams review their centralized logging roadmap and progress. Timeline visualizations show their phased approach: initial implementation focusing on critical customer-facing systems, progressive expansion to supporting services, specialized integration for mainframe core banking platforms, and advanced capabilities like cross-system transaction tracing. Progress metrics highlight both technical achievements (percentage of systems integrated, query performance improvements) and business outcomes (reduced incident resolution time, improved regulatory reporting efficiency). The final roadmap stages show planned machine learning integration for automated anomaly detection across the now-unified logging landscape.
 
 ### Teaching Narrative
 
@@ -2842,7 +2880,9 @@ This expanded scaffold follows the chapter_layout.md structure, adding the commo
 
 ## Panel 2: The Collection Challenge - Getting Logs from Source to Center
 
-**Scene Description**: A network operations diagram showing the complex log collection infrastructure of a multinational bank. The visualization highlights diverse log sources (cloud services, on-premises data centers, branch systems, ATM networks) and the specialized collectors deployed for each. Engineers monitor dashboards showing collection pipeline health, with metrics tracking log volume, latency, and delivery guarantees across regions. A zoomed-in view shows how a payment processing system's logs are securely collected, buffered locally during network interruptions, and reliably transmitted to central storage with encryption and compression.
+### Scene Description
+
+ A network operations diagram showing the complex log collection infrastructure of a multinational bank. The visualization highlights diverse log sources (cloud services, on-premises data centers, branch systems, ATM networks) and the specialized collectors deployed for each. Engineers monitor dashboards showing collection pipeline health, with metrics tracking log volume, latency, and delivery guarantees across regions. A zoomed-in view shows how a payment processing system's logs are securely collected, buffered locally during network interruptions, and reliably transmitted to central storage with encryption and compression.
 
 ### Teaching Narrative
 
@@ -2994,7 +3034,9 @@ The bank calculated that robust log collection would have enabled definitive inv
 
 ## Panel 3: The Transportation Layer - Reliable, Scalable Log Movement
 
-**Scene Description**: A financial data center where engineers analyze the log transportation infrastructure during a simulated disaster recovery exercise. Visualization screens show log data flowing through redundant message queues with guaranteed delivery, automatic failover between data centers, and throttling mechanisms that prevent system overload during traffic spikes. Performance dashboards track throughput, backpressure, and delivery latency across regional processing centers. A team member demonstrates how the system maintains log delivery despite simulated network partitions and server failures, ensuring continuous observability even during major incidents.
+### Scene Description
+
+ A financial data center where engineers analyze the log transportation infrastructure during a simulated disaster recovery exercise. Visualization screens show log data flowing through redundant message queues with guaranteed delivery, automatic failover between data centers, and throttling mechanisms that prevent system overload during traffic spikes. Performance dashboards track throughput, backpressure, and delivery latency across regional processing centers. A team member demonstrates how the system maintains log delivery despite simulated network partitions and server failures, ensuring continuous observability even during major incidents.
 
 ### Teaching Narrative
 
@@ -3134,7 +3176,9 @@ The bank calculated that robust log transportation would have prevented virtuall
 
 ## Panel 4: The Parsing and Enrichment Engine - Transforming Raw Logs to Valuable Data
 
-**Scene Description**: An observability platform monitoring center where logs visibly transform as they flow through processing pipelines. The visualization shows raw, inconsistently formatted logs from diverse banking systems entering the pipeline, then being normalized into consistent formats, enriched with metadata (service catalog information, deployment details, business context), and enhanced with derived fields (parsed error codes, transaction categories, performance brackets). Engineers configure specialized parsing rules for a newly integrated mortgage processing system, demonstrating how the platform automatically extracts structured fields from semi-structured logs and standardizes formats to match enterprise taxonomy.
+### Scene Description
+
+ An observability platform monitoring center where logs visibly transform as they flow through processing pipelines. The visualization shows raw, inconsistently formatted logs from diverse banking systems entering the pipeline, then being normalized into consistent formats, enriched with metadata (service catalog information, deployment details, business context), and enhanced with derived fields (parsed error codes, transaction categories, performance brackets). Engineers configure specialized parsing rules for a newly integrated mortgage processing system, demonstrating how the platform automatically extracts structured fields from semi-structured logs and standardizes formats to match enterprise taxonomy.
 
 ### Teaching Narrative
 
@@ -3286,7 +3330,9 @@ The bank calculated an ROI of 640% in the first year for their parsing and enric
 
 ## Panel 5: The Storage Strategy - Balancing Performance, Cost, and Compliance
 
-**Scene Description**: A financial technology architecture review where teams examine their tiered log storage implementation. Diagrams show how log data flows through specialized storage layers: high-performance hot storage for operational troubleshooting, cost-effective warm storage for trend analysis, and compliant cold storage for long-term retention. Performance benchmarks demonstrate query response times for different scenarios, while cost analysis shows storage optimization through compression, field-level retention policies, and automated archival. Compliance officers review how the architecture meets regulatory requirements for immutability, encryption, and retention periods across different log categories.
+### Scene Description
+
+ A financial technology architecture review where teams examine their tiered log storage implementation. Diagrams show how log data flows through specialized storage layers: high-performance hot storage for operational troubleshooting, cost-effective warm storage for trend analysis, and compliant cold storage for long-term retention. Performance benchmarks demonstrate query response times for different scenarios, while cost analysis shows storage optimization through compression, field-level retention policies, and automated archival. Compliance officers review how the architecture meets regulatory requirements for immutability, encryption, and retention periods across different log categories.
 
 ### Teaching Narrative
 
@@ -3429,7 +3475,9 @@ The bank calculated an ROI of 410% in the first year for their storage optimizat
 
 ## Panel 6: The Query Engine - Turning Log Volumes into Actionable Insights
 
-**Scene Description**: A banking operations center during a critical incident investigation. Analysts interact with a powerful query interface, filtering billions of log entries to isolate a specific customer's failed mortgage payment. The visualization shows how they progressively refine their search: first filtering by system and time range, then by transaction type and status, then by specific error codes, and finally comparing the failed transaction with successful ones sharing similar characteristics. Performance metrics show sub-second response times despite the massive data volume, with specialized indices accelerating common banking query patterns and visualization tools highlighting unusual patterns in the transaction flow.
+### Scene Description
+
+ A banking operations center during a critical incident investigation. Analysts interact with a powerful query interface, filtering billions of log entries to isolate a specific customer's failed mortgage payment. The visualization shows how they progressively refine their search: first filtering by system and time range, then by transaction type and status, then by specific error codes, and finally comparing the failed transaction with successful ones sharing similar characteristics. Performance metrics show sub-second response times despite the massive data volume, with specialized indices accelerating common banking query patterns and visualization tools highlighting unusual patterns in the transaction flow.
 
 ### Teaching Narrative
 
@@ -3581,7 +3629,9 @@ The bank calculated an ROI of 640% in the first year for their query engine inve
 
 ## Panel 7: The Access Control Framework - Balancing Visibility and Security
 
-**Scene Description**: A banking platform compliance review where security officers evaluate the logging platform's access control mechanisms. Visual displays show their multi-layered security model: role-based access restricting which teams can view specific log types, field-level masking that automatically redacts sensitive data like account numbers and PINs, purpose-based access workflows requiring justification for viewing customer transaction logs, and comprehensive audit trails tracking every log access. A demonstration shows how customer support can view transaction status without seeing full account details, while fraud investigation teams can access complete transaction data through an approved and documented workflow.
+### Scene Description
+
+ A banking platform compliance review where security officers evaluate the logging platform's access control mechanisms. Visual displays show their multi-layered security model: role-based access restricting which teams can view specific log types, field-level masking that automatically redacts sensitive data like account numbers and PINs, purpose-based access workflows requiring justification for viewing customer transaction logs, and comprehensive audit trails tracking every log access. A demonstration shows how customer support can view transaction status without seeing full account details, while fraud investigation teams can access complete transaction data through an approved and documented workflow.
 
 ### Teaching Narrative
 
@@ -3725,7 +3775,9 @@ The bank calculated that the access control framework delivered risk-adjusted va
 
 ## Panel 8: The Alerting and Monitoring Integration - From Passive Storage to Active Intelligence
 
-**Scene Description**: A bank's security operations center where automated log analysis drives real-time alerting. Dashboards show pattern detection algorithms analyzing authentication logs across digital banking platforms, identifying and flagging unusual access patterns for investigation. Timeline visualizations correlate log-based alerts with traditional monitoring metrics, showing how the combined signals detected a sophisticated fraud attempt that individual monitoring systems missed. Security analysts demonstrate how they rapidly pivot from alert to detailed log investigation, following the suspicious activity trail across multiple banking systems through the centralized logging platform.
+### Scene Description
+
+ A bank's security operations center where automated log analysis drives real-time alerting. Dashboards show pattern detection algorithms analyzing authentication logs across digital banking platforms, identifying and flagging unusual access patterns for investigation. Timeline visualizations correlate log-based alerts with traditional monitoring metrics, showing how the combined signals detected a sophisticated fraud attempt that individual monitoring systems missed. Security analysts demonstrate how they rapidly pivot from alert to detailed log investigation, following the suspicious activity trail across multiple banking systems through the centralized logging platform.
 
 ### Teaching Narrative
 
@@ -3870,7 +3922,9 @@ The bank calculated an ROI of 840% in the first year for their alerting integrat
 
 ## Panel 9: The Scaling Challenge - Architecture for Enterprise Financial Institutions
 
-**Scene Description**: A global bank's technology architecture review comparing their logging infrastructure before and after implementing scalable centralized architecture. Before: fragmented systems struggling with reliability and performance issues during peak transaction periods. After: a resilient, distributed architecture handling millions of transactions across multiple continents with consistent performance. Diagrams show the distributed collection network spanning branch systems and data centers, horizontally scalable processing clusters that automatically expand during high-volume periods, and geographically distributed storage maintaining data residency compliance while enabling global search capabilities. Performance metrics demonstrate sub-second query responsiveness even during month-end processing peaks.
+### Scene Description
+
+ A global bank's technology architecture review comparing their logging infrastructure before and after implementing scalable centralized architecture. Before: fragmented systems struggling with reliability and performance issues during peak transaction periods. After: a resilient, distributed architecture handling millions of transactions across multiple continents with consistent performance. Diagrams show the distributed collection network spanning branch systems and data centers, horizontally scalable processing clusters that automatically expand during high-volume periods, and geographically distributed storage maintaining data residency compliance while enabling global search capabilities. Performance metrics demonstrate sub-second query responsiveness even during month-end processing peaks.
 
 ### Teaching Narrative
 
@@ -4018,7 +4072,9 @@ The bank calculated an ROI of 370% in the first year for their scalable architec
 
 ## Panel 10: The Implementation Journey - From Fragmentation to Federation
 
-**Scene Description**: A banking digital transformation program where teams review their centralized logging roadmap and progress. Timeline visualizations show their phased approach: initial implementation focusing on critical customer-facing systems, progressive expansion to supporting services, specialized integration for mainframe core banking platforms, and advanced capabilities like cross-system transaction tracing. Progress metrics highlight both technical achievements (percentage of systems integrated, query performance improvements) and business outcomes (reduced incident resolution time, improved regulatory reporting efficiency). The final roadmap stages show planned machine learning integration for automated anomaly detection across the now-unified logging landscape.
+### Scene Description
+
+ A banking digital transformation program where teams review their centralized logging roadmap and progress. Timeline visualizations show their phased approach: initial implementation focusing on critical customer-facing systems, progressive expansion to supporting services, specialized integration for mainframe core banking platforms, and advanced capabilities like cross-system transaction tracing. Progress metrics highlight both technical achievements (percentage of systems integrated, query performance improvements) and business outcomes (reduced incident resolution time, improved regulatory reporting efficiency). The final roadmap stages show planned machine learning integration for automated anomaly detection across the now-unified logging landscape.
 
 ### Teaching Narrative
 

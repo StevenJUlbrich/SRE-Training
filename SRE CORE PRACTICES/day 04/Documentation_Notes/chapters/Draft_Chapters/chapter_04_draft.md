@@ -29,7 +29,9 @@ Welcome to trace visualization—the MRI machine for your distributed systems, w
 ---
 ## Panel 1: The Trace Navigator - Understanding Trace Visualization Interfaces
 
-**Scene Description**: A senior SRE and a production support engineer sit together at a workstation with a large monitor showing a distributed tracing dashboard. The screen displays a waterfall-style visualization of a complex international wire transfer transaction, with colorful horizontal bars of different lengths representing spans across multiple banking services. The senior SRE is pointing at specific areas of the visualization while the junior engineer looks on with dawning comprehension.
+### Scene Description
+
+ A senior SRE and a production support engineer sit together at a workstation with a large monitor showing a distributed tracing dashboard. The screen displays a waterfall-style visualization of a complex international wire transfer transaction, with colorful horizontal bars of different lengths representing spans across multiple banking services. The senior SRE is pointing at specific areas of the visualization while the junior engineer looks on with dawning comprehension.
 
 ### Teaching Narrative
 
@@ -65,7 +67,9 @@ For banking systems handling high-value transactions, visualization gaps create 
 
 ## Panel 2: Navigating Trace Context - Filters, Tags, and Attributes
 
-**Scene Description**: A troubleshooting war room during a critical incident affecting the bank's mortgage application processing system. Multiple engineers are gathered around a large screen showing a distributed tracing platform. One engineer is using filtering controls to narrow down millions of traces to only those with specific attributes: "mortgage-application" transaction type, "high-value-customer" segment, and HTTP error codes. The interface shows dynamic updates as filters are applied, revealing patterns of errors across specific geographic regions and loan types.
+### Scene Description
+
+ A troubleshooting war room during a critical incident affecting the bank's mortgage application processing system. Multiple engineers are gathered around a large screen showing a distributed tracing platform. One engineer is using filtering controls to narrow down millions of traces to only those with specific attributes: "mortgage-application" transaction type, "high-value-customer" segment, and HTTP error codes. The interface shows dynamic updates as filters are applied, revealing patterns of errors across specific geographic regions and loan types.
 
 ### Teaching Narrative
 
@@ -101,7 +105,9 @@ For financial institutions with diverse product offerings and customer segments,
 
 ## Panel 3: Time Travel Debugging - Exploring Historical Trace Patterns
 
-**Scene Description**: A banking SRE team is conducting a post-mortem analysis after a trading platform experienced intermittent latency issues during market opening hours. On a large screen, they're comparing visualization timelines of the same transaction type across different days. The interface shows a "time slider" control that allows them to move backward and forward through weeks of historical trace data. As they navigate through time, they notice a pattern emerging—the same authentication service experiences significant latency spikes every Monday morning just after market open, correlating perfectly with their incident timeline.
+### Scene Description
+
+ A banking SRE team is conducting a post-mortem analysis after a trading platform experienced intermittent latency issues during market opening hours. On a large screen, they're comparing visualization timelines of the same transaction type across different days. The interface shows a "time slider" control that allows them to move backward and forward through weeks of historical trace data. As they navigate through time, they notice a pattern emerging—the same authentication service experiences significant latency spikes every Monday morning just after market open, correlating perfectly with their incident timeline.
 
 ### Teaching Narrative
 
@@ -139,7 +145,9 @@ For financial institutions with continuous deployment practices, the inability t
 
 ## Panel 4: Comparative Analysis - Benchmarking Normal vs. Abnormal Traces
 
-**Scene Description**: A split-screen view shows two side-by-side trace visualizations of the same credit card authorization flow. An SRE analyst is explaining the differences to a group of production support engineers transitioning to SRE roles. The left trace shows a normal, successful transaction completing in 250ms, while the right shows a problematic transaction taking over 2 seconds. Key differences are highlighted in red, showing excessive database query time and an unexpected retry pattern in a fraud detection service. Annotations point out how the abnormal trace reveals hidden dependencies not visible in the successful case.
+### Scene Description
+
+ A split-screen view shows two side-by-side trace visualizations of the same credit card authorization flow. An SRE analyst is explaining the differences to a group of production support engineers transitioning to SRE roles. The left trace shows a normal, successful transaction completing in 250ms, while the right shows a problematic transaction taking over 2 seconds. Key differences are highlighted in red, showing excessive database query time and an unexpected retry pattern in a fraud detection service. Annotations point out how the abnormal trace reveals hidden dependencies not visible in the successful case.
 
 ### Teaching Narrative
 
@@ -177,7 +185,9 @@ For financial institutions managing complex transaction flows through dozens of 
 
 ## Panel 5: Service Dependency Visualization - Uncovering Hidden Relationships
 
-**Scene Description**: A large wall display in a banking operations center shows a dynamically generated service dependency map created from trace data. The visualization resembles a complex network diagram, with nodes representing services and lines showing communication patterns between them. The thickness of connecting lines indicates transaction volume, while color indicates latency. Engineers are gathered around, looking surprised as they discover several unexpected dependencies—a legacy mainframe system is being called by a new mobile banking API through three layers of intermediary services, creating a critical path that wasn't documented in any architectural diagrams.
+### Scene Description
+
+ A large wall display in a banking operations center shows a dynamically generated service dependency map created from trace data. The visualization resembles a complex network diagram, with nodes representing services and lines showing communication patterns between them. The thickness of connecting lines indicates transaction volume, while color indicates latency. Engineers are gathered around, looking surprised as they discover several unexpected dependencies—a legacy mainframe system is being called by a new mobile banking API through three layers of intermediary services, creating a critical path that wasn't documented in any architectural diagrams.
 
 ### Teaching Narrative
 
@@ -215,7 +225,9 @@ For financial institutions managing technology modernization initiatives, the in
 
 ## Panel 6: Business Transaction Perspectives - Linking Technical Traces to Customer Journeys
 
-**Scene Description**: A mixed team of business analysts and SRE engineers are in a collaborative workshop. They're working with a specialized trace visualization that translates technical spans into business-meaningful steps. On screen, a complex mortgage application process is visualized both as a technical trace (showing services, APIs, and databases) and as a parallel business journey map (showing customer-facing steps like "application submission," "credit check," "income verification," and "offer generation"). Lines connect the technical components to the business steps they support, while performance metrics are displayed in business-relevant terms like "time to decision" rather than just technical latency.
+### Scene Description
+
+ A mixed team of business analysts and SRE engineers are in a collaborative workshop. They're working with a specialized trace visualization that translates technical spans into business-meaningful steps. On screen, a complex mortgage application process is visualized both as a technical trace (showing services, APIs, and databases) and as a parallel business journey map (showing customer-facing steps like "application submission," "credit check," "income verification," and "offer generation"). Lines connect the technical components to the business steps they support, while performance metrics are displayed in business-relevant terms like "time to decision" rather than just technical latency.
 
 ### Teaching Narrative
 

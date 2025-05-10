@@ -2,7 +2,9 @@
 
 ## Panel 1: The Remediation Crossroads
 
-**Scene Description**: A tense war room where a diverse team of banking SREs and application owners stare at a large digital decision tree projected on the wall. The tree shows multiple paths: "Rollback," "Forward Fix," and "Workaround." A payment processing dashboard shows a growing queue of failed transactions as a large clock on the wall shows 10:34 AM, with markers indicating the incident has been ongoing for 47 minutes. The incident commander, a woman with a determined expression, points to the decision tree while team members look anxious but focused.
+### Scene Description
+
+ A tense war room where a diverse team of banking SREs and application owners stare at a large digital decision tree projected on the wall. The tree shows multiple paths: "Rollback," "Forward Fix," and "Workaround." A payment processing dashboard shows a growing queue of failed transactions as a large clock on the wall shows 10:34 AM, with markers indicating the incident has been ongoing for 47 minutes. The incident commander, a woman with a determined expression, points to the decision tree while team members look anxious but focused.
 
 ### Teaching Narrative
 
@@ -71,7 +73,9 @@ To implement effective remediation decision frameworks in your banking organizat
 
 ## Panel 2: Rollback Precision Engineering
 
-**Scene Description**: In a monitoring center, an SRE is executing a carefully orchestrated rollback process. Multiple screens show database transaction states, in-flight payments, and deployment pipelines. The SRE's hands hover over a keyboard with a large "EXECUTE ROLLBACK" button displayed on the center screen. A whiteboard visible in the background shows a detailed checklist titled "Trading Platform Rollback Protocol" with items like "Transaction Boundary Identification," "Data Consistency Verification," and "Coordinated Component Sequencing." Other team members are on phones, coordinating the rollback sequence across multiple systems.
+### Scene Description
+
+ In a monitoring center, an SRE is executing a carefully orchestrated rollback process. Multiple screens show database transaction states, in-flight payments, and deployment pipelines. The SRE's hands hover over a keyboard with a large "EXECUTE ROLLBACK" button displayed on the center screen. A whiteboard visible in the background shows a detailed checklist titled "Trading Platform Rollback Protocol" with items like "Transaction Boundary Identification," "Data Consistency Verification," and "Coordinated Component Sequencing." Other team members are on phones, coordinating the rollback sequence across multiple systems.
 
 ### Teaching Narrative
 
@@ -129,7 +133,9 @@ To implement precision rollback capabilities for banking systems:
 
 ## Panel 3: The Forward Fix Validation Pipeline
 
-**Scene Description**: A split-screen visual shows two SREs working in parallel. On one side, a developer rapidly codes a fix for a critical authentication service issue while automated tests run in a separate window. On the other side, another SRE is setting up a sophisticated staging environment that replicates production traffic patterns with synthetic transactions representing various banking operations. Between them is a shared dashboard showing the current system degradation—customers unable to access their accounts—with a counter of affected users steadily increasing. A workflow diagram on the wall shows an accelerated validation pipeline with stages labeled "Development," "Automated Testing," "Load Testing," "Canary Deployment," and "Progressive Rollout."
+### Scene Description
+
+ A split-screen visual shows two SREs working in parallel. On one side, a developer rapidly codes a fix for a critical authentication service issue while automated tests run in a separate window. On the other side, another SRE is setting up a sophisticated staging environment that replicates production traffic patterns with synthetic transactions representing various banking operations. Between them is a shared dashboard showing the current system degradation—customers unable to access their accounts—with a counter of affected users steadily increasing. A workflow diagram on the wall shows an accelerated validation pipeline with stages labeled "Development," "Automated Testing," "Load Testing," "Canary Deployment," and "Progressive Rollout."
 
 ### Teaching Narrative
 
@@ -187,7 +193,9 @@ To implement effective forward fix capabilities for banking systems:
 
 ## Panel 4: Blast Radius Containment
 
-**Scene Description**: An SRE team is working on a large, touch-enabled transparent display showing a banking system topology map with interconnected services. One section glows red, indicating the area of the incident (a core transaction processing service). Team members are using gestures to draw containment boundaries around the affected area, with simulations showing how different containment strategies would impact customer-facing services. One simulation shows reduced functionality for wealth management clients but preserves core banking operations. Another shows all services operating but at degraded performance levels. A decision matrix on a nearby screen weighs factors like "customers affected," "transaction types impacted," and "regulatory reporting implications."
+### Scene Description
+
+ An SRE team is working on a large, touch-enabled transparent display showing a banking system topology map with interconnected services. One section glows red, indicating the area of the incident (a core transaction processing service). Team members are using gestures to draw containment boundaries around the affected area, with simulations showing how different containment strategies would impact customer-facing services. One simulation shows reduced functionality for wealth management clients but preserves core banking operations. Another shows all services operating but at degraded performance levels. A decision matrix on a nearby screen weighs factors like "customers affected," "transaction types impacted," and "regulatory reporting implications."
 
 ### Teaching Narrative
 
@@ -245,7 +253,9 @@ To implement effective blast radius containment capabilities:
 
 ## Panel 5: The Decision Authority Matrix
 
-**Scene Description**: A banking executive is rushing into the incident command center where the SRE team is mid-response to a major incident affecting the bank's international wire transfer system. On the wall, a clearly defined "Decision Authority Matrix" shows different decision types (rollback, customer communication, feature disablement, etc.) mapped to roles rather than individuals. The executive points to a specific cell in the matrix showing that the decision to disable a specific payment feature temporarily falls to the Incident Commander, not executive management. The Incident Commander, a calm SRE with a headset, is explaining the technical rationale for the decision while the executive listens attentively, visibly transitioning from concern to understanding.
+### Scene Description
+
+ A banking executive is rushing into the incident command center where the SRE team is mid-response to a major incident affecting the bank's international wire transfer system. On the wall, a clearly defined "Decision Authority Matrix" shows different decision types (rollback, customer communication, feature disablement, etc.) mapped to roles rather than individuals. The executive points to a specific cell in the matrix showing that the decision to disable a specific payment feature temporarily falls to the Incident Commander, not executive management. The Incident Commander, a calm SRE with a headset, is explaining the technical rationale for the decision while the executive listens attentively, visibly transitioning from concern to understanding.
 
 ### Teaching Narrative
 
@@ -303,7 +313,9 @@ To implement effective decision authority frameworks for banking incidents:
 
 ## Panel 6: The Time-Impact Curve
 
-**Scene Description**: A war room where an SRE team is debating remediation options for a degraded trading platform. The central display shows a graph labeled "Time-Impact Curve" with three different remediation scenarios plotted. Each line shows how customer impact (y-axis) would change over time (x-axis) under different approaches. One line shows a rapid drop with a risk marker; another shows a slower but steadier decline. Team members point to different parts of the curves, with speech bubbles indicating discussions about "acceptable impact duration," "risk tolerance," and "recovery certainty." On a side screen, actual trading volume data shows the real-time financial impact of the ongoing issue.
+### Scene Description
+
+ A war room where an SRE team is debating remediation options for a degraded trading platform. The central display shows a graph labeled "Time-Impact Curve" with three different remediation scenarios plotted. Each line shows how customer impact (y-axis) would change over time (x-axis) under different approaches. One line shows a rapid drop with a risk marker; another shows a slower but steadier decline. Team members point to different parts of the curves, with speech bubbles indicating discussions about "acceptable impact duration," "risk tolerance," and "recovery certainty." On a side screen, actual trading volume data shows the real-time financial impact of the ongoing issue.
 
 ### Teaching Narrative
 
@@ -361,7 +373,9 @@ To implement Time-Impact Curve analysis in your banking organization:
 
 ## Panel 7: Learning from Remediation Choices
 
-**Scene Description**: A post-incident review meeting where the team is analyzing the effectiveness of their remediation decision. On a split screen, we see what actually happened versus what alternative approaches would have yielded. A decision tree shows the path taken highlighted in green, with abandoned options in gray. Data visualizations show actual recovery time, customer impact metrics, and financial consequences. Team members are engaged in thoughtful discussion, with notes being taken for future playbooks. On a board titled "Remediation Decision Repository," similar incidents from the past are categorized with their resolution approaches and outcomes, creating a knowledge base of effective strategies.
+### Scene Description
+
+ A post-incident review meeting where the team is analyzing the effectiveness of their remediation decision. On a split screen, we see what actually happened versus what alternative approaches would have yielded. A decision tree shows the path taken highlighted in green, with abandoned options in gray. Data visualizations show actual recovery time, customer impact metrics, and financial consequences. Team members are engaged in thoughtful discussion, with notes being taken for future playbooks. On a board titled "Remediation Decision Repository," similar incidents from the past are categorized with their resolution approaches and outcomes, creating a knowledge base of effective strategies.
 
 ### Teaching Narrative
 

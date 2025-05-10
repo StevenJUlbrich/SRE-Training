@@ -41,7 +41,9 @@ Banks aren’t just fighting for uptime—they’re fighting for survival in a w
 
 ## Panel 1: The Pipeline Revolution - From Static Collection to Dynamic Streams
 
-**Scene Description**: A modern banking operations center where engineers monitor a visualization of their observability pipeline. Unlike traditional static collection systems, the display shows log data being actively transformed as it flows: transaction logs from payment services are automatically enriched with customer context, security events are dynamically routed to specialized analysis engines, compliance-sensitive data is masked in real-time before storage, and machine learning models perform continuous analysis directly within the stream. A side-by-side comparison with their previous architecture demonstrates the evolution—from batch-oriented, fixed-path logging to a dynamic, stream-processing approach that performs intelligent operations on data in motion rather than at rest.
+### Scene Description
+
+ A modern banking operations center where engineers monitor a visualization of their observability pipeline. Unlike traditional static collection systems, the display shows log data being actively transformed as it flows: transaction logs from payment services are automatically enriched with customer context, security events are dynamically routed to specialized analysis engines, compliance-sensitive data is masked in real-time before storage, and machine learning models perform continuous analysis directly within the stream. A side-by-side comparison with their previous architecture demonstrates the evolution—from batch-oriented, fixed-path logging to a dynamic, stream-processing approach that performs intelligent operations on data in motion rather than at rest.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ To implement observability pipelines in a banking environment:
 
 ## Panel 2: The Enrichment Engine - Adding Context in Flight
 
-**Scene Description**: A banking data engineering lab where specialists develop and test enrichment transformations for their observability pipeline. Interactive displays show multiple enrichment processes operating on transaction logs flowing through the system: customer data services adding account context to raw payment events, risk scoring engines calculating and appending fraud probability metrics, business context services tagging operations with product and journey information, and machine learning models generating real-time anomaly scores directly in the pipeline. A demonstration follows a single transaction from raw log entry to fully enriched event—showing how a simple payment record transforms into a rich business intelligence asset through automated, in-pipeline enrichment before reaching any analysis system.
+### Scene Description
+
+ A banking data engineering lab where specialists develop and test enrichment transformations for their observability pipeline. Interactive displays show multiple enrichment processes operating on transaction logs flowing through the system: customer data services adding account context to raw payment events, risk scoring engines calculating and appending fraud probability metrics, business context services tagging operations with product and journey information, and machine learning models generating real-time anomaly scores directly in the pipeline. A demonstration follows a single transaction from raw log entry to fully enriched event—showing how a simple payment record transforms into a rich business intelligence asset through automated, in-pipeline enrichment before reaching any analysis system.
 
 ### Teaching Narrative
 
@@ -135,7 +139,9 @@ To implement effective enrichment engines in banking observability pipelines:
 
 ## Panel 3: The Routing Intelligence - Right Data, Right Place, Right Time
 
-**Scene Description**: A financial services compliance center where engineers monitor their intelligent routing system in action. Visualization displays show the decision tree as different log types flow through dynamic routing logic: high-severity security events immediately trigger alerts while being routed to both security monitoring and secure storage, privacy-sensitive customer data undergoes masking before being split toward analysis systems and compliance storage, high-volume routine operations are sampled before storage while maintaining complete collection for errors, and specialized transaction types are directed to domain-specific analysis engines based on content. A timeline comparison shows how this approach has dramatically improved their operational efficiency—directing critical data to appropriate systems instantly while preventing storage overflow from routine events.
+### Scene Description
+
+ A financial services compliance center where engineers monitor their intelligent routing system in action. Visualization displays show the decision tree as different log types flow through dynamic routing logic: high-severity security events immediately trigger alerts while being routed to both security monitoring and secure storage, privacy-sensitive customer data undergoes masking before being split toward analysis systems and compliance storage, high-volume routine operations are sampled before storage while maintaining complete collection for errors, and specialized transaction types are directed to domain-specific analysis engines based on content. A timeline comparison shows how this approach has dramatically improved their operational efficiency—directing critical data to appropriate systems instantly while preventing storage overflow from routine events.
 
 ### Teaching Narrative
 
@@ -185,7 +191,9 @@ To implement intelligent routing in banking observability pipelines:
 
 ## Panel 4: The Transformation Layer - Shaping Data for Purpose
 
-**Scene Description**: A banking platform engineering session where specialists develop data transformations within their observability pipeline. Interactive screens display multiple transformation types operating on log data in flight: format conversion normalizing diverse log structures into standardized schemas, field extraction identifying and parsing embedded information from legacy systems, sensitive data handling masking account numbers and personal information according to compliance rules, aggregation creating statistical summaries from high-volume event streams, and correlation linking related events from different sources into cohesive transaction records. Engineers demonstrate how these pipeline transformations have dramatically improved their analytics capabilities—transforming inconsistent, raw logs into clean, analysis-ready datasets before they reach any storage or query system.
+### Scene Description
+
+ A banking platform engineering session where specialists develop data transformations within their observability pipeline. Interactive screens display multiple transformation types operating on log data in flight: format conversion normalizing diverse log structures into standardized schemas, field extraction identifying and parsing embedded information from legacy systems, sensitive data handling masking account numbers and personal information according to compliance rules, aggregation creating statistical summaries from high-volume event streams, and correlation linking related events from different sources into cohesive transaction records. Engineers demonstrate how these pipeline transformations have dramatically improved their analytics capabilities—transforming inconsistent, raw logs into clean, analysis-ready datasets before they reach any storage or query system.
 
 ### Teaching Narrative
 
@@ -237,7 +245,9 @@ To implement effective transformation in banking observability pipelines:
 
 ## Panel 5: The Real-Time Analytics Paradigm - Insights at the Speed of Business
 
-**Scene Description**: A banking fraud operations center where analysts monitor real-time transaction analysis directly within their observability pipeline. Dashboard displays show analytics happening on data in motion rather than after storage: stream processing engines calculating risk scores on payment transactions as they occur, pattern recognition algorithms identifying potential fraud signatures across related events, anomaly detection models flagging unusual behavior patterns, and real-time aggregation maintaining statistical profiles of normal operation. When a suspicious transaction pattern emerges, the system immediately triggers investigation workflows—alerting analysts and gathering contextual information from multiple systems, all before traditional batch analysis would have even begun processing the transactions in question.
+### Scene Description
+
+ A banking fraud operations center where analysts monitor real-time transaction analysis directly within their observability pipeline. Dashboard displays show analytics happening on data in motion rather than after storage: stream processing engines calculating risk scores on payment transactions as they occur, pattern recognition algorithms identifying potential fraud signatures across related events, anomaly detection models flagging unusual behavior patterns, and real-time aggregation maintaining statistical profiles of normal operation. When a suspicious transaction pattern emerges, the system immediately triggers investigation workflows—alerting analysts and gathering contextual information from multiple systems, all before traditional batch analysis would have even begun processing the transactions in question.
 
 ### Teaching Narrative
 
@@ -289,7 +299,9 @@ To implement effective real-time analytics in banking observability pipelines:
 
 ## Panel 6: The Compliance Gateway - Governance by Design
 
-**Scene Description**: A banking regulatory review where compliance officers examine their observability pipeline's governance capabilities. Visualization displays show comprehensive compliance functions operating within the data flow: field-level classification automatically identifying regulated information types, privacy protection applying appropriate masking or tokenization based on data categories, access control enforcement restricting sensitive data based on authorized uses, immutable audit logging recording all data access and modifications, and selective field routing implementing different handling for various information types. The compliance team demonstrates how these pipeline-integrated controls ensure regulatory requirements are satisfied before data ever reaches storage or analysis—preventing compliance violations rather than detecting them after they occur.
+### Scene Description
+
+ A banking regulatory review where compliance officers examine their observability pipeline's governance capabilities. Visualization displays show comprehensive compliance functions operating within the data flow: field-level classification automatically identifying regulated information types, privacy protection applying appropriate masking or tokenization based on data categories, access control enforcement restricting sensitive data based on authorized uses, immutable audit logging recording all data access and modifications, and selective field routing implementing different handling for various information types. The compliance team demonstrates how these pipeline-integrated controls ensure regulatory requirements are satisfied before data ever reaches storage or analysis—preventing compliance violations rather than detecting them after they occur.
 
 ### Teaching Narrative
 
@@ -341,7 +353,9 @@ To implement effective compliance gateways in banking observability pipelines:
 
 ## Panel 7: The Unified Observability Vision - Connecting Logs, Metrics, and Traces
 
-**Scene Description**: A banking platform command center where engineers monitor a unified observability dashboard powered by their integrated pipeline. Visual displays show how their architecture connects different telemetry types into cohesive understanding: raw logs flowing through enrichment that correlates them with related metrics, automated extraction calculating performance indicators from log events, trace context being preserved and enhanced throughout processing, and unified visualization showing interdependent views across all three telemetry types. An incident demonstration shows the power of this integration—engineers pivot seamlessly from metric alerts showing unusual payment latency to correlated logs revealing specific error patterns to distributed traces displaying the exact transaction path where delays occur, all connected through shared context propagated and enhanced by the pipeline.
+### Scene Description
+
+ A banking platform command center where engineers monitor a unified observability dashboard powered by their integrated pipeline. Visual displays show how their architecture connects different telemetry types into cohesive understanding: raw logs flowing through enrichment that correlates them with related metrics, automated extraction calculating performance indicators from log events, trace context being preserved and enhanced throughout processing, and unified visualization showing interdependent views across all three telemetry types. An incident demonstration shows the power of this integration—engineers pivot seamlessly from metric alerts showing unusual payment latency to correlated logs revealing specific error patterns to distributed traces displaying the exact transaction path where delays occur, all connected through shared context propagated and enhanced by the pipeline.
 
 ### Teaching Narrative
 
@@ -393,7 +407,9 @@ To implement effective unified observability in banking pipelines:
 
 ## Panel 8: The Scalability Frontier - Architecture for Banking Scale
 
-**Scene Description**: A global banking architecture review where infrastructure engineers evaluate their observability pipeline's scalability characteristics. Performance dashboards show the system processing enormous log volumes across their worldwide operations: horizontal scaling automatically adding processing capacity during peak transaction periods, workload partitioning distributing processing across specialized nodes based on data characteristics, backpressure management preventing system overload during traffic spikes, and intelligent resource allocation optimizing compute usage based on data importance and processing requirements. Historical metrics demonstrate how the architecture has maintained consistent performance despite log volumes growing from terabytes to petabytes—automatically scaling to handle both predictable patterns like month-end processing and unexpected spikes from market volatility events.
+### Scene Description
+
+ A global banking architecture review where infrastructure engineers evaluate their observability pipeline's scalability characteristics. Performance dashboards show the system processing enormous log volumes across their worldwide operations: horizontal scaling automatically adding processing capacity during peak transaction periods, workload partitioning distributing processing across specialized nodes based on data characteristics, backpressure management preventing system overload during traffic spikes, and intelligent resource allocation optimizing compute usage based on data importance and processing requirements. Historical metrics demonstrate how the architecture has maintained consistent performance despite log volumes growing from terabytes to petabytes—automatically scaling to handle both predictable patterns like month-end processing and unexpected spikes from market volatility events.
 
 ### Teaching Narrative
 
@@ -445,7 +461,9 @@ To implement scalable observability pipelines in banking environments:
 
 ## Panel 9: The Ecosystem Integration - Connecting Across the Technology Landscape
 
-**Scene Description**: A banking technology integration center where engineers monitor their observability pipeline's connections across diverse systems. Architectural diagrams show comprehensive integration spanning multiple technology generations: modern microservices sending structured JSON logs, commercial banking packages connected through specialized adapters, mainframe systems integrated via custom collectors, third-party services linked through API telemetry, and cloud platforms connected via native integrations. Implementation displays demonstrate how their pipeline creates consistent observability despite this diversity—normalizing different formats, preserving context across technology boundaries, and delivering unified visibility regardless of source systems. A demonstration follows a customer transaction across this heterogeneous landscape, showing complete observability from mobile app through API gateway, microservices, commercial packages, mainframe core banking, and finally to settlement systems.
+### Scene Description
+
+ A banking technology integration center where engineers monitor their observability pipeline's connections across diverse systems. Architectural diagrams show comprehensive integration spanning multiple technology generations: modern microservices sending structured JSON logs, commercial banking packages connected through specialized adapters, mainframe systems integrated via custom collectors, third-party services linked through API telemetry, and cloud platforms connected via native integrations. Implementation displays demonstrate how their pipeline creates consistent observability despite this diversity—normalizing different formats, preserving context across technology boundaries, and delivering unified visibility regardless of source systems. A demonstration follows a customer transaction across this heterogeneous landscape, showing complete observability from mobile app through API gateway, microservices, commercial packages, mainframe core banking, and finally to settlement systems.
 
 ### Teaching Narrative
 
@@ -497,7 +515,9 @@ To implement ecosystem integration for banking observability:
 
 ## Panel 10: The Future Frontier - Intelligent Observability Automation
 
-**Scene Description**: A banking innovation lab where engineers demonstrate next-generation observability capabilities powered by their advanced pipeline architecture. Futuristic displays show autonomous intelligence operating within their observability flow: automated topology discovery continuously mapping system relationships without manual configuration, self-tuning collection adjusting logging detail based on observed patterns and anomalies, predictive scaling proactively allocating resources before anticipated volume increases, autonomous analysis identifying complex patterns without predefined rules, and self-healing remediation automatically addressing recognized issues based on learned resolution patterns. A timeline projection shows their roadmap from current capabilities through progressive automation—evolving from human-operated observability tools to intelligent systems that autonomously enhance visibility, detect issues, and often resolve problems without human intervention.
+### Scene Description
+
+ A banking innovation lab where engineers demonstrate next-generation observability capabilities powered by their advanced pipeline architecture. Futuristic displays show autonomous intelligence operating within their observability flow: automated topology discovery continuously mapping system relationships without manual configuration, self-tuning collection adjusting logging detail based on observed patterns and anomalies, predictive scaling proactively allocating resources before anticipated volume increases, autonomous analysis identifying complex patterns without predefined rules, and self-healing remediation automatically addressing recognized issues based on learned resolution patterns. A timeline projection shows their roadmap from current capabilities through progressive automation—evolving from human-operated observability tools to intelligent systems that autonomously enhance visibility, detect issues, and often resolve problems without human intervention.
 
 ### Teaching Narrative
 

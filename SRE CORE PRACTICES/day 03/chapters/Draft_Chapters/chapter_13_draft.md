@@ -39,7 +39,9 @@ Welcome to Log-Driven Development: the step where you finally decide that flying
 
 ## Panel 1: The Observability Shift - Moving Left in the Development Lifecycle
 
-**Scene Description**: A banking platform design session where a transformational change is visible. On the left side of the room, artifacts from their previous approach show observability as an afterthought—logging added hastily before production deployment with minimal strategy. On the right, their new approach prominently features observability in initial architecture diagrams and design documents. Engineers review a new payments microservice blueprint where logging specifications appear alongside functional requirements, with detailed observability criteria listed as acceptance requirements. A timeline shows how this shift has progressively reduced production incidents while improving troubleshooting effectiveness across their digital banking platform.
+### Scene Description
+
+ A banking platform design session where a transformational change is visible. On the left side of the room, artifacts from their previous approach show observability as an afterthought—logging added hastily before production deployment with minimal strategy. On the right, their new approach prominently features observability in initial architecture diagrams and design documents. Engineers review a new payments microservice blueprint where logging specifications appear alongside functional requirements, with detailed observability criteria listed as acceptance requirements. A timeline shows how this shift has progressively reduced production incidents while improving troubleshooting effectiveness across their digital banking platform.
 
 ### Teaching Narrative
 
@@ -77,7 +79,9 @@ To implement observability-first practices in your banking organization:
 
 ## Panel 2: The Observability-Driven Design - Logs as First-Class Requirements
 
-**Scene Description**: A product planning session for a new mortgage origination platform where SREs and developers collaborate on observability requirements. Digital whiteboards display domain-driven design diagrams with explicit observability boundaries and requirements. Engineers add detailed logging specifications to user stories: "As a support engineer, I need comprehensive logging of all document validation steps with specific error details to quickly identify submission issues." Acceptance criteria include explicit observability requirements alongside functional specifications. Architecture diagrams highlight transaction boundaries where correlation identifiers must be preserved, with technical leads noting specific data elements required for effective troubleshooting based on experience with their current platform.
+### Scene Description
+
+ A product planning session for a new mortgage origination platform where SREs and developers collaborate on observability requirements. Digital whiteboards display domain-driven design diagrams with explicit observability boundaries and requirements. Engineers add detailed logging specifications to user stories: "As a support engineer, I need comprehensive logging of all document validation steps with specific error details to quickly identify submission issues." Acceptance criteria include explicit observability requirements alongside functional specifications. Architecture diagrams highlight transaction boundaries where correlation identifiers must be preserved, with technical leads noting specific data elements required for effective troubleshooting based on experience with their current platform.
 
 ### Teaching Narrative
 
@@ -117,7 +121,9 @@ To implement observability-driven design in your banking organization:
 
 ## Panel 3: The Three Pillars in Practice - Logs, Metrics, and Traces by Design
 
-**Scene Description**: A banking platform architecture review where engineers demonstrate their observability implementation across the three core pillars. Visualization displays show how a single customer transaction generates complementary telemetry: detailed logs capturing specific operation details and context, metrics measuring performance and success rates, and distributed traces showing the complete request flow across services. Implementation diagrams reveal how these capabilities were architected into the system rather than added afterwards: instrumentation libraries integrated at service foundations, standardized context propagation designed into all interfaces, and consistent telemetry generation implemented across technology stacks. The team demonstrates how these complementary signals provide complete visibility into a complex payment transaction, with each pillar offering distinct insights that collectively create comprehensive understanding.
+### Scene Description
+
+ A banking platform architecture review where engineers demonstrate their observability implementation across the three core pillars. Visualization displays show how a single customer transaction generates complementary telemetry: detailed logs capturing specific operation details and context, metrics measuring performance and success rates, and distributed traces showing the complete request flow across services. Implementation diagrams reveal how these capabilities were architected into the system rather than added afterwards: instrumentation libraries integrated at service foundations, standardized context propagation designed into all interfaces, and consistent telemetry generation implemented across technology stacks. The team demonstrates how these complementary signals provide complete visibility into a complex payment transaction, with each pillar offering distinct insights that collectively create comprehensive understanding.
 
 ### Teaching Narrative
 
@@ -157,7 +163,9 @@ To implement three-pillar observability in your banking organization:
 
 ## Panel 4: The Development Integration - Logging in the Engineering Workflow
 
-**Scene Description**: A banking technology team's development environment where observability tools are deeply integrated into the engineering workflow. Developers write automated tests that explicitly verify logging behavior alongside functional requirements, with continuous integration pipelines validating log structure and content. Code review tools highlight missing log statements based on observability requirements, while integrated development environments provide templates ensuring consistent logging implementation. During a debugging session, engineers trace a problem using local development tools that display logs, metrics, and traces identical to production observability—immediately pinpointing a transaction validation issue that would have been difficult to identify through functional testing alone. The team lead reviews observability coverage reports alongside test coverage metrics before approving the code for deployment.
+### Scene Description
+
+ A banking technology team's development environment where observability tools are deeply integrated into the engineering workflow. Developers write automated tests that explicitly verify logging behavior alongside functional requirements, with continuous integration pipelines validating log structure and content. Code review tools highlight missing log statements based on observability requirements, while integrated development environments provide templates ensuring consistent logging implementation. During a debugging session, engineers trace a problem using local development tools that display logs, metrics, and traces identical to production observability—immediately pinpointing a transaction validation issue that would have been difficult to identify through functional testing alone. The team lead reviews observability coverage reports alongside test coverage metrics before approving the code for deployment.
 
 ### Teaching Narrative
 
@@ -197,7 +205,9 @@ To integrate observability into development workflows in your banking organizati
 
 ## Panel 5: The Semantic Standardization - Meaningful and Consistent Logs
 
-**Scene Description**: A banking platform governance session where engineers define logging standards that emphasize semantic consistency rather than just technical formatting. Documentation displays show detailed logging taxonomies specific to their domain: standardized transaction state definitions (INITIATED, VALIDATED, AUTHORIZED, SETTLED), consistent error categorization frameworks (VALIDATION_ERROR, AUTHORIZATION_FAILURE, DOWNSTREAM_DEPENDENCY), and contextual metadata requirements for different banking operations. Engineering leads demonstrate how these semantic standards create a common language across teams and technologies, with example analysis showing how consistent categorization enables powerful aggregation and pattern recognition impossible with unstandardized approaches. Implementation tools show how these standards are enforced through shared libraries, code generation, and automated validation.
+### Scene Description
+
+ A banking platform governance session where engineers define logging standards that emphasize semantic consistency rather than just technical formatting. Documentation displays show detailed logging taxonomies specific to their domain: standardized transaction state definitions (INITIATED, VALIDATED, AUTHORIZED, SETTLED), consistent error categorization frameworks (VALIDATION_ERROR, AUTHORIZATION_FAILURE, DOWNSTREAM_DEPENDENCY), and contextual metadata requirements for different banking operations. Engineering leads demonstrate how these semantic standards create a common language across teams and technologies, with example analysis showing how consistent categorization enables powerful aggregation and pattern recognition impossible with unstandardized approaches. Implementation tools show how these standards are enforced through shared libraries, code generation, and automated validation.
 
 ### Teaching Narrative
 
@@ -237,7 +247,9 @@ To implement semantic standardization in your banking organization:
 
 ## Panel 6: The Context Engineering - Designing for Troubleshooting
 
-**Scene Description**: A banking incident retrospective where teams analyze recent troubleshooting challenges to improve contextual logging. On interactive displays, they review recent complex incidents—highlighting specific information that would have accelerated resolution if captured in logs. Engineers update observability requirements based on these lessons: enhancing payment logs with additional transaction context, improving authentication failure records with specific rejection reasons, adding correlation between account systems and customer profiles, and enhancing error details with troubleshooting guidance. The session concludes with updated context specifications for key transaction types, explicitly designed based on actual support scenarios rather than theoretical logging approaches. Development teams incorporate these enhanced requirements into upcoming sprints, treating them as critical functional improvements rather than optional enhancements.
+### Scene Description
+
+ A banking incident retrospective where teams analyze recent troubleshooting challenges to improve contextual logging. On interactive displays, they review recent complex incidents—highlighting specific information that would have accelerated resolution if captured in logs. Engineers update observability requirements based on these lessons: enhancing payment logs with additional transaction context, improving authentication failure records with specific rejection reasons, adding correlation between account systems and customer profiles, and enhancing error details with troubleshooting guidance. The session concludes with updated context specifications for key transaction types, explicitly designed based on actual support scenarios rather than theoretical logging approaches. Development teams incorporate these enhanced requirements into upcoming sprints, treating them as critical functional improvements rather than optional enhancements.
 
 ### Teaching Narrative
 
@@ -277,7 +289,9 @@ To implement context engineering in your banking organization:
 
 ## Panel 7: The Privacy-Aware Logging - Security by Design
 
-**Scene Description**: A banking compliance review where security and privacy officers evaluate observability designs for a new retail banking platform. Technical diagrams show sophisticated approaches to privacy-aware logging: field-level classification identifying sensitive data elements, automated tokenization replacing account numbers with opaque references, purpose-based field filtering implementing different detail levels for various processing needs, and explicit retention policies aligned with regulatory requirements. Implementation code demonstrates how these protections are built directly into the logging foundation rather than added afterwards. The security team approves the approach as the privacy officer notes how this design addresses GDPR, CCPA, and banking-specific privacy requirements while still maintaining necessary operational visibility.
+### Scene Description
+
+ A banking compliance review where security and privacy officers evaluate observability designs for a new retail banking platform. Technical diagrams show sophisticated approaches to privacy-aware logging: field-level classification identifying sensitive data elements, automated tokenization replacing account numbers with opaque references, purpose-based field filtering implementing different detail levels for various processing needs, and explicit retention policies aligned with regulatory requirements. Implementation code demonstrates how these protections are built directly into the logging foundation rather than added afterwards. The security team approves the approach as the privacy officer notes how this design addresses GDPR, CCPA, and banking-specific privacy requirements while still maintaining necessary operational visibility.
 
 ### Teaching Narrative
 
@@ -317,7 +331,9 @@ To implement privacy-aware logging in your banking organization:
 
 ## Panel 8: The Testing Evolution - Validating Observability
 
-**Scene Description**: A banking quality assurance lab where engineers demonstrate advanced observability testing approaches. Testing dashboards show sophisticated validation beyond functional verification: automated checks confirming log generation for critical paths, assertions validating context completeness for different transaction types, simulation tests verifying distributed trace propagation across service boundaries, fault injection scenarios confirming appropriate error logging, and observability coverage reports highlighting potential visibility gaps. A test execution shows how a deliberately introduced failure in a payment service generates expected error logs with required context, with automated validation confirming both the presence and content of appropriate telemetry alongside functional behavior verification.
+### Scene Description
+
+ A banking quality assurance lab where engineers demonstrate advanced observability testing approaches. Testing dashboards show sophisticated validation beyond functional verification: automated checks confirming log generation for critical paths, assertions validating context completeness for different transaction types, simulation tests verifying distributed trace propagation across service boundaries, fault injection scenarios confirming appropriate error logging, and observability coverage reports highlighting potential visibility gaps. A test execution shows how a deliberately introduced failure in a payment service generates expected error logs with required context, with automated validation confirming both the presence and content of appropriate telemetry alongside functional behavior verification.
 
 ### Teaching Narrative
 
@@ -357,7 +373,9 @@ To implement comprehensive observability testing in your banking organization:
 
 ## Panel 9: The Operational Feedback Loop - Continuous Observability Improvement
 
-**Scene Description**: A banking platform retrospective where operations and development teams collaborate on observability enhancements. Incident analysis dashboards show systematic evaluation of recent production issues, with specific logging improvements identified for each case: additional context needed for specific error conditions, missing correlation between related operations, insufficient detail for particular failure modes, and opportunities for enhanced categorization. Engineers transform these findings into concrete observability improvements prioritized alongside functional enhancements in the development backlog. A continuous improvement visualization shows how this feedback loop has progressively enhanced logging quality over time, with corresponding reduction in mean-time-to-resolution for production incidents from hours to minutes.
+### Scene Description
+
+ A banking platform retrospective where operations and development teams collaborate on observability enhancements. Incident analysis dashboards show systematic evaluation of recent production issues, with specific logging improvements identified for each case: additional context needed for specific error conditions, missing correlation between related operations, insufficient detail for particular failure modes, and opportunities for enhanced categorization. Engineers transform these findings into concrete observability improvements prioritized alongside functional enhancements in the development backlog. A continuous improvement visualization shows how this feedback loop has progressively enhanced logging quality over time, with corresponding reduction in mean-time-to-resolution for production incidents from hours to minutes.
 
 ### Teaching Narrative
 
@@ -397,7 +415,9 @@ To implement continuous observability improvement in your banking organization:
 
 ## Panel 10: The Observability Culture - From Technical Practice to Organizational Value
 
-**Scene Description**: A banking technology town hall where observability has visibly transformed from specialized practice to organizational value. Leadership presentations emphasize logging quality alongside feature delivery in performance metrics, while team demonstrations proudly highlight observability enhancements alongside functional capabilities. Award ceremonies recognize engineers who improved system visibility, with specific examples of how their work reduced incident impact. New employee onboarding materials prominently feature observability fundamentals alongside functional domain knowledge, while career progression frameworks explicitly include logging expertise in advancement criteria. The cultural shift is evident as engineers from different teams share observability patterns and learnings—treating visibility as a collective responsibility rather than specialized concern.
+### Scene Description
+
+ A banking technology town hall where observability has visibly transformed from specialized practice to organizational value. Leadership presentations emphasize logging quality alongside feature delivery in performance metrics, while team demonstrations proudly highlight observability enhancements alongside functional capabilities. Award ceremonies recognize engineers who improved system visibility, with specific examples of how their work reduced incident impact. New employee onboarding materials prominently feature observability fundamentals alongside functional domain knowledge, while career progression frameworks explicitly include logging expertise in advancement criteria. The cultural shift is evident as engineers from different teams share observability patterns and learnings—treating visibility as a collective responsibility rather than specialized concern.
 
 ### Teaching Narrative
 

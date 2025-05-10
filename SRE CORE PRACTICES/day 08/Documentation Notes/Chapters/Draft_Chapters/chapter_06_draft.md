@@ -36,7 +36,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Dimension Explosion
 
-**Scene Description**: A banking SRE team huddles around a massive dashboard covered in red alerts. Their manager bursts into the room waving an invoice. "Our observability costs just increased TEN TIMES overnight!" On the screens, metrics graphs are frozen, query times have skyrocketed, and the team looks bewildered as they scroll through thousands of new metric combinations that appeared after yesterday's deployment. One engineer points to a small code change where a developer added customer account numbers as labels to every transaction metric.
+### Scene Description
+
+ A banking SRE team huddles around a massive dashboard covered in red alerts. Their manager bursts into the room waving an invoice. "Our observability costs just increased TEN TIMES overnight!" On the screens, metrics graphs are frozen, query times have skyrocketed, and the team looks bewildered as they scroll through thousands of new metric combinations that appeared after yesterday's deployment. One engineer points to a small code change where a developer added customer account numbers as labels to every transaction metric.
 
 ### Teaching Narrative
 
@@ -48,7 +50,9 @@ The core challenge of cardinality management is balancing the value of dimension
 
 ## Panel 2: The Unbounded Label Trap
 
-**Scene Description**: Two SREs are investigating why their metrics platform keeps crashing. On a whiteboard, they've traced the problem to a fraud detection service that's adding transaction-specific fields as labels to metrics. At the same time, a developer is demonstrating a new feature that adds geolocation data down to precise coordinates as metric labels. The SRE looks horrified as she calculates the cardinality: "That's potentially 37 billion unique combinations for a single metric!" On a monitor nearby, their budget dashboard shows costs rapidly approaching the monthly limit while it's only the 3rd day of the month.
+### Scene Description
+
+ Two SREs are investigating why their metrics platform keeps crashing. On a whiteboard, they've traced the problem to a fraud detection service that's adding transaction-specific fields as labels to metrics. At the same time, a developer is demonstrating a new feature that adds geolocation data down to precise coordinates as metric labels. The SRE looks horrified as she calculates the cardinality: "That's potentially 37 billion unique combinations for a single metric!" On a monitor nearby, their budget dashboard shows costs rapidly approaching the monthly limit while it's only the 3rd day of the month.
 
 ### Teaching Narrative
 
@@ -60,7 +64,9 @@ The irony is that unbounded labels rarely provide useful aggregate insights. Whi
 
 ## Panel 3: The Cardinality Budget
 
-**Scene Description**: A virtual war room where a financial services platform team is establishing governance rules. On a large screen, they're documenting a hierarchy of allowed dimensions for different types of metrics. A governance lead is presenting a dashboard showing each service's current cardinality usage as a percentage of their allocated "cardinality budget." Teams with efficient metric design have plenty of room for new instrumentation, while a poorly-designed fraud detection service is shown at 250% of its allocation, with an automated warning system preventing new deployments until cardinality is reduced.
+### Scene Description
+
+ A virtual war room where a financial services platform team is establishing governance rules. On a large screen, they're documenting a hierarchy of allowed dimensions for different types of metrics. A governance lead is presenting a dashboard showing each service's current cardinality usage as a percentage of their allocated "cardinality budget." Teams with efficient metric design have plenty of room for new instrumentation, while a poorly-designed fraud detection service is shown at 250% of its allocation, with an automated warning system preventing new deployments until cardinality is reduced.
 
 ### Teaching Narrative
 
@@ -72,7 +78,9 @@ Effective governance requires not just establishing these budgets, but implement
 
 ## Panel 4: The Aggregation Hierarchy
 
-**Scene Description**: An architect is leading a design review for a new payment gateway system's metrics design. On a whiteboard, she's created a pyramid diagram showing metric aggregation levels. At the pyramid's wide base are customer transaction events flowing into logs. In the middle tier, these are aggregated into bounded-cardinality metrics with key dimensions like payment processor, country, and response code. At the narrow top are highly aggregated SLIs tracking overall system health. Next to this, a developer has sketched how they can automatically roll these metrics up into increasingly aggregated forms for longer-term storage.
+### Scene Description
+
+ An architect is leading a design review for a new payment gateway system's metrics design. On a whiteboard, she's created a pyramid diagram showing metric aggregation levels. At the pyramid's wide base are customer transaction events flowing into logs. In the middle tier, these are aggregated into bounded-cardinality metrics with key dimensions like payment processor, country, and response code. At the narrow top are highly aggregated SLIs tracking overall system health. Next to this, a developer has sketched how they can automatically roll these metrics up into increasingly aggregated forms for longer-term storage.
 
 ### Teaching Narrative
 
@@ -84,7 +92,9 @@ This aggregation hierarchy should extend to storage retention as well. Recent me
 
 ## Panel 5: Strategic Dimension Selection
 
-**Scene Description**: A monitoring architect is training a team of developers for a trading platform. She displays a matrix on the screen with potential metric dimensions on one axis and evaluation criteria on the other. For each dimension (endpoint, customer tier, account type, region, exact trade value), she's scoring its troubleshooting value, business insight value, cardinality impact, and query performance impact. The team is working through which dimensions to keep based on these scores. On a second screen, sample Prometheus metric definitions show how to implement these decisions in code.
+### Scene Description
+
+ A monitoring architect is training a team of developers for a trading platform. She displays a matrix on the screen with potential metric dimensions on one axis and evaluation criteria on the other. For each dimension (endpoint, customer tier, account type, region, exact trade value), she's scoring its troubleshooting value, business insight value, cardinality impact, and query performance impact. The team is working through which dimensions to keep based on these scores. On a second screen, sample Prometheus metric definitions show how to implement these decisions in code.
 
 ### Teaching Narrative
 
@@ -98,7 +108,9 @@ This strategic approach leads to consistent decisions about which dimensions to 
 
 ## Panel 6: Isolation Strategies for High-Cardinality Use Cases
 
-**Scene Description**: A risk analytics team and SRE are collaborating on a solution for monitoring individual high-value transactions without causing cardinality explosion. On their shared screen, they're designing a specialized metrics subsystem isolated from the main monitoring platform. It has its own storage, retention policies, and budget. Another tab shows a custom sampling algorithm that will only instrument a statistically significant percentage of transactions, with logic to ensure all high-value transactions are included in the sample. A dashboard shows the dramatic cost difference between sampling all transactions and their strategic approach.
+### Scene Description
+
+ A risk analytics team and SRE are collaborating on a solution for monitoring individual high-value transactions without causing cardinality explosion. On their shared screen, they're designing a specialized metrics subsystem isolated from the main monitoring platform. It has its own storage, retention policies, and budget. Another tab shows a custom sampling algorithm that will only instrument a statistically significant percentage of transactions, with logic to ensure all high-value transactions are included in the sample. A dashboard shows the dramatic cost difference between sampling all transactions and their strategic approach.
 
 ### Teaching Narrative
 
@@ -112,7 +124,9 @@ The third approach is temporal: implement dynamic retention policies that keep h
 
 ## Panel 7: Implementing Guardrails and Automated Protection
 
-**Scene Description**: An SRE is demonstrating a new guardrail system during a company tech talk. On one screen, she shows a CI/CD pipeline failing a deployment because a new metric would create excessive cardinality. On another, a runtime cardinality limiter is automatically dropping excessive label values when a service unexpectedly generates too many unique combinations. A third screen shows an alert triggered by a sudden cardinality increase in the payment service, allowing the team to intervene before costs escalate. On a final screen, the monthly observability cost graph shows how these guardrails have flattened what was previously an exponential curve.
+### Scene Description
+
+ An SRE is demonstrating a new guardrail system during a company tech talk. On one screen, she shows a CI/CD pipeline failing a deployment because a new metric would create excessive cardinality. On another, a runtime cardinality limiter is automatically dropping excessive label values when a service unexpectedly generates too many unique combinations. A third screen shows an alert triggered by a sudden cardinality increase in the payment service, allowing the team to intervene before costs escalate. On a final screen, the monthly observability cost graph shows how these guardrails have flattened what was previously an exponential curve.
 
 ### Teaching Narrative
 

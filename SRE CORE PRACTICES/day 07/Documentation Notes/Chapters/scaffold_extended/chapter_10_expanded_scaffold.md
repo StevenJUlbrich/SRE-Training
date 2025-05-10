@@ -2,7 +2,9 @@
 
 ## Panel 1: Beyond Reactive Fixes - Designing for Resilience
 
-**Scene Description**: A diverse group of engineers is gathered in a modernized war room with interactive displays showing a bank's complex distributed system architecture. Instead of responding to an active incident, they're proactively analyzing a 3D visualization of transaction flows across various banking services. A senior SRE is pointing to potential failure points while development and infrastructure teams take notes. On one wall, a timeline shows past incidents with color-coded resilience improvements implemented after each one.
+### Scene Description
+
+ A diverse group of engineers is gathered in a modernized war room with interactive displays showing a bank's complex distributed system architecture. Instead of responding to an active incident, they're proactively analyzing a 3D visualization of transaction flows across various banking services. A senior SRE is pointing to potential failure points while development and infrastructure teams take notes. On one wall, a timeline shows past incidents with color-coded resilience improvements implemented after each one.
 
 ### Teaching Narrative
 
@@ -58,7 +60,9 @@ To implement proactive resilience engineering in your banking systems:
 
 ## Panel 2: Implementing Failure Injection in Banking Systems
 
-**Scene Description**: In a secure testing environment, engineers are conducting a planned "game day" exercise. Multiple screens display a simulated banking platform under controlled stress conditions. One engineer activates a failure injection tool that simulates a database cluster failure, while others monitor how payment processing systems respond. A dashboard shows real-time metrics including transaction success rates and failover times. A physical timer counts down, creating a sense of urgency as teams validate recovery mechanisms. Nearby, a compliance officer observes the process, reviewing documentation to ensure regulatory guidelines are followed.
+### Scene Description
+
+ In a secure testing environment, engineers are conducting a planned "game day" exercise. Multiple screens display a simulated banking platform under controlled stress conditions. One engineer activates a failure injection tool that simulates a database cluster failure, while others monitor how payment processing systems respond. A dashboard shows real-time metrics including transaction success rates and failover times. A physical timer counts down, creating a sense of urgency as teams validate recovery mechanisms. Nearby, a compliance officer observes the process, reviewing documentation to ensure regulatory guidelines are followed.
 
 ### Teaching Narrative
 
@@ -116,7 +120,9 @@ To implement failure injection testing in your banking environment:
 
 ## Panel 3: Designing Circuit Breakers for Financial Transactions
 
-**Scene Description**: A developer and SRE are paired at a workstation, implementing circuit breaker patterns into a payment processing service. Their screen shows code being written alongside a whiteboard diagram depicting how the circuit breaker protects downstream services. A monitoring dashboard shows real-time traffic flowing through various microservices with circuit breakers in different states—closed (normal operation), open (preventing cascading failures), and half-open (testing recovery). A banking executive is looking over their shoulders, visibly impressed by how the solution prevents full service outages while maintaining essential transaction capabilities.
+### Scene Description
+
+ A developer and SRE are paired at a workstation, implementing circuit breaker patterns into a payment processing service. Their screen shows code being written alongside a whiteboard diagram depicting how the circuit breaker protects downstream services. A monitoring dashboard shows real-time traffic flowing through various microservices with circuit breakers in different states—closed (normal operation), open (preventing cascading failures), and half-open (testing recovery). A banking executive is looking over their shoulders, visibly impressed by how the solution prevents full service outages while maintaining essential transaction capabilities.
 
 ### Teaching Narrative
 
@@ -174,7 +180,9 @@ To implement effective circuit breakers in your banking systems:
 
 ## Panel 4: Designing for Regulatory Resilience
 
-**Scene Description**: A cross-functional workshop is underway with SREs, developers, compliance officers, and risk managers. They're gathered around a resilience matrix that maps technical capabilities to regulatory requirements. One wall displays financial regulations (PSD2, SOX, Basel III) while another shows technical implementations that satisfy them. A risk officer is highlighting concerns about an upcoming stress test from regulators, while an SRE explains how their resilience testing provides evidence of compliance. A shared dashboard demonstrates how system metrics map directly to regulatory reporting requirements.
+### Scene Description
+
+ A cross-functional workshop is underway with SREs, developers, compliance officers, and risk managers. They're gathered around a resilience matrix that maps technical capabilities to regulatory requirements. One wall displays financial regulations (PSD2, SOX, Basel III) while another shows technical implementations that satisfy them. A risk officer is highlighting concerns about an upcoming stress test from regulators, while an SRE explains how their resilience testing provides evidence of compliance. A shared dashboard demonstrates how system metrics map directly to regulatory reporting requirements.
 
 ### Teaching Narrative
 
@@ -232,7 +240,9 @@ To align regulatory requirements with technical resilience in your organization:
 
 ## Panel 5: Building Resilience Through Observability
 
-**Scene Description**: An operations center shows a team responding to early warning signals rather than a full-blown incident. High-resolution displays show multi-dimensional observability data—logs, metrics, and distributed traces—revealing subtle patterns in system behavior. One SRE is adjusting alerting thresholds based on detected anomalies, while another is correlating customer experience metrics with backend performance data. A developer is using observed failure modes to improve resilience in their code, examining how specific API call patterns affected system stability. On a central screen, a resilience score shows the system's current ability to withstand various types of failure.
+### Scene Description
+
+ An operations center shows a team responding to early warning signals rather than a full-blown incident. High-resolution displays show multi-dimensional observability data—logs, metrics, and distributed traces—revealing subtle patterns in system behavior. One SRE is adjusting alerting thresholds based on detected anomalies, while another is correlating customer experience metrics with backend performance data. A developer is using observed failure modes to improve resilience in their code, examining how specific API call patterns affected system stability. On a central screen, a resilience score shows the system's current ability to withstand various types of failure.
 
 ### Teaching Narrative
 
@@ -290,7 +300,9 @@ To build resilience through observability in your banking systems:
 
 ## Panel 6: Disaster Recovery as Code
 
-**Scene Description**: A team is conducting a full disaster recovery test, but instead of following a manual runbook, they're executing infrastructure-as-code scripts that automatically rebuild their banking platform in a secondary region. Screens show automated verification tests confirming that each recovered component works correctly. A dashboard displays recovery time objectives (RTOs) counting down, with most services automatically recovering well before their deadlines. In a corner, engineers review the test results, focusing on transactions that required manual intervention. A compliance officer is automatically receiving documented evidence of the recovery capabilities.
+### Scene Description
+
+ A team is conducting a full disaster recovery test, but instead of following a manual runbook, they're executing infrastructure-as-code scripts that automatically rebuild their banking platform in a secondary region. Screens show automated verification tests confirming that each recovered component works correctly. A dashboard displays recovery time objectives (RTOs) counting down, with most services automatically recovering well before their deadlines. In a corner, engineers review the test results, focusing on transactions that required manual intervention. A compliance officer is automatically receiving documented evidence of the recovery capabilities.
 
 ### Teaching Narrative
 
@@ -348,7 +360,9 @@ To implement disaster recovery as code in your banking environment:
 
 ## Panel 7: Cultivating Resilience Culture
 
-**Scene Description**: A quarterly resilience day is in progress, with teams from across the organization participating in resilience-building activities. In one area, developers are presenting "resilience wins" from recent projects, while in another, executives are participating in a tabletop simulation of a major outage. A wall displays the organization's "resilience principles" alongside metrics showing improvement trends. Several teams are engaged in "pre-mortems" for upcoming releases, identifying potential failure modes before deployment. The atmosphere is collaborative rather than accusatory, with teams openly discussing near-misses and lessons learned.
+### Scene Description
+
+ A quarterly resilience day is in progress, with teams from across the organization participating in resilience-building activities. In one area, developers are presenting "resilience wins" from recent projects, while in another, executives are participating in a tabletop simulation of a major outage. A wall displays the organization's "resilience principles" alongside metrics showing improvement trends. Several teams are engaged in "pre-mortems" for upcoming releases, identifying potential failure modes before deployment. The atmosphere is collaborative rather than accusatory, with teams openly discussing near-misses and lessons learned.
 
 ### Teaching Narrative
 

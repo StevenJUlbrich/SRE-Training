@@ -33,7 +33,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Telemetry Accountant
 
-**Scene Description**: A senior SRE and a finance analyst stand before a large interactive dashboard displaying complex heat maps of observability costs across different banking systems. The heat map pulses with activity as real-time data flows in, with colored overlays showing cost attributions to various teams. The SRE points to a sudden red spike in the mortgage processing system's section while the finance analyst nods and makes notes on a tablet showing automated cost allocation formulas.
+### Scene Description
+
+ A senior SRE and a finance analyst stand before a large interactive dashboard displaying complex heat maps of observability costs across different banking systems. The heat map pulses with activity as real-time data flows in, with colored overlays showing cost attributions to various teams. The SRE points to a sudden red spike in the mortgage processing system's section while the finance analyst nods and makes notes on a tablet showing automated cost allocation formulas.
 
 ### Teaching Narrative
 
@@ -43,7 +45,9 @@ Advanced observability economics creates transparent correlation between telemet
 
 ## Panel 2: The Fine-Grained Attribution Engine
 
-**Scene Description**: A DevOps engineer examines a detailed code view showing observability instrumentation in a payment processing service. Beside the code, a real-time calculator displays the exact cost of each log line, trace span, and metric being generated. As the engineer modifies the instrumentation code, adding a customer ID dimension to a metric, the calculator immediately shows a 30x cost multiplication. A warning popup appears with cost projection graphs showing the exponential impact if deployed to production. The engineer sighs with realization and removes the high-cardinality dimension.
+### Scene Description
+
+ A DevOps engineer examines a detailed code view showing observability instrumentation in a payment processing service. Beside the code, a real-time calculator displays the exact cost of each log line, trace span, and metric being generated. As the engineer modifies the instrumentation code, adding a customer ID dimension to a metric, the calculator immediately shows a 30x cost multiplication. A warning popup appears with cost projection graphs showing the exponential impact if deployed to production. The engineer sighs with realization and removes the high-cardinality dimension.
 
 ### Teaching Narrative
 
@@ -53,7 +57,9 @@ This granular attribution becomes possible through technical implementations tha
 
 ## Panel 3: The Dynamic Chargeback Model
 
-**Scene Description**: A quarterly review meeting between platform engineering and business unit leaders is underway. On the main screen, a sophisticated dashboard shows each team's observability usage trends with financial projections. The wealth management division leader questions a cost spike, and the platform engineer clicks to reveal a detailed breakdown showing correlation between a new feature launch, increased metrics cardinality, and the resulting cost impact. The engineer then demonstrates a slider interface allowing the team to model different instrumentation approaches with real-time cost projections, helping the business leader make informed decisions about observability investments.
+### Scene Description
+
+ A quarterly review meeting between platform engineering and business unit leaders is underway. On the main screen, a sophisticated dashboard shows each team's observability usage trends with financial projections. The wealth management division leader questions a cost spike, and the platform engineer clicks to reveal a detailed breakdown showing correlation between a new feature launch, increased metrics cardinality, and the resulting cost impact. The engineer then demonstrates a slider interface allowing the team to model different instrumentation approaches with real-time cost projections, helping the business leader make informed decisions about observability investments.
 
 ### Teaching Narrative
 
@@ -63,7 +69,9 @@ Effective chargeback models operate on consumption-based principles that mirror 
 
 ## Panel 4: The Observability ROI Calculator
 
-**Scene Description**: An SRE director presents to the executive leadership team with a dashboard showing direct correlations between observability investments and business outcomes. The visualization shows trend lines connecting increased instrumentation in the credit card authorization system to decreased error rates, faster mean time to detection, and ultimately higher transaction completion rates with improved customer satisfaction scores. A financial model automatically translates these operational improvements into revenue protection metrics, displaying a calculated 347% ROI on the observability investment. The CFO, initially skeptical, now leans forward with interest.
+### Scene Description
+
+ An SRE director presents to the executive leadership team with a dashboard showing direct correlations between observability investments and business outcomes. The visualization shows trend lines connecting increased instrumentation in the credit card authorization system to decreased error rates, faster mean time to detection, and ultimately higher transaction completion rates with improved customer satisfaction scores. A financial model automatically translates these operational improvements into revenue protection metrics, displaying a calculated 347% ROI on the observability investment. The CFO, initially skeptical, now leans forward with interest.
 
 ### Teaching Narrative
 
@@ -73,7 +81,9 @@ These frameworks track direct benefits like reduced incident costs, improved dev
 
 ## Panel 5: The Predictive Budget Optimizer
 
-**Scene Description**: A platform engineering team huddles around a workstation displaying a machine learning interface that's analyzing historical observability patterns. The system highlights anomalous increases in data volume from the mortgage application system, automatically correlates it with recent code changes, and projects future cost impacts if left unchecked. The interface then suggests three optimization approaches with different trade-offs between cost savings and data fidelity. The team selects the middle option, and the system generates specific implementation recommendations including sampling rates, dimension reductions, and retention adjustments that would maintain critical visibility while reducing projected costs by 63%.
+### Scene Description
+
+ A platform engineering team huddles around a workstation displaying a machine learning interface that's analyzing historical observability patterns. The system highlights anomalous increases in data volume from the mortgage application system, automatically correlates it with recent code changes, and projects future cost impacts if left unchecked. The interface then suggests three optimization approaches with different trade-offs between cost savings and data fidelity. The team selects the middle option, and the system generates specific implementation recommendations including sampling rates, dimension reductions, and retention adjustments that would maintain critical visibility while reducing projected costs by 63%.
 
 ### Teaching Narrative
 
@@ -83,7 +93,9 @@ These predictive systems operate through continuous analysis of multiple signals
 
 ## Panel 6: The Value Stream Allocator
 
-**Scene Description**: A cross-functional team of product, engineering, and finance leaders examines a complex Sankey diagram showing how observability costs flow through the organization's value streams. The diagram traces costs from infrastructure components through services, customer journeys, and ultimately to business capabilities and revenue streams. A product manager points to a particular customer journey—"new mortgage application"—and the diagram reorganizes to show all observability costs supporting that journey across dozens of services. The finance leader then adjusts the view to show how those costs map to revenue generation and regulatory compliance requirements, creating a comprehensive picture of the business context for observability investments.
+### Scene Description
+
+ A cross-functional team of product, engineering, and finance leaders examines a complex Sankey diagram showing how observability costs flow through the organization's value streams. The diagram traces costs from infrastructure components through services, customer journeys, and ultimately to business capabilities and revenue streams. A product manager points to a particular customer journey—"new mortgage application"—and the diagram reorganizes to show all observability costs supporting that journey across dozens of services. The finance leader then adjusts the view to show how those costs map to revenue generation and regulatory compliance requirements, creating a comprehensive picture of the business context for observability investments.
 
 ### Teaching Narrative
 
@@ -93,7 +105,9 @@ This approach requires mapping observability costs through multiple layers of ab
 
 ## Panel 7: The Efficiency Market
 
-**Scene Description**: Engineers from different banking teams gather in a virtual marketplace displayed on a large screen. The interface shows teams with excess observability quota offering it to teams needing additional capacity. A trading platform team that has optimized its instrumentation has 30% unused capacity for the quarter, which they're offering to the mobile banking team that needs additional quota for a major release. The marketplace automatically calculates fair exchange rates based on the criticality of different services, allowing the teams to negotiate a mutually beneficial trade. A leaderboard shows teams ranked by observability efficiency, with visible recognition and incentives for those demonstrating exceptional optimization.
+### Scene Description
+
+ Engineers from different banking teams gather in a virtual marketplace displayed on a large screen. The interface shows teams with excess observability quota offering it to teams needing additional capacity. A trading platform team that has optimized its instrumentation has 30% unused capacity for the quarter, which they're offering to the mobile banking team that needs additional quota for a major release. The marketplace automatically calculates fair exchange rates based on the criticality of different services, allowing the teams to negotiate a mutually beneficial trade. A leaderboard shows teams ranked by observability efficiency, with visible recognition and incentives for those demonstrating exceptional optimization.
 
 ### Teaching Narrative
 

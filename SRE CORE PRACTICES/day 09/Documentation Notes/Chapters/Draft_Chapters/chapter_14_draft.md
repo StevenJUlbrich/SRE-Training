@@ -38,7 +38,9 @@ ______________________________________________________________________
 
 ## Panel 1: Compliance as an Engineering Challenge
 
-**Scene Description**: A tense meeting room where an SRE team and compliance officers are reviewing a stack of regulatory documentation. Katherine points to a whiteboard showing a Venn diagram with "Reliability Engineering" overlapping with "Regulatory Requirements." Meanwhile, another SRE is demonstrating how their observability dashboards can automatically generate compliance reports. The compliance officers look surprised but interested.
+### Scene Description
+
+ A tense meeting room where an SRE team and compliance officers are reviewing a stack of regulatory documentation. Katherine points to a whiteboard showing a Venn diagram with "Reliability Engineering" overlapping with "Regulatory Requirements." Meanwhile, another SRE is demonstrating how their observability dashboards can automatically generate compliance reports. The compliance officers look surprised but interested.
 
 ### Teaching Narrative
 
@@ -118,7 +120,9 @@ Banks that implemented compliance-as-engineering approaches reported 64% lower c
 
 ## Panel 2: Observability as Evidence
 
-**Scene Description**: An auditor sits with Hector as he demonstrates their observability platform. The screen shows a dashboard with clear indicators for transaction monitoring, data privacy controls, and system access logs. The auditor is taking notes as Hector points to a "Compliance Evidence Trail" tab that shows historical data with tamper-evident timestamps. In the background, other team members are working normally, uninterrupted by the audit process.
+### Scene Description
+
+ An auditor sits with Hector as he demonstrates their observability platform. The screen shows a dashboard with clear indicators for transaction monitoring, data privacy controls, and system access logs. The auditor is taking notes as Hector points to a "Compliance Evidence Trail" tab that shows historical data with tamper-evident timestamps. In the background, other team members are working normally, uninterrupted by the audit process.
 
 ### Teaching Narrative
 
@@ -198,7 +202,9 @@ Banks implementing observability-driven compliance reporting reduced audit prepa
 
 ## Panel 3: Error Budgets and Risk Tolerance
 
-**Scene Description**: A risk management committee meeting where Katherine is presenting a dashboard showing SLOs aligned with regulatory thresholds. One chart shows how their error budget policy correlates with regulatory risk tolerance levels. The CTO and Chief Risk Officer are nodding approvingly, while a regulator observer in the corner is taking detailed notes. On the wall is a poster showing "Yesterday's Risk Appetite Meeting" with traditional qualitative risk ratings, contrasted with today's data-driven approach.
+### Scene Description
+
+ A risk management committee meeting where Katherine is presenting a dashboard showing SLOs aligned with regulatory thresholds. One chart shows how their error budget policy correlates with regulatory risk tolerance levels. The CTO and Chief Risk Officer are nodding approvingly, while a regulator observer in the corner is taking detailed notes. On the wall is a poster showing "Yesterday's Risk Appetite Meeting" with traditional qualitative risk ratings, contrasted with today's data-driven approach.
 
 ### Teaching Narrative
 
@@ -278,7 +284,9 @@ Banks implementing quantitative risk frameworks reported 76% clearer decision-ma
 
 ## Panel 4: Chaos Engineering Meets Compliance Testing
 
-**Scene Description**: A carefully orchestrated chaos engineering exercise is underway. Screens show deliberate fault injection into a payment processing system while automated compliance checks run simultaneously. A dashboard highlights "Regulatory Control Testing" alongside standard reliability metrics. Compliance officers and SREs work side by side, documenting how control mechanisms respond to the simulated failures. In the corner, there's a board tracking which regulatory requirements are being validated through this exercise.
+### Scene Description
+
+ A carefully orchestrated chaos engineering exercise is underway. Screens show deliberate fault injection into a payment processing system while automated compliance checks run simultaneously. A dashboard highlights "Regulatory Control Testing" alongside standard reliability metrics. Compliance officers and SREs work side by side, documenting how control mechanisms respond to the simulated failures. In the corner, there's a board tracking which regulatory requirements are being validated through this exercise.
 
 ### Teaching Narrative
 
@@ -358,7 +366,9 @@ Banks integrating compliance validation into chaos engineering programs reported
 
 ## Panel 5: Automated Governance Through Policy as Code
 
-**Scene Description**: An engineering team is reviewing code in a repository labeled "Compliance as Code." On one screen is infrastructure code with embedded policy checks; another shows automated compliance tests running in a CI/CD pipeline. A compliance officer is collaborating with a developer to translate a new regulatory requirement into code. In the background is a dashboard showing "Policy Violations Prevented This Month: 37" and "Manual Compliance Reviews Avoided: 142."
+### Scene Description
+
+ An engineering team is reviewing code in a repository labeled "Compliance as Code." On one screen is infrastructure code with embedded policy checks; another shows automated compliance tests running in a CI/CD pipeline. A compliance officer is collaborating with a developer to translate a new regulatory requirement into code. In the background is a dashboard showing "Policy Violations Prevented This Month: 37" and "Manual Compliance Reviews Avoided: 142."
 
 ### Teaching Narrative
 
@@ -438,7 +448,9 @@ Banks implementing automated governance through policy as code reported 84% fast
 
 ## Panel 6: Incident Response Meets Regulatory Reporting
 
-**Scene Description**: An incident war room where an SRE team is managing a system disruption. Alongside operational dashboards is a "Regulatory Reporting Requirements" checklist that's being automatically populated as the incident unfolds. A dedicated role labeled "Regulatory Liaison" is working with the incident commander, preparing real-time updates for regulators. A timeline shows both technical milestones and compliance notification deadlines, with status indicators showing they're on track for both resolution and reporting requirements.
+### Scene Description
+
+ An incident war room where an SRE team is managing a system disruption. Alongside operational dashboards is a "Regulatory Reporting Requirements" checklist that's being automatically populated as the incident unfolds. A dedicated role labeled "Regulatory Liaison" is working with the incident commander, preparing real-time updates for regulators. A timeline shows both technical milestones and compliance notification deadlines, with status indicators showing they're on track for both resolution and reporting requirements.
 
 ### Teaching Narrative
 
@@ -518,7 +530,9 @@ Banks implementing integrated regulatory response processes reported 92% complia
 
 ## Panel 7: Continuous Compliance through Deployment Pipelines
 
-**Scene Description**: A deployment pipeline visualization showing code moving from development through various testing stages to production. At each stage, there are automated compliance checks running alongside traditional quality tests. Developers are reviewing a "Compliance Pre-Deployment Report" that automatically identifies potential regulatory issues before deployment. In the background, a compliance officer is helping a developer understand a specific regulatory requirement that affects their code.
+### Scene Description
+
+ A deployment pipeline visualization showing code moving from development through various testing stages to production. At each stage, there are automated compliance checks running alongside traditional quality tests. Developers are reviewing a "Compliance Pre-Deployment Report" that automatically identifies potential regulatory issues before deployment. In the background, a compliance officer is helping a developer understand a specific regulatory requirement that affects their code.
 
 ### Teaching Narrative
 

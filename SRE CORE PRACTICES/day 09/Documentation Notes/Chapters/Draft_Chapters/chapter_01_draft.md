@@ -35,7 +35,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Midnight Alert - From Reactive to Proactive Thinking
 
-**Scene Description**: A dimly lit operations center at 2:14 AM. Katherine, a production support engineer, is hunched over her laptop, eyes red from fatigue. Multiple monitors surround her, one flashing with urgent alerts. Coffee cups litter the desk. Her phone shows multiple missed calls from her manager. On the main screen, a dashboard shows a critical banking application with transaction failure rates spiking to 37%. Katherine is frantically typing commands, trying different fixes, visibly stressed.
+### Scene Description
+
+ A dimly lit operations center at 2:14 AM. Katherine, a production support engineer, is hunched over her laptop, eyes red from fatigue. Multiple monitors surround her, one flashing with urgent alerts. Coffee cups litter the desk. Her phone shows multiple missed calls from her manager. On the main screen, a dashboard shows a critical banking application with transaction failure rates spiking to 37%. Katherine is frantically typing commands, trying different fixes, visibly stressed.
 
 ### Teaching Narrative
 
@@ -97,7 +99,9 @@ Transitioning from reactive to proactive reliability requires deliberate changes
 
 ## Panel 2: The Metrics That Matter - Beyond Uptime
 
-**Scene Description**: A bright conference room with large windows overlooking the financial district. A team meeting is in progress with six diverse team members sitting around a table. Marcus, an experienced SRE, stands at a whiteboard that displays two contrasting dashboards: one showing simple uptime percentages (99.98% uptime, all green), another showing customer transaction success rates by journey type with several yellow and red indicators (mortgage application: 92.3%, international wire transfers: 88.7%). Team members look concerned, comparing the contradicting information. One team member is circling the discrepancy on a tablet, showing it to others.
+### Scene Description
+
+ A bright conference room with large windows overlooking the financial district. A team meeting is in progress with six diverse team members sitting around a table. Marcus, an experienced SRE, stands at a whiteboard that displays two contrasting dashboards: one showing simple uptime percentages (99.98% uptime, all green), another showing customer transaction success rates by journey type with several yellow and red indicators (mortgage application: 92.3%, international wire transfers: 88.7%). Team members look concerned, comparing the contradicting information. One team member is circling the discrepancy on a tablet, showing it to others.
 
 ### Teaching Narrative
 
@@ -168,7 +172,9 @@ To implement meaningful, customer-focused reliability metrics:
 
 ## Panel 3: Learning from Failure - The Blame-Free Postmortem
 
-**Scene Description**: A collaborative space with comfortable seating and walls covered in whiteboards and sticky notes. A diverse team of eight people sits in a circle, engaged in intense but friendly discussion. At the center is a large timeline of an incident drawn on a whiteboard with colorful markers. Different team members are adding sticky notes to various points on the timeline. Notably, there's a separate section titled "What Went Well" that's filling up with notes. The facilitator, Raj, stands nearby with "Psychological Safety Principles" visible on the screen behind him. No one person is being singled out; instead, the focus is clearly on the system rather than individuals.
+### Scene Description
+
+ A collaborative space with comfortable seating and walls covered in whiteboards and sticky notes. A diverse team of eight people sits in a circle, engaged in intense but friendly discussion. At the center is a large timeline of an incident drawn on a whiteboard with colorful markers. Different team members are adding sticky notes to various points on the timeline. Notably, there's a separate section titled "What Went Well" that's filling up with notes. The facilitator, Raj, stands nearby with "Psychological Safety Principles" visible on the screen behind him. No one person is being singled out; instead, the focus is clearly on the system rather than individuals.
 
 ### Teaching Narrative
 
@@ -242,7 +248,9 @@ To implement blameless postmortems in a banking environment:
 
 ## Panel 4: Embracing Toil Reduction - Automation as Strategy
 
-**Scene Description**: Split-screen view of two scenarios. On the left: A production support engineer manually executing a 17-step password reset procedure for a banking application, looking bored and making a small error on step 14. Clock shows this is the 23rd reset today. On the right: An SRE implementing an automated password reset system with self-service capabilities. On their screen is code for the automation alongside a graph showing projected time savings. A calendar on the wall shows blocked time for "Innovation Projects" and "Technical Debt Reduction," with sticky notes showing ideas for system improvements.
+### Scene Description
+
+ Split-screen view of two scenarios. On the left: A production support engineer manually executing a 17-step password reset procedure for a banking application, looking bored and making a small error on step 14. Clock shows this is the 23rd reset today. On the right: An SRE implementing an automated password reset system with self-service capabilities. On their screen is code for the automation alongside a graph showing projected time savings. A calendar on the wall shows blocked time for "Innovation Projects" and "Technical Debt Reduction," with sticky notes showing ideas for system improvements.
 
 ### Teaching Narrative
 
@@ -319,7 +327,9 @@ To implement strategic toil reduction in access management:
 
 ## Panel 5: Service Ownership - Shifting from Silos to End-to-End Responsibility
 
-**Scene Description**: An open-plan office showing the evolution of team structure. On one side, clearly labeled department silos: "Database Team," "Application Support," "Network Operations," and "Security" with team members working separately, tickets being passed between teams, and a customer issue bouncing between groups. On the other side, cross-functional product-aligned teams where diverse specialists sit together, gathered around a holistic view of a banking service with end-to-end monitoring dashboards. A large digital board shows the entire customer journey for processing a loan application, with ownership clearly assigned to one team that spans multiple technical specialties.
+### Scene Description
+
+ An open-plan office showing the evolution of team structure. On one side, clearly labeled department silos: "Database Team," "Application Support," "Network Operations," and "Security" with team members working separately, tickets being passed between teams, and a customer issue bouncing between groups. On the other side, cross-functional product-aligned teams where diverse specialists sit together, gathered around a holistic view of a banking service with end-to-end monitoring dashboards. A large digital board shows the entire customer journey for processing a loan application, with ownership clearly assigned to one team that spans multiple technical specialties.
 
 ### Teaching Narrative
 
@@ -394,7 +404,9 @@ To implement service ownership in a banking environment:
 
 ## Panel 6: Balancing Reliability and Innovation - Error Budgets as Culture
 
-**Scene Description**: A product planning meeting where business and technology leaders are collaborating. A digital whiteboard shows a quarterly plan with development velocity and reliability metrics side by side. In the center is a gauge showing "Error Budget Remaining: 32%" for a core banking service. The product manager is pointing to a feature roadmap while the SRE is indicating the error budget. Calendar items show regular "Error Budget Reviews" and feature launch plans adjusted based on reliability status. Notes from previous meetings show instances where features were delayed to focus on reliability improvements when budgets were low, and where development accelerated when ample budget remained.
+### Scene Description
+
+ A product planning meeting where business and technology leaders are collaborating. A digital whiteboard shows a quarterly plan with development velocity and reliability metrics side by side. In the center is a gauge showing "Error Budget Remaining: 32%" for a core banking service. The product manager is pointing to a feature roadmap while the SRE is indicating the error budget. Calendar items show regular "Error Budget Reviews" and feature launch plans adjusted based on reliability status. Notes from previous meetings show instances where features were delayed to focus on reliability improvements when budgets were low, and where development accelerated when ample budget remained.
 
 ### Teaching Narrative
 
@@ -476,7 +488,9 @@ To implement error budgets as a cultural framework in banking:
 
 ## Panel 7: Measuring What Matters - From Component Health to Customer Experience
 
-**Scene Description**: A modern banking operations center with large wall displays. The scene shows an evolution of monitoring approaches. In the background, old-style infrastructure monitoring screens show server metrics (CPU, memory, disk space) for hundreds of systems. In the foreground, new customer journey dashboards display end-to-end transaction flows across the banking platform with clear success/failure rates for customer activities: "Account Opening Journey: 97.3% Success," "Mortgage Application: 92.1% Success," "Mobile Check Deposit: 99.4% Success." A team is analyzing a customer complaint alongside these metrics, tracing the customer's exact experience through the system across multiple technical components.
+### Scene Description
+
+ A modern banking operations center with large wall displays. The scene shows an evolution of monitoring approaches. In the background, old-style infrastructure monitoring screens show server metrics (CPU, memory, disk space) for hundreds of systems. In the foreground, new customer journey dashboards display end-to-end transaction flows across the banking platform with clear success/failure rates for customer activities: "Account Opening Journey: 97.3% Success," "Mortgage Application: 92.1% Success," "Mobile Check Deposit: 99.4% Success." A team is analyzing a customer complaint alongside these metrics, tracing the customer's exact experience through the system across multiple technical components.
 
 ### Teaching Narrative
 

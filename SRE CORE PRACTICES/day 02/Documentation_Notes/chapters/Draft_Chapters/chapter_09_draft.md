@@ -37,7 +37,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Black Friday Survival
 
-**Scene Description**: Team preparing for peak shopping season with transaction funnel metrics dashboard showing previous year's bottlenecks in credit card authorization flow. Visual displays hourly transaction volume patterns with capacity thresholds and historical bottleneck points highlighted, while team members discuss mitigation strategies for anticipated peaks.
+### Scene Description
+
+ Team preparing for peak shopping season with transaction funnel metrics dashboard showing previous year's bottlenecks in credit card authorization flow. Visual displays hourly transaction volume patterns with capacity thresholds and historical bottleneck points highlighted, while team members discuss mitigation strategies for anticipated peaks.
 
 ### Teaching Narrative
 
@@ -94,7 +96,9 @@ For card authorization services, throughput constraints directly affect both rev
 
 ## Panel 2: The False Positive Problem
 
-**Scene Description**: Risk team and SRE analyzing blocked legitimate transactions, with metrics dashboard showing fraud detection accuracy vs. customer impact trade-offs. Visual illustrates the precision-recall balance with false positive rates by transaction type, merchant category, and customer segment, highlighting areas for algorithm tuning.
+### Scene Description
+
+ Risk team and SRE analyzing blocked legitimate transactions, with metrics dashboard showing fraud detection accuracy vs. customer impact trade-offs. Visual illustrates the precision-recall balance with false positive rates by transaction type, merchant category, and customer segment, highlighting areas for algorithm tuning.
 
 ### Teaching Narrative
 
@@ -157,7 +161,9 @@ For payment card operations, fraud detection balance directly affects both finan
 
 ## Panel 3: The Morning Deadline
 
-**Scene Description**: Overnight batch processing team racing against morning deadline, monitoring critical path metrics for interdependent reconciliation jobs. Visual shows timeline dashboard with job completion percentages, dependency chains, and processing rates, highlighting jobs at risk of missing completion windows.
+### Scene Description
+
+ Overnight batch processing team racing against morning deadline, monitoring critical path metrics for interdependent reconciliation jobs. Visual shows timeline dashboard with job completion percentages, dependency chains, and processing rates, highlighting jobs at risk of missing completion windows.
 
 ### Teaching Narrative
 
@@ -208,7 +214,9 @@ For overnight batch operations, completion predictability directly affects both 
 
 ## Panel 4: The Audit Trail
 
-**Scene Description**: Compliance team reviewing transaction audit metrics during regulatory examination, focusing on completeness and integrity measurements. Visual shows audit validation dashboard highlighting transaction log coverage, reconciliation status, and integrity verification metrics across systems.
+### Scene Description
+
+ Compliance team reviewing transaction audit metrics during regulatory examination, focusing on completeness and integrity measurements. Visual shows audit validation dashboard highlighting transaction log coverage, reconciliation status, and integrity verification metrics across systems.
 
 ### Teaching Narrative
 
@@ -259,7 +267,9 @@ For regulated financial institutions, audit trail effectiveness directly affects
 
 ## Panel 5: The Regulatory Reporting Calendar
 
-**Scene Description**: Operations team reviewing upcoming regulatory deadlines with corresponding system readiness metrics for each reporting obligation. Visual displays calendar view with reporting requirements timeline, system preparation status, and readiness metrics for each regulatory submission.
+### Scene Description
+
+ Operations team reviewing upcoming regulatory deadlines with corresponding system readiness metrics for each reporting obligation. Visual displays calendar view with reporting requirements timeline, system preparation status, and readiness metrics for each regulatory submission.
 
 ### Teaching Narrative
 
@@ -310,7 +320,9 @@ For financial institutions, regulatory reporting compliance directly affects bot
 
 ## Panel 6: The Money Movement Tracker
 
-**Scene Description**: Treasury operations team monitoring interbank fund transfer metrics with settlement status, timing, and liquidity impacts highlighted. Visual shows real-time dashboard tracking large-value transfers through correspondent banking networks with settlement confirmation and liquidity position metrics.
+### Scene Description
+
+ Treasury operations team monitoring interbank fund transfer metrics with settlement status, timing, and liquidity impacts highlighted. Visual shows real-time dashboard tracking large-value transfers through correspondent banking networks with settlement confirmation and liquidity position metrics.
 
 ### Teaching Narrative
 
@@ -361,7 +373,9 @@ For treasury operations, money movement visibility directly affects both financi
 
 ## Panel 7: The Security Posture Dashboard
 
-**Scene Description**: Security and operations teams reviewing integrated security metrics dashboard showing threat detection, vulnerability status, and compliance metrics. Visual illustrates comprehensive security measurement framework with risk indicators, protection effectiveness, and vulnerability management across banking systems.
+### Scene Description
+
+ Security and operations teams reviewing integrated security metrics dashboard showing threat detection, vulnerability status, and compliance metrics. Visual illustrates comprehensive security measurement framework with risk indicators, protection effectiveness, and vulnerability management across banking systems.
 
 ### Teaching Narrative
 

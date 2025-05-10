@@ -1,7 +1,9 @@
 chapter_02_scaffold_draft# Chapter 2: Understanding Service-Level Indicators (SLIs) - Measuring What Matters
 
 ## Panel 1: The User Perspective - Defining Service Through Customer Eyes
-**Scene Description**: A diverse group of banking customers stands in front of ATMs and mobile banking interfaces, with thought bubbles showing what they care about: "Will my payment arrive on time?", "How fast will my transfer complete?", "Can I access my account balance right now?", "Will my trading order execute at the price I see?" Behind them, oblivious to these concerns, IT engineers are focused on server metrics on their laptops. SRE Jamila stands between the two groups, sketching a bridge on a transparent board, connecting customer experiences to technical metrics.
+### Scene Description
+
+ A diverse group of banking customers stands in front of ATMs and mobile banking interfaces, with thought bubbles showing what they care about: "Will my payment arrive on time?", "How fast will my transfer complete?", "Can I access my account balance right now?", "Will my trading order execute at the price I see?" Behind them, oblivious to these concerns, IT engineers are focused on server metrics on their laptops. SRE Jamila stands between the two groups, sketching a bridge on a transparent board, connecting customer experiences to technical metrics.
 
 ### Teaching Narrative
 Service-Level Indicators begin with a fundamental question: what does your service look like from the user's perspective? Unlike traditional infrastructure metrics, SLIs measure aspects of the service that directly impact customer experience.
@@ -11,7 +13,9 @@ Users of banking systems don't care about CPU utilization, memory consumption, o
 SLIs bridge the gap between what customers experience and what we can measure technically. By defining our service through the customer's eyes first, we ensure that our measurements reflect real user experiences rather than internal system states. This customer-centric measurement approach forms the foundation of modern reliability engineering and represents a significant shift from traditional infrastructure monitoring.
 
 ## Panel 2: The Golden Signals - Four Fundamental Measurements
-**Scene Description**: A banking operations center features a newly installed central dashboard titled "Payment Processing Golden Signals." Four large metrics dominate the display: 1) Availability (99.97%), 2) Latency (P95: 230ms), 3) Throughput (837 transactions/second), and 4) Error Rate (0.03%). Senior SRE Raj points at these metrics while explaining to a group of production support engineers who are taking notes. Some look confused while others show dawning comprehension.
+### Scene Description
+
+ A banking operations center features a newly installed central dashboard titled "Payment Processing Golden Signals." Four large metrics dominate the display: 1) Availability (99.97%), 2) Latency (P95: 230ms), 3) Throughput (837 transactions/second), and 4) Error Rate (0.03%). Senior SRE Raj points at these metrics while explaining to a group of production support engineers who are taking notes. Some look confused while others show dawning comprehension.
 
 ### Teaching Narrative
 While services can be measured in countless ways, four key measurements—the Golden Signals—prove universally valuable across almost all services:
@@ -29,7 +33,9 @@ These Golden Signals provide a balanced view of service health. A system might b
 For production support professionals transitioning to SRE, these Golden Signals provide a framework for evolving beyond the traditional "is it up or down?" approach to a multi-dimensional view of service quality.
 
 ## Panel 3: Request-Based vs. Windows-Based SLIs
-**Scene Description**: A split-screen monitoring station where two SREs are configuring different types of SLIs. On the left, Alex is setting up a request-based SLI that counts individual API transactions for a funds transfer service, with a formula showing "Success Count / Total Count." On the right, Sofia is configuring a window-based SLI that measures the percentage of 1-minute intervals where a trading platform's latency remains below threshold. Between them stands their manager, pointing at both screens and explaining the strengths of each approach to a group of newly transitioned SREs.
+### Scene Description
+
+ A split-screen monitoring station where two SREs are configuring different types of SLIs. On the left, Alex is setting up a request-based SLI that counts individual API transactions for a funds transfer service, with a formula showing "Success Count / Total Count." On the right, Sofia is configuring a window-based SLI that measures the percentage of 1-minute intervals where a trading platform's latency remains below threshold. Between them stands their manager, pointing at both screens and explaining the strengths of each approach to a group of newly transitioned SREs.
 
 ### Teaching Narrative
 SLIs fall into two major categories, each with distinct advantages and limitations:
@@ -43,7 +49,9 @@ In banking environments, request-based SLIs work well for transaction processing
 Understanding both types enables SREs to select the appropriate measurement approach for different banking services. This choice significantly impacts how you interpret and act on reliability data, especially when designing SLOs and error budgets later.
 
 ## Panel 4: The Anatomy of an SLI - Specification Requirements
-**Scene Description**: A whiteboard session shows SRE lead Sofia deconstructing a payment processing SLI into its components. On the board is written: "SLI: 99.5% of payment API requests return successfully within 500ms, measured at the load balancer." She's circling different parts of this statement and labeling them: "Service", "Metric Type", "Success Criteria", "Measurement Point." Junior engineers are taking photos of the whiteboard while asking questions, with sticky notes showing different variations of the SLI for different services.
+### Scene Description
+
+ A whiteboard session shows SRE lead Sofia deconstructing a payment processing SLI into its components. On the board is written: "SLI: 99.5% of payment API requests return successfully within 500ms, measured at the load balancer." She's circling different parts of this statement and labeling them: "Service", "Metric Type", "Success Criteria", "Measurement Point." Junior engineers are taking photos of the whiteboard while asking questions, with sticky notes showing different variations of the SLI for different services.
 
 ### Teaching Narrative
 A well-defined SLI must contain several key elements to be actionable and unambiguous:
@@ -61,7 +69,9 @@ A well-defined SLI must contain several key elements to be actionable and unambi
 Without these specifications, SLIs can be misinterpreted or lead to disagreements during incidents. For production support engineers transitioning to SRE, this precision represents a significant shift from general monitoring to specific, contractual measurements that can drive operational decisions.
 
 ## Panel 5: Quality SLI Characteristics - The CALM Framework
-**Scene Description**: A retrospective meeting where a team is evaluating their SLIs after a major incident. On a four-quadrant diagram labeled "CALM Framework," they're placing sticky notes with existing SLIs and evaluating them against criteria. Some SLIs are being moved to an "improve" column. Raj points to a problematic SLI that failed to detect a significant customer impact during the last outage. The team focuses on a whiteboard labeled "Customer-Aligned, Actionable, Leading, Meaningful" with checkmarks being added or removed for each metric.
+### Scene Description
+
+ A retrospective meeting where a team is evaluating their SLIs after a major incident. On a four-quadrant diagram labeled "CALM Framework," they're placing sticky notes with existing SLIs and evaluating them against criteria. Some SLIs are being moved to an "improve" column. Raj points to a problematic SLI that failed to detect a significant customer impact during the last outage. The team focuses on a whiteboard labeled "Customer-Aligned, Actionable, Leading, Meaningful" with checkmarks being added or removed for each metric.
 
 ### Teaching Narrative
 Not all SLIs are created equal. The CALM framework helps evaluate whether your SLIs will effectively represent your users' experience:
@@ -77,7 +87,9 @@ Not all SLIs are created equal. The CALM framework helps evaluate whether your S
 For banking professionals transitioning to SRE roles, the CALM framework offers a structured approach to evaluating existing metrics and designing new ones. Rather than monitoring everything possible, focus on metrics that fulfill these four criteria to create SLIs that drive meaningful reliability improvements.
 
 ## Panel 6: Implementation Approaches - Black-Box vs. White-Box Measurement
-**Scene Description**: A dual monitoring setup for a banking payment gateway. On one screen, a "Black-Box" dashboard shows synthetic transactions being executed from outside the bank's network, measuring success rates and timings as external customers would experience them. On another screen, a "White-Box" dashboard shows internal API metrics, database query performance, and component-level health for the same system. Team members are debating the discrepancy between the two views, as the black-box tests show degradation that isn't yet visible in the white-box metrics.
+### Scene Description
+
+ A dual monitoring setup for a banking payment gateway. On one screen, a "Black-Box" dashboard shows synthetic transactions being executed from outside the bank's network, measuring success rates and timings as external customers would experience them. On another screen, a "White-Box" dashboard shows internal API metrics, database query performance, and component-level health for the same system. Team members are debating the discrepancy between the two views, as the black-box tests show degradation that isn't yet visible in the white-box metrics.
 
 ### Teaching Narrative
 SLIs can be implemented using two complementary approaches, each with distinct advantages:
@@ -91,7 +103,9 @@ Effective SRE practices combine both approaches. Black-box measurements ensure y
 For banking systems, which typically involve complex transaction flows across multiple systems, this dual approach is particularly valuable. Black-box measurements might reveal that payments are failing from the customer perspective, while white-box metrics help determine whether the issue lies in the authentication service, payment processor, or downstream banking partner.
 
 ## Panel 7: SLI Selection Strategy - Coverage, Precision, and Usefulness
-**Scene Description**: A team workshop where bank engineers are evaluating dozens of potential SLIs written on cards spread across a conference table. They're organizing them into three groups: "Must Have," "Useful," and "Not Critical." SRE Jamila is facilitating, holding up a checklist with questions like "Does this detect past incidents?", "How directly does this impact customers?", and "Can we measure this accurately?" A whiteboard in the background shows a matrix of banking services (Payments, Trading, Account Management) with columns for the Golden Signals, with some cells highlighted as priority focus areas.
+### Scene Description
+
+ A team workshop where bank engineers are evaluating dozens of potential SLIs written on cards spread across a conference table. They're organizing them into three groups: "Must Have," "Useful," and "Not Critical." SRE Jamila is facilitating, holding up a checklist with questions like "Does this detect past incidents?", "How directly does this impact customers?", and "Can we measure this accurately?" A whiteboard in the background shows a matrix of banking services (Payments, Trading, Account Management) with columns for the Golden Signals, with some cells highlighted as priority focus areas.
 
 ### Teaching Narrative
 Most complex systems could have hundreds of potential SLIs, but attempting to track too many creates noise and confusion. An effective SLI selection strategy balances three key factors:

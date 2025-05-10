@@ -34,7 +34,9 @@ If you’re still treating traces as a “nice to have,” you’re about to get
 ---
 ## Panel 1: What Is a Trace? The Digital Footprint of Transactions
 
-**Scene Description**: A banking operations center where an SRE team is gathered around a large display showing a visualization of a single payment transaction flowing through multiple systems. The visualization resembles a timeline with branches, showing how a customer's money transfer request moves from the mobile app through authentication, fraud checks, core banking, and finally to settlement systems. Different colored nodes represent different services, with connecting lines showing the path and timing of the request.
+### Scene Description
+
+ A banking operations center where an SRE team is gathered around a large display showing a visualization of a single payment transaction flowing through multiple systems. The visualization resembles a timeline with branches, showing how a customer's money transfer request moves from the mobile app through authentication, fraud checks, core banking, and finally to settlement systems. Different colored nodes represent different services, with connecting lines showing the path and timing of the request.
 
 ### Teaching Narrative
 
@@ -88,7 +90,9 @@ Reputation damage: Social media amplifies negative experiences with failed finan
 
 ## Panel 2: Spans and Parent-Child Relationships: The Building Blocks of Traces
 
-**Scene Description**: A close-up view of a banking analyst examining the detailed structure of a trace for an international payment. The screen shows nested boxes representing different spans, with the outermost box labeled "International Payment Processing" containing smaller boxes for "Authentication," "Fraud Check," "Currency Conversion," and "Settlement." Each span shows its duration, with a particularly long duration highlighted for the "Currency Conversion" span. Lines connect the spans showing their parent-child relationships.
+### Scene Description
+
+ A close-up view of a banking analyst examining the detailed structure of a trace for an international payment. The screen shows nested boxes representing different spans, with the outermost box labeled "International Payment Processing" containing smaller boxes for "Authentication," "Fraud Check," "Currency Conversion," and "Settlement." Each span shows its duration, with a particularly long duration highlighted for the "Currency Conversion" span. Lines connect the spans showing their parent-child relationships.
 
 ### Teaching Narrative
 
@@ -144,7 +148,9 @@ Capital efficiency impact: For trading operations and treasury management, proce
 
 ## Panel 3: Context Propagation: Connecting the Dots Across Services
 
-**Scene Description**: The scene shows a split-screen view of two banking engineers troubleshooting. On the left, an engineer without distributed tracing frantically searches through logs from different systems, trying to piece together related events with no common identifier. On the right, an SRE using distributed tracing easily follows a transaction using trace context identifiers that link activities across multiple service boundaries. The right screen shows how trace IDs and span IDs are automatically propagated from service to service, maintaining the connection between distributed operations.
+### Scene Description
+
+ The scene shows a split-screen view of two banking engineers troubleshooting. On the left, an engineer without distributed tracing frantically searches through logs from different systems, trying to piece together related events with no common identifier. On the right, an SRE using distributed tracing easily follows a transaction using trace context identifiers that link activities across multiple service boundaries. The right screen shows how trace IDs and span IDs are automatically propagated from service to service, maintaining the connection between distributed operations.
 
 ### Teaching Narrative
 
@@ -204,7 +210,9 @@ Inaccurate root cause analysis: Without definitive context connections, 35-40% o
 
 ## Panel 4: Instrumentation Approaches: Making Systems Traceable
 
-**Scene Description**: A banking platform team is in the midst of a modernization project. Engineers are shown implementing different instrumentation approaches across their systems. Some newer microservices use auto-instrumentation with library agents, while legacy mainframe systems have manual trace point insertion. Middleware components show sidecar proxies capturing trace data without code changes. A whiteboard in the background shows the coverage map of which systems are instrumented and which still need work.
+### Scene Description
+
+ A banking platform team is in the midst of a modernization project. Engineers are shown implementing different instrumentation approaches across their systems. Some newer microservices use auto-instrumentation with library agents, while legacy mainframe systems have manual trace point insertion. Middleware components show sidecar proxies capturing trace data without code changes. A whiteboard in the background shows the coverage map of which systems are instrumented and which still need work.
 
 ### Teaching Narrative
 
@@ -264,7 +272,9 @@ Technical debt acceleration: Institutions implementing point-solution instrument
 
 ## Panel 5: Trace Sampling: Managing Data Volume Without Losing Insight
 
-**Scene Description**: An SRE team is configuring a trace sampling strategy during the end-of-month processing period for a large bank. A dashboard shows millions of transactions being processed with only a subset being fully traced. One screen displays different sampling rules: 100% sampling for high-value transactions and error cases, 50% for new product features, and 5% for routine, healthy transactions. A team member is pointing to a specific high-value customer journey that was automatically captured in full detail despite the sampling.
+### Scene Description
+
+ An SRE team is configuring a trace sampling strategy during the end-of-month processing period for a large bank. A dashboard shows millions of transactions being processed with only a subset being fully traced. One screen displays different sampling rules: 100% sampling for high-value transactions and error cases, 50% for new product features, and 5% for routine, healthy transactions. A team member is pointing to a specific high-value customer journey that was automatically captured in full detail despite the sampling.
 
 ### Teaching Narrative
 
@@ -324,7 +334,9 @@ Customer experience blind spots: Without transaction-aware sampling, banks lose 
 
 ## Panel 6: From Traces to Insights: Asking the Right Questions
 
-**Scene Description**: A war room during a banking incident response. The team has moved past the initial panic and is now systematically analyzing trace data. Screens display various trace visualizations and queries. One analyst is filtering traces by duration to find the slowest transactions, another is comparing successful versus failed transfers to spot pattern differences, and a third is examining trace timelines before and after a deployment to identify what changed. Their focused approach is yielding clear patterns that point to a specific service degradation after a recent configuration change.
+### Scene Description
+
+ A war room during a banking incident response. The team has moved past the initial panic and is now systematically analyzing trace data. Screens display various trace visualizations and queries. One analyst is filtering traces by duration to find the slowest transactions, another is comparing successful versus failed transfers to spot pattern differences, and a third is examining trace timelines before and after a deployment to identify what changed. Their focused approach is yielding clear patterns that point to a specific service degradation after a recent configuration change.
 
 ### Teaching Narrative
 

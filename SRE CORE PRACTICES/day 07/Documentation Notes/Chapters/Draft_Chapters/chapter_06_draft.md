@@ -37,7 +37,9 @@ Welcome to the war room, where a single wrong email can tank your stock price, l
 
 ## Panel 1: The Communication Cascade - Tailoring Messages to Different Stakeholders
 
-**Scene Description**: A large digital war room displays multiple screens showing a critical payment processing incident in progress. Senior SRE Mira stands at the center, simultaneously managing three different communication channels. On her left screen, she's drafting a technical incident report for the engineering team with detailed system logs and metrics. On her right screen, she's preparing a simplified executive summary using business impact terms for the C-suite. On her tablet, she's reviewing a carefully worded customer-facing notification that explains the impact without creating panic. The scene conveys the simultaneous but distinct communication streams flowing from a single incident.
+### Scene Description
+
+ A large digital war room displays multiple screens showing a critical payment processing incident in progress. Senior SRE Mira stands at the center, simultaneously managing three different communication channels. On her left screen, she's drafting a technical incident report for the engineering team with detailed system logs and metrics. On her right screen, she's preparing a simplified executive summary using business impact terms for the C-suite. On her tablet, she's reviewing a carefully worded customer-facing notification that explains the impact without creating panic. The scene conveys the simultaneous but distinct communication streams flowing from a single incident.
 
 ### Teaching Narrative
 
@@ -141,7 +143,9 @@ To implement effective communication cascades in your banking organization:
 
 ## Panel 2: Maintaining Transparency Without Causing Panic
 
-**Scene Description**: The scene shows a split-screen view of two different approaches to communication during the same banking incident. On the left, we see the "before" approach: a flustered support engineer sends an alarming all-company email with the subject "URGENT: ALL PAYMENT SYSTEMS DOWN!!!" causing visible panic among business teams. On the right, we see the "after" SRE approach: a composed incident commander provides a structured update through official channels stating: "Payment processing experiencing 18% transaction failure rate affecting corporate clients only. Mitigation in progress with ETA 45 minutes. Retail banking unaffected." The contrast between chaos and calm is visually striking.
+### Scene Description
+
+ The scene shows a split-screen view of two different approaches to communication during the same banking incident. On the left, we see the "before" approach: a flustered support engineer sends an alarming all-company email with the subject "URGENT: ALL PAYMENT SYSTEMS DOWN!!!" causing visible panic among business teams. On the right, we see the "after" SRE approach: a composed incident commander provides a structured update through official channels stating: "Payment processing experiencing 18% transaction failure rate affecting corporate clients only. Mitigation in progress with ETA 45 minutes. Retail banking unaffected." The contrast between chaos and calm is visually striking.
 
 ### Teaching Narrative
 
@@ -261,7 +265,9 @@ To implement balanced transparency in your financial institution:
 
 ## Panel 3: Real-Time Status Communication Infrastructure
 
-**Scene Description**: The scene depicts an SRE team that has built a sophisticated status communication ecosystem for banking incidents. At the center is a large screen showing a unified status dashboard with real-time incident updates. Team members are shown integrating automated monitoring alerts with human-verified status updates. One engineer is programming automatic updates to flow from the incident management system to multiple channels: the customer-facing status page, the internal employee portal, a regulatory reporting API, and the executive dashboard app. A bank of preset message templates is visible, categorized by incident type and severity. A timeline shows how status updates propagate through all channels within minutes of being approved.
+### Scene Description
+
+ The scene depicts an SRE team that has built a sophisticated status communication ecosystem for banking incidents. At the center is a large screen showing a unified status dashboard with real-time incident updates. Team members are shown integrating automated monitoring alerts with human-verified status updates. One engineer is programming automatic updates to flow from the incident management system to multiple channels: the customer-facing status page, the internal employee portal, a regulatory reporting API, and the executive dashboard app. A bank of preset message templates is visible, categorized by incident type and severity. A timeline shows how status updates propagate through all channels within minutes of being approved.
 
 ### Teaching Narrative
 
@@ -383,7 +389,9 @@ To build effective communication infrastructure for your banking organization:
 
 ## Panel 4: Regulatory and Compliance Communication
 
-**Scene Description**: An SRE team is engaged in a banking system incident with regulatory implications. The visual shows a specialized communication workflow specifically designed for regulatory requirements. One team member maintains a meticulous real-time audit log capturing all investigative actions and decisions. Another operates a compliance checklist interface that tracks required notifications based on the incident's classification. A third team member interacts with an automated regulatory reporting system that formats incident details according to various regulatory frameworks (FCA, PRA, ECB logos visible). A countdown timer prominently displays the regulatory reporting deadline, and a verification system shows the documentation being assembled to demonstrate appropriate response protocols were followed.
+### Scene Description
+
+ An SRE team is engaged in a banking system incident with regulatory implications. The visual shows a specialized communication workflow specifically designed for regulatory requirements. One team member maintains a meticulous real-time audit log capturing all investigative actions and decisions. Another operates a compliance checklist interface that tracks required notifications based on the incident's classification. A third team member interacts with an automated regulatory reporting system that formats incident details according to various regulatory frameworks (FCA, PRA, ECB logos visible). A countdown timer prominently displays the regulatory reporting deadline, and a verification system shows the documentation being assembled to demonstrate appropriate response protocols were followed.
 
 ### Teaching Narrative
 
@@ -505,7 +513,9 @@ To implement effective regulatory communication in your banking organization:
 
 ## Panel 5: Post-Resolution Communication Strategy
 
-**Scene Description**: The scene shows an incident that has just been resolved after affecting a banking payment system for several hours. The SRE team is now executing a structured post-resolution communication plan. The visual shows a sequence of communications being prepared: an immediate "all-clear" notification with basic resume details, a technical retrospective invitation to engineering teams, a more detailed "incident review" communication for business leaders with impact analysis, and a "trust recovery" communication plan for affected customers that includes both explanation and preventative measures. A calendar shows the timing of each communication, stretching from immediate notifications to follow-ups scheduled weeks later. Team members are assigning ownership for each communication stream and setting reminders for scheduled updates.
+### Scene Description
+
+ The scene shows an incident that has just been resolved after affecting a banking payment system for several hours. The SRE team is now executing a structured post-resolution communication plan. The visual shows a sequence of communications being prepared: an immediate "all-clear" notification with basic resume details, a technical retrospective invitation to engineering teams, a more detailed "incident review" communication for business leaders with impact analysis, and a "trust recovery" communication plan for affected customers that includes both explanation and preventative measures. A calendar shows the timing of each communication, stretching from immediate notifications to follow-ups scheduled weeks later. Team members are assigning ownership for each communication stream and setting reminders for scheduled updates.
 
 ### Teaching Narrative
 
@@ -627,7 +637,9 @@ To implement effective post-resolution communication in your banking organizatio
 
 ## Panel 6: Cross-Team Communication Protocols
 
-**Scene Description**: The scene illustrates a complex banking incident affecting multiple interconnected systems. In the center is a structured cross-team communication hub with clear protocols. On digital boards, we see standardized formats for different teams to report status: Core Banking Platform (green, operational), Payment Gateway (red, degraded), Fraud Detection (yellow, delayed processing), and Customer Authentication (green, operational). Each team has a designated communication liaison who formats updates in a common template. A "technical translator" role is highlighted, showing someone converting specialized terminology between teams. A shared glossary dashboard ensures everyone uses consistent terminology. The command center has established specific communication channels for different types of interactions: major updates, coordination requests, and resource needs.
+### Scene Description
+
+ The scene illustrates a complex banking incident affecting multiple interconnected systems. In the center is a structured cross-team communication hub with clear protocols. On digital boards, we see standardized formats for different teams to report status: Core Banking Platform (green, operational), Payment Gateway (red, degraded), Fraud Detection (yellow, delayed processing), and Customer Authentication (green, operational). Each team has a designated communication liaison who formats updates in a common template. A "technical translator" role is highlighted, showing someone converting specialized terminology between teams. A shared glossary dashboard ensures everyone uses consistent terminology. The command center has established specific communication channels for different types of interactions: major updates, coordination requests, and resource needs.
 
 ### Teaching Narrative
 
@@ -749,7 +761,9 @@ To implement effective cross-team communication protocols in your banking organi
 
 ## Panel 7: Measuring Communication Effectiveness
 
-**Scene Description**: The visual shows an SRE team conducting a communication effectiveness analysis after a major banking incident. One wall displays metrics being tracked: time to first notification, update frequency, message consistency, stakeholder acknowledgment rates, and action item completion. Another screen shows feedback collected from different stakeholders about the clarity and usefulness of incident communications. A team member reviews a "communication journey map" that tracks how quickly information flowed to different groups during the incident. Another analyzes where miscommunications or delays occurred using a timeline visualization. The team is documenting communication improvements for their incident response playbook based on this data.
+### Scene Description
+
+ The visual shows an SRE team conducting a communication effectiveness analysis after a major banking incident. One wall displays metrics being tracked: time to first notification, update frequency, message consistency, stakeholder acknowledgment rates, and action item completion. Another screen shows feedback collected from different stakeholders about the clarity and usefulness of incident communications. A team member reviews a "communication journey map" that tracks how quickly information flowed to different groups during the incident. Another analyzes where miscommunications or delays occurred using a timeline visualization. The team is documenting communication improvements for their incident response playbook based on this data.
 
 ### Teaching Narrative
 

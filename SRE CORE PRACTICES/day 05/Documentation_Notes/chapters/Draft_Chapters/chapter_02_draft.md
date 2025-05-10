@@ -38,7 +38,9 @@ If you want to stop being surprised by outages—or worse, by headlines—stop t
 ---
 ## Panel 1: The Four Pillars of Observability
 
-**Scene Description**: A banking operations center where an SRE named Elena explains a new dashboard to her team. The screen is divided into four distinct quadrants, each representing a different data source: logs showing application errors, metrics displaying transaction rates, traces following a payment journey, and events highlighting deployment changes. As Elena points to connections between these quadrants, team members who previously only looked at one data type are visibly having "aha" moments as they see how the complete picture emerges only when all four sources are combined.
+### Scene Description
+
+ A banking operations center where an SRE named Elena explains a new dashboard to her team. The screen is divided into four distinct quadrants, each representing a different data source: logs showing application errors, metrics displaying transaction rates, traces following a payment journey, and events highlighting deployment changes. As Elena points to connections between these quadrants, team members who previously only looked at one data type are visibly having "aha" moments as they see how the complete picture emerges only when all four sources are combined.
 
 ### Teaching Narrative
 
@@ -90,7 +92,9 @@ To establish the four pillars of observability in your banking environment:
 
 ## Panel 2: Beyond the Surface - Signal Depth and Dimensionality
 
-**Scene Description**: A senior SRE named Marcus demonstrates the concept of signal dimensionality to a new team member using two monitoring screens. The first shows a simple line graph of "Payment API Response Time" with a single aggregated value that looks normal. The second screen shows the same metric but with added dimensions: response times segmented by customer tier, payment type, geographic region, and backend service – revealing critical slowdowns for premium customers making international transfers that were completely hidden in the aggregated view. Marcus points to these hidden patterns while explaining how dimensional analysis reveals problems that one-dimensional monitoring conceals.
+### Scene Description
+
+ A senior SRE named Marcus demonstrates the concept of signal dimensionality to a new team member using two monitoring screens. The first shows a simple line graph of "Payment API Response Time" with a single aggregated value that looks normal. The second screen shows the same metric but with added dimensions: response times segmented by customer tier, payment type, geographic region, and backend service – revealing critical slowdowns for premium customers making international transfers that were completely hidden in the aggregated view. Marcus points to these hidden patterns while explaining how dimensional analysis reveals problems that one-dimensional monitoring conceals.
 
 ### Teaching Narrative
 
@@ -142,7 +146,9 @@ To implement effective dimensional monitoring in your banking environment:
 
 ## Panel 3: Signal-to-Noise Ratio - Finding Clarity in Complexity
 
-**Scene Description**: Two adjacent bank monitoring centers illustrate a stark contrast. The first is chaotic—screens flashing with hundreds of alerts, engineers frantically responding to numerous notifications, many clearly false positives, with critical alerts lost in the noise. The second center shows a calmer environment with filtered dashboards highlighting only significant anomalies, clear visual hierarchies distinguishing critical from minor issues, and engineers focused on meaningful investigations rather than alert triage. A whiteboard in the second center shows a "Signal Refinement Process" with steps for filtering, correlating, and prioritizing signals.
+### Scene Description
+
+ Two adjacent bank monitoring centers illustrate a stark contrast. The first is chaotic—screens flashing with hundreds of alerts, engineers frantically responding to numerous notifications, many clearly false positives, with critical alerts lost in the noise. The second center shows a calmer environment with filtered dashboards highlighting only significant anomalies, clear visual hierarchies distinguishing critical from minor issues, and engineers focused on meaningful investigations rather than alert triage. A whiteboard in the second center shows a "Signal Refinement Process" with steps for filtering, correlating, and prioritizing signals.
 
 ### Teaching Narrative
 
@@ -194,7 +200,9 @@ To improve signal-to-noise ratio in your banking environment:
 
 ## Panel 4: Time Horizons - The Power of Historical Context
 
-**Scene Description**: A banking integration team is investigating an intermittent payment processing issue. Their workspace shows multiple monitors displaying the same metrics but across different time windows: real-time (last 30 minutes), daily patterns (24 hours), weekly cycles (7 days), monthly trends (30 days), and quarterly views (90 days). A team member points excitedly at the quarterly view, which reveals that the current error pattern perfectly matches issues from exactly 90 days ago—during the previous end-of-quarter financial processing—providing crucial context invisible in shorter timeframes. The team immediately begins investigating specific quarterly processing jobs that might be causing the pattern.
+### Scene Description
+
+ A banking integration team is investigating an intermittent payment processing issue. Their workspace shows multiple monitors displaying the same metrics but across different time windows: real-time (last 30 minutes), daily patterns (24 hours), weekly cycles (7 days), monthly trends (30 days), and quarterly views (90 days). A team member points excitedly at the quarterly view, which reveals that the current error pattern perfectly matches issues from exactly 90 days ago—during the previous end-of-quarter financial processing—providing crucial context invisible in shorter timeframes. The team immediately begins investigating specific quarterly processing jobs that might be causing the pattern.
 
 ### Teaching Narrative
 
@@ -246,7 +254,9 @@ To implement effective time-horizon analysis in your banking environment:
 
 ## Panel 5: Signal Reliability - Truth, Half-Truths, and Gaps
 
-**Scene Description**: A banking SRE team is conducting a post-mortem for a missed payment outage. On a whiteboard, they've created a matrix evaluating their different signal sources with columns labeled "Reliability," "Coverage," "Accuracy," and "Timeliness." Some critical application areas show alarming gaps with no monitoring coverage, while other areas have contradictory signals that provided confusing information during the incident. The team is systematically identifying blind spots and conflicting indicators, developing a signal reliability improvement plan to ensure they have trustworthy observability for all critical banking functions.
+### Scene Description
+
+ A banking SRE team is conducting a post-mortem for a missed payment outage. On a whiteboard, they've created a matrix evaluating their different signal sources with columns labeled "Reliability," "Coverage," "Accuracy," and "Timeliness." Some critical application areas show alarming gaps with no monitoring coverage, while other areas have contradictory signals that provided confusing information during the incident. The team is systematically identifying blind spots and conflicting indicators, developing a signal reliability improvement plan to ensure they have trustworthy observability for all critical banking functions.
 
 ### Teaching Narrative
 
@@ -298,7 +308,9 @@ To improve signal reliability in your banking environment:
 
 ## Panel 6: Business Context - Connecting Signals to Impact
 
-**Scene Description**: A large banking operations center during a major incident. Technical dashboards show system metrics, but prominently displayed on central screens are business impact dashboards showing real-time financial implications: transaction volume drop, revenue impact calculations, affected customer counts by segment, and regulatory reporting requirements triggered by the incident. As technical teams work on resolution, business stakeholders reference these impact metrics to make decisions about communication strategies, compensatory actions, and prioritization. The scene illustrates how technical signals have been translated into business-meaningful metrics that drive decision-making.
+### Scene Description
+
+ A large banking operations center during a major incident. Technical dashboards show system metrics, but prominently displayed on central screens are business impact dashboards showing real-time financial implications: transaction volume drop, revenue impact calculations, affected customer counts by segment, and regulatory reporting requirements triggered by the incident. As technical teams work on resolution, business stakeholders reference these impact metrics to make decisions about communication strategies, compensatory actions, and prioritization. The scene illustrates how technical signals have been translated into business-meaningful metrics that drive decision-making.
 
 ### Teaching Narrative
 
@@ -350,7 +362,9 @@ To implement business-contextualized observability in your banking environment:
 
 ## Panel 7: Signal Aggregation and Synthesis - The Unified Narrative
 
-**Scene Description**: A sophisticated banking incident response room where digital and physical tools combine to create a unified signal narrative. Engineers have constructed a dynamic, multi-source dashboard that pulls relevant data from disparate systems: production metrics, customer support tickets, social media sentiment analysis, transaction processing rates, and system logs. At the center, a timeline shows how signals from different sources correlate across time, revealing causal relationships. Team members add annotations to this unified view, building a cohesive narrative of the incident that synthesizes technical signals with business impact and customer experience data.
+### Scene Description
+
+ A sophisticated banking incident response room where digital and physical tools combine to create a unified signal narrative. Engineers have constructed a dynamic, multi-source dashboard that pulls relevant data from disparate systems: production metrics, customer support tickets, social media sentiment analysis, transaction processing rates, and system logs. At the center, a timeline shows how signals from different sources correlate across time, revealing causal relationships. Team members add annotations to this unified view, building a cohesive narrative of the incident that synthesizes technical signals with business impact and customer experience data.
 
 ### Teaching Narrative
 

@@ -37,7 +37,9 @@ ______________________________________________________________________
 
 ## Panel 1: From Incidents to Insights
 
-**Scene Description**: A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.
+### Scene Description
+
+ A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.
 
 ### Teaching Narrative
 
@@ -121,7 +123,9 @@ The financial consequences of limited learning from incidents are severe in bank
 
 ## Panel 2: Creating Psychological Safety
 
-**Scene Description**: The bank's executive boardroom hosts an unusual scene. The CTO stands at the front beside a projection showing "Reliability Learning Review" with a senior engineer who is openly discussing a major mistake they made that contributed to a trading platform outage. Rather than appearing defensive, the engineer looks comfortable as they explain their thought process. The executives are leaning forward, engaged and asking thoughtful questions about systemic factors rather than individual actions. On a whiteboard, someone has written "Focus on learning, not blaming" and "The question is not 'who', but 'how'." A junior team member is visibly taking notes, looking empowered rather than fearful.
+### Scene Description
+
+ The bank's executive boardroom hosts an unusual scene. The CTO stands at the front beside a projection showing "Reliability Learning Review" with a senior engineer who is openly discussing a major mistake they made that contributed to a trading platform outage. Rather than appearing defensive, the engineer looks comfortable as they explain their thought process. The executives are leaning forward, engaged and asking thoughtful questions about systemic factors rather than individual actions. On a whiteboard, someone has written "Focus on learning, not blaming" and "The question is not 'who', but 'how'." A junior team member is visibly taking notes, looking empowered rather than fearful.
 
 ### Teaching Narrative
 
@@ -207,7 +211,9 @@ A study of financial institutions after the 2008 crisis found that banks with hi
 
 ## Panel 3: Building a Culture of Inquiry
 
-**Scene Description**: An open-concept office space shows three separate interactions happening simultaneously. In one corner, a senior and junior engineer pair-program while debugging an authentication service issue, with the senior engineer asking Socratic questions rather than providing direct answers. In another area, a team huddles around a whiteboard mapping a complex system flow, with sticky notes highlighting knowledge gaps and assumptions needing validation. Near the entrance, a physical "question board" displays ongoing technical and process inquiries from team members, with some questions flagged as "great questions" by leadership. Throughout the space, "Did You Know?" digital displays show rotating insights from recent investigations and discoveries.
+### Scene Description
+
+ An open-concept office space shows three separate interactions happening simultaneously. In one corner, a senior and junior engineer pair-program while debugging an authentication service issue, with the senior engineer asking Socratic questions rather than providing direct answers. In another area, a team huddles around a whiteboard mapping a complex system flow, with sticky notes highlighting knowledge gaps and assumptions needing validation. Near the entrance, a physical "question board" displays ongoing technical and process inquiries from team members, with some questions flagged as "great questions" by leadership. Throughout the space, "Did You Know?" digital displays show rotating insights from recent investigations and discoveries.
 
 ### Teaching Narrative
 
@@ -293,7 +299,9 @@ A comparative study of banks during digital transformation initiatives found tha
 
 ## Panel 4: Knowledge Diffusion Networks
 
-**Scene Description**: A bank's technology campus features multiple knowledge-sharing formats happening simultaneously. In one room, engineers gather for a "Failure Friday" session where recent incidents are discussed over lunch. In another space, a "Systems Thinking Workshop" brings together people from different teams to map dependencies. Digital displays throughout the building show upcoming knowledge-sharing events and recently published internal articles. In a casual seating area, an impromptu mentoring session occurs between operations and development team members, with architecture diagrams spread across a coffee table. A nearby wall displays a "Knowledge Map" showing subject matter experts across different domains with connecting lines showing knowledge transfer paths.
+### Scene Description
+
+ A bank's technology campus features multiple knowledge-sharing formats happening simultaneously. In one room, engineers gather for a "Failure Friday" session where recent incidents are discussed over lunch. In another space, a "Systems Thinking Workshop" brings together people from different teams to map dependencies. Digital displays throughout the building show upcoming knowledge-sharing events and recently published internal articles. In a casual seating area, an impromptu mentoring session occurs between operations and development team members, with architecture diagrams spread across a coffee table. A nearby wall displays a "Knowledge Map" showing subject matter experts across different domains with connecting lines showing knowledge transfer paths.
 
 ### Teaching Narrative
 
@@ -379,7 +387,9 @@ A comparative analysis of financial institutions during major system transformat
 
 ## Panel 5: Continuous Experimentation
 
-**Scene Description**: A specially designated "Reliability Lab" within the bank shows a team conducting a controlled experiment. Monitors display a simulated banking environment while engineers introduce artificial delays into transaction processing systems. A structured experiment protocol is visible on a nearby whiteboard, showing hypothesis, test conditions, measurement methods, and safety parameters. A "blast radius" diagram shows which systems might be affected and containment strategies. Team members are recording observations in a shared digital notebook as the experiment progresses. On a side wall, a "Learning Journal" tracks previous experiments, both successful and unsuccessful, with documented insights and follow-up actions.
+### Scene Description
+
+ A specially designated "Reliability Lab" within the bank shows a team conducting a controlled experiment. Monitors display a simulated banking environment while engineers introduce artificial delays into transaction processing systems. A structured experiment protocol is visible on a nearby whiteboard, showing hypothesis, test conditions, measurement methods, and safety parameters. A "blast radius" diagram shows which systems might be affected and containment strategies. Team members are recording observations in a shared digital notebook as the experiment progresses. On a side wall, a "Learning Journal" tracks previous experiments, both successful and unsuccessful, with documented insights and follow-up actions.
 
 ### Teaching Narrative
 
@@ -465,7 +475,9 @@ A comparative analysis of digital banks found that those with robust experimenta
 
 ## Panel 6: Feedback Loops and Measurable Learning
 
-**Scene Description**: A quarterly reliability review meeting shows leadership and team members gathered around a "Learning Metrics Dashboard." The dashboard displays trends in key learning indicators: time to detect and resolve incidents, percentage of repeat incidents, knowledge base utilization rates, and team learning satisfaction scores. A "Closed Loops" section shows specific improvements implemented based on previous learnings, with before/after metrics. Facilitation techniques are visibly being used to ensure all voices are heard, with a designated "learning advocate" ensuring observations translate to actions. A wall-mounted screen shows a "Learning Roadmap" connecting past insights to future improvement initiatives.
+### Scene Description
+
+ A quarterly reliability review meeting shows leadership and team members gathered around a "Learning Metrics Dashboard." The dashboard displays trends in key learning indicators: time to detect and resolve incidents, percentage of repeat incidents, knowledge base utilization rates, and team learning satisfaction scores. A "Closed Loops" section shows specific improvements implemented based on previous learnings, with before/after metrics. Facilitation techniques are visibly being used to ensure all voices are heard, with a designated "learning advocate" ensuring observations translate to actions. A wall-mounted screen shows a "Learning Roadmap" connecting past insights to future improvement initiatives.
 
 ### Teaching Narrative
 
@@ -551,7 +563,9 @@ An analysis of digital banking transformation initiatives found that organizatio
 
 ## Panel 7: Learning at Scale
 
-**Scene Description**: A global banking organization's virtual "Reliability Summit" connects reliability teams across multiple regions and business units. Digital collaboration boards show shared challenges and solutions being mapped across different contexts. In physical locations, teams are seen participating together, adding sticky notes to local boards that synchronize with the global view. Some participants present case studies of local reliability improvements that have potential global application. A "Cross-Pollination Program" poster shows engineers temporarily embedded in different regions to spread expertise. Regional reliability metrics are displayed side-by-side, not as competition but as learning opportunities. Leadership visibly participates, asking questions rather than directing solutions.
+### Scene Description
+
+ A global banking organization's virtual "Reliability Summit" connects reliability teams across multiple regions and business units. Digital collaboration boards show shared challenges and solutions being mapped across different contexts. In physical locations, teams are seen participating together, adding sticky notes to local boards that synchronize with the global view. Some participants present case studies of local reliability improvements that have potential global application. A "Cross-Pollination Program" poster shows engineers temporarily embedded in different regions to spread expertise. Regional reliability metrics are displayed side-by-side, not as competition but as learning opportunities. Leadership visibly participates, asking questions rather than directing solutions.
 
 ### Teaching Narrative
 

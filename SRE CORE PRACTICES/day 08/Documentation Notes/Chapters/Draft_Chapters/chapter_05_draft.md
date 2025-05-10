@@ -37,7 +37,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Compliance Archive Avalanche
 
-**Scene Description**: An SRE team faces a crisis during a quarterly budget review. Projected screens show exponential cost growth curves for their observability platform. The lead SRE stands before banking executives, explaining a graph showing that 85% of their total observability costs come from storing years of rarely-accessed logs and metrics. On another screen, regulatory requirements for data retention are displayed alongside the ballooning storage costs. Team members look anxious as financial officers question the sustainability of their approach.
+### Scene Description
+
+ An SRE team faces a crisis during a quarterly budget review. Projected screens show exponential cost growth curves for their observability platform. The lead SRE stands before banking executives, explaining a graph showing that 85% of their total observability costs come from storing years of rarely-accessed logs and metrics. On another screen, regulatory requirements for data retention are displayed alongside the ballooning storage costs. Team members look anxious as financial officers question the sustainability of their approach.
 
 ### Teaching Narrative
 
@@ -49,7 +51,9 @@ The foundation of cost-effective retention is tiered storage architecture that a
 
 ## Panel 2: The Data Lifecycle Revolution
 
-**Scene Description**: In a modernized operations center, an SRE is demonstrating a new observability architecture on a large touchscreen. The visualization shows data flowing through distinct lifecycle stages, color-coded by age and importance. Fresh metrics and logs flow into high-performance storage, while progressively older data transitions through warm and cold storage tiers. The SRE is highlighting how different query patterns access different tiers, while compliance officers are nodding approvingly at indicators showing retention policies are being met. A cost dashboard shows dramatic savings compared to the previous quarter.
+### Scene Description
+
+ In a modernized operations center, an SRE is demonstrating a new observability architecture on a large touchscreen. The visualization shows data flowing through distinct lifecycle stages, color-coded by age and importance. Fresh metrics and logs flow into high-performance storage, while progressively older data transitions through warm and cold storage tiers. The SRE is highlighting how different query patterns access different tiers, while compliance officers are nodding approvingly at indicators showing retention policies are being met. A cost dashboard shows dramatic savings compared to the previous quarter.
 
 ### Teaching Narrative
 
@@ -61,7 +65,9 @@ The most sophisticated SRE teams implement automated lifecycle management that t
 
 ## Panel 3: Compliance Without Bankruptcy
 
-**Scene Description**: A meeting room where compliance, legal, and SRE teams are collaboratively reviewing a new retention framework document. On the wall is a matrix showing different data types, their regulatory requirements, and corresponding retention strategies. One side of the matrix shows banking regulations (Basel III, PCI-DSS, Dodd-Frank) with their specific requirements, while the other side shows tiered implementation approaches. Team members are highlighting how specific data transformations can satisfy compliance while reducing storage volumes. Financial projections show the new approach cutting costs by 70% while maintaining full regulatory adherence.
+### Scene Description
+
+ A meeting room where compliance, legal, and SRE teams are collaboratively reviewing a new retention framework document. On the wall is a matrix showing different data types, their regulatory requirements, and corresponding retention strategies. One side of the matrix shows banking regulations (Basel III, PCI-DSS, Dodd-Frank) with their specific requirements, while the other side shows tiered implementation approaches. Team members are highlighting how specific data transformations can satisfy compliance while reducing storage volumes. Financial projections show the new approach cutting costs by 70% while maintaining full regulatory adherence.
 
 ### Teaching Narrative
 
@@ -73,7 +79,9 @@ The most successful banking SRE teams partner closely with legal and compliance 
 
 ## Panel 4: The Intelligent Aggregation Engine
 
-**Scene Description**: A senior SRE is configuring a new data transformation pipeline on a multi-screen workstation. Visualizations show high-volume, high-resolution metrics flowing through processing stages that progressively reduce resolution over time. One screen displays a dashboard comparing original time series with downsampled versions, showing nearly identical patterns despite massive data reduction. Another screen shows cost projections plummeting as aggregation ratios increase with data age. Team members are testing queries against both original and aggregated datasets, verifying that analytical capabilities remain intact.
+### Scene Description
+
+ A senior SRE is configuring a new data transformation pipeline on a multi-screen workstation. Visualizations show high-volume, high-resolution metrics flowing through processing stages that progressively reduce resolution over time. One screen displays a dashboard comparing original time series with downsampled versions, showing nearly identical patterns despite massive data reduction. Another screen shows cost projections plummeting as aggregation ratios increase with data age. Team members are testing queries against both original and aggregated datasets, verifying that analytical capabilities remain intact.
 
 ### Teaching Narrative
 
@@ -85,7 +93,9 @@ The key insight is that data reduction should be a progressive, planned process 
 
 ## Panel 5: The Query-Aware Storage Strategy
 
-**Scene Description**: An SRE team is gathered around a large monitor showing a heatmap of query patterns across their observability data. The visualization highlights how query frequency and complexity vary dramatically with data age. Recent data shows intense, complex query patterns, while older data shows sparse, simpler queries focused on specific events or trends. In another window, they're implementing a new storage architecture that aligns performance characteristics with these actual usage patterns. Cost models show how this alignment dramatically reduces expenses by eliminating high-performance storage for rarely-queried data.
+### Scene Description
+
+ An SRE team is gathered around a large monitor showing a heatmap of query patterns across their observability data. The visualization highlights how query frequency and complexity vary dramatically with data age. Recent data shows intense, complex query patterns, while older data shows sparse, simpler queries focused on specific events or trends. In another window, they're implementing a new storage architecture that aligns performance characteristics with these actual usage patterns. Cost models show how this alignment dramatically reduces expenses by eliminating high-performance storage for rarely-queried data.
 
 ### Teaching Narrative
 
@@ -97,7 +107,9 @@ By analyzing these actual usage patterns, we can implement storage strategies th
 
 ## Panel 6: The Selective Retention Framework
 
-**Scene Description**: A whiteboard session where an SRE team is developing a sophisticated retention matrix. The matrix classifies different types of observability data (transactions, authentication events, system metrics, etc.) according to their compliance requirements, investigation value, and query patterns. Team members are drawing arrows showing different retention paths for each data type, with some flowing to cold storage while others undergo transformation or deletion. A CTO observing the session is visibly impressed by the nuanced approach that optimizes both cost and value.
+### Scene Description
+
+ A whiteboard session where an SRE team is developing a sophisticated retention matrix. The matrix classifies different types of observability data (transactions, authentication events, system metrics, etc.) according to their compliance requirements, investigation value, and query patterns. Team members are drawing arrows showing different retention paths for each data type, with some flowing to cold storage while others undergo transformation or deletion. A CTO observing the session is visibly impressed by the nuanced approach that optimizes both cost and value.
 
 ### Teaching Narrative
 
@@ -111,7 +123,9 @@ By implementing this multi-dimensional approach, organizations can surgically op
 
 ## Panel 7: The Retention Testing Revolution
 
-**Scene Description**: An SRE team is conducting a mock compliance audit in a conference room. They're demonstrating to auditors how their new retention system can retrieve historical data across various timeframes. On one screen, they're showing how they can still analyze patterns from three-year-old data despite aggressive aggregation. Another team member is running a randomly selected compliance query against archived logs, successfully retrieving the required information. Cost dashboards show massive savings while audit validation checks all show green status, demonstrating successful compliance despite reduced storage investment.
+### Scene Description
+
+ An SRE team is conducting a mock compliance audit in a conference room. They're demonstrating to auditors how their new retention system can retrieve historical data across various timeframes. On one screen, they're showing how they can still analyze patterns from three-year-old data despite aggressive aggregation. Another team member is running a randomly selected compliance query against archived logs, successfully retrieving the required information. Cost dashboards show massive savings while audit validation checks all show green status, demonstrating successful compliance despite reduced storage investment.
 
 ### Teaching Narrative
 

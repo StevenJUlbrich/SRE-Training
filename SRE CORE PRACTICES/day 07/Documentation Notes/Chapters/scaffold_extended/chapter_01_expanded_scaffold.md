@@ -2,7 +2,9 @@
 
 ## Panel 1: The Green Wall Fallacy
 
-**Scene Description**: A bleary-eyed SRE is jolted awake at 2:57 AM by his pager. He frantically checks his laptop, where a wall of green dashboard tiles contradicts the alert. In the background, a phone rings insistently as customer reports pour in. Katherine hovers between trusting his dashboard or investigating further, illustrating the critical moment of decision between monitoring mindset and incident response mindset.
+### Scene Description
+
+ A bleary-eyed SRE is jolted awake at 2:57 AM by his pager. He frantically checks his laptop, where a wall of green dashboard tiles contradicts the alert. In the background, a phone rings insistently as customer reports pour in. Katherine hovers between trusting his dashboard or investigating further, illustrating the critical moment of decision between monitoring mindset and incident response mindset.
 
 ### Teaching Narrative
 
@@ -69,7 +71,9 @@ To overcome the Green Wall Fallacy in your organization, follow these five actio
 
 ## Panel 2: Symptoms vs. Causes - The Diagnostic Leap
 
-**Scene Description**: A banking operations center where two SREs with different approaches investigate a payment processing issue. One frantically scrolls through system logs while surrounded by multiple dashboards showing red metrics. The other methodically maps out the payment flow on a whiteboard, highlighting potential failure points and the relationship between symptoms and underlying causes. A customer service representative approaches with a tablet showing customer complaints about failed transactions.
+### Scene Description
+
+ A banking operations center where two SREs with different approaches investigate a payment processing issue. One frantically scrolls through system logs while surrounded by multiple dashboards showing red metrics. The other methodically maps out the payment flow on a whiteboard, highlighting potential failure points and the relationship between symptoms and underlying causes. A customer service representative approaches with a tablet showing customer complaints about failed transactions.
 
 ### Teaching Narrative
 
@@ -136,7 +140,9 @@ To make the diagnostic leap from symptoms to causes in your organization, implem
 
 ## Panel 3: From Time-to-Resolution to Time-to-Detection
 
-**Scene Description**: Split scene showing two timelines of the same banking incident. In the top timeline labeled "Traditional Approach," a long period passes between incident start and detection, with a relatively short resolution period. In the bottom timeline labeled "SRE Approach," detection happens almost immediately after incident start, followed by a structured response process. The SRE timeline shows significantly reduced total customer impact. A clock prominently displays the critical minutes ticking by as dollar figures and customer impact metrics accumulate.
+### Scene Description
+
+ Split scene showing two timelines of the same banking incident. In the top timeline labeled "Traditional Approach," a long period passes between incident start and detection, with a relatively short resolution period. In the bottom timeline labeled "SRE Approach," detection happens almost immediately after incident start, followed by a structured response process. The SRE timeline shows significantly reduced total customer impact. A clock prominently displays the critical minutes ticking by as dollar figures and customer impact metrics accumulate.
 
 ### Teaching Narrative
 
@@ -205,7 +211,9 @@ To shift your organization's focus from time-to-resolution to time-to-detection,
 
 ## Panel 4: The Myth of the Root Cause
 
-**Scene Description**: A post-incident review meeting in a bank's conference room. On a large screen, a fishbone diagram shows dozens of contributing factors to a recent outage. Team members with different specialties point to various elements: architecture, deployment processes, monitoring gaps, and human factors. The diagram is titled "Contributing Factors" instead of "Root Cause." A senior manager looks frustrated, holding a paper demanding "THE root cause for regulators."
+### Scene Description
+
+ A post-incident review meeting in a bank's conference room. On a large screen, a fishbone diagram shows dozens of contributing factors to a recent outage. Team members with different specialties point to various elements: architecture, deployment processes, monitoring gaps, and human factors. The diagram is titled "Contributing Factors" instead of "Root Cause." A senior manager looks frustrated, holding a paper demanding "THE root cause for regulators."
 
 ### Teaching Narrative
 
@@ -274,7 +282,9 @@ To move beyond the root cause myth in your organization, implement these five ac
 
 ## Panel 5: From Individual Heroics to Structured Response
 
-**Scene Description**: Two contrasting images of incident response. On the left, a lone engineer frantically types at a terminal, energy drinks piled up, looking exhausted as they attempt to resolve a trading platform issue alone. On the right, a coordinated team works through a structured response: one person serves as incident commander with a checklist, another manages communications with stakeholders, while technical responders investigate following a documented playbook. Digital clocks show both scenes occurring at the same late hour.
+### Scene Description
+
+ Two contrasting images of incident response. On the left, a lone engineer frantically types at a terminal, energy drinks piled up, looking exhausted as they attempt to resolve a trading platform issue alone. On the right, a coordinated team works through a structured response: one person serves as incident commander with a checklist, another manages communications with stakeholders, while technical responders investigate following a documented playbook. Digital clocks show both scenes occurring at the same late hour.
 
 ### Teaching Narrative
 
@@ -344,7 +354,9 @@ To transition from heroics to structured response in your organization, implemen
 
 ## Panel 6: Reactive to Proactive - The Feedback Loop
 
-**Scene Description**: A circular diagram displayed on a large screen in a banking operations center. The diagram shows a continuous cycle: Monitoring → Incident Response → Analysis → Prevention → Improved Monitoring. Team members are seen working at different stages of this cycle. In the foreground, two engineers review metrics from a previous incident, creating new monitoring rules based on what they've learned. A calendar on the wall shows regular time blocked for "Resilience Improvement" alongside operational duties.
+### Scene Description
+
+ A circular diagram displayed on a large screen in a banking operations center. The diagram shows a continuous cycle: Monitoring → Incident Response → Analysis → Prevention → Improved Monitoring. Team members are seen working at different stages of this cycle. In the foreground, two engineers review metrics from a previous incident, creating new monitoring rules based on what they've learned. A calendar on the wall shows regular time blocked for "Resilience Improvement" alongside operational duties.
 
 ### Teaching Narrative
 
@@ -414,7 +426,9 @@ To establish an effective feedback loop in your organization, implement these fi
 
 ## Panel 7: From Component Health to Service Experience
 
-**Scene Description**: A banking executive dashboard showing two very different views. On one monitor labeled "Traditional Monitoring," numerous technical metrics show healthy systems: database connections, server CPU, network throughput - all green. On the adjacent monitor labeled "Service Experience," customer-facing metrics tell a different story: payment success rate declining, mobile login failures increasing, and customer sentiment dropping. A group of SREs and business stakeholders huddle around the second monitor, illustrating the shift to experience-focused measurement.
+### Scene Description
+
+ A banking executive dashboard showing two very different views. On one monitor labeled "Traditional Monitoring," numerous technical metrics show healthy systems: database connections, server CPU, network throughput - all green. On the adjacent monitor labeled "Service Experience," customer-facing metrics tell a different story: payment success rate declining, mobile login failures increasing, and customer sentiment dropping. A group of SREs and business stakeholders huddle around the second monitor, illustrating the shift to experience-focused measurement.
 
 ### Teaching Narrative
 

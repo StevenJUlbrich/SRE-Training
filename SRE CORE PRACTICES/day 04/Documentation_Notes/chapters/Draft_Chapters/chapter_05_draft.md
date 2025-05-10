@@ -34,7 +34,9 @@ Welcome to the observability Thunderdome, banking edition. In this chapter, we t
 ---
 ## Panel 1: Banking's Hybrid Landscape - Tracing Across Generational Technologies
 
-**Scene Description**: A sprawling banking data center where old meets new. In the foreground, modern racks of microservice containers and cloud infrastructure. In the background, a mainframe system behind glass walls. Between them, middleware servers forming bridges between eras. An SRE is showing a visualization dashboard to a team of engineers, with trace lines visibly flowing from modern mobile banking services, through various middleware layers, and ultimately reaching legacy mainframe systems for core banking functions.
+### Scene Description
+
+ A sprawling banking data center where old meets new. In the foreground, modern racks of microservice containers and cloud infrastructure. In the background, a mainframe system behind glass walls. Between them, middleware servers forming bridges between eras. An SRE is showing a visualization dashboard to a team of engineers, with trace lines visibly flowing from modern mobile banking services, through various middleware layers, and ultimately reaching legacy mainframe systems for core banking functions.
 
 ### Teaching Narrative
 
@@ -78,7 +80,9 @@ Perhaps most significantly, this fragmented visibility becomes a strategic liabi
 
 ## Panel 2: The Critical Path - Core Banking Transaction Flows
 
-**Scene Description**: A war room during a high-severity incident affecting payment processing. Multiple engineers are gathered around a large screen showing a distributed trace of a failing payment transaction. The visualization highlights the "critical path" of the transaction in red—showing the exact sequence of services involved in processing the payment, from the mobile app entry point through authentication, fraud checking, core banking, partner bank messaging, and settlement services. A timer shows that a service responsible for regulatory compliance checking has introduced a 30-second delay, blocking the entire transaction flow.
+### Scene Description
+
+ A war room during a high-severity incident affecting payment processing. Multiple engineers are gathered around a large screen showing a distributed trace of a failing payment transaction. The visualization highlights the "critical path" of the transaction in red—showing the exact sequence of services involved in processing the payment, from the mobile app entry point through authentication, fraud checking, core banking, partner bank messaging, and settlement services. A timer shows that a service responsible for regulatory compliance checking has introduced a 30-second delay, blocking the entire transaction flow.
 
 ### Teaching Narrative
 
@@ -128,7 +132,9 @@ Operational costs are also significantly affected, as transactions on slowed cri
 
 ## Panel 3: Regulatory Boundaries - Tracing Across Compliance Domains
 
-**Scene Description**: A compliance and technology workshop where risk officers and SRE engineers are reviewing trace visualizations that have been specially enhanced to show regulatory boundaries. The traces show an international money transfer flowing through multiple systems, with clear visual indicators showing when the transaction crosses from one regulatory jurisdiction to another. Data masking indicators show where personally identifiable information and financial details are automatically obscured in the trace data when crossing these boundaries. Compliance officers are nodding approvingly as they see how the tracing system maintains regulatory compliance while still providing technical visibility.
+### Scene Description
+
+ A compliance and technology workshop where risk officers and SRE engineers are reviewing trace visualizations that have been specially enhanced to show regulatory boundaries. The traces show an international money transfer flowing through multiple systems, with clear visual indicators showing when the transaction crosses from one regulatory jurisdiction to another. Data masking indicators show where personally identifiable information and financial details are automatically obscured in the trace data when crossing these boundaries. Compliance officers are nodding approvingly as they see how the tracing system maintains regulatory compliance while still providing technical visibility.
 
 ### Teaching Narrative
 
@@ -178,7 +184,9 @@ Perhaps most significantly, regulatory boundary issues create strategic limitati
 
 ## Panel 4: Third-Party Integration Points - Tracing Beyond Organizational Boundaries
 
-**Scene Description**: A service operations center where engineers are monitoring a live dashboard showing payment processing transactions. The visualization displays traces that extend beyond the bank's own systems to include third-party services—payment networks, identity verification providers, fraud detection services, and partner banks. Color-coding shows which spans represent internal systems versus external dependencies. An engineer is pointing to a pattern where a specific third-party fraud detection service is introducing variable latency during peak hours, creating a ripple effect that impacts overall transaction times for customers.
+### Scene Description
+
+ A service operations center where engineers are monitoring a live dashboard showing payment processing transactions. The visualization displays traces that extend beyond the bank's own systems to include third-party services—payment networks, identity verification providers, fraud detection services, and partner banks. Color-coding shows which spans represent internal systems versus external dependencies. An engineer is pointing to a pattern where a specific third-party fraud detection service is introducing variable latency during peak hours, creating a ripple effect that impacts overall transaction times for customers.
 
 ### Teaching Narrative
 
@@ -230,7 +238,9 @@ Operationally, resolution efficiency collapses without cross-organization visibi
 
 ## Panel 5: Data Consistency Tracing - Following the Money Trail
 
-**Scene Description**: A financial reconciliation team is gathered around a specialized trace visualization designed to show data consistency across systems. The display shows multiple parallel traces of the same monetary transfer as it appears in different banking systems—the customer-facing mobile app, the core banking ledger, the fraud monitoring system, the regulatory reporting database, and the partner bank's receiving system. Timestamps show when the transaction appears in each system, with color-coding indicating whether the transaction amount and details are consistent across all representations. A highlighted discrepancy shows that the transaction appears correctly in the core banking system but is missing from the regulatory reporting database.
+### Scene Description
+
+ A financial reconciliation team is gathered around a specialized trace visualization designed to show data consistency across systems. The display shows multiple parallel traces of the same monetary transfer as it appears in different banking systems—the customer-facing mobile app, the core banking ledger, the fraud monitoring system, the regulatory reporting database, and the partner bank's receiving system. Timestamps show when the transaction appears in each system, with color-coding indicating whether the transaction amount and details are consistent across all representations. A highlighted discrepancy shows that the transaction appears correctly in the core banking system but is missing from the regulatory reporting database.
 
 ### Teaching Narrative
 
@@ -282,7 +292,9 @@ Operational costs escalate dramatically when inconsistencies must be resolved ma
 
 ## Panel 6: Customer Journey Correlation - Linking Technical Traces to User Experience
 
-**Scene Description**: A customer experience workshop where product managers and SRE engineers are collaborating around a unique visualization that correlates technical traces with actual customer journey metrics. The screen shows a customer's attempt to apply for a mortgage loan through various channels—starting on the bank's website, continuing on the mobile app, and ending with a call center interaction. Next to this user journey visualization, corresponding technical traces show the backend system interactions that supported each customer touchpoint. Timing markers connect user actions like "submitted application" with the corresponding technical operations, while sentiment indicators show the customer's emotional state correlated with system performance at each step.
+### Scene Description
+
+ A customer experience workshop where product managers and SRE engineers are collaborating around a unique visualization that correlates technical traces with actual customer journey metrics. The screen shows a customer's attempt to apply for a mortgage loan through various channels—starting on the bank's website, continuing on the mobile app, and ending with a call center interaction. Next to this user journey visualization, corresponding technical traces show the backend system interactions that supported each customer touchpoint. Timing markers connect user actions like "submitted application" with the corresponding technical operations, while sentiment indicators show the customer's emotional state correlated with system performance at each step.
 
 ### Teaching Narrative
 
@@ -334,7 +346,9 @@ Perhaps most significantly, organizational alignment suffers severe degradation 
 
 ## Panel 7: Batch Processing and Scheduled Operations - Tracing Beyond Request-Response
 
-**Scene Description**: A banking operations center late at night during end-of-day processing. The monitoring wall displays specialized trace visualizations designed for batch operations rather than interactive transactions. These visualizations show the progress of several critical batch processes—reconciliation jobs, interest calculations, regulatory report generation, and scheduled payments. Unlike typical request-response traces, these batch traces show long-running operations with multiple phases, dependencies between batch jobs, and progress indicators for each stage. Engineers are monitoring a delayed loan interest calculation job that is threatening to impact the regulatory reporting deadline.
+### Scene Description
+
+ A banking operations center late at night during end-of-day processing. The monitoring wall displays specialized trace visualizations designed for batch operations rather than interactive transactions. These visualizations show the progress of several critical batch processes—reconciliation jobs, interest calculations, regulatory report generation, and scheduled payments. Unlike typical request-response traces, these batch traces show long-running operations with multiple phases, dependencies between batch jobs, and progress indicators for each stage. Engineers are monitoring a delayed loan interest calculation job that is threatening to impact the regulatory reporting deadline.
 
 ### Teaching Narrative
 

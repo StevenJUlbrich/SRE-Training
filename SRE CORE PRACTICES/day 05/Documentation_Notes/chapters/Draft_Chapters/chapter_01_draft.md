@@ -33,7 +33,9 @@ Welcome to the SRE awakening, where your dashboards are liars, your heroics are 
 ---
 ## Panel 1: The Green Wall Fallacy
 
-**Scene Description**: A bleary-eyed engineer is jolted awake at 2:57 AM by his buzzing pager. He stumbles to his laptop, opens his dashboard, and sees a wall of green metrics while simultaneously receiving frantic messages about a failing payment service. His monitor shows all systems green, yet customers can't complete transactions. The conflict between what the monitoring says and what users experience creates visible confusion on his face as he debates which to trust.
+### Scene Description
+
+ A bleary-eyed engineer is jolted awake at 2:57 AM by his buzzing pager. He stumbles to his laptop, opens his dashboard, and sees a wall of green metrics while simultaneously receiving frantic messages about a failing payment service. His monitor shows all systems green, yet customers can't complete transactions. The conflict between what the monitoring says and what users experience creates visible confusion on his face as he debates which to trust.
 
 ### Teaching Narrative
 
@@ -83,7 +85,9 @@ To overcome the Green Wall Fallacy in your banking environment:
 
 ## Panel 2: From Component Focus to Service Pathways
 
-**Scene Description**: A split-screen showing two approaches to the same incident. On the left, a support engineer frantically checks individual servers and components in isolation, surrounded by separate monitoring screens for databases, application servers, and network devices. On the right, an SRE traces a complete transaction pathway on a whiteboard, drawing connections between components and highlighting potential failure points along the user journey, while colleagues gather evidence from each point in the pathway.
+### Scene Description
+
+ A split-screen showing two approaches to the same incident. On the left, a support engineer frantically checks individual servers and components in isolation, surrounded by separate monitoring screens for databases, application servers, and network devices. On the right, an SRE traces a complete transaction pathway on a whiteboard, drawing connections between components and highlighting potential failure points along the user journey, while colleagues gather evidence from each point in the pathway.
 
 ### Teaching Narrative
 
@@ -133,7 +137,9 @@ To shift from component focus to service pathways in your banking environment:
 
 ## Panel 3: Reactive to Proactive - The Evidence Collection Mindset
 
-**Scene Description**: Two timelines are displayed side by side. In the "Before" timeline, an engineer reacts to each new alert by immediately trying solutions: restarting services, clearing queues, and deploying emergency fixes, creating a chaotic, stress-filled environment. In the "After" timeline, the same engineer methodically collects evidence before acting: checking logs, gathering metrics, performing targeted tests, and documenting findings in a structured investigation template before implementing a carefully selected solution.
+### Scene Description
+
+ Two timelines are displayed side by side. In the "Before" timeline, an engineer reacts to each new alert by immediately trying solutions: restarting services, clearing queues, and deploying emergency fixes, creating a chaotic, stress-filled environment. In the "After" timeline, the same engineer methodically collects evidence before acting: checking logs, gathering metrics, performing targeted tests, and documenting findings in a structured investigation template before implementing a carefully selected solution.
 
 ### Teaching Narrative
 
@@ -183,7 +189,9 @@ To shift from reactive to evidence-first response in your banking environment:
 
 ## Panel 4: Correlation Over Isolation - Connecting the Signals
 
-**Scene Description**: An incident war room with two approaches contrasted. In one corner, engineers each examine separate logging systems, monitoring tools, and dashboards in isolation. In another area, a team works at a shared digital workspace, pulling data from multiple sources onto a single canvas, drawing connections between seemingly unrelated events, and building a unified timeline that reveals patterns invisible in any single data source.
+### Scene Description
+
+ An incident war room with two approaches contrasted. In one corner, engineers each examine separate logging systems, monitoring tools, and dashboards in isolation. In another area, a team works at a shared digital workspace, pulling data from multiple sources onto a single canvas, drawing connections between seemingly unrelated events, and building a unified timeline that reveals patterns invisible in any single data source.
 
 ### Teaching Narrative
 
@@ -233,7 +241,9 @@ To shift from isolated to correlated analysis in your banking environment:
 
 ## Panel 5: From "What" to "Why" - The Investigative Mindset
 
-**Scene Description**: An engineer stands before two whiteboards. The first, labeled "MONITORING," lists alerts and their direct meanings: "Database CPU at 95%," "Payment API 500 errors," "Message queue depth exceeding 1000." The second board, labeled "INTEGRATION & TRIAGE," shows a series of connected "Why?" questions branching from each alert: "Why is CPU high? Query patterns changed. Why did queries change? New feature deployment. Why did deployment impact queries? Missing index in schema change." The engineer is adding another "why" branch, visibly engaged in deeper thinking.
+### Scene Description
+
+ An engineer stands before two whiteboards. The first, labeled "MONITORING," lists alerts and their direct meanings: "Database CPU at 95%," "Payment API 500 errors," "Message queue depth exceeding 1000." The second board, labeled "INTEGRATION & TRIAGE," shows a series of connected "Why?" questions branching from each alert: "Why is CPU high? Query patterns changed. Why did queries change? New feature deployment. Why did deployment impact queries? Missing index in schema change." The engineer is adding another "why" branch, visibly engaged in deeper thinking.
 
 ### Teaching Narrative
 
@@ -283,7 +293,9 @@ To shift from "what" to "why" in your banking environment:
 
 ## Panel 6: Memory Over Instinct - Documentation and Knowledge Systems
 
-**Scene Description**: Split scene showing incident response before and after. In the "before" side, engineers rely on tribal knowledge, with a veteran engineer explaining to a newcomer, "We always restart this service when that error happens - not sure why, but it works." The "after" side shows a team using a structured knowledge base during an incident, pulling up past investigations with similar patterns, referencing thorough documentation of previous root causes, and adding new findings to the knowledge system as they work.
+### Scene Description
+
+ Split scene showing incident response before and after. In the "before" side, engineers rely on tribal knowledge, with a veteran engineer explaining to a newcomer, "We always restart this service when that error happens - not sure why, but it works." The "after" side shows a team using a structured knowledge base during an incident, pulling up past investigations with similar patterns, referencing thorough documentation of previous root causes, and adding new findings to the knowledge system as they work.
 
 ### Teaching Narrative
 
@@ -333,7 +345,9 @@ To shift from tribal knowledge to systematic knowledge management in your bankin
 
 ## Panel 7: From Time to Restore to Time to Prevent - The Preventative Mindset
 
-**Scene Description**: A meeting room with a team conducting a post-incident review. On one wall is a graph showing decreasing time-to-resolution for similar incidents over time. On the central whiteboard, the team isn't just documenting what fixed the current incident but is mapping out preventative actions: improved monitoring coverage for earlier detection, automated recovery procedures, architectural changes to eliminate the failure mode entirely, and scheduled chaos experiments to verify the solutions. The focus has clearly shifted from "how quickly we fixed it" to "how we'll prevent it next time."
+### Scene Description
+
+ A meeting room with a team conducting a post-incident review. On one wall is a graph showing decreasing time-to-resolution for similar incidents over time. On the central whiteboard, the team isn't just documenting what fixed the current incident but is mapping out preventative actions: improved monitoring coverage for earlier detection, automated recovery procedures, architectural changes to eliminate the failure mode entirely, and scheduled chaos experiments to verify the solutions. The focus has clearly shifted from "how quickly we fixed it" to "how we'll prevent it next time."
 
 ### Teaching Narrative
 

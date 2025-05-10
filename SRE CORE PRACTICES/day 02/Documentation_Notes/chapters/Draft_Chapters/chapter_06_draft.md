@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Missing Piece
 
-**Scene Description**: Developer and SRE reviewing code for new payment service, discovering critical gaps in performance measurement instrumentation. The scene shows split screens with code before and after instrumentation, with the SRE pointing out key measurement points that were overlooked in the original implementation.
+### Scene Description
+
+ Developer and SRE reviewing code for new payment service, discovering critical gaps in performance measurement instrumentation. The scene shows split screens with code before and after instrumentation, with the SRE pointing out key measurement points that were overlooked in the original implementation.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ For payment services, instrumentation quality directly determines both operation
 
 ## Panel 2: The Data Firehose
 
-**Scene Description**: Operations team overwhelmed by metric volume from banking systems, showing dashboard with thousands of metrics creating information overload. The visual displays engineers struggling to identify important signals amid a sea of metrics, with critical alerts potentially being missed.
+### Scene Description
+
+ Operations team overwhelmed by metric volume from banking systems, showing dashboard with thousands of metrics creating information overload. The visual displays engineers struggling to identify important signals amid a sea of metrics, with critical alerts potentially being missed.
 
 ### Teaching Narrative
 
@@ -138,7 +142,9 @@ Metrics overload in banking systems directly affects both operational effectiven
 
 ## Panel 3: The History Problem
 
-**Scene Description**: SRE unable to analyze long-term transaction patterns with current tools, comparing traditional vs. time-series database approaches for metrics storage. Visual contrasts limited historical analysis in conventional databases with advanced pattern analysis possible in specialized time-series systems.
+### Scene Description
+
+ SRE unable to analyze long-term transaction patterns with current tools, comparing traditional vs. time-series database approaches for metrics storage. Visual contrasts limited historical analysis in conventional databases with advanced pattern analysis possible in specialized time-series systems.
 
 ### Teaching Narrative
 
@@ -189,7 +195,9 @@ For fraud detection systems, historical pattern analysis directly impacts both d
 
 ## Panel 4: The Auditor's Question
 
-**Scene Description**: Team faced with regulatory audit requiring two years of historical performance data for fraud detection systems that was only retained for 90 days. Visual shows auditors requesting specific metrics that were not preserved due to insufficient retention policies.
+### Scene Description
+
+ Team faced with regulatory audit requiring two years of historical performance data for fraud detection systems that was only retained for 90 days. Visual shows auditors requesting specific metrics that were not preserved due to insufficient retention policies.
 
 ### Teaching Narrative
 
@@ -240,7 +248,9 @@ For regulated financial services, metrics retention directly affects both regula
 
 ## Panel 5: The Integration Challenge
 
-**Scene Description**: Operations team struggling to collect unified metrics from diverse banking systems spanning mainframe, cloud services, and third-party providers. Visual illustrates the complexity of creating consistent measurement across technological and organizational boundaries.
+### Scene Description
+
+ Operations team struggling to collect unified metrics from diverse banking systems spanning mainframe, cloud services, and third-party providers. Visual illustrates the complexity of creating consistent measurement across technological and organizational boundaries.
 
 ### Teaching Narrative
 
@@ -291,7 +301,9 @@ For payment systems spanning multiple platforms, metrics integration directly af
 
 ## Panel 6: The Sampling Strategy
 
-**Scene Description**: Performance engineering team implementing statistical sampling for high-volume credit card transaction metrics to balance visibility with overhead. Visual shows selective instrumentation approach with statistical validity analysis demonstrating effectiveness.
+### Scene Description
+
+ Performance engineering team implementing statistical sampling for high-volume credit card transaction metrics to balance visibility with overhead. Visual shows selective instrumentation approach with statistical validity analysis demonstrating effectiveness.
 
 ### Teaching Narrative
 
@@ -342,7 +354,9 @@ For high-volume payment processing, metrics sampling directly affects both syste
 
 ## Panel 7: The Secure Pipeline
 
-**Scene Description**: Security and compliance teams reviewing metrics collection architecture with focus on sensitive data protection throughout the measurement pipeline. Visual highlights security controls at each stage from collection through storage and access.
+### Scene Description
+
+ Security and compliance teams reviewing metrics collection architecture with focus on sensitive data protection throughout the measurement pipeline. Visual highlights security controls at each stage from collection through storage and access.
 
 ### Teaching Narrative
 

@@ -32,7 +32,9 @@ Welcome to the unsung bloodsport of incident response: escalation and communicat
 ---
 ## Panel 1: The Decision to Escalate - Knowing When to Expand the Circle
 
-**Scene Description**: A banking operations center where a payment processing incident is unfolding. A team lead named Maya stands at a decision point, consulting an escalation framework displayed on a tablet. The framework shows clear criteria: impact duration exceeding 15 minutes, affecting over 100 high-value clients, failed automatic recovery attempts, and unknown root cause. Team members report their findings against each criterion while a timer shows the incident has passed critical thresholds. Maya makes the decisive call to escalate, activating a well-defined protocol that immediately triggers notifications to additional technical teams, management stakeholders, and the communications team. The scene captures that precise moment of decision, with Maya's confident posture contrasting with the hesitation visible in some junior team members.
+### Scene Description
+
+ A banking operations center where a payment processing incident is unfolding. A team lead named Maya stands at a decision point, consulting an escalation framework displayed on a tablet. The framework shows clear criteria: impact duration exceeding 15 minutes, affecting over 100 high-value clients, failed automatic recovery attempts, and unknown root cause. Team members report their findings against each criterion while a timer shows the incident has passed critical thresholds. Maya makes the decisive call to escalate, activating a well-defined protocol that immediately triggers notifications to additional technical teams, management stakeholders, and the communications team. The scene captures that precise moment of decision, with Maya's confident posture contrasting with the hesitation visible in some junior team members.
 
 ### Teaching Narrative
 
@@ -82,7 +84,9 @@ To implement criteria-based escalation in your organization:
 
 ## Panel 2: Escalation Pathways - The Right Resources at the Right Time
 
-**Scene Description**: A large digital wall display in a banking incident command center shows a sophisticated escalation matrix during a critical trading platform incident. The matrix has clearly defined tiers with specific triggers, roles, and responsibilities for each level. As the incident progresses, visual indicators show the current escalation state moving from Tier 1 (initial response) through Tier 2 (specialized expertise) to Tier 3 (leadership involvement). Each tier activation triggers precisely defined actions: additional technical specialists joining the call, specific management stakeholders being notified, and communication channels being activated. Team members reference role-specific playbooks corresponding to each tier, while a dedicated escalation coordinator manages the framework's execution, ensuring all required resources are engaged without unnecessary disruption to uninvolved teams.
+### Scene Description
+
+ A large digital wall display in a banking incident command center shows a sophisticated escalation matrix during a critical trading platform incident. The matrix has clearly defined tiers with specific triggers, roles, and responsibilities for each level. As the incident progresses, visual indicators show the current escalation state moving from Tier 1 (initial response) through Tier 2 (specialized expertise) to Tier 3 (leadership involvement). Each tier activation triggers precisely defined actions: additional technical specialists joining the call, specific management stakeholders being notified, and communication channels being activated. Team members reference role-specific playbooks corresponding to each tier, while a dedicated escalation coordinator manages the framework's execution, ensuring all required resources are engaged without unnecessary disruption to uninvolved teams.
 
 ### Teaching Narrative
 
@@ -132,7 +136,9 @@ To implement structured escalation pathways in your organization:
 
 ## Panel 3: The Incident Commander Role - Orchestrating Coordinated Response
 
-**Scene Description**: A major banking system outage is underway with multiple teams engaged in a large incident room. At the center, a designated Incident Commander named Raj orchestrates the response with calm authority. He stands at a command station with multiple displays showing system status, team assignments, and a running incident timeline. Raj is clearly not doing technical investigation himself but is fully focused on coordination: managing the response tempo with structured time checks, ensuring teams share findings through a common framework, redirecting efforts when investigations stall, and making decisive priority calls when teams have conflicting needs. Supporting roles are visible around him—technical leads focusing on diagnosis, a communications coordinator managing updates, and a scribe documenting key decisions. The scene captures the moment when Raj decisively shifts the team's focus from one investigation path to a more promising approach, demonstrating the commander's role in maintaining effective response direction.
+### Scene Description
+
+ A major banking system outage is underway with multiple teams engaged in a large incident room. At the center, a designated Incident Commander named Raj orchestrates the response with calm authority. He stands at a command station with multiple displays showing system status, team assignments, and a running incident timeline. Raj is clearly not doing technical investigation himself but is fully focused on coordination: managing the response tempo with structured time checks, ensuring teams share findings through a common framework, redirecting efforts when investigations stall, and making decisive priority calls when teams have conflicting needs. Supporting roles are visible around him—technical leads focusing on diagnosis, a communications coordinator managing updates, and a scribe documenting key decisions. The scene captures the moment when Raj decisively shifts the team's focus from one investigation path to a more promising approach, demonstrating the commander's role in maintaining effective response direction.
 
 ### Teaching Narrative
 
@@ -182,7 +188,9 @@ To implement the Incident Commander role in your organization:
 
 ## Panel 4: The Communication Matrix - Right Messages to Right Stakeholders
 
-**Scene Description**: A banking incident communications hub where a dedicated Communications Coordinator manages stakeholder updates during a security incident. A digital display shows a comprehensive stakeholder communication matrix with columns for different audience types (internal teams, executives, customers, regulators, partners) and rows for various information categories (incident status, impact assessment, resolution timeline, required actions). The coordinator systematically populates appropriate cells with audience-specific messaging, carefully customizing technical details, business impact descriptions, and resolution expectations for each stakeholder group. Team members review draft communications on tablets, providing quick approval before messages are distributed through predetermined channels. A communications timeline shows planned update frequency for each stakeholder group, ensuring consistent, appropriate information flow throughout the incident lifecycle.
+### Scene Description
+
+ A banking incident communications hub where a dedicated Communications Coordinator manages stakeholder updates during a security incident. A digital display shows a comprehensive stakeholder communication matrix with columns for different audience types (internal teams, executives, customers, regulators, partners) and rows for various information categories (incident status, impact assessment, resolution timeline, required actions). The coordinator systematically populates appropriate cells with audience-specific messaging, carefully customizing technical details, business impact descriptions, and resolution expectations for each stakeholder group. Team members review draft communications on tablets, providing quick approval before messages are distributed through predetermined channels. A communications timeline shows planned update frequency for each stakeholder group, ensuring consistent, appropriate information flow throughout the incident lifecycle.
 
 ### Teaching Narrative
 
@@ -232,7 +240,9 @@ To implement a communication matrix in your organization:
 
 ## Panel 5: Blameless Communication - Psychological Safety in Escalation
 
-**Scene Description**: A banking post-incident review meeting where team members analyze a situation where escalation was significantly delayed. The meeting room has prominently displayed ground rules emphasizing blameless discussion, focusing on process improvement rather than individual criticism. A senior engineer openly discusses their hesitation to escalate, explaining the systemic factors that influenced their decision: unclear escalation criteria, previous experiences where escalation was discouraged, and organizational norms that rewarded "handling things yourself." The team leader facilitates the conversation with psychological safety techniques, redirecting any blame-oriented comments toward systemic factors and process improvements. The whiteboard shows two columns labeled "Individual Actions" and "System Conditions," with the discussion clearly focused on the latter while developing specific changes to escalation protocols that would have led to better outcomes.
+### Scene Description
+
+ A banking post-incident review meeting where team members analyze a situation where escalation was significantly delayed. The meeting room has prominently displayed ground rules emphasizing blameless discussion, focusing on process improvement rather than individual criticism. A senior engineer openly discusses their hesitation to escalate, explaining the systemic factors that influenced their decision: unclear escalation criteria, previous experiences where escalation was discouraged, and organizational norms that rewarded "handling things yourself." The team leader facilitates the conversation with psychological safety techniques, redirecting any blame-oriented comments toward systemic factors and process improvements. The whiteboard shows two columns labeled "Individual Actions" and "System Conditions," with the discussion clearly focused on the latter while developing specific changes to escalation protocols that would have led to better outcomes.
 
 ### Teaching Narrative
 
@@ -282,7 +292,9 @@ To implement psychological safety for escalation in your organization:
 
 ## Panel 6: Escalation Handoffs - Maintaining Continuity Through Transitions
 
-**Scene Description**: A 24-hour banking incident requiring multiple shift transitions is underway. The focus is on a formal handoff process between an outgoing incident commander named Sonia and her incoming replacement, Arjun. They follow a structured template projected on a shared screen, systematically transferring knowledge about the incident state: current understanding of root cause, active investigation paths, attempted solutions, engaged resources, pending decisions, and communication status with various stakeholders. Other team members observe as Sonia provides context beyond the documented facts—explaining why certain approaches were prioritized and which theories were eliminated. After completing the template, Arjun summarizes his understanding of the situation, confirming alignment before Sonia formally transfers command. A digital incident timeline automatically records this handoff as a key event, while the knowledge transfer template becomes part of the permanent incident documentation.
+### Scene Description
+
+ A 24-hour banking incident requiring multiple shift transitions is underway. The focus is on a formal handoff process between an outgoing incident commander named Sonia and her incoming replacement, Arjun. They follow a structured template projected on a shared screen, systematically transferring knowledge about the incident state: current understanding of root cause, active investigation paths, attempted solutions, engaged resources, pending decisions, and communication status with various stakeholders. Other team members observe as Sonia provides context beyond the documented facts—explaining why certain approaches were prioritized and which theories were eliminated. After completing the template, Arjun summarizes his understanding of the situation, confirming alignment before Sonia formally transfers command. A digital incident timeline automatically records this handoff as a key event, while the knowledge transfer template becomes part of the permanent incident documentation.
 
 ### Teaching Narrative
 
@@ -332,7 +344,9 @@ To implement structured escalation handoffs in your organization:
 
 ## Panel 7: Post-Escalation Analysis - Learning from Communication Patterns
 
-**Scene Description**: A banking SRE team conducts a specialized post-incident review focused specifically on escalation and communication effectiveness. The room features data visualizations of communication patterns during a recent major incident: timelines showing escalation decision points, network graphs of information flow between teams, and heat maps highlighting communication bottlenecks. Team members analyze these patterns to identify specific improvement opportunities: delayed escalation decisions, information silos between technical teams, overloaded communication channels, and stakeholders who received inconsistent updates. A facilitator guides the team through a structured assessment framework with metrics for escalation timeliness, communication clarity, and stakeholder satisfaction. The whiteboard shows concrete process improvements emerging from this analysis: refined escalation criteria, streamlined notification procedures, enhanced handoff protocols, and new communication templates—each with assigned owners and implementation timelines.
+### Scene Description
+
+ A banking SRE team conducts a specialized post-incident review focused specifically on escalation and communication effectiveness. The room features data visualizations of communication patterns during a recent major incident: timelines showing escalation decision points, network graphs of information flow between teams, and heat maps highlighting communication bottlenecks. Team members analyze these patterns to identify specific improvement opportunities: delayed escalation decisions, information silos between technical teams, overloaded communication channels, and stakeholders who received inconsistent updates. A facilitator guides the team through a structured assessment framework with metrics for escalation timeliness, communication clarity, and stakeholder satisfaction. The whiteboard shows concrete process improvements emerging from this analysis: refined escalation criteria, streamlined notification procedures, enhanced handoff protocols, and new communication templates—each with assigned owners and implementation timelines.
 
 ### Teaching Narrative
 

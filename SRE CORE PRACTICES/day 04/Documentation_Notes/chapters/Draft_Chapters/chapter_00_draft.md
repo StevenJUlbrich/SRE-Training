@@ -33,7 +33,9 @@ Welcome to the SRE equivalent of “So, your house isn’t on fire, but your gue
 ---
 ## Panel 1: The Invisible Customer Journey - Beyond Component Health
 
-**Scene Description**: A banking support center where two teams work side by side. The monitoring team stares at dashboards showing all green system metrics (CPU, memory, network) for payment processing systems. Meanwhile, the customer service team's phones light up with complaints about failed mobile transfers despite receiving success messages. The disconnect between system metrics and customer reality is visibly frustrating both teams.
+### Scene Description
+
+ A banking support center where two teams work side by side. The monitoring team stares at dashboards showing all green system metrics (CPU, memory, network) for payment processing systems. Meanwhile, the customer service team's phones light up with complaints about failed mobile transfers despite receiving success messages. The disconnect between system metrics and customer reality is visibly frustrating both teams.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ The business consequences of these observability gaps are severe and multidimens
 
 ## Panel 2: Reactive to Proactive - Anticipating Issues Before Impact
 
-**Scene Description**: Split screen showing two approaches to the same trading platform incident. On the left, a production support engineer responds to urgent escalations after customers report trade failures. On the right, an SRE engineer investigates an anomaly in settlement system response patterns noticed during routine analysis, addressing the issue before any customer impact occurs.
+### Scene Description
+
+ Split screen showing two approaches to the same trading platform incident. On the left, a production support engineer responds to urgent escalations after customers report trade failures. On the right, an SRE engineer investigates an anomaly in settlement system response patterns noticed during routine analysis, addressing the issue before any customer impact occurs.
 
 ### Teaching Narrative
 
@@ -141,7 +145,9 @@ The business consequences of reactive versus proactive approaches in financial s
 
 ## Panel 3: Question-Driven Investigation - Beyond Known Failure Modes
 
-**Scene Description**: A banking support team struggles with a new mobile banking problem not covered in existing runbooks. A whiteboard shows their approach evolving from "Which component is failing?" to more nuanced questions: "How does a successful login flow differ from a failing one?", "What changed in the authentication service behavior over the past hour?", and "What other services are affected by this pattern?"
+### Scene Description
+
+ A banking support team struggles with a new mobile banking problem not covered in existing runbooks. A whiteboard shows their approach evolving from "Which component is failing?" to more nuanced questions: "How does a successful login flow differ from a failing one?", "What changed in the authentication service behavior over the past hour?", and "What other services are affected by this pattern?"
 
 ### Teaching Narrative
 
@@ -195,7 +201,9 @@ The business consequences of relying on runbook-based approaches for novel probl
 
 ## Panel 4: From Silos to System Views - Connecting Related Signals
 
-**Scene Description**: An incident room where a legacy approach is being transformed. Initially, separate teams examine isolated data: database logs, application server metrics, network traces, and customer reports—all disconnected. A new observability approach shows these same signals correlated by transaction ID on a unified timeline, revealing how a database slowdown cascades into API timeouts, multiple retries, and ultimately failed payments.
+### Scene Description
+
+ An incident room where a legacy approach is being transformed. Initially, separate teams examine isolated data: database logs, application server metrics, network traces, and customer reports—all disconnected. A new observability approach shows these same signals correlated by transaction ID on a unified timeline, revealing how a database slowdown cascades into API timeouts, multiple retries, and ultimately failed payments.
 
 ### Teaching Narrative
 
@@ -251,7 +259,9 @@ The business consequences of siloed analysis versus correlated observability in 
 
 ## Panel 5: Evidence Over Opinion - Data-Driven Decisions
 
-**Scene Description**: A post-incident review meeting where team members debate the cause of a failed batch processing job. Instead of the traditional "blame game" with competing opinions, an engineer presents a timeline visualization showing exactly how configuration changes, increased transaction volume, and database lock contention combined to create the failure. The evidence transforms the discussion from finger-pointing to collaborative problem-solving.
+### Scene Description
+
+ A post-incident review meeting where team members debate the cause of a failed batch processing job. Instead of the traditional "blame game" with competing opinions, an engineer presents a timeline visualization showing exactly how configuration changes, increased transaction volume, and database lock contention combined to create the failure. The evidence transforms the discussion from finger-pointing to collaborative problem-solving.
 
 ### Teaching Narrative
 
@@ -307,7 +317,9 @@ The business consequences of opinion-driven versus evidence-based approaches to 
 
 ## Panel 6: Breaking the Binary - Understanding System Gray Areas
 
-**Scene Description**: A monitoring dashboard shows a credit card authorization service as "100% Available" with a binary green status. Next to it, an observability view reveals a more nuanced reality: while technically available, 15% of transactions take over 3 seconds (frustrating customers), 8% require multiple authorization attempts, and mobile transactions are completing 40% slower than web transactions.
+### Scene Description
+
+ A monitoring dashboard shows a credit card authorization service as "100% Available" with a binary green status. Next to it, an observability view reveals a more nuanced reality: while technically available, 15% of transactions take over 3 seconds (frustrating customers), 8% require multiple authorization attempts, and mobile transactions are completing 40% slower than web transactions.
 
 ### Teaching Narrative
 
@@ -363,7 +375,9 @@ The business consequences of binary monitoring versus multi-dimensional observab
 
 ## Panel 7: Building the Bridge - Evolving from Support to SRE
 
-**Scene Description**: A learning journey visualization showing a production support engineer gradually incorporating observability practices. The journey begins with basic monitoring dashboard checks, progresses through investigating logs for patterns, then to analyzing metrics for trends, and finally to using distributed traces to understand complex interactions. Small wins and incremental improvements mark each stage of the journey.
+### Scene Description
+
+ A learning journey visualization showing a production support engineer gradually incorporating observability practices. The journey begins with basic monitoring dashboard checks, progresses through investigating logs for patterns, then to analyzing metrics for trends, and finally to using distributed traces to understand complex interactions. Small wins and incremental improvements mark each stage of the journey.
 
 ### Teaching Narrative
 

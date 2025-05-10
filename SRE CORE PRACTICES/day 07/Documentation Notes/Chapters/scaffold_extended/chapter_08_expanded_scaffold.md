@@ -2,7 +2,9 @@
 
 ## Panel 1: The Blame Game Fallacy
 
-**Scene Description**: A tense conference room where team members sit around a table, visibly uncomfortable. A senior manager points accusingly at a junior engineer who shrinks in their chair. Other team members avoid eye contact, while a digital dashboard on the wall shows a graph of a major service outage that affected thousands of banking customers. A whiteboard in the background has "ROOT CAUSE: HUMAN ERROR" written in bold red letters. Through the conference room's glass walls, we can see other team members whispering to each other, appearing relieved they weren't called to this meeting.
+### Scene Description
+
+ A tense conference room where team members sit around a table, visibly uncomfortable. A senior manager points accusingly at a junior engineer who shrinks in their chair. Other team members avoid eye contact, while a digital dashboard on the wall shows a graph of a major service outage that affected thousands of banking customers. A whiteboard in the background has "ROOT CAUSE: HUMAN ERROR" written in bold red letters. Through the conference room's glass walls, we can see other team members whispering to each other, appearing relieved they weren't called to this meeting.
 
 ### Teaching Narrative
 
@@ -66,7 +68,9 @@ Transitioning from a blame culture to a learning culture requires deliberate act
 
 ## Panel 2: Anatomy of a Blameless Postmortem
 
-**Scene Description**: A bright, collaborative space with diverse team members engaged in constructive discussion. Digital displays show timeline visualizations of the same incident from Panel 1, but now annotated with multiple system interactions and decision points. A facilitator stands at a digital whiteboard that shows a structured postmortem template. Team members are actively contributing, including the junior engineer from Panel 1, who now appears comfortable sharing insights. Post-it notes cover part of a wall, organized into clusters labeled "Contributing Factors," "What Went Well," and "Improvement Opportunities." A regulatory compliance officer sits alongside developers and operations staff, all engaged in the conversation.
+### Scene Description
+
+ A bright, collaborative space with diverse team members engaged in constructive discussion. Digital displays show timeline visualizations of the same incident from Panel 1, but now annotated with multiple system interactions and decision points. A facilitator stands at a digital whiteboard that shows a structured postmortem template. Team members are actively contributing, including the junior engineer from Panel 1, who now appears comfortable sharing insights. Post-it notes cover part of a wall, organized into clusters labeled "Contributing Factors," "What Went Well," and "Improvement Opportunities." A regulatory compliance officer sits alongside developers and operations staff, all engaged in the conversation.
 
 ### Teaching Narrative
 
@@ -138,7 +142,9 @@ To implement effective blameless postmortems in a banking environment:
 
 ## Panel 3: The Timeline Detective
 
-**Scene Description**: A digital war room where an SRE lead guides team members through constructing a detailed incident timeline. Large screens display chronologically ordered log entries, metrics graphs, and system alerts with precise timestamps. Team members add context to different points in the timeline by entering what they knew at specific moments and explaining their decision-making process. One engineer is highlighting discrepancies between automated system timestamps and human-reported times. Another is correlating customer impact reports with backend system behavior. A third engineer is documenting "dark areas" where monitoring data is missing. A banking compliance officer is noting points relevant to regulatory reporting requirements.
+### Scene Description
+
+ A digital war room where an SRE lead guides team members through constructing a detailed incident timeline. Large screens display chronologically ordered log entries, metrics graphs, and system alerts with precise timestamps. Team members add context to different points in the timeline by entering what they knew at specific moments and explaining their decision-making process. One engineer is highlighting discrepancies between automated system timestamps and human-reported times. Another is correlating customer impact reports with backend system behavior. A third engineer is documenting "dark areas" where monitoring data is missing. A banking compliance officer is noting points relevant to regulatory reporting requirements.
 
 ### Teaching Narrative
 
@@ -213,7 +219,9 @@ To implement effective timeline reconstruction in banking environments:
 
 ## Panel 4: Beyond Root Cause to Systems Thinking
 
-**Scene Description**: A collaborative space where the team has moved from timeline analysis to systems investigation. A large visual diagram shows interconnected banking services with highlighted interaction points and failure modes. One wall displays a "5 Whys" analysis that branches into multiple paths rather than following a single linear progression. Another wall shows a "contributing factors" diagram that includes technical components, process elements, organizational factors, and external dependencies. Team members are adding connections between seemingly unrelated elements, revealing hidden relationships. A senior architect looks thoughtfully at a note about a seemingly minor configuration setting that unexpectedly contributed to the incident cascade.
+### Scene Description
+
+ A collaborative space where the team has moved from timeline analysis to systems investigation. A large visual diagram shows interconnected banking services with highlighted interaction points and failure modes. One wall displays a "5 Whys" analysis that branches into multiple paths rather than following a single linear progression. Another wall shows a "contributing factors" diagram that includes technical components, process elements, organizational factors, and external dependencies. Team members are adding connections between seemingly unrelated elements, revealing hidden relationships. A senior architect looks thoughtfully at a note about a seemingly minor configuration setting that unexpectedly contributed to the incident cascade.
 
 ### Teaching Narrative
 
@@ -289,7 +297,9 @@ To implement systems thinking in banking incident analysis:
 
 ## Panel 5: From Insights to Actions
 
-**Scene Description**: A digital Kanban board displays categorized improvement items derived from the postmortem. Each card shows an action, an owner, a priority, and expected impact. Team members stand in front of the board, discussing implementation strategies. The board sections are organized into categories: "Technical Debt," "Process Improvements," "Observability Enhancements," "Automation Opportunities," and "Knowledge Sharing." A senior manager and product owner are actively engaged in the prioritization discussion. A separate dashboard shows key reliability metrics with targets for improvement. On another screen, a calendar view shows scheduled resilience exercises designed to test the effectiveness of the proposed improvements.
+### Scene Description
+
+ A digital Kanban board displays categorized improvement items derived from the postmortem. Each card shows an action, an owner, a priority, and expected impact. Team members stand in front of the board, discussing implementation strategies. The board sections are organized into categories: "Technical Debt," "Process Improvements," "Observability Enhancements," "Automation Opportunities," and "Knowledge Sharing." A senior manager and product owner are actively engaged in the prioritization discussion. A separate dashboard shows key reliability metrics with targets for improvement. On another screen, a calendar view shows scheduled resilience exercises designed to test the effectiveness of the proposed improvements.
 
 ### Teaching Narrative
 
@@ -369,7 +379,9 @@ To implement effective action management for banking incident postmortems:
 
 ## Panel 6: Building a Learning Culture
 
-**Scene Description**: A bright, open space where teams are engaged in various learning activities. In one area, an engineer presents a "failure Friday" session where they share lessons from a recent incident. In another, a facilitator leads a pre-implementation review where team members proactively identify failure modes before deployment. A wall displays a "reliability library" of documented incidents, patterns, and lessons learned. Another area shows a team conducting a resilience exercise, deliberately introducing controlled failures to test system response. Digital dashboards show reliability metrics with steadily improving trends. The atmosphere is energetic and positive, with visible psychological safety as team members openly discuss both successes and failures.
+### Scene Description
+
+ A bright, open space where teams are engaged in various learning activities. In one area, an engineer presents a "failure Friday" session where they share lessons from a recent incident. In another, a facilitator leads a pre-implementation review where team members proactively identify failure modes before deployment. A wall displays a "reliability library" of documented incidents, patterns, and lessons learned. Another area shows a team conducting a resilience exercise, deliberately introducing controlled failures to test system response. Digital dashboards show reliability metrics with steadily improving trends. The atmosphere is energetic and positive, with visible psychological safety as team members openly discuss both successes and failures.
 
 ### Teaching Narrative
 
@@ -446,7 +458,9 @@ To build an effective learning culture in banking environments:
 
 ## Panel 7: Regulatory Compliance Through Learning
 
-**Scene Description**: A collaborative space where SRE team members meet with regulatory compliance officers. They review a comprehensive incident report that maps postmortem findings to specific regulatory requirements. One screen shows how system improvements directly address regulatory controls. Another displays an audit trail of postmortem actions and their implementation status. A third screen shows trend lines of key incidents categorized by regulatory impact, with steadily improving metrics. The compliance officers look impressed by the depth of analysis and systematic improvements. SRE team members look confident rather than defensive, seeing regulators as partners in improving system reliability.
+### Scene Description
+
+ A collaborative space where SRE team members meet with regulatory compliance officers. They review a comprehensive incident report that maps postmortem findings to specific regulatory requirements. One screen shows how system improvements directly address regulatory controls. Another displays an audit trail of postmortem actions and their implementation status. A third screen shows trend lines of key incidents categorized by regulatory impact, with steadily improving metrics. The compliance officers look impressed by the depth of analysis and systematic improvements. SRE team members look confident rather than defensive, seeing regulators as partners in improving system reliability.
 
 ### Teaching Narrative
 

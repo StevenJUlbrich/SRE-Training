@@ -32,7 +32,9 @@ In short: if your SLO program isn’t making your business safer, faster, and le
 ---
 ## Panel 1: Beyond Monitoring - The Promise of SLOs
 
-**Scene Description**: In a modern banking operations center, a team gathers around a large display showing a new dashboard. Unlike traditional monitoring screens filled with CPU graphs and server stats, this one prominently features customer-centric metrics with clear thresholds. A senior SRE points to a gauge labeled "Payment Success Rate: 99.95%" while explaining to a mix of operations staff and business stakeholders. The gauge shows a small portion in red labeled "Error Budget: 43% Remaining," with historical trends visible beneath it.
+### Scene Description
+
+ In a modern banking operations center, a team gathers around a large display showing a new dashboard. Unlike traditional monitoring screens filled with CPU graphs and server stats, this one prominently features customer-centric metrics with clear thresholds. A senior SRE points to a gauge labeled "Payment Success Rate: 99.95%" while explaining to a mix of operations staff and business stakeholders. The gauge shows a small portion in red labeled "Error Budget: 43% Remaining," with historical trends visible beneath it.
 
 ### Teaching Narrative
 
@@ -92,7 +94,9 @@ To implement effective SLOs that bridge the gap between technical monitoring and
 
 ## Panel 2: Finding Your North Star - Identifying SLIs in Banking
 
-**Scene Description**: A workshop room with walls covered in sticky notes grouping different banking services and customer journeys. A diverse team including developers, operations engineers, product owners, and customer experience specialists cluster around a whiteboard. They're mapping customer journeys for mobile banking authentication, showing the technical components involved at each step. One engineer is drawing a funnel diagram showing how many technical measurements (API latency, database queries, authentication service calls) feed into one customer-perceived outcome: "Can log in within 2 seconds."
+### Scene Description
+
+ A workshop room with walls covered in sticky notes grouping different banking services and customer journeys. A diverse team including developers, operations engineers, product owners, and customer experience specialists cluster around a whiteboard. They're mapping customer journeys for mobile banking authentication, showing the technical components involved at each step. One engineer is drawing a funnel diagram showing how many technical measurements (API latency, database queries, authentication service calls) feed into one customer-perceived outcome: "Can log in within 2 seconds."
 
 ### Teaching Narrative
 
@@ -152,7 +156,9 @@ To identify and implement effective SLIs for banking services, follow these step
 
 ## Panel 3: The Art of Setting Targets - Crafting Meaningful SLOs
 
-**Scene Description**: A financial services leadership meeting where technical and business teams are negotiating reliability targets. Charts on display show historical reliability measurements for different banking services alongside competitor benchmarks and regulatory requirements. One slide shows a decision matrix with axes for "Customer Impact" and "Technical Feasibility," with different services plotted on it. The CTO and head of retail banking are in animated discussion about the appropriate target for mobile banking availability, with data from customer surveys and technical assessments on the table between them.
+### Scene Description
+
+ A financial services leadership meeting where technical and business teams are negotiating reliability targets. Charts on display show historical reliability measurements for different banking services alongside competitor benchmarks and regulatory requirements. One slide shows a decision matrix with axes for "Customer Impact" and "Technical Feasibility," with different services plotted on it. The CTO and head of retail banking are in animated discussion about the appropriate target for mobile banking availability, with data from customer surveys and technical assessments on the table between them.
 
 ### Teaching Narrative
 
@@ -214,7 +220,9 @@ To establish meaningful SLO targets for banking services, follow these steps:
 
 ## Panel 4: Spending Wisely - Implementing Error Budgets
 
-**Scene Description**: A sprint planning meeting where a development team is prioritizing work with their SRE counterparts. A digital display shows an "Error Budget Dashboard" with different services and their remaining error budgets for the quarter. Some services show healthy remaining budgets while others are nearly depleted. The team is debating whether to proceed with a major feature deployment for a service with a low remaining error budget, while the SRE points to a calendar showing planned maintenance and historical incident patterns. Documentation labeled "Error Budget Policy" is visible on a nearby screen.
+### Scene Description
+
+ A sprint planning meeting where a development team is prioritizing work with their SRE counterparts. A digital display shows an "Error Budget Dashboard" with different services and their remaining error budgets for the quarter. Some services show healthy remaining budgets while others are nearly depleted. The team is debating whether to proceed with a major feature deployment for a service with a low remaining error budget, while the SRE points to a calendar showing planned maintenance and historical incident patterns. Documentation labeled "Error Budget Policy" is visible on a nearby screen.
 
 ### Teaching Narrative
 
@@ -276,7 +284,9 @@ To implement effective error budgets for banking services, follow these steps:
 
 ## Panel 5: When Excellence Varies - Differentiated SLOs for Banking Services
 
-**Scene Description**: A service architecture diagram dominates a war room wall, with different banking domains color-coded by their SLO tier. Core payment processing systems are highlighted in red with "99.99%" annotations, while secondary services show progressively lower SLO requirements. A team is performing impact analysis for a planned feature, following decision paths that differ based on which SLO tier the affected service belongs to. A risk assessment matrix shows how services with stricter SLOs require more extensive testing and gradual rollout procedures.
+### Scene Description
+
+ A service architecture diagram dominates a war room wall, with different banking domains color-coded by their SLO tier. Core payment processing systems are highlighted in red with "99.99%" annotations, while secondary services show progressively lower SLO requirements. A team is performing impact analysis for a planned feature, following decision paths that differ based on which SLO tier the affected service belongs to. A risk assessment matrix shows how services with stricter SLOs require more extensive testing and gradual rollout procedures.
 
 ### Teaching Narrative
 
@@ -338,7 +348,9 @@ To implement differentiated SLOs for banking services, follow these steps:
 
 ## Panel 6: Measuring What Matters - SLO Implementation in Banking Systems
 
-**Scene Description**: A technical implementation session where SREs are working with platform engineers to configure monitoring systems for SLO measurement. Multiple screens show monitoring dashboards, code snippets for instrumentation, and data pipelines. One engineer demonstrates how raw telemetry data from payment gateways is aggregated, filtered, and transformed into customer-centric SLIs. Another is designing alert rules with different thresholds: one for immediate response and another for error budget burn rate. A whiteboard shows measurement challenges specific to distributed financial transactions with annotations about "choosing the right service boundaries" and "correlating customer impact."
+### Scene Description
+
+ A technical implementation session where SREs are working with platform engineers to configure monitoring systems for SLO measurement. Multiple screens show monitoring dashboards, code snippets for instrumentation, and data pipelines. One engineer demonstrates how raw telemetry data from payment gateways is aggregated, filtered, and transformed into customer-centric SLIs. Another is designing alert rules with different thresholds: one for immediate response and another for error budget burn rate. A whiteboard shows measurement challenges specific to distributed financial transactions with annotations about "choosing the right service boundaries" and "correlating customer impact."
 
 ### Teaching Narrative
 
@@ -400,7 +412,9 @@ To implement effective SLO measurement for banking services, follow these steps:
 
 ## Panel 7: From Metrics to Culture - SLOs as Organizational Alignment
 
-**Scene Description**: A quarterly business review meeting where technical and business leaders review SLO performance across key banking services. The CEO asks questions about reliability trends while product teams present upcoming features with estimated reliability impacts. On one screen, historical SLO performance is correlated with business metrics like customer satisfaction scores, retention rates, and revenue. Another shows how the organization has evolved from treating incidents as emergencies to managing reliability as an ongoing business process. Meeting notes visible on a tablet include agenda items for "Q3 error budget planning" and "reliability investment prioritization."
+### Scene Description
+
+ A quarterly business review meeting where technical and business leaders review SLO performance across key banking services. The CEO asks questions about reliability trends while product teams present upcoming features with estimated reliability impacts. On one screen, historical SLO performance is correlated with business metrics like customer satisfaction scores, retention rates, and revenue. Another shows how the organization has evolved from treating incidents as emergencies to managing reliability as an ongoing business process. Meeting notes visible on a tablet include agenda items for "Q3 error budget planning" and "reliability investment prioritization."
 
 ### Teaching Narrative
 

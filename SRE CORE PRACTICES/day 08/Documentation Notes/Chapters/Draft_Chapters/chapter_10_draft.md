@@ -33,7 +33,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Adaptive Sampling Gateway
 
-**Scene Description**: In a dimly lit banking operations center, a senior SRE named Maya studies multiple dashboards showing the bank's payment processing system. One dashboard displays a heat map of transaction processing times, with most areas in cool blue. A smaller screen shows a line graph of observability data volume steadily pulsing at a low level. Suddenly, a section of the heat map flashes red, indicating a spike in processing times for international wire transfers. As if responding to this change, the observability data volume graph automatically rises for that specific service, showing increased sampling rates. Maya nods with approval as the system automatically dials up telemetry collection precisely where needed.
+### Scene Description
+
+ In a dimly lit banking operations center, a senior SRE named Maya studies multiple dashboards showing the bank's payment processing system. One dashboard displays a heat map of transaction processing times, with most areas in cool blue. A smaller screen shows a line graph of observability data volume steadily pulsing at a low level. Suddenly, a section of the heat map flashes red, indicating a spike in processing times for international wire transfers. As if responding to this change, the observability data volume graph automatically rises for that specific service, showing increased sampling rates. Maya nods with approval as the system automatically dials up telemetry collection precisely where needed.
 
 ### Teaching Narrative
 
@@ -45,7 +47,9 @@ Adaptive sampling represents the cornerstone of dynamic observability, where ins
 
 ## Panel 2: The Anomaly Response Circuit
 
-**Scene Description**: A team of SREs is gathered in a war room during an incident. Multiple screens show a trading platform experiencing unusual patterns. A central dashboard displays the "Anomaly Response Circuit" in action - a visual flowchart showing how the system detected unusual CPU utilization patterns in the order-matching engine, automatically increased metric collection frequency from 15-second to 1-second intervals, and initiated distributed tracing at 75% sampling for all transactions touching that component. One SRE points to a visualization showing how the additional data is already forming clear patterns, while a small counter in the corner shows the temporary increase in observability costs, currently at just 0.4% of daily budget.
+### Scene Description
+
+ A team of SREs is gathered in a war room during an incident. Multiple screens show a trading platform experiencing unusual patterns. A central dashboard displays the "Anomaly Response Circuit" in action - a visual flowchart showing how the system detected unusual CPU utilization patterns in the order-matching engine, automatically increased metric collection frequency from 15-second to 1-second intervals, and initiated distributed tracing at 75% sampling for all transactions touching that component. One SRE points to a visualization showing how the additional data is already forming clear patterns, while a small counter in the corner shows the temporary increase in observability costs, currently at just 0.4% of daily budget.
 
 ### Teaching Narrative
 
@@ -57,7 +61,9 @@ This approach fundamentally changes observability from a passive monitoring syst
 
 ## Panel 3: The Criticality-Based Telemetry Matrix
 
-**Scene Description**: In a modern banking technology workspace, a whiteboard shows a complex matrix diagram. The vertical axis lists various banking services (Payments, Authentication, Account Services, Trading, etc.), while the horizontal axis shows different system conditions (Normal, Degraded, Critical, Incident). Within each cell of this matrix are specific observability parameters - sampling rates, log levels, and metrics collection frequencies. An SRE is explaining to colleagues how their newly implemented system automatically transitions between these collection profiles based on service health, pointing to a real-time dashboard that shows most services in "Normal" state with minimal telemetry collection, except for Authentication which has automatically shifted to "Degraded" state with enhanced observability.
+### Scene Description
+
+ In a modern banking technology workspace, a whiteboard shows a complex matrix diagram. The vertical axis lists various banking services (Payments, Authentication, Account Services, Trading, etc.), while the horizontal axis shows different system conditions (Normal, Degraded, Critical, Incident). Within each cell of this matrix are specific observability parameters - sampling rates, log levels, and metrics collection frequencies. An SRE is explaining to colleagues how their newly implemented system automatically transitions between these collection profiles based on service health, pointing to a real-time dashboard that shows most services in "Normal" state with minimal telemetry collection, except for Authentication which has automatically shifted to "Degraded" state with enhanced observability.
 
 ### Teaching Narrative
 
@@ -69,7 +75,9 @@ Implementation requires defining service tiers based on business impact, establi
 
 ## Panel 4: The Feedback-Driven Learning Loop
 
-**Scene Description**: A retrospective meeting following a major incident at a global bank. On a large screen, two SREs are presenting a visualization of how their dynamic observability system performed during the incident. The diagram shows a timeline where initial anomaly detection triggered increased telemetry collection, but in one subsystem, the sampling rate increase came too late to capture the root cause. The screen transitions to show how the system has now updated its anomaly detection thresholds based on this experience, with machine learning algorithms refining the signals that trigger enhanced collection. A simulation replay demonstrates how the adjusted system would have increased sampling rates 47 seconds earlier, potentially reducing incident resolution time significantly.
+### Scene Description
+
+ A retrospective meeting following a major incident at a global bank. On a large screen, two SREs are presenting a visualization of how their dynamic observability system performed during the incident. The diagram shows a timeline where initial anomaly detection triggered increased telemetry collection, but in one subsystem, the sampling rate increase came too late to capture the root cause. The screen transitions to show how the system has now updated its anomaly detection thresholds based on this experience, with machine learning algorithms refining the signals that trigger enhanced collection. A simulation replay demonstrates how the adjusted system would have increased sampling rates 47 seconds earlier, potentially reducing incident resolution time significantly.
 
 ### Teaching Narrative
 
@@ -81,7 +89,9 @@ The implementation combines statistical analysis of historical incident data wit
 
 ## Panel 5: The Cost-Aware Circuit Breaker
 
-**Scene Description**: In a financial technology department, an alert suddenly appears on an SRE's monitor. The screen shows that the dynamic observability system for a loan processing application has triggered an automatic circuit breaker. A visualization shows how an unusual pattern in database queries caused the system to progressively increase telemetry collection, but when costs exceeded predefined thresholds, safety mechanisms automatically intervened. The SRE examines a control panel that shows the circuit breaker has reverted collection to baseline levels except for specific critical paths. A notification indicates that engineering management approval is required to override these cost protection mechanisms during the current billing cycle.
+### Scene Description
+
+ In a financial technology department, an alert suddenly appears on an SRE's monitor. The screen shows that the dynamic observability system for a loan processing application has triggered an automatic circuit breaker. A visualization shows how an unusual pattern in database queries caused the system to progressively increase telemetry collection, but when costs exceeded predefined thresholds, safety mechanisms automatically intervened. The SRE examines a control panel that shows the circuit breaker has reverted collection to baseline levels except for specific critical paths. A notification indicates that engineering management approval is required to override these cost protection mechanisms during the current billing cycle.
 
 ### Teaching Narrative
 
@@ -93,7 +103,9 @@ Implementation requires establishing multi-level cost thresholds with progressiv
 
 ## Panel 6: The Predictive Scaling Sensor
 
-**Scene Description**: In the operations center of a major international bank, a calendar display shows the upcoming end-of-month financial close period. On a nearby screen, a predictive observability dashboard shows a forecast of anticipated system load across various banking services for the next 72 hours. As the visualization plays forward, it demonstrates how the observability system will proactively adjust sampling strategies before peak periods even begin - increasing collection capacity for known-critical payment reconciliation systems while reducing sampling in non-essential services. A cost projection graph shows how this predictive adjustment is expected to maintain total observability costs within budget while maximizing visibility for the most business-critical transaction flows during the high-volume period.
+### Scene Description
+
+ In the operations center of a major international bank, a calendar display shows the upcoming end-of-month financial close period. On a nearby screen, a predictive observability dashboard shows a forecast of anticipated system load across various banking services for the next 72 hours. As the visualization plays forward, it demonstrates how the observability system will proactively adjust sampling strategies before peak periods even begin - increasing collection capacity for known-critical payment reconciliation systems while reducing sampling in non-essential services. A cost projection graph shows how this predictive adjustment is expected to maintain total observability costs within budget while maximizing visibility for the most business-critical transaction flows during the high-volume period.
 
 ### Teaching Narrative
 
@@ -105,7 +117,9 @@ Implementation combines time-series analysis of historical system behavior with 
 
 ## Panel 7: The Cross-Service Propagation Network
 
-**Scene Description**: A visualization shows a complex banking architecture with dozens of interconnected microservices handling different aspects of customer transactions. As a performance degradation appears in the payment gateway service, the observability system doesn't just increase telemetry collection there - it intelligently propagates enhanced collection to upstream authentication services and downstream settlement systems, creating a dynamic observability bubble that follows the transaction flow. Monitors show how sampling rates automatically increase across this service pathway while remaining at baseline levels for unrelated components. An SRE examines the resulting trace data, which has captured the complete transaction journey at high fidelity exactly where needed, revealing that while the symptom appeared in the payment gateway, the root cause lies in a database connection issue in the settlement service.
+### Scene Description
+
+ A visualization shows a complex banking architecture with dozens of interconnected microservices handling different aspects of customer transactions. As a performance degradation appears in the payment gateway service, the observability system doesn't just increase telemetry collection there - it intelligently propagates enhanced collection to upstream authentication services and downstream settlement systems, creating a dynamic observability bubble that follows the transaction flow. Monitors show how sampling rates automatically increase across this service pathway while remaining at baseline levels for unrelated components. An SRE examines the resulting trace data, which has captured the complete transaction journey at high fidelity exactly where needed, revealing that while the symptom appeared in the payment gateway, the root cause lies in a database connection issue in the settlement service.
 
 ### Teaching Narrative
 

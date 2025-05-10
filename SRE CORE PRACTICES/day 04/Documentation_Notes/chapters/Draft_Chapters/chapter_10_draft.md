@@ -31,7 +31,9 @@ Welcome to the dark underbelly of banking tech, where your architecture diagrams
 ---
 ## Panel 1: Dependency Mapping - Discovering the True Banking Service Landscape
 
-**Scene Description**: A large conference room where a banking architecture team is gathered around a wall-sized display showing two contrasting service maps of their payment processing system. On the left, their carefully documented reference architecture shows a clean, logical structure with neat service boundaries and clearly defined interactions. On the right, a dynamically generated dependency map created from actual trace data reveals a dramatically different reality—showing dozens of unexpected connections, circular dependencies, shared databases, and legacy systems absent from the official documentation. The team looks both surprised and concerned as they realize the actual system behavior differs significantly from their architectural understanding, with an SRE highlighting critical transaction flows that rely on undocumented service relationships.
+### Scene Description
+
+ A large conference room where a banking architecture team is gathered around a wall-sized display showing two contrasting service maps of their payment processing system. On the left, their carefully documented reference architecture shows a clean, logical structure with neat service boundaries and clearly defined interactions. On the right, a dynamically generated dependency map created from actual trace data reveals a dramatically different reality—showing dozens of unexpected connections, circular dependencies, shared databases, and legacy systems absent from the official documentation. The team looks both surprised and concerned as they realize the actual system behavior differs significantly from their architectural understanding, with an SRE highlighting critical transaction flows that rely on undocumented service relationships.
 
 ### Teaching Narrative
 
@@ -75,7 +77,9 @@ Perhaps most critically, inaccurate dependency maps significantly increase opera
 
 ## Panel 2: Critical Path Analysis - Identifying Transaction Performance Bottlenecks
 
-**Scene Description**: A performance optimization workshop at a financial institution focused on improving securities trading transaction speeds. The central screen displays trace visualizations of trading transactions with the critical path highlighted in red—showing the exact sequence of dependent operations that determine overall transaction time. Engineers are analyzing how different services contribute to the total processing time, with a clear visualization showing that 70% of the transaction latency comes from just three services in the critical path, while optimization efforts had previously focused on non-critical components. A timeline comparison shows how targeted improvements to these critical path services could potentially reduce transaction times from 120ms to 40ms, while previous optimization attempts yielded minimal improvements despite significant engineering effort.
+### Scene Description
+
+ A performance optimization workshop at a financial institution focused on improving securities trading transaction speeds. The central screen displays trace visualizations of trading transactions with the critical path highlighted in red—showing the exact sequence of dependent operations that determine overall transaction time. Engineers are analyzing how different services contribute to the total processing time, with a clear visualization showing that 70% of the transaction latency comes from just three services in the critical path, while optimization efforts had previously focused on non-critical components. A timeline comparison shows how targeted improvements to these critical path services could potentially reduce transaction times from 120ms to 40ms, while previous optimization attempts yielded minimal improvements despite significant engineering effort.
 
 ### Teaching Narrative
 
@@ -121,7 +125,9 @@ Operational capacity and infrastructure costs are also significantly impacted by
 
 ## Panel 3: Hidden Coupling Detection - Understanding Shared Banking Resources
 
-**Scene Description**: An incident review meeting following a major disruption that unexpectedly affected multiple seemingly independent banking systems simultaneously. The investigation team is examining a specialized dependency visualization that highlights hidden coupling points discovered through trace analysis. The visualization shows how separate business domains—consumer banking, wealth management, and lending—that appeared architecturally isolated actually share several hidden dependencies: a common customer authentication service, a shared reference data cache, and a legacy customer information database. Trace data reveals how a configuration change to the authentication service triggered a cascading failure that propagated across these shared dependencies, affecting all three business domains despite their apparent separation. Engineers are discussing how this hidden coupling detection will fundamentally change their change management and isolation strategies.
+### Scene Description
+
+ An incident review meeting following a major disruption that unexpectedly affected multiple seemingly independent banking systems simultaneously. The investigation team is examining a specialized dependency visualization that highlights hidden coupling points discovered through trace analysis. The visualization shows how separate business domains—consumer banking, wealth management, and lending—that appeared architecturally isolated actually share several hidden dependencies: a common customer authentication service, a shared reference data cache, and a legacy customer information database. Trace data reveals how a configuration change to the authentication service triggered a cascading failure that propagated across these shared dependencies, affecting all three business domains despite their apparent separation. Engineers are discussing how this hidden coupling detection will fundamentally change their change management and isolation strategies.
 
 ### Teaching Narrative
 
@@ -169,7 +175,9 @@ Operational complexity during incidents increases dramatically when hidden coupl
 
 ## Panel 4: Third-Party Dependency Analysis - Managing External Banking Services
 
-**Scene Description**: A vendor management meeting at a large bank where technology and procurement teams are evaluating financial service providers. Unlike traditional reviews focused on contracts and SLAs, this session centers around empirical dependency analysis derived from trace data. Visualization screens show exactly how each third-party service integrates with internal systems, with detailed metrics on performance, error rates, and availability measured at the transaction level. Heatmaps highlight which external dependencies have the greatest impact on critical customer journeys, while trend analysis shows performance degradation patterns for specific providers. The procurement lead is using this evidence-based assessment to challenge a vendor's claimed 99.99% availability when trace data shows their actual impact on end-to-end transaction success is significantly lower due to subtle integration issues invisible in traditional monitoring.
+### Scene Description
+
+ A vendor management meeting at a large bank where technology and procurement teams are evaluating financial service providers. Unlike traditional reviews focused on contracts and SLAs, this session centers around empirical dependency analysis derived from trace data. Visualization screens show exactly how each third-party service integrates with internal systems, with detailed metrics on performance, error rates, and availability measured at the transaction level. Heatmaps highlight which external dependencies have the greatest impact on critical customer journeys, while trend analysis shows performance degradation patterns for specific providers. The procurement lead is using this evidence-based assessment to challenge a vendor's claimed 99.99% availability when trace data shows their actual impact on end-to-end transaction success is significantly lower due to subtle integration issues invisible in traditional monitoring.
 
 ### Teaching Narrative
 
@@ -217,7 +225,9 @@ Regulatory consequences emerge when external dependencies affect compliance-rela
 
 ## Panel 5: Dependency Health Monitoring - Early Warning Systems for Banking Services
 
-**Scene Description**: A service operations center at a financial institution where teams monitor system health through a dependency-aware dashboard. Unlike traditional monitoring showing isolated service status, this view displays a dynamic dependency graph colored by health status. Each node represents a service with health indicators derived from trace data—not just basic availability but error rates, latency percentiles, and unusual patterns specific to each dependency type. Alert notifications highlight a developing problem in a seemingly minor service, but the dependency visualization immediately shows this component's unexpected criticality—it's in the direct dependency path for multiple high-priority customer journeys. Engineers quickly prioritize this emerging issue based on its dependency impact rather than the service's apparent importance, preventing a potential widespread disruption before customers are affected.
+### Scene Description
+
+ A service operations center at a financial institution where teams monitor system health through a dependency-aware dashboard. Unlike traditional monitoring showing isolated service status, this view displays a dynamic dependency graph colored by health status. Each node represents a service with health indicators derived from trace data—not just basic availability but error rates, latency percentiles, and unusual patterns specific to each dependency type. Alert notifications highlight a developing problem in a seemingly minor service, but the dependency visualization immediately shows this component's unexpected criticality—it's in the direct dependency path for multiple high-priority customer journeys. Engineers quickly prioritize this emerging issue based on its dependency impact rather than the service's apparent importance, preventing a potential widespread disruption before customers are affected.
 
 ### Teaching Narrative
 
@@ -267,7 +277,9 @@ Operational efficiency improves significantly with dependency-aware prioritizati
 
 ## Panel 6: Dependency Change Impact Analysis - Safe Banking System Evolution
 
-**Scene Description**: A change advisory board meeting at a bank where technology teams are reviewing a proposed middleware upgrade. Instead of the traditional approach relying on SME opinions and static documentation, the team is using dependency analysis derived from trace data to understand potential impacts. Visualization screens show all transaction flows that depend on the target middleware, with color-coding indicating criticality and transaction volumes. The analysis reveals several unexpected dependencies—an overnight batch process and a regulatory reporting service both rely on undocumented features being deprecated in the upgrade. The change manager adjusts the implementation plan based on this evidence, adding specialized testing for these previously unknown dependencies and modifying the rollback criteria to specifically monitor these newly identified impact points.
+### Scene Description
+
+ A change advisory board meeting at a bank where technology teams are reviewing a proposed middleware upgrade. Instead of the traditional approach relying on SME opinions and static documentation, the team is using dependency analysis derived from trace data to understand potential impacts. Visualization screens show all transaction flows that depend on the target middleware, with color-coding indicating criticality and transaction volumes. The analysis reveals several unexpected dependencies—an overnight batch process and a regulatory reporting service both rely on undocumented features being deprecated in the upgrade. The change manager adjusts the implementation plan based on this evidence, adding specialized testing for these previously unknown dependencies and modifying the rollback criteria to specifically monitor these newly identified impact points.
 
 ### Teaching Narrative
 
@@ -319,7 +331,9 @@ Operational efficiency improves significantly with dependency-aware change proce
 
 ## Panel 7: Architectural Refactoring - Breaking Problematic Banking Dependencies
 
-**Scene Description**: A system modernization workshop where a banking architecture team is planning dependency remediation for a critical payment processing platform. Large screens display dependency visualizations derived from trace data, with problematic patterns highlighted: circular dependencies between services, excessive coupling through shared databases, synchronous chains creating fragility, and bottleneck services affecting multiple transaction types. The team is prioritizing remediation efforts based on trace-derived metrics showing which dependency issues most directly impact customer experience and system reliability. A senior architect is demonstrating how specific architectural changes—introducing message queues between tightly coupled services, replacing shared database access with APIs, and breaking monolithic components into focused microservices—would transform the dependency structure to improve both reliability and performance based on actual transaction patterns rather than theoretical architecture goals.
+### Scene Description
+
+ A system modernization workshop where a banking architecture team is planning dependency remediation for a critical payment processing platform. Large screens display dependency visualizations derived from trace data, with problematic patterns highlighted: circular dependencies between services, excessive coupling through shared databases, synchronous chains creating fragility, and bottleneck services affecting multiple transaction types. The team is prioritizing remediation efforts based on trace-derived metrics showing which dependency issues most directly impact customer experience and system reliability. A senior architect is demonstrating how specific architectural changes—introducing message queues between tightly coupled services, replacing shared database access with APIs, and breaking monolithic components into focused microservices—would transform the dependency structure to improve both reliability and performance based on actual transaction patterns rather than theoretical architecture goals.
 
 ### Teaching Narrative
 

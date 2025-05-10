@@ -32,7 +32,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Tower of Babel Monitoring
 
-**Scene Description**: In a large banking operations center, six different teams huddle around their own monitoring displays during a critical incident. Each screen shows different dashboards, with completely different metrics and visualizations for the same payment processing system. Team leads argue over conflicting data while business stakeholders grow increasingly frustrated. In the corner, a cost management report shows the bank is paying for seven separate observability platforms, with total costs growing 43% year-over-year.
+### Scene Description
+
+ In a large banking operations center, six different teams huddle around their own monitoring displays during a critical incident. Each screen shows different dashboards, with completely different metrics and visualizations for the same payment processing system. Team leads argue over conflicting data while business stakeholders grow increasingly frustrated. In the corner, a cost management report shows the bank is paying for seven separate observability platforms, with total costs growing 43% year-over-year.
 
 ### Teaching Narrative
 
@@ -44,7 +46,9 @@ The SRE solution introduces "Observability as a Service"—a unified internal pl
 
 ## Panel 2: The Multi-Tenant Observability Architecture
 
-**Scene Description**: Inside a modern SRE command center, engineers work at a central platform operations console labeled "ObservBank." On large displays, we see a unified architecture diagram with multiple banking applications feeding telemetry into a centralized collection pipeline. The interface shows distinct workspaces for different teams (Payments, Trading, Retail Banking), each with their own dashboards but clearly built on the same underlying platform. A status panel indicates 24 teams are active, with real-time cost metrics displaying controlled growth despite increasing transaction volumes.
+### Scene Description
+
+ Inside a modern SRE command center, engineers work at a central platform operations console labeled "ObservBank." On large displays, we see a unified architecture diagram with multiple banking applications feeding telemetry into a centralized collection pipeline. The interface shows distinct workspaces for different teams (Payments, Trading, Retail Banking), each with their own dashboards but clearly built on the same underlying platform. A status panel indicates 24 teams are active, with real-time cost metrics displaying controlled growth despite increasing transaction volumes.
 
 ### Teaching Narrative
 
@@ -56,7 +60,9 @@ The architecture requires careful design to balance team autonomy with centraliz
 
 ## Panel 3: The Quota Management System
 
-**Scene Description**: A platform engineer demonstrates a new dashboard to application team leaders. The screen shows each banking application's observability usage with clear metrics: "Daily Log Volume," "Active Time Series," and "Trace Span Count." Each team's usage is displayed against their assigned quota with visual indicators showing teams approaching or exceeding their allocations. One application is highlighted in yellow with automated recommendations for reducing cardinality. Another section shows a quota request workflow where teams can apply for increased allocation with business justification.
+### Scene Description
+
+ A platform engineer demonstrates a new dashboard to application team leaders. The screen shows each banking application's observability usage with clear metrics: "Daily Log Volume," "Active Time Series," and "Trace Span Count." Each team's usage is displayed against their assigned quota with visual indicators showing teams approaching or exceeding their allocations. One application is highlighted in yellow with automated recommendations for reducing cardinality. Another section shows a quota request workflow where teams can apply for increased allocation with business justification.
 
 ### Teaching Narrative
 
@@ -68,7 +74,9 @@ The implementation requires three critical components: a real-time usage account
 
 ## Panel 4: The Observability Service Catalog
 
-**Scene Description**: A developer navigates a clean, well-organized internal portal titled "ObservBank Service Catalog." The interface presents instrumentation packages for different technology stacks with clear documentation, cost implications, and implementation examples. Each package shows standardized metrics, recommended sampling rates, and default dashboard templates specifically designed for banking applications. A "cost calculator" tool allows the developer to estimate observability costs based on expected transaction volumes and selected instrumentation options.
+### Scene Description
+
+ A developer navigates a clean, well-organized internal portal titled "ObservBank Service Catalog." The interface presents instrumentation packages for different technology stacks with clear documentation, cost implications, and implementation examples. Each package shows standardized metrics, recommended sampling rates, and default dashboard templates specifically designed for banking applications. A "cost calculator" tool allows the developer to estimate observability costs based on expected transaction volumes and selected instrumentation options.
 
 ### Teaching Narrative
 
@@ -80,7 +88,9 @@ The most effective catalogs provide three layers of abstraction: high-level busi
 
 ## Panel 5: The Internal Observability Marketplace
 
-**Scene Description**: In a quarterly planning meeting, application and platform teams review an internal dashboard resembling a marketplace. Various observability capabilities are displayed as "products" with associated costs, SLAs, and user ratings. Team representatives discuss their requirements while platform owners present roadmap plans. A management dashboard shows cost trends across the bank, with metrics comparing observability spending to transaction volumes and incident reductions. The marketplace includes both standard platform offerings and specialized team-developed components that others can adopt.
+### Scene Description
+
+ In a quarterly planning meeting, application and platform teams review an internal dashboard resembling a marketplace. Various observability capabilities are displayed as "products" with associated costs, SLAs, and user ratings. Team representatives discuss their requirements while platform owners present roadmap plans. A management dashboard shows cost trends across the bank, with metrics comparing observability spending to transaction volumes and incident reductions. The marketplace includes both standard platform offerings and specialized team-developed components that others can adopt.
 
 ### Teaching Narrative
 

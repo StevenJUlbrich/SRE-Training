@@ -31,7 +31,9 @@ Welcome to the banking observability arms race—where your legacy tracing stack
 ---
 ## Panel 1: Standard Adoption in Banking - The OpenTelemetry Revolution
 
-**Scene Description**: A financial technology architecture review board meeting at a global bank. On the main screen, a comparison table shows their legacy proprietary tracing systems versus OpenTelemetry adoption across different banking domains. Architects from various divisions are presenting their migration roadmaps, with some teams already in production while others are in planning phases. A senior architect is demonstrating how a payment processing service instrumented with OpenTelemetry seamlessly integrates with both their existing observability platform and newer cloud-native monitoring tools. The CTO is nodding approvingly as the presenter highlights significant reductions in vendor lock-in risk and maintenance costs since standardizing on OpenTelemetry.
+### Scene Description
+
+ A financial technology architecture review board meeting at a global bank. On the main screen, a comparison table shows their legacy proprietary tracing systems versus OpenTelemetry adoption across different banking domains. Architects from various divisions are presenting their migration roadmaps, with some teams already in production while others are in planning phases. A senior architect is demonstrating how a payment processing service instrumented with OpenTelemetry seamlessly integrates with both their existing observability platform and newer cloud-native monitoring tools. The CTO is nodding approvingly as the presenter highlights significant reductions in vendor lock-in risk and maintenance costs since standardizing on OpenTelemetry.
 
 ### Teaching Narrative
 
@@ -71,7 +73,9 @@ From a regulatory perspective, fragmented observability creates material risks d
 
 ## Panel 2: Compliance-Ready Instrumentation - Meeting Banking Regulatory Requirements
 
-**Scene Description**: A regulatory readiness workshop where compliance officers and SRE engineers are reviewing OpenTelemetry instrumentation for an upcoming audit. Multiple screens display trace data flowing through the bank's observability pipeline with special annotations highlighting regulatory touchpoints. One display shows automated PII detection and masking in action, another demonstrates how data sovereignty controls ensure customer information remains within appropriate jurisdictions, while a third shows how trace context automatically captures and propagates regulatory metadata like consent verification and fraud checks. A compliance officer is reviewing evidence of how the tracing system maintains segregation of duties, comprehensive audit trails, and immutable records of sensitive operations as required by banking regulations.
+### Scene Description
+
+ A regulatory readiness workshop where compliance officers and SRE engineers are reviewing OpenTelemetry instrumentation for an upcoming audit. Multiple screens display trace data flowing through the bank's observability pipeline with special annotations highlighting regulatory touchpoints. One display shows automated PII detection and masking in action, another demonstrates how data sovereignty controls ensure customer information remains within appropriate jurisdictions, while a third shows how trace context automatically captures and propagates regulatory metadata like consent verification and fraud checks. A compliance officer is reviewing evidence of how the tracing system maintains segregation of duties, comprehensive audit trails, and immutable records of sensitive operations as required by banking regulations.
 
 ### Teaching Narrative
 
@@ -111,7 +115,9 @@ For institutions that successfully implement compliance-ready tracing, however, 
 
 ## Panel 3: Extending OpenTelemetry for Financial Services - Banking-Specific Context
 
-**Scene Description**: A financial services standards working group with representatives from major banks, financial technology companies, and cloud providers. Participants are collaboratively developing banking-specific extensions to the OpenTelemetry standard. On digital whiteboards, they've outlined draft specifications for financial-specific context propagation, including standardized attributes for transaction types, monetary values, customer segments, and regulatory classifications. Technical diagrams show how these extensions integrate with the core OpenTelemetry framework while adding the specialized metadata essential for financial services observability. A demonstration shows how these standards enable consistent tracing across different financial institutions involved in correspondent banking relationships, allowing seamless transaction tracking across organizational boundaries.
+### Scene Description
+
+ A financial services standards working group with representatives from major banks, financial technology companies, and cloud providers. Participants are collaboratively developing banking-specific extensions to the OpenTelemetry standard. On digital whiteboards, they've outlined draft specifications for financial-specific context propagation, including standardized attributes for transaction types, monetary values, customer segments, and regulatory classifications. Technical diagrams show how these extensions integrate with the core OpenTelemetry framework while adding the specialized metadata essential for financial services observability. A demonstration shows how these standards enable consistent tracing across different financial institutions involved in correspondent banking relationships, allowing seamless transaction tracking across organizational boundaries.
 
 ### Teaching Narrative
 
@@ -153,7 +159,9 @@ From a strategic perspective, standardized financial extensions create unprecede
 
 ## Panel 4: Multi-Vendor Observability Strategy - Avoiding Lock-In While Ensuring Support
 
-**Scene Description**: An enterprise architecture review session where technology leaders are evaluating the bank's observability ecosystem. A comprehensive diagram shows their OpenTelemetry-based architecture with a single consistent instrumentation layer feeding multiple specialized analysis platforms: a commercial APM solution for real-time monitoring, an open-source tracing backend for development environments, a specialized compliance analytics platform for regulatory reporting, and a custom big data system for long-term performance analysis. The CTO is explaining how this architecture gives them both procurement leverage with vendors and technology flexibility while ensuring specialized support for different banking domains. Side-by-side performance comparisons show how the same trace data looks in different analysis platforms, highlighting the advantages of their multi-vendor approach.
+### Scene Description
+
+ An enterprise architecture review session where technology leaders are evaluating the bank's observability ecosystem. A comprehensive diagram shows their OpenTelemetry-based architecture with a single consistent instrumentation layer feeding multiple specialized analysis platforms: a commercial APM solution for real-time monitoring, an open-source tracing backend for development environments, a specialized compliance analytics platform for regulatory reporting, and a custom big data system for long-term performance analysis. The CTO is explaining how this architecture gives them both procurement leverage with vendors and technology flexibility while ensuring specialized support for different banking domains. Side-by-side performance comparisons show how the same trace data looks in different analysis platforms, highlighting the advantages of their multi-vendor approach.
 
 ### Teaching Narrative
 
@@ -195,7 +203,9 @@ From a long-term strategic perspective, vendor-neutral approaches create foundat
 
 ## Panel 5: Standardized Context Propagation - Tracing Across Organizational Boundaries
 
-**Scene Description**: A cross-bank collaboration workshop where engineers from multiple financial institutions are implementing standardized tracing for interbank payment flows. Visualization screens show a single payment transaction as it moves across organizational boundaries—starting at the originating bank, flowing through a payment network, passing through correspondent banks, and finally reaching the receiving institution. Each organization maintains independent observability systems, but standardized context propagation allows them to correlate their individual traces into a comprehensive view of the end-to-end payment journey. Technical diagrams show how standardized HTTP headers, message queue attributes, and API parameters maintain consistent trace context despite crossing multiple independent systems.
+### Scene Description
+
+ A cross-bank collaboration workshop where engineers from multiple financial institutions are implementing standardized tracing for interbank payment flows. Visualization screens show a single payment transaction as it moves across organizational boundaries—starting at the originating bank, flowing through a payment network, passing through correspondent banks, and finally reaching the receiving institution. Each organization maintains independent observability systems, but standardized context propagation allows them to correlate their individual traces into a comprehensive view of the end-to-end payment journey. Technical diagrams show how standardized HTTP headers, message queue attributes, and API parameters maintain consistent trace context despite crossing multiple independent systems.
 
 ### Teaching Narrative
 
@@ -239,7 +249,9 @@ From a regulatory perspective, standardized cross-organizational tracing creates
 
 ## Panel 6: Observability as a Regulatory Control - From Technical Tool to Compliance Asset
 
-**Scene Description**: A regulatory examination at a global bank where compliance officers are presenting their OpenTelemetry-based control framework to financial regulators. Multiple screens show how distributed tracing has been integrated into the bank's regulatory compliance program. One display demonstrates automated monitoring of regulatory service levels for payment processing, another shows how tracing provides immutable audit trails of authorization decisions, and a third highlights how the system automatically detects and escalates potential compliance violations like unusual transaction patterns or unexpected process deviations. The lead examiner looks impressed as the bank demonstrates how their observability platform systematically documents regulatory adherence rather than just supporting technical operations.
+### Scene Description
+
+ A regulatory examination at a global bank where compliance officers are presenting their OpenTelemetry-based control framework to financial regulators. Multiple screens show how distributed tracing has been integrated into the bank's regulatory compliance program. One display demonstrates automated monitoring of regulatory service levels for payment processing, another shows how tracing provides immutable audit trails of authorization decisions, and a third highlights how the system automatically detects and escalates potential compliance violations like unusual transaction patterns or unexpected process deviations. The lead examiner looks impressed as the bank demonstrates how their observability platform systematically documents regulatory adherence rather than just supporting technical operations.
 
 ### Teaching Narrative
 
@@ -283,7 +295,9 @@ From a strategic perspective, integrated approaches create foundations for compe
 
 ## Panel 7: Future-Proofing Banking Observability - Standards Evolution and Readiness
 
-**Scene Description**: A banking technology futures workshop where architects and strategists are analyzing emerging observability trends and planning their long-term standards strategy. Timeline visualizations show the evolution of OpenTelemetry and related standards, with projections for upcoming capabilities particularly relevant to banking. Technical roadmaps demonstrate how the bank plans to adopt these emerging standards—including enhanced security features, AI-driven analysis capabilities, and advanced correlation between traces, logs and metrics. Implementation plans show their phased approach for evaluating, testing, and integrating new standards components while maintaining backward compatibility. A senior architect is explaining how their standards-first approach positions them to rapidly adopt emerging capabilities like continuous profiling and user experience correlation while maintaining their existing observability investments.
+### Scene Description
+
+ A banking technology futures workshop where architects and strategists are analyzing emerging observability trends and planning their long-term standards strategy. Timeline visualizations show the evolution of OpenTelemetry and related standards, with projections for upcoming capabilities particularly relevant to banking. Technical roadmaps demonstrate how the bank plans to adopt these emerging standards—including enhanced security features, AI-driven analysis capabilities, and advanced correlation between traces, logs and metrics. Implementation plans show their phased approach for evaluating, testing, and integrating new standards components while maintaining backward compatibility. A senior architect is explaining how their standards-first approach positions them to rapidly adopt emerging capabilities like continuous profiling and user experience correlation while maintaining their existing observability investments.
 
 ### Teaching Narrative
 

@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Deceptive Average (Latency)
 
-**Scene Description**: Call center overwhelmed with complaints about slow investment transactions while performance dashboard shows "normal" average response times. Banking executive points at contradiction between customer experience and metrics.
+### Scene Description
+
+ Call center overwhelmed with complaints about slow investment transactions while performance dashboard shows "normal" average response times. Banking executive points at contradiction between customer experience and metrics.
 
 ### Teaching Narrative
 
@@ -72,7 +74,9 @@ For investment platforms, latency distribution directly impacts trading outcomes
 
 ## Panel 2: The Truth in Distribution (Latency)
 
-**Scene Description**: Performance engineer showing team histogram of transaction times highlighting the long tail problem in payment processing during market volatility. Visual displays stark contrast between p50 and p99 metrics with customer impact annotations.
+### Scene Description
+
+ Performance engineer showing team histogram of transaction times highlighting the long tail problem in payment processing during market volatility. Visual displays stark contrast between p50 and p99 metrics with customer impact annotations.
 
 ### Teaching Narrative
 
@@ -108,7 +112,9 @@ In payment processing, latency distribution directly affects authorization appro
 
 ## Panel 3: The Unexpected Holiday (Traffic)
 
-**Scene Description**: On-call engineer puzzled by traffic spike metrics on a non-payday Friday, investigating graphs showing transaction volume correlated with government stimulus announcement. Executive points at news headlines missed by the team.
+### Scene Description
+
+ On-call engineer puzzled by traffic spike metrics on a non-payday Friday, investigating graphs showing transaction volume correlated with government stimulus announcement. Executive points at news headlines missed by the team.
 
 ### Teaching Narrative
 
@@ -144,7 +150,9 @@ Unpredictable traffic patterns create cascading failures across banking services
 
 ## Panel 4: Predicting the Wave (Traffic)
 
-**Scene Description**: Capacity planning meeting with team reviewing traffic forecasting model that incorporates banking calendar, historical patterns, and external events. Visual shows predictive algorithm identifying upcoming volume spikes.
+### Scene Description
+
+ Capacity planning meeting with team reviewing traffic forecasting model that incorporates banking calendar, historical patterns, and external events. Visual shows predictive algorithm identifying upcoming volume spikes.
 
 ### Teaching Narrative
 
@@ -180,7 +188,9 @@ Accurate traffic prediction directly impacts both customer experience and infras
 
 ## Panel 5: The Silent Failure (Errors)
 
-**Scene Description**: SRE investigating missing fund transfers, looking at logs showing successful HTTP 200 responses but failed database commits, with money appearing to leave accounts but not arriving at destinations.
+### Scene Description
+
+ SRE investigating missing fund transfers, looking at logs showing successful HTTP 200 responses but failed database commits, with money appearing to leave accounts but not arriving at destinations.
 
 ### Teaching Narrative
 
@@ -216,7 +226,9 @@ In fund transfer systems, silent failures create serious financial and regulator
 
 ## Panel 6: When "Success" Isn't Success (Errors)
 
-**Scene Description**: Team reviewing dashboard of error metrics categorized by business impact rather than technical status codes, with customer impact highlighted. Visual shows error taxonomy with regulatory, financial, and experience classifications.
+### Scene Description
+
+ Team reviewing dashboard of error metrics categorized by business impact rather than technical status codes, with customer impact highlighted. Visual shows error taxonomy with regulatory, financial, and experience classifications.
 
 ### Teaching Narrative
 
@@ -252,7 +264,9 @@ For financial transactions, error classification directly affects both customer 
 
 ## Panel 7: The Creeping Slowdown (Saturation)
 
-**Scene Description**: Team investigating gradually increasing latency over weeks, looking at metrics showing database connection pool utilization climbing from 45% to 85% during month-end processing.
+### Scene Description
+
+ Team investigating gradually increasing latency over weeks, looking at metrics showing database connection pool utilization climbing from 45% to 85% during month-end processing.
 
 ### Teaching Narrative
 
@@ -288,7 +302,9 @@ In banking systems, saturation-induced failures often occur during critical proc
 
 ## Panel 8: The Early Warning System (Saturation)
 
-**Scene Description**: Operations team reviewing new leading indicator metrics dashboard showing resource saturation approaching critical thresholds before customer impact occurs. Visual highlights graduated warning levels and automated mitigation actions.
+### Scene Description
+
+ Operations team reviewing new leading indicator metrics dashboard showing resource saturation approaching critical thresholds before customer impact occurs. Visual highlights graduated warning levels and automated mitigation actions.
 
 ### Teaching Narrative
 

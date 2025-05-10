@@ -2,7 +2,9 @@
 
 ## Panel 1: The Severity Spectrum - Classifying Banking Incidents
 
-**Scene Description**: A bustling incident response war room where multiple screens display different banking systems in various states of alert. In the center, a diverse team huddles around a large digital board with a color-coded incident classification matrix. One engineer points to a flashing red alert on a payment gateway while another adjusts the incident severity level based on a structured checklist. A clock prominently shows 09:37 AM, and a counter indicates "Customer Impact: 12,450 transactions affected."
+### Scene Description
+
+ A bustling incident response war room where multiple screens display different banking systems in various states of alert. In the center, a diverse team huddles around a large digital board with a color-coded incident classification matrix. One engineer points to a flashing red alert on a payment gateway while another adjusts the incident severity level based on a structured checklist. A clock prominently shows 09:37 AM, and a counter indicates "Customer Impact: 12,450 transactions affected."
 
 ### Teaching Narrative
 
@@ -66,7 +68,9 @@ To implement an effective banking incident classification framework:
 
 ## Panel 2: Transaction Flow Mapping - Understanding Banking System Interconnections
 
-**Scene Description**: An SRE team is gathered around a large interactive display showing a complex transaction flow diagram. The visualization traces a customer payment journey across multiple systems: from the mobile app, through the API gateway, authentication service, payment processor, core banking system, to partner banks and finally the central bank settlement. Color-coded paths show the normal flow in green, with one segment highlighted in red indicating an incident area. A senior engineer uses hand gestures to expand a section, revealing detailed dependency relationships between components.
+### Scene Description
+
+ An SRE team is gathered around a large interactive display showing a complex transaction flow diagram. The visualization traces a customer payment journey across multiple systems: from the mobile app, through the API gateway, authentication service, payment processor, core banking system, to partner banks and finally the central bank settlement. Color-coded paths show the normal flow in green, with one segment highlighted in red indicating an incident area. A senior engineer uses hand gestures to expand a section, revealing detailed dependency relationships between components.
 
 ### Teaching Narrative
 
@@ -129,7 +133,9 @@ To implement effective transaction flow mapping in your organization:
 
 ## Panel 3: Impact Quantification - Measuring What Matters in Banking Incidents
 
-**Scene Description**: A dashboard meeting room where business and technical teams face each other across a table. The wall displays show dual metrics: technical graphs (error rates, latency, CPU) on one side and business metrics (transaction value affected, customer impact count, revenue at risk) on the other. An SRE is drawing connecting lines between specific technical failures and their corresponding business impacts, while a banking business analyst nods in understanding. A calculator application on a tablet shows financial impact formulas being utilized in real-time.
+### Scene Description
+
+ A dashboard meeting room where business and technical teams face each other across a table. The wall displays show dual metrics: technical graphs (error rates, latency, CPU) on one side and business metrics (transaction value affected, customer impact count, revenue at risk) on the other. An SRE is drawing connecting lines between specific technical failures and their corresponding business impacts, while a banking business analyst nods in understanding. A calculator application on a tablet shows financial impact formulas being utilized in real-time.
 
 ### Teaching Narrative
 
@@ -194,7 +200,9 @@ To implement effective impact quantification in your organization:
 
 ## Panel 4: Temporal Analysis - The Lifecycle of Banking Incidents
 
-**Scene Description**: A timeline visualization stretches across a wall, showing the complete lifecycle of a banking incident from initial detection to full resolution. The timeline is marked with key events: first alert, incident declaration, investigation milestones, mitigation attempts (both successful and failed), communication points, and final resolution. A small team reviews the timeline while adding annotations at various points. One engineer uses a laser pointer to highlight patterns in the temporal data, particularly focusing on the gap between first symptoms and incident declaration.
+### Scene Description
+
+ A timeline visualization stretches across a wall, showing the complete lifecycle of a banking incident from initial detection to full resolution. The timeline is marked with key events: first alert, incident declaration, investigation milestones, mitigation attempts (both successful and failed), communication points, and final resolution. A small team reviews the timeline while adding annotations at various points. One engineer uses a laser pointer to highlight patterns in the temporal data, particularly focusing on the gap between first symptoms and incident declaration.
 
 ### Teaching Narrative
 
@@ -258,7 +266,9 @@ To implement effective temporal analysis in your organization:
 
 ## Panel 5: Incident Archaeology - Reconstructing Banking System Failures
 
-**Scene Description**: A digital forensics lab environment where SREs are conducting a detailed incident reconstruction. Multiple screens display timeline-synchronized logs, metrics, and traces from various banking systems. One engineer manipulates a 3D visualization showing the propagation of failures across services. Another examines a "digital dig" table where system state snapshots are arranged in chronological layers. A third team member is constructing a narrative document titled "Incident Reconstruction: Market Data Latency Cascade Event" with precise timestamps and service correlations.
+### Scene Description
+
+ A digital forensics lab environment where SREs are conducting a detailed incident reconstruction. Multiple screens display timeline-synchronized logs, metrics, and traces from various banking systems. One engineer manipulates a 3D visualization showing the propagation of failures across services. Another examines a "digital dig" table where system state snapshots are arranged in chronological layers. A third team member is constructing a narrative document titled "Incident Reconstruction: Market Data Latency Cascade Event" with precise timestamps and service correlations.
 
 ### Teaching Narrative
 
@@ -324,7 +334,9 @@ To implement effective incident archaeology in your organization:
 
 ## Panel 6: Stakeholder Impact Mapping - The Human Side of Banking Incidents
 
-**Scene Description**: A collaborative workshop where SREs are creating a comprehensive stakeholder impact map for a recent incident. The room features a large touchscreen wall displaying concentric circles representing different stakeholder groups: inner circles show direct internal teams (operations, development, risk), middle circles show business units and partners, and outer circles represent customers and regulators. Each segment is color-coded by impact severity. Team members are adding detailed impact notes for each stakeholder group, with particular attention to regulatory reporting requirements highlighted with compliance reference numbers.
+### Scene Description
+
+ A collaborative workshop where SREs are creating a comprehensive stakeholder impact map for a recent incident. The room features a large touchscreen wall displaying concentric circles representing different stakeholder groups: inner circles show direct internal teams (operations, development, risk), middle circles show business units and partners, and outer circles represent customers and regulators. Each segment is color-coded by impact severity. Team members are adding detailed impact notes for each stakeholder group, with particular attention to regulatory reporting requirements highlighted with compliance reference numbers.
 
 ### Teaching Narrative
 
@@ -397,7 +409,9 @@ To implement effective stakeholder impact mapping in your organization:
 
 ## Panel 7: Incident Typing - Patterns and Archetypes in Banking System Failures
 
-**Scene Description**: A knowledge management session where an experienced SRE team is developing a banking incident taxonomy. The room has walls covered with categorized incident summaries on digital cards. Team members are grouping similar incidents into clusters labeled with archetypal patterns: "Payment Gateway Timeout Cascade," "Settlement Reconciliation Drift," "Identity Verification Bottleneck," and others. One engineer is annotating each pattern with common characteristics, while another updates a reference handbook titled "Banking Incident Pattern Library." A visualization shows how specific incidents map to these archetypal patterns.
+### Scene Description
+
+ A knowledge management session where an experienced SRE team is developing a banking incident taxonomy. The room has walls covered with categorized incident summaries on digital cards. Team members are grouping similar incidents into clusters labeled with archetypal patterns: "Payment Gateway Timeout Cascade," "Settlement Reconciliation Drift," "Identity Verification Bottleneck," and others. One engineer is annotating each pattern with common characteristics, while another updates a reference handbook titled "Banking Incident Pattern Library." A visualization shows how specific incidents map to these archetypal patterns.
 
 ### Teaching Narrative
 

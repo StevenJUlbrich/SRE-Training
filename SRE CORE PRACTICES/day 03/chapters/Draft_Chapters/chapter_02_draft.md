@@ -34,7 +34,9 @@ Welcome to log anatomy—where your logs either solve incidents or create them. 
 
 ## Panel 1: The Missing Puzzle Piece - Anatomy of a Complete Log Entry
 
-**Scene Description**: A banking war room during an incident investigation. Two teams work side by side analyzing different payment processing logs. The first team struggles with vague logs showing only "Transaction Failed" messages, while the second team efficiently troubleshoots using comprehensive logs containing timestamps, transaction IDs, account identifiers, operation types, and detailed error codes. A split-screen visualization shows how the detailed logs enable rapid resolution while the vague logs lead to extended investigation.
+### Scene Description
+
+ A banking war room during an incident investigation. Two teams work side by side analyzing different payment processing logs. The first team struggles with vague logs showing only "Transaction Failed" messages, while the second team efficiently troubleshoots using comprehensive logs containing timestamps, transaction IDs, account identifiers, operation types, and detailed error codes. A split-screen visualization shows how the detailed logs enable rapid resolution while the vague logs lead to extended investigation.
 
 ### Teaching Narrative
 
@@ -101,7 +103,9 @@ In contrast, the 22-minute resolution time achieved after implementing comprehen
 
 ## Panel 2: The Timestamp Truth - Precision and Synchronization
 
-**Scene Description**: An operations center where engineers investigate a transaction sequencing issue in a securities trading system. On a large display, log entries from multiple systems are aligned by timestamp, revealing that what appeared to be a random failure is actually a timing problem. A closeup shows timestamps with microsecond precision, with the engineer highlighting the critical 50-millisecond window where race conditions occur during peak trading hours.
+### Scene Description
+
+ An operations center where engineers investigate a transaction sequencing issue in a securities trading system. On a large display, log entries from multiple systems are aligned by timestamp, revealing that what appeared to be a random failure is actually a timing problem. A closeup shows timestamps with microsecond precision, with the engineer highlighting the critical 50-millisecond window where race conditions occur during peak trading hours.
 
 ### Teaching Narrative
 
@@ -166,7 +170,9 @@ The bank calculated that proper timestamp implementation would have enabled iden
 
 ## Panel 3: The Identifier Web - Connecting Events Across Systems
 
-**Scene Description**: A visualization room where an SRE demonstrates distributed transaction tracing to new team members. On transparent screens, animated log entries from different banking systems (mobile app, API gateway, authentication service, core banking) are shown flowing together and connecting based on shared identifiers. As a transaction ID is highlighted, related entries across all systems illuminate, forming a complete picture of a customer's mortgage application journey through the bank's digital infrastructure.
+### Scene Description
+
+ A visualization room where an SRE demonstrates distributed transaction tracing to new team members. On transparent screens, animated log entries from different banking systems (mobile app, API gateway, authentication service, core banking) are shown flowing together and connecting based on shared identifiers. As a transaction ID is highlighted, related entries across all systems illuminate, forming a complete picture of a customer's mortgage application journey through the bank's digital infrastructure.
 
 ### Teaching Narrative
 
@@ -236,7 +242,9 @@ The bank calculated that proper identifier implementation would have reduced the
 
 ## Panel 4: The Context Carriers - Environmental and State Information
 
-**Scene Description**: A banking incident review meeting where an SRE presents two log examples from a failed payment processing batch. The first shows only basic operation information, while the second includes crucial context: the batch size, server environment details, resource utilization at time of execution, database connection pool status, and the specific payment processor configuration active during the failure. Team members note how this contextual information immediately narrowed the investigation to connection pool exhaustion under specific load conditions.
+### Scene Description
+
+ A banking incident review meeting where an SRE presents two log examples from a failed payment processing batch. The first shows only basic operation information, while the second includes crucial context: the batch size, server environment details, resource utilization at time of execution, database connection pool status, and the specific payment processor configuration active during the failure. Team members note how this contextual information immediately narrowed the investigation to connection pool exhaustion under specific load conditions.
 
 ### Teaching Narrative
 
@@ -306,7 +314,9 @@ The bank calculated that context-rich logging would have reduced the resolution 
 
 ## Panel 5: The Error Anatomy - Structured Error Information
 
-**Scene Description**: A large financial data center where two engineers compare error logs from a credit card processing system. The first shows generic errors ("System Error 500"), while the second displays structured error information with error codes, categories, severity levels, exception types, stack traces, and user-facing message recommendations. On a dashboard, the structured errors automatically populate visualizations showing error distributions by type, component, and customer impact—enabling both technical resolution and business reporting.
+### Scene Description
+
+ A large financial data center where two engineers compare error logs from a credit card processing system. The first shows generic errors ("System Error 500"), while the second displays structured error information with error codes, categories, severity levels, exception types, stack traces, and user-facing message recommendations. On a dashboard, the structured errors automatically populate visualizations showing error distributions by type, component, and customer impact—enabling both technical resolution and business reporting.
 
 ### Teaching Narrative
 
@@ -382,7 +392,9 @@ The company calculated that structured error logging would have reduced the reso
 
 ## Panel 6: The Format Revolution - Structured vs. Unstructured Logging
 
-**Scene Description**: A modernization planning session where a bank's technology team compares their legacy logging approach with new structured practices. Split screens show unstructured text logs requiring complex parsing alongside structured JSON logs with clear field separation. An engineer demonstrates how the structured approach enables instant filtering, aggregation, and visualization of ATM transaction failures by location, card type, and error code—capabilities impossible with their existing unstructured logs.
+### Scene Description
+
+ A modernization planning session where a bank's technology team compares their legacy logging approach with new structured practices. Split screens show unstructured text logs requiring complex parsing alongside structured JSON logs with clear field separation. An engineer demonstrates how the structured approach enables instant filtering, aggregation, and visualization of ATM transaction failures by location, card type, and error code—capabilities impossible with their existing unstructured logs.
 
 ### Teaching Narrative
 
@@ -474,7 +486,9 @@ The bank calculated that their investment in structured logging modernization ac
 
 ## Panel 7: The Evolution Path - From Basic to Advanced Logging
 
-**Scene Description**: A learning center where new SREs see the progression of banking system logging illustrated on interactive displays. The timeline starts with basic text logging from legacy systems, advances through early structured logging implementations, and culminates with modern observability platforms showing advanced log analytics applied to real-time fraud detection. Annotations highlight how each evolutionary step brought new capabilities, from simple troubleshooting to predictive analysis and automated remediation.
+### Scene Description
+
+ A learning center where new SREs see the progression of banking system logging illustrated on interactive displays. The timeline starts with basic text logging from legacy systems, advances through early structured logging implementations, and culminates with modern observability platforms showing advanced log analytics applied to real-time fraud detection. Annotations highlight how each evolutionary step brought new capabilities, from simple troubleshooting to predictive analysis and automated remediation.
 
 ### Teaching Narrative
 

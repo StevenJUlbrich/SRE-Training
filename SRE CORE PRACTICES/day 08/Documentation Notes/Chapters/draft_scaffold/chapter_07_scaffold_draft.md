@@ -1,7 +1,9 @@
 # Chapter 7: Intelligent Sampling
 
 ## Panel 1: The Firehose Fallacy
-**Scene Description**: A stressed SRE named Maya stares in dismay at a monitoring dashboard showing a payment processing system generating terabytes of trace data. As transactions spike during a sales event, the observability cost gauge rapidly climbs into the red zone. Meanwhile, her colleague Alex confidently adjusts sampling parameters on a similar system, maintaining full visibility into errors while the cost gauge stays firmly in the green zone.
+### Scene Description
+
+ A stressed SRE named Maya stares in dismay at a monitoring dashboard showing a payment processing system generating terabytes of trace data. As transactions spike during a sales event, the observability cost gauge rapidly climbs into the red zone. Meanwhile, her colleague Alex confidently adjusts sampling parameters on a similar system, maintaining full visibility into errors while the cost gauge stays firmly in the green zone.
 
 ### Teaching Narrative
 The Firehose Fallacy is the misguided belief that collecting 100% of observability data is necessary for effective system monitoring. This approach treats every transaction, log line, and metric as equally valuable, leading to unsustainable data volumes and costs. In reality, not all telemetry data provides equal insight, and collecting everything often produces more noise than signal.
@@ -11,7 +13,9 @@ Intelligent sampling provides a statistical approach to data collection that mai
 Core principles of intelligent sampling include preserving outliers, maintaining statistical significance, adjusting rates based on system conditions, and focusing on the critical path. When implemented correctly, sampling rates as low as 1-5% can maintain complete visibility into system health while reducing observability costs by orders of magnitude.
 
 ## Panel 2: Head-Based vs. Tail-Based Sampling
-**Scene Description**: Two side-by-side monitoring stations show different approaches to transaction sampling in a trading platform. The left station shows a uniformly sampled set of transactions where errors are nearly invisible among the dominant successful requests. The right station shows a sampling approach that has captured every error condition despite sampling only a fraction of total transactions. An SRE points to the difference in error detection rates while a financial controller points to the dramatic cost difference.
+### Scene Description
+
+ Two side-by-side monitoring stations show different approaches to transaction sampling in a trading platform. The left station shows a uniformly sampled set of transactions where errors are nearly invisible among the dominant successful requests. The right station shows a sampling approach that has captured every error condition despite sampling only a fraction of total transactions. An SRE points to the difference in error detection rates while a financial controller points to the dramatic cost difference.
 
 ### Teaching Narrative
 In distributed systems observability, two primary sampling approaches exist: head-based and tail-based sampling, each with distinct advantages and limitations.
@@ -23,7 +27,9 @@ Tail-based sampling, by contrast, makes collection decisions after transactions 
 The fundamental trade-off between these approaches is between implementation simplicity and sampling intelligence. Head-based sampling is easier to implement but risks missing critical error cases, while tail-based sampling provides better visibility into failures but requires more sophisticated buffering and decision logic.
 
 ## Panel 3: Stratified Sampling for Business Context
-**Scene Description**: A wealth management platform dashboard shows different sampling rates for different customer segments. Platinum customer transactions are sampled at 15%, regular customers at 3%, and a special "new account" flag ensures 100% visibility into new customer onboarding regardless of status. A business analyst and an SRE review the dashboard together, with the analyst nodding in approval as they can see complete data for business-critical transactions while the overall cost remains sustainable.
+### Scene Description
+
+ A wealth management platform dashboard shows different sampling rates for different customer segments. Platinum customer transactions are sampled at 15%, regular customers at 3%, and a special "new account" flag ensures 100% visibility into new customer onboarding regardless of status. A business analyst and an SRE review the dashboard together, with the analyst nodding in approval as they can see complete data for business-critical transactions while the overall cost remains sustainable.
 
 ### Teaching Narrative
 Stratified sampling introduces business context to observability data collection by applying different sampling rates to different transaction categories. This approach recognizes that transactions vary widely in their business importance, and sampling strategies should reflect these differences.
@@ -41,7 +47,9 @@ This approach ensures comprehensive visibility into high-value areas while apply
 Stratified sampling creates a direct bridge between observability practices and business objectives, ensuring that technical decisions about data collection directly reflect business priorities rather than treating all transactions with equal technical interest.
 
 ## Panel 4: Statistical Validity and Confidence Intervals
-**Scene Description**: An SRE and a data scientist examine a dashboard showing two charts. The first displays a complete dataset of payment processing latencies from yesterday (in gray) overlaid with today's 5% sampled dataset (in blue). The second chart shows the error margin calculation updating in real-time as sampling rates are adjusted. The data scientist points to the nearly identical pattern distributions despite the 95% reduction in data collection.
+### Scene Description
+
+ An SRE and a data scientist examine a dashboard showing two charts. The first displays a complete dataset of payment processing latencies from yesterday (in gray) overlaid with today's 5% sampled dataset (in blue). The second chart shows the error margin calculation updating in real-time as sampling rates are adjusted. The data scientist points to the nearly identical pattern distributions despite the 95% reduction in data collection.
 
 ### Teaching Narrative
 For SREs transitioning to sampling-based observability, a common concern is: "How can we trust conclusions drawn from partial data?" The answer lies in understanding statistical validity and confidence intervals, which provide mathematical frameworks for quantifying the reliability of sampled data.
@@ -61,7 +69,9 @@ For critical metrics like error rates or SLO compliance, we can calculate the re
 Understanding these statistical principles allows SREs to implement sampling confidently, knowing they can quantify and control the trade-off between data volume and measurement precision.
 
 ## Panel 5: Implementing Adaptive Sampling
-**Scene Description**: A banking operations center during a system incident. As error rates rise on a payment processing service, the observability system automatically increases sampling rates from 5% to 50% for the affected components. Dozens of terminals display increasingly detailed telemetry while a cost management dashboard shows a temporary but controlled increase in data volume. As the incident resolves, sampling rates gradually return to baseline levels.
+### Scene Description
+
+ A banking operations center during a system incident. As error rates rise on a payment processing service, the observability system automatically increases sampling rates from 5% to 50% for the affected components. Dozens of terminals display increasingly detailed telemetry while a cost management dashboard shows a temporary but controlled increase in data volume. As the incident resolves, sampling rates gradually return to baseline levels.
 
 ### Teaching Narrative
 Adaptive sampling dynamically adjusts collection rates based on system conditions, increasing visibility during anomalous periods while conserving resources during normal operation. This approach recognizes that observability needs vary dramatically depending on system state - what's appropriate during healthy operation is insufficient during incidents.
@@ -82,7 +92,9 @@ The most sophisticated implementations use machine learning to identify emerging
 Adaptive sampling represents the bridge between cost efficiency and operational awareness, automatically balancing observability expenses against the fluctuating value of telemetry data as system conditions change.
 
 ## Panel 6: Sampling Implementation Patterns
-**Scene Description**: Multiple monitor screens display code and configuration snippets for implementing sampling across different banking microservices. One screen shows a developer implementing a consistent sampling decision that propagates through a distributed transaction, with special highlighting on the trace context headers. Another screen displays a system architect designing a centralized sampling coordinator service that dynamically adjusts collection rates across an entire banking platform.
+### Scene Description
+
+ Multiple monitor screens display code and configuration snippets for implementing sampling across different banking microservices. One screen shows a developer implementing a consistent sampling decision that propagates through a distributed transaction, with special highlighting on the trace context headers. Another screen displays a system architect designing a centralized sampling coordinator service that dynamically adjusts collection rates across an entire banking platform.
 
 ### Teaching Narrative
 Implementing effective sampling across distributed banking systems requires consistent technical patterns to ensure coherent visibility despite reduced data collection. These patterns must address the challenges of distributed decision making, context propagation, and integration with existing observability tooling.
@@ -98,7 +110,9 @@ For systems using OpenTelemetry, the sampling processor pattern allows sampling 
 Implementation also requires integration patterns with existing monitoring tools. This often involves exporter configurations that understand sampling rates and can appropriately scale metrics when displaying sampled data, ensuring visualizations correctly represent system behavior despite receiving only a subset of events.
 
 ## Panel 7: Compliance Considerations in Sampling
-**Scene Description**: A compliance officer and an SRE review a sampling strategy document for a financial transaction system. The document highlights special handling for regulatory transactions, with annotations showing where 100% retention is maintained for compliance-critical operations while applying sampling to standard transactions. Several regulatory frameworks are referenced in the margins, with special call-outs to SEC Rule 17a-4 and PCI DSS requirements.
+### Scene Description
+
+ A compliance officer and an SRE review a sampling strategy document for a financial transaction system. The document highlights special handling for regulatory transactions, with annotations showing where 100% retention is maintained for compliance-critical operations while applying sampling to standard transactions. Several regulatory frameworks are referenced in the margins, with special call-outs to SEC Rule 17a-4 and PCI DSS requirements.
 
 ### Teaching Narrative
 In the highly regulated banking industry, sampling strategies must carefully balance cost efficiency with compliance requirements. The key challenge is determining which data requires 100% retention for regulatory purposes versus what can be sampled without compliance risk.

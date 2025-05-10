@@ -38,7 +38,9 @@ Welcome to the graveyard shift of banking operations, where green dashboards are
 
 ## Panel 1: The Midnight Alert - Limitations of Traditional Monitoring
 
-**Scene Description**: A dimly lit operations center at 2 AM. A banking support engineer stares anxiously at multiple monitoring dashboards showing green status indicators while simultaneously fielding angry calls from customers unable to complete wire transfers. Confusion and frustration are evident as the disconnect between monitoring and reality creates chaos.
+### Scene Description
+
+ A dimly lit operations center at 2 AM. A banking support engineer stares anxiously at multiple monitoring dashboards showing green status indicators while simultaneously fielding angry calls from customers unable to complete wire transfers. Confusion and frustration are evident as the disconnect between monitoring and reality creates chaos.
 
 ### Teaching Narrative
 
@@ -72,7 +74,9 @@ For high-net-worth clients attempting significant international transfers, these
 
 ## Panel 2: The Hidden Conversation - Discovering the Value of Logs
 
-**Scene Description**: The same operations center, now with two engineers huddled over a terminal. One points excitedly at a stream of log entries that reveal communication failures between the bank's payment processor and the international settlement system. Despite all monitoring dashboards showing "normal," the logs tell a different story through detailed transaction traces.
+### Scene Description
+
+ The same operations center, now with two engineers huddled over a terminal. One points excitedly at a stream of log entries that reveal communication failures between the bank's payment processor and the international settlement system. Despite all monitoring dashboards showing "normal," the logs tell a different story through detailed transaction traces.
 
 ### Teaching Narrative
 
@@ -109,7 +113,9 @@ The financial impact included both direct costs (overtime for operations staff i
 
 ## Panel 3: The Three Pillars - Logs, Metrics, and Traces
 
-**Scene Description**: A bright training room where an SRE draws a triangle on a whiteboard labeled "Observability" with the three sides marked "Logs," "Metrics," and "Traces." Banking examples of each are illustrated, with logs showing detailed transaction events, metrics displaying aggregated success rates, and traces following a single payment through multiple systems. New team members take notes while comparing this to their familiar monitoring tools.
+### Scene Description
+
+ A bright training room where an SRE draws a triangle on a whiteboard labeled "Observability" with the three sides marked "Logs," "Metrics," and "Traces." Banking examples of each are illustrated, with logs showing detailed transaction events, metrics displaying aggregated success rates, and traces following a single payment through multiple systems. New team members take notes while comparing this to their familiar monitoring tools.
 
 ### Teaching Narrative
 
@@ -151,7 +157,9 @@ Perhaps most concerning, the bank's Net Promoter Score among affected customers 
 
 ## Panel 4: The Shift from What to Why - Investigative Logging
 
-**Scene Description**: A comparison split-screen showing two approaches to a trading platform incident. On the left, the traditional response: engineers checking status dashboards and generic error counts. On the right, the observability approach: engineers examining detailed log entries that reveal exactly which trading instruments are failing validation and why, allowing them to quickly identify a data formatting issue affecting specific market transactions.
+### Scene Description
+
+ A comparison split-screen showing two approaches to a trading platform incident. On the left, the traditional response: engineers checking status dashboards and generic error counts. On the right, the observability approach: engineers examining detailed log entries that reveal exactly which trading instruments are failing validation and why, allowing them to quickly identify a data formatting issue affecting specific market transactions.
 
 ### Teaching Narrative
 
@@ -196,7 +204,9 @@ The operational efficiency gains were equally important—the detailed diagnosti
 
 ## Panel 5: The Cost of Invisibility - Business Impact of Poor Logging
 
-**Scene Description**: A boardroom where executives review the financial impact of a recent incident. Graphs show customer abandonment rates, transaction revenue losses, and increased support costs. A timeline compares resolution time between two similar incidents: one where poor logging extended diagnosis by hours, and another where comprehensive logging enabled rapid resolution. The cost difference is highlighted in bold red numbers.
+### Scene Description
+
+ A boardroom where executives review the financial impact of a recent incident. Graphs show customer abandonment rates, transaction revenue losses, and increased support costs. A timeline compares resolution time between two similar incidents: one where poor logging extended diagnosis by hours, and another where comprehensive logging enabled rapid resolution. The cost difference is highlighted in bold red numbers.
 
 ### Teaching Narrative
 
@@ -242,7 +252,9 @@ Perhaps most significantly, the provider's Net Promoter Score among small busine
 
 ## Panel 6: The Journey Ahead - From Reactive to Proactive
 
-**Scene Description**: A banking operations center transformed: walls of screens now displaying rich log analytics dashboards instead of simple status indicators. Engineers review pattern detection algorithms highlighting unusual transaction patterns before they become incidents. A timeline shows the evolution from reactive firefighting to proactive issue prevention, with customer satisfaction metrics steadily improving.
+### Scene Description
+
+ A banking operations center transformed: walls of screens now displaying rich log analytics dashboards instead of simple status indicators. Engineers review pattern detection algorithms highlighting unusual transaction patterns before they become incidents. A timeline shows the evolution from reactive firefighting to proactive issue prevention, with customer satisfaction metrics steadily improving.
 
 ### Teaching Narrative
 

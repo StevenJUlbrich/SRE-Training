@@ -32,7 +32,9 @@ Welcome to the dark art of data triage for financial systems—where your dreams
 ---
 ## Panel 1: The Volume Challenge - Why Banking Systems Need Sampling Strategies
 
-**Scene Description**: A bank's operations center with wall displays showing real-time transaction metrics. The screens display staggering numbers: 15,000 payment transactions per second during peak hours, 500,000 API calls per minute across digital channels, and 8 million trace spans being generated every minute. A data engineering team is gathered around a dashboard showing storage projections that indicate without sampling, the bank would need to store 50 terabytes of trace data daily. An SRE is explaining to a group of engineers how this volume makes 100% trace capture technically infeasible and financially impractical, even for a large financial institution.
+### Scene Description
+
+ A bank's operations center with wall displays showing real-time transaction metrics. The screens display staggering numbers: 15,000 payment transactions per second during peak hours, 500,000 API calls per minute across digital channels, and 8 million trace spans being generated every minute. A data engineering team is gathered around a dashboard showing storage projections that indicate without sampling, the bank would need to store 50 terabytes of trace data daily. An SRE is explaining to a group of engineers how this volume makes 100% trace capture technically infeasible and financially impractical, even for a large financial institution.
 
 ### Teaching Narrative
 
@@ -72,7 +74,9 @@ Perhaps most significantly, inadequate sampling creates an unsustainable observa
 
 ## Panel 2: Sampling Strategies for Transaction Criticality - The Financial Services Approach
 
-**Scene Description**: A collaborative workshop between business and technical teams at a financial institution. On a digital whiteboard, they've created a transaction criticality matrix categorizing different banking operations by business importance, risk level, and technical complexity. The matrix shows high-criticality transactions (international wire transfers, securities trades, large loans) at the top with 100% trace capture, medium-criticality transactions (routine payments, account inquiries) with intelligent sampling, and low-criticality operations (basic information requests, scheduled reports) with minimal sampling. An SRE is demonstrating a dynamic sampling system that automatically adjusts sampling rates based on transaction value, customer tier, and system conditions.
+### Scene Description
+
+ A collaborative workshop between business and technical teams at a financial institution. On a digital whiteboard, they've created a transaction criticality matrix categorizing different banking operations by business importance, risk level, and technical complexity. The matrix shows high-criticality transactions (international wire transfers, securities trades, large loans) at the top with 100% trace capture, medium-criticality transactions (routine payments, account inquiries) with intelligent sampling, and low-criticality operations (basic information requests, scheduled reports) with minimal sampling. An SRE is demonstrating a dynamic sampling system that automatically adjusts sampling rates based on transaction value, customer tier, and system conditions.
 
 ### Teaching Narrative
 
@@ -112,7 +116,9 @@ The regulatory dimension adds another critical consideration unique to banking. 
 
 ## Panel 3: Conditional and Adaptive Sampling - Responding to Banking System States
 
-**Scene Description**: A monitoring center during a partial system degradation affecting a credit card processing platform. On the main screens, real-time dashboards show a sudden increase in transaction latency for payment authorizations. An automated system immediately adjusts sampling strategies across the platform—increasing sampling rates for the affected card transaction types from 10% to 100%, while simultaneously reducing sampling for unaffected transaction types to compensate for the additional data volume. Timeline displays show how the sampling system automatically detected the anomaly, adjusted collection parameters, and preserved comprehensive trace data precisely for the transactions experiencing issues, without administrator intervention.
+### Scene Description
+
+ A monitoring center during a partial system degradation affecting a credit card processing platform. On the main screens, real-time dashboards show a sudden increase in transaction latency for payment authorizations. An automated system immediately adjusts sampling strategies across the platform—increasing sampling rates for the affected card transaction types from 10% to 100%, while simultaneously reducing sampling for unaffected transaction types to compensate for the additional data volume. Timeline displays show how the sampling system automatically detected the anomaly, adjusted collection parameters, and preserved comprehensive trace data precisely for the transactions experiencing issues, without administrator intervention.
 
 ### Teaching Narrative
 
@@ -156,7 +162,9 @@ The technical support cost of extended investigations due to insufficient diagno
 
 ## Panel 4: Statistical Validity in Partial Sampling - Maintaining Financial Accuracy
 
-**Scene Description**: A data science team is working with SRE engineers to validate sampling approaches. Their workstation displays statistical models analyzing different sampling rates across various banking transaction types. Charts show confidence intervals for key metrics at different sampling percentages. One display shows how a carefully designed 5% sampling strategy for retail banking transactions reliably reproduces the same performance patterns as 100% sampling, with error margins under 0.5%. Another visualization demonstrates how sampling strategies have been tuned differently for various banking domains—higher rates for high-variability trading operations, lower rates for predictable batch processes—while maintaining consistent statistical validity across all domains.
+### Scene Description
+
+ A data science team is working with SRE engineers to validate sampling approaches. Their workstation displays statistical models analyzing different sampling rates across various banking transaction types. Charts show confidence intervals for key metrics at different sampling percentages. One display shows how a carefully designed 5% sampling strategy for retail banking transactions reliably reproduces the same performance patterns as 100% sampling, with error margins under 0.5%. Another visualization demonstrates how sampling strategies have been tuned differently for various banking domains—higher rates for high-variability trading operations, lower rates for predictable batch processes—while maintaining consistent statistical validity across all domains.
 
 ### Teaching Narrative
 
@@ -200,7 +208,9 @@ Perhaps most significantly, unreliable sampling undermines confidence in the ent
 
 ## Panel 5: Sampling Bias Prevention - Ensuring Representative Trace Data
 
-**Scene Description**: A quality assurance review where data engineers and compliance analysts are evaluating the representativeness of sampled trace data. Visualization screens compare the distribution of various transaction attributes between the full population and the sampled subset. One chart shows customer segment distribution across all digital banking transactions versus traced transactions, confirming proportional representation. Another shows geographic distribution of payment origins, highlighting a previous bias where international transactions were oversampled compared to domestic ones. A data scientist is demonstrating a new sampling algorithm specifically designed to maintain proportional representation across critical business dimensions—ensuring the trace data accurately reflects the actual transaction mix.
+### Scene Description
+
+ A quality assurance review where data engineers and compliance analysts are evaluating the representativeness of sampled trace data. Visualization screens compare the distribution of various transaction attributes between the full population and the sampled subset. One chart shows customer segment distribution across all digital banking transactions versus traced transactions, confirming proportional representation. Another shows geographic distribution of payment origins, highlighting a previous bias where international transactions were oversampled compared to domestic ones. A data scientist is demonstrating a new sampling algorithm specifically designed to maintain proportional representation across critical business dimensions—ensuring the trace data accurately reflects the actual transaction mix.
 
 ### Teaching Narrative
 
@@ -246,7 +256,9 @@ Perhaps most significantly, biased sampling fundamentally undermines data-driven
 
 ## Panel 6: Retention Strategies - Balancing Operational and Regulatory Requirements
 
-**Scene Description**: A governance meeting with representatives from technology, compliance, legal, and business operations teams. The main screen shows a comprehensive trace data lifecycle management framework with different retention tiers based on transaction and data types. A visual timeline demonstrates different retention periods: 30 days of full trace detail for operational troubleshooting, 90 days of summarized traces for performance trending, 1 year of statistical aggregates for capacity planning, and 7 years of minimal compliance-related spans for specific transaction types subject to regulatory retention requirements. A compliance officer is reviewing how these retention policies align with financial regulations across different jurisdictions, while an SRE explains how data is automatically transformed and compressed as it moves through the retention tiers.
+### Scene Description
+
+ A governance meeting with representatives from technology, compliance, legal, and business operations teams. The main screen shows a comprehensive trace data lifecycle management framework with different retention tiers based on transaction and data types. A visual timeline demonstrates different retention periods: 30 days of full trace detail for operational troubleshooting, 90 days of summarized traces for performance trending, 1 year of statistical aggregates for capacity planning, and 7 years of minimal compliance-related spans for specific transaction types subject to regulatory retention requirements. A compliance officer is reviewing how these retention policies align with financial regulations across different jurisdictions, while an SRE explains how data is automatically transformed and compressed as it moves through the retention tiers.
 
 ### Teaching Narrative
 
@@ -292,7 +304,9 @@ The risk management perspective creates perhaps the most complex challenge, as r
 
 ## Panel 7: Sampling as a Dynamic Control - Operational Management of Trace Systems
 
-**Scene Description**: A capacity planning meeting for a bank's observability platform during the launch of a major new mobile banking feature. On the main screen, resource utilization charts show the current tracing infrastructure at 65% capacity with projections indicating the new feature could potentially push it beyond operational limits during peak periods. An SRE is demonstrating the dynamic sampling control system that will automatically protect the trace infrastructure—showing how it can progressively adjust sampling rates in response to utilization metrics, gracefully reducing capture for lower-priority transactions when approaching capacity thresholds while maintaining full visibility for critical operations. A scenario playback demonstrates how the system would have automatically responded during previous traffic spikes, ensuring the tracing platform itself remains reliable even under extreme load conditions.
+### Scene Description
+
+ A capacity planning meeting for a bank's observability platform during the launch of a major new mobile banking feature. On the main screen, resource utilization charts show the current tracing infrastructure at 65% capacity with projections indicating the new feature could potentially push it beyond operational limits during peak periods. An SRE is demonstrating the dynamic sampling control system that will automatically protect the trace infrastructure—showing how it can progressively adjust sampling rates in response to utilization metrics, gracefully reducing capture for lower-priority transactions when approaching capacity thresholds while maintaining full visibility for critical operations. A scenario playback demonstrates how the system would have automatically responded during previous traffic spikes, ensuring the tracing platform itself remains reliable even under extreme load conditions.
 
 ### Teaching Narrative
 

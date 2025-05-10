@@ -40,7 +40,9 @@ Welcome to the brutal, data-driven world where your precious “five nines” ar
 ---
 ## Panel 1: The Reliability Revolution - Moving Beyond Binary Uptime
 
-**Scene Description**: A bank's executive briefing where traditional uptime reports are being compared with a new SRE approach. On one wall, legacy dashboard shows simplistic "99.9% uptime" metrics for critical banking services. On the opposite wall, a modern SRE presents nuanced reliability measurements derived from log analysis: customer-impacting error rates by transaction type, degradation patterns across different banking functions, and impact-weighted reliability metrics. The stark contrast is evident as executives realize their "green" uptime indicators masked significant customer experience issues, with one pointing to a notable disconnect between their reported 99.9% availability and actual customer satisfaction metrics for mobile banking transactions.
+### Scene Description
+
+ A bank's executive briefing where traditional uptime reports are being compared with a new SRE approach. On one wall, legacy dashboard shows simplistic "99.9% uptime" metrics for critical banking services. On the opposite wall, a modern SRE presents nuanced reliability measurements derived from log analysis: customer-impacting error rates by transaction type, degradation patterns across different banking functions, and impact-weighted reliability metrics. The stark contrast is evident as executives realize their "green" uptime indicators masked significant customer experience issues, with one pointing to a notable disconnect between their reported 99.9% availability and actual customer satisfaction metrics for mobile banking transactions.
 
 ### Teaching Narrative
 
@@ -101,7 +103,9 @@ To transition from binary uptime to customer-focused reliability measurement:
 
 ## Panel 2: The SLI Foundation - Logs as Service Level Indicators
 
-**Scene Description**: A banking platform engineering workshop where SREs define service level indicators for different financial services. Interactive displays show how they're extracting SLIs directly from transaction logs: payment success rates calculated from authorization logs, authentication reliability measured through login attempt records, and customer onboarding completion rates derived from application process logs. Engineers demonstrate how these log-derived indicators provide precise visibility into actual customer experience compared to traditional infrastructure metrics. A real-time dashboard shows these SLIs updating as new transactions flow through the system, with clear correlation to business metrics like completed transactions and revenue generation.
+### Scene Description
+
+ A banking platform engineering workshop where SREs define service level indicators for different financial services. Interactive displays show how they're extracting SLIs directly from transaction logs: payment success rates calculated from authorization logs, authentication reliability measured through login attempt records, and customer onboarding completion rates derived from application process logs. Engineers demonstrate how these log-derived indicators provide precise visibility into actual customer experience compared to traditional infrastructure metrics. A real-time dashboard shows these SLIs updating as new transactions flow through the system, with clear correlation to business metrics like completed transactions and revenue generation.
 
 ### Teaching Narrative
 
@@ -164,7 +168,9 @@ To establish effective log-based SLIs:
 
 ## Panel 3: The SLO Definition - Setting Appropriate Reliability Targets
 
-**Scene Description**: A banking product strategy session where business and technology leaders negotiate Service Level Objectives for different financial services. Visualization boards display proposed reliability targets with business justification: 99.99% success rate for payment processing based on competitive analysis and revenue impact, 99.9% for account opening processes with less immediate financial impact, and 99% for informational services where occasional issues have minimal customer consequence. Financial analysts present models showing the relationship between reliability levels and business metrics—customer retention, transaction volume, support costs—while engineers explain the technical and operational investments required to achieve different reliability tiers. The collaborative session ends with formally documented SLOs that represent shared commitments between business and technology teams.
+### Scene Description
+
+ A banking product strategy session where business and technology leaders negotiate Service Level Objectives for different financial services. Visualization boards display proposed reliability targets with business justification: 99.99% success rate for payment processing based on competitive analysis and revenue impact, 99.9% for account opening processes with less immediate financial impact, and 99% for informational services where occasional issues have minimal customer consequence. Financial analysts present models showing the relationship between reliability levels and business metrics—customer retention, transaction volume, support costs—while engineers explain the technical and operational investments required to achieve different reliability tiers. The collaborative session ends with formally documented SLOs that represent shared commitments between business and technology teams.
 
 ### Teaching Narrative
 
@@ -227,7 +233,9 @@ To implement effective SLOs for banking services:
 
 ## Panel 4: The Error Budget Concept - Freedom to Innovate Within Limits
 
-**Scene Description**: A digital banking release planning session where SREs explain the error budget concept to product and development teams. Visualization displays show error budgets calculated from SLOs for different banking services: 0.01% allowable failure rate for payment processing equating to 4.38 hours of potential impact annually, specific error allocations for different release cycles, and current budget consumption tracking. Product managers discuss feature priorities in context of remaining error budgets, while development leaders evaluate the risk profile of proposed changes. The team ultimately decides to accelerate a major new payment feature release after seeing substantial remaining error budget, while deferring a risky infrastructure change that could exhaust their limited remaining capacity for potential customer impact in the authentication system.
+### Scene Description
+
+ A digital banking release planning session where SREs explain the error budget concept to product and development teams. Visualization displays show error budgets calculated from SLOs for different banking services: 0.01% allowable failure rate for payment processing equating to 4.38 hours of potential impact annually, specific error allocations for different release cycles, and current budget consumption tracking. Product managers discuss feature priorities in context of remaining error budgets, while development leaders evaluate the risk profile of proposed changes. The team ultimately decides to accelerate a major new payment feature release after seeing substantial remaining error budget, while deferring a risky infrastructure change that could exhaust their limited remaining capacity for potential customer impact in the authentication system.
 
 ### Teaching Narrative
 
@@ -297,7 +305,9 @@ To implement effective error budgets:
 
 ## Panel 5: The Measurement Implementation - Extracting SLIs from Logs
 
-**Scene Description**: A banking observability workshop where data engineers demonstrate practical SLI implementation. Code displays show how they extract reliability metrics directly from transaction logs: regular expressions identifying successful versus failed operations, aggregation pipelines calculating success percentages across time windows, classification logic distinguishing customer-impacting errors from background noise, and statistical processes normalizing measurements across different transaction volumes. Implementation diagrams illustrate their complete measurement architecture: log collection from distributed banking systems, centralized processing that transforms raw logs into reliability metrics, and visualization dashboards that track SLI performance against defined SLOs—all updated in near-real-time as new transactions flow through the system.
+### Scene Description
+
+ A banking observability workshop where data engineers demonstrate practical SLI implementation. Code displays show how they extract reliability metrics directly from transaction logs: regular expressions identifying successful versus failed operations, aggregation pipelines calculating success percentages across time windows, classification logic distinguishing customer-impacting errors from background noise, and statistical processes normalizing measurements across different transaction volumes. Implementation diagrams illustrate their complete measurement architecture: log collection from distributed banking systems, centralized processing that transforms raw logs into reliability metrics, and visualization dashboards that track SLI performance against defined SLOs—all updated in near-real-time as new transactions flow through the system.
 
 ### Teaching Narrative
 
@@ -371,7 +381,9 @@ To implement effective SLI extraction from logs:
 
 ## Panel 6: The Error Budget Policies - Establishing Reliability Guardrails
 
-**Scene Description**: A banking technology governance session where leadership teams define error budget policies for critical financial services. Policy documents displayed on screens establish explicit consequences when error budgets are exhausted: automatic feature freezes triggering when payment processing reliability drops below thresholds, scaled response protocols based on budget consumption rates, and explicit approval chains for exceptions. Timeline visualizations show how these policies would have affected past release cycles, highlighting both prevented incidents and accelerated innovation opportunities. Engineering and product leaders debate policy details, ultimately agreeing on balanced approaches that protect critical financial functions while enabling appropriate innovation velocity in different banking domains.
+### Scene Description
+
+ A banking technology governance session where leadership teams define error budget policies for critical financial services. Policy documents displayed on screens establish explicit consequences when error budgets are exhausted: automatic feature freezes triggering when payment processing reliability drops below thresholds, scaled response protocols based on budget consumption rates, and explicit approval chains for exceptions. Timeline visualizations show how these policies would have affected past release cycles, highlighting both prevented incidents and accelerated innovation opportunities. Engineering and product leaders debate policy details, ultimately agreeing on balanced approaches that protect critical financial functions while enabling appropriate innovation velocity in different banking domains.
 
 ### Teaching Narrative
 
@@ -455,7 +467,9 @@ To implement effective error budget policies:
 
 ## Panel 7: The Incident Analysis - Learning from Budget Consumption
 
-**Scene Description**: A post-incident review where banking SREs analyze a significant error budget impact from a recent trading platform outage. Data visualizations show detailed budget consumption analysis: specific transaction types affected, error patterns identified through log analysis, impact distribution across customer segments, and root cause categorization. The team methodically classifies the incident by cause category—adding it to historical analysis showing reliability trends by failure type. Implementation improvements are prioritized based on both incident severity and pattern frequency, with engineers identifying that similar database connection issues have consumed 57% of their quarterly error budget despite being only 23% of incidents—making connection pool redesign their highest reliability priority despite other more visible but less impactful issues.
+### Scene Description
+
+ A post-incident review where banking SREs analyze a significant error budget impact from a recent trading platform outage. Data visualizations show detailed budget consumption analysis: specific transaction types affected, error patterns identified through log analysis, impact distribution across customer segments, and root cause categorization. The team methodically classifies the incident by cause category—adding it to historical analysis showing reliability trends by failure type. Implementation improvements are prioritized based on both incident severity and pattern frequency, with engineers identifying that similar database connection issues have consumed 57% of their quarterly error budget despite being only 23% of incidents—making connection pool redesign their highest reliability priority despite other more visible but less impactful issues.
 
 ### Teaching Narrative
 
@@ -556,7 +570,9 @@ To implement effective incident analysis based on error budget impact:
 
 ## Panel 8: The Business Alignment - Translating Reliability to Revenue
 
-**Scene Description**: A quarterly business review where banking executives examine the financial impact of reliability engineering investments. Financial dashboards show explicit connections between reliability improvements and business outcomes: increased transaction completion rates driving revenue growth, reduced support contacts lowering operational costs, improved customer retention metrics following reliability enhancements, and competitive win rates against less reliable alternatives. ROI analysis demonstrates that a 1% improvement in payment processing reliability delivered 3.7% revenue increase through reduced abandonment and higher customer confidence, while fraud detection reliability enhancements reduced false positives by 23%, increasing legitimate transaction approvals. Executive decision-making visibly shifts from viewing reliability as technical overhead to recognizing it as revenue-generating investment.
+### Scene Description
+
+ A quarterly business review where banking executives examine the financial impact of reliability engineering investments. Financial dashboards show explicit connections between reliability improvements and business outcomes: increased transaction completion rates driving revenue growth, reduced support contacts lowering operational costs, improved customer retention metrics following reliability enhancements, and competitive win rates against less reliable alternatives. ROI analysis demonstrates that a 1% improvement in payment processing reliability delivered 3.7% revenue increase through reduced abandonment and higher customer confidence, while fraud detection reliability enhancements reduced false positives by 23%, increasing legitimate transaction approvals. Executive decision-making visibly shifts from viewing reliability as technical overhead to recognizing it as revenue-generating investment.
 
 ### Teaching Narrative
 
@@ -661,7 +677,9 @@ To create effective business alignment for reliability engineering:
 
 ## Panel 9: The Cultural Transformation - Shared Ownership of Reliability
 
-**Scene Description**: A banking platform town hall where product managers present reliability metrics alongside feature delivery for the first time. Their updated product dashboards show traditional metrics like feature completion and usage adoption alongside new reliability indicators—SLO performance, error budget status, and customer experience metrics derived from logs. Development teams describe how error budgets have transformed their release planning, with examples of both accelerated innovation when budgets permitted and focused reliability improvements when thresholds were approached. Team awards recognize both feature delivery and reliability contributions, while executive messaging explicitly emphasizes the balance between innovation and stability. The cultural shift is evident as reliability transforms from "an operations problem" to a shared product engineering concern integral to customer experience.
+### Scene Description
+
+ A banking platform town hall where product managers present reliability metrics alongside feature delivery for the first time. Their updated product dashboards show traditional metrics like feature completion and usage adoption alongside new reliability indicators—SLO performance, error budget status, and customer experience metrics derived from logs. Development teams describe how error budgets have transformed their release planning, with examples of both accelerated innovation when budgets permitted and focused reliability improvements when thresholds were approached. Team awards recognize both feature delivery and reliability contributions, while executive messaging explicitly emphasizes the balance between innovation and stability. The cultural shift is evident as reliability transforms from "an operations problem" to a shared product engineering concern integral to customer experience.
 
 ### Teaching Narrative
 
@@ -766,7 +784,9 @@ To implement effective cultural transformation for shared reliability ownership:
 
 ## Panel 10: The Advanced Techniques - Machine Learning for Reliability Prediction
 
-**Scene Description**: A financial technology innovation lab where data scientists demonstrate advanced reliability prediction capabilities. Visualization displays show machine learning models analyzing historical log patterns to predict potential reliability issues before they affect customers: subtle database performance degradation identified days before threshold violation, unusual error pattern frequencies flagged as emerging risks, and anomaly detection highlighting behavior deviations from established baselines. Engineers review dashboards showing predicted error budget impacts for different system components, with proactive remediation workflows triggered by high-confidence forecasts. A timeline comparison demonstrates how these predictive capabilities have shifted reliability management from reactive to preventive—addressing 67% of potential issues before any customer impact occurred.
+### Scene Description
+
+ A financial technology innovation lab where data scientists demonstrate advanced reliability prediction capabilities. Visualization displays show machine learning models analyzing historical log patterns to predict potential reliability issues before they affect customers: subtle database performance degradation identified days before threshold violation, unusual error pattern frequencies flagged as emerging risks, and anomaly detection highlighting behavior deviations from established baselines. Engineers review dashboards showing predicted error budget impacts for different system components, with proactive remediation workflows triggered by high-confidence forecasts. A timeline comparison demonstrates how these predictive capabilities have shifted reliability management from reactive to preventive—addressing 67% of potential issues before any customer impact occurred.
 
 ### Teaching Narrative
 

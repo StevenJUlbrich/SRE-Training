@@ -38,7 +38,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Reactive Trap - Moving Beyond "Search and Hope"
 
-**Scene Description**: Split-screen comparison of two banking incident response approaches. On the left, a frantic production support engineer desperately searches through logs using random keywords, constantly changing search terms, and jumping between systems as the incident timer shows customers have been unable to complete mortgage applications for over an hour. On the right, an SRE follows a structured methodology: defining the problem scope, identifying affected systems, establishing a timeline, and systematically narrowing the investigation—resolving a similar issue in under ten minutes through deliberate, evidence-based analysis rather than panicked searching.
+### Scene Description
+
+ Split-screen comparison of two banking incident response approaches. On the left, a frantic production support engineer desperately searches through logs using random keywords, constantly changing search terms, and jumping between systems as the incident timer shows customers have been unable to complete mortgage applications for over an hour. On the right, an SRE follows a structured methodology: defining the problem scope, identifying affected systems, establishing a timeline, and systematically narrowing the investigation—resolving a similar issue in under ten minutes through deliberate, evidence-based analysis rather than panicked searching.
 
 ### Teaching Narrative
 
@@ -89,7 +91,9 @@ To implement evidence-based investigation in your organization:
 
 ## Panel 2: The Problem Definition - Clarity Before Action
 
-**Scene Description**: A banking incident war room where an SRE facilitates the initial response to a reported payment processing issue. Rather than immediately diving into logs, they guide the team through a structured problem definition process. On a digital whiteboard, they document precise symptoms (which specific transaction types are failing, error messages, affected regions), impact scope (percentage of transactions affected, customer segments experiencing issues), and timeline boundaries (when the problem started, related changes or events). Team members contribute observations from different perspectives—customer service reporting specific error codes, operations noting affected services, and developers identifying recent deployments—creating a comprehensive problem definition before any log analysis begins.
+### Scene Description
+
+ A banking incident war room where an SRE facilitates the initial response to a reported payment processing issue. Rather than immediately diving into logs, they guide the team through a structured problem definition process. On a digital whiteboard, they document precise symptoms (which specific transaction types are failing, error messages, affected regions), impact scope (percentage of transactions affected, customer segments experiencing issues), and timeline boundaries (when the problem started, related changes or events). Team members contribute observations from different perspectives—customer service reporting specific error codes, operations noting affected services, and developers identifying recent deployments—creating a comprehensive problem definition before any log analysis begins.
 
 ### Teaching Narrative
 
@@ -143,7 +147,9 @@ To implement effective problem definition in your organization:
 
 ## Panel 3: The Timeline Construction - Establishing the Factual Sequence
 
-**Scene Description**: A digital forensics-style investigation of a trading platform incident. Large displays show a precisely constructed timeline of the incident, built from log timestamps across multiple systems. The visualization marks key events: the first appearance of increased latency in market data feeds, subsequent authentication timeouts, the beginning of order submission failures, and finally the complete platform unavailability. Color coding distinguishes confirmed facts from assumptions, with engineers methodically adding new evidence to the timeline as it's discovered. The team traces cascading failures through the system, using the timeline to establish cause-effect relationships instead of focusing only on the final symptom that prompted customer reports.
+### Scene Description
+
+ A digital forensics-style investigation of a trading platform incident. Large displays show a precisely constructed timeline of the incident, built from log timestamps across multiple systems. The visualization marks key events: the first appearance of increased latency in market data feeds, subsequent authentication timeouts, the beginning of order submission failures, and finally the complete platform unavailability. Color coding distinguishes confirmed facts from assumptions, with engineers methodically adding new evidence to the timeline as it's discovered. The team traces cascading failures through the system, using the timeline to establish cause-effect relationships instead of focusing only on the final symptom that prompted customer reports.
 
 ### Teaching Narrative
 
@@ -201,7 +207,9 @@ To implement effective timeline construction in your organization:
 
 ## Panel 4: The System Mapping - Visualizing the Transaction Flow
 
-**Scene Description**: A banking platform architecture room where engineers develop a system map during a customer onboarding incident. Starting with a simplified sketch of components involved in the customer journey, they progressively enhance the diagram with detailed connection points, data flows, and dependency relationships. As log evidence reveals the transaction path, they annotate the map with health status of each component: highlighting known-good systems in green (successfully logged transactions), confirmed problem areas in red (error logs), and unknown status in yellow (insufficient logging). This visual representation immediately focuses the investigation on the identity verification service showing errors, rather than the downstream systems experiencing the cascading effects most visible to customers.
+### Scene Description
+
+ A banking platform architecture room where engineers develop a system map during a customer onboarding incident. Starting with a simplified sketch of components involved in the customer journey, they progressively enhance the diagram with detailed connection points, data flows, and dependency relationships. As log evidence reveals the transaction path, they annotate the map with health status of each component: highlighting known-good systems in green (successfully logged transactions), confirmed problem areas in red (error logs), and unknown status in yellow (insufficient logging). This visual representation immediately focuses the investigation on the identity verification service showing errors, rather than the downstream systems experiencing the cascading effects most visible to customers.
 
 ### Teaching Narrative
 
@@ -255,7 +263,9 @@ To implement effective system mapping in your organization:
 
 ## Panel 5: The Signal Extraction - Finding Patterns in Log Noise
 
-**Scene Description**: A financial data analytics lab where SREs apply advanced filtering techniques to massive log volumes from a credit card processing platform. Screens display progressive refinement of millions of log entries: first filtering by relevant time period based on the incident timeline, then narrowing to specific transaction types affected, further refining by error categories, and finally applying statistical analysis to identify patterns in the remaining data. Visualizations compare normal processing patterns with anomalous behavior, immediately highlighting an unusual error spike occurring only for high-value international transactions processed through a specific payment gateway—a pattern impossible to detect through simple keyword searching.
+### Scene Description
+
+ A financial data analytics lab where SREs apply advanced filtering techniques to massive log volumes from a credit card processing platform. Screens display progressive refinement of millions of log entries: first filtering by relevant time period based on the incident timeline, then narrowing to specific transaction types affected, further refining by error categories, and finally applying statistical analysis to identify patterns in the remaining data. Visualizations compare normal processing patterns with anomalous behavior, immediately highlighting an unusual error spike occurring only for high-value international transactions processed through a specific payment gateway—a pattern impossible to detect through simple keyword searching.
 
 ### Teaching Narrative
 
@@ -311,7 +321,9 @@ To implement effective signal extraction in your organization:
 
 ## Panel 6: The Hypothesis Testing - From Patterns to Validation
 
-**Scene Description**: A banking incident response room where SREs have moved from observation to experimentation. Whiteboards display clearly articulated hypotheses about the root cause of a mobile banking authentication issue, with specific logs entries supporting each theory. Team members methodically design tests to validate these hypotheses: temporarily rerouting traffic patterns, examining logs from redundant systems handling similar workloads, analyzing behavior differences between affected and unaffected customer segments, and controlled reproduction attempts in pre-production environments. Log analysis shifts from passive observation to active validation as they collect evidence confirming their primary hypothesis—a certificate expiration affecting specific authentication flows—while conclusively ruling out several plausible alternatives.
+### Scene Description
+
+ A banking incident response room where SREs have moved from observation to experimentation. Whiteboards display clearly articulated hypotheses about the root cause of a mobile banking authentication issue, with specific logs entries supporting each theory. Team members methodically design tests to validate these hypotheses: temporarily rerouting traffic patterns, examining logs from redundant systems handling similar workloads, analyzing behavior differences between affected and unaffected customer segments, and controlled reproduction attempts in pre-production environments. Log analysis shifts from passive observation to active validation as they collect evidence confirming their primary hypothesis—a certificate expiration affecting specific authentication flows—while conclusively ruling out several plausible alternatives.
 
 ### Teaching Narrative
 
@@ -367,7 +379,9 @@ To implement effective hypothesis testing in your organization:
 
 ## Panel 7: The Service-Level Perspective - Connecting Logs to Customer Experience
 
-**Scene Description**: A digital banking experience center where traditional technical metrics are displayed alongside customer journey analytics during an incident. Split screens show both raw error logs and their translation into customer impact: authentication error rates visualized as percentage of affected login attempts, transaction failures mapped to customer journey abandonment points, and response time anomalies correlated with mobile app usage patterns. A timeline connects technical issues to customer experience metrics, with specialists analyzing not just what failed technically but how those failures impacted different customer segments—revealing that a seemingly minor API latency issue disproportionately affected high-value customers during peak usage periods.
+### Scene Description
+
+ A digital banking experience center where traditional technical metrics are displayed alongside customer journey analytics during an incident. Split screens show both raw error logs and their translation into customer impact: authentication error rates visualized as percentage of affected login attempts, transaction failures mapped to customer journey abandonment points, and response time anomalies correlated with mobile app usage patterns. A timeline connects technical issues to customer experience metrics, with specialists analyzing not just what failed technically but how those failures impacted different customer segments—revealing that a seemingly minor API latency issue disproportionately affected high-value customers during peak usage periods.
 
 ### Teaching Narrative
 
@@ -423,7 +437,9 @@ To implement effective service-level perspective in your organization:
 
 ## Panel 8: The Knowledge Capture - Turning Incidents into Organizational Learning
 
-**Scene Description**: A post-incident review session where an SRE team transforms their troubleshooting journey into structured knowledge. Rather than simply documenting the solution, they methodically capture their entire investigative process: the initial problem definition, timeline construction, system mapping, key log patterns that revealed the issue, hypotheses tested, and specific queries that proved most valuable. Engineers annotate log examples and queries for future reference, while also documenting observability gaps discovered during the investigation. The session concludes with specific action items to improve both system design and logging practices, turning a payment gateway incident into concrete reliability improvements.
+### Scene Description
+
+ A post-incident review session where an SRE team transforms their troubleshooting journey into structured knowledge. Rather than simply documenting the solution, they methodically capture their entire investigative process: the initial problem definition, timeline construction, system mapping, key log patterns that revealed the issue, hypotheses tested, and specific queries that proved most valuable. Engineers annotate log examples and queries for future reference, while also documenting observability gaps discovered during the investigation. The session concludes with specific action items to improve both system design and logging practices, turning a payment gateway incident into concrete reliability improvements.
 
 ### Teaching Narrative
 
@@ -479,7 +495,9 @@ To implement effective knowledge capture in your organization:
 
 ## Panel 9: The Tool-Enhanced Investigation - Beyond Manual Log Analysis
 
-**Scene Description**: A modern financial services operations center where SREs leverage specialized tools to enhance log investigation capabilities. Visualization displays show analysts using advanced techniques beyond basic log searching: anomaly detection algorithms automatically highlighting unusual error patterns in payment processing logs, machine learning models correlating performance issues across system boundaries, specialized visualization tools tracing complex transaction paths through dozens of services, and automated pattern recognition identifying emerging issues before they create customer impact. A historical dashboard shows how their capabilities have evolved from manual search-based investigation to these augmented approaches, with corresponding improvements in both resolution time and proactive detection.
+### Scene Description
+
+ A modern financial services operations center where SREs leverage specialized tools to enhance log investigation capabilities. Visualization displays show analysts using advanced techniques beyond basic log searching: anomaly detection algorithms automatically highlighting unusual error patterns in payment processing logs, machine learning models correlating performance issues across system boundaries, specialized visualization tools tracing complex transaction paths through dozens of services, and automated pattern recognition identifying emerging issues before they create customer impact. A historical dashboard shows how their capabilities have evolved from manual search-based investigation to these augmented approaches, with corresponding improvements in both resolution time and proactive detection.
 
 ### Teaching Narrative
 
@@ -535,7 +553,9 @@ To implement effective tool-enhanced investigation in your organization:
 
 ## Panel 10: The Preventive Evolution - From Reactive to Proactive
 
-**Scene Description**: A banking reliability center showing the evolution from reactive troubleshooting to proactive prevention. Timeline visualizations show how systematic log analysis has transformed: beginning with reactive investigation of customer-reported incidents, progressing to early detection through monitoring, advancing to predictive identification through pattern recognition, and finally reaching preventive reliability through automated remediation. Current dashboards show automated systems identifying emerging patterns in authentication logs that historically preceded outages, automatically adjusting capacity and traffic routing to prevent customer impact, while engineers focus on addressing root causes rather than symptoms. Performance metrics demonstrate dramatic improvements in customer experience measures as the organization evolved from reacting to incidents to preventing them entirely.
+### Scene Description
+
+ A banking reliability center showing the evolution from reactive troubleshooting to proactive prevention. Timeline visualizations show how systematic log analysis has transformed: beginning with reactive investigation of customer-reported incidents, progressing to early detection through monitoring, advancing to predictive identification through pattern recognition, and finally reaching preventive reliability through automated remediation. Current dashboards show automated systems identifying emerging patterns in authentication logs that historically preceded outages, automatically adjusting capacity and traffic routing to prevent customer impact, while engineers focus on addressing root causes rather than symptoms. Performance metrics demonstrate dramatic improvements in customer experience measures as the organization evolved from reacting to incidents to preventing them entirely.
 
 ### Teaching Narrative
 

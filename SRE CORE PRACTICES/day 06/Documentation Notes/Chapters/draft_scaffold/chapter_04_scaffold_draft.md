@@ -1,7 +1,9 @@
 # Chapter 4: Implementing SLIs - From Theory to Practice
 
 ## Panel 1: The SLI Implementation Canvas - A Structured Approach
-**Scene Description**: A diverse group of engineers is gathered around a large whiteboard structured like a canvas with sections labeled: "User Journeys," "Critical Capabilities," "Data Sources," "Instrumentation Points," "Collection Methods," and "Visualization." Sofia leads the session, filling in a template for a payment processing service SLI. Team members from different specialties—development, operations, product management, and business analysis—contribute insights to different sections. Colorful sticky notes cluster in each area as they build a comprehensive implementation plan. A "Banking Payment SLI Canvas" document template is visible on a nearby screen.
+### Scene Description
+
+ A diverse group of engineers is gathered around a large whiteboard structured like a canvas with sections labeled: "User Journeys," "Critical Capabilities," "Data Sources," "Instrumentation Points," "Collection Methods," and "Visualization." Sofia leads the session, filling in a template for a payment processing service SLI. Team members from different specialties—development, operations, product management, and business analysis—contribute insights to different sections. Colorful sticky notes cluster in each area as they build a comprehensive implementation plan. A "Banking Payment SLI Canvas" document template is visible on a nearby screen.
 
 ### Teaching Narrative
 Implementing SLIs in complex banking environments requires a structured approach that moves from concept to production. The SLI Implementation Canvas provides a comprehensive framework for this journey.
@@ -25,7 +27,9 @@ This systematic approach prevents common implementation pitfalls like collecting
 By using a consistent implementation framework, teams can methodically transform their theoretical understanding of SLIs into practical, production-ready measurements that accurately reflect customer experience.
 
 ## Panel 2: Data Source Selection - Finding the Right Signal
-**Scene Description**: An architecture review meeting showing a comprehensive diagram of a core banking platform. Engineers have mapped potential SLI data sources with color-coded tags: green for application logs, blue for API endpoints, yellow for database queries, purple for network monitoring. Raj is highlighting the tradeoffs between different sources, pointing to a recent incident where application logs missed a critical failure that was visible at the API gateway. A decision matrix on the wall helps evaluate each potential data source against criteria like "accuracy," "coverage," "collection overhead," and "retention period."
+### Scene Description
+
+ An architecture review meeting showing a comprehensive diagram of a core banking platform. Engineers have mapped potential SLI data sources with color-coded tags: green for application logs, blue for API endpoints, yellow for database queries, purple for network monitoring. Raj is highlighting the tradeoffs between different sources, pointing to a recent incident where application logs missed a critical failure that was visible at the API gateway. A decision matrix on the wall helps evaluate each potential data source against criteria like "accuracy," "coverage," "collection overhead," and "retention period."
 
 ### Teaching Narrative
 The foundation of any SLI implementation is selecting the right data source—the wellspring from which your measurements will flow. This critical choice impacts accuracy, completeness, and practicality of your metrics.
@@ -49,7 +53,9 @@ Each data source offers a different perspective on service health. The optimal a
 For SREs in banking environments, understanding these tradeoffs ensures metrics are built on appropriate data foundations. The right data source makes implementation simpler, measurements more accurate, and troubleshooting more effective during incidents.
 
 ## Panel 3: The Instrumentation Hierarchy - From Custom Code to Platforms
-**Scene Description**: A comparative demonstration showing three different approaches to SLI implementation. One engineer shows custom instrumentation code embedded in a banking application, highlighting the precision but significant maintenance overhead. Another demonstrates an agent-based approach using OpenTelemetry collectors deployed across services. A third shows a platform solution with prebuilt banking-specific dashboards. On a large screen, Sofia compares the approaches with a matrix showing "Time to Implement," "Accuracy," "Maintenance Cost," and "Scalability." Different services in their architecture are color-coded based on which approach is most suitable for each component.
+### Scene Description
+
+ A comparative demonstration showing three different approaches to SLI implementation. One engineer shows custom instrumentation code embedded in a banking application, highlighting the precision but significant maintenance overhead. Another demonstrates an agent-based approach using OpenTelemetry collectors deployed across services. A third shows a platform solution with prebuilt banking-specific dashboards. On a large screen, Sofia compares the approaches with a matrix showing "Time to Implement," "Accuracy," "Maintenance Cost," and "Scalability." Different services in their architecture are color-coded based on which approach is most suitable for each component.
 
 ### Teaching Narrative
 Implementing SLIs requires adding instrumentation—code and configurations that capture and transmit measurements. A hierarchical approach to instrumentation provides options for different services and maturity levels:
@@ -67,7 +73,9 @@ In banking environments with diverse technology stacks—from modern microservic
 The key insight for SREs implementing SLIs is that instrumentation should be proportional to service criticality and uniqueness. Not every service requires the same instrumentation approach, and strategic selection of methods optimizes both coverage and implementation efficiency.
 
 ## Panel 4: Collection Pipeline Design - Scaling for Banking Volumes
-**Scene Description**: An operations review meeting focused on a metrics pipeline handling millions of daily banking transactions. Engineers are examining a flow diagram showing how measurement data moves from source systems through collection, processing, storage, and finally to dashboards and alerts. Performance statistics are displayed at each stage. A recent incident timeline is highlighted, showing how the pipeline became overwhelmed during peak trading hours, causing metric delays and alert failures. The team is redesigning critical components, adding buffer capacity and redundancy at key points. On a monitoring screen, throughput tests validate the new design can handle 3x normal peak volume.
+### Scene Description
+
+ An operations review meeting focused on a metrics pipeline handling millions of daily banking transactions. Engineers are examining a flow diagram showing how measurement data moves from source systems through collection, processing, storage, and finally to dashboards and alerts. Performance statistics are displayed at each stage. A recent incident timeline is highlighted, showing how the pipeline became overwhelmed during peak trading hours, causing metric delays and alert failures. The team is redesigning critical components, adding buffer capacity and redundancy at key points. On a monitoring screen, throughput tests validate the new design can handle 3x normal peak volume.
 
 ### Teaching Narrative
 Banking systems often operate at extraordinary scale—processing millions of transactions daily—which creates unique challenges for SLI implementation. Collection pipeline design addresses how measurement data flows from instrumentation points to final visualization and alerting systems.
@@ -89,7 +97,9 @@ For banking SREs, the collection pipeline itself must be treated as a critical s
 A well-designed collection pipeline ensures that your carefully crafted SLIs accurately reflect service health even during extreme conditions—precisely when measurements are most critical.
 
 ## Panel 5: Validation and Testing - Ensuring SLI Accuracy
-**Scene Description**: A controlled testing environment where the team is deliberately introducing failures into a test banking system. Screens show a "Chaos Testing Dashboard" with various failure scenarios being executed: API timeouts, database latency increases, authentication service failures. Beside each test case, the SLI response is displayed and evaluated. Engineer Alex marks some tests as "Detected Correctly" while flagging others with "False Negative" or "Delayed Detection." Jamila is updating SLI implementations based on the findings, adjusting thresholds and collection methods. A checklist titled "SLI Validation" tracks progress across different failure scenarios and banking services.
+### Scene Description
+
+ A controlled testing environment where the team is deliberately introducing failures into a test banking system. Screens show a "Chaos Testing Dashboard" with various failure scenarios being executed: API timeouts, database latency increases, authentication service failures. Beside each test case, the SLI response is displayed and evaluated. Engineer Alex marks some tests as "Detected Correctly" while flagging others with "False Negative" or "Delayed Detection." Jamila is updating SLI implementations based on the findings, adjusting thresholds and collection methods. A checklist titled "SLI Validation" tracks progress across different failure scenarios and banking services.
 
 ### Teaching Narrative
 Implementing SLIs without validation is like deploying financial controls without auditing—dangerous and potentially misleading. Rigorous testing ensures your measurements will accurately detect real-world problems before you rely on them in production.
@@ -111,7 +121,9 @@ For banking systems where reliability directly impacts financial outcomes and re
 When transitioning from traditional monitoring to SLI-based approaches, this testing phase also provides valuable learning opportunities. Engineers can observe how different types of failures manifest in the new measurements, building intuition that will prove invaluable during real incidents.
 
 ## Panel 6: Making SLIs Accessible - Dashboards and Visualizations
-**Scene Description**: A dashboard design workshop where the team is creating visualizations for different audiences. A large display shows three dashboard versions of the same SLIs: a detailed technical dashboard with percentiles and error breakdowns for engineers, a service health summary for operations teams, and a business impact view for executives showing SLIs in terms of transaction values and customer experience. UX designer Maya demonstrates how the dashboards use consistent color schemes and terminology while adapting detail levels. On a whiteboard, principles like "Glanceability," "Progressive Disclosure," and "Business Context" are listed. Team members are using sticky notes to highlight the most important metrics for each audience.
+### Scene Description
+
+ A dashboard design workshop where the team is creating visualizations for different audiences. A large display shows three dashboard versions of the same SLIs: a detailed technical dashboard with percentiles and error breakdowns for engineers, a service health summary for operations teams, and a business impact view for executives showing SLIs in terms of transaction values and customer experience. UX designer Maya demonstrates how the dashboards use consistent color schemes and terminology while adapting detail levels. On a whiteboard, principles like "Glanceability," "Progressive Disclosure," and "Business Context" are listed. Team members are using sticky notes to highlight the most important metrics for each audience.
 
 ### Teaching Narrative
 Even perfectly implemented SLIs provide little value if they aren't accessible and meaningful to their intended audiences. Visualization design transforms raw measurements into actionable insights through effective dashboards tailored to different stakeholders.
@@ -136,7 +148,9 @@ Effective visualizations follow key principles:
 For banking SREs, creating these tailored views makes reliability data accessible throughout the organization—from technical teams to business stakeholders—and ensures that everyone shares a common understanding of service health based on consistent, well-implemented SLIs.
 
 ## Panel 7: Lifecycle Management - Sustaining SLI Quality
-**Scene Description**: A quarterly SLI review meeting showing the evolution of key metrics over time. A timeline on the wall tracks major changes to their payment SLIs, annotated with system changes, incident learnings, and implementation improvements. Team members present before/after comparisons of SLIs that have been refined. A governance board titled "SLI Lifecycle Management" shows processes for proposing, testing, deploying, and retiring metrics. Raj highlights a deprecated SLI that's scheduled for removal, explaining how it's been replaced by more accurate measurements. A calendar shows regular review cycles for different service domains.
+### Scene Description
+
+ A quarterly SLI review meeting showing the evolution of key metrics over time. A timeline on the wall tracks major changes to their payment SLIs, annotated with system changes, incident learnings, and implementation improvements. Team members present before/after comparisons of SLIs that have been refined. A governance board titled "SLI Lifecycle Management" shows processes for proposing, testing, deploying, and retiring metrics. Raj highlights a deprecated SLI that's scheduled for removal, explaining how it's been replaced by more accurate measurements. A calendar shows regular review cycles for different service domains.
 
 ### Teaching Narrative
 SLI implementation isn't a one-time project but an ongoing process that requires deliberate lifecycle management. Like other critical assets, metrics require governance, maintenance, and eventual retirement as systems and requirements evolve.

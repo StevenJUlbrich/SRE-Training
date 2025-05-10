@@ -51,7 +51,9 @@ This hybrid format combines the depth of written instruction with the visual eng
 # Chapter 1: From Monitoring to Observability - The Logging Evolution
 
 ## Panel 1: The Midnight Alert - Limitations of Traditional Monitoring
-**Scene Description**: A dimly lit operations center at 2 AM. A banking support engineer stares anxiously at multiple monitoring dashboards showing green status indicators while simultaneously fielding angry calls from customers unable to complete wire transfers. Confusion and frustration are evident as the disconnect between monitoring and reality creates chaos.
+### Scene Description
+
+ A dimly lit operations center at 2 AM. A banking support engineer stares anxiously at multiple monitoring dashboards showing green status indicators while simultaneously fielding angry calls from customers unable to complete wire transfers. Confusion and frustration are evident as the disconnect between monitoring and reality creates chaos.
 
 ### Teaching Narrative
 Traditional monitoring has created a dangerous illusion in banking systems: the belief that green dashboards equal customer satisfaction. This "monitoring mindset" focuses primarily on system health metrics (CPU, memory, disk space) while missing the true measure of reliability—customer experience. In banking, this disconnect is particularly perilous, as transaction processing systems can experience subtle failures that traditional threshold-based monitoring completely misses. What begins here as confusion will evolve throughout our journey into a fundamentally different approach to understanding system behavior through comprehensive logging practices.

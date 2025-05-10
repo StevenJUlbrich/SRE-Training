@@ -39,7 +39,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Responsibility Gap - From Siloed Support to End-to-End Ownership
 
-**Scene Description**: A large war room filled with various banking teams during a major incident. Different specialists sit at separate tables - database administrators huddle around monitoring screens, application support teams review logs, network engineers examine topology maps, while business representatives pace anxiously. A payment processing outage timer on a wall screen shows 47 minutes. Multiple teams point at each other, with speech bubbles showing blame-shifting: "The database is responding normally," "The application logs show no errors," "Network latency is within parameters." Meanwhile, a frustrated executive asks, "Who actually owns this service?" No one raises their hand.
+### Scene Description
+
+ A large war room filled with various banking teams during a major incident. Different specialists sit at separate tables - database administrators huddle around monitoring screens, application support teams review logs, network engineers examine topology maps, while business representatives pace anxiously. A payment processing outage timer on a wall screen shows 47 minutes. Multiple teams point at each other, with speech bubbles showing blame-shifting: "The database is responding normally," "The application logs show no errors," "Network latency is within parameters." Meanwhile, a frustrated executive asks, "Who actually owns this service?" No one raises their hand.
 
 ### Teaching Narrative
 
@@ -96,7 +98,9 @@ To transition from siloed support to end-to-end service ownership, financial ins
 
 ## Panel 2: Defining Clear Ownership Boundaries in Microservice Architectures
 
-**Scene Description**: A digital banking architecture workshop. A diverse team gathered around a large touchscreen displaying a complex microservice map of a mobile banking platform. A lead SRE is drawing red boundaries around clusters of services, while attaching virtual name cards to each bounded context. Team members are actively discussing, with speech bubbles showing questions like: "Where exactly does the payment service end and the notification service begin?" "Who's responsible when authentication works but authorization fails?" "How do we handle shared dependencies?" On a whiteboard, someone has written "Ownership = Service Perimeter + Customer Journey + Upstream Dependencies."
+### Scene Description
+
+ A digital banking architecture workshop. A diverse team gathered around a large touchscreen displaying a complex microservice map of a mobile banking platform. A lead SRE is drawing red boundaries around clusters of services, while attaching virtual name cards to each bounded context. Team members are actively discussing, with speech bubbles showing questions like: "Where exactly does the payment service end and the notification service begin?" "Who's responsible when authentication works but authorization fails?" "How do we handle shared dependencies?" On a whiteboard, someone has written "Ownership = Service Perimeter + Customer Journey + Upstream Dependencies."
 
 ### Teaching Narrative
 
@@ -159,7 +163,9 @@ To establish clear ownership boundaries in microservice architectures, financial
 
 ## Panel 3: From Reactive Response to Proactive Service Health
 
-**Scene Description**: A service health operations center with a "before" and "after" split-screen visualization. On the "before" side, a chaotic NOC (Network Operations Center) with walls of red alerts, staff frantically responding to tickets, and management demanding status updates. On the "after" side, a calm SRE workspace where engineers are reviewing dashboards showing customer journey success rates, conducting a proactive chaos engineering experiment on a payment service, while another team member is updating service documentation. A visible "Error Budget" display shows 97.3% remaining for the quarter, and a "Last Major Incident" counter shows 47 days.
+### Scene Description
+
+ A service health operations center with a "before" and "after" split-screen visualization. On the "before" side, a chaotic NOC (Network Operations Center) with walls of red alerts, staff frantically responding to tickets, and management demanding status updates. On the "after" side, a calm SRE workspace where engineers are reviewing dashboards showing customer journey success rates, conducting a proactive chaos engineering experiment on a payment service, while another team member is updating service documentation. A visible "Error Budget" display shows 97.3% remaining for the quarter, and a "Last Major Incident" counter shows 47 days.
 
 ### Teaching Narrative
 
@@ -220,7 +226,9 @@ To transition from reactive response to proactive service health, financial inst
 
 ## Panel 4: Building T-Shaped Teams for Service Ownership
 
-**Scene Description**: A banking technology team's war room transformed into a collaboration space with modular workstations. Team members wear multiple symbolic "hats" represented by icons floating above them - one engineer has both database and security symbols, another shows API and UI expertise indicators. They're gathered around a holographic display of a payment service architecture, collectively debugging a latency issue. A skills matrix on the wall shows each team member's depth (vertical bar) in their specialty and breadth (horizontal bar) across disciplines. A large sign reads: "We build it, we run it, we improve it."
+### Scene Description
+
+ A banking technology team's war room transformed into a collaboration space with modular workstations. Team members wear multiple symbolic "hats" represented by icons floating above them - one engineer has both database and security symbols, another shows API and UI expertise indicators. They're gathered around a holographic display of a payment service architecture, collectively debugging a latency issue. A skills matrix on the wall shows each team member's depth (vertical bar) in their specialty and breadth (horizontal bar) across disciplines. A large sign reads: "We build it, we run it, we improve it."
 
 ### Teaching Narrative
 
@@ -288,7 +296,9 @@ To build effective T-shaped teams for service ownership, financial institutions 
 
 ## Panel 5: Service Level Objectives as Ownership Contracts
 
-**Scene Description**: A formal meeting between a digital banking product team and their SRE service owners. They're reviewing a printed "Service Level Objective Contract" document with signatures from both business and technical stakeholders. The contract prominently displays metrics like "99.95% successful payment completion rate," "95% of transactions processed under 500ms," and "99.9% fraud detection accuracy." A historical graph shows SLO performance trending upward over six months. Business representatives are pointing to revenue impact figures directly correlated with reliability improvements, while SREs are explaining a recent controlled error budget expenditure to accelerate a feature release.
+### Scene Description
+
+ A formal meeting between a digital banking product team and their SRE service owners. They're reviewing a printed "Service Level Objective Contract" document with signatures from both business and technical stakeholders. The contract prominently displays metrics like "99.95% successful payment completion rate," "95% of transactions processed under 500ms," and "99.9% fraud detection accuracy." A historical graph shows SLO performance trending upward over six months. Business representatives are pointing to revenue impact figures directly correlated with reliability improvements, while SREs are explaining a recent controlled error budget expenditure to accelerate a feature release.
 
 ### Teaching Narrative
 
@@ -355,7 +365,9 @@ To implement Service Level Objectives as ownership contracts, financial institut
 
 ## Panel 6: Production Readiness as an Ownership Discipline
 
-**Scene Description**: A pre-launch review meeting for a new mobile banking feature. The room is divided between developers eager to ship (shown with excited expressions and "Launch Now!" mugs) and SRE service owners conducting a methodical readiness assessment (shown with clipboards and "Reliability First" badges). On a large screen, a comprehensive checklist shows categories: "Observability," "Deployment Safety," "Capacity Planning," "Failure Modes," "Data Management," and "Operational Procedures." Some items are checked green, others show amber warnings, and a few critical items remain red. Speech bubbles show an SRE asking: "What happens if the payment gateway timeouts increase during peak holiday shopping?" and "How will we roll back if the feature causes unexpected database load?"
+### Scene Description
+
+ A pre-launch review meeting for a new mobile banking feature. The room is divided between developers eager to ship (shown with excited expressions and "Launch Now!" mugs) and SRE service owners conducting a methodical readiness assessment (shown with clipboards and "Reliability First" badges). On a large screen, a comprehensive checklist shows categories: "Observability," "Deployment Safety," "Capacity Planning," "Failure Modes," "Data Management," and "Operational Procedures." Some items are checked green, others show amber warnings, and a few critical items remain red. Speech bubbles show an SRE asking: "What happens if the payment gateway timeouts increase during peak holiday shopping?" and "How will we roll back if the feature causes unexpected database load?"
 
 ### Teaching Narrative
 
@@ -422,7 +434,9 @@ To implement production readiness as an ownership discipline, financial institut
 
 ## Panel 7: Knowledge Management as a Service Ownership Responsibility
 
-**Scene Description**: A banking technology team's collaborative workspace featuring a comprehensive digital "Service Knowledge Center." Team members are actively updating different sections: one engineer is recording the resolution steps from a recent incident, another is updating architecture diagrams after a deployment, while a third is creating a video walkthrough of debugging procedures for a complex transaction flow. Multiple screens show different aspects of service documentation: runbooks, architecture maps, dependency graphs, known failure modes, and performance characteristics. A timeline visualization shows the team's knowledge capturing cadence with regular contributions after incidents, during feature deployments, and through scheduled documentation sprints.
+### Scene Description
+
+ A banking technology team's collaborative workspace featuring a comprehensive digital "Service Knowledge Center." Team members are actively updating different sections: one engineer is recording the resolution steps from a recent incident, another is updating architecture diagrams after a deployment, while a third is creating a video walkthrough of debugging procedures for a complex transaction flow. Multiple screens show different aspects of service documentation: runbooks, architecture maps, dependency graphs, known failure modes, and performance characteristics. A timeline visualization shows the team's knowledge capturing cadence with regular contributions after incidents, during feature deployments, and through scheduled documentation sprints.
 
 ### Teaching Narrative
 

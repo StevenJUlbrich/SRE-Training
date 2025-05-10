@@ -31,7 +31,9 @@ Welcome to the dark art of correlation and pattern recognition: the difference b
 ---
 ## Panel 1: Temporal Correlation - The Power of Timeline Analysis
 
-**Scene Description**: A banking incident room where a complex payment processing issue is under investigation. The focal point is an interactive digital timeline spanning multiple displays. Engineers have plotted various system events chronologically: deployment changes, configuration updates, traffic spikes, error rate increases, database slowdowns, and customer complaint surges. A senior SRE named Aisha uses gesture controls to manipulate the timeline, compressing and expanding different time periods. She highlights a critical sequence: a configuration change, followed by a gradual database connection pool exhaustion, culminating in payment failures exactly 27 minutes later. Team members are annotating this sequence, drawing causal connections between events that appeared unrelated when viewed in isolation.
+### Scene Description
+
+ A banking incident room where a complex payment processing issue is under investigation. The focal point is an interactive digital timeline spanning multiple displays. Engineers have plotted various system events chronologically: deployment changes, configuration updates, traffic spikes, error rate increases, database slowdowns, and customer complaint surges. A senior SRE named Aisha uses gesture controls to manipulate the timeline, compressing and expanding different time periods. She highlights a critical sequence: a configuration change, followed by a gradual database connection pool exhaustion, culminating in payment failures exactly 27 minutes later. Team members are annotating this sequence, drawing causal connections between events that appeared unrelated when viewed in isolation.
 
 ### Teaching Narrative
 
@@ -63,7 +65,9 @@ The failure to identify temporal correlations in this incident resulted in signi
 
 ## Panel 2: Spatial Correlation - Mapping System Relationships
 
-**Scene Description**: A large operations center where banking systems are visualized as an interactive, three-dimensional service map projected on a central holographic display. During an ongoing incident, the team uses this spatial representation to track a problem moving through their architecture. The visualization highlights traffic flows, dependency relationships, and health status for each component. Red indicators show error rates propagating from a core authentication service outward to dependent systems. An engineer uses the map to identify an unexpected dependency path where trading services are affected by authentication issues despite supposed isolation through circuit breakers. The team traces this previously unknown relationship, revealing an architectural weakness invisible in traditional monitoring views.
+### Scene Description
+
+ A large operations center where banking systems are visualized as an interactive, three-dimensional service map projected on a central holographic display. During an ongoing incident, the team uses this spatial representation to track a problem moving through their architecture. The visualization highlights traffic flows, dependency relationships, and health status for each component. Red indicators show error rates propagating from a core authentication service outward to dependent systems. An engineer uses the map to identify an unexpected dependency path where trading services are affected by authentication issues despite supposed isolation through circuit breakers. The team traces this previously unknown relationship, revealing an architectural weakness invisible in traditional monitoring views.
 
 ### Teaching Narrative
 
@@ -95,7 +99,9 @@ The failure to identify spatial correlations in this incident resulted in substa
 
 ## Panel 3: Pattern Recognition - The Signature of Failure
 
-**Scene Description**: A banking SRE team reviews historical incident data using an advanced pattern recognition system. Multiple screens display different views of the same incidents: time-series visualizations of metrics, heat maps of error distributions, and machine learning-generated pattern clusters. The system has identified a distinctive "signature" that precedes payment processing failures: a specific sequence of memory utilization patterns, followed by increasing database connection times, culminating in a distinctive error log pattern. An engineer points to a real-time dashboard where this exact pattern is beginning to emerge in a production system. The team initiates proactive intervention measures before any customer-impacting failures occur, referencing a playbook specifically designed for this signature.
+### Scene Description
+
+ A banking SRE team reviews historical incident data using an advanced pattern recognition system. Multiple screens display different views of the same incidents: time-series visualizations of metrics, heat maps of error distributions, and machine learning-generated pattern clusters. The system has identified a distinctive "signature" that precedes payment processing failures: a specific sequence of memory utilization patterns, followed by increasing database connection times, culminating in a distinctive error log pattern. An engineer points to a real-time dashboard where this exact pattern is beginning to emerge in a production system. The team initiates proactive intervention measures before any customer-impacting failures occur, referencing a playbook specifically designed for this signature.
 
 ### Teaching Narrative
 
@@ -127,7 +133,9 @@ The implementation of pattern recognition for authentication failures delivers s
 
 ## Panel 4: Anomaly Correlation - Finding the Outlier Signal
 
-**Scene Description**: A banking analytics center during an unusual trading platform incident. Engineers examine dashboards showing hundreds of metrics that all appear normal according to traditional thresholds. A specialized anomaly detection system runs alongside conventional monitoring, highlighting subtle statistical deviations from established baselines. An analyst points to a seemingly minor anomaly—a 3% increase in authentication token creation rate that wouldn't trigger standard alerts but represents a statistically significant deviation from the normal pattern. The team correlates this with other subtle anomalies: slightly increased memory usage in specific services and marginally elevated response times for certain API endpoints. Together, these correlated anomalies reveal a sophisticated attack pattern attempting to exploit the trading platform through credential stuffing, despite no individual metric exceeding traditional alert thresholds.
+### Scene Description
+
+ A banking analytics center during an unusual trading platform incident. Engineers examine dashboards showing hundreds of metrics that all appear normal according to traditional thresholds. A specialized anomaly detection system runs alongside conventional monitoring, highlighting subtle statistical deviations from established baselines. An analyst points to a seemingly minor anomaly—a 3% increase in authentication token creation rate that wouldn't trigger standard alerts but represents a statistically significant deviation from the normal pattern. The team correlates this with other subtle anomalies: slightly increased memory usage in specific services and marginally elevated response times for certain API endpoints. Together, these correlated anomalies reveal a sophisticated attack pattern attempting to exploit the trading platform through credential stuffing, despite no individual metric exceeding traditional alert thresholds.
 
 ### Teaching Narrative
 
@@ -159,7 +167,9 @@ The implementation of anomaly correlation for subtle performance degradation del
 
 ## Panel 5: Causal Inference - Beyond Correlation to Causation
 
-**Scene Description**: A banking incident war room where an investigation has progressed beyond initial correlation. A complex diagram dominates the main wall, showing not just which metrics and events correlate but proposed causal relationships between them. The team uses an experimental approach to test these relationships: temporarily adjusting specific parameters, introducing controlled test traffic, and observing downstream effects. An engineer documents a series of hypothesis tests on a digital whiteboard, systematically eliminating correlations that proved coincidental rather than causal. The team leader updates a causal inference model, refining their understanding of the actual failure mechanisms rather than just the observable symptoms, gradually constructing a verified causation chain from an initial database configuration change to the ultimate customer-facing payment failures.
+### Scene Description
+
+ A banking incident war room where an investigation has progressed beyond initial correlation. A complex diagram dominates the main wall, showing not just which metrics and events correlate but proposed causal relationships between them. The team uses an experimental approach to test these relationships: temporarily adjusting specific parameters, introducing controlled test traffic, and observing downstream effects. An engineer documents a series of hypothesis tests on a digital whiteboard, systematically eliminating correlations that proved coincidental rather than causal. The team leader updates a causal inference model, refining their understanding of the actual failure mechanisms rather than just the observable symptoms, gradually constructing a verified causation chain from an initial database configuration change to the ultimate customer-facing payment failures.
 
 ### Teaching Narrative
 
@@ -191,7 +201,9 @@ The implementation of causal inference for the corporate banking platform delive
 
 ## Panel 6: Cross-Stack Correlation - Connecting All Layers
 
-**Scene Description**: A comprehensive banking system monitoring center with specialized areas for different technology layers—infrastructure, networking, databases, applications, and business processes. During a major incident, representatives from each domain work at a shared correlation station in the center of the room. They use a unique visualization system that shows vertical relationships across the entire technology stack. A performance degradation initially observed in customer-facing investment transactions is traced downward through the stack: from API latency to application server thread exhaustion, to database connection pool saturation, and finally to a specific network switch experiencing intermittent hardware issues. The team connects metrics from completely different monitoring systems that individually showed only partial perspectives, revealing how a hardware issue four layers deep manifests as a business impact at the top level.
+### Scene Description
+
+ A comprehensive banking system monitoring center with specialized areas for different technology layers—infrastructure, networking, databases, applications, and business processes. During a major incident, representatives from each domain work at a shared correlation station in the center of the room. They use a unique visualization system that shows vertical relationships across the entire technology stack. A performance degradation initially observed in customer-facing investment transactions is traced downward through the stack: from API latency to application server thread exhaustion, to database connection pool saturation, and finally to a specific network switch experiencing intermittent hardware issues. The team connects metrics from completely different monitoring systems that individually showed only partial perspectives, revealing how a hardware issue four layers deep manifests as a business impact at the top level.
 
 ### Teaching Narrative
 
@@ -223,7 +235,9 @@ The implementation of cross-stack correlation for the mortgage application syste
 
 ## Panel 7: Pattern Library - Building Institutional Knowledge
 
-**Scene Description**: A banking SRE team works in a knowledge management center with a sophisticated pattern library system. Digital displays show a taxonomically organized collection of failure patterns, each with distinctive signatures, causal mechanisms, and resolution approaches. Engineers are adding a newly discovered pattern to the library—documenting the metric correlations, event sequences, and system behaviors that characterize a specific type of payment processing bottleneck. The pattern entry includes interactive visualizations, narrative descriptions, and links to historical incidents exhibiting this signature. In another area, a junior engineer investigates a new alert by comparing current system behavior against the pattern library, quickly matching the emerging symptoms to a known pattern and implementing the documented resolution approach without requiring escalation.
+### Scene Description
+
+ A banking SRE team works in a knowledge management center with a sophisticated pattern library system. Digital displays show a taxonomically organized collection of failure patterns, each with distinctive signatures, causal mechanisms, and resolution approaches. Engineers are adding a newly discovered pattern to the library—documenting the metric correlations, event sequences, and system behaviors that characterize a specific type of payment processing bottleneck. The pattern entry includes interactive visualizations, narrative descriptions, and links to historical incidents exhibiting this signature. In another area, a junior engineer investigates a new alert by comparing current system behavior against the pattern library, quickly matching the emerging symptoms to a known pattern and implementing the documented resolution approach without requiring escalation.
 
 ### Teaching Narrative
 

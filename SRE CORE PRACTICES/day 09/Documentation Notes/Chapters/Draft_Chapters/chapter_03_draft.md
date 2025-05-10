@@ -41,7 +41,9 @@ ______________________________________________________________________
 
 ## Panel 1: Beyond Uptime - The Customer Experience Perspective
 
-**Scene Description**: A war room during an incident. Several engineers stare at dashboards showing 99.9% uptime across all services, while a large display shows a social media feed filled with customer complaints. A manager points to the contradiction between green dashboards and angry customers, with speech bubbles expressing "Our monitoring says everything's fine, but our customers disagree."
+### Scene Description
+
+ A war room during an incident. Several engineers stare at dashboards showing 99.9% uptime across all services, while a large display shows a social media feed filled with customer complaints. A manager points to the contradiction between green dashboards and angry customers, with speech bubbles expressing "Our monitoring says everything's fine, but our customers disagree."
 
 ### Teaching Narrative
 
@@ -101,7 +103,9 @@ To redefine reliability through the customer lens, follow these actionable steps
 
 ## Panel 2: Customer Journey Mapping for Reliability
 
-**Scene Description**: A diverse team works around a conference table covered with a large diagram showing a banking customer's journey from logging in to completing a wire transfer. The diagram highlights multiple touchpoints across different services. An SRE is marking critical points in red, while a UX designer and product manager provide input. Notes on the diagram indicate failure impacts at different stages.
+### Scene Description
+
+ A diverse team works around a conference table covered with a large diagram showing a banking customer's journey from logging in to completing a wire transfer. The diagram highlights multiple touchpoints across different services. An SRE is marking critical points in red, while a UX designer and product manager provide input. Notes on the diagram indicate failure impacts at different stages.
 
 ### Teaching Narrative
 
@@ -161,7 +165,9 @@ To implement effective customer journey mapping for reliability, follow these st
 
 ## Panel 3: Crafting SLIs That Matter to Customers
 
-**Scene Description**: A whiteboard session where an experienced SRE is teaching junior team members. The whiteboard shows various metrics crossed out (CPU utilization, memory usage, request counts) and replaced with customer-focused alternatives. A speech bubble asks, "But how do we know which metrics actually matter to customers?" The SRE points to a diagram showing how to derive metrics from customer journeys.
+### Scene Description
+
+ A whiteboard session where an experienced SRE is teaching junior team members. The whiteboard shows various metrics crossed out (CPU utilization, memory usage, request counts) and replaced with customer-focused alternatives. A speech bubble asks, "But how do we know which metrics actually matter to customers?" The SRE points to a diagram showing how to derive metrics from customer journeys.
 
 ### Teaching Narrative
 
@@ -222,7 +228,9 @@ To develop SLIs that genuinely reflect customer experience, follow these impleme
 
 ## Panel 4: The Reliability and Revenue Connection
 
-**Scene Description**: A boardroom meeting where an SRE presents a graph showing the correlation between transaction reliability drops and revenue impact. The graph demonstrates how even small reliability degradations trigger dramatic drops in transaction volume. Banking executives look concerned as one asks, "So you're saying a 0.5% decrease in payment reliability cost us $2.3 million last month?"
+### Scene Description
+
+ A boardroom meeting where an SRE presents a graph showing the correlation between transaction reliability drops and revenue impact. The graph demonstrates how even small reliability degradations trigger dramatic drops in transaction volume. Banking executives look concerned as one asks, "So you're saying a 0.5% decrease in payment reliability cost us $2.3 million last month?"
 
 ### Teaching Narrative
 
@@ -284,7 +292,9 @@ To effectively establish and communicate the reliability-revenue connection, imp
 
 ## Panel 5: Defining Reliability Targets with Error Budgets
 
-**Scene Description**: A collaborative planning session between SRE, product, and business teams. A large digital board displays a visualization of an error budget with consumed and remaining portions. The visualization shows how feature deployments have consumed portions of the budget, with annotations of customer impact. A product manager points to the remaining budget asking, "So we have this much reliability margin for our next release?"
+### Scene Description
+
+ A collaborative planning session between SRE, product, and business teams. A large digital board displays a visualization of an error budget with consumed and remaining portions. The visualization shows how feature deployments have consumed portions of the budget, with annotations of customer impact. A product manager points to the remaining budget asking, "So we have this much reliability margin for our next release?"
 
 ### Teaching Narrative
 
@@ -345,7 +355,9 @@ To implement effective error budgets in your banking environment, follow these s
 
 ## Panel 6: Reliability as a Competitive Advantage
 
-**Scene Description**: A marketing team and SRE team in collaborative discussion. Charts show customer retention rates correlated with service reliability. A competitive analysis board displays reliability metrics for several banking competitors, highlighting areas where improved reliability creates market differentiation. Marketing materials emphasize reliability statistics as a key selling point.
+### Scene Description
+
+ A marketing team and SRE team in collaborative discussion. Charts show customer retention rates correlated with service reliability. A competitive analysis board displays reliability metrics for several banking competitors, highlighting areas where improved reliability creates market differentiation. Marketing materials emphasize reliability statistics as a key selling point.
 
 ### Teaching Narrative
 
@@ -407,7 +419,9 @@ To leverage reliability as a competitive advantage, implement these steps:
 
 ## Panel 7: Building Customer-Centric Alerting Systems
 
-**Scene Description**: An SRE redesigning an alert dashboard. The old system shows hundreds of technical alerts categorized by service, while the new design shows fewer alerts organized by customer journey stages. A timeline visualization demonstrates how multiple technical alerts are consolidated into a single customer-impacting incident. Team members look relieved at the reduced alert noise.
+### Scene Description
+
+ An SRE redesigning an alert dashboard. The old system shows hundreds of technical alerts categorized by service, while the new design shows fewer alerts organized by customer journey stages. A timeline visualization demonstrates how multiple technical alerts are consolidated into a single customer-impacting incident. Team members look relieved at the reduced alert noise.
 
 ### Teaching Narrative
 

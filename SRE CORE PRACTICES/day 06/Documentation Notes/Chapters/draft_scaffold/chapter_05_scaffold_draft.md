@@ -1,7 +1,9 @@
 # Chapter 5: Service-Level Objectives (SLOs) - Setting Reliability Targets
 
 ## Panel 1: From Measurement to Objective - The SLI/SLO Relationship
-**Scene Description**: A strategic planning session in a modern bank's technology headquarters. On a large digital whiteboard, Sofia draws a clear progression from raw metrics to SLIs and then to SLOs. For their payment processing service, she shows how the SLI "99.2% of payments processed within 2 seconds" becomes the SLO "99.9% of payments will process within 2 seconds over a 28-day window." Team members look intently at the board as she highlights the gap between current performance and target. A colorful "reliability journey" timeline along the bottom of the board shows incremental targets over the next six months. The bank's CTO stands at the back of the room, nodding approvingly.
+### Scene Description
+
+ A strategic planning session in a modern bank's technology headquarters. On a large digital whiteboard, Sofia draws a clear progression from raw metrics to SLIs and then to SLOs. For their payment processing service, she shows how the SLI "99.2% of payments processed within 2 seconds" becomes the SLO "99.9% of payments will process within 2 seconds over a 28-day window." Team members look intently at the board as she highlights the gap between current performance and target. A colorful "reliability journey" timeline along the bottom of the board shows incremental targets over the next six months. The bank's CTO stands at the back of the room, nodding approvingly.
 
 ### Teaching Narrative
 Service Level Objectives (SLOs) transform measurements into commitments by adding three critical elements to SLIs: a target level, a time window, and implicit prioritization.
@@ -18,7 +20,9 @@ This distinction is particularly important in banking environments, where specif
 For production support engineers transitioning to SRE roles, this shift introduces a new dimension of accountability—not just detecting and resolving issues, but maintaining service performance within predefined boundaries over time.
 
 ## Panel 2: The Target Selection Dilemma - Finding the Right Number
-**Scene Description**: A cross-functional workshop where technical and business stakeholders debate appropriate SLO targets for a new investment trading platform. Charts on the wall show different perspectives: historical performance data, competitor benchmarks, customer expectations from surveys, and cost implications of different reliability levels. Raj leads the session, facilitating sometimes heated discussions between the Head of Trading (who wants 99.99% availability), the CTO (concerned about technical feasibility), and the CFO (focused on implementation costs). On a whiteboard, Raj has created a decision matrix weighing different factors, with circles of different sizes representing the relative importance of each consideration. The group is gradually converging on a tiered approach with different SLOs for different trading functions.
+### Scene Description
+
+ A cross-functional workshop where technical and business stakeholders debate appropriate SLO targets for a new investment trading platform. Charts on the wall show different perspectives: historical performance data, competitor benchmarks, customer expectations from surveys, and cost implications of different reliability levels. Raj leads the session, facilitating sometimes heated discussions between the Head of Trading (who wants 99.99% availability), the CTO (concerned about technical feasibility), and the CFO (focused on implementation costs). On a whiteboard, Raj has created a decision matrix weighing different factors, with circles of different sizes representing the relative importance of each consideration. The group is gradually converging on a tiered approach with different SLOs for different trading functions.
 
 ### Teaching Narrative
 Setting the right SLO target is one of the most consequential decisions in reliability engineering—too ambitious, and you'll never meet it; too lenient, and it won't protect user experience. This decision requires balancing multiple competing factors:
@@ -38,7 +42,9 @@ The SLO target selection process is inherently cross-functional—it cannot be d
 For banking services, this process often results in tiered objectives, with the highest reliability reserved for the most critical functions (payment processing, authentication) and more moderate targets for auxiliary services (reporting, analytics).
 
 ## Panel 3: Time Windows and Calculations - The Mathematics of Reliability
-**Scene Description**: An engineering deep-dive session where Alex demonstrates different SLO calculation methods on digital whiteboards. One screen shows a calendar-based view with a 30-day rolling window for a payment service SLO. Another displays a mathematical formula calculating permitted error budget for a 99.9% availability target. A third screen shows a simulation of how the same service incidents would affect SLO compliance differently under various time windows (1-day, 7-day, 30-day). Team members work through exercises calculating remaining error budgets for different scenarios. A dedicated monitor displays a real-time dashboard showing current SLO performance across multiple banking services, with some approaching their thresholds.
+### Scene Description
+
+ An engineering deep-dive session where Alex demonstrates different SLO calculation methods on digital whiteboards. One screen shows a calendar-based view with a 30-day rolling window for a payment service SLO. Another displays a mathematical formula calculating permitted error budget for a 99.9% availability target. A third screen shows a simulation of how the same service incidents would affect SLO compliance differently under various time windows (1-day, 7-day, 30-day). Team members work through exercises calculating remaining error budgets for different scenarios. A dedicated monitor displays a real-time dashboard showing current SLO performance across multiple banking services, with some approaching their thresholds.
 
 ### Teaching Narrative
 SLOs require precise mathematical definitions to be actionable. Two fundamental components define how SLO attainment is calculated: the time window and the calculation method.
@@ -63,7 +69,9 @@ Error Budget = (1 - SLO Target) × Time Window
 For example, a 99.9% availability SLO over 30 days provides approximately 43 minutes of permitted downtime. Understanding these calculations is essential for effective SLO management and incident response prioritization.
 
 ## Panel 4: Tiered SLOs - Differentiating Service Criticality
-**Scene Description**: A strategic planning meeting for a major banking platform upgrade. A large matrix display shows different banking services categorized into tiers: "Tier 0 - Critical" (payment processing, authentication), "Tier 1 - Core" (account management, transfers), "Tier 2 - Supporting" (reporting, notifications), and "Tier 3 - Auxiliary" (personalization, analytics). Each tier has progressively less stringent SLO targets. Sofia and the Head of Digital Banking are presenting to executives, explaining how this tiered approach aligns reliability investments with business priorities. A financial analysis on a side screen shows the cost implications of each tier's reliability targets. Team members are discussing which tier a new mobile feature should fall into based on customer impact analysis.
+### Scene Description
+
+ A strategic planning meeting for a major banking platform upgrade. A large matrix display shows different banking services categorized into tiers: "Tier 0 - Critical" (payment processing, authentication), "Tier 1 - Core" (account management, transfers), "Tier 2 - Supporting" (reporting, notifications), and "Tier 3 - Auxiliary" (personalization, analytics). Each tier has progressively less stringent SLO targets. Sofia and the Head of Digital Banking are presenting to executives, explaining how this tiered approach aligns reliability investments with business priorities. A financial analysis on a side screen shows the cost implications of each tier's reliability targets. Team members are discussing which tier a new mobile feature should fall into based on customer impact analysis.
 
 ### Teaching Narrative
 Not all banking services deserve the same reliability targets. Tiered SLOs recognize this reality by establishing different reliability expectations for services based on their criticality, creating a structured framework for prioritization and investment decisions.
@@ -87,7 +95,9 @@ This tiered approach delivers several benefits:
 For banking institutions, which must balance innovation with stability, tiered SLOs provide a structured way to manage reliability expectations across diverse service portfolios, ensuring critical functions receive appropriate attention while allowing controlled risk-taking in less critical areas.
 
 ## Panel 5: SLOs and Service Level Agreements - Internal vs. External Commitments
-**Scene Description**: A contract negotiation meeting between the bank's technical team and a major payment processor partner. On one side of the table, legal and business development representatives review SLA documents with specific penalties for missed targets. On the other side, Sofia and Raj confer quietly, comparing the proposed external SLAs with their internal SLOs on a tablet. Their internal dashboard shows more aggressive reliability targets than what's in the contract. A whiteboard illustrates the relationship: internal SLOs (99.95%) set tighter than external SLAs (99.9%) with a deliberate buffer zone labeled "safety margin." The business team looks confused about why the technical team insists on this difference.
+### Scene Description
+
+ A contract negotiation meeting between the bank's technical team and a major payment processor partner. On one side of the table, legal and business development representatives review SLA documents with specific penalties for missed targets. On the other side, Sofia and Raj confer quietly, comparing the proposed external SLAs with their internal SLOs on a tablet. Their internal dashboard shows more aggressive reliability targets than what's in the contract. A whiteboard illustrates the relationship: internal SLOs (99.95%) set tighter than external SLAs (99.9%) with a deliberate buffer zone labeled "safety margin." The business team looks confused about why the technical team insists on this difference.
 
 ### Teaching Narrative
 Service Level Agreements (SLAs) and Service Level Objectives (SLOs) are related but fundamentally different concepts that serve distinct purposes:
@@ -107,7 +117,9 @@ This distinction is particularly important in financial services, where contract
 For SRE teams, this means constantly balancing two perspectives: the external view focused on meeting contractual obligations, and the internal view focused on maintaining technical excellence that exceeds those requirements.
 
 ## Panel 6: SLO Documentation - Creating Living Reliability Contracts
-**Scene Description**: A collaborative documentation session where the SRE team is creating a comprehensive SLO specification document for their payments platform. The document template on a large screen has sections for "Service Definition," "SLI Specifications," "SLO Targets," "Measurement Methods," "Exclusions," and "Review Cadence." Team members from product, development, and operations all contribute to different sections. Jamila highlights the "Exclusions" section, where they're carefully defining which types of failures count against the SLO (internal systems) and which don't (third-party outages). Adjacent monitors show the documentation in version control and linked to their observability platform. A calendar reminder shows the next quarterly SLO review date.
+### Scene Description
+
+ A collaborative documentation session where the SRE team is creating a comprehensive SLO specification document for their payments platform. The document template on a large screen has sections for "Service Definition," "SLI Specifications," "SLO Targets," "Measurement Methods," "Exclusions," and "Review Cadence." Team members from product, development, and operations all contribute to different sections. Jamila highlights the "Exclusions" section, where they're carefully defining which types of failures count against the SLO (internal systems) and which don't (third-party outages). Adjacent monitors show the documentation in version control and linked to their observability platform. A calendar reminder shows the next quarterly SLO review date.
 
 ### Teaching Narrative
 Effective SLOs require comprehensive documentation that serves as a living contract between service owners, users, and stakeholders. This documentation transforms abstract reliability concepts into concrete, shared understanding.
@@ -139,7 +151,9 @@ In banking environments where services often have complex dependencies and share
 This documentation should be treated as a living artifact—reviewed regularly, versioned carefully, and updated as services evolve—rather than a static document created once and forgotten.
 
 ## Panel 7: From Theory to Practice - SLO Implementation Roadmap
-**Scene Description**: A program kickoff meeting for implementing SLOs across the bank's digital platform. A roadmap on the wall shows phases: "Foundation" (instrumentation, data collection), "Pilot" (initial SLOs for one critical service), "Expansion" (extending to core services), and "Maturity" (comprehensive coverage with review cycles). Each phase has specific deliverables, timelines, and success criteria. The CTO addresses the cross-functional implementation team, emphasizing that this is a journey rather than a project. Raj presents a realistic timeline showing iterative improvement over 18 months rather than a big-bang approach. On a side screen, the success criteria for the pilot phase focus on process establishment rather than perfect reliability targets.
+### Scene Description
+
+ A program kickoff meeting for implementing SLOs across the bank's digital platform. A roadmap on the wall shows phases: "Foundation" (instrumentation, data collection), "Pilot" (initial SLOs for one critical service), "Expansion" (extending to core services), and "Maturity" (comprehensive coverage with review cycles). Each phase has specific deliverables, timelines, and success criteria. The CTO addresses the cross-functional implementation team, emphasizing that this is a journey rather than a project. Raj presents a realistic timeline showing iterative improvement over 18 months rather than a big-bang approach. On a side screen, the success criteria for the pilot phase focus on process establishment rather than perfect reliability targets.
 
 ### Teaching Narrative
 Implementing SLOs across a complex banking organization is a transformation journey rather than a one-time project. A structured roadmap approaches this change incrementally, building both technical capabilities and organizational maturity over time.

@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Prevented Outage
 
-**Scene Description**: Release pipeline automatically blocking code change that passed functional tests but caused latency regression in payment processing. Visual shows deployment pipeline with automated performance gates highlighting the regression with historical comparison data, while developers analyze the performance impact before it reaches production.
+### Scene Description
+
+ Release pipeline automatically blocking code change that passed functional tests but caused latency regression in payment processing. Visual shows deployment pipeline with automated performance gates highlighting the regression with historical comparison data, while developers analyze the performance impact before it reaches production.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ For payment systems, performance regressions directly affect both customer exper
 
 ## Panel 2: The Careful Rollout
 
-**Scene Description**: Team deploying high-risk change using canary approach with metric-based evaluation criteria for new fraud detection algorithm. Visual shows phased deployment with real-time metric comparison between canary and baseline populations, with decision points based on performance data.
+### Scene Description
+
+ Team deploying high-risk change using canary approach with metric-based evaluation criteria for new fraud detection algorithm. Visual shows phased deployment with real-time metric comparison between canary and baseline populations, with decision points based on performance data.
 
 ### Teaching Narrative
 
@@ -141,7 +145,9 @@ For fraud detection systems, deployment approach directly affects both financial
 
 ## Panel 3: The Performance Budget
 
-**Scene Description**: Development and SRE teams negotiating performance requirements for new mobile banking feature with metric budgets allocated to different components. Visual shows detailed allocation of latency, resource, and error budgets across application components with engineering constraints highlighted.
+### Scene Description
+
+ Development and SRE teams negotiating performance requirements for new mobile banking feature with metric budgets allocated to different components. Visual shows detailed allocation of latency, resource, and error budgets across application components with engineering constraints highlighted.
 
 ### Teaching Narrative
 
@@ -192,7 +198,9 @@ For mobile banking applications, performance directly affects both adoption rate
 
 ## Panel 4: The Deployment Guardrails
 
-**Scene Description**: SRE team creating automated deployment safety checks with metric-based rollback triggers for core banking system update. Visual illustrates monitoring gates at progressive deployment stages with automated decision points based on real-time performance data.
+### Scene Description
+
+ SRE team creating automated deployment safety checks with metric-based rollback triggers for core banking system update. Visual illustrates monitoring gates at progressive deployment stages with automated decision points based on real-time performance data.
 
 ### Teaching Narrative
 
@@ -243,7 +251,9 @@ For core banking systems, deployment safety directly affects both operational ri
 
 ## Panel 5: The Performance Profile
 
-**Scene Description**: Performance engineering team analyzing application metrics across different load conditions to identify optimization opportunities in loan processing system. Visual displays multi-dimensional performance analysis showing how system behavior changes under varying conditions, with bottlenecks becoming visible.
+### Scene Description
+
+ Performance engineering team analyzing application metrics across different load conditions to identify optimization opportunities in loan processing system. Visual displays multi-dimensional performance analysis showing how system behavior changes under varying conditions, with bottlenecks becoming visible.
 
 ### Teaching Narrative
 
@@ -294,7 +304,9 @@ For loan processing, performance efficiency directly affects both customer exper
 
 ## Panel 6: The Chaos Experiment
 
-**Scene Description**: Team conducting controlled failure testing with comprehensive metrics collection for payment processing component resilience verification. Visual shows deliberate fault injection with real-time metric collection measuring system response to controlled degradation.
+### Scene Description
+
+ Team conducting controlled failure testing with comprehensive metrics collection for payment processing component resilience verification. Visual shows deliberate fault injection with real-time metric collection measuring system response to controlled degradation.
 
 ### Teaching Narrative
 
@@ -345,7 +357,9 @@ For payment systems, resilience verification directly affects both operational r
 
 ## Panel 7: The Feedback Loop
 
-**Scene Description**: Post-deployment review meeting examining metrics before and after major system change to improve future performance predictions. Visual shows comparison between pre-deployment forecasts and actual production results, with analysis of prediction accuracy.
+### Scene Description
+
+ Post-deployment review meeting examining metrics before and after major system change to improve future performance predictions. Visual shows comparison between pre-deployment forecasts and actual production results, with analysis of prediction accuracy.
 
 ### Teaching Narrative
 

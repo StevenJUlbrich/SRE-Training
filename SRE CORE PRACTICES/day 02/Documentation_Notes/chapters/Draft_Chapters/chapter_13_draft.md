@@ -30,7 +30,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Million Dollar Minute
 
-**Scene Description**: Executive review meeting examining financial impact metrics from trading platform outage showing direct and indirect costs. Visual displays comprehensive impact dashboard quantifying multiple cost dimensions: lost transaction revenue, compensation costs, regulatory penalties, and reputation damage with financial values assigned to each category based on actual measurement rather than estimation.
+### Scene Description
+
+ Executive review meeting examining financial impact metrics from trading platform outage showing direct and indirect costs. Visual displays comprehensive impact dashboard quantifying multiple cost dimensions: lost transaction revenue, compensation costs, regulatory penalties, and reputation damage with financial values assigned to each category based on actual measurement rather than estimation.
 
 ### Teaching Narrative
 
@@ -88,7 +90,9 @@ For trading platforms, financial impact quantification directly affects both exe
 
 ## Panel 2: The Budget Defender
 
-**Scene Description**: SRE lead justifying reliability investments to finance team using metrics-based business case showing risk reduction and impact prevention. Visual displays cost-benefit analysis comparing reliability investment costs against historical incident impacts and projected risk reduction with return-on-investment calculations based on quantified reliability improvements.
+### Scene Description
+
+ SRE lead justifying reliability investments to finance team using metrics-based business case showing risk reduction and impact prevention. Visual displays cost-benefit analysis comparing reliability investment costs against historical incident impacts and projected risk reduction with return-on-investment calculations based on quantified reliability improvements.
 
 ### Teaching Narrative
 
@@ -139,7 +143,9 @@ For financial institutions, investment justification directly affects both relia
 
 ## Panel 3: The Reliability Economics Model
 
-**Scene Description**: Business and technical leaders reviewing comprehensive framework for measuring reliability costs vs. benefits across different banking services. Visual illustrates sophisticated economic model balancing investment costs, operational expenses, and business value across service criticality tiers with optimization points highlighted for different banking functions.
+### Scene Description
+
+ Business and technical leaders reviewing comprehensive framework for measuring reliability costs vs. benefits across different banking services. Visual illustrates sophisticated economic model balancing investment costs, operational expenses, and business value across service criticality tiers with optimization points highlighted for different banking functions.
 
 ### Teaching Narrative
 
@@ -197,7 +203,9 @@ For digital banking services, economic optimization directly affects both reliab
 
 ## Panel 4: The Optimization Point
 
-**Scene Description**: Team analyzing metrics to find optimal reliability investment level where marginal cost equals marginal benefit for payment processing system. Visual shows marginal cost curves plotting additional reliability investment against diminishing business returns with the optimal investment point highlighted where additional spending begins producing reduced value.
+### Scene Description
+
+ Team analyzing metrics to find optimal reliability investment level where marginal cost equals marginal benefit for payment processing system. Visual shows marginal cost curves plotting additional reliability investment against diminishing business returns with the optimal investment point highlighted where additional spending begins producing reduced value.
 
 ### Teaching Narrative
 
@@ -251,7 +259,9 @@ For financial services, optimization identification directly affects both reliab
 
 ## Panel 5: The Risk Management Integration
 
-**Scene Description**: Enterprise risk and SRE teams aligning reliability metrics with organizational risk management framework for financial services. Visual shows integration between traditional risk management processes and reliability engineering metrics with shared assessment methodology, consistent risk categorization, and unified reporting structure across both domains.
+### Scene Description
+
+ Enterprise risk and SRE teams aligning reliability metrics with organizational risk management framework for financial services. Visual shows integration between traditional risk management processes and reliability engineering metrics with shared assessment methodology, consistent risk categorization, and unified reporting structure across both domains.
 
 ### Teaching Narrative
 
@@ -306,7 +316,9 @@ For financial institutions, risk integration directly affects both organizationa
 
 ## Panel 6: The Compliance Cost Metrics
 
-**Scene Description**: Team analyzing regulatory compliance costs related to reliability requirements and measuring optimization opportunities. Visual displays the component analysis of compliance-driven reliability costs with differentiation between mandatory regulatory minimums and discretionary enhancements, highlighting opportunities for efficiency improvement while maintaining compliance.
+### Scene Description
+
+ Team analyzing regulatory compliance costs related to reliability requirements and measuring optimization opportunities. Visual displays the component analysis of compliance-driven reliability costs with differentiation between mandatory regulatory minimums and discretionary enhancements, highlighting opportunities for efficiency improvement while maintaining compliance.
 
 ### Teaching Narrative
 
@@ -357,7 +369,9 @@ For regulated financial services, compliance optimization directly affects both 
 
 ## Panel 7: The Innovation Balance
 
-**Scene Description**: Product and operations teams using error budget metrics to balance reliability maintenance with feature development velocity. Visual illustrates the practical implementation of error budgets in managing the trade-off between reliability protection and innovation speed, with development decisions guided by remaining error margin rather than subjective risk assessment.
+### Scene Description
+
+ Product and operations teams using error budget metrics to balance reliability maintenance with feature development velocity. Visual illustrates the practical implementation of error budgets in managing the trade-off between reliability protection and innovation speed, with development decisions guided by remaining error margin rather than subjective risk assessment.
 
 ### Teaching Narrative
 

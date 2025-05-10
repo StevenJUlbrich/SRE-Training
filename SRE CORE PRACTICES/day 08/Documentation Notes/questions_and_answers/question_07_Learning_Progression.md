@@ -300,7 +300,9 @@ To illustrate how the content should be structured to maintain the 85/15 balance
 
 ### Panel: "The High-Cardinality Trap"
 
-**Scene Description**: A SRE team stares in shock at an observability platform dashboard showing cost metrics spiking 2000% overnight. One engineer points to a recently deployed code change that added customer IDs to every metric.
+### Scene Description
+
+ A SRE team stares in shock at an observability platform dashboard showing cost metrics spiking 2000% overnight. One engineer points to a recently deployed code change that added customer IDs to every metric.
 
 #### Teaching Narrative (40% - Technical Focus)
 Cardinality in observability refers to the number of unique time series created by combining metrics with their dimensions (labels or tags). High-cardinality occurs when a metric is combined with a dimension that has many possible values, such as customer IDs, session IDs, or request IDs. Each unique combination creates a separate time series in the database, which consumes storage, processing resources, and ultimately increases cost.

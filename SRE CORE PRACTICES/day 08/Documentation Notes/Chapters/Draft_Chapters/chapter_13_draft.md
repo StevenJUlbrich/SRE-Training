@@ -35,7 +35,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Quarterly Observability Review
 
-**Scene Description**: A diverse team of SREs, developers, and business stakeholders gather in a conference room. The walls display large dashboards showing observability cost trends over time, with clear downward trajectories despite increased transaction volumes. The SRE lead is presenting a slide titled "Observability ROI: Q3 Results" that shows both technical metrics improvements and cost reductions. Key banking executives are nodding with approval as they see the direct correlation between improved system reliability and reduced observability expenditure.
+### Scene Description
+
+ A diverse team of SREs, developers, and business stakeholders gather in a conference room. The walls display large dashboards showing observability cost trends over time, with clear downward trajectories despite increased transaction volumes. The SRE lead is presenting a slide titled "Observability ROI: Q3 Results" that shows both technical metrics improvements and cost reductions. Key banking executives are nodding with approval as they see the direct correlation between improved system reliability and reduced observability expenditure.
 
 ### Teaching Narrative
 
@@ -55,7 +57,9 @@ Most importantly, it transforms observability from a technical practice to an or
 
 ## Panel 2: The Telemetry Budget
 
-**Scene Description**: Two SREs sit side by side at a workstation, reviewing a proposed instrumentation plan for a new payment processing microservice. On their screen is a "Telemetry Budget Calculator" tool showing real-time cost projections as they adjust sampling rates, cardinality limits, and retention periods. As they reduce the cardinality of a customer ID dimension, the projected monthly cost drops significantly. One engineer points to a section labeled "Cost vs. Troubleshooting Value" that shows the optimal balance point where further data reduction would impair incident response capabilities.
+### Scene Description
+
+ Two SREs sit side by side at a workstation, reviewing a proposed instrumentation plan for a new payment processing microservice. On their screen is a "Telemetry Budget Calculator" tool showing real-time cost projections as they adjust sampling rates, cardinality limits, and retention periods. As they reduce the cardinality of a customer ID dimension, the projected monthly cost drops significantly. One engineer points to a section labeled "Cost vs. Troubleshooting Value" that shows the optimal balance point where further data reduction would impair incident response capabilities.
 
 ### Teaching Narrative
 
@@ -75,7 +79,9 @@ By implementing Telemetry Budgets, organizations transform observability from an
 
 ## Panel 3: The Instrumentation Design Review
 
-**Scene Description**: A virtual meeting shows developers presenting a new feature's observability plan to a panel of SRE experts. On screen, a template document titled "Instrumentation Design Review" displays sections for "Critical User Journeys," "Failure Modes," "Required Signals," "Sampling Strategy," and "Cost Projection." The lead developer explains a novel approach that uses contextual sampling to capture 100% of error cases but only 1% of successful transactions. An SRE is visibly impressed, making notes about incorporating this pattern into their observability standards documentation.
+### Scene Description
+
+ A virtual meeting shows developers presenting a new feature's observability plan to a panel of SRE experts. On screen, a template document titled "Instrumentation Design Review" displays sections for "Critical User Journeys," "Failure Modes," "Required Signals," "Sampling Strategy," and "Cost Projection." The lead developer explains a novel approach that uses contextual sampling to capture 100% of error cases but only 1% of successful transactions. An SRE is visibly impressed, making notes about incorporating this pattern into their observability standards documentation.
 
 ### Teaching Narrative
 
@@ -97,7 +103,9 @@ For banking organizations managing hundreds of services across multiple regions,
 
 ## Panel 4: The Observability Center of Excellence
 
-**Scene Description**: A dedicated team area is marked "Observability Center of Excellence." Engineers from different product teams cluster around a senior SRE who is demonstrating an automated cardinality limiting tool. Walls display guides titled "Sampling Strategies by Service Type" and "Observability Cost Optimization Patterns." A large monitor shows a leaderboard of teams ranked by "Observability Efficiency Score"—a metric combining visibility coverage, MTTR, and cost-per-transaction. A calendar shows upcoming training sessions on cost-aware instrumentation techniques.
+### Scene Description
+
+ A dedicated team area is marked "Observability Center of Excellence." Engineers from different product teams cluster around a senior SRE who is demonstrating an automated cardinality limiting tool. Walls display guides titled "Sampling Strategies by Service Type" and "Observability Cost Optimization Patterns." A large monitor shows a leaderboard of teams ranked by "Observability Efficiency Score"—a metric combining visibility coverage, MTTR, and cost-per-transaction. A calendar shows upcoming training sessions on cost-aware instrumentation techniques.
 
 ### Teaching Narrative
 
@@ -118,7 +126,9 @@ By investing in the OCoE model, organizations create a continuous learning loop 
 
 ## Panel 5: The Observability Cost Postmortem
 
-**Scene Description**: A team huddles in a meeting room with a "Blameless Postmortem" banner. On a whiteboard, the title reads "March Observability Cost Spike: What We Learned." A timeline shows a sudden 300% increase in costs tracked to a new feature deployment. Team members are mapping out the technical and procedural factors that allowed excessive instrumentation to reach production. The discussion is focused not on blame but on systemic improvements—one engineer is documenting action items that include adding cost projections to CI/CD pipelines and creating automated alerts for unusual telemetry volume increases.
+### Scene Description
+
+ A team huddles in a meeting room with a "Blameless Postmortem" banner. On a whiteboard, the title reads "March Observability Cost Spike: What We Learned." A timeline shows a sudden 300% increase in costs tracked to a new feature deployment. Team members are mapping out the technical and procedural factors that allowed excessive instrumentation to reach production. The discussion is focused not on blame but on systemic improvements—one engineer is documenting action items that include adding cost projections to CI/CD pipelines and creating automated alerts for unusual telemetry volume increases.
 
 ### Teaching Narrative
 
@@ -138,7 +148,9 @@ Most importantly, by treating observability costs with the same seriousness as s
 
 ## Panel 6: The Observability Value Narrative
 
-**Scene Description**: A senior SRE stands in an executive boardroom, presenting to the bank's leadership team. Her slides show a compelling visualization that correlates improvements in user transaction success rates with strategic investments in observability. She highlights a major fraud detection improvement that was enabled by targeted, high-value telemetry—noting that it was achieved while reducing overall observability costs by 20%. The CFO looks impressed as she demonstrates how improved mean time to detection translated directly to reduced financial losses and improved customer retention.
+### Scene Description
+
+ A senior SRE stands in an executive boardroom, presenting to the bank's leadership team. Her slides show a compelling visualization that correlates improvements in user transaction success rates with strategic investments in observability. She highlights a major fraud detection improvement that was enabled by targeted, high-value telemetry—noting that it was achieved while reducing overall observability costs by 20%. The CFO looks impressed as she demonstrates how improved mean time to detection translated directly to reduced financial losses and improved customer retention.
 
 ### Teaching Narrative
 
@@ -158,7 +170,9 @@ By developing a compelling Observability Value Narrative, technical leaders crea
 
 ## Panel 7: The Full-Stack Observability Team
 
-**Scene Description**: A team room shows diverse specialists—performance engineers, capacity planners, financial analysts, and SREs—working together on a holistic observability strategy. Their digital whiteboard maps different systems to appropriate observability approaches based on both technical and business criteria. A "System Criticality Matrix" guides investment decisions, showing how customer-facing payment services receive different treatment than internal reporting systems. The team is reviewing a proposal that reallocates observability budgets from over-instrumented legacy systems to under-instrumented mobile banking services where customer experience issues have been difficult to diagnose.
+### Scene Description
+
+ A team room shows diverse specialists—performance engineers, capacity planners, financial analysts, and SREs—working together on a holistic observability strategy. Their digital whiteboard maps different systems to appropriate observability approaches based on both technical and business criteria. A "System Criticality Matrix" guides investment decisions, showing how customer-facing payment services receive different treatment than internal reporting systems. The team is reviewing a proposal that reallocates observability budgets from over-instrumented legacy systems to under-instrumented mobile banking services where customer experience issues have been difficult to diagnose.
 
 ### Teaching Narrative
 

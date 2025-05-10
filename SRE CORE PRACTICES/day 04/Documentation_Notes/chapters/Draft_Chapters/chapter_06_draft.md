@@ -37,7 +37,9 @@ ______________________________________________________________________
 ---
 ## Panel 1: Instrumentation Strategy - Where to Begin in Complex Banking Environments
 
-**Scene Description**: A whiteboard planning session in a bank's technology center. A diverse team of engineers—representing different banking domains—gather around a system architecture diagram covering an entire wall. The diagram shows the bank's complex technology landscape: mobile apps, web portals, APIs, middleware, payment processing services, core banking systems, and mainframes. An SRE lead is using colored markers to highlight different services, creating a heat map of customer impact. Critical customer journeys are traced in red, showing the highest-priority flows for initial instrumentation, while arrows indicate the planned phased rollout of tracing capabilities across the organization.
+### Scene Description
+
+ A whiteboard planning session in a bank's technology center. A diverse team of engineers—representing different banking domains—gather around a system architecture diagram covering an entire wall. The diagram shows the bank's complex technology landscape: mobile apps, web portals, APIs, middleware, payment processing services, core banking systems, and mainframes. An SRE lead is using colored markers to highlight different services, creating a heat map of customer impact. Critical customer journeys are traced in red, showing the highest-priority flows for initial instrumentation, while arrows indicate the planned phased rollout of tracing capabilities across the organization.
 
 ### Teaching Narrative
 
@@ -77,7 +79,9 @@ Perhaps most critically, regulatory impacts loom large—banking regulators incr
 
 ## Panel 2: Hybrid Instrumentation Techniques - Bridging Legacy and Modern Banking Systems
 
-**Scene Description**: A banking integration lab where engineers are working on connecting tracing across different technology generations. One engineer is implementing code-level instrumentation in a modern Java microservice for card processing. Another is configuring middleware to propagate trace context from modern systems to mainframe transactions. A third is setting up network appliances for passive tracing capture of mainframe CICS transactions that cannot be modified. On screens around the room, visualization dashboards show how these different instrumentation approaches combine to create unified traces spanning from mobile apps through middleware to legacy systems, with special adapters translating between proprietary and standard trace formats.
+### Scene Description
+
+ A banking integration lab where engineers are working on connecting tracing across different technology generations. One engineer is implementing code-level instrumentation in a modern Java microservice for card processing. Another is configuring middleware to propagate trace context from modern systems to mainframe transactions. A third is setting up network appliances for passive tracing capture of mainframe CICS transactions that cannot be modified. On screens around the room, visualization dashboards show how these different instrumentation approaches combine to create unified traces spanning from mobile apps through middleware to legacy systems, with special adapters translating between proprietary and standard trace formats.
 
 ### Teaching Narrative
 
@@ -121,7 +125,9 @@ The competitive disadvantage compounds these issues—banks with unified cross-p
 
 ## Panel 3: Privacy-Preserving Instrumentation - Protecting Sensitive Financial Data
 
-**Scene Description**: A compliance review meeting where security officers, data privacy experts, and SRE engineers are examining trace data flows. A large screen shows how customer data moves through the tracing pipeline, with clear visualization of data protection mechanisms at each stage. The diagram highlights automated PII detection and masking for fields like account numbers and customer identifiers, data tokenization for transaction amounts, trace storage with differential access controls, and special handling for data subject to specific banking regulations. A compliance officer is nodding approval as an engineer demonstrates how the system automatically applies different privacy rules based on data classification, regulatory jurisdiction, and user access rights.
+### Scene Description
+
+ A compliance review meeting where security officers, data privacy experts, and SRE engineers are examining trace data flows. A large screen shows how customer data moves through the tracing pipeline, with clear visualization of data protection mechanisms at each stage. The diagram highlights automated PII detection and masking for fields like account numbers and customer identifiers, data tokenization for transaction amounts, trace storage with differential access controls, and special handling for data subject to specific banking regulations. A compliance officer is nodding approval as an engineer demonstrates how the system automatically applies different privacy rules based on data classification, regulatory jurisdiction, and user access rights.
 
 ### Teaching Narrative
 
@@ -167,7 +173,9 @@ The opportunity cost of remediation diverts substantial resources—banks report
 
 ## Panel 4: Context Propagation Across Banking Channels - The Multi-Interface Challenge
 
-**Scene Description**: A digital banking center where customer experience analysts and engineers are analyzing a complex customer journey that spans multiple channels. Visualization screens show a customer who began a mortgage application on the web, continued on a mobile device, and completed the process through a call center interaction. Trace visualizations demonstrate how the unified customer identity and transaction context is maintained across these channel transitions, with specialized adapters passing trace context between web cookies, mobile device storage, telephony systems, and call center applications. Engineers are examining how correlation identifiers persist across these boundary transitions, allowing a seamless trace despite the channel shifts.
+### Scene Description
+
+ A digital banking center where customer experience analysts and engineers are analyzing a complex customer journey that spans multiple channels. Visualization screens show a customer who began a mortgage application on the web, continued on a mobile device, and completed the process through a call center interaction. Trace visualizations demonstrate how the unified customer identity and transaction context is maintained across these channel transitions, with specialized adapters passing trace context between web cookies, mobile device storage, telephony systems, and call center applications. Engineers are examining how correlation identifiers persist across these boundary transitions, allowing a seamless trace despite the channel shifts.
 
 ### Teaching Narrative
 
@@ -213,7 +221,9 @@ Perhaps most significantly, customer sentiment shows the greatest sensitivity to
 
 ## Panel 5: Incremental Deployment Strategies - Rolling Out Tracing Across Banking Organizations
 
-**Scene Description**: A program management office where teams are tracking the bank-wide tracing implementation. A digital Kanban board shows the phased rollout across different banking divisions—retail banking, commercial services, wealth management, and capital markets. Progress indicators show some divisions in production, others in testing, and some in planning. Next to this, a technical dashboard displays trace completion percentages for key transaction types, showing how trace coverage is improving as more services are instrumented. Team leads from different divisions are discussing implementation challenges unique to their areas, while reviewing metrics showing the operational improvements already achieved in the divisions with mature implementations.
+### Scene Description
+
+ A program management office where teams are tracking the bank-wide tracing implementation. A digital Kanban board shows the phased rollout across different banking divisions—retail banking, commercial services, wealth management, and capital markets. Progress indicators show some divisions in production, others in testing, and some in planning. Next to this, a technical dashboard displays trace completion percentages for key transaction types, showing how trace coverage is improving as more services are instrumented. Team leads from different divisions are discussing implementation challenges unique to their areas, while reviewing metrics showing the operational improvements already achieved in the divisions with mature implementations.
 
 ### Teaching Narrative
 
@@ -259,7 +269,9 @@ Perhaps most significantly, competitive disadvantage compounds during extended i
 
 ## Panel 6: Custom Banking Telemetry - Beyond Standard Instrumentation
 
-**Scene Description**: A financial technology innovation lab where engineers are extending standard tracing with banking-specific telemetry. Multiple screens show specialized visualization dashboards that incorporate financial context directly into trace displays. One screen shows payment transaction traces with overlaid regulatory compliance checkpoints, another displays trade processing with market volatility indicators integrated into the trace timeline, and a third shows loan processing with credit risk scoring metrics embedded within spans. An engineer is demonstrating a custom instrumentation library that automatically enriches spans with banking-specific attributes like transaction monetary value, customer segment, risk level, and regulatory categorization.
+### Scene Description
+
+ A financial technology innovation lab where engineers are extending standard tracing with banking-specific telemetry. Multiple screens show specialized visualization dashboards that incorporate financial context directly into trace displays. One screen shows payment transaction traces with overlaid regulatory compliance checkpoints, another displays trade processing with market volatility indicators integrated into the trace timeline, and a third shows loan processing with credit risk scoring metrics embedded within spans. An engineer is demonstrating a custom instrumentation library that automatically enriches spans with banking-specific attributes like transaction monetary value, customer segment, risk level, and regulatory categorization.
 
 ### Teaching Narrative
 
@@ -305,7 +317,9 @@ Perhaps most significantly, the regulatory reporting gap creates compliance risk
 
 ## Panel 7: Tracing Governance and Integration - Building the Observability Platform
 
-**Scene Description**: An enterprise architecture review with technology leaders from across the bank. The main display shows how distributed tracing integrates with the broader observability strategy and technology ecosystem. Flow diagrams illustrate how trace data feeds into multiple downstream systems: the monitoring platform for alerting, the incident management system for automated diagnostics, the capacity planning tools for trend analysis, the performance testing environment for regression detection, and the regulatory reporting system for compliance evidence. Reference architecture diagrams show the bank's trace data pipeline with centralized collection, processing, storage, and visualization components connected to a broader data lake strategy. IT leaders are discussing trace data governance policies, including standardized attribute naming, retention periods aligned with regulatory requirements, and access controls based on role-based permissions.
+### Scene Description
+
+ An enterprise architecture review with technology leaders from across the bank. The main display shows how distributed tracing integrates with the broader observability strategy and technology ecosystem. Flow diagrams illustrate how trace data feeds into multiple downstream systems: the monitoring platform for alerting, the incident management system for automated diagnostics, the capacity planning tools for trend analysis, the performance testing environment for regression detection, and the regulatory reporting system for compliance evidence. Reference architecture diagrams show the bank's trace data pipeline with centralized collection, processing, storage, and visualization components connected to a broader data lake strategy. IT leaders are discussing trace data governance policies, including standardized attribute naming, retention periods aligned with regulatory requirements, and access controls based on role-based permissions.
 
 ### Teaching Narrative
 

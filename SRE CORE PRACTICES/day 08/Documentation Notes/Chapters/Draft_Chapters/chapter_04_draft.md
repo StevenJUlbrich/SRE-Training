@@ -38,7 +38,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Data Deluge Dilemma
 
-**Scene Description**: The scene depicts a banking operations center where multiple large wall monitors display rapidly incrementing counters showing data volumes across different systems. A team of engineers stands in shock as they review a massive observability platform bill. One screen prominently displays a graph showing an exponential increase in data ingestion that perfectly correlates with a similar curve on cost projection. In the corner, a junior engineer is frantically enabling verbose logging on yet another service, unaware of the financial implications.
+### Scene Description
+
+ The scene depicts a banking operations center where multiple large wall monitors display rapidly incrementing counters showing data volumes across different systems. A team of engineers stands in shock as they review a massive observability platform bill. One screen prominently displays a graph showing an exponential increase in data ingestion that perfectly correlates with a similar curve on cost projection. In the corner, a junior engineer is frantically enabling verbose logging on yet another service, unaware of the financial implications.
 
 ### Teaching Narrative
 
@@ -57,7 +59,9 @@ Without this volumetric understanding, observability costs become unpredictable 
 
 ## Panel 2: Discovering the Hidden Data Generators
 
-**Scene Description**: The scene shows an SRE team gathered around a visualization that maps their banking system architecture. Each component is sized proportionally to its observability data production. To everyone's surprise, a seemingly minor authentication microservice appears as the largest element on the diagram, dwarfing even their core transaction processing platform. One engineer points to a small code block on a laptop screen showing a debug statement inside a high-frequency authentication loop.
+### Scene Description
+
+ The scene shows an SRE team gathered around a visualization that maps their banking system architecture. Each component is sized proportionally to its observability data production. To everyone's surprise, a seemingly minor authentication microservice appears as the largest element on the diagram, dwarfing even their core transaction processing platform. One engineer points to a small code block on a laptop screen showing a debug statement inside a high-frequency authentication loop.
 
 ### Teaching Narrative
 
@@ -76,7 +80,9 @@ Volumetric awareness also means understanding the natural patterns in your data 
 
 ## Panel 3: Telemetry ROI Analysis
 
-**Scene Description**: A split-screen view shows two banking incidents side by side. On the left, engineers wade through terabytes of verbose debug logs trying to find the cause of a failed trade reconciliation, with a cost counter rapidly incrementing in the corner. On the right, an SRE quickly identifies a payment failure pattern using a handful of carefully designed metrics and traces, with minimal data volume but maximum insight. A formula appears between the screens showing the relationship between data value, volume, and cost.
+### Scene Description
+
+ A split-screen view shows two banking incidents side by side. On the left, engineers wade through terabytes of verbose debug logs trying to find the cause of a failed trade reconciliation, with a cost counter rapidly incrementing in the corner. On the right, an SRE quickly identifies a payment failure pattern using a handful of carefully designed metrics and traces, with minimal data volume but maximum insight. A formula appears between the screens showing the relationship between data value, volume, and cost.
 
 ### Teaching Narrative
 
@@ -98,7 +104,9 @@ Developing volumetric awareness means shifting from "more data is better" to "th
 
 ## Panel 4: The Instrumentation Budget
 
-**Scene Description**: An SRE team is shown in a planning session with a unique dashboard displayed on the wall. Instead of traditional resource metrics, it shows "observability quotas" for each banking service. Team members are allocating limited observability "points" across system components, with heated discussion about which services deserve more telemetry budget. One engineer defends allocating more budget to a seemingly minor service, explaining how its visibility directly impacts customer experience during mortgage applications.
+### Scene Description
+
+ An SRE team is shown in a planning session with a unique dashboard displayed on the wall. Instead of traditional resource metrics, it shows "observability quotas" for each banking service. Team members are allocating limited observability "points" across system components, with heated discussion about which services deserve more telemetry budget. One engineer defends allocating more budget to a seemingly minor service, explaining how its visibility directly impacts customer experience during mortgage applications.
 
 ### Teaching Narrative
 
@@ -120,7 +128,9 @@ The instrumentation budget concept doesn't reduce overall system visibility. Ins
 
 ## Panel 5: Forecasting Data Volume Changes
 
-**Scene Description**: The scene depicts an SRE team reviewing a proposed banking app feature that would track detailed customer interactions across all UI elements. A simulation dashboard shows the projected impact on observability data volume and costs. Several alternative instrumentation approaches are displayed with their respective volume projections. The team is evaluating which approach provides necessary visibility for the feature while staying within their volumetric budget.
+### Scene Description
+
+ The scene depicts an SRE team reviewing a proposed banking app feature that would track detailed customer interactions across all UI elements. A simulation dashboard shows the projected impact on observability data volume and costs. Several alternative instrumentation approaches are displayed with their respective volume projections. The team is evaluating which approach provides necessary visibility for the feature while staying within their volumetric budget.
 
 ### Teaching Narrative
 
@@ -142,7 +152,9 @@ The most sophisticated organizations incorporate observability volume forecastin
 
 ## Panel 6: Implementing Volume-Based Alerting
 
-**Scene Description**: An SRE receives an urgent alert on their phone showing "OBSERVABILITY VOLUME ANOMALY" for a critical payment processing service. The attached dashboard shows log volume suddenly increasing at 30x normal rates, well before any customer-impacting symptoms have appeared. The SRE quickly traces the issue to a recently deployed configuration change that accidentally enabled debug logging in production. They correct the configuration before the excessive logging impacts system performance or generates significant costs.
+### Scene Description
+
+ An SRE receives an urgent alert on their phone showing "OBSERVABILITY VOLUME ANOMALY" for a critical payment processing service. The attached dashboard shows log volume suddenly increasing at 30x normal rates, well before any customer-impacting symptoms have appeared. The SRE quickly traces the issue to a recently deployed configuration change that accidentally enabled debug logging in production. They correct the configuration before the excessive logging impacts system performance or generates significant costs.
 
 ### Teaching Narrative
 
@@ -166,7 +178,9 @@ By treating observability volumes as a first-class metric, teams transform cost 
 
 ## Panel 7: Data Retention Lifecycle Management
 
-**Scene Description**: A visualization shows the journey of observability data through its lifecycle in a banking environment. Fresh, high-value data flows into high-performance, high-cost storage. As the data ages, automated policies move it through progressively less expensive tiers with different compression and aggregation levels. At each stage, compliance requirements are checked to ensure regulatory obligations are met. A group of SREs is reviewing data usage patterns to optimize which data deserves premium storage and which can be downsampled earlier.
+### Scene Description
+
+ A visualization shows the journey of observability data through its lifecycle in a banking environment. Fresh, high-value data flows into high-performance, high-cost storage. As the data ages, automated policies move it through progressively less expensive tiers with different compression and aggregation levels. At each stage, compliance requirements are checked to ensure regulatory obligations are met. A group of SREs is reviewing data usage patterns to optimize which data deserves premium storage and which can be downsampled earlier.
 
 ### Teaching Narrative
 

@@ -40,7 +40,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Feature That Customers Don't Request (Until It's Gone)
 
-**Scene Description**: A busy financial services meeting room where a product team is reviewing customer feature requests on a digital board. The product manager is highlighting new UI features, payment options, and integration capabilities that customers have explicitly requested. In the corner, Katherine (SRE) is studying a separate dashboard showing system stability metrics and customer complaint patterns. There's a striking contrast between the excitement around new features and the quiet attention to reliability metrics.
+### Scene Description
+
+ A busy financial services meeting room where a product team is reviewing customer feature requests on a digital board. The product manager is highlighting new UI features, payment options, and integration capabilities that customers have explicitly requested. In the corner, Katherine (SRE) is studying a separate dashboard showing system stability metrics and customer complaint patterns. There's a striking contrast between the excitement around new features and the quiet attention to reliability metrics.
 
 ### Teaching Narrative
 
@@ -140,7 +142,9 @@ For organizations seeking to elevate reliability to a first-class product featur
 
 ## Panel 2: Quantifying the Business Value of Reliability
 
-**Scene Description**: A banking executive boardroom where Hector (SRE lead) is presenting a compelling data visualization showing the correlation between system reliability metrics and business KPIs. The visualization includes split screens showing: downtime incidents mapped against customer churn, transaction error rates correlated with support call volume, and page load times linked to abandoned transactions. Banking executives are leaning forward, visibly connecting technical reliability concepts to financial impact for the first time.
+### Scene Description
+
+ A banking executive boardroom where Hector (SRE lead) is presenting a compelling data visualization showing the correlation between system reliability metrics and business KPIs. The visualization includes split screens showing: downtime incidents mapped against customer churn, transaction error rates correlated with support call volume, and page load times linked to abandoned transactions. Banking executives are leaning forward, visibly connecting technical reliability concepts to financial impact for the first time.
 
 ### Teaching Narrative
 
@@ -257,7 +261,9 @@ For organizations seeking to quantify and communicate the business value of reli
 
 ## Panel 3: Reliability Experience Design
 
-**Scene Description**: A collaborative workshop environment where UX designers and SREs are working together at a digital whiteboard. They're mapping out a customer journey for a major banking application, but with an unusual focus - they're designing the "reliability experience" for different failure scenarios. The workshop shows failure modes mapped to user emotions, with sketches of graceful degradation patterns, clear error messaging, and intelligent recovery paths. Post-it notes capture principles like "failure transparency," "informative errors," and "predictable recovery."
+### Scene Description
+
+ A collaborative workshop environment where UX designers and SREs are working together at a digital whiteboard. They're mapping out a customer journey for a major banking application, but with an unusual focus - they're designing the "reliability experience" for different failure scenarios. The workshop shows failure modes mapped to user emotions, with sketches of graceful degradation patterns, clear error messaging, and intelligent recovery paths. Post-it notes capture principles like "failure transparency," "informative errors," and "predictable recovery."
 
 ### Teaching Narrative
 
@@ -387,7 +393,9 @@ For organizations seeking to improve reliability experience design, these five s
 
 ## Panel 4: Error Budgets as Product Prioritization Tools
 
-**Scene Description**: A tense prioritization meeting where product and engineering teams are reviewing their quarterly roadmap against a prominently displayed error budget dashboard. The dashboard shows only 15% of the quarterly error budget remains with six weeks left in the quarter. Some team members are advocating to push forward with new features, while others are pointing to the depleted error budget as a signal to focus on reliability improvements. The product owner is visibly torn between business pressure for new capabilities and the clear reliability signals.
+### Scene Description
+
+ A tense prioritization meeting where product and engineering teams are reviewing their quarterly roadmap against a prominently displayed error budget dashboard. The dashboard shows only 15% of the quarterly error budget remains with six weeks left in the quarter. Some team members are advocating to push forward with new features, while others are pointing to the depleted error budget as a signal to focus on reliability improvements. The product owner is visibly torn between business pressure for new capabilities and the clear reliability signals.
 
 ### Teaching Narrative
 
@@ -520,7 +528,9 @@ For organizations seeking to implement error budgets as product prioritization t
 
 ## Panel 5: Designing for Operational Excellence
 
-**Scene Description**: A split-screen showing contrasting development processes. On one side, engineers are coding a new banking feature in isolation, focused only on functional requirements. On the other side, a collaborative session shows developers, SREs, and operations staff co-designing a feature with monitors, alerts, debugging tools, and runbooks being created alongside the core functionality. The second team has monitoring code in their repository, and dashboards being developed in parallel with feature code.
+### Scene Description
+
+ A split-screen showing contrasting development processes. On one side, engineers are coding a new banking feature in isolation, focused only on functional requirements. On the other side, a collaborative session shows developers, SREs, and operations staff co-designing a feature with monitors, alerts, debugging tools, and runbooks being created alongside the core functionality. The second team has monitoring code in their repository, and dashboards being developed in parallel with feature code.
 
 ### Teaching Narrative
 
@@ -660,7 +670,9 @@ For organizations seeking to improve operational design practices, these five st
 
 ## Panel 6: The Reliability Feature Backlog
 
-**Scene Description**: A product planning session where reliability improvements are being treated as explicit backlog items alongside traditional features. On a digital board, user stories for both customer-facing features and reliability improvements are prioritized together. The reliability stories have clear acceptance criteria, customer impact statements, and business value metrics - formatted identically to typical feature stories. Team members are assigning story points, discussing implementation approaches, and sequencing work with reliability and features intermixed.
+### Scene Description
+
+ A product planning session where reliability improvements are being treated as explicit backlog items alongside traditional features. On a digital board, user stories for both customer-facing features and reliability improvements are prioritized together. The reliability stories have clear acceptance criteria, customer impact statements, and business value metrics - formatted identically to typical feature stories. Team members are assigning story points, discussing implementation approaches, and sequencing work with reliability and features intermixed.
 
 ### Teaching Narrative
 
@@ -796,7 +808,9 @@ For organizations seeking to better manage reliability work through standard pro
 
 ## Panel 7: A Culture of Reliability Advocacy
 
-**Scene Description**: A quarterly business review where multiple team members from different roles - product manager, UX designer, developer, QA engineer, and SRE - are all highlighting reliability aspects in their portions of the presentation. Rather than reliability being siloed to the SRE section, it's woven throughout discussions of product strategy, customer feedback, development progress, and future roadmap. Banking executives are nodding approvingly as reliability is clearly positioned as a core competitive advantage and business driver.
+### Scene Description
+
+ A quarterly business review where multiple team members from different roles - product manager, UX designer, developer, QA engineer, and SRE - are all highlighting reliability aspects in their portions of the presentation. Rather than reliability being siloed to the SRE section, it's woven throughout discussions of product strategy, customer feedback, development progress, and future roadmap. Banking executives are nodding approvingly as reliability is clearly positioned as a core competitive advantage and business driver.
 
 ### Teaching Narrative
 

@@ -1,7 +1,9 @@
 # Chapter 6: Cardinality Management
 
 ## Panel 1: The Dimension Explosion
-**Scene Description**: A banking SRE team huddles around a massive dashboard covered in red alerts. Their manager bursts into the room waving an invoice. "Our observability costs just increased TEN TIMES overnight!" On the screens, metrics graphs are frozen, query times have skyrocketed, and the team looks bewildered as they scroll through thousands of new metric combinations that appeared after yesterday's deployment. One engineer points to a small code change where a developer added customer account numbers as labels to every transaction metric.
+### Scene Description
+
+ A banking SRE team huddles around a massive dashboard covered in red alerts. Their manager bursts into the room waving an invoice. "Our observability costs just increased TEN TIMES overnight!" On the screens, metrics graphs are frozen, query times have skyrocketed, and the team looks bewildered as they scroll through thousands of new metric combinations that appeared after yesterday's deployment. One engineer points to a small code change where a developer added customer account numbers as labels to every transaction metric.
 
 ### Teaching Narrative
 Cardinality is the silent killer of observability budgets and performance. In the metrics world, cardinality refers to the number of unique time series being tracked. A single metric like `http_requests_total` is just one time series. But add a dimension like `status_code` with 5 possible values, and you now have 5 time series. Add another dimension like `endpoint` with 10 values, and you now have 5 × 10 = 50 time series. Each dimension multiplies the number of time series exponentially.
@@ -59,7 +61,9 @@ To prevent cardinality explosions in banking environments, follow these five act
 5. **Establish Review Thresholds**: Create governance processes requiring explicit review for any metric expected to exceed a certain cardinality threshold (e.g., 10,000 unique time series). This ensures high-cardinality metrics receive appropriate scrutiny before deployment.
 
 ## Panel 2: The Unbounded Label Trap
-**Scene Description**: Two SREs are investigating why their metrics platform keeps crashing. On a whiteboard, they've traced the problem to a fraud detection service that's adding transaction-specific fields as labels to metrics. At the same time, a developer is demonstrating a new feature that adds geolocation data down to precise coordinates as metric labels. The SRE looks horrified as she calculates the cardinality: "That's potentially 37 billion unique combinations for a single metric!" On a monitor nearby, their budget dashboard shows costs rapidly approaching the monthly limit while it's only the 3rd day of the month.
+### Scene Description
+
+ Two SREs are investigating why their metrics platform keeps crashing. On a whiteboard, they've traced the problem to a fraud detection service that's adding transaction-specific fields as labels to metrics. At the same time, a developer is demonstrating a new feature that adds geolocation data down to precise coordinates as metric labels. The SRE looks horrified as she calculates the cardinality: "That's potentially 37 billion unique combinations for a single metric!" On a monitor nearby, their budget dashboard shows costs rapidly approaching the monthly limit while it's only the 3rd day of the month.
 
 ### Teaching Narrative
 The most dangerous label is the unbounded one – a dimension with potentially unlimited unique values. While adding country codes (with roughly 200 possible values) creates manageable cardinality, adding fields like User IDs, Session IDs, or precise coordinates creates effectively infinite cardinality. In banking systems, transaction IDs alone can generate billions of unique values annually.
@@ -117,7 +121,9 @@ To avoid the unbounded label trap in banking systems, implement these five speci
 5. **Develop Alternative Capture Mechanisms**: For each high-cardinality data point, implement alternative capture mechanisms in logs or traces while keeping metrics focused on aggregatable dimensions. Establish explicit instrumentation patterns showing when to use each observability signal type.
 
 ## Panel 3: The Cardinality Budget
-**Scene Description**: A virtual war room where a financial services platform team is establishing governance rules. On a large screen, they're documenting a hierarchy of allowed dimensions for different types of metrics. A governance lead is presenting a dashboard showing each service's current cardinality usage as a percentage of their allocated "cardinality budget." Teams with efficient metric design have plenty of room for new instrumentation, while a poorly-designed fraud detection service is shown at 250% of its allocation, with an automated warning system preventing new deployments until cardinality is reduced.
+### Scene Description
+
+ A virtual war room where a financial services platform team is establishing governance rules. On a large screen, they're documenting a hierarchy of allowed dimensions for different types of metrics. A governance lead is presenting a dashboard showing each service's current cardinality usage as a percentage of their allocated "cardinality budget." Teams with efficient metric design have plenty of room for new instrumentation, while a poorly-designed fraud detection service is shown at 250% of its allocation, with an automated warning system preventing new deployments until cardinality is reduced.
 
 ### Teaching Narrative
 Just as financial institutions implement strict budget controls, effective observability requires establishing cardinality budgets. A cardinality budget establishes the maximum number of unique time series each service or team can create. This forces teams to prioritize which dimensions truly deliver value and discourages the casual addition of high-cardinality labels.
@@ -177,7 +183,9 @@ To implement effective cardinality budgets in banking environments, follow these
 5. **Build Cardinality Dashboards**: Create real-time visibility into cardinality consumption by service, team, and application. These dashboards should show current usage against budgets, historical trends, and projections based on growth rates, enabling proactive management before limits are reached.
 
 ## Panel 4: The Aggregation Hierarchy
-**Scene Description**: An architect is leading a design review for a new payment gateway system's metrics design. On a whiteboard, she's created a pyramid diagram showing metric aggregation levels. At the pyramid's wide base are customer transaction events flowing into logs. In the middle tier, these are aggregated into bounded-cardinality metrics with key dimensions like payment processor, country, and response code. At the narrow top are highly aggregated SLIs tracking overall system health. Next to this, a developer has sketched how they can automatically roll these metrics up into increasingly aggregated forms for longer-term storage.
+### Scene Description
+
+ An architect is leading a design review for a new payment gateway system's metrics design. On a whiteboard, she's created a pyramid diagram showing metric aggregation levels. At the pyramid's wide base are customer transaction events flowing into logs. In the middle tier, these are aggregated into bounded-cardinality metrics with key dimensions like payment processor, country, and response code. At the narrow top are highly aggregated SLIs tracking overall system health. Next to this, a developer has sketched how they can automatically roll these metrics up into increasingly aggregated forms for longer-term storage.
 
 ### Teaching Narrative
 The antidote to cardinality explosion is strategic aggregation. Rather than tracking everything at the finest granularity, effective metric design creates an aggregation hierarchy that captures insights at multiple levels of detail. This approach recognizes that the value of granular data diminishes over time, while the cost of storing it remains constant.
@@ -236,7 +244,9 @@ To implement effective aggregation hierarchies in banking systems, follow these 
 5. **Document Aggregation Decisions**: Create clear documentation of which dimensions are preserved at each aggregation level and the business rationale for these decisions. This ensures future teams understand the design intent and prevents inadvertent reintroduction of high-cardinality dimensions into aggregated metrics.
 
 ## Panel 5: Strategic Dimension Selection
-**Scene Description**: A monitoring architect is training a team of developers for a trading platform. She displays a matrix on the screen with potential metric dimensions on one axis and evaluation criteria on the other. For each dimension (endpoint, customer tier, account type, region, exact trade value), she's scoring its troubleshooting value, business insight value, cardinality impact, and query performance impact. The team is working through which dimensions to keep based on these scores. On a second screen, sample Prometheus metric definitions show how to implement these decisions in code.
+### Scene Description
+
+ A monitoring architect is training a team of developers for a trading platform. She displays a matrix on the screen with potential metric dimensions on one axis and evaluation criteria on the other. For each dimension (endpoint, customer tier, account type, region, exact trade value), she's scoring its troubleshooting value, business insight value, cardinality impact, and query performance impact. The team is working through which dimensions to keep based on these scores. On a second screen, sample Prometheus metric definitions show how to implement these decisions in code.
 
 ### Teaching Narrative
 Not all dimensions are created equal, and effective cardinality management requires strategic selection of which dimensions to include in your metrics. This selection process should balance four key factors: troubleshooting utility, business insight value, cardinality impact, and query performance.
@@ -296,7 +306,9 @@ To implement strategic dimension selection in banking environments, follow these
 5. **Develop Alternative Capture Mechanisms**: For dimensions that provide business value but create excessive cardinality, implement alternative capture mechanisms. For example, store high-cardinality dimensions like customer ID in logs or traces, then implement tooling to correlate these with metrics during analysis without embedding them directly in metrics.
 
 ## Panel 6: Isolation Strategies for High-Cardinality Use Cases
-**Scene Description**: A risk analytics team and SRE are collaborating on a solution for monitoring individual high-value transactions without causing cardinality explosion. On their shared screen, they're designing a specialized metrics subsystem isolated from the main monitoring platform. It has its own storage, retention policies, and budget. Another tab shows a custom sampling algorithm that will only instrument a statistically significant percentage of transactions, with logic to ensure all high-value transactions are included in the sample. A dashboard shows the dramatic cost difference between sampling all transactions and their strategic approach.
+### Scene Description
+
+ A risk analytics team and SRE are collaborating on a solution for monitoring individual high-value transactions without causing cardinality explosion. On their shared screen, they're designing a specialized metrics subsystem isolated from the main monitoring platform. It has its own storage, retention policies, and budget. Another tab shows a custom sampling algorithm that will only instrument a statistically significant percentage of transactions, with logic to ensure all high-value transactions are included in the sample. A dashboard shows the dramatic cost difference between sampling all transactions and their strategic approach.
 
 ### Teaching Narrative
 Some banking use cases legitimately require higher-cardinality metrics – fraud detection, risk analysis, and compliance monitoring may genuinely need transaction-level visibility. Rather than allowing these specialized needs to destroy your observability budget, implement isolation strategies that quarantine high-cardinality metrics.
@@ -356,7 +368,9 @@ To effectively isolate high-cardinality use cases in banking environments, imple
 5. **Establish Explicit Cost Attribution**: Implement direct cost attribution for high-cardinality monitoring to the specific business functions requiring it rather than absorbing it in general platform costs. This creates appropriate economic incentives for business stakeholders to support optimization efforts.
 
 ## Panel 7: Implementing Guardrails and Automated Protection
-**Scene Description**: An SRE is demonstrating a new guardrail system during a company tech talk. On one screen, she shows a CI/CD pipeline failing a deployment because a new metric would create excessive cardinality. On another, a runtime cardinality limiter is automatically dropping excessive label values when a service unexpectedly generates too many unique combinations. A third screen shows an alert triggered by a sudden cardinality increase in the payment service, allowing the team to intervene before costs escalate. On a final screen, the monthly observability cost graph shows how these guardrails have flattened what was previously an exponential curve.
+### Scene Description
+
+ An SRE is demonstrating a new guardrail system during a company tech talk. On one screen, she shows a CI/CD pipeline failing a deployment because a new metric would create excessive cardinality. On another, a runtime cardinality limiter is automatically dropping excessive label values when a service unexpectedly generates too many unique combinations. A third screen shows an alert triggered by a sudden cardinality increase in the payment service, allowing the team to intervene before costs escalate. On a final screen, the monthly observability cost graph shows how these guardrails have flattened what was previously an exponential curve.
 
 ### Teaching Narrative
 Even with careful design, cardinality explosions can occur unexpectedly – a bug might cause a service to instrument every user ID, or an unforeseen edge case might generate millions of unique label values. Effective cardinality management requires implementing automated guardrails that prevent these issues from impacting cost and performance.

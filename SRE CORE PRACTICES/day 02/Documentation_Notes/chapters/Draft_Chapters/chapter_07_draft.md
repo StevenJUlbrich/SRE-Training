@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Wall of Screens
 
-**Scene Description**: Operations center during trading peak with team overwhelmed by dozens of dashboards showing hundreds of disconnected metrics. Engineers frantically switch between screens trying to understand system status while alarms sound and phone calls pour in from concerned traders.
+### Scene Description
+
+ Operations center during trading peak with team overwhelmed by dozens of dashboards showing hundreds of disconnected metrics. Engineers frantically switch between screens trying to understand system status while alarms sound and phone calls pour in from concerned traders.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ For trading platforms, visualization effectiveness directly affects both inciden
 
 ## Panel 2: The Signal from Noise
 
-**Scene Description**: SRE team implementing data visualization best practices, showing before/after examples of cluttered vs. effective metric displays for payment processing. Visual contrasts information-dense, visually confusing dashboard with streamlined, prioritized view that makes critical patterns immediately obvious.
+### Scene Description
+
+ SRE team implementing data visualization best practices, showing before/after examples of cluttered vs. effective metric displays for payment processing. Visual contrasts information-dense, visually confusing dashboard with streamlined, prioritized view that makes critical patterns immediately obvious.
 
 ### Teaching Narrative
 
@@ -145,7 +149,9 @@ For payment processing, visualization clarity directly affects incident detectio
 
 ## Panel 3: The Executive View
 
-**Scene Description**: CTO presenting reliability metrics to board of directors using business impact visualizations rather than technical dashboards. Visual shows how technical metrics have been transformed into business outcomes that executives immediately understand and can use for decision-making.
+### Scene Description
+
+ CTO presenting reliability metrics to board of directors using business impact visualizations rather than technical dashboards. Visual shows how technical metrics have been transformed into business outcomes that executives immediately understand and can use for decision-making.
 
 ### Teaching Narrative
 
@@ -196,7 +202,9 @@ For executive decision-making, visualization translation directly affects strate
 
 ## Panel 4: The Real-Time Battlefield
 
-**Scene Description**: Incident response team using specialized dashboards during payment system disruption, with metrics guiding investigation and recovery actions. Visual shows purpose-built incident management visualization highlighting affected components, customer impact, and recovery effectiveness.
+### Scene Description
+
+ Incident response team using specialized dashboards during payment system disruption, with metrics guiding investigation and recovery actions. Visual shows purpose-built incident management visualization highlighting affected components, customer impact, and recovery effectiveness.
 
 ### Teaching Narrative
 
@@ -247,7 +255,9 @@ For payment systems, incident response visualization directly affects both resol
 
 ## Panel 5: The Historical Lens
 
-**Scene Description**: Analytics team examining long-term performance trends for banking services, showing seasonal patterns in transaction volumes with capacity planning forecasts. Visual displays multi-year trend analysis revealing cyclical patterns that inform infrastructure planning.
+### Scene Description
+
+ Analytics team examining long-term performance trends for banking services, showing seasonal patterns in transaction volumes with capacity planning forecasts. Visual displays multi-year trend analysis revealing cyclical patterns that inform infrastructure planning.
 
 ### Teaching Narrative
 
@@ -298,7 +308,9 @@ For mobile banking platforms, historical pattern recognition directly affects bo
 
 ## Panel 6: The Customer Journey Map
 
-**Scene Description**: UX and SRE teams collaborating on visualization that maps performance metrics to customer experience at each step of digital banking journey. Visual shows end-to-end customer path with performance metrics overlaid at each interaction point.
+### Scene Description
+
+ UX and SRE teams collaborating on visualization that maps performance metrics to customer experience at each step of digital banking journey. Visual shows end-to-end customer path with performance metrics overlaid at each interaction point.
 
 ### Teaching Narrative
 
@@ -349,7 +361,9 @@ For digital account opening, customer journey visualization directly affects con
 
 ## Panel 7: The Alert Design Workshop
 
-**Scene Description**: Operations team redesigning alert visualizations to reduce fatigue, showing evolution from overwhelming notifications to prioritized, actionable alerts. Visual contrasts information-dense, frequent alerts with streamlined, contextual notifications that guide appropriate response.
+### Scene Description
+
+ Operations team redesigning alert visualizations to reduce fatigue, showing evolution from overwhelming notifications to prioritized, actionable alerts. Visual contrasts information-dense, frequent alerts with streamlined, contextual notifications that guide appropriate response.
 
 ### Teaching Narrative
 

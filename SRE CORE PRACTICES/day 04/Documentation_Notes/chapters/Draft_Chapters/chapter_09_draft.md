@@ -35,7 +35,9 @@ This is the difference between running a resilient bank and running a support gr
 ---
 ## Panel 1: Beyond the Alert - Trace-Driven Root Cause Analysis
 
-**Scene Description**: A high-intensity incident response room at a major bank. Red alert notifications flash on wall monitors showing a spike in payment processing failures. Instead of frantically checking individual service dashboards, an SRE calmly pulls up a trace visualization of affected transactions. The screen shows a waterfall view of a failed payment journey with a clear visual pattern: every failing transaction shows an unusual timing gap in the same fraud verification service. The SRE expands this service's spans to reveal a deeper trace layer showing database connection pool exhaustion — a root cause invisible in traditional monitoring tools. Other team members look impressed as the SRE rapidly isolates the exact cause without disruptive all-hands investigations.
+### Scene Description
+
+ A high-intensity incident response room at a major bank. Red alert notifications flash on wall monitors showing a spike in payment processing failures. Instead of frantically checking individual service dashboards, an SRE calmly pulls up a trace visualization of affected transactions. The screen shows a waterfall view of a failed payment journey with a clear visual pattern: every failing transaction shows an unusual timing gap in the same fraud verification service. The SRE expands this service's spans to reveal a deeper trace layer showing database connection pool exhaustion — a root cause invisible in traditional monitoring tools. Other team members look impressed as the SRE rapidly isolates the exact cause without disruptive all-hands investigations.
 
 ### Teaching Narrative
 
@@ -91,7 +93,9 @@ For high-volume payment processors, the total business impact of a three-hour au
 
 ## Panel 2: Comparative Failure Analysis - Learning from Banking Transaction Patterns
 
-**Scene Description**: A post-incident analysis session where SREs are investigating a complex settlement failure in a trading platform. Multiple screens show side-by-side trace comparisons of failed and successful settlement transactions. A visualization tool highlights the differences between these traces, automatically identifying unusual patterns in the failing transactions: specific API parameter combinations, timing anomalies in third-party interactions, and a particular customer profile triggering an edge case. Data visualizations show how the system has automatically clustered similar failures, revealing that what initially appeared to be a single incident actually comprises three distinct failure modes affecting different transaction paths, each requiring separate remediation approaches.
+### Scene Description
+
+ A post-incident analysis session where SREs are investigating a complex settlement failure in a trading platform. Multiple screens show side-by-side trace comparisons of failed and successful settlement transactions. A visualization tool highlights the differences between these traces, automatically identifying unusual patterns in the failing transactions: specific API parameter combinations, timing anomalies in third-party interactions, and a particular customer profile triggering an edge case. Data visualizations show how the system has automatically clustered similar failures, revealing that what initially appeared to be a single incident actually comprises three distinct failure modes affecting different transaction paths, each requiring separate remediation approaches.
 
 ### Teaching Narrative
 
@@ -147,7 +151,9 @@ For investment banking operations, the compound business impact of misdiagnosed 
 
 ## Panel 3: Dependency Fault Isolation - When Third Parties Affect Banking Services
 
-**Scene Description**: A service reliability workshop at a global bank, focused on a recent incident involving payment processing delays. On the main screen, trace visualizations show customer payment journeys with clear color-coded sections representing internal services versus external dependencies. The traces reveal a consistent pattern where an external credit scoring service is introducing variable latency that occasionally triggers timeout cascades. Additional visualizations show how the bank's system correctly marks these spans as external dependencies in the trace data, enabling automatic fault domain isolation. An SRE demonstrates how this precise attribution prevented an extended blame game between internal teams and immediately focused remediation efforts on the appropriate third-party integration point rather than internal components.
+### Scene Description
+
+ A service reliability workshop at a global bank, focused on a recent incident involving payment processing delays. On the main screen, trace visualizations show customer payment journeys with clear color-coded sections representing internal services versus external dependencies. The traces reveal a consistent pattern where an external credit scoring service is introducing variable latency that occasionally triggers timeout cascades. Additional visualizations show how the bank's system correctly marks these spans as external dependencies in the trace data, enabling automatic fault domain isolation. An SRE demonstrates how this precise attribution prevented an extended blame game between internal teams and immediately focused remediation efforts on the appropriate third-party integration point rather than internal components.
 
 ### Teaching Narrative
 
@@ -203,7 +209,9 @@ For commercial banking platforms, the total business impact of dependency attrib
 
 ## Panel 4: Time-Sequence Investigation - Tracing the Banking Incident Timeline
 
-**Scene Description**: A post-incident review for a major disruption in a retail banking platform. The analysis team has created a comprehensive timeline visualization derived from trace data, showing precisely how the incident evolved. The display reveals the complete sequence: a code deployment introduced a subtle database query change, which performed adequately under normal load but began degrading during peak hours, eventually exhausting connection pools, which triggered cascading failures across dependent services. The timeline clearly shows the propagation delay between the initial deployment and the first customer-impacting symptoms hours later. Team members are discussing how this precise chronological visualization fundamentally changes their understanding of cause-and-effect relationships in complex distributed incidents.
+### Scene Description
+
+ A post-incident review for a major disruption in a retail banking platform. The analysis team has created a comprehensive timeline visualization derived from trace data, showing precisely how the incident evolved. The display reveals the complete sequence: a code deployment introduced a subtle database query change, which performed adequately under normal load but began degrading during peak hours, eventually exhausting connection pools, which triggered cascading failures across dependent services. The timeline clearly shows the propagation delay between the initial deployment and the first customer-impacting symptoms hours later. Team members are discussing how this precise chronological visualization fundamentally changes their understanding of cause-and-effect relationships in complex distributed incidents.
 
 ### Teaching Narrative
 
@@ -259,7 +267,9 @@ For retail banking platforms, the compound business impact of fragmented timelin
 
 ## Panel 5: Trace-Enhanced Postmortems - Building Banking Institutional Knowledge
 
-**Scene Description**: A cross-team learning session following a significant incident affecting trading operations. Instead of a traditional text-based postmortem, the team is reviewing an interactive, evidence-based analysis built directly from preserved trace data. Visualizations show the actual transaction flows during the incident, with annotations highlighting key decision points, failure modes, and successful mitigations. Engineers from different teams are interacting with the trace-based reconstruction, asking questions and receiving immediate answers backed by actual trace evidence rather than reconstructed memories. A knowledge manager is demonstrating how this trace-based postmortem is being integrated into their incident knowledge base, creating a searchable repository of actual failure patterns rather than narrative descriptions.
+### Scene Description
+
+ A cross-team learning session following a significant incident affecting trading operations. Instead of a traditional text-based postmortem, the team is reviewing an interactive, evidence-based analysis built directly from preserved trace data. Visualizations show the actual transaction flows during the incident, with annotations highlighting key decision points, failure modes, and successful mitigations. Engineers from different teams are interacting with the trace-based reconstruction, asking questions and receiving immediate answers backed by actual trace evidence rather than reconstructed memories. A knowledge manager is demonstrating how this trace-based postmortem is being integrated into their incident knowledge base, creating a searchable repository of actual failure patterns rather than narrative descriptions.
 
 ### Teaching Narrative
 
@@ -315,7 +325,9 @@ For investment banking platforms where individual incidents can carry financial 
 
 ## Panel 6: Automated Root Cause Detection - From Manual Investigation to AI-Assisted Analysis
 
-**Scene Description**: A banking operations center with advanced observability capabilities. Alerts show potential issues in mortgage application processing, but instead of initiating a manual investigation, the system has already performed automated root cause analysis. Screens display an AI-assisted trace analysis that has automatically identified the likely failure pattern—highlighting an unusual interaction between a recent configuration change and a specific data condition only present in jumbo mortgage applications. The system has correlated this pattern across hundreds of traces, calculated a 94% confidence score for this being the root cause, and automatically generated remediation suggestions. Engineers review the AI-assisted analysis, validate its findings with additional trace evidence, and implement the recommended fix while discussing how this automation has reduced their mean time to resolution from hours to minutes.
+### Scene Description
+
+ A banking operations center with advanced observability capabilities. Alerts show potential issues in mortgage application processing, but instead of initiating a manual investigation, the system has already performed automated root cause analysis. Screens display an AI-assisted trace analysis that has automatically identified the likely failure pattern—highlighting an unusual interaction between a recent configuration change and a specific data condition only present in jumbo mortgage applications. The system has correlated this pattern across hundreds of traces, calculated a 94% confidence score for this being the root cause, and automatically generated remediation suggestions. Engineers review the AI-assisted analysis, validate its findings with additional trace evidence, and implement the recommended fix while discussing how this automation has reduced their mean time to resolution from hours to minutes.
 
 ### Teaching Narrative
 
@@ -371,7 +383,9 @@ For mortgage processing platforms where each hour of incident duration affects a
 
 ## Panel 7: Business Impact Correlation - Connecting Technical Failures to Customer Experience
 
-**Scene Description**: A joint session between business operations and technical teams reviewing a recent incident affecting new account opening services. The central display shows a unique visualization that correlates technical traces with business metrics and customer experience indicators. On one axis, technical spans show service interactions and performance metrics; on the parallel axis, business metrics display application abandonment rates, customer support contacts, and social media sentiment trends. Connecting lines show clear cause-effect relationships: specific technical failures leading directly to measurable business impacts. A business executive points to a particular pattern where database latency spikes of over 2 seconds correlate perfectly with a 30% increase in application abandonment, while an SRE demonstrates how trace data precisely identifies which customer segments and transaction types were most affected by the technical issues.
+### Scene Description
+
+ A joint session between business operations and technical teams reviewing a recent incident affecting new account opening services. The central display shows a unique visualization that correlates technical traces with business metrics and customer experience indicators. On one axis, technical spans show service interactions and performance metrics; on the parallel axis, business metrics display application abandonment rates, customer support contacts, and social media sentiment trends. Connecting lines show clear cause-effect relationships: specific technical failures leading directly to measurable business impacts. A business executive points to a particular pattern where database latency spikes of over 2 seconds correlate perfectly with a 30% increase in application abandonment, while an SRE demonstrates how trace data precisely identifies which customer segments and transaction types were most affected by the technical issues.
 
 ### Teaching Narrative
 

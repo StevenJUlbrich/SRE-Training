@@ -1,7 +1,9 @@
 # Chapter 3: The Anatomy of Quality Metrics - Building Effective SLIs
 
 ## Panel 1: Signal and Noise - The Art of Metric Selection
-**Scene Description**: A banking operations center during a major incident. Multiple dashboards display dozens of graphs and alerts, all flashing red. Two teams of engineers are arguing about which metrics matter, pointing at different screens. In the corner, SRE lead Sofia quietly examines a single clear graph showing customer transaction success rate plummeting while other teams are distracted by system metrics. She's drawing a circle around this graph while crossing out several others. A junior engineer watches her with dawning understanding.
+### Scene Description
+
+ A banking operations center during a major incident. Multiple dashboards display dozens of graphs and alerts, all flashing red. Two teams of engineers are arguing about which metrics matter, pointing at different screens. In the corner, SRE lead Sofia quietly examines a single clear graph showing customer transaction success rate plummeting while other teams are distracted by system metrics. She's drawing a circle around this graph while crossing out several others. A junior engineer watches her with dawning understanding.
 
 ### Teaching Narrative
 Quality SLIs emerge from a sea of potential metrics through careful selection and refinement. In complex banking systems, every component generates hundreds of metrics—CPU usage, memory consumption, queue depths, network throughput, error counts, and countless others. The challenge isn't finding metrics to measure; it's identifying which few metrics truly matter.
@@ -57,7 +59,9 @@ To improve metric selection in your banking environment:
 5. **Build a Customer Impact Dashboard**: Create a high-level dashboard showing only direct customer experience metrics, separate from system metrics, to maintain focus on what truly matters during incidents.
 
 ## Panel 2: Metrics Hierarchy - From Raw Data to SLIs
-**Scene Description**: A whiteboard session shows a pyramid diagram labeled "Metrics Hierarchy." At the bottom, engineer Alex points to "Raw Metrics" (server logs, API calls, database queries). The middle layer shows "Aggregated Metrics" (error rates, latency averages). At the top are "SLIs" (99th percentile payment processing time, funds availability success rate). Team members stand around the whiteboard as Raj explains the transformation process, with banking examples written next to each layer. A junior engineer is having an "aha" moment, connecting raw logs she's familiar with to the high-level SLIs.
+### Scene Description
+
+ A whiteboard session shows a pyramid diagram labeled "Metrics Hierarchy." At the bottom, engineer Alex points to "Raw Metrics" (server logs, API calls, database queries). The middle layer shows "Aggregated Metrics" (error rates, latency averages). At the top are "SLIs" (99th percentile payment processing time, funds availability success rate). Team members stand around the whiteboard as Raj explains the transformation process, with banking examples written next to each layer. A junior engineer is having an "aha" moment, connecting raw logs she's familiar with to the high-level SLIs.
 
 ### Teaching Narrative
 Quality SLIs don't typically emerge directly from raw data—they're constructed through a hierarchical transformation process:
@@ -121,7 +125,9 @@ To improve your metrics hierarchy:
 5. **Develop a Metrics Data Dictionary**: Create clear documentation of how each SLI is constructed from underlying metrics, including calculation formulas, data sources, and business context.
 
 ## Panel 3: Percentiles vs. Averages - Understanding Distribution Metrics
-**Scene Description**: A comparative dashboard display shows payment processing times for a high-volume banking system. On the left, an average response time graph shows 120ms with a smooth line. On the right, a percentile distribution shows P50 at 85ms, P90 at 150ms, P99 at 450ms, and P99.9 at 2300ms. SRE Jamila points to a specific incident where the average barely moved but the P99.9 spiked dramatically. Around her, team members look concerned as they realize their average-based alerts missed significant customer pain. One engineer shows a customer complaint about extremely slow transactions during that same period.
+### Scene Description
+
+ A comparative dashboard display shows payment processing times for a high-volume banking system. On the left, an average response time graph shows 120ms with a smooth line. On the right, a percentile distribution shows P50 at 85ms, P90 at 150ms, P99 at 450ms, and P99.9 at 2300ms. SRE Jamila points to a specific incident where the average barely moved but the P99.9 spiked dramatically. Around her, team members look concerned as they realize their average-based alerts missed significant customer pain. One engineer shows a customer complaint about extremely slow transactions during that same period.
 
 ### Teaching Narrative
 Distribution metrics like percentiles provide critical insights that averages obscure, especially in systems with non-uniform performance patterns. 
@@ -186,7 +192,9 @@ To implement distribution-aware metrics in your environment:
 5. **Establish Transaction Segmentation**: Implement tagging of transactions by type, value, and customer segment to enable distribution analysis across different business-relevant dimensions.
 
 ## Panel 4: The Danger Zone - Avoiding Anti-Patterns in SLI Design
-**Scene Description**: A post-incident review meeting where a team is analyzing a major service disruption that went undetected by monitoring. On a whiteboard titled "SLI Anti-Patterns," several problematic metrics are listed with red X marks: "System CPU" (a server was overloaded but the service remained functional), "Overall Availability" (the problem affected only mobile users), "Average Response Time" (only certain transaction types were slow). Team members look concerned as they review dashboards that failed to detect the issue. Sofia is circling specific areas on each dashboard, explaining how they need to be redesigned to avoid these anti-patterns.
+### Scene Description
+
+ A post-incident review meeting where a team is analyzing a major service disruption that went undetected by monitoring. On a whiteboard titled "SLI Anti-Patterns," several problematic metrics are listed with red X marks: "System CPU" (a server was overloaded but the service remained functional), "Overall Availability" (the problem affected only mobile users), "Average Response Time" (only certain transaction types were slow). Team members look concerned as they review dashboards that failed to detect the issue. Sofia is circling specific areas on each dashboard, explaining how they need to be redesigned to avoid these anti-patterns.
 
 ### Teaching Narrative
 Even carefully selected metrics can become misleading when implemented poorly. Several common anti-patterns undermine SLI effectiveness:
@@ -262,7 +270,9 @@ To avoid SLI anti-patterns in your environment:
 5. **Establish Business-Technical Translation Maps**: Create clear documentation showing how each technical SLI connects to specific business functions and customer experiences, ensuring meaningful coverage.
 
 ## Panel 5: Instrumentation Points - Where to Measure Matters
-**Scene Description**: A large architectural diagram of a banking payment system spans a wall display. Different colored pins mark possible measurement points: client applications, API gateways, service boundaries, and backend systems. Team members are engaged in a lively debate about the best places to capture metrics. SRE Raj is demonstrating how the same transaction appears different depending on where it's measured, showing latency numbers that vary dramatically between the client view (1200ms) and the server view (150ms). A diagram in the corner shows a user transaction passing through multiple systems with cumulative latency at each hop.
+### Scene Description
+
+ A large architectural diagram of a banking payment system spans a wall display. Different colored pins mark possible measurement points: client applications, API gateways, service boundaries, and backend systems. Team members are engaged in a lively debate about the best places to capture metrics. SRE Raj is demonstrating how the same transaction appears different depending on where it's measured, showing latency numbers that vary dramatically between the client view (1200ms) and the server view (150ms). A diagram in the corner shows a user transaction passing through multiple systems with cumulative latency at each hop.
 
 ### Teaching Narrative
 Where you measure is often as important as what you measure. The same service can appear entirely different depending on the instrumentation point, and choosing incorrectly can lead to blind spots or false confidence.
@@ -336,7 +346,9 @@ To improve instrumentation point selection:
 5. **Create Multi-Level Latency Dashboards**: Build visualizations that show transaction performance at various measurement points simultaneously, enabling quick comparison and bottleneck identification.
 
 ## Panel 6: Synthetic vs. Real User Monitoring - The Complete Picture
-**Scene Description**: A split-screen operations dashboard labeled "Payment Gateway Monitoring." On the left side, "Synthetic Monitoring" shows consistent probes testing the payment API every minute with predefined test cases, with near-perfect reliability at 99.99%. On the right side, "Real User Monitoring" shows actual customer transaction data with varying patterns and a lower success rate of 98.7%. An incident response team is investigating the discrepancy, with one engineer pointing to a specific customer segment using a payment method not covered by synthetic tests. Jamila is adding a new synthetic test case based on this finding.
+### Scene Description
+
+ A split-screen operations dashboard labeled "Payment Gateway Monitoring." On the left side, "Synthetic Monitoring" shows consistent probes testing the payment API every minute with predefined test cases, with near-perfect reliability at 99.99%. On the right side, "Real User Monitoring" shows actual customer transaction data with varying patterns and a lower success rate of 98.7%. An incident response team is investigating the discrepancy, with one engineer pointing to a specific customer segment using a payment method not covered by synthetic tests. Jamila is adding a new synthetic test case based on this finding.
 
 ### Teaching Narrative
 Two complementary approaches to measurement are necessary for a complete view of service health:
@@ -409,7 +421,9 @@ To implement complementary monitoring approaches:
 5. **Develop Unified Alerting Framework**: Create alerting logic that intelligently combines signals from both synthetic and real user monitoring, triggering appropriate responses based on correlated evidence.
 
 ## Panel 7: SLI Refinement - The Continuous Improvement Cycle
-**Scene Description**: A quarterly SLI review meeting where the team is evaluating the effectiveness of their metrics. One wall displays a chart tracking "SLI Refinement History" showing how their payment processing SLI has evolved over six iterations, with annotations about why each change was made. Another wall shows a "Missed Incident Analysis" board with cases where their SLIs failed to detect customer impact. Team members are proposing specific refinements to existing SLIs based on recent incidents. Sofia is facilitating, emphasizing that SLIs are never "done" but constantly evolving as they learn more about their systems and customers.
+### Scene Description
+
+ A quarterly SLI review meeting where the team is evaluating the effectiveness of their metrics. One wall displays a chart tracking "SLI Refinement History" showing how their payment processing SLI has evolved over six iterations, with annotations about why each change was made. Another wall shows a "Missed Incident Analysis" board with cases where their SLIs failed to detect customer impact. Team members are proposing specific refinements to existing SLIs based on recent incidents. Sofia is facilitating, emphasizing that SLIs are never "done" but constantly evolving as they learn more about their systems and customers.
 
 ### Teaching Narrative
 Quality SLIs aren't created perfect the first time—they evolve through an iterative refinement process. This continuous improvement cycle includes:

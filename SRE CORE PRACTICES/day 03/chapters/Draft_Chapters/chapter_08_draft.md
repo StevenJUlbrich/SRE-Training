@@ -41,7 +41,9 @@ Welcome to the log-based alerting revolution—where SREs finally stop playing w
 
 ## Panel 1: The Alerting Evolution - Beyond Threshold Monitoring
 
-**Scene Description**: A banking operations center with two distinct monitoring approaches visible. On one side, traditional dashboards show simple threshold-based alerts for system metrics—CPU, memory, disk space—with a critical payment processing issue completely missed by these indicators. On the opposite side, a modern log-based alerting system has detected and flagged the same issue through pattern recognition in transaction logs, identifying an increasing error rate in payment authorizations despite all traditional metrics appearing normal. The contrast between missing critical business impact versus early detection is starkly visible as customer satisfaction metrics are displayed alongside both monitoring approaches.
+### Scene Description
+
+ A banking operations center with two distinct monitoring approaches visible. On one side, traditional dashboards show simple threshold-based alerts for system metrics—CPU, memory, disk space—with a critical payment processing issue completely missed by these indicators. On the opposite side, a modern log-based alerting system has detected and flagged the same issue through pattern recognition in transaction logs, identifying an increasing error rate in payment authorizations despite all traditional metrics appearing normal. The contrast between missing critical business impact versus early detection is starkly visible as customer satisfaction metrics are displayed alongside both monitoring approaches.
 
 ### Teaching Narrative
 
@@ -101,7 +103,9 @@ To implement effective log-based alerting focused on business outcomes:
 
 ## Panel 2: The Pattern Recognition Advantage - Finding What Matters
 
-**Scene Description**: A financial services security operations center where advanced log-based pattern detection has identified a subtle fraud attempt invisible to traditional monitoring. Screens display logs from authentication systems with seemingly normal overall metrics, but the pattern recognition engine has flagged an unusual sequence: multiple failed login attempts across different accounts from similar IP ranges, each below individual alerting thresholds but collectively revealing a coordinated credential stuffing attack. Security analysts review the automatically grouped evidence that would have been impossible to detect through simple threshold monitoring, implementing protective measures before any accounts are compromised.
+### Scene Description
+
+ A financial services security operations center where advanced log-based pattern detection has identified a subtle fraud attempt invisible to traditional monitoring. Screens display logs from authentication systems with seemingly normal overall metrics, but the pattern recognition engine has flagged an unusual sequence: multiple failed login attempts across different accounts from similar IP ranges, each below individual alerting thresholds but collectively revealing a coordinated credential stuffing attack. Security analysts review the automatically grouped evidence that would have been impossible to detect through simple threshold monitoring, implementing protective measures before any accounts are compromised.
 
 ### Teaching Narrative
 
@@ -161,7 +165,9 @@ To implement effective pattern recognition for log-based alerting:
 
 ## Panel 3: The Statistical Baseline - Knowing What's Normal
 
-**Scene Description**: A trading platform operations center during market opening hours—historically their most volatile period. Engineers review dashboards showing log-based statistical baselines for different transaction types and market conditions. The system automatically adjusts expected error rate patterns based on market volatility, trading volume, and specific financial instrument types. Alert thresholds visibly adapt to these changing conditions rather than remaining static. When an unusual error pattern emerges for derivatives trading that would be normal for equities, the system immediately flags this statistical anomaly for investigation despite both falling within global error thresholds—preventing a cascade of failed trades before customers are affected.
+### Scene Description
+
+ A trading platform operations center during market opening hours—historically their most volatile period. Engineers review dashboards showing log-based statistical baselines for different transaction types and market conditions. The system automatically adjusts expected error rate patterns based on market volatility, trading volume, and specific financial instrument types. Alert thresholds visibly adapt to these changing conditions rather than remaining static. When an unusual error pattern emerges for derivatives trading that would be normal for equities, the system immediately flags this statistical anomaly for investigation despite both falling within global error thresholds—preventing a cascade of failed trades before customers are affected.
 
 ### Teaching Narrative
 
@@ -221,7 +227,9 @@ To implement effective statistical baselines for context-aware alerting:
 
 ## Panel 4: The Business Impact Correlation - Alerts That Matter
 
-**Scene Description**: A digital banking operations review where teams analyze alert effectiveness through business impact correlation. Visualizations show different alert categories mapped to customer experience metrics and business outcomes. Some technically severe alerts show minimal customer impact, while seemingly minor log patterns strongly correlate with abandoned transactions and support calls. Engineering leads demonstrate their reprioritized alerting strategy that elevates patterns with proven business impact over traditional severity categorizations. A recent incident timeline shows how this approach detected a mobile deposit issue through subtle validation error patterns before traditional monitoring registered any problems, preventing significant customer frustration and support costs.
+### Scene Description
+
+ A digital banking operations review where teams analyze alert effectiveness through business impact correlation. Visualizations show different alert categories mapped to customer experience metrics and business outcomes. Some technically severe alerts show minimal customer impact, while seemingly minor log patterns strongly correlate with abandoned transactions and support calls. Engineering leads demonstrate their reprioritized alerting strategy that elevates patterns with proven business impact over traditional severity categorizations. A recent incident timeline shows how this approach detected a mobile deposit issue through subtle validation error patterns before traditional monitoring registered any problems, preventing significant customer frustration and support costs.
 
 ### Teaching Narrative
 
@@ -281,7 +289,9 @@ To implement effective business impact correlation:
 
 ## Panel 5: The Early Warning Systems - Detecting Precursors
 
-**Scene Description**: A banking platform SRE team reviewing a prevented outage after their early warning system detected precursor patterns. Timeline visualization shows the sequence: subtle increases in database connection acquisition times appearing in logs, followed by occasional query timeouts, then the first failed transactions—all occurring before traditional monitoring detected any issues. The early warning system identified this pattern from historical incidents, automatically correlating these precursors with previous outages and alerting engineers who implemented connection pool adjustments before widespread customer impact occurred. Performance dashboards show how transaction success rates remained stable despite the underlying issue that previously caused major disruptions.
+### Scene Description
+
+ A banking platform SRE team reviewing a prevented outage after their early warning system detected precursor patterns. Timeline visualization shows the sequence: subtle increases in database connection acquisition times appearing in logs, followed by occasional query timeouts, then the first failed transactions—all occurring before traditional monitoring detected any issues. The early warning system identified this pattern from historical incidents, automatically correlating these precursors with previous outages and alerting engineers who implemented connection pool adjustments before widespread customer impact occurred. Performance dashboards show how transaction success rates remained stable despite the underlying issue that previously caused major disruptions.
 
 ### Teaching Narrative
 
@@ -341,7 +351,9 @@ To implement effective early warning systems:
 
 ## Panel 6: The Alert Enrichment - Context for Rapid Response
 
-**Scene Description**: A financial services incident response where an SRE team receives an enriched alert for a payment processing anomaly. Rather than a simple notification, the alert contains comprehensive context: the exact log patterns that triggered it, historical trends showing when the pattern began emerging, related system components with their current status, recent changes that might have contributed (code deployments, configuration changes, traffic patterns), links to runbooks for this specific scenario, and a list of subject matter experts currently available. The team immediately begins targeted investigation rather than spending precious time gathering basic information, resolving the issue before it escalates to widespread customer impact.
+### Scene Description
+
+ A financial services incident response where an SRE team receives an enriched alert for a payment processing anomaly. Rather than a simple notification, the alert contains comprehensive context: the exact log patterns that triggered it, historical trends showing when the pattern began emerging, related system components with their current status, recent changes that might have contributed (code deployments, configuration changes, traffic patterns), links to runbooks for this specific scenario, and a list of subject matter experts currently available. The team immediately begins targeted investigation rather than spending precious time gathering basic information, resolving the issue before it escalates to widespread customer impact.
 
 ### Teaching Narrative
 
@@ -401,7 +413,9 @@ To implement effective alert enrichment:
 
 ## Panel 7: The Alert Fatigue Antidote - Quality Over Quantity
 
-**Scene Description**: A banking operations transformation project where teams analyze their alerting effectiveness. Dashboard visualizations show dramatic changes in alert patterns: a reduction from hundreds of daily alerts to dozens, with corresponding improvements in response times and resolution effectiveness. Engineers demonstrate their alert refinement methodology: grouping related alerts to reduce duplication, implementing progressive severity based on persistent patterns rather than isolated events, automatically suppressing known issues already being addressed, and continuously measuring alert-to-incident ratios to identify noisy signals. The timeline shows how alert quality has steadily improved while overall volume decreased, with metrics confirming faster response times and reduced toil for on-call engineers—leading to higher reliability despite fewer alerts.
+### Scene Description
+
+ A banking operations transformation project where teams analyze their alerting effectiveness. Dashboard visualizations show dramatic changes in alert patterns: a reduction from hundreds of daily alerts to dozens, with corresponding improvements in response times and resolution effectiveness. Engineers demonstrate their alert refinement methodology: grouping related alerts to reduce duplication, implementing progressive severity based on persistent patterns rather than isolated events, automatically suppressing known issues already being addressed, and continuously measuring alert-to-incident ratios to identify noisy signals. The timeline shows how alert quality has steadily improved while overall volume decreased, with metrics confirming faster response times and reduced toil for on-call engineers—leading to higher reliability despite fewer alerts.
 
 ### Teaching Narrative
 
@@ -461,7 +475,9 @@ To implement effective alert fatigue reduction:
 
 ## Panel 8: The Automated Response - From Detection to Remediation
 
-**Scene Description**: A retail banking platform operations center where automated response systems act on specific log patterns without human intervention. Monitoring screens show detection of a familiar capacity issue in the authentication service based on recognized log signatures, followed by automatic scaled deployment of additional service instances before performance degradation affects customers. Engineers review dashboards showing automated response effectiveness—dozens of routine issues automatically remediated without human involvement, with clear boundaries between automated handling of well-understood patterns versus human escalation for novel situations. Historical metrics demonstrate dramatic improvements in both mean-time-to-resolution and engineer focus on high-value problems since implementing targeted automation for common patterns.
+### Scene Description
+
+ A retail banking platform operations center where automated response systems act on specific log patterns without human intervention. Monitoring screens show detection of a familiar capacity issue in the authentication service based on recognized log signatures, followed by automatic scaled deployment of additional service instances before performance degradation affects customers. Engineers review dashboards showing automated response effectiveness—dozens of routine issues automatically remediated without human involvement, with clear boundaries between automated handling of well-understood patterns versus human escalation for novel situations. Historical metrics demonstrate dramatic improvements in both mean-time-to-resolution and engineer focus on high-value problems since implementing targeted automation for common patterns.
 
 ### Teaching Narrative
 
@@ -521,7 +537,9 @@ To implement effective automated response:
 
 ## Panel 9: The Feedback Loop - Continuous Alert Refinement
 
-**Scene Description**: A banking platform engineering team conducting their monthly alert effectiveness review. Interactive dashboards display comprehensive metrics about alerting quality: false positive rates for different alert categories, mean-time-to-resolution trends, alert-to-incident ratios, and coverage analysis of past incidents. Engineers methodically analyze alerts that fired without actual incidents (false positives) and incidents that occurred without prior alerts (false negatives), refining detection patterns based on these findings. A visible improvement process shows how they've continuously enhanced detection effectiveness through this disciplined feedback approach, with metrics confirming steady improvement in both precision and recall—detecting more genuine issues with fewer false alarms.
+### Scene Description
+
+ A banking platform engineering team conducting their monthly alert effectiveness review. Interactive dashboards display comprehensive metrics about alerting quality: false positive rates for different alert categories, mean-time-to-resolution trends, alert-to-incident ratios, and coverage analysis of past incidents. Engineers methodically analyze alerts that fired without actual incidents (false positives) and incidents that occurred without prior alerts (false negatives), refining detection patterns based on these findings. A visible improvement process shows how they've continuously enhanced detection effectiveness through this disciplined feedback approach, with metrics confirming steady improvement in both precision and recall—detecting more genuine issues with fewer false alarms.
 
 ### Teaching Narrative
 
@@ -581,7 +599,9 @@ To implement effective alert refinement loops:
 
 ## Panel 10: The Integrated Observability Vision - Unifying Signals
 
-**Scene Description**: A modern financial services command center showcasing integrated observability across logs, metrics, and traces. Large visualization displays show how log-based alerts automatically correlate with related metrics and traces to create comprehensive incident context. When an unusual pattern in payment processing logs triggers an alert, the system automatically displays corresponding performance metrics showing gradually increasing latency, distributed traces revealing the specific service interactions causing delays, and related infrastructure metrics. Engineering leaders demonstrate how this unified approach provides complete visibility during investigations, with documented examples of complex issues that would have been missed by any single telemetry type but were immediately evident through integrated analysis.
+### Scene Description
+
+ A modern financial services command center showcasing integrated observability across logs, metrics, and traces. Large visualization displays show how log-based alerts automatically correlate with related metrics and traces to create comprehensive incident context. When an unusual pattern in payment processing logs triggers an alert, the system automatically displays corresponding performance metrics showing gradually increasing latency, distributed traces revealing the specific service interactions causing delays, and related infrastructure metrics. Engineering leaders demonstrate how this unified approach provides complete visibility during investigations, with documented examples of complex issues that would have been missed by any single telemetry type but were immediately evident through integrated analysis.
 
 ### Teaching Narrative
 

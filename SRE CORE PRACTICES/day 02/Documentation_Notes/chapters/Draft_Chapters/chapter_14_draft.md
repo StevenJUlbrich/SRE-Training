@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Metric Detective
 
-**Scene Description**: Senior SRE mentoring junior engineer through diagnostic exercise using dashboard comparison to identify subtle metric patterns indicating emerging problem. Visual shows side-by-side comparison of normal vs. problematic metric patterns in a payment processing system with the mentor guiding pattern recognition skills development through structured analysis.
+### Scene Description
+
+ Senior SRE mentoring junior engineer through diagnostic exercise using dashboard comparison to identify subtle metric patterns indicating emerging problem. Visual shows side-by-side comparison of normal vs. problematic metric patterns in a payment processing system with the mentor guiding pattern recognition skills development through structured analysis.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ For payment systems, early pattern recognition directly affects both incident pr
 
 ## Panel 2: The Control Room Simulation
 
-**Scene Description**: Team participating in simulated incident scenario, making decisions based on evolving metric patterns in banking system dashboard. Visual shows realistic incident simulation environment with team members practicing coordinated response to metrics-driven scenarios in a safe training environment before facing real production incidents.
+### Scene Description
+
+ Team participating in simulated incident scenario, making decisions based on evolving metric patterns in banking system dashboard. Visual shows realistic incident simulation environment with team members practicing coordinated response to metrics-driven scenarios in a safe training environment before facing real production incidents.
 
 ### Teaching Narrative
 
@@ -138,7 +142,9 @@ For financial operations, response effectiveness directly affects both incident 
 
 ## Panel 3: The System Historian
 
-**Scene Description**: Team analyzing historical metric data from past incident, identifying leading indicators that could have provided earlier detection. Visual shows timeline analysis of pre-incident metrics with potential warning signs highlighted and annotated, developing pattern recognition skills for future incidents by learning from previous experiences.
+### Scene Description
+
+ Team analyzing historical metric data from past incident, identifying leading indicators that could have provided earlier detection. Visual shows timeline analysis of pre-incident metrics with potential warning signs highlighted and annotated, developing pattern recognition skills for future incidents by learning from previous experiences.
 
 ### Teaching Narrative
 
@@ -189,7 +195,9 @@ For financial systems, pattern recognition directly affects both detection time 
 
 ## Panel 4: The Dashboard Designer
 
-**Scene Description**: Workshop exercise where participants create effective metric visualizations from raw banking system data sets. Visual shows transformation process from complex raw monitoring data to clear, actionable dashboards that highlight important patterns and guide appropriate response during different operational scenarios.
+### Scene Description
+
+ Workshop exercise where participants create effective metric visualizations from raw banking system data sets. Visual shows transformation process from complex raw monitoring data to clear, actionable dashboards that highlight important patterns and guide appropriate response during different operational scenarios.
 
 ### Teaching Narrative
 
@@ -240,7 +248,9 @@ For financial operations, visualization effectiveness directly affects both inci
 
 ## Panel 5: The SLI-SLO Workshop
 
-**Scene Description**: Hands-on exercise defining appropriate service level metrics and objectives for a new banking service. Visual shows facilitated workshop process where team members collaboratively identify the metrics that truly matter to customers, establish meaningful thresholds, and create comprehensive service level frameworks that balance technical and business needs.
+### Scene Description
+
+ Hands-on exercise defining appropriate service level metrics and objectives for a new banking service. Visual shows facilitated workshop process where team members collaboratively identify the metrics that truly matter to customers, establish meaningful thresholds, and create comprehensive service level frameworks that balance technical and business needs.
 
 ### Teaching Narrative
 
@@ -291,7 +301,9 @@ For financial services, appropriate service levels directly affect both reliabil
 
 ## Panel 6: The Alert Tuning Lab
 
-**Scene Description**: Team practicing alert threshold optimization using historical metric data to reduce false positives while maintaining detection capability. Visual shows engineers analyzing metric patterns across different time periods, testing various threshold configurations, and measuring detection effectiveness to find optimal balance between sensitivity and specificity in payment monitoring.
+### Scene Description
+
+ Team practicing alert threshold optimization using historical metric data to reduce false positives while maintaining detection capability. Visual shows engineers analyzing metric patterns across different time periods, testing various threshold configurations, and measuring detection effectiveness to find optimal balance between sensitivity and specificity in payment monitoring.
 
 ### Teaching Narrative
 
@@ -342,7 +354,9 @@ For payment operations, alert effectiveness directly affects both incident respo
 
 ## Panel 7: The Post-Incident Analysis
 
-**Scene Description**: Guided exercise analyzing metric patterns from major incident to identify missed signals and improvement opportunities. Visual shows structured analysis process examining the complete metric timeline before, during, and after a significant outage, identifying both technical and process improvement opportunities through comprehensive review.
+### Scene Description
+
+ Guided exercise analyzing metric patterns from major incident to identify missed signals and improvement opportunities. Visual shows structured analysis process examining the complete metric timeline before, during, and after a significant outage, identifying both technical and process improvement opportunities through comprehensive review.
 
 ### Teaching Narrative
 

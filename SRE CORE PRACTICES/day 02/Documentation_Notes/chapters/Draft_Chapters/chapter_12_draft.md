@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: How Bad Is It?
 
-**Scene Description**: Incident commander assessing payment gateway outage impact using service dependency map with affected components and customer impact metrics. Visual shows comprehensive impact dashboard with transaction volume affected, customer segments impacted, financial exposure estimates, and critical path visualization highlighting dependencies of the disrupted payment service.
+### Scene Description
+
+ Incident commander assessing payment gateway outage impact using service dependency map with affected components and customer impact metrics. Visual shows comprehensive impact dashboard with transaction volume affected, customer segments impacted, financial exposure estimates, and critical path visualization highlighting dependencies of the disrupted payment service.
 
 ### Teaching Narrative
 
@@ -91,7 +93,9 @@ For payment systems, impact quantification directly affects both resolution effe
 
 ## Panel 2: The War Room Dashboard
 
-**Scene Description**: Incident response team coordinating recovery efforts using specialized real-time metrics dashboard showing impact and recovery progress. Visual displays purpose-built incident command center with metrics designed specifically for response coordination: affected systems, customer impact trend, mitigation effectiveness, and recovery projections with clear status indicators.
+### Scene Description
+
+ Incident response team coordinating recovery efforts using specialized real-time metrics dashboard showing impact and recovery progress. Visual displays purpose-built incident command center with metrics designed specifically for response coordination: affected systems, customer impact trend, mitigation effectiveness, and recovery projections with clear status indicators.
 
 ### Teaching Narrative
 
@@ -142,7 +146,9 @@ For digital banking platforms, incident visualization directly affects both reso
 
 ## Panel 3: The Communication Challenge
 
-**Scene Description**: Technical team translating incident metrics into business impact information for executive stakeholders and external communication. Visual shows transformation of technical incident data into business-focused briefing materials with metrics presented in business terms rather than technical jargon for different audience needs.
+### Scene Description
+
+ Technical team translating incident metrics into business impact information for executive stakeholders and external communication. Visual shows transformation of technical incident data into business-focused briefing materials with metrics presented in business terms rather than technical jargon for different audience needs.
 
 ### Teaching Narrative
 
@@ -197,7 +203,9 @@ For financial institutions, incident communication directly affects both stakeho
 
 ## Panel 4: The Triage Matrix
 
-**Scene Description**: Multiple incidents occurring simultaneously with team using impact-based metrics to prioritize response allocation. Visual shows prioritization framework with incidents ranked by customer impact, financial exposure, and recovery complexity rather than technical severity alone, guiding resource allocation across competing demands.
+### Scene Description
+
+ Multiple incidents occurring simultaneously with team using impact-based metrics to prioritize response allocation. Visual shows prioritization framework with incidents ranked by customer impact, financial exposure, and recovery complexity rather than technical severity alone, guiding resource allocation across competing demands.
 
 ### Teaching Narrative
 
@@ -252,7 +260,9 @@ For financial operations, triage effectiveness directly affects both incident im
 
 ## Panel 5: The Recovery Tracker
 
-**Scene Description**: Operations team monitoring service restoration metrics during recovery process with backlog and transaction success trends. Visual shows recovery dashboard tracking multiple dimensions of service restoration: success rate improvement, backlog processing progress, resource normalization, and projected full recovery timing.
+### Scene Description
+
+ Operations team monitoring service restoration metrics during recovery process with backlog and transaction success trends. Visual shows recovery dashboard tracking multiple dimensions of service restoration: success rate improvement, backlog processing progress, resource normalization, and projected full recovery timing.
 
 ### Teaching Narrative
 
@@ -303,7 +313,9 @@ For payment systems, recovery visibility directly affects both total incident du
 
 ## Panel 6: The Blameless Retrospective
 
-**Scene Description**: Team analyzing metric patterns preceding incident to identify missed signals and improve detection capabilities. Visual shows timeline analysis of pre-incident metrics with potential warning signs highlighted and improvement opportunities identified in a constructive, forward-looking format.
+### Scene Description
+
+ Team analyzing metric patterns preceding incident to identify missed signals and improve detection capabilities. Visual shows timeline analysis of pre-incident metrics with potential warning signs highlighted and improvement opportunities identified in a constructive, forward-looking format.
 
 ### Teaching Narrative
 
@@ -354,7 +366,9 @@ For financial operations, learning effectiveness directly affects both incident 
 
 ## Panel 7: The Incident Metrics Library
 
-**Scene Description**: SRE team building knowledge base of metric patterns associated with common failure modes in banking systems. Visual shows pattern library documenting the metric signatures of different failure types, with characteristic patterns cataloged for rapid recognition during future incidents.
+### Scene Description
+
+ SRE team building knowledge base of metric patterns associated with common failure modes in banking systems. Visual shows pattern library documenting the metric signatures of different failure types, with characteristic patterns cataloged for rapid recognition during future incidents.
 
 ### Teaching Narrative
 

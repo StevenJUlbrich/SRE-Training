@@ -2,7 +2,9 @@
 
 ## Panel 1: The Million-Dollar Dashboard
 
-**Scene Description**: A bustling banking operations center where multiple teams stare at wall-mounted screens displaying hundreds of colorful graphs and metrics. In the foreground, a finance manager hands a shocked SRE lead a printout of last month's observability platform bill with a seven-figure total highlighted in red. Other engineers continue adding new metrics to dashboards, unaware of the financial implications of their actions.
+### Scene Description
+
+ A bustling banking operations center where multiple teams stare at wall-mounted screens displaying hundreds of colorful graphs and metrics. In the foreground, a finance manager hands a shocked SRE lead a printout of last month's observability platform bill with a seven-figure total highlighted in red. Other engineers continue adding new metrics to dashboards, unaware of the financial implications of their actions.
 
 ### Teaching Narrative
 
@@ -12,7 +14,9 @@ The cost-aware mindset begins with recognizing that observability is not about c
 
 ## Panel 2: The Signal and the Noise
 
-**Scene Description**: Split screen showing two SREs responding to the same critical banking incident. On the left, an engineer frantically scrolls through thousands of logs and metrics, overwhelmed by information overload. On the right, another engineer calmly analyzes a carefully curated set of high-value signals, quickly identifying the root cause in a payment processing service. A small indicator shows the left engineer's observability platform is processing 50TB daily while the right engineer's platform handles only 5TB.
+### Scene Description
+
+ Split screen showing two SREs responding to the same critical banking incident. On the left, an engineer frantically scrolls through thousands of logs and metrics, overwhelmed by information overload. On the right, another engineer calmly analyzes a carefully curated set of high-value signals, quickly identifying the root cause in a payment processing service. A small indicator shows the left engineer's observability platform is processing 50TB daily while the right engineer's platform handles only 5TB.
 
 ### Teaching Narrative
 
@@ -22,7 +26,9 @@ Cost-aware observability recognizes that the goal is not comprehensive data coll
 
 ## Panel 3: The Observer Effect
 
-**Scene Description**: A banking technology architect reviews a production incident report showing how a trading platform crashed under load. Diagrams reveal that the extensive tracing and logging added to debug the system actually created enough overhead to cause the failure. In the background, a whiteboard shows calculations of the CPU and memory overhead from different types of instrumentation, with some approaches consuming up to 30% of system resources.
+### Scene Description
+
+ A banking technology architect reviews a production incident report showing how a trading platform crashed under load. Diagrams reveal that the extensive tracing and logging added to debug the system actually created enough overhead to cause the failure. In the background, a whiteboard shows calculations of the CPU and memory overhead from different types of instrumentation, with some approaches consuming up to 30% of system resources.
 
 ### Teaching Narrative
 
@@ -32,7 +38,9 @@ Cost-aware observability considers not just the direct financial costs of data s
 
 ## Panel 4: The Economics of Insight
 
-**Scene Description**: A quarterly planning meeting where an SRE director presents a slide comparing two approaches to payment gateway observability. One approach shows comprehensive instrumentation with a $200,000 monthly cost and 99.9% incident detection. The alternative shows targeted instrumentation focused on customer-impacting metrics with a $30,000 monthly cost and 99.5% incident detection. The presentation concludes with ROI calculations showing the strategic approach delivers better overall business value.
+### Scene Description
+
+ A quarterly planning meeting where an SRE director presents a slide comparing two approaches to payment gateway observability. One approach shows comprehensive instrumentation with a $200,000 monthly cost and 99.9% incident detection. The alternative shows targeted instrumentation focused on customer-impacting metrics with a $30,000 monthly cost and 99.5% incident detection. The presentation concludes with ROI calculations showing the strategic approach delivers better overall business value.
 
 ### Teaching Narrative
 
@@ -42,7 +50,9 @@ Sophisticated observability strategies recognize that not all system components 
 
 ## Panel 5: The Cardinality Trap
 
-**Scene Description**: An incident room where engineers struggle to access dashboards that have become unresponsively slow. On a developer's laptop, code is visible showing how a recent change added unique customer IDs as a dimension to every metric in their fraud detection system. A database administrator explains that the change created millions of new time series, causing both performance degradation and a 15x increase in their observability costs overnight.
+### Scene Description
+
+ An incident room where engineers struggle to access dashboards that have become unresponsively slow. On a developer's laptop, code is visible showing how a recent change added unique customer IDs as a dimension to every metric in their fraud detection system. A database administrator explains that the change created millions of new time series, causing both performance degradation and a 15x increase in their observability costs overnight.
 
 ### Teaching Narrative
 
@@ -52,7 +62,9 @@ Cost-aware observability requires a sophisticated understanding of cardinality a
 
 ## Panel 6: The Data Lifecycle
 
-**Scene Description**: A timeline visualization showing the journey of observability data from creation to eventual archival. Different storage tiers are shown with their associated costs per gigabyte, from expensive hot storage for real-time data to economical cold storage for historical analysis. A compliance officer and an SRE architect collaborate on designing retention policies that satisfy regulatory requirements while optimizing storage costs across the lifecycle.
+### Scene Description
+
+ A timeline visualization showing the journey of observability data from creation to eventual archival. Different storage tiers are shown with their associated costs per gigabyte, from expensive hot storage for real-time data to economical cold storage for historical analysis. A compliance officer and an SRE architect collaborate on designing retention policies that satisfy regulatory requirements while optimizing storage costs across the lifecycle.
 
 ### Teaching Narrative
 
@@ -62,7 +74,9 @@ Advanced observability architectures implement automated data lifecycle manageme
 
 ## Panel 7: The Observability Culture
 
-**Scene Description**: A banking platform team's workspace showing observable symbols of their cost-aware approach. A dashboard prominently displays current monthly observability costs alongside historical trends. Team ceremonies include a "telemetry review" alongside code reviews. A "Metric of the Month" award recognizes an engineer who optimized a high-volume data pipeline to reduce costs while improving insight quality. A set of observability principles is visibly posted on the wall.
+### Scene Description
+
+ A banking platform team's workspace showing observable symbols of their cost-aware approach. A dashboard prominently displays current monthly observability costs alongside historical trends. Team ceremonies include a "telemetry review" alongside code reviews. A "Metric of the Month" award recognizes an engineer who optimized a high-volume data pipeline to reduce costs while improving insight quality. A set of observability principles is visibly posted on the wall.
 
 ### Teaching Narrative
 

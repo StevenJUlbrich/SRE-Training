@@ -2,7 +2,9 @@
 
 ## Panel 1: Beyond Symptoms - The Scientific Method for Incident Investigation
 
-**Scene Description**: In a dimly lit incident war room, Katherine stands at a whiteboard divided into columns labeled "Observations," "Hypotheses," "Tests," and "Results." Digital clocks showing different time zones hang on the wall, with one prominently displaying "Incident Duration: 47 minutes." Team members in various states of focus—some examining dashboards, others scrolling through logs—watch as Katherine draws connections between observed symptoms and possible causes, methodically crossing out disproven hypotheses while highlighting a promising lead about transaction database locks.
+### Scene Description
+
+ In a dimly lit incident war room, Katherine stands at a whiteboard divided into columns labeled "Observations," "Hypotheses," "Tests," and "Results." Digital clocks showing different time zones hang on the wall, with one prominently displaying "Incident Duration: 47 minutes." Team members in various states of focus—some examining dashboards, others scrolling through logs—watch as Katherine draws connections between observed symptoms and possible causes, methodically crossing out disproven hypotheses while highlighting a promising lead about transaction database locks.
 
 ### Teaching Narrative
 
@@ -66,7 +68,9 @@ To implement scientific method-based incident investigation in your banking orga
 
 ## Panel 2: The Art of Log Analysis - Finding Signal in the Noise
 
-**Scene Description**: A split-screen view shows Sarah, an SRE, at her workstation with multiple terminal windows open. On the left, a raw log stream scrolls rapidly with thousands of entries highlighted in various colors. On the right, she's constructed a precise filtering pipeline using grep, awk, and other tools that has distilled the chaotic stream into a clear pattern: periodic timeout errors occurring exactly 30 seconds after each batch of payment authentication requests. Post-it notes with common log filtering patterns are stuck to her monitor's edge, and a dashboard shows customer payment success rates dropping in sync with the pattern she's identified.
+### Scene Description
+
+ A split-screen view shows Sarah, an SRE, at her workstation with multiple terminal windows open. On the left, a raw log stream scrolls rapidly with thousands of entries highlighted in various colors. On the right, she's constructed a precise filtering pipeline using grep, awk, and other tools that has distilled the chaotic stream into a clear pattern: periodic timeout errors occurring exactly 30 seconds after each batch of payment authentication requests. Post-it notes with common log filtering patterns are stuck to her monitor's edge, and a dashboard shows customer payment success rates dropping in sync with the pattern she's identified.
 
 ### Teaching Narrative
 
@@ -134,7 +138,9 @@ To enhance log analysis capabilities in your banking environment:
 
 ## Panel 3: Metrics Detective Work - Correlation and Causation
 
-**Scene Description**: In a glass-walled conference room converted into an incident bridge, Dev and Priya stand before a large display showing multiple metric graphs from a trading platform dashboard. Using tablet styluses, they've annotated the timeline with key events: "API Gateway Change," "Traffic Spike," "First Error Reports," and "Database Contention Alert." They're pointing to two graphs showing an unusual pattern: the database connection count (steadily climbing) and average response time (normal until suddenly spiking) with a clear 3-minute gap between them. A third graph shows trading volumes remaining constant, contradicting the initial traffic spike theory. Team members on video calls watch intently as Priya draws a connection between the database connection pattern and a recent code deployment.
+### Scene Description
+
+ In a glass-walled conference room converted into an incident bridge, Dev and Priya stand before a large display showing multiple metric graphs from a trading platform dashboard. Using tablet styluses, they've annotated the timeline with key events: "API Gateway Change," "Traffic Spike," "First Error Reports," and "Database Contention Alert." They're pointing to two graphs showing an unusual pattern: the database connection count (steadily climbing) and average response time (normal until suddenly spiking) with a clear 3-minute gap between them. A third graph shows trading volumes remaining constant, contradicting the initial traffic spike theory. Team members on video calls watch intently as Priya draws a connection between the database connection pattern and a recent code deployment.
 
 ### Teaching Narrative
 
@@ -202,7 +208,9 @@ To enhance metric correlation capabilities in your financial organization:
 
 ## Panel 4: Distributed Tracing - Following the Transaction Journey
 
-**Scene Description**: Elena stands before a large touchscreen displaying an intricate visualization of a single payment transaction's journey through the bank's microservices architecture. The trace diagram resembles a subway map with dozens of colored lines representing different services, with timestamps at each node. She's highlighting an unusual pattern with her finger—a payment authorization request that travels normally through the first seven services but then encounters a 2.5-second delay in the fraud detection service before ultimately timing out in the core banking interface. On adjacent screens, similar traces from other failed transactions show identical patterns, while successful transactions follow a different path that bypasses a specific fraud detection instance. Physical architecture diagrams and service dependency maps are pinned to nearby walls, with Elena drawing connections between the trace visualization and the physical systems.
+### Scene Description
+
+ Elena stands before a large touchscreen displaying an intricate visualization of a single payment transaction's journey through the bank's microservices architecture. The trace diagram resembles a subway map with dozens of colored lines representing different services, with timestamps at each node. She's highlighting an unusual pattern with her finger—a payment authorization request that travels normally through the first seven services but then encounters a 2.5-second delay in the fraud detection service before ultimately timing out in the core banking interface. On adjacent screens, similar traces from other failed transactions show identical patterns, while successful transactions follow a different path that bypasses a specific fraud detection instance. Physical architecture diagrams and service dependency maps are pinned to nearby walls, with Elena drawing connections between the trace visualization and the physical systems.
 
 ### Teaching Narrative
 
@@ -270,7 +278,9 @@ To implement effective distributed tracing in your banking environment:
 
 ## Panel 5: System Profiling - Diving Below the Surface
 
-**Scene Description**: In a specialized performance lab with multiple high-powered workstations, Rafael is conducting a live profiling session on a replica of the production trading system experiencing sporadic latency spikes. His screens show various low-level metrics: CPU flame graphs displaying call stacks, memory allocation patterns, garbage collection statistics, and thread contention visualizations. Using specialized profiling tools, he's captured the exact moment when the system experiences a latency spike, revealing an unexpected memory allocation pattern in the market data processing component. Nearby, a whiteboard lists possible performance hypotheses the team has systematically worked through, with most crossed out. A replica dashboard shows the same symptoms as production, but in this controlled environment, Rafael can safely trigger the issue on demand to gather data that would be impossible to collect in production.
+### Scene Description
+
+ In a specialized performance lab with multiple high-powered workstations, Rafael is conducting a live profiling session on a replica of the production trading system experiencing sporadic latency spikes. His screens show various low-level metrics: CPU flame graphs displaying call stacks, memory allocation patterns, garbage collection statistics, and thread contention visualizations. Using specialized profiling tools, he's captured the exact moment when the system experiences a latency spike, revealing an unexpected memory allocation pattern in the market data processing component. Nearby, a whiteboard lists possible performance hypotheses the team has systematically worked through, with most crossed out. A replica dashboard shows the same symptoms as production, but in this controlled environment, Rafael can safely trigger the issue on demand to gather data that would be impossible to collect in production.
 
 ### Teaching Narrative
 
@@ -338,7 +348,9 @@ To enhance system profiling capabilities in your financial organization:
 
 ## Panel 6: Post-Incident Data Collection - Preserving the Crime Scene
 
-**Scene Description**: As tension visibly eases in the incident room following a successful fix, Naomi interrupts the team's relief by standing up and asserting, "Hold on—we're not done yet." She projects a structured evidence collection checklist onto the main screen with items like "Capture running process state," "Archive logs before rotation," "Record current configuration," and "Document timeline while fresh." Team members who were starting to disconnect are redirected to specific data collection tasks. One engineer is taking screenshots of current dashboards, another is running scripts to archive database states, and a third is documenting the exact commands used during remediation. On a separate screen, a 24-hour countdown timer emphasizes the limited window for preserving volatile evidence before system changes and log rotations erase crucial data.
+### Scene Description
+
+ As tension visibly eases in the incident room following a successful fix, Naomi interrupts the team's relief by standing up and asserting, "Hold on—we're not done yet." She projects a structured evidence collection checklist onto the main screen with items like "Capture running process state," "Archive logs before rotation," "Record current configuration," and "Document timeline while fresh." Team members who were starting to disconnect are redirected to specific data collection tasks. One engineer is taking screenshots of current dashboards, another is running scripts to archive database states, and a third is documenting the exact commands used during remediation. On a separate screen, a 24-hour countdown timer emphasizes the limited window for preserving volatile evidence before system changes and log rotations erase crucial data.
 
 ### Teaching Narrative
 
@@ -406,7 +418,9 @@ To enhance post-incident data collection in your financial organization:
 
 ## Panel 7: Creating Reproducible Test Cases - From Mystery to Mechanism
 
-**Scene Description**: In a specially configured development environment, Tarek and Imani are methodically recreating the conditions that led to a payment processing failure. Their workstations show parallel screens: production logs from the incident on the left, and a testing environment on the right where they're incrementally building a simplified reproduction of the issue. On a whiteboard, they've mapped out a minimal test case that includes only the essential components needed to trigger the bug: the payment gateway, fraud detection service, and database connection pool. As Tarek adjusts transaction parameters, Imani monitors system behavior, celebrating when they finally reproduce the exact error signature seen in production. A third screen shows a simple Python test script they've developed that reliably triggers the condition—a script that will become part of the regression test suite once the issue is fixed.
+### Scene Description
+
+ In a specially configured development environment, Tarek and Imani are methodically recreating the conditions that led to a payment processing failure. Their workstations show parallel screens: production logs from the incident on the left, and a testing environment on the right where they're incrementally building a simplified reproduction of the issue. On a whiteboard, they've mapped out a minimal test case that includes only the essential components needed to trigger the bug: the payment gateway, fraud detection service, and database connection pool. As Tarek adjusts transaction parameters, Imani monitors system behavior, celebrating when they finally reproduce the exact error signature seen in production. A third screen shows a simple Python test script they've developed that reliably triggers the condition—a script that will become part of the regression test suite once the issue is fixed.
 
 ### Teaching Narrative
 

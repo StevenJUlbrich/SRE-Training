@@ -33,7 +33,9 @@ Welcome to the brutal reality of modern banking operations: your dashboards are 
 ---
 ## Panel 1: The Midnight Alert - Limitations of Traditional Monitoring
 
-**Scene Description**: A dimly lit banking operations center at 2:30 AM. A support engineer stares anxiously at multiple dashboards showing all green status indicators while simultaneously fielding angry calls from customers unable to complete international wire transfers. The disconnect between monitoring dashboards and customer reality creates visible confusion and frustration.
+### Scene Description
+
+ A dimly lit banking operations center at 2:30 AM. A support engineer stares anxiously at multiple dashboards showing all green status indicators while simultaneously fielding angry calls from customers unable to complete international wire transfers. The disconnect between monitoring dashboards and customer reality creates visible confusion and frustration.
 
 ### Teaching Narrative
 
@@ -71,7 +73,9 @@ Regulatory consequences are equally concerning, as undetected processing issues 
 
 ## Panel 2: The Observability Triad - Beyond Simple Health Checks
 
-**Scene Description**: A collaborative war room where engineers gather around a large display showing three interconnected views of the same payment system: detailed logs of transaction steps, performance metrics with unusual patterns highlighted, and a visual trace map showing a payment's journey across multiple services with one service glowing red despite "passing" health checks.
+### Scene Description
+
+ A collaborative war room where engineers gather around a large display showing three interconnected views of the same payment system: detailed logs of transaction steps, performance metrics with unusual patterns highlighted, and a visual trace map showing a payment's journey across multiple services with one service glowing red despite "passing" health checks.
 
 ### Teaching Narrative
 
@@ -117,7 +121,9 @@ Competitive disadvantage emerges as banks with superior observability identify a
 
 ## Panel 3: Customer-Centric Visibility - Measuring What Matters
 
-**Scene Description**: Two adjacent workstations with different approaches. On the left, an engineer configures alerts for server CPU and memory thresholds. On the right, another engineer creates dashboards showing end-to-end payment completion rates, authorization success percentages, and customer transaction journey times with bottlenecks highlighted in red.
+### Scene Description
+
+ Two adjacent workstations with different approaches. On the left, an engineer configures alerts for server CPU and memory thresholds. On the right, another engineer creates dashboards showing end-to-end payment completion rates, authorization success percentages, and customer transaction journey times with bottlenecks highlighted in red.
 
 ### Teaching Narrative
 
@@ -165,7 +171,9 @@ Operational inefficiency compounds when teams focus on infrastructure metrics th
 
 ## Panel 4: Systems Thinking - Understanding Complex Interactions
 
-**Scene Description**: An engineer investigates a failed mortgage application processing incident by following a visual trace flow that spans multiple systems. The trace reveals that while each individual system shows healthy status, a timing discrepancy between the credit check service and document verification system causes applications to stall silently after appearing to succeed.
+### Scene Description
+
+ An engineer investigates a failed mortgage application processing incident by following a visual trace flow that spans multiple systems. The trace reveals that while each individual system shows healthy status, a timing discrepancy between the credit check service and document verification system causes applications to stall silently after appearing to succeed.
 
 ### Teaching Narrative
 
@@ -213,7 +221,9 @@ Competitive disadvantage compounds as customers abandoning stalled applications 
 
 ## Panel 5: Proactive Issue Detection - From Reactive to Predictive
 
-**Scene Description**: A support engineer reviews an automated anomaly detection alert showing unusual patterns in authentication service response times that don't yet breach thresholds. By exploring trace data, she identifies an emerging authentication bottleneck and implements a solution before any customers experience delays in accessing their accounts.
+### Scene Description
+
+ A support engineer reviews an automated anomaly detection alert showing unusual patterns in authentication service response times that don't yet breach thresholds. By exploring trace data, she identifies an emerging authentication bottleneck and implements a solution before any customers experience delays in accessing their accounts.
 
 ### Teaching Narrative
 
@@ -261,7 +271,9 @@ Regulatory advantages emerge when banks can demonstrate proactive detection capa
 
 ## Panel 6: The Data Challenge - Managing Observability Information
 
-**Scene Description**: A systems architect plans an observability implementation on a whiteboard, showing data flowing from dozens of banking services into centralized collection systems. The diagram highlights sampling decisions, retention policies, and access controls, with notes about compliance requirements for transaction data and cost optimization strategies.
+### Scene Description
+
+ A systems architect plans an observability implementation on a whiteboard, showing data flowing from dozens of banking services into centralized collection systems. The diagram highlights sampling decisions, retention policies, and access controls, with notes about compliance requirements for transaction data and cost optimization strategies.
 
 ### Teaching Narrative
 
@@ -309,7 +321,9 @@ Opportunity costs emerge when observability becomes financially unsustainable—
 
 ## Panel 7: Evidence-Based Culture - From Opinion to Data
 
-**Scene Description**: A meeting room where team members debate the best approach to improving transaction processing. Instead of opinions dominating, an SRE presents trace data and metrics showing exactly where delays occur in the payment flow. The evidence transforms the discussion from subjective arguments to collaborative problem-solving based on shared facts.
+### Scene Description
+
+ A meeting room where team members debate the best approach to improving transaction processing. Instead of opinions dominating, an SRE presents trace data and metrics showing exactly where delays occur in the payment flow. The evidence transforms the discussion from subjective arguments to collaborative problem-solving based on shared facts.
 
 ### Teaching Narrative
 

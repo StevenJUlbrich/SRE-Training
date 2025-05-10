@@ -184,7 +184,9 @@ To ensure we consistently maintain the proper 85/15 balance throughout the curri
 
 **Panel: "The Cardinality Explosion" (Foundation Level)**
 
-**Scene Description**: [Brief visual description focusing on dashboards with exploding metrics]
+### Scene Description
+
+ [Brief visual description focusing on dashboards with exploding metrics]
 
 **Teaching Narrative (40% - Technical Focus)**:
 Focus on explaining cardinality concepts, dimension multiplication effects, and the technical impact on observability platforms. Discuss how each unique combination of labels creates new time series, the storage implications, and query performance impacts.

@@ -33,7 +33,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Telemetry Tsunami
 
-**Scene Description**: A banking operations center with multiple monitoring screens showing alerts from different regions simultaneously. Engineers frantically scroll through dashboards as their observability costs graph climbs sharply upward. A senior SRE points to three nearly identical screens showing the same payment processing service logs from different regional deployments, all capturing the same customer journey.
+### Scene Description
+
+ A banking operations center with multiple monitoring screens showing alerts from different regions simultaneously. Engineers frantically scroll through dashboards as their observability costs graph climbs sharply upward. A senior SRE points to three nearly identical screens showing the same payment processing service logs from different regional deployments, all capturing the same customer journey.
 
 ### Teaching Narrative
 
@@ -47,7 +49,9 @@ An effective distributed observability strategy requires a system-wide perspecti
 
 ## Panel 2: Lost in Translation
 
-**Scene Description**: Two banking support teams on a conference call, each looking at different observability dashboards. Team A points at their transaction success metric showing 99.9% availability while Team B's dashboard shows the same service with only 98.5% availability. A customer service representative interrupts with complaints about rejected transactions, while both engineering teams argue about whose metrics are correct.
+### Scene Description
+
+ Two banking support teams on a conference call, each looking at different observability dashboards. Team A points at their transaction success metric showing 99.9% availability while Team B's dashboard shows the same service with only 98.5% availability. A customer service representative interrupts with complaints about rejected transactions, while both engineering teams argue about whose metrics are correct.
 
 ### Teaching Narrative
 
@@ -63,7 +67,9 @@ Creating observability consistency requires technical standards and governance�
 
 ## Panel 3: The Cross-Service Abyss
 
-**Scene Description**: A senior engineer traces a failed trade execution through multiple banking systems. Her screen shows a transaction flowing from the trading platform through order management, risk checks, market connectivity, and settlement services. While she can see the transaction entered and exited each service, there's a critical gap where the transaction disappeared between services, with no visibility into what went wrong.
+### Scene Description
+
+ A senior engineer traces a failed trade execution through multiple banking systems. Her screen shows a transaction flowing from the trading platform through order management, risk checks, market connectivity, and settlement services. While she can see the transaction entered and exited each service, there's a critical gap where the transaction disappeared between services, with no visibility into what went wrong.
 
 ### Teaching Narrative
 
@@ -79,7 +85,9 @@ This selective approach requires coordination across services. If the payment ga
 
 ## Panel 4: Regional Deployment Redundancies
 
-**Scene Description**: A global bank's monitoring team reviews their observability platform usage dashboard, showing three nearly identical peaks in data volume across their Americas, EMEA, and APAC environments. The system architect draws attention to a surge in costs where the same canary testing and synthetic transaction monitoring is running at full fidelity in all regions, essentially triplicating observability costs for identical insights.
+### Scene Description
+
+ A global bank's monitoring team reviews their observability platform usage dashboard, showing three nearly identical peaks in data volume across their Americas, EMEA, and APAC environments. The system architect draws attention to a surge in costs where the same canary testing and synthetic transaction monitoring is running at full fidelity in all regions, essentially triplicating observability costs for identical insights.
 
 ### Teaching Narrative
 
@@ -95,7 +103,9 @@ Importantly, these strategies must be dynamic—when an incident occurs in any r
 
 ## Panel 5: The Correlation Conundrum
 
-**Scene Description**: An incident response team huddles around screens displaying separate observability dashboards for multiple banking systems. One engineer examines transaction logs from the payment gateway, another reviews infrastructure metrics from the database cluster, while a third scrolls through application performance metrics. Despite having all the data, they struggle to correlate events across these disjointed systems to determine whether database latency spikes caused the payment failures.
+### Scene Description
+
+ An incident response team huddles around screens displaying separate observability dashboards for multiple banking systems. One engineer examines transaction logs from the payment gateway, another reviews infrastructure metrics from the database cluster, while a third scrolls through application performance metrics. Despite having all the data, they struggle to correlate events across these disjointed systems to determine whether database latency spikes caused the payment failures.
 
 ### Teaching Narrative
 
@@ -113,7 +123,9 @@ This targeted, relationship-aware approach to cross-domain observability provide
 
 ## Panel 6: The Metadata Multiplication Effect
 
-**Scene Description**: A senior SRE reviews the metrics from a payment processing platform, noticing that each data point carries extensive duplicate context—each metric includes customer ID, account type, region, product code, and transaction type as labels. The observability cost dashboard shows an exponential growth curve as these high-cardinality dimensions multiply across services, while query performance has degraded to the point where incident dashboards take minutes to load.
+### Scene Description
+
+ A senior SRE reviews the metrics from a payment processing platform, noticing that each data point carries extensive duplicate context—each metric includes customer ID, account type, region, product code, and transaction type as labels. The observability cost dashboard shows an exponential growth curve as these high-cardinality dimensions multiply across services, while query performance has degraded to the point where incident dashboards take minutes to load.
 
 ### Teaching Narrative
 
@@ -131,7 +143,9 @@ Third, and most important, is the implementation of dimensional governance strat
 
 ## Panel 7: The Aggregation Advantage
 
-**Scene Description**: A banking platform team reviews their observability architecture diagram, highlighting a new edge aggregation tier. The diagram shows raw telemetry from hundreds of service instances flowing into local aggregation points that perform initial processing before forwarding to the central observability platform. A cost comparison dashboard demonstrates a 60% reduction in data transmittal and storage costs since implementing this edge processing approach.
+### Scene Description
+
+ A banking platform team reviews their observability architecture diagram, highlighting a new edge aggregation tier. The diagram shows raw telemetry from hundreds of service instances flowing into local aggregation points that perform initial processing before forwarding to the central observability platform. A cost comparison dashboard demonstrates a 60% reduction in data transmittal and storage costs since implementing this edge processing approach.
 
 ### Teaching Narrative
 

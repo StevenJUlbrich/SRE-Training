@@ -36,7 +36,9 @@ ______________________________________________________________________
 
 ## Panel 1: Beyond the Hero Model - Shared Responsibility
 
-**Scene Description**: In a dimly lit operations center at 2AM, we see Katherine, an exhausted on-call engineer, struggling alone with multiple alert screens. Her phone shows 17 unread messages, while dashboards display cascading failures across payment processing systems. In contrast, a second scene shows a modern SRE team in a virtual war room where four engineers collaborate on different aspects of the same incident—one analyzing logs, another communicating with stakeholders, a third running diagnostic tools, and a fourth coordinating the response. The contrast between isolation and collaboration is striking and deliberate.
+### Scene Description
+
+ In a dimly lit operations center at 2AM, we see Katherine, an exhausted on-call engineer, struggling alone with multiple alert screens. Her phone shows 17 unread messages, while dashboards display cascading failures across payment processing systems. In contrast, a second scene shows a modern SRE team in a virtual war room where four engineers collaborate on different aspects of the same incident—one analyzing logs, another communicating with stakeholders, a third running diagnostic tools, and a fourth coordinating the response. The contrast between isolation and collaboration is striking and deliberate.
 
 ### Teaching Narrative
 
@@ -90,7 +92,9 @@ Transitioning from hero-based to collaborative on-call practices requires delibe
 
 ## Panel 2: Structured Knowledge Transfer - Documentation as Collaboration
 
-**Scene Description**: The scene shows a split screen of two engineers handling the same critical trading platform incident. On the left, a new on-call engineer scrambles through outdated wikis, chat logs, and emails trying to find relevant information, while alerts continue to pile up. On the right, another engineer calmly follows a well-structured runbook with embedded troubleshooting decision trees, system diagrams, and historical incident references. The runbook includes clear escalation paths and "known unknowns" sections that identify system areas requiring expert consultation, with contact information for subject matter experts.
+### Scene Description
+
+ The scene shows a split screen of two engineers handling the same critical trading platform incident. On the left, a new on-call engineer scrambles through outdated wikis, chat logs, and emails trying to find relevant information, while alerts continue to pile up. On the right, another engineer calmly follows a well-structured runbook with embedded troubleshooting decision trees, system diagrams, and historical incident references. The runbook includes clear escalation paths and "known unknowns" sections that identify system areas requiring expert consultation, with contact information for subject matter experts.
 
 ### Teaching Narrative
 
@@ -144,7 +148,9 @@ Implement these five actions to transform on-call knowledge management in your o
 
 ## Panel 3: Tiered Response Models - Right People, Right Time
 
-**Scene Description**: An incident coordination dashboard shows a tier-based escalation in progress for a critical payment gateway failure. The visualization displays three concentric circles representing escalation tiers: Tier 1 (the initial responder assessing impact and scope), Tier 2 (domain experts for the affected systems now joining a video call), and Tier 3 (senior architects and business stakeholders being notified but not yet engaged). A timeline shows the incident progression with decision points for escalation. The screen includes role assignments updating in real-time as new responders join, with clear ownership indicators for different workstreams.
+### Scene Description
+
+ An incident coordination dashboard shows a tier-based escalation in progress for a critical payment gateway failure. The visualization displays three concentric circles representing escalation tiers: Tier 1 (the initial responder assessing impact and scope), Tier 2 (domain experts for the affected systems now joining a video call), and Tier 3 (senior architects and business stakeholders being notified but not yet engaged). A timeline shows the incident progression with decision points for escalation. The screen includes role assignments updating in real-time as new responders join, with clear ownership indicators for different workstreams.
 
 ### Teaching Narrative
 
@@ -208,7 +214,9 @@ Implement these five steps to establish an effective tiered response model:
 
 ## Panel 4: Follow-the-Sun Models - Global Collaboration
 
-**Scene Description**: A world map displays banking operations centers across multiple time zones, with arrows showing on-call handoffs following daylight. We see a split screen of three teams: Singapore operations completing their day and documenting ongoing issues, London team in mid-shift reviewing the handover notes while managing current incidents, and New York team beginning their day and receiving a live video briefing. A shared incident management dashboard shows consistent tracking across all regions, with annotations from each team building on previous observations.
+### Scene Description
+
+ A world map displays banking operations centers across multiple time zones, with arrows showing on-call handoffs following daylight. We see a split screen of three teams: Singapore operations completing their day and documenting ongoing issues, London team in mid-shift reviewing the handover notes while managing current incidents, and New York team beginning their day and receiving a live video briefing. A shared incident management dashboard shows consistent tracking across all regions, with annotations from each team building on previous observations.
 
 ### Teaching Narrative
 
@@ -262,7 +270,9 @@ Implement these five steps to establish effective follow-the-sun collaboration:
 
 ## Panel 5: On-Call Shadowing - Experiential Learning
 
-**Scene Description**: Two engineers sit side by side at a workstation, with multiple monitoring screens showing a developing incident involving the bank's fraud detection system. The experienced engineer narrates her thought process out loud while navigating through dashboards, logs, and diagnostic tools. The shadowing engineer takes notes in a structured template with sections for symptoms, investigation approaches, tools used, and decision points. On a nearby whiteboard, we see a "shadow rotation schedule" showing all team members cycling through shadowing experiences with different senior engineers over the next month.
+### Scene Description
+
+ Two engineers sit side by side at a workstation, with multiple monitoring screens showing a developing incident involving the bank's fraud detection system. The experienced engineer narrates her thought process out loud while navigating through dashboards, logs, and diagnostic tools. The shadowing engineer takes notes in a structured template with sections for symptoms, investigation approaches, tools used, and decision points. On a nearby whiteboard, we see a "shadow rotation schedule" showing all team members cycling through shadowing experiences with different senior engineers over the next month.
 
 ### Teaching Narrative
 
@@ -326,7 +336,9 @@ Implement these five steps to establish an effective on-call shadowing program:
 
 ## Panel 6: Psychological Safety in On-Call - Foundation for Collaboration
 
-**Scene Description**: A team retrospective session focuses on a major incident that occurred the previous week. On a digital whiteboard, we see sections for "What Went Well," "What Could Improve," and "Action Items," with notes contributed by multiple team members. The manager is visibly engaged and pointing to an action item that reads "Update runbook with lessons from production incident." A junior engineer who was on-call during the incident is openly discussing a decision that extended the incident duration, without defensive body language. Other team members ask clarifying questions without blame language, focused on system improvements rather than individual critique.
+### Scene Description
+
+ A team retrospective session focuses on a major incident that occurred the previous week. On a digital whiteboard, we see sections for "What Went Well," "What Could Improve," and "Action Items," with notes contributed by multiple team members. The manager is visibly engaged and pointing to an action item that reads "Update runbook with lessons from production incident." A junior engineer who was on-call during the incident is openly discussing a decision that extended the incident duration, without defensive body language. Other team members ask clarifying questions without blame language, focused on system improvements rather than individual critique.
 
 ### Teaching Narrative
 
@@ -382,7 +394,9 @@ Implement these five steps to build psychological safety in on-call practices:
 
 ## Panel 7: On-Call Engineering - Reducing Future Pain
 
-**Scene Description**: An SRE team gathered around a "Toil Board" showing metrics from the past month's on-call incidents. The visualization displays categorized incidents by frequency, response time, and resolution complexity. Team members place sticky notes on specific incident types with automation ideas. A prioritization matrix on another whiteboard shows "High Pain, High Frequency" incidents at the top right, with engineering projects mapped to address them. A team calendar shows dedicated "toil reduction" time blocks allocated between on-call rotations. One engineer updates a dashboard with a "toil reduction progress" graph showing declining alerts in specific categories.
+### Scene Description
+
+ An SRE team gathered around a "Toil Board" showing metrics from the past month's on-call incidents. The visualization displays categorized incidents by frequency, response time, and resolution complexity. Team members place sticky notes on specific incident types with automation ideas. A prioritization matrix on another whiteboard shows "High Pain, High Frequency" incidents at the top right, with engineering projects mapped to address them. A team calendar shows dedicated "toil reduction" time blocks allocated between on-call rotations. One engineer updates a dashboard with a "toil reduction progress" graph showing declining alerts in specific categories.
 
 ### Teaching Narrative
 

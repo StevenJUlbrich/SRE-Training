@@ -36,7 +36,9 @@ ______________________________________________________________________
 
 ## Panel 1: Beyond Root Cause - The Incident as a Learning System
 
-**Scene Description**: In a softly lit conference room, Katherine (SRE lead) is facilitating a postmortem meeting after a major payment processing outage. The traditional "root cause" section of their template has been replaced with "contributing factors." On the wall, a complex diagram shows multiple intersecting factors with no single "root" highlighted. Team members from development, operations, and business sit around the table, actively engaged rather than defensive. A senior executive observes from the corner, noticeably more curious than angry.
+### Scene Description
+
+ In a softly lit conference room, Katherine (SRE lead) is facilitating a postmortem meeting after a major payment processing outage. The traditional "root cause" section of their template has been replaced with "contributing factors." On the wall, a complex diagram shows multiple intersecting factors with no single "root" highlighted. Team members from development, operations, and business sit around the table, actively engaged rather than defensive. A senior executive observes from the corner, noticeably more curious than angry.
 
 ### Teaching Narrative
 
@@ -94,7 +96,9 @@ To transform your incident analysis approach from root cause hunting to systemic
 
 ## Panel 2: The Anatomy of Effective Postmortems
 
-**Scene Description**: A split-screen visual shows two contrasting postmortem reports. On the left: a traditional report with sections for "root cause," "responsible team," and a simple timeline. On the right: an SRE-style postmortem with sections for "contributing factors," "what went well," "what went poorly," "where we got lucky," "action items," and a detailed timeline with multiple perspectives. The SRE document includes screenshots, data visualizations, and narrative descriptions from different team members. Two engineers are reviewing both documents side-by-side, with lightbulbs appearing above their heads as they recognize the richer learning potential in the SRE approach.
+### Scene Description
+
+ A split-screen visual shows two contrasting postmortem reports. On the left: a traditional report with sections for "root cause," "responsible team," and a simple timeline. On the right: an SRE-style postmortem with sections for "contributing factors," "what went well," "what went poorly," "where we got lucky," "action items," and a detailed timeline with multiple perspectives. The SRE document includes screenshots, data visualizations, and narrative descriptions from different team members. Two engineers are reviewing both documents side-by-side, with lightbulbs appearing above their heads as they recognize the richer learning potential in the SRE approach.
 
 ### Teaching Narrative
 
@@ -158,7 +162,9 @@ To implement effective postmortem practices in your organization:
 
 ## Panel 3: Psychological Safety - The Foundation of Incident Learning
 
-**Scene Description**: A developer named Marcus is speaking in a postmortem meeting, visibly uncomfortable but determined. He explains a configuration change he made that contributed to the incident. Rather than facing accusation, he receives nodding support from his manager and thoughtful questions from colleagues aimed at understanding the context of his decision. The SRE facilitator visibly notes "unclear documentation" and "deployment pressure" as systemic factors on the whiteboard, shifting focus from the individual to the environment. One screen shows the company's "Learning Policy" prominently displayed, which explicitly states that human error is never a root cause and that individuals will not be punished for honest mistakes.
+### Scene Description
+
+ A developer named Marcus is speaking in a postmortem meeting, visibly uncomfortable but determined. He explains a configuration change he made that contributed to the incident. Rather than facing accusation, he receives nodding support from his manager and thoughtful questions from colleagues aimed at understanding the context of his decision. The SRE facilitator visibly notes "unclear documentation" and "deployment pressure" as systemic factors on the whiteboard, shifting focus from the individual to the environment. One screen shows the company's "Learning Policy" prominently displayed, which explicitly states that human error is never a root cause and that individuals will not be punished for honest mistakes.
 
 ### Teaching Narrative
 
@@ -216,7 +222,9 @@ To build psychological safety for effective incident learning in your organizati
 
 ## Panel 4: Incident Analysis - Beyond the Timeline
 
-**Scene Description**: The SRE team is conducting a facilitated analysis session two days after an incident. The walls are covered with artifacts—a detailed timeline, system architecture diagrams, graphs showing anomalous metrics, and sticky notes capturing observations and questions. Multiple perspectives are being integrated: a customer support representative describes user impact, a database administrator explains capacity decisions, and a product manager shares business context about a recent feature launch. The facilitator is using different colored markers to highlight surprising behaviors, coordination challenges, and detection opportunities across the timeline. A junior engineer looks astonished at the complexity being revealed in a system she thought she understood.
+### Scene Description
+
+ The SRE team is conducting a facilitated analysis session two days after an incident. The walls are covered with artifacts—a detailed timeline, system architecture diagrams, graphs showing anomalous metrics, and sticky notes capturing observations and questions. Multiple perspectives are being integrated: a customer support representative describes user impact, a database administrator explains capacity decisions, and a product manager shares business context about a recent feature launch. The facilitator is using different colored markers to highlight surprising behaviors, coordination challenges, and detection opportunities across the timeline. A junior engineer looks astonished at the complexity being revealed in a system she thought she understood.
 
 ### Teaching Narrative
 
@@ -274,7 +282,9 @@ To implement advanced incident analysis practices in your organization:
 
 ## Panel 5: From Insights to Action - The Continuous Improvement Loop
 
-**Scene Description**: A Kanban board labeled "Reliability Improvements" shows action items derived from recent incidents. Each card includes the incident reference, proposed improvement, expected impact, and estimated effort. The team is conducting a prioritization session, with some items marked as "quick wins" and others as "strategic investments." Notably, not all actions involve code or infrastructure changes—some address documentation, monitoring improvements, knowledge sharing, and process changes. A metrics dashboard on the wall shows "Mean Time Between Failures" and "Mean Time To Recovery" trending positively over the past six months, with annotations linking improvements to specific postmortem learnings.
+### Scene Description
+
+ A Kanban board labeled "Reliability Improvements" shows action items derived from recent incidents. Each card includes the incident reference, proposed improvement, expected impact, and estimated effort. The team is conducting a prioritization session, with some items marked as "quick wins" and others as "strategic investments." Notably, not all actions involve code or infrastructure changes—some address documentation, monitoring improvements, knowledge sharing, and process changes. A metrics dashboard on the wall shows "Mean Time Between Failures" and "Mean Time To Recovery" trending positively over the past six months, with annotations linking improvements to specific postmortem learnings.
 
 ### Teaching Narrative
 
@@ -332,7 +342,9 @@ To implement effective improvement loops in your organization:
 
 ## Panel 6: Organizational Memory - Patterns Across Incidents
 
-**Scene Description**: The SRE team is conducting a quarterly review of incidents. On a large display, they've mapped incidents by service, impact type, and contributing factors, revealing clusters and patterns not visible when looking at incidents individually. One engineer is presenting a "meta-analysis" showing how three seemingly unrelated incidents actually shared a common thread related to database connection handling. Another team member maintains a "knowledge base" of incident patterns, showcased on a tablet displaying categorized lessons and recurring themes. A timeline visualization shows how lessons from past incidents helped mitigate a recent event, with a team member noting, "We've seen this pattern before, which is why we caught it early this time."
+### Scene Description
+
+ The SRE team is conducting a quarterly review of incidents. On a large display, they've mapped incidents by service, impact type, and contributing factors, revealing clusters and patterns not visible when looking at incidents individually. One engineer is presenting a "meta-analysis" showing how three seemingly unrelated incidents actually shared a common thread related to database connection handling. Another team member maintains a "knowledge base" of incident patterns, showcased on a tablet displaying categorized lessons and recurring themes. A timeline visualization shows how lessons from past incidents helped mitigate a recent event, with a team member noting, "We've seen this pattern before, which is why we caught it early this time."
 
 ### Teaching Narrative
 
@@ -390,7 +402,9 @@ To build effective organizational memory in your institution:
 
 ## Panel 7: Learning Beyond Failure - The Role of Success Analysis
 
-**Scene Description**: A diverse team is gathered for an unusual meeting labeled "Success Analysis." Instead of reviewing a failure, they're analyzing a major product launch that went unexpectedly smoothly despite high technical complexity. The facilitator guides them through questions like "Why did this go well when similar projects struggled?" and "What practices should we preserve and amplify?" On the whiteboard, they're mapping out the factors that contributed to success—early involvement of operations, incremental deployment, comprehensive observability, and clear rollback criteria. Team members look energized rather than drained, contrasting with the typical post-incident exhaustion.
+### Scene Description
+
+ A diverse team is gathered for an unusual meeting labeled "Success Analysis." Instead of reviewing a failure, they're analyzing a major product launch that went unexpectedly smoothly despite high technical complexity. The facilitator guides them through questions like "Why did this go well when similar projects struggled?" and "What practices should we preserve and amplify?" On the whiteboard, they're mapping out the factors that contributed to success—early involvement of operations, incremental deployment, comprehensive observability, and clear rollback criteria. Team members look energized rather than drained, contrasting with the typical post-incident exhaustion.
 
 ### Teaching Narrative
 

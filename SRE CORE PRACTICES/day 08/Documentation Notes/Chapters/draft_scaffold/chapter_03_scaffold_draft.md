@@ -1,7 +1,9 @@
 # Chapter 3: Beyond the Green Wall
 
 ## Panel 1: The Pager Screams at 3AM
-**Scene Description**: In a dimly lit bedroom, Katherine is jolted awake by his pager at 2:57 AM. He scrambles for his laptop, still groggy, and logs into the monitoring dashboard. His face is illuminated by the screen showing a wall of green status indicators despite the critical alert. In a smaller window, users are reporting payment failures. Confusion and doubt cross his face as he mutters, "But everything's green..."
+### Scene Description
+
+ In a dimly lit bedroom, Katherine is jolted awake by his pager at 2:57 AM. He scrambles for his laptop, still groggy, and logs into the monitoring dashboard. His face is illuminated by the screen showing a wall of green status indicators despite the critical alert. In a smaller window, users are reporting payment failures. Confusion and doubt cross his face as he mutters, "But everything's green..."
 
 ### Teaching Narrative
 When the pager wakes you at 2:57 AM, your first instinct is to trust your dashboards. This natural impulse represents one of the most dangerous anti-patterns in monitoring: the Green Wall Fallacy. 
@@ -11,7 +13,9 @@ The Green Wall Fallacy occurs when monitoring systems display a "wall of green" 
 This disconnect happens because traditional monitoring focuses on system health metrics (CPU, memory, disk space) rather than service outcomes (successful transactions). While your servers might have plenty of resources and appear healthy, users could be experiencing complete service failure. In observability terminology, we're measuring the wrong signals – the ones that are easy to collect rather than the ones that matter.
 
 ## Panel 2: Metrics That Matter
-**Scene Description**: A split-screen showing two different monitoring approaches. On the left, a traditional dashboard with CPU, memory, and disk space gauges all showing healthy green levels. On the right, a service-oriented dashboard showing transaction success rate plummeting to 27%, average response time spiking to 12 seconds, and a growing error count. Between the screens stands Sofia, an experienced SRE, pointing to the right screen while talking to a group of transitioning production support engineers.
+### Scene Description
+
+ A split-screen showing two different monitoring approaches. On the left, a traditional dashboard with CPU, memory, and disk space gauges all showing healthy green levels. On the right, a service-oriented dashboard showing transaction success rate plummeting to 27%, average response time spiking to 12 seconds, and a growing error count. Between the screens stands Sofia, an experienced SRE, pointing to the right screen while talking to a group of transitioning production support engineers.
 
 ### Teaching Narrative
 The fundamental shift from monitoring to observability begins with reorienting what we measure. Traditional monitoring asks: "Are my systems running?" Observability asks: "Are my systems serving users effectively?"
@@ -26,7 +30,9 @@ This transition requires moving beyond resource utilization metrics to service-l
 The metrics that truly matter are those that correlate directly with user experience and business outcomes. An observability mindset recognizes that a system with 20% CPU utilization that can't process transactions is far worse than a system running at 90% CPU that successfully handles every user request.
 
 ## Panel 3: When Alerts Contradict Dashboards
-**Scene Description**: A war room where a team is responding to a payment processing incident. Multiple engineers stare at screens showing conflicting information. Paper coffee cups and energy drink cans litter the table. On the main screen, critical alerts flash red while the monitoring dashboard still shows mostly green tiles. A team lead is on the phone with a customer support representative who reports numerous customer complaints. At a whiteboard, an SRE sketches a system diagram, circling a component labeled "Payment Gateway" that isn't being directly monitored.
+### Scene Description
+
+ A war room where a team is responding to a payment processing incident. Multiple engineers stare at screens showing conflicting information. Paper coffee cups and energy drink cans litter the table. On the main screen, critical alerts flash red while the monitoring dashboard still shows mostly green tiles. A team lead is on the phone with a customer support representative who reports numerous customer complaints. At a whiteboard, an SRE sketches a system diagram, circling a component labeled "Payment Gateway" that isn't being directly monitored.
 
 ### Teaching Narrative
 Incident response fundamentally changes when you move from a monitoring mindset to an observability mindset. When alerts contradict dashboards, the monitoring mindset asks: "Is this a false alarm?" The observability mindset asks: "What aren't we seeing?"
@@ -38,7 +44,9 @@ The root cause of this contradiction often lies in monitoring gaps – critical 
 Effective SREs develop a systematic approach to rapidly validate whether user-reported issues are real, regardless of what dashboards show. This typically involves direct testing of user-facing functionality (such as sending test transactions) before diving deeper into system internals.
 
 ## Panel 4: The Hidden Failures
-**Scene Description**: An architectural diagram of a banking payment system with multiple components. Some components have clear instrumentation and monitoring (shown with "eye" icons), while others have none. Three specific areas are highlighted with red circles: a database replica used only for reporting, a message queue between services, and a third-party payment processor connection. An SRE is explaining to new team members how failures in these "blind spots" can occur while monitoring systems show all green.
+### Scene Description
+
+ An architectural diagram of a banking payment system with multiple components. Some components have clear instrumentation and monitoring (shown with "eye" icons), while others have none. Three specific areas are highlighted with red circles: a database replica used only for reporting, a message queue between services, and a third-party payment processor connection. An SRE is explaining to new team members how failures in these "blind spots" can occur while monitoring systems show all green.
 
 ### Teaching Narrative
 The most dangerous failures in complex systems are those that occur in unmonitored or under-monitored components – the "blind spots" that exist in even mature monitoring setups. These hidden failures often manifest in several common patterns:
@@ -53,7 +61,9 @@ Transitioning from monitoring to observability means systematically identifying 
 An observability mindset constantly asks: "If this component failed, would we know immediately?" For any component where the answer is "no," you have a potential source of confusing incidents where dashboards show green while users experience failures.
 
 ## Panel 5: Triangulating Truth
-**Scene Description**: An SRE named Amara demonstrates a methodical incident investigation approach to a group of transitioning production support engineers. On one monitor, she runs a curl command against an API endpoint, showing an HTTP 500 error. On another screen, she examines a real-time log stream showing exceptions. On a third screen, she opens a distributed tracing tool displaying a trace with a red failed span. A whiteboard nearby has a checklist titled "Proving Reality" with steps for validating system behavior across multiple evidence sources.
+### Scene Description
+
+ An SRE named Amara demonstrates a methodical incident investigation approach to a group of transitioning production support engineers. On one monitor, she runs a curl command against an API endpoint, showing an HTTP 500 error. On another screen, she examines a real-time log stream showing exceptions. On a third screen, she opens a distributed tracing tool displaying a trace with a red failed span. A whiteboard nearby has a checklist titled "Proving Reality" with steps for validating system behavior across multiple evidence sources.
 
 ### Teaching Narrative
 When dashboards and reality disagree, SREs must become detectives who systematically triangulate the truth using multiple evidence sources. This evidence-based approach represents a fundamental principle of observability culture: no single monitoring system is ever comprehensive enough to be trusted implicitly.
@@ -69,7 +79,9 @@ This methodical approach contrasts with traditional monitoring culture, which of
 The triangulation mindset embodies a core SRE principle: that observable reality takes precedence over any monitoring system's interpretation of that reality. As the saying goes in observability culture: "Trust, but verify—and when in doubt, believe the user."
 
 ## Panel 6: The Four Golden Signals
-**Scene Description**: A classroom setting where an SRE instructor stands by a whiteboard with "The Four Golden Signals" prominently written at the top. Below are four key metrics with banking-specific examples: Latency (payment processing time), Traffic (transactions per second), Errors (failed payments percentage), and Saturation (queue depth). Around the room, engineers from different banking teams are taking notes. The instructor is pointing to the Errors signal, highlighting how it directly correlates with customer experience.
+### Scene Description
+
+ A classroom setting where an SRE instructor stands by a whiteboard with "The Four Golden Signals" prominently written at the top. Below are four key metrics with banking-specific examples: Latency (payment processing time), Traffic (transactions per second), Errors (failed payments percentage), and Saturation (queue depth). Around the room, engineers from different banking teams are taking notes. The instructor is pointing to the Errors signal, highlighting how it directly correlates with customer experience.
 
 ### Teaching Narrative
 Moving beyond the Green Wall Fallacy requires implementing a core set of metrics that accurately reflect service health from the user's perspective. The Four Golden Signals, popularized by Google's SRE practices, provide a foundational framework for meaningful service monitoring:
@@ -87,7 +99,9 @@ These signals are powerful because they directly correlate with user experience 
 Implementing these signals requires careful consideration of what constitutes an "error" or acceptable "latency" in your specific banking context, creating the foundation for more advanced observability practices like SLOs.
 
 ## Panel 7: Designing for Observability
-**Scene Description**: A system architecture review meeting for a new mobile banking feature. The whiteboard shows a service diagram with explicit monitoring points marked at key interfaces. Engineers are discussing instrumentation requirements before any code is written. A checklist on the wall includes items like "Define SLIs for each service boundary," "Implement distributed tracing across all components," and "Create synthetic tests for critical user journeys." A senior SRE is emphasizing that observability must be designed in from the beginning, not added later.
+### Scene Description
+
+ A system architecture review meeting for a new mobile banking feature. The whiteboard shows a service diagram with explicit monitoring points marked at key interfaces. Engineers are discussing instrumentation requirements before any code is written. A checklist on the wall includes items like "Define SLIs for each service boundary," "Implement distributed tracing across all components," and "Create synthetic tests for critical user journeys." A senior SRE is emphasizing that observability must be designed in from the beginning, not added later.
 
 ### Teaching Narrative
 The ultimate solution to the Green Wall Fallacy is to design systems with observability as a first-class requirement rather than an afterthought. This represents a fundamental shift from traditional approaches where monitoring is added after systems are built.

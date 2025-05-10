@@ -32,7 +32,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Pager Screams at 3AM
 
-**Scene Description**: In a dimly lit bedroom, Katherine is jolted awake by his pager at 2:57 AM. He scrambles for his laptop, still groggy, and logs into the monitoring dashboard. His face is illuminated by the screen showing a wall of green status indicators despite the critical alert. In a smaller window, users are reporting payment failures. Confusion and doubt cross his face as he mutters, "But everything's green..."
+### Scene Description
+
+ In a dimly lit bedroom, Katherine is jolted awake by his pager at 2:57 AM. He scrambles for his laptop, still groggy, and logs into the monitoring dashboard. His face is illuminated by the screen showing a wall of green status indicators despite the critical alert. In a smaller window, users are reporting payment failures. Confusion and doubt cross his face as he mutters, "But everything's green..."
 
 ### Teaching Narrative
 
@@ -44,7 +46,9 @@ This disconnect happens because traditional monitoring focuses on system health 
 
 ## Panel 2: Metrics That Matter
 
-**Scene Description**: A split-screen showing two different monitoring approaches. On the left, a traditional dashboard with CPU, memory, and disk space gauges all showing healthy green levels. On the right, a service-oriented dashboard showing transaction success rate plummeting to 27%, average response time spiking to 12 seconds, and a growing error count. Between the screens stands Sofia, an experienced SRE, pointing to the right screen while talking to a group of transitioning production support engineers.
+### Scene Description
+
+ A split-screen showing two different monitoring approaches. On the left, a traditional dashboard with CPU, memory, and disk space gauges all showing healthy green levels. On the right, a service-oriented dashboard showing transaction success rate plummeting to 27%, average response time spiking to 12 seconds, and a growing error count. Between the screens stands Sofia, an experienced SRE, pointing to the right screen while talking to a group of transitioning production support engineers.
 
 ### Teaching Narrative
 
@@ -61,7 +65,9 @@ The metrics that truly matter are those that correlate directly with user experi
 
 ## Panel 3: When Alerts Contradict Dashboards
 
-**Scene Description**: A war room where a team is responding to a payment processing incident. Multiple engineers stare at screens showing conflicting information. Paper coffee cups and energy drink cans litter the table. On the main screen, critical alerts flash red while the monitoring dashboard still shows mostly green tiles. A team lead is on the phone with a customer support representative who reports numerous customer complaints. At a whiteboard, an SRE sketches a system diagram, circling a component labeled "Payment Gateway" that isn't being directly monitored.
+### Scene Description
+
+ A war room where a team is responding to a payment processing incident. Multiple engineers stare at screens showing conflicting information. Paper coffee cups and energy drink cans litter the table. On the main screen, critical alerts flash red while the monitoring dashboard still shows mostly green tiles. A team lead is on the phone with a customer support representative who reports numerous customer complaints. At a whiteboard, an SRE sketches a system diagram, circling a component labeled "Payment Gateway" that isn't being directly monitored.
 
 ### Teaching Narrative
 
@@ -75,7 +81,9 @@ Effective SREs develop a systematic approach to rapidly validate whether user-re
 
 ## Panel 4: The Hidden Failures
 
-**Scene Description**: An architectural diagram of a banking payment system with multiple components. Some components have clear instrumentation and monitoring (shown with "eye" icons), while others have none. Three specific areas are highlighted with red circles: a database replica used only for reporting, a message queue between services, and a third-party payment processor connection. An SRE is explaining to new team members how failures in these "blind spots" can occur while monitoring systems show all green.
+### Scene Description
+
+ An architectural diagram of a banking payment system with multiple components. Some components have clear instrumentation and monitoring (shown with "eye" icons), while others have none. Three specific areas are highlighted with red circles: a database replica used only for reporting, a message queue between services, and a third-party payment processor connection. An SRE is explaining to new team members how failures in these "blind spots" can occur while monitoring systems show all green.
 
 ### Teaching Narrative
 
@@ -92,7 +100,9 @@ An observability mindset constantly asks: "If this component failed, would we kn
 
 ## Panel 5: Triangulating Truth
 
-**Scene Description**: An SRE named Amara demonstrates a methodical incident investigation approach to a group of transitioning production support engineers. On one monitor, she runs a curl command against an API endpoint, showing an HTTP 500 error. On another screen, she examines a real-time log stream showing exceptions. On a third screen, she opens a distributed tracing tool displaying a trace with a red failed span. A whiteboard nearby has a checklist titled "Proving Reality" with steps for validating system behavior across multiple evidence sources.
+### Scene Description
+
+ An SRE named Amara demonstrates a methodical incident investigation approach to a group of transitioning production support engineers. On one monitor, she runs a curl command against an API endpoint, showing an HTTP 500 error. On another screen, she examines a real-time log stream showing exceptions. On a third screen, she opens a distributed tracing tool displaying a trace with a red failed span. A whiteboard nearby has a checklist titled "Proving Reality" with steps for validating system behavior across multiple evidence sources.
 
 ### Teaching Narrative
 
@@ -110,7 +120,9 @@ The triangulation mindset embodies a core SRE principle: that observable reality
 
 ## Panel 6: The Four Golden Signals
 
-**Scene Description**: A classroom setting where an SRE instructor stands by a whiteboard with "The Four Golden Signals" prominently written at the top. Below are four key metrics with banking-specific examples: Latency (payment processing time), Traffic (transactions per second), Errors (failed payments percentage), and Saturation (queue depth). Around the room, engineers from different banking teams are taking notes. The instructor is pointing to the Errors signal, highlighting how it directly correlates with customer experience.
+### Scene Description
+
+ A classroom setting where an SRE instructor stands by a whiteboard with "The Four Golden Signals" prominently written at the top. Below are four key metrics with banking-specific examples: Latency (payment processing time), Traffic (transactions per second), Errors (failed payments percentage), and Saturation (queue depth). Around the room, engineers from different banking teams are taking notes. The instructor is pointing to the Errors signal, highlighting how it directly correlates with customer experience.
 
 ### Teaching Narrative
 
@@ -130,7 +142,9 @@ Implementing these signals requires careful consideration of what constitutes an
 
 ## Panel 7: Designing for Observability
 
-**Scene Description**: A system architecture review meeting for a new mobile banking feature. The whiteboard shows a service diagram with explicit monitoring points marked at key interfaces. Engineers are discussing instrumentation requirements before any code is written. A checklist on the wall includes items like "Define SLIs for each service boundary," "Implement distributed tracing across all components," and "Create synthetic tests for critical user journeys." A senior SRE is emphasizing that observability must be designed in from the beginning, not added later.
+### Scene Description
+
+ A system architecture review meeting for a new mobile banking feature. The whiteboard shows a service diagram with explicit monitoring points marked at key interfaces. Engineers are discussing instrumentation requirements before any code is written. A checklist on the wall includes items like "Define SLIs for each service boundary," "Implement distributed tracing across all components," and "Create synthetic tests for critical user journeys." A senior SRE is emphasizing that observability must be designed in from the beginning, not added later.
 
 ### Teaching Narrative
 

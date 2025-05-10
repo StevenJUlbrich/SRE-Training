@@ -1,7 +1,9 @@
 # Chapter 14: Reliability and Regulatory Compliance
 
 ## Panel 1: Compliance as an Engineering Challenge
-**Scene Description**: A tense meeting room where an SRE team and compliance officers are reviewing a stack of regulatory documentation. Katherine points to a whiteboard showing a Venn diagram with "Reliability Engineering" overlapping with "Regulatory Requirements." Meanwhile, another SRE is demonstrating how their observability dashboards can automatically generate compliance reports. The compliance officers look surprised but interested.
+### Scene Description
+
+ A tense meeting room where an SRE team and compliance officers are reviewing a stack of regulatory documentation. Katherine points to a whiteboard showing a Venn diagram with "Reliability Engineering" overlapping with "Regulatory Requirements." Meanwhile, another SRE is demonstrating how their observability dashboards can automatically generate compliance reports. The compliance officers look surprised but interested.
 
 ### Teaching Narrative
 Reliability and compliance are often viewed as separate domains—one technical, one bureaucratic—but effective SRE practices transform compliance from a documentation burden into an engineering challenge. When we apply engineering rigor to regulatory requirements, we can automate evidence collection, continuously validate compliance controls, and build guardrails that prevent violations rather than just documenting them after the fact. This shift from manual compliance verification to automated, continuous compliance validation represents a fundamental evolution in how financial institutions approach regulatory obligations.
@@ -70,7 +72,9 @@ Banks that implemented compliance-as-engineering approaches reported 64% lower c
    - Establish joint engineering-compliance review processes for all compliance-as-code implementations
 
 ## Panel 2: Observability as Evidence
-**Scene Description**: An auditor sits with Hector as he demonstrates their observability platform. The screen shows a dashboard with clear indicators for transaction monitoring, data privacy controls, and system access logs. The auditor is taking notes as Hector points to a "Compliance Evidence Trail" tab that shows historical data with tamper-evident timestamps. In the background, other team members are working normally, uninterrupted by the audit process.
+### Scene Description
+
+ An auditor sits with Hector as he demonstrates their observability platform. The screen shows a dashboard with clear indicators for transaction monitoring, data privacy controls, and system access logs. The auditor is taking notes as Hector points to a "Compliance Evidence Trail" tab that shows historical data with tamper-evident timestamps. In the background, other team members are working normally, uninterrupted by the audit process.
 
 ### Teaching Narrative
 Traditional regulatory compliance relies on point-in-time assessments and manual evidence collection, creating a discontinuous and resource-intensive process. SRE observability practices fundamentally reshape this approach by treating compliance evidence as a continuous data stream rather than a periodic artifact. By instrumenting systems to automatically capture compliance-relevant telemetry—access patterns, data handling procedures, processing timelines—we transform observability from an operational tool into a compliance evidence engine. This shift allows financial institutions to move from "preparing for audits" to maintaining continuous compliance readiness, dramatically reducing the operational overhead of regulatory requirements while simultaneously improving the quality and reliability of compliance evidence.
@@ -139,7 +143,9 @@ Banks implementing observability-driven compliance reporting reduced audit prepa
    - Deploy anomaly detection systems to identify potential compliance issues before they become violations
 
 ## Panel 3: Error Budgets and Risk Tolerance
-**Scene Description**: A risk management committee meeting where Katherine is presenting a dashboard showing SLOs aligned with regulatory thresholds. One chart shows how their error budget policy correlates with regulatory risk tolerance levels. The CTO and Chief Risk Officer are nodding approvingly, while a regulator observer in the corner is taking detailed notes. On the wall is a poster showing "Yesterday's Risk Appetite Meeting" with traditional qualitative risk ratings, contrasted with today's data-driven approach.
+### Scene Description
+
+ A risk management committee meeting where Katherine is presenting a dashboard showing SLOs aligned with regulatory thresholds. One chart shows how their error budget policy correlates with regulatory risk tolerance levels. The CTO and Chief Risk Officer are nodding approvingly, while a regulator observer in the corner is taking detailed notes. On the wall is a poster showing "Yesterday's Risk Appetite Meeting" with traditional qualitative risk ratings, contrasted with today's data-driven approach.
 
 ### Teaching Narrative
 Regulatory frameworks require financial institutions to define, measure, and manage risk—but traditional risk management is often qualitative and disconnected from engineering reality. SRE's error budget approach provides a quantitative framework that can align technical reliability measurements with regulatory risk tolerance. By expressing regulatory thresholds as SLOs and tracking compliance through error budgets, we create a common language between engineering, risk management, and regulators. This transforms abstract discussions about "adequate controls" into concrete, measurable reliability targets that can be monitored, alerted on, and continuously validated through the same tooling that supports operational reliability.
@@ -208,7 +214,9 @@ Banks implementing quantitative risk frameworks reported 76% clearer decision-ma
    - Create documentation explaining the error budget approach for regulatory audiences
 
 ## Panel 4: Chaos Engineering Meets Compliance Testing
-**Scene Description**: A carefully orchestrated chaos engineering exercise is underway. Screens show deliberate fault injection into a payment processing system while automated compliance checks run simultaneously. A dashboard highlights "Regulatory Control Testing" alongside standard reliability metrics. Compliance officers and SREs work side by side, documenting how control mechanisms respond to the simulated failures. In the corner, there's a board tracking which regulatory requirements are being validated through this exercise.
+### Scene Description
+
+ A carefully orchestrated chaos engineering exercise is underway. Screens show deliberate fault injection into a payment processing system while automated compliance checks run simultaneously. A dashboard highlights "Regulatory Control Testing" alongside standard reliability metrics. Compliance officers and SREs work side by side, documenting how control mechanisms respond to the simulated failures. In the corner, there's a board tracking which regulatory requirements are being validated through this exercise.
 
 ### Teaching Narrative
 Regulations require financial institutions to regularly test controls and validate system resilience—typically through artificial, scheduled exercises that poorly reflect real-world conditions. SRE's chaos engineering practices offer a more effective approach: controlled experiments that verify both system reliability and regulatory controls under realistic conditions. By integrating compliance validation into chaos experiments, we transform separate testing regimes into a unified resilience program. This approach not only improves the quality of compliance evidence but also ensures that regulatory controls function as expected during actual system disruptions, not just during scripted tests. The result is a deeper, more authentic verification of regulatory requirements that simultaneously builds system resilience.
@@ -277,7 +285,9 @@ Banks integrating compliance validation into chaos engineering programs reported
    - Develop trend analysis capabilities to track control effectiveness across experiments
 
 ## Panel 5: Automated Governance Through Policy as Code
-**Scene Description**: An engineering team is reviewing code in a repository labeled "Compliance as Code." On one screen is infrastructure code with embedded policy checks; another shows automated compliance tests running in a CI/CD pipeline. A compliance officer is collaborating with a developer to translate a new regulatory requirement into code. In the background is a dashboard showing "Policy Violations Prevented This Month: 37" and "Manual Compliance Reviews Avoided: 142."
+### Scene Description
+
+ An engineering team is reviewing code in a repository labeled "Compliance as Code." On one screen is infrastructure code with embedded policy checks; another shows automated compliance tests running in a CI/CD pipeline. A compliance officer is collaborating with a developer to translate a new regulatory requirement into code. In the background is a dashboard showing "Policy Violations Prevented This Month: 37" and "Manual Compliance Reviews Avoided: 142."
 
 ### Teaching Narrative
 Traditional compliance governance relies on manual policy enforcement and review processes that create friction and delay while still allowing violations to occur. SRE practices enable us to codify regulatory requirements as automated policies that can be version-controlled, tested, and continuously enforced. By expressing compliance requirements as code—embedded in infrastructure definitions, CI/CD pipelines, and runtime environments—we can prevent violations rather than detecting them after the fact. This approach transforms governance from a gating process to guardrails that guide development while maintaining velocity. The result is stronger compliance with less friction, allowing engineering teams to move quickly while still operating within regulatory boundaries.
@@ -346,7 +356,9 @@ Banks implementing automated governance through policy as code reported 84% fast
    - Implement anomaly detection for unusual policy violation patterns
 
 ## Panel 6: Incident Response Meets Regulatory Reporting
-**Scene Description**: An incident war room where an SRE team is managing a system disruption. Alongside operational dashboards is a "Regulatory Reporting Requirements" checklist that's being automatically populated as the incident unfolds. A dedicated role labeled "Regulatory Liaison" is working with the incident commander, preparing real-time updates for regulators. A timeline shows both technical milestones and compliance notification deadlines, with status indicators showing they're on track for both resolution and reporting requirements.
+### Scene Description
+
+ An incident war room where an SRE team is managing a system disruption. Alongside operational dashboards is a "Regulatory Reporting Requirements" checklist that's being automatically populated as the incident unfolds. A dedicated role labeled "Regulatory Liaison" is working with the incident commander, preparing real-time updates for regulators. A timeline shows both technical milestones and compliance notification deadlines, with status indicators showing they're on track for both resolution and reporting requirements.
 
 ### Teaching Narrative
 Financial regulations impose strict incident notification and reporting requirements, traditionally managed as separate processes from technical incident response. SRE incident management practices can integrate regulatory reporting into the core incident response workflow, ensuring that compliance obligations are met without distracting from technical resolution. By treating regulatory reporting as a first-class incident response function—with defined roles, procedures, and automation—we align technical and compliance activities. This integration ensures that regulatory obligations become a natural extension of incident management rather than a competing priority, allowing institutions to maintain compliance even during critical system disruptions.
@@ -415,7 +427,9 @@ Banks implementing integrated regulatory response processes reported 92% complia
    - Create feedback loops to improve regulatory response based on regulator input
 
 ## Panel 7: Continuous Compliance through Deployment Pipelines
-**Scene Description**: A deployment pipeline visualization showing code moving from development through various testing stages to production. At each stage, there are automated compliance checks running alongside traditional quality tests. Developers are reviewing a "Compliance Pre-Deployment Report" that automatically identifies potential regulatory issues before deployment. In the background, a compliance officer is helping a developer understand a specific regulatory requirement that affects their code.
+### Scene Description
+
+ A deployment pipeline visualization showing code moving from development through various testing stages to production. At each stage, there are automated compliance checks running alongside traditional quality tests. Developers are reviewing a "Compliance Pre-Deployment Report" that automatically identifies potential regulatory issues before deployment. In the background, a compliance officer is helping a developer understand a specific regulatory requirement that affects their code.
 
 ### Teaching Narrative
 Traditional compliance verification happens after systems are built and deployed, creating expensive rework when violations are discovered. SRE practices enable "shifting left" compliance validation by integrating regulatory checks into every stage of the development and deployment process. By automating compliance verification in CI/CD pipelines, we catch and fix violations early—when they're cheapest to address. This continuous compliance approach transforms regulatory requirements from post-deployment constraints into design-time guardrails. The result is systems that are compliant by design rather than through remediation, dramatically reducing both compliance risk and the cost of meeting regulatory requirements.

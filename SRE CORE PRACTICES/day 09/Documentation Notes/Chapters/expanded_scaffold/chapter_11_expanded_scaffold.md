@@ -1,7 +1,9 @@
 # Chapter 11: Automation as a Reliability Multiplier
 
 ## Panel 1: The Toil Trap - Recognizing Manual Work That Consumes SRE Resources
-**Scene Description**: In a dimly lit banking operations center, Katherine sits surrounded by multiple monitors, manually restarting several payment processing services. Dark circles under her eyes tell the story of repeated 3 AM wake-up calls. On her desk sits a thick binder labeled "Manual Procedures" next to a half-empty coffee cup. Her phone shows five missed calls from other team members handling different parts of the system. A whiteboard in the background tracks "Incidents This Month" with alarming frequency, while a clock on the wall shows 4:37 AM.
+### Scene Description
+
+ In a dimly lit banking operations center, Katherine sits surrounded by multiple monitors, manually restarting several payment processing services. Dark circles under her eyes tell the story of repeated 3 AM wake-up calls. On her desk sits a thick binder labeled "Manual Procedures" next to a half-empty coffee cup. Her phone shows five missed calls from other team members handling different parts of the system. A whiteboard in the background tracks "Incidents This Month" with alarming frequency, while a clock on the wall shows 4:37 AM.
 
 ### Teaching Narrative
 Toil is the SRE term for manual, repetitive work that brings no enduring value and scales linearly with service growth. When SREs spend their days firefighting through manual procedures, they cannot focus on building systems that prevent fires in the first place. The banking industry is particularly susceptible to toil traps due to risk aversion, compliance requirements, and the critical nature of financial services.
@@ -62,7 +64,9 @@ To escape the toil trap, follow these five actionable steps:
 5. **Develop Automation Design Patterns**: Create a library of reusable automation components for common banking operations (credential rotation, certificate management, service restart sequences, data validation checks, audit logging). Standardize these patterns across teams to accelerate automation development and ensure consistent implementation of security controls.
 
 ## Panel 2: The Automation Hierarchy - From Scripts to Self-Healing Systems
-**Scene Description**: A modern banking technology center with Luis demonstrating a whiteboard diagram to other SREs. The diagram shows a pyramid with "Scripts" at the bottom, "Workflow Automation" in the middle, and "Self-Healing Systems" at the top. Team members are engaged, taking notes on tablets. Through the glass wall, we can see monitoring screens displaying dashboards of banking services—notably with fewer critical alerts than in Panel 1. Physical sticky notes attached to the whiteboard show specific banking processes with arrows pointing to different automation levels.
+### Scene Description
+
+ A modern banking technology center with Luis demonstrating a whiteboard diagram to other SREs. The diagram shows a pyramid with "Scripts" at the bottom, "Workflow Automation" in the middle, and "Self-Healing Systems" at the top. Team members are engaged, taking notes on tablets. Through the glass wall, we can see monitoring screens displaying dashboards of banking services—notably with fewer critical alerts than in Panel 1. Physical sticky notes attached to the whiteboard show specific banking processes with arrows pointing to different automation levels.
 
 ### Teaching Narrative
 Automation exists on a maturity spectrum that determines its reliability impact. At the most basic level, scripts convert manual commands into repeatable procedures—valuable, but still requiring human triggering and supervision. At the highest level, self-healing systems detect deviations from expected behavior and remediate without human intervention.
@@ -131,7 +135,9 @@ To advance through the automation hierarchy, follow these five actionable steps:
 5. **Implement Canary Automation**: Before applying automation to critical systems, deploy automated processes for less-critical components that share similar characteristics. Track reliability, false positive rates, and unexpected behaviors for at least 30 days before expanding scope to more critical systems.
 
 ## Panel 3: Balancing Safety and Speed - The Guardrails Approach to Automation
-**Scene Description**: A split-screen view of two scenarios. On the left, Hector examines a complex automation system with multiple highlighted "circuit breaker" points and safety thresholds visible in the code. On the right, a retrospective meeting where the team reviews an incident timeline showing how an automated system safely stopped and alerted humans when it detected unexpected conditions during a trading platform deployment. Digital screens show metrics tracking automated vs. manual deployments, with automated ones clearly exhibiting fewer incidents while handling greater deployment volume.
+### Scene Description
+
+ A split-screen view of two scenarios. On the left, Hector examines a complex automation system with multiple highlighted "circuit breaker" points and safety thresholds visible in the code. On the right, a retrospective meeting where the team reviews an incident timeline showing how an automated system safely stopped and alerted humans when it detected unexpected conditions during a trading platform deployment. Digital screens show metrics tracking automated vs. manual deployments, with automated ones clearly exhibiting fewer incidents while handling greater deployment volume.
 
 ### Teaching Narrative
 Automation skepticism in banking often stems from valid concerns: What if the automated system makes catastrophic mistakes at machine speed? The guardrails approach addresses this by building safety mechanisms directly into automation systems.
@@ -201,7 +207,9 @@ To implement effective automation guardrails, follow these five actionable steps
 5. **Establish Guardrail Governance**: Document clear policies for when guardrails can be modified or overridden, including approval requirements and risk assessment procedures. Create a change management process for the guardrails themselves, treating them as critical infrastructure.
 
 ## Panel 4: Observability-Driven Automation - Building Feedback Loops
-**Scene Description**: In a modern NOC, Maya is working at a standing desk with three large monitors. The left screen shows a dashboard with anomaly detection highlighting unusual patterns in payment processing latency. The center screen displays an automated investigation system following a decision tree, gathering data from multiple sources. The right screen shows the automated remediation recommendations with confidence scores and potential impacts. A notification indicates the system has already implemented a low-risk fix for one issue, while waiting for approval on a higher-risk action. Timeline visualizations show how detection-to-resolution time has decreased from hours to minutes over the past quarter.
+### Scene Description
+
+ In a modern NOC, Maya is working at a standing desk with three large monitors. The left screen shows a dashboard with anomaly detection highlighting unusual patterns in payment processing latency. The center screen displays an automated investigation system following a decision tree, gathering data from multiple sources. The right screen shows the automated remediation recommendations with confidence scores and potential impacts. A notification indicates the system has already implemented a low-risk fix for one issue, while waiting for approval on a higher-risk action. Timeline visualizations show how detection-to-resolution time has decreased from hours to minutes over the past quarter.
 
 ### Teaching Narrative
 The most powerful reliability automations are those deeply integrated with observability systems, creating closed feedback loops that can detect, diagnose, and potentially resolve issues with minimal human intervention.
@@ -284,7 +292,9 @@ To implement observability-driven automation, follow these five actionable steps
 5. **Establish Feedback Mechanisms**: Implement structured feedback collection for every automated action, capturing whether the action resolved the issue, required additional intervention, or created new problems. Use this data to continually refine your detection and response algorithms. Review automation performance weekly and update accordingly.
 
 ## Panel 5: The Automation Investment Equation - Calculating ROI Beyond Time Savings
-**Scene Description**: A meeting room where Katherine is presenting to a mixed group of engineering and business stakeholders. On the screen is a dashboard showing the "Automation Investment Equation" with metrics including incident reduction, mean time to resolution, customer impact prevention, and SRE capacity reclaimed. Before/after charts demonstrate how key reliability metrics improved after specific automation initiatives. The business stakeholders look impressed by a specific slide showing how a payment processing automation reduced customer-impacting incidents by 73% while lowering operational costs.
+### Scene Description
+
+ A meeting room where Katherine is presenting to a mixed group of engineering and business stakeholders. On the screen is a dashboard showing the "Automation Investment Equation" with metrics including incident reduction, mean time to resolution, customer impact prevention, and SRE capacity reclaimed. Before/after charts demonstrate how key reliability metrics improved after specific automation initiatives. The business stakeholders look impressed by a specific slide showing how a payment processing automation reduced customer-impacting incidents by 73% while lowering operational costs.
 
 ### Teaching Narrative
 Justifying automation investments requires speaking both engineering and business languages. The automation investment equation goes far beyond simple time-saving calculations to capture the full business impact of reliability automation.
@@ -367,7 +377,9 @@ To build compelling automation investment cases, follow these five actionable st
 5. **Implement Closed-Loop Measurement**: After implementing each automation, meticulously track actual outcomes across all value dimensions. Compare projected versus actual benefits quarterly and refine your ROI models based on real results. Use this growing body of evidence to strengthen future business cases.
 
 ## Panel 6: From Firefighting to Fire Prevention - The Cultural Transformation
-**Scene Description**: A side-by-side comparison showing team transformation. On the left, the team from earlier panels is in firefighting mode with alerts, pagers, and frantic activity. On the right, the same team one year later is gathered around a whiteboard planning proactive reliability improvements, with visible automation tools displayed on nearby screens. Charts show decreasing on-call interruptions and increasing project completion rates. Task boards show items like "Payment Gateway Self-Healing v2" and "Automated Canary Analysis." The team appears more relaxed and engaged, with evidence of work-life balance improvements—a calendar shows consistent working hours without weekend emergencies.
+### Scene Description
+
+ A side-by-side comparison showing team transformation. On the left, the team from earlier panels is in firefighting mode with alerts, pagers, and frantic activity. On the right, the same team one year later is gathered around a whiteboard planning proactive reliability improvements, with visible automation tools displayed on nearby screens. Charts show decreasing on-call interruptions and increasing project completion rates. Task boards show items like "Payment Gateway Self-Healing v2" and "Automated Canary Analysis." The team appears more relaxed and engaged, with evidence of work-life balance improvements—a calendar shows consistent working hours without weekend emergencies.
 
 ### Teaching Narrative
 The ultimate goal of automation in reliability engineering isn't just efficiency—it's transforming how teams work and what they focus on. This represents a cultural shift from responding to failures to building systems that don't fail in the first place.
@@ -454,7 +466,9 @@ To transform from firefighting to fire prevention, follow these five actionable 
    - Share on-call improvement stories in all-hands meetings to reinforce cultural values
 
 ## Panel 7: Automation Governance - Balancing Innovation with Control
-**Scene Description**: A collaborative workshop where SREs and compliance/security team members are reviewing an "Automation Governance Framework" displayed on a digital whiteboard. The framework shows how automation changes flow from development through testing and approval to production. Audit logs of automated actions are visible on one screen, while another shows a risk assessment matrix for different types of automation. Notes on the whiteboard include "Compliant by Design" and "Auditable Automation." A banking regulator representative is observing the process with approval, making notes about how the framework satisfies regulatory requirements while enabling innovation.
+### Scene Description
+
+ A collaborative workshop where SREs and compliance/security team members are reviewing an "Automation Governance Framework" displayed on a digital whiteboard. The framework shows how automation changes flow from development through testing and approval to production. Audit logs of automated actions are visible on one screen, while another shows a risk assessment matrix for different types of automation. Notes on the whiteboard include "Compliant by Design" and "Auditable Automation." A banking regulator representative is observing the process with approval, making notes about how the framework satisfies regulatory requirements while enabling innovation.
 
 ### Teaching Narrative
 In highly regulated environments like banking, automation must satisfy both engineering and governance requirements. Rather than treating compliance as a barrier to automation, mature SRE teams build governance directly into their automation frameworks.

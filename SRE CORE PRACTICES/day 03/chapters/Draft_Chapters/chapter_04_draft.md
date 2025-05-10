@@ -36,7 +36,9 @@ ______________________________________________________________________
 
 ## Panel 1: The Text Labyrinth - Limitations of Unstructured Logging
 
-**Scene Description**: A banking operations center where engineers frantically search through text logs during a critical payment processing outage. Multiple screens show logs with inconsistent formats: some with timestamps first, others with severities first, some with no clear field separation. An exhausted engineer uses a complex command with multiple grep statements trying to isolate failed high-value transactions, while time-sensitive customer payments remain unprocessed. A clock prominently displays the increasing outage duration as search efforts continue.
+### Scene Description
+
+ A banking operations center where engineers frantically search through text logs during a critical payment processing outage. Multiple screens show logs with inconsistent formats: some with timestamps first, others with severities first, some with no clear field separation. An exhausted engineer uses a complex command with multiple grep statements trying to isolate failed high-value transactions, while time-sensitive customer payments remain unprocessed. A clock prominently displays the increasing outage duration as search efforts continue.
 
 ### Teaching Narrative
 
@@ -116,7 +118,9 @@ The bank calculated that structured logging would have reduced the investigation
 
 ## Panel 2: The Structured Revolution - Key-Value and JSON Formats
 
-**Scene Description**: Side-by-side comparison of two incident response scenarios in the same banking system before and after structured logging implementation. On the left, engineers use complex text parsing tools on unstructured logs. On the right, after implementing structured logging, an engineer uses a simple query in their log analysis platform to instantly filter credit card transactions over $10,000 with declined status from a specific processing region. Visual indicators show the dramatically reduced mean-time-to-resolution, with screens displaying clean JSON-formatted logs with clearly delineated fields and nested data structures representing complex transaction flows.
+### Scene Description
+
+ Side-by-side comparison of two incident response scenarios in the same banking system before and after structured logging implementation. On the left, engineers use complex text parsing tools on unstructured logs. On the right, after implementing structured logging, an engineer uses a simple query in their log analysis platform to instantly filter credit card transactions over $10,000 with declined status from a specific processing region. Visual indicators show the dramatically reduced mean-time-to-resolution, with screens displaying clean JSON-formatted logs with clearly delineated fields and nested data structures representing complex transaction flows.
 
 ### Teaching Narrative
 
@@ -224,7 +228,9 @@ The bank calculated an ROI of 580% in the first year for their structured loggin
 
 ## Panel 3: The Schema Evolution - Consistency and Flexibility
 
-**Scene Description**: A financial technology development team reviews their logging schema documentation. On a large screen, they examine a visualization of their structured log schema showing core fields required across all services (timestamp, level, transaction ID, service name), domain-specific fields for different banking functions (payments, accounts, investments), and extensible attributes for evolving needs. A timeline shows how their schema has evolved to accommodate new business capabilities while maintaining backward compatibility. Sample logs demonstrate how the schema provides both consistency for core analysis and flexibility for specific banking domains.
+### Scene Description
+
+ A financial technology development team reviews their logging schema documentation. On a large screen, they examine a visualization of their structured log schema showing core fields required across all services (timestamp, level, transaction ID, service name), domain-specific fields for different banking functions (payments, accounts, investments), and extensible attributes for evolving needs. A timeline shows how their schema has evolved to accommodate new business capabilities while maintaining backward compatibility. Sample logs demonstrate how the schema provides both consistency for core analysis and flexibility for specific banking domains.
 
 ### Teaching Narrative
 
@@ -369,7 +375,9 @@ The company calculated an ROI of 375% in the first year for their schema standar
 
 ## Panel 4: The Metadata Enhancement - Enriching Logs at Collection Time
 
-**Scene Description**: A banking observability platform where log entries are visibly transformed as they flow through the collection pipeline. The visualization shows raw service logs being automatically enhanced with critical context: deployment information (region, version, container ID), business context (processing environment, customer tier), infrastructure details (cloud provider, instance type), and organizational metadata (owning team, service tier). A real-time demonstration shows how an incident investigation leverages this enhanced metadata to immediately focus on logs from a specific version deployment in the North American payment processing environment without requiring manual correlation.
+### Scene Description
+
+ A banking observability platform where log entries are visibly transformed as they flow through the collection pipeline. The visualization shows raw service logs being automatically enhanced with critical context: deployment information (region, version, container ID), business context (processing environment, customer tier), infrastructure details (cloud provider, instance type), and organizational metadata (owning team, service tier). A real-time demonstration shows how an incident investigation leverages this enhanced metadata to immediately focus on logs from a specific version deployment in the North American payment processing environment without requiring manual correlation.
 
 ### Teaching Narrative
 
@@ -525,7 +533,9 @@ The institution calculated an ROI of 430% in the first year for their metadata e
 
 ## Panel 5: The Analysis Transformation - From Text Search to Data Queries
 
-**Scene Description**: A financial services operations center with two distinct approaches to log analysis. The first station shows an engineer using text-based search tools with complex regular expressions to investigate a transaction issue. The second shows an analyst using a structured query language to analyze log data: filtering by specific transaction types, grouping by response time ranges, aggregating error counts by API endpoint, and visualizing trends over time. Large monitors display the results of these structured queries as interactive dashboards showing payment processing patterns that immediately highlight a degrading third-party service—information completely hidden in the text-based approach.
+### Scene Description
+
+ A financial services operations center with two distinct approaches to log analysis. The first station shows an engineer using text-based search tools with complex regular expressions to investigate a transaction issue. The second shows an analyst using a structured query language to analyze log data: filtering by specific transaction types, grouping by response time ranges, aggregating error counts by API endpoint, and visualizing trends over time. Large monitors display the results of these structured queries as interactive dashboards showing payment processing patterns that immediately highlight a degrading third-party service—information completely hidden in the text-based approach.
 
 ### Teaching Narrative
 
@@ -617,7 +627,9 @@ The bank calculated an ROI of 410% in the first year for their structured analys
 
 ## Panel 6: The Storage Revolution - Log Data Lakes and Retention Strategies
 
-**Scene Description**: A bank's technology architecture review meeting where a team presents their structured logging storage evolution. Diagrams contrast their previous approach (storing text logs in limited retention systems) with their new structured data lake architecture. The architecture shows how standardized logs flow into tiered storage with different retention policies: hot storage for recent operational data, warm storage for medium-term analysis, cold storage for compliance and historical pattern analysis. Cost projections demonstrate how field-level partitioning and compression, enabled by structured formats, deliver both longer retention and lower costs while meeting regulatory requirements.
+### Scene Description
+
+ A bank's technology architecture review meeting where a team presents their structured logging storage evolution. Diagrams contrast their previous approach (storing text logs in limited retention systems) with their new structured data lake architecture. The architecture shows how standardized logs flow into tiered storage with different retention policies: hot storage for recent operational data, warm storage for medium-term analysis, cold storage for compliance and historical pattern analysis. Cost projections demonstrate how field-level partitioning and compression, enabled by structured formats, deliver both longer retention and lower costs while meeting regulatory requirements.
 
 ### Teaching Narrative
 
@@ -748,7 +760,9 @@ The company calculated an ROI of 580% in the first year for their structured sto
 
 ## Panel 7: The Implementation Journey - Transitioning from Unstructured to Structured
 
-**Scene Description**: A banking technology transformation program office where roadmap visualizations show the phased implementation of structured logging across their systems. The timeline highlights different approaches for various components: greenfield mobile banking services implementing structured logging from inception, strategic legacy payment systems being upgraded through planned refactoring, and mainframe applications being integrated through specialized adapters that transform their outputs into structured formats. Progress metrics show increasing coverage of structured logging across the enterprise, with corresponding improvements in incident resolution times and proactive issue detection.
+### Scene Description
+
+ A banking technology transformation program office where roadmap visualizations show the phased implementation of structured logging across their systems. The timeline highlights different approaches for various components: greenfield mobile banking services implementing structured logging from inception, strategic legacy payment systems being upgraded through planned refactoring, and mainframe applications being integrated through specialized adapters that transform their outputs into structured formats. Progress metrics show increasing coverage of structured logging across the enterprise, with corresponding improvements in incident resolution times and proactive issue detection.
 
 ### Teaching Narrative
 

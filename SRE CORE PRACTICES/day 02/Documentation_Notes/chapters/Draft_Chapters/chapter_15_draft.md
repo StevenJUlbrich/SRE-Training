@@ -36,7 +36,9 @@ By the end of this chapter, readers will be able to:
 
 ## Panel 1: The Transaction Journey
 
-**Scene Description**: Architecture team implementing distributed tracing across complex banking systems with visualization showing metrics for complete funds transfer flow. Visual displays end-to-end transaction path spanning multiple services and technologies with performance metrics at each step, revealing previously invisible bottlenecks and dependencies across system boundaries.
+### Scene Description
+
+ Architecture team implementing distributed tracing across complex banking systems with visualization showing metrics for complete funds transfer flow. Visual displays end-to-end transaction path spanning multiple services and technologies with performance metrics at each step, revealing previously invisible bottlenecks and dependencies across system boundaries.
 
 ### Teaching Narrative
 
@@ -87,7 +89,9 @@ For financial transactions, end-to-end visibility directly affects both customer
 
 ## Panel 2: The Prediction Engine
 
-**Scene Description**: Data science team building predictive metrics using machine learning to forecast potential failures before they occur in banking systems. Visual shows sophisticated forecasting models analyzing historical patterns and leading indicators to predict potential issues hours or days before traditional monitoring would detect them, enabling truly proactive reliability management.
+### Scene Description
+
+ Data science team building predictive metrics using machine learning to forecast potential failures before they occur in banking systems. Visual shows sophisticated forecasting models analyzing historical patterns and leading indicators to predict potential issues hours or days before traditional monitoring would detect them, enabling truly proactive reliability management.
 
 ### Teaching Narrative
 
@@ -138,7 +142,9 @@ For financial systems, predictive capabilities directly affect both service reli
 
 ## Panel 3: The Controlled Failure
 
-**Scene Description**: SRE team proposing chaos engineering program to management with metrics showing reliability improvements from systematic resilience testing. Visual shows structured experimentation framework with controlled failure injection, comprehensive measurement, and progressive complexity that builds verified resilience rather than assumed reliability in critical banking infrastructure.
+### Scene Description
+
+ SRE team proposing chaos engineering program to management with metrics showing reliability improvements from systematic resilience testing. Visual shows structured experimentation framework with controlled failure injection, comprehensive measurement, and progressive complexity that builds verified resilience rather than assumed reliability in critical banking infrastructure.
 
 ### Teaching Narrative
 
@@ -193,7 +199,9 @@ For financial institutions, resilience verification directly affects both busine
 
 ## Panel 4: The Automated Remediation
 
-**Scene Description**: Team designing automated response system that uses metric triggers to execute predefined recovery actions for common failure patterns. Visual illustrates self-healing infrastructure that detects known failure signatures and implements appropriate recovery without human intervention, significantly reducing mean time to recovery for well-understood failure modes.
+### Scene Description
+
+ Team designing automated response system that uses metric triggers to execute predefined recovery actions for common failure patterns. Visual illustrates self-healing infrastructure that detects known failure signatures and implements appropriate recovery without human intervention, significantly reducing mean time to recovery for well-understood failure modes.
 
 ### Teaching Narrative
 
@@ -248,7 +256,9 @@ For payment systems, recovery speed directly affects both customer experience an
 
 ## Panel 5: The Global View
 
-**Scene Description**: Operations team implementing multi-region and hybrid cloud metrics for complex international banking infrastructure with unified visualization. Visual shows comprehensive monitoring spanning geographic regions, technology platforms, and organizational boundaries with consistent visibility that eliminates dangerous blind spots at traditional monitoring boundaries.
+### Scene Description
+
+ Operations team implementing multi-region and hybrid cloud metrics for complex international banking infrastructure with unified visualization. Visual shows comprehensive monitoring spanning geographic regions, technology platforms, and organizational boundaries with consistent visibility that eliminates dangerous blind spots at traditional monitoring boundaries.
 
 ### Teaching Narrative
 
@@ -299,7 +309,9 @@ For multinational financial institutions, unified visibility directly affects bo
 
 ## Panel 6: The Continuous Verification
 
-**Scene Description**: SRE team presenting metrics from automated testing program that continuously validates critical banking system functionality. Visual shows comprehensive verification framework that constantly confirms essential capabilities remain operational, detecting subtle degradations before they affect customers through ongoing functional validation rather than point-in-time testing.
+### Scene Description
+
+ SRE team presenting metrics from automated testing program that continuously validates critical banking system functionality. Visual shows comprehensive verification framework that constantly confirms essential capabilities remain operational, detecting subtle degradations before they affect customers through ongoing functional validation rather than point-in-time testing.
 
 ### Teaching Narrative
 
@@ -357,7 +369,9 @@ For financial services, functional verification directly affects both regulatory
 
 ## Panel 7: The Next Frontier
 
-**Scene Description**: Research team exploring emerging metrics approaches for next-generation banking technologies like blockchain, AI-based services, and open banking. Visual shows advanced measurement frameworks addressing novel reliability challenges in distributed ledger consensus, machine learning model accuracy, and API ecosystem integrity that extend reliability engineering into new technological domains.
+### Scene Description
+
+ Research team exploring emerging metrics approaches for next-generation banking technologies like blockchain, AI-based services, and open banking. Visual shows advanced measurement frameworks addressing novel reliability challenges in distributed ledger consensus, machine learning model accuracy, and API ecosystem integrity that extend reliability engineering into new technological domains.
 
 ### Teaching Narrative
 

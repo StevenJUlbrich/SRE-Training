@@ -33,7 +33,9 @@ By the end of this chapter, readers will be able to:
 ---
 ## Panel 1: The Threshold Dilemma
 
-**Scene Description**: Operations team reviewing alert storm triggered by static thresholds during normal payment processing peak, showing contrast with context-aware thresholds. Visual displays dozens of false positive alerts flooding dashboards during expected business peak alongside a context-aware approach that recognizes normal patterns versus true anomalies.
+### Scene Description
+
+ Operations team reviewing alert storm triggered by static thresholds during normal payment processing peak, showing contrast with context-aware thresholds. Visual displays dozens of false positive alerts flooding dashboards during expected business peak alongside a context-aware approach that recognizes normal patterns versus true anomalies.
 
 ### Teaching Narrative
 
@@ -88,7 +90,9 @@ For payment processing, alert accuracy directly affects both incident response e
 
 ## Panel 2: The Pattern Recognizer
 
-**Scene Description**: Data scientist helping SRE team implement ML-based anomaly detection metrics for fraud patterns, comparing traditional vs. ML-powered approaches. Visual illustrates how machine learning identifies subtle pattern deviations invisible to traditional threshold-based monitoring in a fraud detection system processing millions of transactions.
+### Scene Description
+
+ Data scientist helping SRE team implement ML-based anomaly detection metrics for fraud patterns, comparing traditional vs. ML-powered approaches. Visual illustrates how machine learning identifies subtle pattern deviations invisible to traditional threshold-based monitoring in a fraud detection system processing millions of transactions.
 
 ### Teaching Narrative
 
@@ -144,7 +148,9 @@ For fraud detection systems, pattern recognition effectiveness directly affects 
 
 ## Panel 3: The Correlation Engine
 
-**Scene Description**: Team implementing alert correlation metrics across banking systems, showing how related alerts are grouped into meaningful incident patterns. Visual displays the evolution from overwhelming individual alerts to consolidated incident views that reveal the relationships between seemingly separate symptoms of underlying issues.
+### Scene Description
+
+ Team implementing alert correlation metrics across banking systems, showing how related alerts are grouped into meaningful incident patterns. Visual displays the evolution from overwhelming individual alerts to consolidated incident views that reveal the relationships between seemingly separate symptoms of underlying issues.
 
 ### Teaching Narrative
 
@@ -195,7 +201,9 @@ For digital banking platforms, alert correlation directly affects both incident 
 
 ## Panel 4: The Signal Processing Chain
 
-**Scene Description**: Engineering team designing multi-stage anomaly detection for payment systems, showing progressive filtering, enrichment, and analysis of raw metrics. Visual illustrates the refinement pipeline that transforms massive raw telemetry into actionable insights through multiple processing stages with increasing intelligence.
+### Scene Description
+
+ Engineering team designing multi-stage anomaly detection for payment systems, showing progressive filtering, enrichment, and analysis of raw metrics. Visual illustrates the refinement pipeline that transforms massive raw telemetry into actionable insights through multiple processing stages with increasing intelligence.
 
 ### Teaching Narrative
 
@@ -250,7 +258,9 @@ For payment systems, detection quality directly affects both customer experience
 
 ## Panel 5: The Alert Taxonomy
 
-**Scene Description**: Operations team designing structured alert classification system with hierarchical categorization by system, impact, urgency, and required response. Visual shows organized alert classification framework that guides appropriate response based on alert characteristics rather than treating all notifications equally.
+### Scene Description
+
+ Operations team designing structured alert classification system with hierarchical categorization by system, impact, urgency, and required response. Visual shows organized alert classification framework that guides appropriate response based on alert characteristics rather than treating all notifications equally.
 
 ### Teaching Narrative
 
@@ -305,7 +315,9 @@ For financial operations, alert classification directly affects both incident re
 
 ## Panel 6: The Notification Matrix
 
-**Scene Description**: Team designing targeted alert routing based on incident characteristics, showing distribution rules for different banking service alerts. Visual illustrates sophisticated notification targeting that ensures alerts reach appropriate responders through optimal channels rather than broadcasting all issues to everyone.
+### Scene Description
+
+ Team designing targeted alert routing based on incident characteristics, showing distribution rules for different banking service alerts. Visual illustrates sophisticated notification targeting that ensures alerts reach appropriate responders through optimal channels rather than broadcasting all issues to everyone.
 
 ### Teaching Narrative
 
@@ -360,7 +372,9 @@ For financial operations, notification effectiveness directly affects both incid
 
 ## Panel 7: The Feedback Loop
 
-**Scene Description**: Post-incident review focused on alert effectiveness, analyzing detection timing, quality, and response effectiveness metrics. Visual shows structured analysis of alert performance during recent incident with assessment of detection accuracy, timing, clarity, and actionability to drive continuous improvement.
+### Scene Description
+
+ Post-incident review focused on alert effectiveness, analyzing detection timing, quality, and response effectiveness metrics. Visual shows structured analysis of alert performance during recent incident with assessment of detection accuracy, timing, clarity, and actionability to drive continuous improvement.
 
 ### Teaching Narrative
 
