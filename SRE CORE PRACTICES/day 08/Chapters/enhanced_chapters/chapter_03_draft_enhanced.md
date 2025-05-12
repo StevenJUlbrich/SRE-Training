@@ -1,6 +1,5 @@
 # Chapter 3: Beyond the Green Wall
 
-
 ## Chapter Overview
 
 Welcome to the reality behind the “everything’s green” dashboard fantasy—where SREs wake up at 3AM, only to discover that their systems are lying to them with a pixelated wall of false confidence. This chapter rips apart the Green Wall Fallacy, exposing the ugly underbelly of traditional monitoring in banking: business-impacting failures that your dashboards blissfully ignore. We’ll show you how to go from dashboard-worshipping zombie to evidence-driven incident hunter, using real user experience as your north star. No more worshipping at the altar of CPU metrics while your customers rage on Twitter. We’ll teach you how to hunt blind spots, trust nothing, and triangulate the truth—because in financial systems, “all green” is just another way of saying, “we have no idea what’s really happening.” Buckle up: hope is not a monitoring strategy.
@@ -36,14 +35,19 @@ Welcome to the reality behind the “everything’s green” dashboard fantasy�
 Congratulations. You’re now ready to stop being fooled by green tiles and start acting like an SRE who actually protects the business.
 
 ## Panel 1: The Pager Screams at 3AM
+
 ### Scene Description
+
 In a dimly lit bedroom, Katherine is jolted awake by her pager at 2:57 AM. She scrambles for her laptop, still groggy, and logs into the monitoring dashboard. Her face is illuminated by the screen showing a wall of green status indicators despite the critical alert. In a smaller window, users are reporting payment failures. Confusion and doubt cross her face as she mutters, "But everything's green..."
+
 ### Teaching Narrative
+
 When the pager wakes you at 2:57 AM, your first instinct is to trust your dashboards. This natural impulse represents one of the most dangerous anti-patterns in monitoring: the Green Wall Fallacy.
 
 The Green Wall Fallacy occurs when monitoring systems display a "wall of green" tiles suggesting everything is functioning normally, while critical services are actually failing. Production support professionals transitioning to SRE roles must overcome this cognitive bias of trusting dashboard colors over actual user experience.
 
 This disconnect happens because traditional monitoring focuses on system health metrics (CPU, memory, disk space) rather than service outcomes (successful transactions). While your servers might have plenty of resources and appear healthy, users could be experiencing complete service failure. In observability terminology, we're measuring the wrong signals – the ones that are easy to collect rather than the ones that matter.
+
 ### Common Example of the Problem
 
 A major retail bank's online payment processing system begins rejecting customer transactions at 2:57 AM. Customer support receives multiple complaints about failed bill payments and transfers. The on-call engineer logs into the monitoring dashboard to find all systems showing green status:
@@ -78,16 +82,20 @@ Here’s a simplified text diagram to illustrate the issue:
 ```
 
 This diagram highlights the gap: while system health metrics like CPU and memory report normal status, user-facing issues like failed database authentication go undetected. The monitoring dashboard’s "wall of green" misleads engineers, delaying incident resolution and impacting customer experience.
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 When dashboards contradict user reports, experienced SREs immediately adopt an evidence-based approach that trusts user experience over system metrics. This requires shifting from passive dashboard monitoring to active service validation.
 
 #### Checklist: Steps for Evidence-Based Investigation
+
 1. **Direct Service Testing**
+
    - Simulate actual customer journeys to validate user-reported issues.
    - For example: Execute test transactions through production pathways to verify functionality.
 
 2. **Triangulation from Multiple Sources**
+
    - Gather evidence from diverse sources such as:
      - Synthetic transactions
      - Real user monitoring data
@@ -95,16 +103,20 @@ When dashboards contradict user reports, experienced SREs immediately adopt an e
      - Direct customer reports
 
 3. **Outcome-Based Verification**
+
    - Focus investigations on business outcomes (e.g., successful payments, completed transfers) rather than system health metrics (e.g., CPU, memory, disk).
 
 4. **Analyze Interactions in Distributed Systems**
+
    - Investigate failures in the interactions between components, especially in recently changed ones, as these are common culprits.
 
 5. **Trust but Verify**
+
    - Assume monitoring systems may have blind spots when dashboards show green but users report issues.
    - Operate under the principle that user reports often highlight real problems.
 
 #### Quick Reference Flow
+
 ```mermaid
 flowchart TD
     A[Pager Alert or User Report] --> B{Dashboards Contradict?}
@@ -118,19 +130,21 @@ flowchart TD
 ```
 
 By following this checklist and flow, SREs can conduct methodical, evidence-driven investigations, minimizing downtime and improving incident response effectiveness.
+
 ### Banking Impact
 
 The business consequences of the Green Wall Fallacy in banking environments are severe and multi-dimensional. The table below summarizes the five key impact areas with examples and potential metrics:
 
-| **Impact Area**             | **Description**                                                                                      | **Examples or Metrics**                                                              |
+| **Impact Area** | **Description** | **Examples or Metrics** |
 | --------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| **Financial Loss**          | Revenue loss due to undetected payment processing outages.                                           | - $X per minute of failed transactions<br>- Total value of delayed payments          |
-| **Regulatory Exposure**     | Violations of regulatory requirements for system availability or incident reporting.                 | - Breach of uptime thresholds (e.g., 99.9%)<br>- Fines for late compliance reporting |
-| **Customer Attrition**      | Loss of customers who lose trust after experiencing rejected transactions or poor issue handling.    | - Churn rate increase<br>- Negative Net Promoter Score (NPS) changes                 |
-| **Reputation Damage**       | Public backlash amplified through social media when institutions appear unresponsive or unaware.     | - Number of negative social media posts<br>- Media coverage of outages               |
-| **Response Time Penalties** | Extended resolution times due to delayed detection, leading to SLA breaches or compensation payouts. | - SLA violation count<br>- Compensation costs paid to affected customers             |
+| **Financial Loss** | Revenue loss due to undetected payment processing outages. | - $X per minute of failed transactions<br>- Total value of delayed payments |
+| **Regulatory Exposure** | Violations of regulatory requirements for system availability or incident reporting. | - Breach of uptime thresholds (e.g., 99.9%)<br>- Fines for late compliance reporting |
+| **Customer Attrition** | Loss of customers who lose trust after experiencing rejected transactions or poor issue handling. | - Churn rate increase<br>- Negative Net Promoter Score (NPS) changes |
+| **Reputation Damage** | Public backlash amplified through social media when institutions appear unresponsive or unaware. | - Number of negative social media posts<br>- Media coverage of outages |
+| **Response Time Penalties** | Extended resolution times due to delayed detection, leading to SLA breaches or compensation payouts. | - SLA violation count<br>- Compensation costs paid to affected customers |
 
 This structured view highlights the broad and interconnected risks caused by undetected service failures, emphasizing the need for outcome-focused monitoring in critical banking systems.
+
 ### Implementation Guidance
 
 To overcome the Green Wall Fallacy in banking systems:
@@ -221,7 +235,9 @@ To overcome the Green Wall Fallacy in banking systems:
    ```
 
 By integrating these practices into your monitoring strategy, you can shift focus from infrastructure health to actual user experience and service outcomes, ensuring critical issues are detected and addressed promptly.
+
 ## Panel 2: Metrics That Matter
+
 ### Scene Description
 
 A split-screen highlights two contrasting monitoring approaches:
@@ -236,7 +252,9 @@ Traditional Dashboard                          Service-Oriented Dashboard
 ```
 
 In the center, Sofia, an experienced SRE, stands confidently. She gestures toward the service-oriented dashboard on the right, emphasizing the critical drop in transaction success rate, the spike in response time, and the escalating error counts. A group of production support engineers, transitioning into an SRE role, listens attentively as Sofia contrasts the two approaches. The traditional dashboard on the left remains static, focused on resource utilization, while the right screen prioritizes user-centric metrics that reveal the real impact on customer experience.
+
 ### Teaching Narrative
+
 The fundamental shift from monitoring to observability begins with reorienting what we measure. Traditional monitoring asks: "Are my systems running?" Observability asks: "Are my systems serving users effectively?"
 
 This transition requires moving beyond resource utilization metrics to service-level indicators (SLIs) that directly reflect the user experience. For banking applications, these critical metrics include:
@@ -247,6 +265,7 @@ This transition requires moving beyond resource utilization metrics to service-l
 4. Dependency availability (are third-party services responding correctly?)
 
 The metrics that truly matter are those that correlate directly with user experience and business outcomes. An observability mindset recognizes that a system with 20% CPU utilization that can't process transactions is far worse than a system running at 90% CPU that successfully handles every user request.
+
 ### Common Example of the Problem
 
 A major investment bank's trading platform experienced severe performance degradation during market volatility events. Despite millions invested in monitoring tools, traders reported 5-10 second delays in order confirmations while all monitoring dashboards showed healthy systems. Investigation revealed that while individual microservices had normal CPU and memory profiles, the end-to-end transaction path experienced severe message queue backlogs and API throttling. The operations team had been monitoring component health rather than trading workflow completion, missing the actual customer experience.
@@ -271,6 +290,7 @@ timeline
 ```
 
 This example highlights the critical gap between traditional resource-focused monitoring and the need for observability-driven metrics. While individual microservices appeared to perform normally, the lack of visibility into the full transaction workflow obscured the user impact. During a major market movement, traders lost millions while operations teams insisted systems were "performing normally" based on their resource utilization dashboards.
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 SREs transform monitoring effectiveness by implementing outcome-based telemetry strategies. These strategies focus on aligning metrics with user experience and ensuring actionable insights. To apply these best practices, use the checklist below:
@@ -278,6 +298,7 @@ SREs transform monitoring effectiveness by implementing outcome-based telemetry 
 #### Evidence-Based Investigation Checklist
 
 1. **Customer Journey Mapping**
+
    - Document complete user workflows (e.g., placing a trade, executing a transfer).
    - Ensure each workflow step is instrumented to measure:
      - Success rates
@@ -285,23 +306,29 @@ SREs transform monitoring effectiveness by implementing outcome-based telemetry 
      - Error rates
 
 2. **Criticality-Based Coverage**
+
    - Identify the most critical user journeys for each service.
    - Implement comprehensive outcome-based metrics for these critical paths to ensure visibility into what matters most.
 
 3. **Error Budget Derivation**
+
    - Define acceptable performance thresholds based on business impact.
    - Derive error budgets that reflect customer experience requirements rather than technical capacity.
 
 4. **Dependency Instrumentation**
+
    - Identify all critical service dependencies (e.g., authentication services, payment processors, market data feeds).
    - Implement specific metrics to verify the correct functioning of these dependencies.
 
 5. **False Positive Elimination**
+
    - Continuously refine alerting systems to eliminate notifications that lack correlation with actual customer impact.
    - Focus on reducing alert fatigue and improving response effectiveness.
 
 By using this checklist, SREs can systematically implement evidence-based investigation practices to enhance observability and prioritize metrics that directly impact the user experience.
+
 ### Banking Impact
+
 Shifting to outcome-based metrics creates significant business advantages for financial institutions:
 
 1. **Revenue Protection**: Detecting customer experience issues before they affect large transaction volumes prevents direct revenue loss, particularly in high-frequency trading and payment processing.
@@ -313,17 +340,18 @@ Shifting to outcome-based metrics creates significant business advantages for fi
 4. **Investment Optimization**: Understanding which metrics correlate with actual customer impact helps prioritize infrastructure investments toward improvements that directly enhance experience.
 
 5. **Reputation Management**: Detecting and resolving customer-impacting issues before they generate complaints significantly reduces negative social media exposure and brand damage.
+
 ### Implementation Guidance
 
 To implement outcome-based metrics in banking environments, follow these steps. The table below maps each step to specific benefits and challenges to provide clarity and structure for your implementation journey.
 
-| Step                                         | Benefits                                                                                         | Challenges                                                                                  |
+| Step | Benefits | Challenges |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
-| **Define Service-Level Indicators**          | Ensures focus on metrics that directly impact customer experience, e.g., payment success rates.  | Requires cross-team alignment to identify meaningful SLIs for each critical service.        |
-| **Implement Golden Signals Monitoring**      | Provides comprehensive coverage of customer journeys, highlighting latency, errors, and traffic. | May require reconfiguring existing monitoring systems and tuning alert thresholds.          |
-| **Create Executive Dashboards**              | Offers business stakeholders clear visibility into user experience and operational performance.  | Balancing simplicity with depth can be challenging when designing dashboards.               |
-| **Deploy Synthetic Transaction Monitoring**  | Detects issues proactively by simulating user journeys, reducing downtime impact.                | Can generate additional load on systems; requires careful scheduling and coverage analysis. |
-| **Establish SLI-to-Business Impact Mapping** | Aligns technical metrics with business outcomes, improving stakeholder communication.            | Requires collaboration between technical teams and business units to correctly map impacts. |
+| **Define Service-Level Indicators** | Ensures focus on metrics that directly impact customer experience, e.g., payment success rates. | Requires cross-team alignment to identify meaningful SLIs for each critical service. |
+| **Implement Golden Signals Monitoring** | Provides comprehensive coverage of customer journeys, highlighting latency, errors, and traffic. | May require reconfiguring existing monitoring systems and tuning alert thresholds. |
+| **Create Executive Dashboards** | Offers business stakeholders clear visibility into user experience and operational performance. | Balancing simplicity with depth can be challenging when designing dashboards. |
+| **Deploy Synthetic Transaction Monitoring** | Detects issues proactively by simulating user journeys, reducing downtime impact. | Can generate additional load on systems; requires careful scheduling and coverage analysis. |
+| **Establish SLI-to-Business Impact Mapping** | Aligns technical metrics with business outcomes, improving stakeholder communication. | Requires collaboration between technical teams and business units to correctly map impacts. |
 
 ### Detailed Steps for Implementation
 
@@ -338,7 +366,9 @@ To implement outcome-based metrics in banking environments, follow these steps. 
 5. **Establish SLI-to-Business Impact Mapping**: Document the relationship between SLIs and business outcomes. For example, show how a decline in payment success rates impacts revenue. Use this mapping to educate stakeholders and prioritize improvements.
 
 By following this structured approach, teams can transition from traditional resource-based monitoring to observability-driven practices that prioritize user experience and business outcomes.
+
 ## Panel 3: When Alerts Contradict Dashboards
+
 ### Scene Description
 
 A war room where a team is responding to a payment processing incident. The atmosphere is tense, with multiple engineers focused on their screens, which display conflicting information. Paper coffee cups and energy drink cans are scattered across the table, evidence of the long hours spent troubleshooting. On the main screen at the front of the room, critical alerts flash red, signaling potential issues, while the monitoring dashboard still shows mostly green tiles, adding to the confusion.
@@ -367,7 +397,9 @@ Below is a simplified representation of the war room setup:
 ```
 
 This setup highlights the contrast between visible system health indicators and external signals of failure, emphasizing the need for deeper exploration into unmonitored components.
+
 ### Teaching Narrative
+
 Incident response fundamentally changes when you move from a monitoring mindset to an observability mindset. When alerts contradict dashboards, the monitoring mindset asks: "Is this a false alarm?" The observability mindset asks: "What aren't we seeing?"
 
 This represents a critical cognitive shift for production support professionals transitioning to SRE roles. Traditional approaches often trust the monitoring system over external reports, leading to delayed response and extended outages. The observability approach treats user reports as primary truth and uses telemetry to understand why the system isn't detecting the problem.
@@ -375,6 +407,7 @@ This represents a critical cognitive shift for production support professionals 
 The root cause of this contradiction often lies in monitoring gaps – critical components or interfaces that aren't directly observed but impact user experience. In complex banking systems, these gaps frequently occur at service boundaries, in asynchronous processing queues, or in third-party dependencies.
 
 Effective SREs develop a systematic approach to rapidly validate whether user-reported issues are real, regardless of what dashboards show. This typically involves direct testing of user-facing functionality (such as sending test transactions) before diving deeper into system internals.
+
 ### Common Example of the Problem
 
 A global bank's mobile payment application began experiencing intermittent transaction failures during peak hours. Customer support received over 200 complaints in 30 minutes, but the monitoring dashboards showed all systems operating normally. The team struggled to reconcile conflicting data between the alerts and dashboards, leading to delays in identifying the root cause.
@@ -400,32 +433,35 @@ Avoidable Downtime: 2.5 hours (if customer reports were prioritized sooner)
 The investigation revealed that the payment authorization service was correctly receiving requests and returning responses, but an API gateway was silently dropping responses due to a TLS certificate issue. This failure occurred at a service boundary, a critical blind spot in the current monitoring setup. Because monitoring focused on individual service health rather than complete transaction flows, this service boundary failure remained invisible despite significant customer impact.
 
 This incident highlights the importance of shifting from a monitoring mindset to an observability mindset. By prioritizing user reports and systematically testing end-to-end user-facing functionality, the team could have identified the issue much earlier and reduced downtime significantly.
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 To effectively investigate incidents where alerts and dashboards contradict each other, SREs can follow this structured checklist:
 
-| Step                                  | Action                                                                                                      | Key Focus Areas                                      |
+| Step | Action | Key Focus Areas |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| **1. Reality Verification**           | Perform direct user-facing tests to validate the issue (e.g., send test transactions).                      | Confirm whether the reported issue is reproducible.  |
-| **2. Boundary Tracing**               | Investigate service boundaries and integration points for potential blind spots.                            | Identify gaps in monitoring at service interfaces.   |
-| **3. Protocol-Level Validation**      | Analyze network traffic (e.g., packet captures, proxies) to verify full request-response cycles.            | Ensure communication between components is intact.   |
-| **4. Silent Failure Detection**       | Look for non-obvious failure modes such as dropped messages, stalled queues, or expired credentials.        | Detect issues that may not generate explicit errors. |
+| **1. Reality Verification** | Perform direct user-facing tests to validate the issue (e.g., send test transactions). | Confirm whether the reported issue is reproducible. |
+| **2. Boundary Tracing** | Investigate service boundaries and integration points for potential blind spots. | Identify gaps in monitoring at service interfaces. |
+| **3. Protocol-Level Validation** | Analyze network traffic (e.g., packet captures, proxies) to verify full request-response cycles. | Ensure communication between components is intact. |
+| **4. Silent Failure Detection** | Look for non-obvious failure modes such as dropped messages, stalled queues, or expired credentials. | Detect issues that may not generate explicit errors. |
 | **5. Monitoring System Verification** | Validate the monitoring system itself (e.g., data freshness, collection completeness, alert configuration). | Confirm the reliability of your observability tools. |
 
 By following this checklist, SREs can systematically uncover the root cause of discrepancies, ensuring a faster and more accurate resolution of incidents.
+
 ### Banking Impact
 
 When monitoring systems miss real customer issues, financial institutions face cascading business consequences. The table below summarizes key impacts with quantitative examples:
 
-| **Impact Area**                 | **Description**                                                                                              | **Example Metrics**                                                                    |
+| **Impact Area** | **Description** | **Example Metrics** |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| **Transaction Abandonment**     | Customers experiencing payment failures typically abandon transactions after 1-2 retries.                    | $50,000 lost revenue per 1,000 abandoned transactions (average transaction $50).       |
-| **Support Cost Escalation**     | Undetected incidents generate waves of customer support contacts, increasing operational costs.              | $5-$25 per contact; 1,000 contacts = $5,000-$25,000 additional cost per incident.      |
-| **Double-Spend Risk**           | Customers often submit duplicate transactions, creating reconciliation challenges and financial exposure.    | 2% of failed transactions result in duplicates, leading to potential write-off losses. |
-| **Partner Relationship Damage** | Failures at integration points with payment networks and banking partners can strain relationships.          | Penalty fees range from $10,000-$50,000 per SLA breach, depending on the partner.      |
-| **Compliance Violations**       | Financial regulations require timely detection and reporting of incidents; undetected issues risk penalties. | Fines up to $250,000 per violation under regulatory frameworks like PSD2 or PCI DSS.   |
+| **Transaction Abandonment** | Customers experiencing payment failures typically abandon transactions after 1-2 retries. | $50,000 lost revenue per 1,000 abandoned transactions (average transaction $50). |
+| **Support Cost Escalation** | Undetected incidents generate waves of customer support contacts, increasing operational costs. | $5-$25 per contact; 1,000 contacts = $5,000-$25,000 additional cost per incident. |
+| **Double-Spend Risk** | Customers often submit duplicate transactions, creating reconciliation challenges and financial exposure. | 2% of failed transactions result in duplicates, leading to potential write-off losses. |
+| **Partner Relationship Damage** | Failures at integration points with payment networks and banking partners can strain relationships. | Penalty fees range from $10,000-$50,000 per SLA breach, depending on the partner. |
+| **Compliance Violations** | Financial regulations require timely detection and reporting of incidents; undetected issues risk penalties. | Fines up to $250,000 per violation under regulatory frameworks like PSD2 or PCI DSS. |
 
 These impacts highlight the critical need for a robust observability strategy that prioritizes user experience and proactively addresses monitoring gaps before they escalate into significant financial or operational risks.
+
 ### Implementation Guidance
 
 To resolve the contradiction between alerts and dashboards:
@@ -515,7 +551,9 @@ To resolve the contradiction between alerts and dashboards:
    ```
 
    Ensure this decision tree is documented in the team's runbook for easy access during incidents.
+
 ## Panel 4: The Hidden Failures
+
 ### Scene Description
 
 The architectural diagram below represents a banking payment system with multiple components, highlighting areas prone to hidden failures. Components with clear instrumentation and monitoring are marked with "eye" icons, while unmonitored or under-monitored components are left blank. Three critical blind spots are circled in red:
@@ -546,7 +584,9 @@ graph TD
 ```
 
 This diagram emphasizes the importance of identifying and instrumenting blind spots to prevent hidden failures, reinforcing the concept that even mature monitoring setups can leave critical gaps. The SRE encourages the team to adopt an observability mindset, constantly questioning, "If this component failed, would we know immediately?"
+
 ### Teaching Narrative
+
 The most dangerous failures in complex systems are those that occur in unmonitored or under-monitored components – the "blind spots" that exist in even mature monitoring setups. These hidden failures often manifest in several common patterns:
 
 1. **Silent Failures**: Components that degrade or fail without generating errors, such as database replicas that fall behind primary instances
@@ -557,6 +597,7 @@ The most dangerous failures in complex systems are those that occur in unmonitor
 Transitioning from monitoring to observability means systematically identifying and eliminating these blind spots by implementing comprehensive instrumentation. This requires a thorough understanding of the entire system architecture and all critical dependencies.
 
 An observability mindset constantly asks: "If this component failed, would we know immediately?" For any component where the answer is "no," you have a potential source of confusing incidents where dashboards show green while users experience failures.
+
 ### Common Example of the Problem
 
 A major bank's wealth management platform experienced a critical data inconsistency issue that went undetected for 17 hours. Customers viewing their investment portfolios saw incorrect holdings and valuations, leading to numerous complaints and several large erroneous trades. Investigation revealed that the database replication process between the transaction database and the reporting database had silently failed, causing the reporting system to display outdated information. Since the primary transaction database was functioning correctly, all monitoring dashboards showed green status. The replication process itself had no specific monitoring beyond basic server health checks. The failure was eventually discovered only when a customer called to report that a trade they had executed hours earlier wasn't reflected in their portfolio view. The incident resulted in the bank covering over $450,000 in trading losses from decisions made using incorrect data.
@@ -581,37 +622,45 @@ timeline
 ```
 
 This timeline illustrates how the issue progressed from an undetected silent failure to a significant customer-impacting event. By the time the failure was discovered, it had already caused financial losses and damaged customer trust. A key lesson here is the importance of proactive monitoring for critical processes like database replication to detect silent failures before they escalate into larger incidents.
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 SREs systematically eliminate monitoring blind spots through comprehensive system analysis. The following checklist summarizes the key steps for conducting an evidence-based investigation:
 
 #### Checklist for Evidence-Based Investigation:
+
 1. **Dependency Mapping**:
+
    - Create a complete service dependency map.
    - Include all components in the transaction path, even those without direct customer impact.
    - Highlight systems that could cause downstream failures if unmonitored.
 
 2. **Failure Mode Analysis**:
+
    - Document potential failure modes for each component.
    - Pay special attention to silent failures that wouldn't trigger traditional alerts.
    - Assess the likelihood and impact of each potential failure.
 
 3. **Fault Injection Testing**:
+
    - Conduct controlled chaos engineering experiments regularly.
    - Simulate failures in critical components to verify monitoring system effectiveness.
    - Ensure alerts are triggered appropriately during simulated failures.
 
 4. **Data Flow Tracing**:
+
    - Implement checks to validate complete data flows within the system.
    - Focus on asynchronous processes, replication systems, and batch jobs.
    - Confirm that data integrity is maintained across the flow.
 
 5. **Synthetic Customer Journeys**:
+
    - Deploy robots to perform complete end-to-end workflows.
    - Verify the accuracy and consistency of results, not just their delivery.
    - Use these tests to proactively detect potential issues in customer-facing systems.
 
 #### Quick Reference: Evidence-Based Investigation Flow
+
 ```mermaid
 flowchart TD
     A[Dependency Mapping] --> B[Failure Mode Analysis]
@@ -623,7 +672,9 @@ flowchart TD
 ```
 
 By following this checklist and flow, SREs can systematically identify and address blind spots, ensuring that monitoring evolves into true observability.
+
 ### Banking Impact
+
 Hidden failure points create significant business risks specific to financial services:
 
 1. **Data Inconsistency Exposure**: Financial decisions made with inconsistent or outdated data can result in direct monetary losses that the institution may be liable for covering.
@@ -635,20 +686,23 @@ Hidden failure points create significant business risks specific to financial se
 4. **Customer Trust Erosion**: Discovering that institutions were unaware of system issues affecting financial data severely damages customer confidence in operational competence.
 
 5. **Recovery Complexity**: The longer hidden issues persist, the more complex and costly recovery becomes, often requiring extensive reconciliation and correction processes.
+
 ### Implementation Guidance
 
 To identify and eliminate monitoring blind spots in banking systems, follow these steps. The table below maps each step to specific monitoring tools or techniques for practical application.
 
-| Step                                          | Recommended Tools/Techniques                                                                                                                                                          |
+| Step | Recommended Tools/Techniques |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Conduct System Component Inventory**        | Use architectural diagrams, dependency mapping tools, and manual audits to document all components.                                                                                   |
-| **Implement Database Replication Monitoring** | Set up database monitoring tools like Prometheus, Cloud-native monitoring (e.g., AWS RDS Performance Insights), or custom scripts for replication lag and data consistency checks.    |
-| **Develop Async Process Validation**          | Utilize tools like RabbitMQ Management Plugin, Kafka Monitoring (e.g., Confluent Control Center), or custom metrics for queue depth and message tracking.                             |
-| **Deploy Data Consistency Checks**            | Implement automated tests using frameworks like dbt, custom SQL scripts, or financial data reconciliation tools to verify data consistency.                                           |
-| **Establish Third-Party Service Monitors**    | Use synthetic monitoring tools (e.g., Pingdom, New Relic), integrate third-party status pages, and employ API testing frameworks like Postman to validate third-party service health. |
+| **Conduct System Component Inventory** | Use architectural diagrams, dependency mapping tools, and manual audits to document all components. |
+| **Implement Database Replication Monitoring** | Set up database monitoring tools like Prometheus, Cloud-native monitoring (e.g., AWS RDS Performance Insights), or custom scripts for replication lag and data consistency checks. |
+| **Develop Async Process Validation** | Utilize tools like RabbitMQ Management Plugin, Kafka Monitoring (e.g., Confluent Control Center), or custom metrics for queue depth and message tracking. |
+| **Deploy Data Consistency Checks** | Implement automated tests using frameworks like dbt, custom SQL scripts, or financial data reconciliation tools to verify data consistency. |
+| **Establish Third-Party Service Monitors** | Use synthetic monitoring tools (e.g., Pingdom, New Relic), integrate third-party status pages, and employ API testing frameworks like Postman to validate third-party service health. |
 
 By systematically applying these tools and techniques, you can transition from basic monitoring to a robust observability framework, ensuring that hidden failures are detected and addressed promptly.
+
 ## Panel 5: Triangulating Truth
+
 ### Scene Description
 
 An SRE named Amara demonstrates a methodical incident investigation approach to a group of transitioning production support engineers. The setup is as follows:
@@ -673,7 +727,9 @@ An SRE named Amara demonstrates a methodical incident investigation approach to 
 ```
 
 Amara uses these tools in tandem to walk the group through a structured incident investigation. The layout visually integrates direct functional testing, raw telemetry data, and external validation, reinforcing the key principles of the triangulation method.
+
 ### Teaching Narrative
+
 When dashboards and reality disagree, SREs must become detectives who systematically triangulate the truth using multiple evidence sources. This evidence-based approach represents a fundamental principle of observability culture: no single monitoring system is ever comprehensive enough to be trusted implicitly.
 
 Effective triangulation involves gathering evidence from at least three distinct sources:
@@ -685,6 +741,7 @@ Effective triangulation involves gathering evidence from at least three distinct
 This methodical approach contrasts with traditional monitoring culture, which often relies heavily on predefined dashboards and alerts. Experienced SREs develop standardized investigation patterns that quickly validate whether user-reported issues are real, regardless of what monitoring systems indicate.
 
 The triangulation mindset embodies a core SRE principle: that observable reality takes precedence over any monitoring system's interpretation of that reality. As the saying goes in observability culture: "Trust, but verify—and when in doubt, believe the user."
+
 ### Common Example of the Problem
 
 During a major market volatility event, a global investment bank's trading platform exhibited sporadic trade execution delays. The monitoring dashboard displayed normal system performance, leading initial responders to classify reports as "user error." However, an experienced SRE applied a triangulation approach to uncover the root cause. Below is a timeline of the investigation:
@@ -706,16 +763,19 @@ gantt
 ```
 
 #### Key Investigation Steps:
+
 1. **Direct Functional Testing**: The SRE executed test trades, confirming delays of 4-8 seconds despite normal-looking metrics on the monitoring dashboard.
 2. **Raw Telemetry Data Analysis**: By examining raw application logs, the SRE uncovered intermittent database connection pool exhaustion, which was otherwise obscured by aggregated metrics.
 3. **Distributed Trace Review**: The SRE identified that increased trade volume caused microservice instances to exceed their database connection limits, pinpointing the bottleneck.
 
 This evidence-based approach revealed a legitimate issue that standard monitoring tools had missed. By systematically triangulating evidence, the SRE prevented significant trading losses that could have accumulated had the incident remained misclassified as "no technical issues found."
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 SREs implement systematic triangulation methods to validate system reality. The following checklist summarizes key best practices to guide evidence-based investigations:
 
 #### **Checklist: Evidence-Based Investigation**
+
 - **[ ] Multi-Source Verification**: Gather evidence from at least three distinct sources, such as logs, metrics, traces, synthetic tests, and user reports. Avoid relying on any single data source.
 - **[ ] Raw Data Analysis**: Access raw telemetry data directly, bypassing dashboard abstractions to uncover hidden patterns or discrepancies.
 - **[ ] Cross-System Correlation**: Investigate interactions between components, focusing on system boundaries where issues often originate.
@@ -724,7 +784,9 @@ SREs implement systematic triangulation methods to validate system reality. The 
 - **[ ] User-Centric Validation**: When in doubt, prioritize user-reported issues and validate them through direct functional testing or external confirmation.
 
 This checklist reinforces the SRE principle that observable reality takes precedence over monitoring system interpretations. By systematically applying these steps, SREs can confidently identify and resolve incidents, ensuring system truth is accurately triangulated.
+
 ### Banking Impact
+
 Evidence-based investigation creates significant business advantages in financial systems:
 
 1. **Faster Mean Time to Resolution**: Triangulation approaches typically reduce incident resolution time by 35-65% compared to dashboard-only analysis, directly reducing financial impact.
@@ -736,6 +798,7 @@ Evidence-based investigation creates significant business advantages in financia
 4. **Customer Communication Accuracy**: Evidence-based approaches provide clear, factual incident details that improve customer communication and prevent misinformation.
 
 5. **Root Cause Identification**: Triangulation significantly improves root cause analysis success rates, enabling permanent fixes rather than temporary mitigations.
+
 ### Implementation Guidance
 
 To implement effective triangulation in banking environments:
@@ -743,6 +806,7 @@ To implement effective triangulation in banking environments:
 1. **Create Investigation Playbooks**: Develop standardized investigation workflows for common scenarios (e.g., payment issues, trading delays, authentication problems). Each playbook should include specific steps for gathering evidence from direct testing, raw telemetry, and external confirmation sources. For example:
 
    **Sample Playbook: Investigating Payment Failures**
+
    - **Direct Testing**: Use a custom CLI tool to simulate a payment API request with test data, capturing the response and validating expected behavior.
    - **Raw Telemetry**: Query application logs for recent payment attempt logs, filtering by the test transaction ID.
    - **External Confirmation**: Check third-party payment processor status pages for ongoing outages or synchronization issues.
@@ -774,16 +838,19 @@ To implement effective triangulation in banking environments:
    ```
 
 4. **Establish Reality Verification Protocol**: Implement a standard "reality check" procedure requiring verification from at least three independent data sources before dismissing any reported issue. For instance:
+
    - Run a direct API test to replicate the problem.
    - Inspect logs for error patterns matching the reported timeframe.
    - Validate with external monitoring (e.g., synthetic checks or user reports).
 
 5. **Conduct Triangulation Training**: Develop hands-on training scenarios that simulate real-world incidents where dashboard data conflicts with reality. Use mock systems to demonstrate:
+
    - How to identify discrepancies in telemetry data.
    - The importance of direct testing and external confirmation.
    - Patterns of evidence that indicate systemic vs. user-specific issues.
 
    **Example Training Flow:**
+
    ```
    Incident: User reports failed login attempts.
    1. Direct Testing: Simulate a login attempt using a test account.
@@ -791,7 +858,9 @@ To implement effective triangulation in banking environments:
    3. External Confirmation: Check third-party identity provider status.
    Outcome: Identify root cause (e.g., misconfigured OAuth redirect URL).
    ```
+
 ## Panel 6: The Four Golden Signals
+
 ### Scene Description
 
 The classroom is set up with an SRE instructor standing next to a large whiteboard at the front of the room. At the top of the whiteboard, "The Four Golden Signals" is written in bold letters, underlined for emphasis. Below this title, the four key metrics are listed with corresponding banking-specific examples:
@@ -819,7 +888,9 @@ Instructor --> [  Errors: Directly impacts customer experience  ]
 ```
 
 This structured visualization highlights the key metrics and their relevance to the discussion, creating a clearer mental picture of the classroom setting and the focus on actionable insights.
+
 ### Teaching Narrative
+
 Moving beyond the Green Wall Fallacy requires implementing a core set of metrics that accurately reflect service health from the user's perspective. The Four Golden Signals, popularized by Google's SRE practices, provide a foundational framework for meaningful service monitoring:
 
 1. **Latency**: The time it takes to service a request. In banking contexts, this includes payment processing time, account access speed, or transaction confirmation delay.
@@ -833,6 +904,7 @@ Moving beyond the Green Wall Fallacy requires implementing a core set of metrics
 These signals are powerful because they directly correlate with user experience rather than internal system metrics. By focusing first on these four signals, teams can avoid the Green Wall Fallacy and build dashboards that reflect actual service health from the customer's perspective.
 
 Implementing these signals requires careful consideration of what constitutes an "error" or acceptable "latency" in your specific banking context, creating the foundation for more advanced observability practices like SLOs.
+
 ### Common Example of the Problem
 
 A major retail bank implemented extensive monitoring covering dozens of infrastructure metrics, but neglected the Four Golden Signals for their online banking platform. This oversight became evident during a major system upgrade. Below is a timeline illustrating the sequence of events during the incident:
@@ -862,66 +934,77 @@ gantt
 Initially, the operations team confidently proceeded with the upgrade, relying on "green" dashboard statuses that showed healthy CPU, memory, and disk metrics. However, by 10:00 AM, customers began reporting extremely slow page loads and frequent transaction timeouts. Investigation revealed that while infrastructure resources were sufficient, the application was experiencing database connection saturation and increased error rates—problems that were not visible on existing dashboards.
 
 The incident affected over 40,000 customers and resulted in a 214% increase in call center volume. Post-incident analysis demonstrated that properly implemented Golden Signals would have detected the degradation 47 minutes earlier, alerting the team to the database saturation and error rate spike before customers were impacted. This example underscores the critical importance of monitoring service outcomes rather than just system resources.
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 SREs implement the Four Golden Signals through systematic instrumentation and investigation practices. The following checklist outlines five key steps to ensure effective and actionable monitoring in banking systems:
 
 #### Evidence-Based Investigation Checklist:
+
 1. **Request Classification**
+
    - Define what constitutes a "request" for your service (e.g., payment initiation, account inquiry, trade execution).
    - Ensure consistent measurement and tagging across all services to enable cross-system correlation.
 
 2. **Error Definition Protocol**
+
    - Establish clear definitions for "errors," including technical (e.g., 5xx responses) and business-level failures (e.g., "insufficient funds" responses with 200 OK).
    - Regularly review and refine error definitions to align with evolving customer expectations.
 
 3. **Latency Percentile Tracking**
+
    - Track latency using percentiles (e.g., p50, p90, p99) instead of averages to capture outlier experiences.
    - Focus on high-percentile latency to identify bottlenecks and improve the most critical customer interactions.
 
 4. **Saturation Multi-Indicator**
+
    - Identify multiple saturation signals per service (e.g., queue depth, connection pool usage, thread utilization).
    - Set proactive thresholds to detect and mitigate capacity risks before they affect customers.
 
 5. **Golden Signal Correlation**
+
    - Analyze relationships between the Four Golden Signals to uncover patterns (e.g., increased latency correlating with rising error rates under saturation).
    - Use these insights to predict and address cascading failures in complex systems.
 
 #### Implementation Tip:
+
 To operationalize this checklist, integrate these practices into your observability tooling and dashboards. Regularly validate that the signals and thresholds reflect real-world customer experiences and business priorities.
+
 ### Banking Impact
 
 Implementing the Four Golden Signals creates direct business benefits for banking operations. The table below summarizes these benefits, their specific impacts, and measurable outcomes:
 
-| **Business Benefit**             | **Specific Impact**                                                                         | **Measurable Outcome**                                                   |
+| **Business Benefit** | **Specific Impact** | **Measurable Outcome** |
 | -------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| **Earlier Incident Detection**   | Faster identification of service disruptions by monitoring latency, errors, and traffic.    | 40-70% reduction in incident detection and resolution times.             |
-| **Improved Customer Experience** | Proactive monitoring of customer-facing metrics like payment processing and account access. | Increased customer satisfaction and retention; fewer complaints logged.  |
-| **Capacity Planning Accuracy**   | Data-driven insights from traffic and saturation signals to optimize resource allocation.   | Reduced overprovisioning costs by up to 20%; minimized risks of outages. |
-| **Performance Optimization ROI** | Focused latency improvements on high-impact areas, enhancing critical transaction flows.    | Up to 30% faster transaction processing; higher success rates.           |
-| **Regulatory Reporting Support** | Reliable service reliability metrics for compliance with financial regulations.             | Improved audit outcomes; fewer penalties related to SLA violations.      |
+| **Earlier Incident Detection** | Faster identification of service disruptions by monitoring latency, errors, and traffic. | 40-70% reduction in incident detection and resolution times. |
+| **Improved Customer Experience** | Proactive monitoring of customer-facing metrics like payment processing and account access. | Increased customer satisfaction and retention; fewer complaints logged. |
+| **Capacity Planning Accuracy** | Data-driven insights from traffic and saturation signals to optimize resource allocation. | Reduced overprovisioning costs by up to 20%; minimized risks of outages. |
+| **Performance Optimization ROI** | Focused latency improvements on high-impact areas, enhancing critical transaction flows. | Up to 30% faster transaction processing; higher success rates. |
+| **Regulatory Reporting Support** | Reliable service reliability metrics for compliance with financial regulations. | Improved audit outcomes; fewer penalties related to SLA violations. |
 
 These benefits not only enhance operational efficiency but also contribute to improved financial outcomes and stronger regulatory compliance, making the Four Golden Signals a vital framework for modern banking observability.
+
 ### Implementation Guidance
 
 To implement the Four Golden Signals in banking systems, follow these step-by-step guidelines:
 
-1. **Define Service Boundaries**  
+1. **Define Service Boundaries**\
    Clearly define each banking service (e.g., payments, accounts, authentication) and establish consistent instrumentation points at service boundaries for measuring Golden Signals.
 
-2. **Implement Banking-Specific Error Categorization**  
+2. **Implement Banking-Specific Error Categorization**\
    Create a taxonomy of banking-specific errors (e.g., payment declined, fraud hold, insufficient funds) that count toward error rates, even when returning normal HTTP status codes.
 
-3. **Deploy Latency Histograms**  
+3. **Deploy Latency Histograms**\
    For each critical customer journey, implement histogram-based latency measurements with appropriate buckets for banking contexts:
+
    - Sub-50ms for authentication
    - Sub-500ms for account information
    - Sub-2s for payments
 
-4. **Create Traffic Dashboards with Business Context**  
+4. **Create Traffic Dashboards with Business Context**\
    Develop traffic monitoring that correlates technical metrics with business cycles (e.g., paydays, tax seasons, trading hours). This helps distinguish between expected and unexpected traffic patterns.
 
-5. **Establish Saturation Early Warning Thresholds**  
+5. **Establish Saturation Early Warning Thresholds**\
    Define and monitor "early warning" thresholds at 60-70% of known saturation points for critical resources, allowing time to respond before customer impact occurs.
 
 #### Step-by-Step Implementation Process
@@ -941,7 +1024,9 @@ flowchart TD
 4. **Build Dashboards**: Create meaningful traffic dashboards that overlay technical and business metrics for actionable insights.
 5. **Set Thresholds**: Proactively monitor resource saturation levels and define early warning thresholds to address issues before they impact customers.
 6. **Iterate and Refine**: Use observability data to continuously improve metric definitions, thresholds, and instrumentation.
+
 ## Panel 7: Designing for Observability
+
 ### Scene Description
 
 A system architecture review meeting for a new mobile banking feature is underway. The whiteboard displays a service diagram with explicit monitoring points marked at key interfaces, providing a clear visualization of the system's observability design. Engineers are actively discussing instrumentation requirements before any code is written. On the wall, a checklist outlines critical observability tasks:
@@ -962,7 +1047,9 @@ Below is a simplified text representation of the whiteboard diagram:
 ```
 
 The senior SRE is emphasizing the importance of designing observability into the system from the outset, highlighting that it cannot be successfully retrofitted later. This proactive approach ensures visibility into system behavior across all critical paths and interfaces.
+
 ### Teaching Narrative
+
 The ultimate solution to the Green Wall Fallacy is to design systems with observability as a first-class requirement rather than an afterthought. This represents a fundamental shift from traditional approaches where monitoring is added after systems are built.
 
 Designing for observability means making deliberate architectural choices that enable comprehensive visibility into system behavior. Key principles include:
@@ -976,6 +1063,7 @@ Designing for observability means making deliberate architectural choices that e
 In banking environments, this design-first approach for observability is particularly crucial given the high cost of undetected issues. Every new service or feature should answer the question: "How will we know if this is failing in production?" before it's deployed.
 
 The observability-first mindset recognizes that the ability to understand system behavior is just as important as the system's functional requirements. In modern SRE practice, a system that works but can't be observed is considered incomplete and not production-ready.
+
 ### Common Example of the Problem
 
 A large retail bank launched a new peer-to-peer payment service to compete with popular financial technology applications. The development team focused entirely on functional requirements and performance, treating observability as a post-launch concern. When the system went live, unexpected usage patterns quickly emerged, with transaction volumes 5x higher than anticipated during evening hours. Several critical issues occurred, including duplicate payments and failed transfers, but the operations team had minimal visibility into what was happening.
@@ -1006,39 +1094,42 @@ gantt
 Without distributed tracing across the payment flow or proper error categorization, diagnosing the issues took significantly more time. The lack of visibility extended the time to resolve incidents from hours to days, causing customers to abandon the service and generating negative social media coverage.
 
 Post-incident analysis revealed that basic observability design—including distributed tracing and error telemetry—would have reduced the impact by an estimated 80%. The bank was ultimately forced to take the service offline for two weeks to retrofit proper observability, significantly damaging adoption and market position.
+
 ### SRE Best Practice: Evidence-Based Investigation
 
 SREs implement observability-by-design through systematic architecture practices. Use the following checklist to ensure evidence-based investigation principles are embedded in your observability design process:
 
-- [ ] **Define Observability Requirements**  
+- [ ] **Define Observability Requirements**\
   Establish explicit observability requirements alongside functional requirements. Specify which system behaviors must be visible and measurable.
 
-- [ ] **Conduct Instrumentation Design Reviews**  
+- [ ] **Conduct Instrumentation Design Reviews**\
   Perform formal reviews of instrumentation approaches before implementation. Validate that the planned telemetry will provide adequate visibility into critical behaviors.
 
-- [ ] **Map Failure Modes**  
+- [ ] **Map Failure Modes**\
   Systematically identify potential failure modes for new systems. Verify that each failure mode would be clearly detectable through the planned instrumentation.
 
-- [ ] **Create Telemetry Contracts**  
+- [ ] **Create Telemetry Contracts**\
   Define explicit telemetry contracts for each service, specifying the data each service must expose. Treat these contracts with the same rigor as API contracts.
 
-- [ ] **Test Observability Instrumentation**  
+- [ ] **Test Observability Instrumentation**\
   Implement automated tests to verify that expected telemetry is generated under various conditions, including error scenarios. Ensure observability mechanisms function as designed.
 
 By following this checklist, teams can proactively design observability into their systems, enabling evidence-based investigation and reducing the risk of undetected issues in production.
+
 ### Banking Impact
 
 Designing systems for observability creates substantial business value in banking contexts. The table below summarizes key impact areas, their benefits, and example metrics used to measure success:
 
-| **Impact Area**                            | **Benefit**                                                                                       | **Example Metric**                         |
+| **Impact Area** | **Benefit** | **Example Metric** |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **Reduced Mean Time to Resolution (MTTR)** | Faster incident resolution, directly reducing financial losses during outages.                    | Incident MTTR (e.g., in minutes)           |
-| **Deployment Confidence**                  | Enables more frequent and confident deployments, accelerating feature delivery.                   | Deployment frequency                       |
-| **Operational Efficiency**                 | Fewer engineers required for maintenance, lowering costs and improving service quality.           | On-call escalations per week               |
-| **Risk Reduction**                         | Fewer undetected issues, minimizing financial losses, data inconsistencies, and regulatory risks. | Number of incidents detected automatically |
-| **Innovation Enablement**                  | Teams can experiment with new features more confidently, driving faster innovation.               | Time to detect issues in new features      |
+| **Reduced Mean Time to Resolution (MTTR)** | Faster incident resolution, directly reducing financial losses during outages. | Incident MTTR (e.g., in minutes) |
+| **Deployment Confidence** | Enables more frequent and confident deployments, accelerating feature delivery. | Deployment frequency |
+| **Operational Efficiency** | Fewer engineers required for maintenance, lowering costs and improving service quality. | On-call escalations per week |
+| **Risk Reduction** | Fewer undetected issues, minimizing financial losses, data inconsistencies, and regulatory risks. | Number of incidents detected automatically |
+| **Innovation Enablement** | Teams can experiment with new features more confidently, driving faster innovation. | Time to detect issues in new features |
 
 This structured approach highlights how observability-first designs directly contribute to improved performance, resilience, and business outcomes in high-stakes banking environments.
+
 ### Implementation Guidance
 
 To implement observability-by-design in banking systems:
@@ -1047,38 +1138,38 @@ To implement observability-by-design in banking systems:
 
 2. **Implement Telemetry SDKs**: Deploy standardized observability libraries for all supported languages and frameworks that automatically implement consistent telemetry with banking-specific context. For example, the following code snippet demonstrates how to implement OpenTelemetry tracing in a Python-based payment service:
 
-    ```python
-    from opentelemetry import trace
-    from opentelemetry.sdk.trace import TracerProvider
-    from opentelemetry.sdk.trace.export import BatchSpanProcessor
-    from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-    from opentelemetry.instrumentation.requests import RequestsInstrumentor
+   ```python
+   from opentelemetry import trace
+   from opentelemetry.sdk.trace import TracerProvider
+   from opentelemetry.sdk.trace.export import BatchSpanProcessor
+   from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
+   from opentelemetry.instrumentation.requests import RequestsInstrumentor
 
-    # Set up the tracer provider and exporter
-    provider = TracerProvider()
-    exporter = OTLPSpanExporter(endpoint="https://otel-collector.example.com")
-    span_processor = BatchSpanProcessor(exporter)
-    provider.add_span_processor(span_processor)
-    trace.set_tracer_provider(provider)
+   # Set up the tracer provider and exporter
+   provider = TracerProvider()
+   exporter = OTLPSpanExporter(endpoint="https://otel-collector.example.com")
+   span_processor = BatchSpanProcessor(exporter)
+   provider.add_span_processor(span_processor)
+   trace.set_tracer_provider(provider)
 
-    # Instrument HTTP requests
-    RequestsInstrumentor().instrument()
+   # Instrument HTTP requests
+   RequestsInstrumentor().instrument()
 
-    # Example usage of a tracer in a payment processing function
-    tracer = trace.get_tracer(__name__)
+   # Example usage of a tracer in a payment processing function
+   tracer = trace.get_tracer(__name__)
 
-    def process_payment(user_id, amount):
-        with tracer.start_as_current_span("process_payment") as span:
-            span.set_attribute("user.id", user_id)
-            span.set_attribute("payment.amount", amount)
-            # Simulate payment processing logic
-            if amount > 10000:
-                span.set_status(trace.Status(trace.StatusCode.ERROR, "High-value payment requires approval"))
-                raise ValueError("Payment amount exceeds limit")
-            # Payment processed successfully
-            span.add_event("Payment processed", {"status": "success"})
-            return "Payment successful"
-    ```
+   def process_payment(user_id, amount):
+       with tracer.start_as_current_span("process_payment") as span:
+           span.set_attribute("user.id", user_id)
+           span.set_attribute("payment.amount", amount)
+           # Simulate payment processing logic
+           if amount > 10000:
+               span.set_status(trace.Status(trace.StatusCode.ERROR, "High-value payment requires approval"))
+               raise ValueError("Payment amount exceeds limit")
+           # Payment processed successfully
+           span.add_event("Payment processed", {"status": "success"})
+           return "Payment successful"
+   ```
 
 3. **Establish Design Review Gates**: Add explicit observability review checkpoints to the system design process, requiring teams to demonstrate how new services will be monitored before implementation begins. For instance, teams must specify SLIs (Service Level Indicators) for key service boundaries during design.
 
