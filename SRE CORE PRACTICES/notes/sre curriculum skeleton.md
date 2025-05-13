@@ -1,18 +1,18 @@
 
 ## 🧱 Refined 2-Week SRE Curriculum Skeleton
 
-| Day | Focus | Character | Systems | Golden Signal / SLI / SLA Integration | Dashboard & Diagram Focus | Common Pitfalls |
-|------|----------------------------|----------------|------------------|---------------------------------------------------|------------------------------|------------------|
-| **1** | **Intro to Observability** | Ali (Istanbul) | RHEL9 + shell scripts | Introduce “Observe, Test, Evaluate, Act” + Golden Signals conceptually | Diagram: "3 Pillars Overview" + “Monitor vs Observe” | Mistaking monitoring for observability |
-| **2** | **Metrics Deep Dive** | Marisol (São Paulo) | Prometheus + Kubernetes | Show RED method → map to SLI candidate metrics | Dashboard mock: API Latency, Errors, Request Rate | High-cardinality metrics overload |
-| **3** | **Logs with Context** | Deepak (Hyderabad) | Fluentbit + OpenSearch | Use logs to support SLI validation and incident analysis | Dashboard mock: Filtered log panels + request ID linking | Unstructured logs = useless during incidents |
-| **4** | **Traces and Service Maps** | Johan (Stockholm) | Jaeger + microservices | Traces as SLI support: latency distributions, span context | Diagram: Trace waterfall + distributed service map | Forgetting to propagate trace headers |
-| **5** | **Correlation Across Pillars** | Mei (Singapore) | Grafana + everything | Cross-pillar dashboards showing golden signals together | Dashboard: Unified panel – logs, metrics, traces linked by ID | Siloed tooling + lack of shared IDs |
-| **6** | **SLI & SLO Design** | Ava (Nairobi) | Kubernetes APIs + external endpoints | Define SLIs for latency, availability; tie to SLOs | Diagram: SLI/SLO/SLA pyramid + burn rate graphs | Tracking irrelevant metrics; over-SLO-ing |
-| **7** | **Error Budgets & SLA Strategy** | Luca (Milan) | Multi-region DB stack | Error budgets as safety rails; tie back to SLAs | Dashboard: “Burn rate vs error budget remaining” | SLAs without SLOs = legal fiction |
-| **8** | **Incident Response Ops** | Talia (Sydney) | Full stack: legacy + container | SLO alert → triage dashboards → log and trace correlation | Flowchart: Incident flow from alert → dashboard → fix | Alerts that trigger but give no insight |
-| **9** | **Observability Cost & Scaling** | Hector (Mexico City) | Fluentd + AWS archive | Golden Signal vs cost: what’s worth storing long-term? | Diagram: hot/warm/cold storage visual | “Log everything” ≠ good idea |
-| **10** | **Capstone + Handoff** | All characters return | Everything | End-to-end trace through systems → SLO burn visualized → Postmortem dashboard | Dashboard collage: Live state + SLO health + linked logs | Not integrating tooling into team habits |
+| Day    | Focus                            | Character                   | Systems                              | Golden Signal / SLI / SLA Integration                                         | Dashboard & Diagram Focus                                     | Common Pitfalls                              |
+| ------ | -------------------------------- | --------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------- |
+| **1**  | **Intro to Observability**       | Ali (Istanbul)              | RHEL9 + shell scripts                | Introduce “Observe, Test, Evaluate, Act” + Golden Signals conceptually        | Diagram: "3 Pillars Overview" + “Monitor vs Observe”          | Mistaking monitoring for observability       |
+| **2**  | **Metrics Deep Dive**            | Marisol (São Paulo)         | Prometheus + Kubernetes              | Show RED method → map to SLI candidate metrics                                | Dashboard mock: API Latency, Errors, Request Rate             | High-cardinality metrics overload            |
+| **3**  | **Logs with Context**            | Deepak (Hyderabad)          | Fluentbit + OpenSearch               | Use logs to support SLI validation and incident analysis                      | Dashboard mock: Filtered log panels + request ID linking      | Unstructured logs = useless during incidents |
+| **4**  | **Traces and Service Maps**      | Johan (Stockholm)           | Jaeger + microservices               | Traces as SLI support: latency distributions, span context                    | Diagram: Trace waterfall + distributed service map            | Forgetting to propagate trace headers        |
+| **5**  | **Correlation Across Pillars**   | Mei (Singapore)             | Grafana + everything                 | Cross-pillar dashboards showing golden signals together                       | Dashboard: Unified panel – logs, metrics, traces linked by ID | Siloed tooling + lack of shared IDs          |
+| **6**  | **SLI & SLO Design**             | Ava (Nairobi)               | Kubernetes APIs + external endpoints | Define SLIs for latency, availability; tie to SLOs                            | Diagram: SLI/SLO/SLA pyramid + burn rate graphs               | Tracking irrelevant metrics; over-SLO-ing    |
+| **7**  | **Error Budgets & SLA Strategy** | Luca (Milan)                | Multi-region DB stack                | Error budgets as safety rails; tie back to SLAs                               | Dashboard: “Burn rate vs error budget remaining”              | SLAs without SLOs = legal fiction            |
+| **8**  | **Incident Response Ops**        | Talia (Sydney)              | Full stack: legacy + container       | SLO alert → triage dashboards → log and trace correlation                     | Flowchart: Incident flow from alert → dashboard → fix         | Alerts that trigger but give no insight      |
+| **9**  | **Observability Cost & Scaling** | Hector Alavaz (Mexico City) | Fluentd + AWS archive                | Golden Signal vs cost: what’s worth storing long-term?                        | Diagram: hot/warm/cold storage visual                         | “Log everything” ≠ good idea                 |
+| **10** | **Capstone + Handoff**           | All characters return       | Everything                           | End-to-end trace through systems → SLO burn visualized → Postmortem dashboard | Dashboard collage: Live state + SLO health + linked logs      | Not integrating tooling into team habits     |
 
 ---
 
@@ -120,12 +120,12 @@ If it’s not adding clarity, it’s adding noise. If you want to make it a bonu
 
 ### 👀 TL;DR – You’re Right, and Here’s the Path Forward
 
-| Rule | Why It Helps |
-|------|--------------|
-| **1. Anchor each day to one core system** | Prevents whiplash |
-| **2. Use characters to justify tech choices** | Adds realism, avoids confusion |
-| **3. Show an overall tool map early** | Learners know where they are |
-| **4. Don’t teach 12 tools when 3 will do** | Simplifies attention = better retention |
+| Rule                                          | Why It Helps                            |
+| --------------------------------------------- | --------------------------------------- |
+| **1. Anchor each day to one core system**     | Prevents whiplash                       |
+| **2. Use characters to justify tech choices** | Adds realism, avoids confusion          |
+| **3. Show an overall tool map early**         | Learners know where they are            |
+| **4. Don’t teach 12 tools when 3 will do**    | Simplifies attention = better retention |
 
 ---
 Finally. Enough with the charming maps and emotional SRE avatars—let’s dig into the **hard stuff**: the actual bones of your **SRE Core Training Curriculum**, brick by godforsaken brick.
@@ -138,18 +138,18 @@ We’re talking about the **real content engine**: concepts, incidents, dashboar
 
 Let’s map it out like a blueprint you’d tape to a wall in a war room.
 
-| Day | Theme | Core Concepts | Tools (Anchor Only) | Hard Skills | Diagrams / Dashboards | Common Pitfalls |
-|-----|-------|----------------|----------------------|-------------|------------------------|------------------|
-| **1** | Observability Foundations | Metrics vs Monitoring, 3 Pillars, unknown unknowns | RHEL9 + bash + Splunk | Conceptual modeling, signal types | Mermaid: Monitoring vs Observability + Pillar flowchart | Confusing alerts with insights |
-| **2** | Metrics Deep Dive | RED/USE, counters/gauges/histograms, TSDB strategy | Prometheus + Grafana | PromQL, SLO-baseline graphing | Dashboard: RED-based service dashboard | Label cardinality explosion, bad metric naming |
-| **3** | Structured Logging | Structured vs unstructured, log pipelines, enrichment | Fluentd + OpenSearch | JSON log format, log indexing strategy | Flowchart: Structured logging pipeline | Debug logs in prod, lack of context fields |
-| **4** | Distributed Tracing | Spans, trace context, correlation | OpenTelemetry + Jaeger | Instrumentation, header propagation | Diagram: Service call waterfall, trace span map | Missing headers, trace sampling too low |
-| **5** | Cross-Signal Correlation | Signal stitching, ID tagging, triage heuristics | Grafana Unified Dash + All Data | Root cause resolution pathfinding | Dashboard: Correlated SLI trace/log/metric panel | Non-matching IDs, manual pivot fatigue |
-| **6** | SLI & SLO Design | What to measure, SLO math, burn rate | Prometheus + latency APIs | Rate calculation, budget logic | Pyramid: SLI → SLO → SLA | SLOs for vanity metrics, unrealistic targets |
-| **7** | SLA Strategy & Error Budgets | Real-world SLAs, breach analysis | Contract mockups + burn charts | Legal/operational alignment | Dashboard: Budget depletion + SLA overlay | Confusing SLA and SLO; burn vs burst |
-| **8** | Incident Response | Severity triage, runbooks, blameless postmortem | Multi-stack stack (K8s, AWS, RHEL) | Escalation mapping, log diffing, timeline building | Flowchart: Incident lifecycle, alert-to-resolution | Panic-patching, unowned alerts |
-| **9** | Cost-Aware Observability | Retention policy, sampling, budget alignment | Fluentbit + AWS + cold storage | Rate-limited logging, tiered storage config | Diagram: Hot/Warm/Cold data lifecycle | Logging too much; storing forever |
-| **10** | SRE Practice Maturity | Toil reduction, readiness reviews, CI/CD gates | GitOps, checklists, test chaos | SRE maturity scorecards, observability as code | Diagram: Culture maturity curve | Culture-as-poster, tool-first mindset |
+| Day    | Theme                        | Core Concepts                                         | Tools (Anchor Only)                | Hard Skills                                        | Diagrams / Dashboards                                   | Common Pitfalls                                |
+| ------ | ---------------------------- | ----------------------------------------------------- | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------- |
+| **1**  | Observability Foundations    | Metrics vs Monitoring, 3 Pillars, unknown unknowns    | RHEL9 + bash + Splunk              | Conceptual modeling, signal types                  | Mermaid: Monitoring vs Observability + Pillar flowchart | Confusing alerts with insights                 |
+| **2**  | Metrics Deep Dive            | RED/USE, counters/gauges/histograms, TSDB strategy    | Prometheus + Grafana               | PromQL, SLO-baseline graphing                      | Dashboard: RED-based service dashboard                  | Label cardinality explosion, bad metric naming |
+| **3**  | Structured Logging           | Structured vs unstructured, log pipelines, enrichment | Fluentd + OpenSearch               | JSON log format, log indexing strategy             | Flowchart: Structured logging pipeline                  | Debug logs in prod, lack of context fields     |
+| **4**  | Distributed Tracing          | Spans, trace context, correlation                     | OpenTelemetry + Jaeger             | Instrumentation, header propagation                | Diagram: Service call waterfall, trace span map         | Missing headers, trace sampling too low        |
+| **5**  | Cross-Signal Correlation     | Signal stitching, ID tagging, triage heuristics       | Grafana Unified Dash + All Data    | Root cause resolution pathfinding                  | Dashboard: Correlated SLI trace/log/metric panel        | Non-matching IDs, manual pivot fatigue         |
+| **6**  | SLI & SLO Design             | What to measure, SLO math, burn rate                  | Prometheus + latency APIs          | Rate calculation, budget logic                     | Pyramid: SLI → SLO → SLA                                | SLOs for vanity metrics, unrealistic targets   |
+| **7**  | SLA Strategy & Error Budgets | Real-world SLAs, breach analysis                      | Contract mockups + burn charts     | Legal/operational alignment                        | Dashboard: Budget depletion + SLA overlay               | Confusing SLA and SLO; burn vs burst           |
+| **8**  | Incident Response            | Severity triage, runbooks, blameless postmortem       | Multi-stack stack (K8s, AWS, RHEL) | Escalation mapping, log diffing, timeline building | Flowchart: Incident lifecycle, alert-to-resolution      | Panic-patching, unowned alerts                 |
+| **9**  | Cost-Aware Observability     | Retention policy, sampling, budget alignment          | Fluentbit + AWS + cold storage     | Rate-limited logging, tiered storage config        | Diagram: Hot/Warm/Cold data lifecycle                   | Logging too much; storing forever              |
+| **10** | SRE Practice Maturity        | Toil reduction, readiness reviews, CI/CD gates        | GitOps, checklists, test chaos     | SRE maturity scorecards, observability as code     | Diagram: Culture maturity curve                         | Culture-as-poster, tool-first mindset          |
 
 ---
 
@@ -249,7 +249,7 @@ This includes objectives, concepts, and a progression path.
 
 Let’s define 4 distinct “mentors” you can reuse across modules or assign to themed days.
 
-### 🔹 **1. Hector, The Veteran SRE (a.k.a. The Oracle)**
+### 🔹 **1. Hector Alavaz, The Veteran SRE (a.k.a. The Oracle)**
 - **Region:** Mexico City
 - **Style:** War-torn, sarcastic, lives by logs and rituals. Carries a tarot deck of “system failures.”
 - **Teaches:** Foundations, mental models, resilience engineering

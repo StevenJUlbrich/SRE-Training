@@ -47,12 +47,12 @@ ______________________________________________________________________
 
 - **Scene**: Daniel says "network again"; Njeri glares
 - **Teaching Moment**: Bias replaces investigation when data is ambiguous
-- **Widget**: Hector Quote — “Assumptions are the first thing to fail.”
+- **Widget**: Hector Alavaz Quote — “Assumptions are the first thing to fail.”
 - **Artifact**: Infra, DB, and app graphs showing no real spike
 
 ### Panel 3 – The Five Sins
 
-- **Scene**: Hector unveils a whiteboard of five sins
+- **Scene**: Hector Alavaz unveils a whiteboard of five sins
 - **Teaching Moment**: These are the recurring observability killers
 - **Widget**: Diagram — Five Observability Sins table
 - **Artifact**: Labeled whiteboard with sins illustrated by icon
@@ -94,16 +94,16 @@ ______________________________________________________________________
 
 ### Panel 9 – ATM Outage Replay
 
-- **Scene**: Hector walks team through root cause flow
+- **Scene**: Hector Alavaz walks team through root cause flow
 - **Teaching Moment**: Connect all five sins to this incident timeline
 - **Widget**: Diagram — Failure Flow: What Was Missed and When
 - **Artifact**: Mermaid diagram timeline with failure annotations
 
 ### Panel 10 – Lesson Locked In
 
-- **Scene**: Hector warns of audits, hands off action items
+- **Scene**: Hector Alavaz warns of audits, hands off action items
 - **Teaching Moment**: Design observability as compliance and clarity
-- **Widget**: Hector Quote — “Volcanoes don’t care if your metrics are clean.”
+- **Widget**: Hector Alavaz Quote — “Volcanoes don’t care if your metrics are clean.”
 - **Artifact**: Observability checklist written on whiteboard
 
 ______________________________________________________________________
@@ -116,7 +116,7 @@ ______________________________________________________________________
 - **Clara**: Drives metric ownership clarity
 - **Juana**: Advocates for actionable alerts
 - **Aisha**: Brings customer-centric signal definition
-- **Hector**: Pushes maturity and audit readiness
+- **Hector Alavaz**: Pushes maturity and audit readiness
 
 ______________________________________________________________________
 
@@ -131,15 +131,15 @@ ______________________________________________________________________
 
 ## 📋 Panel Beat-to-Concept Map
 
-| Beat # | Panel Title | Teaching Goal |
+| Beat # | Panel Title       | Teaching Goal                               |
 | ------ | ----------------- | ------------------------------------------- |
-| 1 | Dashboard Chaos | Visual overload hides signal |
-| 2 | The Blame Begins | Bias wins without clear data |
-| 3 | The Five Sins | Introduce recurring failure modes |
-| 4 | Ownerless Metrics | No ownership = no action |
-| 5 | Orphaned Alerts | Alerts must include how to act |
-| 6 | Logs That Lie | Logs must say who/what/where |
-| 7 | Uptime ≠ Success | Availability isn't usefulness |
-| 8 | Blame the Network | Over-assigning root cause distorts learning |
-| 9 | ATM Outage Replay | Map the sins onto one real-world failure |
-| 10 | Lesson Locked In | Avoid the volcano—or answer to the auditors |
+| 1      | Dashboard Chaos   | Visual overload hides signal                |
+| 2      | The Blame Begins  | Bias wins without clear data                |
+| 3      | The Five Sins     | Introduce recurring failure modes           |
+| 4      | Ownerless Metrics | No ownership = no action                    |
+| 5      | Orphaned Alerts   | Alerts must include how to act              |
+| 6      | Logs That Lie     | Logs must say who/what/where                |
+| 7      | Uptime ≠ Success  | Availability isn't usefulness               |
+| 8      | Blame the Network | Over-assigning root cause distorts learning |
+| 9      | ATM Outage Replay | Map the sins onto one real-world failure    |
+| 10     | Lesson Locked In  | Avoid the volcano—or answer to the auditors |

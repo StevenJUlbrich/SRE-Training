@@ -92,13 +92,13 @@ The specific issues identified—misaligned timestamps, changing session IDs, in
 
 ## Scene Description
 
-**The Noise vs. Signal Chart** – Hector draws a 3x3 grid on the whiteboard. "Useful vs Useless. Timely vs Delayed." The team starts sorting their telemetry.
+**The Noise vs. Signal Chart** – Hector Alavaz draws a 3x3 grid on the whiteboard. "Useful vs Useless. Timely vs Delayed." The team starts sorting their telemetry.
 
-*Expanded narrative: Hector approaches the whiteboard and draws a grid with two axes: "Useful vs. Useless" horizontally and "Timely vs. Delayed" vertically. "Let's categorize everything we collected during the incident," he instructs. The team begins placing each telemetry source in the appropriate quadrant. CPU metrics: timely but useless. Error logs: useful but delayed. User complaints: timely and useful, but external rather than systemic. The visualization makes the gaps obvious—most of their telemetry falls into the "useless or delayed" categories, explaining why diagnosis took so long.*
+*Expanded narrative: Hector Alavaz approaches the whiteboard and draws a grid with two axes: "Useful vs. Useless" horizontally and "Timely vs. Delayed" vertically. "Let's categorize everything we collected during the incident," he instructs. The team begins placing each telemetry source in the appropriate quadrant. CPU metrics: timely but useless. Error logs: useful but delayed. User complaints: timely and useful, but external rather than systemic. The visualization makes the gaps obvious—most of their telemetry falls into the "useless or delayed" categories, explaining why diagnosis took so long.*
 
 ## Teaching Narrative
 
-This scene introduces a powerful analytical framework for assessing telemetry quality. Hector's two-dimensional grid transforms vague impressions about observability problems into a structured analysis of specific gaps. By categorizing telemetry along the dimensions of usefulness and timeliness, the team creates a clear map of where their observability systems are falling short. This pattern demonstrates how systematic assessment techniques can transform subjective feelings into actionable improvements.
+This scene introduces a powerful analytical framework for assessing telemetry quality. Hector Alavaz's two-dimensional grid transforms vague impressions about observability problems into a structured analysis of specific gaps. By categorizing telemetry along the dimensions of usefulness and timeliness, the team creates a clear map of where their observability systems are falling short. This pattern demonstrates how systematic assessment techniques can transform subjective feelings into actionable improvements.
 
 ## Telemetry Quality Explained
 
@@ -138,7 +138,7 @@ The specific categorizations mentioned—"CPU metrics: timely but useless. Error
 
 **The Misleading Metric** – Sofia finds a metric that dipped during the outage but was excluded from the dashboard. "It was right here all along."
 
-*Expanded narrative: Sofia, reviewing system metrics not included on the primary dashboard, makes a discovery. "Look at this—connection pool availability dropped to zero right when the problems started." She displays a graph that clearly shows the issue. "The metric existed, but we weren't displaying it anywhere important." Daniel checks the alert configuration. "And we had no alert on it, despite it being a critical resource." Hector nods. "It was right here all along, telling you exactly what was wrong, but you weren't listening."*
+*Expanded narrative: Sofia, reviewing system metrics not included on the primary dashboard, makes a discovery. "Look at this—connection pool availability dropped to zero right when the problems started." She displays a graph that clearly shows the issue. "The metric existed, but we weren't displaying it anywhere important." Daniel checks the alert configuration. "And we had no alert on it, despite it being a critical resource." Hector Alavaz nods. "It was right here all along, telling you exactly what was wrong, but you weren't listening."*
 
 ## Teaching Narrative
 
@@ -160,7 +160,7 @@ In financial services, hidden signals create significant operational risk. When 
 
 ## The "Not Listening" Insight
 
-Hector's observation that the metric was "telling you exactly what was wrong, but you weren't listening" captures a profound truth about observability: systems often communicate their problems clearly, but only through channels humans aren't monitoring. This perspective shift from "the system was silent" to "we weren't listening in the right place" is crucial for observability improvement.
+Hector Alavaz's observation that the metric was "telling you exactly what was wrong, but you weren't listening" captures a profound truth about observability: systems often communicate their problems clearly, but only through channels humans aren't monitoring. This perspective shift from "the system was silent" to "we weren't listening in the right place" is crucial for observability improvement.
 
 ## Banking Implementation Guidance
 
@@ -224,13 +224,13 @@ The specific silent failure discovered—a 403 Forbidden response without loggin
 
 ## Scene Description
 
-**Blame Isn't the Goal** – Hector shuts down the noise: "You're not hunting villains. You're building timelines."
+**Blame Isn't the Goal** – Hector Alavaz shuts down the noise: "You're not hunting villains. You're building timelines."
 
-*Expanded narrative: As the discussion heats up and teams begin defending their components, Hector intervenes firmly. "Enough. You're not hunting villains. You're building timelines." He refocuses the group on the core question: "What information did we need that we didn't have? What signals were missing or misleading? Who had partial knowledge that wasn't shared?" He points to the whiteboard. "This isn't about blame. It's about closing observability gaps so you can respond faster next time."*
+*Expanded narrative: As the discussion heats up and teams begin defending their components, Hector Alavaz intervenes firmly. "Enough. You're not hunting villains. You're building timelines." He refocuses the group on the core question: "What information did we need that we didn't have? What signals were missing or misleading? Who had partial knowledge that wasn't shared?" He points to the whiteboard. "This isn't about blame. It's about closing observability gaps so you can respond faster next time."*
 
 ## Teaching Narrative
 
-This scene illustrates a crucial aspect of effective observability improvement: the cultural foundation. Hector's intervention demonstrates how blame-oriented discussions derail the real purpose of observability retrospectives: systematic improvement. By reframing the conversation from "who caused the problem" to "what information was missing," he creates space for honest assessment and constructive enhancement. This pattern reveals how observability culture is as important as observability technology.
+This scene illustrates a crucial aspect of effective observability improvement: the cultural foundation. Hector Alavaz's intervention demonstrates how blame-oriented discussions derail the real purpose of observability retrospectives: systematic improvement. By reframing the conversation from "who caused the problem" to "what information was missing," he creates space for honest assessment and constructive enhancement. This pattern reveals how observability culture is as important as observability technology.
 
 ## Observability Culture Explained
 
@@ -248,7 +248,7 @@ In financial services, healthy observability culture directly impacts operationa
 
 ## The Timeline Building Metaphor
 
-Hector's reframing from "hunting villains" to "building timelines" provides a powerful metaphor for constructive observability work. Timeline building is inherently collaborative and evidence-based, focusing attention on what actually happened rather than who might be at fault. This approach naturally leads to identifying observability gaps rather than assigning blame.
+Hector Alavaz's reframing from "hunting villains" to "building timelines" provides a powerful metaphor for constructive observability work. Timeline building is inherently collaborative and evidence-based, focusing attention on what actually happened rather than who might be at fault. This approach naturally leads to identifying observability gaps rather than assigning blame.
 
 ## Banking Implementation Guidance
 
@@ -312,9 +312,9 @@ Financial institutions should approach observability enhancement as a strategic 
 
 ## Scene Description
 
-**The New Standard** – Clara proposes a new format for logs and a trace ID injection policy. Hector nods. "Now we're getting somewhere."
+**The New Standard** – Clara proposes a new format for logs and a trace ID injection policy. Hector Alavaz nods. "Now we're getting somewhere."
 
-*Expanded narrative: Clara steps forward with a concrete proposal: a standardized logging format that ensures consistency across all services, mandatory context fields for correlation, and automatic trace ID injection at service boundaries. She presents detailed implementation specifications and a rollout plan. Hector reviews the documentation with growing approval. "Now we're getting somewhere," he acknowledges. "This isn't just fixing what broke—it's building a system that actively helps you understand what's happening."*
+*Expanded narrative: Clara steps forward with a concrete proposal: a standardized logging format that ensures consistency across all services, mandatory context fields for correlation, and automatic trace ID injection at service boundaries. She presents detailed implementation specifications and a rollout plan. Hector Alavaz reviews the documentation with growing approval. "Now we're getting somewhere," he acknowledges. "This isn't just fixing what broke—it's building a system that actively helps you understand what's happening."*
 
 ## Teaching Narrative
 
@@ -336,7 +336,7 @@ In financial services, observability contracts address critical challenges in di
 
 ## The Proactive Shift
 
-Hector's observation that "this isn't just fixing what broke—it's building a system that actively helps you understand" highlights a crucial distinction: reactive versus proactive observability. The observability contract represents a shift from responding to specific problems toward building systematic visibility that prevents future issues.
+Hector Alavaz's observation that "this isn't just fixing what broke—it's building a system that actively helps you understand" highlights a crucial distinction: reactive versus proactive observability. The observability contract represents a shift from responding to specific problems toward building systematic visibility that prevents future issues.
 
 ## Banking Implementation Guidance
 
@@ -356,13 +356,13 @@ Financial institutions should recognize observability contracts as essential inf
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's monologue: "You don't debug ghosts with flashlights. You build haunted house diagrams—with receipts."
+**Lesson Locked In** – Hector Alavaz's monologue: "You don't debug ghosts with flashlights. You build haunted house diagrams—with receipts."
 
-*Expanded narrative: As the team begins implementing the changes, Hector offers his assessment. "You don't debug ghosts with flashlights," he observes. "You build haunted house diagrams—with receipts. Every error leaves evidence if you've designed your system to collect it." He reviews the new observability standards. "Write telemetry like you're going to debug a ghost at 3 a.m.—because you will. Make it tell a story so clear that anyone can follow it, even when they're half-asleep and the system is on fire."*
+*Expanded narrative: As the team begins implementing the changes, Hector Alavaz offers his assessment. "You don't debug ghosts with flashlights," he observes. "You build haunted house diagrams—with receipts. Every error leaves evidence if you've designed your system to collect it." He reviews the new observability standards. "Write telemetry like you're going to debug a ghost at 3 a.m.—because you will. Make it tell a story so clear that anyone can follow it, even when they're half-asleep and the system is on fire."*
 
 ## Teaching Narrative
 
-Hector's colorful metaphor captures a profound truth about observability: effective debugging requires structure, not just illumination. His haunted house diagram concept emphasizes how proper observability design creates a map of system behavior, not just isolated glimpses. This framing helps the team understand that truly effective observability isn't about seeing individual components but about comprehending their relationships and interactions—especially during critical incidents.
+Hector Alavaz's colorful metaphor captures a profound truth about observability: effective debugging requires structure, not just illumination. His haunted house diagram concept emphasizes how proper observability design creates a map of system behavior, not just isolated glimpses. This framing helps the team understand that truly effective observability isn't about seeing individual components but about comprehending their relationships and interactions—especially during critical incidents.
 
 ## Observability Design Explained
 
@@ -380,7 +380,7 @@ In financial services, effective observability design directly impacts operation
 
 ## The 3 AM Test
 
-Hector's advice to "write telemetry like you're going to debug a ghost at 3 a.m." introduces a powerful design principle: the 3 AM test. This criterion recognizes that observability systems must function effectively during their most challenging use case—when sleepy engineers are trying to understand complex problems under pressure. Telemetry that passes this test is inherently more valuable than systems designed only for ideal conditions.
+Hector Alavaz's advice to "write telemetry like you're going to debug a ghost at 3 a.m." introduces a powerful design principle: the 3 AM test. This criterion recognizes that observability systems must function effectively during their most challenging use case—when sleepy engineers are trying to understand complex problems under pressure. Telemetry that passes this test is inherently more valuable than systems designed only for ideal conditions.
 
 ## Banking Implementation Guidance
 
@@ -400,13 +400,13 @@ Financial institutions should approach observability design as a critical aspect
 
 ## Scene Description
 
-**Reflection Panel** – Omar: "This wasn't postmortem. It was confession." Hector: "Good. Now teach the system how to confess sooner."
+**Reflection Panel** – Omar: "This wasn't postmortem. It was confession." Hector Alavaz: "Good. Now teach the system how to confess sooner."
 
-*Expanded narrative: As the session concludes, Omar has a realization: "This wasn't really a postmortem, was it? It was more like a confession—admitting all the ways our observability failed us." Hector actually smiles slightly. "Good observation. And confession is the first step toward improvement." He gestures to the implementation plan. "Now teach your system how to confess sooner—before the incident becomes a crisis, before customers notice, before regulators get involved. That's what real observability delivers: early warnings, not just forensic evidence."*
+*Expanded narrative: As the session concludes, Omar has a realization: "This wasn't really a postmortem, was it? It was more like a confession—admitting all the ways our observability failed us." Hector Alavaz actually smiles slightly. "Good observation. And confession is the first step toward improvement." He gestures to the implementation plan. "Now teach your system how to confess sooner—before the incident becomes a crisis, before customers notice, before regulators get involved. That's what real observability delivers: early warnings, not just forensic evidence."*
 
 ## Teaching Narrative
 
-This closing exchange captures a transformative insight about observability purpose: the shift from forensic analysis to proactive communication. Omar's characterization of the process as "confession" and Hector's extension to "confessing sooner" reframes observability from a passive recording system to an active communication channel between systems and operators. This perspective shift helps the team understand the ultimate goal of observability maturity: enabling systems to report problems before they become crises.
+This closing exchange captures a transformative insight about observability purpose: the shift from forensic analysis to proactive communication. Omar's characterization of the process as "confession" and Hector Alavaz's extension to "confessing sooner" reframes observability from a passive recording system to an active communication channel between systems and operators. This perspective shift helps the team understand the ultimate goal of observability maturity: enabling systems to report problems before they become crises.
 
 ## Observability Maturity Explained
 
@@ -438,4 +438,4 @@ To develop observability maturity in financial systems:
 
 4. **Predictive Capabilities**: Develop anomaly detection and trend analysis to anticipate potential issues
 
-Hector's vision of systems confessing "before the incident becomes a crisis, before customers notice, before regulators get involved" captures the true value proposition of mature observability in financial services. By enabling systems to communicate problems early and clearly, organizations can prevent many incidents entirely and minimize the impact of those that do occur—delivering better customer experience, reduced operational risk, and improved regulatory standing.
+Hector Alavaz's vision of systems confessing "before the incident becomes a crisis, before customers notice, before regulators get involved" captures the true value proposition of mature observability in financial services. By enabling systems to communicate problems early and clearly, organizations can prevent many incidents entirely and minimize the impact of those that do occur—delivering better customer experience, reduced operational risk, and improved regulatory standing.

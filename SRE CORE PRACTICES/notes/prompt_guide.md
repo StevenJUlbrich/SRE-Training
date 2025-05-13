@@ -14,7 +14,7 @@ The current 10-day curriculum covers:
 9. Reliability Culture & Engineering Maturity
 10. Capstone - Incident Simulation
 
-The material uses fictional SRE characters (Hector, Felix, Mina, Asha) to guide learners through concepts, and includes incident hooks, core concepts, visualization diagrams, hands-on exercises, and practical advice.
+The material uses fictional SRE characters (Hector Alavaz, Felix, Mina, Asha) to guide learners through concepts, and includes incident hooks, core concepts, visualization diagrams, hands-on exercises, and practical advice.
 
 ## Strengths of the Current Material
 

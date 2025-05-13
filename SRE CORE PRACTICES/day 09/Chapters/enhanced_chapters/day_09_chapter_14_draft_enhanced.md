@@ -160,13 +160,13 @@ This evidence-based approach dramatically reduced investigative time while provi
 
 The business consequences of treating compliance as separate from engineering are severe and multifaceted. Below is a comparison of traditional compliance approaches versus engineering-driven compliance outcomes:
 
-| **Impact Area** | **Traditional Compliance** | **Engineering-Driven Compliance** |
+| **Impact Area**            | **Traditional Compliance**                                                                                                                                   | **Engineering-Driven Compliance**                                                                       |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| **Direct Financial Costs** | $3.2M annually on audit preparation and remediation. Over 40% of technology staff time diverted to compliance activities during audit periods. | 64% reduction in compliance costs due to automation and streamlined processes. |
-| **Opportunity Cost** | Product launches delayed by 2-3 months per year due to compliance freezes, impacting revenue and competitiveness. | Compliance guardrails enable continuous delivery with no delays to product launches. |
-| **Reputational Damage** | Failed audits led to regulatory findings becoming public, reducing new account openings by 17% in the following quarter. | Continuous compliance validation prevents audit failures and bolsters public trust. |
-| **Regulatory Penalties** | A missed data protection violation persisted for 7 months, resulting in a $1.8M fine. | Automated controls and real-time monitoring prevent violations before they occur. |
-| **Customer Impact** | Compliance-related change freezes delayed critical system upgrades, causing performance degradation, slower transactions, and increased customer complaints. | Proactive compliance ensures system upgrades are timely, improving performance and customer experience. |
+| **Direct Financial Costs** | $3.2M annually on audit preparation and remediation. Over 40% of technology staff time diverted to compliance activities during audit periods.               | 64% reduction in compliance costs due to automation and streamlined processes.                          |
+| **Opportunity Cost**       | Product launches delayed by 2-3 months per year due to compliance freezes, impacting revenue and competitiveness.                                            | Compliance guardrails enable continuous delivery with no delays to product launches.                    |
+| **Reputational Damage**    | Failed audits led to regulatory findings becoming public, reducing new account openings by 17% in the following quarter.                                     | Continuous compliance validation prevents audit failures and bolsters public trust.                     |
+| **Regulatory Penalties**   | A missed data protection violation persisted for 7 months, resulting in a $1.8M fine.                                                                        | Automated controls and real-time monitoring prevent violations before they occur.                       |
+| **Customer Impact**        | Compliance-related change freezes delayed critical system upgrades, causing performance degradation, slower transactions, and increased customer complaints. | Proactive compliance ensures system upgrades are timely, improving performance and customer experience. |
 
 By treating compliance as an engineering challenge, banks can significantly reduce costs, accelerate audit readiness, maintain regulatory integrity, and enhance customer satisfaction. This approach transforms compliance into a competitive advantage rather than a burdensome obligation.
 
@@ -255,13 +255,13 @@ graph TD
 
 ### Scene Description
 
-An auditor sits with Hector as he demonstrates their observability platform. The screen displays a dashboard organized into three primary sections:
+An auditor sits with Hector Alavaz as he demonstrates their observability platform. The screen displays a dashboard organized into three primary sections:
 
 1. **Transaction Monitoring**: Displays live transaction flow metrics and flags anomalies.
 2. **Data Privacy Controls**: Highlights compliance adherence with data handling policies.
 3. **System Access Logs**: Shows user access events with clear audit trails.
 
-Hector navigates to a "Compliance Evidence Trail" tab, revealing a historical log with tamper-evident timestamps for key compliance events:
+Hector Alavaz navigates to a "Compliance Evidence Trail" tab, revealing a historical log with tamper-evident timestamps for key compliance events:
 
 ```
 +------------------+---------------------+-------------------------+
@@ -273,7 +273,7 @@ Hector navigates to a "Compliance Evidence Trail" tab, revealing a historical lo
 +------------------+---------------------+-------------------------+
 ```
 
-The auditor takes notes as Hector explains how the platform continuously collects and organizes this data for compliance needs. In the background, other team members work normally, unaffected by the audit process, illustrating the non-disruptive nature of the system.
+The auditor takes notes as Hector Alavaz explains how the platform continuously collects and organizes this data for compliance needs. In the background, other team members work normally, unaffected by the audit process, illustrating the non-disruptive nature of the system.
 
 ### Teaching Narrative
 
@@ -332,13 +332,13 @@ This observability-driven approach provided irrefutable evidence that 99.97% of 
 
 The business consequences of inadequate compliance observability are substantial and extend beyond regulatory findings. Below is a summary of the before-and-after impacts for banks adopting observability-driven compliance practices:
 
-| **Impact Area** | **Traditional Compliance (Before)** | **Observability-Driven Compliance (After)** |
+| **Impact Area**          | **Traditional Compliance (Before)**                               | **Observability-Driven Compliance (After)**                      |
 | ------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
-| **Audit Overhead** | ~22,000 person-hours annually spent on manual evidence collection | 79% reduction in audit preparation time |
-| **Response to Findings** | Average of 17 business days to investigate and respond | Real-time evidence availability reduces response time to hours |
-| **False Positives** | 43% of suspicious activity reports deemed unnecessary | Precision telemetry reduces false positives by 58% |
-| **Customer Friction** | 2.8% of international payments incorrectly flagged | Transaction-level observability minimizes incorrect flags |
-| **Competitive Position** | New product launches delayed by 14 months behind competitors | Continuous compliance readiness accelerates innovation timelines |
+| **Audit Overhead**       | ~22,000 person-hours annually spent on manual evidence collection | 79% reduction in audit preparation time                          |
+| **Response to Findings** | Average of 17 business days to investigate and respond            | Real-time evidence availability reduces response time to hours   |
+| **False Positives**      | 43% of suspicious activity reports deemed unnecessary             | Precision telemetry reduces false positives by 58%               |
+| **Customer Friction**    | 2.8% of international payments incorrectly flagged                | Transaction-level observability minimizes incorrect flags        |
+| **Competitive Position** | New product launches delayed by 14 months behind competitors      | Continuous compliance readiness accelerates innovation timelines |
 
 Banks implementing these practices not only streamline their regulatory workflows but also enhance their ability to fine-tune compliance rules without increasing risk exposure. This transformation leads to a significant reduction in operational overhead, improved regulatory outcomes, and a more agile competitive stance in the market.
 
@@ -394,11 +394,11 @@ A risk management committee meeting is in progress, featuring Katherine presenti
 +-----------------------------------------------+
 |               Reliability Dashboard           |
 +-------------------+---------------------------+
-| SLO Metrics       | Regulatory Thresholds     |
-| ------------------|---------------------------|
-| Service A: 99.5%  | Threshold A: 99.0%        |
-| Service B: 98.7%  | Threshold B: 98.5%        |
-| Service C: 99.2%  | Threshold C: 99.0%        |
+| SLO Metrics      | Regulatory Thresholds |
+| ---------------- | --------------------- |
+| Service A: 99.5% | Threshold A: 99.0%    |
+| Service B: 98.7% | Threshold B: 98.5%    |
+| Service C: 99.2% | Threshold C: 99.0%    |
 +-------------------+---------------------------+
 | Chart: Error Budget vs. Risk Tolerance Levels |
 | (Line graph showing error budget consumption) |
@@ -411,12 +411,12 @@ Across the room, the CTO and Chief Risk Officer are nodding in approval, visibly
 +-------------------------------------------+
 |          Risk Appetite Comparison         |
 +-------------------+-----------------------+
-| Yesterday         | Today                 |
-| ------------------|-----------------------|
-| - High risk       | - SLO: 99.5%         |
-| - Medium risk     | - Error Budget: 2.5% |
-| - Low risk        | - Alerts: 3 active   |
-| - Subjective      | - Measurable         |
+| Yesterday     | Today                |
+| ------------- | -------------------- |
+| - High risk   | - SLO: 99.5%         |
+| - Medium risk | - Error Budget: 2.5% |
+| - Low risk    | - Alerts: 3 active   |
+| - Subjective  | - Measurable         |
 +-------------------+-----------------------+
 ```
 
@@ -428,13 +428,13 @@ Regulatory frameworks require financial institutions to define, measure, and man
 
 CapitalEdge Bank's risk management committee maintained a qualitative "Risk Appetite Statement" as required by regulators. This document included vague statements like "low tolerance for payment processing disruptions" and "minimal appetite for data protection risks," but provided no specific metrics for measuring compliance with these standards. During a significant payment outage that lasted 47 minutes, the incident response team had no clear guidance on whether this event exceeded the bank's risk tolerance or what regulatory reporting might be required. The CIO argued the incident was within acceptable parameters, while the Chief Risk Officer believed it constituted a reportable event. This disagreement led to delayed regulatory notification, as teams debated the interpretation of "low tolerance" without quantitative benchmarks. When regulators eventually learned of the incident, they cited the bank for inadequate risk management practices and failure to report a significant operational event promptly. The bank was required to implement enhanced monitoring and more frequent regulatory reporting, increasing compliance costs substantially.
 
-| **Aspect** | **Qualitative Risk Appetite Statement** | **Quantitative SLO-Based Approach** |
+| **Aspect**                         | **Qualitative Risk Appetite Statement**                     | **Quantitative SLO-Based Approach**                                                                            |
 | ---------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| **Payment Processing Disruptions** | "Low tolerance for payment processing disruptions." | SLO: 99.95% availability for payment processing, allowing up to ~21.6 minutes of downtime per month. |
-| **Data Protection Risks** | "Minimal appetite for data protection risks." | SLO: 99.99% success rate for data encryption and access control validations, allowing up to ~4.3 minutes/year. |
-| **Incident Response Guidance** | Ambiguous; based on subjective interpretation of tolerance. | Clear: Incident exceeding SLO thresholds triggers predefined escalation and reporting workflows. |
-| **Regulatory Compliance** | Reactive; dependent on post-incident debates. | Proactive: Automated alerts for SLO violations ensure timely regulatory reporting. |
-| **Cost of Compliance** | Increased due to manual reviews and reactive corrections. | Reduced through continuous monitoring and automated reporting tied to SLOs. |
+| **Payment Processing Disruptions** | "Low tolerance for payment processing disruptions."         | SLO: 99.95% availability for payment processing, allowing up to ~21.6 minutes of downtime per month.           |
+| **Data Protection Risks**          | "Minimal appetite for data protection risks."               | SLO: 99.99% success rate for data encryption and access control validations, allowing up to ~4.3 minutes/year. |
+| **Incident Response Guidance**     | Ambiguous; based on subjective interpretation of tolerance. | Clear: Incident exceeding SLO thresholds triggers predefined escalation and reporting workflows.               |
+| **Regulatory Compliance**          | Reactive; dependent on post-incident debates.               | Proactive: Automated alerts for SLO violations ensure timely regulatory reporting.                             |
+| **Cost of Compliance**             | Increased due to manual reviews and reactive corrections.   | Reduced through continuous monitoring and automated reporting tied to SLOs.                                    |
 
 This comparison highlights the limitations of qualitative risk appetite statements, which often lack actionable detail, versus the clarity and operational alignment provided by SLO-based approaches. By adopting quantitative reliability metrics, organizations like CapitalEdge Bank can prevent misinterpretation, reduce response delays, and lower compliance costs while meeting regulatory expectations.
 
@@ -598,14 +598,14 @@ Below is a simplified text-based representation of the dashboard layout:
 |               Chaos Engineering             |
 |                 Dashboard                   |
 +---------------------------------------------+
-| Regulatory Control Testing: 85% validated   |
-|---------------------------------------------|
-| Reliability Metrics:                        |
-| - Error Rate: 2.3%                          |
-| - Latency: 120ms                            |
-| - Recovery Time: 15s                        |
-|---------------------------------------------|
-| Compliance Evidence Collection: 60% done    |
+| Regulatory Control Testing: 85% validated     |
+| --------------------------------------------- |
+| Reliability Metrics:                          |
+| - Error Rate: 2.3%                            |
+| - Latency: 120ms                              |
+| - Recovery Time: 15s                          |
+| --------------------------------------------- |
+| Compliance Evidence Collection: 60% done      |
 +---------------------------------------------+
 ```
 
@@ -623,13 +623,13 @@ Six weeks later, an actual regional power outage forced an unplanned failover to
 
 The post-incident investigation revealed that the scripted test had failed to identify these weaknesses because it didn't reflect realistic conditions or traffic patterns, used sample data rather than full production volumes, and tested components in isolation rather than validating end-to-end functionality.
 
-| Aspect | Scripted Test Outcome | Actual Incident Outcome |
+| Aspect                       | Scripted Test Outcome                          | Actual Incident Outcome                              |
 | ---------------------------- | ---------------------------------------------- | ---------------------------------------------------- |
-| **Authentication Systems** | Redirect appeared functional under test | Redirection failed for live user sessions |
-| **Database Replication** | Replication delays were not simulated | Data inconsistencies due to lagging replication |
-| **Traffic Patterns** | Sample data with minimal traffic was used | Production traffic overwhelmed infrastructure |
-| **End-to-End Functionality** | Tested components in isolation | Interdependent failures disrupted services |
-| **Customer Impact** | No real customer data or transactions involved | Thousands of customers experienced a 4.7-hour outage |
+| **Authentication Systems**   | Redirect appeared functional under test        | Redirection failed for live user sessions            |
+| **Database Replication**     | Replication delays were not simulated          | Data inconsistencies due to lagging replication      |
+| **Traffic Patterns**         | Sample data with minimal traffic was used      | Production traffic overwhelmed infrastructure        |
+| **End-to-End Functionality** | Tested components in isolation                 | Interdependent failures disrupted services           |
+| **Customer Impact**          | No real customer data or transactions involved | Thousands of customers experienced a 4.7-hour outage |
 
 This comparison highlights the limitations of traditional scripted exercises in identifying systemic vulnerabilities. By failing to replicate real-world conditions, such tests often provide a false sense of security, leaving critical weaknesses unaddressed until exposed by actual incidents.
 
@@ -684,13 +684,13 @@ The business consequences of artificial compliance testing approaches create sub
 
 #### Business Risks of Artificial Testing
 
-| Metric | Impact |
+| Metric                  | Impact                                                                 |
 | ----------------------- | ---------------------------------------------------------------------- |
-| **False Confidence** | $2.8M in direct losses from a major outage (e.g., SovereignBank case). |
-| **Duplicative Testing** | 3,400+ engineer hours wasted annually on redundant testing efforts. |
-| **Inadequate Coverage** | Only 30-40% of critical system interactions validated. |
-| **Compliance Findings** | Regulatory actions due to gaps in business continuity preparedness. |
-| **Resource Contention** | Friction between compliance and resilience priorities. |
+| **False Confidence**    | $2.8M in direct losses from a major outage (e.g., SovereignBank case). |
+| **Duplicative Testing** | 3,400+ engineer hours wasted annually on redundant testing efforts.    |
+| **Inadequate Coverage** | Only 30-40% of critical system interactions validated.                 |
+| **Compliance Findings** | Regulatory actions due to gaps in business continuity preparedness.    |
+| **Resource Contention** | Friction between compliance and resilience priorities.                 |
 
 #### Benefits of Chaos Engineering Integration
 
@@ -902,13 +902,13 @@ During one investigation, this evidence-based approach quickly identified that a
 
 The business consequences of manual governance approaches create substantial challenges for financial institutions. Below is a comparison of key metrics before and after implementing automated governance through policy as code:
 
-| **Metric** | **Before (Manual Governance)** | **After (Automated Governance)** | **Improvement** |
+| **Metric**                   | **Before (Manual Governance)**               | **After (Automated Governance)**          | **Improvement**                   |
 | ---------------------------- | -------------------------------------------- | ----------------------------------------- | --------------------------------- |
-| **Deployment Delays** | Average of 12 business days per deployment | Reduced to 2 business days per deployment | **84% faster deployment cycles** |
-| **Innovation Barriers** | 38% of proposed features abandoned | 8% of proposed features abandoned | **79% reduction in abandonments** |
-| **Inconsistent Enforcement** | Frequent inconsistencies due to human errors | Uniform enforcement across all policies | **100% consistency achieved** |
-| **Compliance Violations** | 14 significant violations in one year | 1 minor violation in one year | **92% reduction in violations** |
-| **Resource Inefficiency** | 23% of tech staff time on compliance tasks | 5% of tech staff time on compliance tasks | **76% lower compliance overhead** |
+| **Deployment Delays**        | Average of 12 business days per deployment   | Reduced to 2 business days per deployment | **84% faster deployment cycles**  |
+| **Innovation Barriers**      | 38% of proposed features abandoned           | 8% of proposed features abandoned         | **79% reduction in abandonments** |
+| **Inconsistent Enforcement** | Frequent inconsistencies due to human errors | Uniform enforcement across all policies   | **100% consistency achieved**     |
+| **Compliance Violations**    | 14 significant violations in one year        | 1 minor violation in one year             | **92% reduction in violations**   |
+| **Resource Inefficiency**    | 23% of tech staff time on compliance tasks   | 5% of tech staff time on compliance tasks | **76% lower compliance overhead** |
 
 By automating governance through policy as code, banks not only reduced deployment delays and compliance violations but also freed up engineering resources to focus on value-generating activities. This approach fosters innovation, ensures consistent enforcement, and strengthens regulatory compliance, transforming governance from a bottleneck into a development enabler.
 
@@ -1107,13 +1107,13 @@ Regulatory authorities specifically commended their transparent, timely communic
 
 The business consequences of treating regulatory reporting as separate from incident response create significant risks, as illustrated below:
 
-| **Category** | **Statistics/Examples** | **Impact** |
+| **Category**                | **Statistics/Examples**                                                                           | **Impact**                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **Reporting Violations** | NorthernTrust faced penalties exceeding **$1.2M** in a year for late/insufficient reporting. | Severe financial repercussions and reputational damage. |
-| **Extended Outages** | Incident duration increased by **37%** when technical teams were diverted to regulatory tasks. | Prolonged customer impact and operational disruption. |
-| **Regulatory Relationship** | Delayed and inconsistent reporting led to increased scrutiny and more frequent examinations. | Heightened oversight, creating additional operational and compliance burdens. |
-| **Inaccurate Reporting** | **41%** of reportable incidents had errors in impact assessments (overstated/understated). | Credibility issues with regulators and potential legal exposure. |
-| **Duplicative Effort** | Teams spent an additional **25 hours per major incident** reconstructing timelines post-incident. | Resource drain, delaying post-mortems and slowing overall recovery efforts. |
+| **Reporting Violations**    | NorthernTrust faced penalties exceeding **$1.2M** in a year for late/insufficient reporting.      | Severe financial repercussions and reputational damage.                       |
+| **Extended Outages**        | Incident duration increased by **37%** when technical teams were diverted to regulatory tasks.    | Prolonged customer impact and operational disruption.                         |
+| **Regulatory Relationship** | Delayed and inconsistent reporting led to increased scrutiny and more frequent examinations.      | Heightened oversight, creating additional operational and compliance burdens. |
+| **Inaccurate Reporting**    | **41%** of reportable incidents had errors in impact assessments (overstated/understated).        | Credibility issues with regulators and potential legal exposure.              |
+| **Duplicative Effort**      | Teams spent an additional **25 hours per major incident** reconstructing timelines post-incident. | Resource drain, delaying post-mortems and slowing overall recovery efforts.   |
 
 #### Comparative Benefits of Integration
 
@@ -1293,14 +1293,14 @@ During development of a biometric authentication feature, this approach identifi
 
 The business consequences of late-stage compliance verification create significant challenges for financial institutions. Below is a comparison of key metrics before and after implementing continuous compliance through deployment pipelines:
 
-| **Metric** | **Traditional Approach** | **Continuous Compliance Approach** | **Improvement** |
+| **Metric**                                           | **Traditional Approach**               | **Continuous Compliance Approach**        | **Improvement**           |
 | ---------------------------------------------------- | -------------------------------------- | ----------------------------------------- | ------------------------- |
-| **Development Effort Spent on Compliance Rework** | 31% of development effort | 7% of development effort | **76% reduction** |
-| **Average Time-to-Market Delay** | 7.2 weeks per feature | 1.1 weeks per feature | **84% faster** |
-| **Engineering Capacity Diverted to Unplanned Fixes** | 42% of capacity | 8% of capacity | **81% reduction** |
-| **Compliance Issues Post-Release** | 8% of released features | 0.6% of released features | **92% fewer issues** |
-| **First-Time Compliance Pass Rate** | 54% during regulatory examinations | 92% during regulatory examinations | **70% increase** |
-| **Technical Debt from Compliance Fixes** | High, due to rushed late-stage changes | Low, with compliance integrated in design | **Significantly reduced** |
+| **Development Effort Spent on Compliance Rework**    | 31% of development effort              | 7% of development effort                  | **76% reduction**         |
+| **Average Time-to-Market Delay**                     | 7.2 weeks per feature                  | 1.1 weeks per feature                     | **84% faster**            |
+| **Engineering Capacity Diverted to Unplanned Fixes** | 42% of capacity                        | 8% of capacity                            | **81% reduction**         |
+| **Compliance Issues Post-Release**                   | 8% of released features                | 0.6% of released features                 | **92% fewer issues**      |
+| **First-Time Compliance Pass Rate**                  | 54% during regulatory examinations     | 92% during regulatory examinations        | **70% increase**          |
+| **Technical Debt from Compliance Fixes**             | High, due to rushed late-stage changes | Low, with compliance integrated in design | **Significantly reduced** |
 
 By shifting compliance verification left and integrating it into CI/CD pipelines, banks like CommerceCapital Bank transformed compliance from a costly, reactive process into a proactive, design-time safeguard. This approach not only reduces regulatory risk but also accelerates delivery timelines and improves engineering efficiency.
 

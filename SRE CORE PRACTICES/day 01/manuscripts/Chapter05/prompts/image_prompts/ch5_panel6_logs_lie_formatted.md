@@ -12,7 +12,7 @@
    - **Motion:** Poised, with a slight lean towards the monitor.
    - **Props:** Digital watch, monitor setup.
 
-2. **Hector** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, intense hazel eyes, short, neatly trimmed salt-and-pepper beard, wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
+2. **Hector Alavaz** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, intense hazel eyes, short, neatly trimmed salt-and-pepper beard, wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Intentional, focused energy, rarely gesturing unless explaining failure.
@@ -27,7 +27,7 @@
 **Dialogue (Speech Bubbles, Off-White #EDEDED, Tails Pointing to Speakers)**
 
 - **Katherine:** “The logs tell me nothing.”
-- **Hector:** “A log without context is a liar.”
+- **Hector Alavaz:** “A log without context is a liar.”
 
 **Narration**
 
@@ -54,7 +54,7 @@
 
 **Constraints**
 
-- Characters arranged left-to-right consistent with speaking order: Katherine, Hector, Juana.
+- Characters arranged left-to-right consistent with speaking order: Katherine, Hector Alavaz, Juana.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

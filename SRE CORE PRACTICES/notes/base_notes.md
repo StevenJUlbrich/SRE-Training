@@ -14,7 +14,7 @@ Please improve Day [1 of the SRE Core Training Curriculum titled "Day 1 — Intr
 
 1. Character Introduction (brief, establish personality and expertise)
 
-Hector, The Veteran SRE (a.k.a. The Oracle)
+Hector Alavaz, The Veteran SRE (a.k.a. The Oracle)
 
 Region: Mexico City
 

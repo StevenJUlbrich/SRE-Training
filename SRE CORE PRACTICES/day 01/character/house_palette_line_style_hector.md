@@ -1,4 +1,4 @@
-# Hector Alvarez: Palette, Line Style & Visual Direction
+# Hector Alavaz Alvarez: Palette, Line Style & Visual Direction
 
 ## Color Palette
 
@@ -36,7 +36,7 @@
 - Minimal personal décor: a photo, sticky note, or memento — but only one
 
 ### Character Design:
-- Hector wears a red RHEL cap, dark henley or technical long sleeve shirt, durable jeans or pants, no loud colors
+- Hector Alavaz wears a red RHEL cap, dark henley or technical long sleeve shirt, durable jeans or pants, no loud colors
 - Short gray beard, tired but alert eyes
 - Hands show slight age and use — minimal jewelry, practical watch
 - Stance and posture reflect a quiet intensity; gestures are minimal but meaningful
@@ -59,4 +59,4 @@
   - Clear visual distinction between "theory" sections and "practical application" sections
 ---
 
-This style emphasizes modern professionalism, technical authority, and visual clarity — Hector’s world doesn’t use flair to teach; it uses facts, and it’s built to survive the next failure.
+This style emphasizes modern professionalism, technical authority, and visual clarity — Hector Alavaz’s world doesn’t use flair to teach; it uses facts, and it’s built to survive the next failure.

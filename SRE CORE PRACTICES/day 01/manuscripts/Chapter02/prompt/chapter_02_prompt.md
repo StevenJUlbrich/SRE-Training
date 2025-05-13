@@ -47,7 +47,7 @@ ______________________________________________________________________
 
 ### ✍️ STYLE & VOICE:
 
-- Use Hector’s dry, practical tone from his persona file
+- Use Hector Alavaz’s dry, practical tone from his persona file
 - Keep panels cinematic but always instructional
 - Ensure visuals and prose reinforce the declared learning objective
 
@@ -74,4 +74,4 @@ Start from:
 # Chapter 2 – “The Problem Isn’t Always the Problem”
 ```
 
-Continue through all 9 panels. End with a reflection, assessment hook, and Hector’s closing line.
+Continue through all 9 panels. End with a reflection, assessment hook, and Hector Alavaz’s closing line.

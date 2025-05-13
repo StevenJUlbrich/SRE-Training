@@ -12,7 +12,7 @@
    - **Motion:** Moves with grace, confident in pauses.
    - **Props:** Color-coded notebook.
 
-2. **Hector** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face with a defined jawline, short, neatly trimmed salt-and-pepper beard, intense hazel eyes with visible crow's feet, wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
+2. **Hector Alavaz** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face with a defined jawline, short, neatly trimmed salt-and-pepper beard, intense hazel eyes with visible crow's feet, wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Intentional, focused energy; rarely gestures unless explaining failure.
@@ -23,7 +23,7 @@
 #### Dialogue (speech bubbles, off-white #EDEDED, tails pointing to speakers)
 
 - **Aisha:** “Our definition of 'healthy' forgot the human.”
-- **Hector:** “SLIs measure promises, not pulses.”
+- **Hector Alavaz:** “SLIs measure promises, not pulses.”
 
 #### Narration
 
@@ -50,7 +50,7 @@
 
 #### Constraints
 
-- Characters arranged left-to-right consistent with speaking order: Aisha, Hector, Wanjiru.
+- Characters arranged left-to-right consistent with speaking order: Aisha, Hector Alavaz, Wanjiru.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

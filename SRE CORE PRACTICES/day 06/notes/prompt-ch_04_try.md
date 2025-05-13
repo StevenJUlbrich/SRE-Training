@@ -1,11 +1,11 @@
 **Scene**
-Interior – 02:47 AM, Daniel’s one-room flat in Nairobi. The only light is a Rust Red (#8B2E2E) PagerDuty banner reflecting off a Charcoal Black (#1C1C1E) wall. A battered laptop shows a CPU chart pinned at 87 %. A steaming ceramic mug sits beside it. Slack overlays hover like ghosts above Daniel’s phone; Hector’s avatar appears in an off-white bubble, underscoring the midnight tension. Wall-mounted monitors glow with muted dark-mode dashboards. Quiet hum of fans and distant city noise amplify the stillness.
+Interior – 02:47 AM, Daniel’s one-room flat in Nairobi. The only light is a Rust Red (#8B2E2E) PagerDuty banner reflecting off a Charcoal Black (#1C1C1E) wall. A battered laptop shows a CPU chart pinned at 87 %. A steaming ceramic mug sits beside it. Slack overlays hover like ghosts above Daniel’s phone; Hector Alavaz’s avatar appears in an off-white bubble, underscoring the midnight tension. Wall-mounted monitors glow with muted dark-mode dashboards. Quiet hum of fans and distant city noise amplify the stillness.
 
 * **Characters**:
 
   Daniel**: Specific traits.
   Juana**: Specific traits.
-  Hector**: Always in red RHEL cap, visible beard, no other headwear, etc.
+  Hector Alavaz**: Always in red RHEL cap, visible beard, no other headwear, etc.
 
 * **Dialogue**: Speech bubbles, one per line, attributed.
 
@@ -16,7 +16,7 @@ Interior – 02:47 AM, Daniel’s one-room flat in Nairobi. The only light is a 
 * **Color Palette**: Primarily red, charcoal-black, white with dark mode aesthetics.
 
 * **Constraints**: 
-Hector's attire and appearance must always be as described.
+Hector Alavaz's attire and appearance must always be as described.
 Characters must not be duplicated in scene
 
 
@@ -38,7 +38,7 @@ Characters must not be duplicated in scene
 * Usually holding a tablet displaying alerts
 * Eyes convey analytical skepticism
 
-**Hector**
+**Hector Alavaz**
 
 * Male, 49 y/o Mexican, 5′10″ medium build
 * Weathered medium-brown complexion, angular jaw
@@ -54,7 +54,7 @@ Characters must not be duplicated in scene
 
 Daniel: “Legacy spreadsheet said CPU cost money. So we page.”
 Juana: “Let me guess. Geneos rule from 2009?”
-Hector: “Daniel, stop admiring server sweat. If customers aren’t screaming, go back to bed.”
+Hector Alavaz: “Daniel, stop admiring server sweat. If customers aren’t screaming, go back to bed.”
 Juana (again): “Users cost more. Where’s their metric in that alert?”
 
 ---
@@ -101,7 +101,7 @@ Top-left, integrated into a floating monitor UI:
 
 ### Constraints
 
-* Hector must always wear the red RHEL cap and maintain his beard; no alternate headwear or clean-shaven look
+* Hector Alavaz must always wear the red RHEL cap and maintain his beard; no alternate headwear or clean-shaven look
 * Mechanical keyboard shown has **no RGB lighting**
 * All text no hyphenates at line ends when needed; maintain legibility
 * Dialogue must match on-screen character expression and body language

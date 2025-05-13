@@ -2,7 +2,7 @@
 
 ## Chapter Overview
 
-The first outage always chooses the darkest hour. At 02:57 AM a rainbow Geneos dashboard in a Tier-1 bank’s NOC shouts *everything is green* while customer transfers fail in silence. Hector Alvarez, our gravel-voiced SRE warhorse, drags himself toward yet another “incident bridge,” coffee in hand, muttering that dashboards don’t save services—clarity does. In this opening chapter you’ll learn why monitoring answers *what* and observability answers *why*, how “green” can be the loudest lie, and how to make telemetry confess before users torch your brand. Each panel blends cinematic narrative with CLI receipts, diagrams, and Hector’s no-nonsense widgets so you can feel the failure, interrogate the evidence, and rebuild trust.
+The first outage always chooses the darkest hour. At 02:57 AM a rainbow Geneos dashboard in a Tier-1 bank’s NOC shouts *everything is green* while customer transfers fail in silence. Hector Alavaz Alvarez, our gravel-voiced SRE warhorse, drags himself toward yet another “incident bridge,” coffee in hand, muttering that dashboards don’t save services—clarity does. In this opening chapter you’ll learn why monitoring answers *what* and observability answers *why*, how “green” can be the loudest lie, and how to make telemetry confess before users torch your brand. Each panel blends cinematic narrative with CLI receipts, diagrams, and Hector Alavaz’s no-nonsense widgets so you can feel the failure, interrogate the evidence, and rebuild trust.
 
 ______________________________________________________________________
 
@@ -16,7 +16,7 @@ A green dashboard proves nothing; only correlated logs, metrics, and traces reve
 
 ## 🚦 Applied Example
 
-You’ll curl a failing endpoint, inspect replica-only dashboards, and watch Hector overlay missing trace IDs—all while a payment processor bleeds transactions.
+You’ll curl a failing endpoint, inspect replica-only dashboards, and watch Hector Alavaz overlay missing trace IDs—all while a payment processor bleeds transactions.
 
 ______________________________________________________________________
 
@@ -49,7 +49,7 @@ No `trace_id`. No user context. Just screams in the dark.
 
 ![Alt text: Pager blares while Katherine’s face glows green from a lying dashboard](images/ch1_p1_pager-screams.png){width=640}
 
-:::hector quote\
+:::Hector Alavaz quote\
 “Green dashboards and screaming users. Which one do you believe?”\
 :::
 
@@ -71,13 +71,13 @@ Wanjiru Maina, the eager junior dev, slams her mouse from graph to graph. CPU? F
 > **VP (Zoom, voice quivering):** “Metrics say fine. Users say outage. Fix it.”\
 > **Wanjiru (internal):** *Why doesn’t green mean okay?*
 
-Hector enters, soaked trench coat, eyes razor-sharp. He sets coffee on the rack, leans over Wanjiru’s shoulder.
+Hector Alavaz enters, soaked trench coat, eyes razor-sharp. He sets coffee on the rack, leans over Wanjiru’s shoulder.
 
-> **Hector:** “Did you check logs, or are we just admiring the light show?”
+> **Hector Alavaz:** “Did you check logs, or are we just admiring the light show?”
 
 He flips her screen to a terminal.
 
-**Frowning, Hector runs:**
+**Frowning, Hector Alavaz runs:**
 
 ```shell
 curl -X POST https://api.bank.local/payments \
@@ -97,11 +97,11 @@ sequenceDiagram
   Frontend-->>User: 500
 ```
 
-> **Hector (quiet growl):** “See that *x*? That’s your real health indicator.”
+> **Hector Alavaz (quiet growl):** “See that *x*? That’s your real health indicator.”
 
 He toggles a Trace-ID filter—nothing. The Grafana panel highlights Collection: `replica-db-latency`; primaries unmonitored.
 
-![Alt text: Wanjiru’s shaky cursor hovers over flawless green CPU while Hector points at blank log lines](images/ch1_p2_dashboard-dissonance.png){width=640}
+![Alt text: Wanjiru’s shaky cursor hovers over flawless green CPU while Hector Alavaz points at blank log lines](images/ch1_p2_dashboard-dissonance.png){width=640}
 
 :::reflection\
 Recall a time your dashboard said *healthy* while customers disagreed. What *un-measured* signal betrayed you?\
@@ -123,7 +123,7 @@ No logs found for RID=82df9
 ```
 
 > **Katherine (exasperated):** “CPU looks fine though.”\
-> **Hector:** “CPU looks fine on a corpse, too.”
+> **Hector Alavaz:** “CPU looks fine on a corpse, too.”
 
 Juana Torres, the alert whisperer, slides in and scans the container logs. They’re verbose but context-free:
 
@@ -135,7 +135,7 @@ She rolls her eyes.
 
 > **Juana:** “Nice. It broke, and it didn’t even tell us who it killed.”
 
-Hector opens a whiteboard, sketching three intersecting circles labeled *Logs, Metrics, Traces*. In the center he writes *Root Cause Detection*. He stabs a marker at each void:
+Hector Alavaz opens a whiteboard, sketching three intersecting circles labeled *Logs, Metrics, Traces*. In the center he writes *Root Cause Detection*. He stabs a marker at each void:
 
 *Logs* without trace ⇒ *random noise*\
 *Metrics* without error overlay ⇒ *false calm*\
@@ -145,7 +145,7 @@ He underlines: *Observability = correlation.*
 
 ![venndiagram](images/chp1_venndiagram.png){width=600}
 
-![Alt text: Hector’s hand-drawn Venn diagram looms behind a distraught team](images/ch1_p3_hector-venn.png){width=640}
+![Alt text: Hector Alavaz’s hand-drawn Venn diagram looms behind a distraught team](images/ch1_p3_hector-venn.png){width=640}
 
 :::try this\
 Open one mission-critical dashboard. Does it display error rate or only resource stats? Add a panel that streams real-time `HTTP_5xx` by service and compare perception vs reality.\
@@ -171,13 +171,13 @@ ______________________________________________________________________
 
 ### Teaching Narrative
 
-Hector lifts his coffee thermos like a courtroom exhibit.
+Hector Alavaz lifts his coffee thermos like a courtroom exhibit.
 
-> **Hector (dry):** “Exhibit A: A *green* dashboard that let four million dollars evaporate.”
+> **Hector Alavaz (dry):** “Exhibit A: A *green* dashboard that let four million dollars evaporate.”
 
 He gestures at the Geneos wall. Katherine squints—CPU still 32 %, memory flat, disks purring.
 
-Hector drags a whiteboard into the aisle and inks three intersecting circles:
+Hector Alavaz drags a whiteboard into the aisle and inks three intersecting circles:
 
 *Logs* — the diary\
 *Metrics* — the pulse\
@@ -185,11 +185,11 @@ Hector drags a whiteboard into the aisle and inks three intersecting circles:
 
 Inside the overlap he writes: **Root Cause**.
 
-> **Hector Aphorism:** “If your telemetry doesn’t snitch on itself, the users will.”
+> **Hector Alavaz Aphorism:** “If your telemetry doesn’t snitch on itself, the users will.”
 
 Wanjiru flinches at the word *snitch*; the VP is still screaming on Zoom. Juana plugs her laptop into the projector and shares a barely legible error log—no request path, no user, no trace ID.
 
-Hector marks the *Logs* circle with a red ✖: “Useless.”\
+Hector Alavaz marks the *Logs* circle with a red ✖: “Useless.”\
 He flips to Grafana: error-rate panel missing. He strikes the *Metrics* circle: “Blind.”\
 He opens Jaeger—empty. Another ✖ on *Traces*.\
 The center of the Venn stays blank.
@@ -205,11 +205,11 @@ The center of the Venn stays blank.
 
 > **System Failure Anecdote:** “Banco Nacional, 2019. Dashboards green for twelve hours. Backend writes were stuck behind a silent keyspace lock. We refunded 28 000 customers *after* the auditors landed.”
 
-Hector underlines *Root Cause* three times.
+Hector Alavaz underlines *Root Cause* three times.
 
-> **Hector:** “Dashboards claim health. Users measure trust. Guess whose version counts in court?”
+> **Hector Alavaz:** “Dashboards claim health. Users measure trust. Guess whose version counts in court?”
 
-![Alt text: Whiteboard Venn diagram glowing on a dim NOC wall; each pillar marked with a red ✖ while Hector speaks](images/ch1_p4_three-pillars.png){width=640}
+![Alt text: Whiteboard Venn diagram glowing on a dim NOC wall; each pillar marked with a red ✖ while Hector Alavaz speaks](images/ch1_p4_three-pillars.png){width=640}
 
 :::diagram\
 *See Mermaid above—download in panel assets to annotate further.*\
@@ -300,7 +300,7 @@ Juana copies the trace ID into Jaeger. A red span leaps out—`PaymentSvc → DB
 Katherine’s mouth hangs open.
 
 > **Katherine:** “That one ID just told us who, where, and why.”\
-> **Hector (half-smile):** “Congratulations. Your logs can finally testify in court.”
+> **Hector Alavaz (half-smile):** “Congratulations. Your logs can finally testify in court.”
 
 Grafana refreshes; an error-rate panel—now wired to `HTTP_5xx`—flashes Rust Red. The green mirage shatters.
 
@@ -319,7 +319,7 @@ Add a `trace_id` (or `request_id`) field to one log-emitting service today. Sear
 ______________________________________________________________________
 
 Below is **Part C**—the final installment of Chapter 1.\
-It delivers Panels 6 & 7, Hector’s closing reflection, the learner assessment prompt, and a full-chapter audit confirming compliance with the contract.
+It delivers Panels 6 & 7, Hector Alavaz’s closing reflection, the learner assessment prompt, and a full-chapter audit confirming compliance with the contract.
 
 ______________________________________________________________________
 
@@ -353,26 +353,26 @@ The war-room lights dim to a midnight hush. Alerts still chirp in distant channe
 > 2. Logs lacked `trace_id`, `user_id`.
 > 3. Metrics pointed at read-replicas, not primaries.
 
-Hector paces slowly, coffee mug orbiting like a pendulum.
+Hector Alavaz paces slowly, coffee mug orbiting like a pendulum.
 
-> **Hector (lean, gravel voice):** “Write it all. Shame is the chisel that shapes better systems.”
+> **Hector Alavaz (lean, gravel voice):** “Write it all. Shame is the chisel that shapes better systems.”
 
 He pulls the Doc onto the projector. A blank column awaits **“Fix by Friday”**.
 
 > **Katherine (sigh):** “Enable error-rate tile, instrument trace IDs, move dashboards to primaries.”\
-> **Hector (nods):** “Add *owner* for each signal. Otherwise next on-call inherits the same coffin.”
+> **Hector Alavaz (nods):** “Add *owner* for each signal. Otherwise next on-call inherits the same coffin.”
 
 Juana recalls a 2023 ACH blackout in Bogotá—dashboards serene, transfers lost. The bank paid penalties in seven digits. She adds a bullet: *“Regulatory fines are telemetry invoices.”*
 
 With every keystroke the room breathes easier. Observability debt, once invisible, now has headers, bullets, and deadlines.
 
-![Alt text: The team projected “We Were Blind Because…” doc; three bullet gaps listed; Hector’s silhouette gesturing at the ‘Fix by Friday’ column](images/ch1_p6_reflection-doc.png){width=640}
+![Alt text: The team projected “We Were Blind Because…” doc; three bullet gaps listed; Hector Alavaz’s silhouette gesturing at the ‘Fix by Friday’ column](images/ch1_p6_reflection-doc.png){width=640}
 
 :::reflection\
 List **three blind spots** in *your* telemetry stack. For each, write one concrete action you can complete in the next sprint.\
 :::
 
-:::hector quote\
+:::Hector Alavaz quote\
 “Green isn’t comfort—it’s camouflage. Peel it off before the auditors do.”\
 :::
 
@@ -407,13 +407,13 @@ A hush. On Grafana, the once-blank error-rate tile now shows a Rust-Red spike fr
 
 > **VP (Zoom, exhausted relief):** “We good?”\
 > **Wanjiru (confident for the first time tonight):** “Real-time metrics show zero 5xx for ten minutes. Traces validate payment path. Logs confirm DB writes succeeding.”\
-> **Hector (leans into webcam):** “Site is healthy *and* provably so. Root cause: primary Cassandra node stalled; read replicas masked alert. Action items logged.”
+> **Hector Alavaz (leans into webcam):** “Site is healthy *and* provably so. Root cause: primary Cassandra node stalled; read replicas masked alert. Action items logged.”
 
 He ends the bridge. A Mexico City dawn bleeds amber across the skyline.
 
-Hector pulls the team closer, lowers his voice:
+Hector Alavaz pulls the team closer, lowers his voice:
 
-> **Hector Aphorism:** “Tonight wasn’t an outage—it was a final exam. The system asked if you *knew* it, or if you were just copying answers off a green cheat sheet.”
+> **Hector Alavaz Aphorism:** “Tonight wasn’t an outage—it was a final exam. The system asked if you *knew* it, or if you were just copying answers off a green cheat sheet.”
 
 He scribbles a final diagram:
 
@@ -436,7 +436,7 @@ Juana prints the diagram, tapes it beside the Geneos wall. Rust-Red tape crosses
 
 The room finally exhales. No champagne—just lukewarm coffee and a hard-won checklist.
 
-![Alt text: Dawn light through NOC windows; Geneos screen now shows error-rate overlay; the taped diagram reads ‘Correlated = Confessed’ while Hector sips coffee](images/ch1_p7_lesson-locked.png){width=640}
+![Alt text: Dawn light through NOC windows; Geneos screen now shows error-rate overlay; the taped diagram reads ‘Correlated = Confessed’ while Hector Alavaz sips coffee](images/ch1_p7_lesson-locked.png){width=640}
 
 :::debug pattern\
 **Pattern Name:** Replica Mask\
@@ -450,7 +450,7 @@ Replay a *known-good* request through your staging stack. Can you follow its `tr
 
 ______________________________________________________________________
 
-## 🌅 Hector’s Closing Reflection
+## 🌅 Hector Alavaz’s Closing Reflection
 
 > “Green ≠ good.\
 > Good ≠ silent.\

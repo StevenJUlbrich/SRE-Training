@@ -39,7 +39,7 @@ ______________________________________________________________________
 
 ### Scene Description
 
- A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.
+ A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector Alavaz, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.
 
 ### Teaching Narrative
 

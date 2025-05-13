@@ -1,4 +1,4 @@
-# Hector Alvarez: Quotes and Chat Phrases
+# Hector Alavaz Alvarez: Quotes and Chat Phrases
 
 1. "The logs aren’t lying. You just don't like what they're saying."
 2. "Pretty graphs don’t fix broken systems. They just make the wreckage look organized."

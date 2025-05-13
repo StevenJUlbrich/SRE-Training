@@ -1,6 +1,5 @@
 # Chapter 4: You're Not Alerting — You're Alarming
 
-
 ## Chapter Overview
 
 Welcome to the circus of modern alerting, where every beeping dashboard is a ringmaster and your engineers are the sleepless acrobats. This chapter is a blunt intervention: you’re not alerting—you’re just alarming people into oblivion. If you think “CPU > 85%” means anything to your customers, you’re building a Rube Goldberg machine that wakes humans up for no reason. We’ll dissect alert fatigue, mock threshold worship, and beat into your skull the difference between technical noise and business signals. By the end, you’ll stop paging people for trivia and start designing alerts that actually matter—unless you really enjoy team attrition and compliance fines, in which case, carry on.
@@ -33,17 +32,17 @@ Welcome to the circus of modern alerting, where every beeping dashboard is a rin
 
 ## Panel 1: The All-Night Alarm - Alert Fatigue
 
-## Scene Description
+### Scene Description
 
 **The All-Night Alarm** – Daniel is half-asleep, watching a Geneos alert that has fired 37 times in 12 minutes. His face says: "Please make it stop."
 
 *Expanded narrative: 3:42 AM. Daniel stares at his screen through bloodshot eyes. His phone buzzes again—the 37th alert in 12 minutes. All for the same CPU threshold breach that hasn't actually impacted any customers. His expression conveys pure exhaustion. The pager alert reads: "WARNING: CPU > 85% on auth-service-prod." He sighs heavily, acknowledges the alert, and adds it to his growing incident report. No customers affected, again. No actual impact, again. Just another threshold crossed.*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene vividly illustrates one of the most destructive patterns in production support: alert fatigue. Daniel's exhaustion represents the human cost of poorly designed alerting systems that prioritize technical thresholds over business impact. This pattern undermines the entire purpose of alerting—to drive appropriate human intervention when it's actually needed.
 
-## Alert Fatigue Explained
+#### Alert Fatigue Explained
 
 Alert Fatigue is the psychological condition that occurs when operators are exposed to excessive, often meaningless alerts:
 
@@ -57,11 +56,11 @@ Alert Fatigue is the psychological condition that occurs when operators are expo
 
 In financial services, alert fatigue creates significant operational risk. When critical alerts about payment failures or security breaches arrive mixed with dozens of meaningless threshold notifications, the probability of missing something important increases dramatically.
 
-## The Threshold Fallacy
+#### The Threshold Fallacy
 
 Daniel's specific alert—"CPU > 85%"—exemplifies a fundamental flaw in traditional monitoring: alerting on arbitrary resource thresholds rather than business impact. This approach creates a disconnection between alerts and actual customer experience, resulting in wasted effort and missed problems.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To combat alert fatigue in financial systems:
 
@@ -77,17 +76,17 @@ Financial institutions must recognize that alert fatigue isn't just an annoyance
 
 ## Panel 2: False Positives Everywhere - Value-Based Alerting
 
-## Scene Description
+### Scene Description
 
 **False Positives Everywhere** – Juana walks by and glances at the alert rules. "You're getting paged for CPU > 85%? Who trained you—Geneos circa 2009?"
 
 *Expanded narrative: Juana walks by, notices Daniel's state, and glances at his alert configuration. Her eyes widen. "You're getting paged for CPU > 85%? Who trained you—Geneos circa 2009?" She pulls up a chair. "No wonder you look like you haven't slept in a week." She scrolls through his alert history. "Ninety percent of these never affected a single customer. They're just...noise." Daniel nods wearily. "But how do I know what's important without watching everything?"*
 
-## Teaching Narrative
+### Teaching Narrative
 
 Juana's reaction highlights the cultural shift required in moving from traditional monitoring to modern observability—a shift from watching everything to watching what matters. Her question reveals how outdated alerting practices persist not from technical limitations but from institutional inertia and uncertainty about alternatives.
 
-## Value-Based Alerting Explained
+### Value-Based Alerting Explained
 
 Value-Based Alerting is a fundamental reorientation of alert design around business value and customer impact:
 
@@ -101,11 +100,11 @@ Value-Based Alerting is a fundamental reorientation of alert design around busin
 
 In financial services, value-based alerting transforms operational efficiency. Instead of engineers responding to hundreds of technical threshold breaches, they focus on the small subset of conditions that actually affect customers, transactions, or compliance requirements.
 
-## The Knowledge Insecurity
+### The Knowledge Insecurity
 
 Daniel's question—"how do I know what's important without watching everything?"—reveals a common insecurity in the transition from monitoring to observability. Engineers fear that by alerting on fewer things, they'll miss important issues. This fear often drives over-alerting as a form of psychological insurance.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement value-based alerting in financial systems:
 
@@ -121,17 +120,17 @@ Juana's comment about "Geneos circa 2009" emphasizes how static threshold alerti
 
 ## Panel 3: Looking for Symptoms, Not Signals - Customer-Centric Alerts
 
-## Scene Description
+### Scene Description
 
 **Looking for Symptoms, Not Signals** – Aisha shows a past incident where high CPU had no user impact, while an unnoticed error rate spike broke login.
 
 *Expanded narrative: Aisha, the customer experience lead, joins them with her tablet. "Look at last month's incidents," she says, bringing up comparative graphs. The first shows CPU at 95% for hours with no customer impact whatsoever. The second shows a tiny error rate spike—just 2%—that prevented thousands of customers from logging in. "We had no alert for this," she points to the second graph. "Meanwhile, you got paged 16 times for high CPU that affected nobody. We're measuring machines, not customer experience."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 Aisha's comparison exposes a critical flaw in traditional monitoring: confusing technical symptoms with meaningful signals. The contrasting incidents she shows—high CPU with no impact versus low error rate with massive impact—demonstrate how technical metrics often fail to correlate with customer experience. This disconnect leads to both false alarms and missed problems.
 
-## Customer-Centric Alerts Explained
+#### Customer-Centric Alerts Explained
 
 Customer-Centric Alerting focuses on user experience rather than system internals:
 
@@ -145,11 +144,11 @@ Customer-Centric Alerting focuses on user experience rather than system internal
 
 In financial services, customer-centric alerting addresses both operational and business needs. For banks, what matters isn't server performance—it's whether customers can access accounts, complete transactions, and manage their money successfully.
 
-## The Metrics Misalignment
+#### The Metrics Misalignment
 
 Aisha's observation that "we're measuring machines, not customer experience" highlights a fundamental misalignment in traditional monitoring. Technical metrics like CPU utilization were designed to manage hardware resources, not to represent business outcomes or customer satisfaction.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement customer-centric alerting in financial systems:
 
@@ -165,17 +164,17 @@ The contrasting incidents Aisha shows exemplify why financial institutions must 
 
 ## Panel 4: Burn Rate Awakening - SLO-Based Alerting
 
-## Scene Description
+### Scene Description
 
-**Burn Rate Awakening** – Hector enters with a diagram showing error budget burn across services. "You don't alert on thresholds. You alert on *threats.*"
+**Burn Rate Awakening** – Hector Alavaz enters with a diagram showing error budget burn across services. "You don't alert on thresholds. You alert on *threats.*"
 
-*Expanded narrative: Hector approaches with a printout showing a different type of graph—error budget consumption over time. "You don't alert on thresholds," he explains. "You alert on *threats*—to customer experience, to regulatory compliance, to business operations." He points to steep slopes in the graph. "This is burn rate—how quickly you're consuming your error budget. When this accelerates, real customers are being affected, regardless of what your CPU is doing."*
+*Expanded narrative: Hector Alavaz approaches with a printout showing a different type of graph—error budget consumption over time. "You don't alert on thresholds," he explains. "You alert on *threats*—to customer experience, to regulatory compliance, to business operations." He points to steep slopes in the graph. "This is burn rate—how quickly you're consuming your error budget. When this accelerates, real customers are being affected, regardless of what your CPU is doing."*
 
-## Teaching Narrative
+### Teaching Narrative
 
-Hector introduces a transformative concept in alerting: shifting from static thresholds to dynamic burn rates. This approach leverages Service Level Objectives (SLOs) and error budgets to create alerts that respond to changing conditions rather than fixed values. The distinction between thresholds and threats represents a fundamental evolution in how we think about system health.
+Hector Alavaz introduces a transformative concept in alerting: shifting from static thresholds to dynamic burn rates. This approach leverages Service Level Objectives (SLOs) and error budgets to create alerts that respond to changing conditions rather than fixed values. The distinction between thresholds and threats represents a fundamental evolution in how we think about system health.
 
-## SLO-Based Alerting Explained
+#### SLO-Based Alerting Explained
 
 SLO-Based Alerting uses error budgets and burn rates to drive alerting decisions:
 
@@ -189,11 +188,11 @@ SLO-Based Alerting uses error budgets and burn rates to drive alerting decisions
 
 In financial services, SLO-based alerting provides several critical advantages. It naturally aligns with business priorities, adapts to changing conditions, and differentiates between minor fluctuations and serious problems that require immediate attention.
 
-## The Threat Perspective
+#### The Threat Perspective
 
-Hector's distinction between thresholds and threats represents a powerful mental model for alert design. Thresholds are static values based on technical intuition; threats are dynamic conditions that represent actual risk to business outcomes, customer experience, or regulatory compliance.
+Hector Alavaz's distinction between thresholds and threats represents a powerful mental model for alert design. Thresholds are static values based on technical intuition; threats are dynamic conditions that represent actual risk to business outcomes, customer experience, or regulatory compliance.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement SLO-based alerting in financial systems:
 
@@ -205,21 +204,21 @@ To implement SLO-based alerting in financial systems:
 
 4. **Compliance-Aware Budgets**: Include regulatory requirements in SLO definitions and error budget calculations
 
-Hector's burn rate diagram illustrates how this approach captures real problems while filtering noise. A momentary CPU spike might not affect error budgets at all, while a small but persistent increase in transaction failures will trigger alerts as it rapidly consumes the available error margin. This distinction helps focus attention on genuine threats to the business.
+Hector Alavaz's burn rate diagram illustrates how this approach captures real problems while filtering noise. A momentary CPU spike might not affect error budgets at all, while a small but persistent increase in transaction failures will trigger alerts as it rapidly consumes the available error margin. This distinction helps focus attention on genuine threats to the business.
 
 ## Panel 5: Fixing the Noise - Alert Engineering
 
-## Scene Description
+### Scene Description
 
 **Fixing the Noise** – Clara helps Daniel rewrite the alert using a time-sliced burn rate policy with log links and trace context.
 
 *Expanded narrative: Clara sits with Daniel to rewrite his alerts. They replace the static CPU threshold with: "10% error budget consumed in 5 minutes." They add direct links to relevant logs and traces. They create multi-window alerts that trigger on both fast burns (severe issues) and slow burns (degradation). Each alert includes specific runbook links and impact assessments. "Now you'll only get woken up when something's actually hurting customers," Clara explains. "And when you do, you'll have everything you need to start solving it immediately."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene demonstrates how modern alert engineering goes beyond simple threshold configuration to create actionable, contextual notifications. Clara and Daniel's work represents a shift from alerts as symptoms to alerts as diagnostic packages—containing not just what triggered the alert, but the context and tools needed to resolve it.
 
-## Alert Engineering Explained
+### Alert Engineering Explained
 
 Alert Engineering is the deliberate design of complete alert experiences:
 
@@ -233,11 +232,11 @@ Alert Engineering is the deliberate design of complete alert experiences:
 
 In financial services, well-engineered alerts dramatically reduce Mean Time To Resolution (MTTR). Instead of engineers spending precious minutes gathering context during an outage, they receive everything they need to begin focused remediation immediately.
 
-## The Alert as Starting Point
+#### The Alert as Starting Point
 
 Clara's approach transforms alerts from end points (notifications that something is wrong) to starting points (packages of information and tools to begin resolution). This shift reduces the cognitive load on operations teams and accelerates incident response.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement alert engineering in financial systems:
 
@@ -253,17 +252,17 @@ The alert rewrite that Clara and Daniel perform doesn't just reduce noise—it f
 
 ## Panel 6: Test Fire Drill - Alert Validation
 
-## Scene Description
+### Scene Description
 
 **Test Fire Drill** – The team simulates a new incident using the updated alert logic — results are quieter, clearer, and lead directly to the source.
 
 *Expanded narrative: The team runs a fire drill, injecting synthetic errors into the test environment. The new alerts trigger precisely when user experience degrades beyond acceptable levels—not before, not after. Each alert contains exactly the context needed: affected services, impacted customers, relevant logs, trace samples, and runbook links. Daniel follows the embedded information and identifies the simulated root cause in under two minutes. "This is...completely different," he realizes. "The alert isn't just saying something's wrong—it's showing me where to look."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene illustrates a critical but often overlooked aspect of observability: alert validation through simulation. By deliberately creating controlled failure conditions, the team can verify that their alerting system actually detects what matters and provides the necessary context. This practice transforms alert design from theoretical to evidence-based.
 
-## Alert Validation Explained
+### Alert Validation Explained
 
 Alert Validation is the process of verifying alert effectiveness through testing:
 
@@ -277,11 +276,11 @@ Alert Validation is the process of verifying alert effectiveness through testing
 
 In financial services, alert validation is particularly important. Banking systems must detect and respond to issues before they impact customers or create compliance violations. Validation ensures that alerting systems will actually fulfill this critical function when needed.
 
-## The Simulation Value
+#### The Simulation Value
 
 The fire drill approach provides evidence that the new alerts actually work as intended. This validation is crucial because alerting systems often appear theoretically sound but fail in practice due to unforeseen conditions, unexpected interactions, or missing context.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement alert validation in financial systems:
 
@@ -297,17 +296,17 @@ Daniel's realization that "this is completely different" highlights the transfor
 
 ## Panel 7: Lesson Locked In - Human-Centered Alerting
 
-## Scene Description
+### Scene Description
 
-**Lesson Locked In** – Hector's monologue: "Bad alerts make good engineers quit. Let's not build alarms. Let's build clarity."
+**Lesson Locked In** – Hector Alavaz's monologue: "Bad alerts make good engineers quit. Let's not build alarms. Let's build clarity."
 
-*Expanded narrative: As the team reviews the results, Hector offers a rare smile. "Bad alerts make good engineers quit," he observes. "Let's not build alarms. Let's build clarity." He gestures to the new system. "Every alert should answer three questions: What's broken? Who's affected? Where do I start looking? If it doesn't do that, it's not an alert—it's just noise." Daniel looks at his phone, newly configured with the SLO-based alerts, and for the first time in weeks, feels hope that he might actually sleep through the night.*
+*Expanded narrative: As the team reviews the results, Hector Alavaz offers a rare smile. "Bad alerts make good engineers quit," he observes. "Let's not build alarms. Let's build clarity." He gestures to the new system. "Every alert should answer three questions: What's broken? Who's affected? Where do I start looking? If it doesn't do that, it's not an alert—it's just noise." Daniel looks at his phone, newly configured with the SLO-based alerts, and for the first time in weeks, feels hope that he might actually sleep through the night.*
 
-## Teaching Narrative
+### Teaching Narrative
 
-Hector's closing observation captures a profound truth: alert design isn't just a technical discipline—it's a human factors challenge. His statement that "bad alerts make good engineers quit" acknowledges the real human cost of poor alerting, while his emphasis on clarity over alarms refocuses the team on the true purpose of notifications—to enable effective human response.
+Hector Alavaz's closing observation captures a profound truth: alert design isn't just a technical discipline—it's a human factors challenge. His statement that "bad alerts make good engineers quit" acknowledges the real human cost of poor alerting, while his emphasis on clarity over alarms refocuses the team on the true purpose of notifications—to enable effective human response.
 
-## Human-Centered Alerting Explained
+#### Human-Centered Alerting Explained
 
 Human-Centered Alerting designs notifications around the needs of the humans receiving them:
 
@@ -321,11 +320,11 @@ Human-Centered Alerting designs notifications around the needs of the humans rec
 
 In financial services, human-centered alerting recognizes that the effectiveness of incident response depends on the humans involved. Alert systems that overwhelm, confuse, or exhaust respondents ultimately fail their purpose, regardless of their technical sophistication.
 
-## The Three Questions
+#### The Three Questions
 
-Hector's three questions—"What's broken? Who's affected? Where do I start looking?"—provide a simple but powerful framework for alert design. Alerts that answer these questions enable engineers to understand the problem, prioritize it appropriately, and begin effective resolution immediately.
+Hector Alavaz's three questions—"What's broken? Who's affected? Where do I start looking?"—provide a simple but powerful framework for alert design. Alerts that answer these questions enable engineers to understand the problem, prioritize it appropriately, and begin effective resolution immediately.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement human-centered alerting in financial systems:
 

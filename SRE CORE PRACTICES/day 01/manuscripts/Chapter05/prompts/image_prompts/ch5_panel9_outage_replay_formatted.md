@@ -2,7 +2,7 @@
 
 #### Scene
 
-- The room is dimly lit, transformed into a theatre-style setting. A projector casts a large Mermaid sequence diagram onto a 10-foot screen, with red Lava-Glow (#8B2E2E) tags marking each 'sin' beside the arrows. Rows of ops chairs are filled with team members, their faces illuminated by System Blue highlights from the screen. Hector stands stage-right, using a laser pointer to trace delay minutes along a side timeline. Empty pizza boxes on a back table suggest a long shift.
+- The room is dimly lit, transformed into a theatre-style setting. A projector casts a large Mermaid sequence diagram onto a 10-foot screen, with red Lava-Glow (#8B2E2E) tags marking each 'sin' beside the arrows. Rows of ops chairs are filled with team members, their faces illuminated by System Blue highlights from the screen. Hector Alavaz stands stage-right, using a laser pointer to trace delay minutes along a side timeline. Empty pizza boxes on a back table suggest a long shift.
 
 #### Characters In Frame
 
@@ -23,7 +23,7 @@
    - **Appearance:** Overcaffeinated SRE, balancing sarcasm and stress.
    - **Props:** Circuit board tattoo on forearm, earbuds half-in.
 
-4. **Hector** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, salt-and-pepper beard, wearing a dark henley shirt and red RHEL baseball cap.
+4. **Hector Alavaz** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, salt-and-pepper beard, wearing a dark henley shirt and red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Focused energy, rarely gestures unless explaining failure.
@@ -44,7 +44,7 @@
 
 #### Dialogue (speech bubbles, off-white #EDEDED, tails pointing to speakers)
 
-- **Hector:** “Memorize these numbers; auditors will ask.”
+- **Hector Alavaz:** “Memorize these numbers; auditors will ask.”
 
 #### Narration
 

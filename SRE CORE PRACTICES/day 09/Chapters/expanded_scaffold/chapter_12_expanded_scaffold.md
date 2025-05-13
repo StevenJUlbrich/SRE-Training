@@ -70,7 +70,7 @@ To implement effective resilience testing beyond traditional QA approaches, foll
 
 ### Scene Description
 
- A team meeting room with whiteboard walls covered in system diagrams. Hector leads a diverse group of engineers as they map out a banking system's critical paths. On the whiteboard, they've written: "HYPOTHESIS: If the primary payment gateway experiences 30% packet loss, the automatic failover to the secondary gateway will complete within 8 seconds, preventing customer transaction timeouts." Team members are annotating specific components with sticky notes indicating potential failure points, while a compliance officer in the corner reviews a document titled "Safe Testing Boundaries."
+ A team meeting room with whiteboard walls covered in system diagrams. Hector Alavaz leads a diverse group of engineers as they map out a banking system's critical paths. On the whiteboard, they've written: "HYPOTHESIS: If the primary payment gateway experiences 30% packet loss, the automatic failover to the secondary gateway will complete within 8 seconds, preventing customer transaction timeouts." Team members are annotating specific components with sticky notes indicating potential failure points, while a compliance officer in the corner reviews a document titled "Safe Testing Boundaries."
 
 ### Teaching Narrative
 

@@ -47,7 +47,7 @@ ______________________________________________________________________
 
 ### ✍️ STYLE & VOICE:
 
-- Use Hector’s dry, practical tone from his persona file
+- Use Hector Alavaz’s dry, practical tone from his persona file
 - Keep panels cinematic but always educational
 - Ensure all visuals and prose reinforce the stated teaching outcome
 
@@ -65,7 +65,7 @@ After generation, validate the chapter by comparing output against the following
   - [ ] One CLI, diagram, log line, or metric as artifact
   - [ ] One `widget` (debug pattern, quote, reflection, try this)
 - [ ] No non-canon characters, tools, or invented frameworks
-- [ ] Hector speaks in-character and reinforces the theme: “Green ≠ good”
+- [ ] Hector Alavaz speaks in-character and reinforces the theme: “Green ≠ good”
 - [ ] Teaching arc builds from scene to scene to support learner insight
 
 ______________________________________________________________________

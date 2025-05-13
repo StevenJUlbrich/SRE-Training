@@ -4,11 +4,11 @@ ______________________________________________________________________
 
 ### Chapter Overview
 
-A banking outage never begins with flames on a dashboard. It starts in the quiet places — a teller noticing failed wire-transfer receipts, a queue lengthening in the background, a lone terminal log winking red and then rolling off the screen. In this chapter Hector Alvarez drags the learner cast through a failure born not of hardware, but of **invisibility**: a single configuration toggle that silenced every trace the system could have shouted. When observability disappears, blame becomes the loudest tool in the room.
+A banking outage never begins with flames on a dashboard. It starts in the quiet places — a teller noticing failed wire-transfer receipts, a queue lengthening in the background, a lone terminal log winking red and then rolling off the screen. In this chapter Hector Alavaz Alvarez drags the learner cast through a failure born not of hardware, but of **invisibility**: a single configuration toggle that silenced every trace the system could have shouted. When observability disappears, blame becomes the loudest tool in the room.
 
-Across nine cinematic panels (delivered here in two parts), you will watch Wanjiru, Katherine, and Juana confront a mystery crash that looks serene from the outside. You will follow their mis-steps, inspect raw logs with missing trace context, and witness Hector’s uncompromising debrief on why telemetry is an engineering feature—not an afterthought. By the end, you should know how a missing `trace_id` can fracture incident response, and how a single unchecked box (`enableTracing=true`) can buy an outage while nobody’s looking.
+Across nine cinematic panels (delivered here in two parts), you will watch Wanjiru, Katherine, and Juana confront a mystery crash that looks serene from the outside. You will follow their mis-steps, inspect raw logs with missing trace context, and witness Hector Alavaz’s uncompromising debrief on why telemetry is an engineering feature—not an afterthought. By the end, you should know how a missing `trace_id` can fracture incident response, and how a single unchecked box (`enableTracing=true`) can buy an outage while nobody’s looking.
 
-Part A covers Panels 1–4, guiding you from first symptom through flashback to the silent configuration error. Each panel adheres to the contract cadence: **Learning Objective ▸ Takeaway ▸ Applied Example ▸ Teaching Narrative ▸ Image Embed (+ widget)**, embedding one widget per teaching sequence and ensuring that Hector’s gravel-dry wisdom lands exactly where the outline demands.
+Part A covers Panels 1–4, guiding you from first symptom through flashback to the silent configuration error. Each panel adheres to the contract cadence: **Learning Objective ▸ Takeaway ▸ Applied Example ▸ Teaching Narrative ▸ Image Embed (+ widget)**, embedding one widget per teaching sequence and ensuring that Hector Alavaz’s gravel-dry wisdom lands exactly where the outline demands.
 
 ______________________________________________________________________
 
@@ -41,7 +41,7 @@ It’s 08 : 17 AM when the first teller in the Nairobi branch files an urgent Ji
 
 Across the aisle Wanjiru Maina pulls up **Payment-Service Error Rate**. Green, steady. No alarms. She shrugs, puzzled. A Slack channel called `#wire-ops` flickers to life with angry emojis from Customer-Care.
 
-Your first instinct might be to scan every metric panel for a tell-tale red spike. Hector would call that *dashboard astrology*. In banking, a single user-visible failure outranks a thousand “healthy” graphs. The system is whispering; you’re just reading the wrong lips.
+Your first instinct might be to scan every metric panel for a tell-tale red spike. Hector Alavaz would call that *dashboard astrology*. In banking, a single user-visible failure outranks a thousand “healthy” graphs. The system is whispering; you’re just reading the wrong lips.
 
 :::try this
 Open your favourite banking sandbox and disable a single downstream dependency (e.g., the ledger update call).
@@ -56,8 +56,8 @@ Open your favourite banking sandbox and disable a single downstream dependency (
 
 ![Alt text](images/panel1_mystery_crash.png){width=640}
 
-:::hector quote
-**Hector says:** “Green dashboards during a user scream-fest? That’s the system pleading the Fifth.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Green dashboards during a user scream-fest? That’s the system pleading the Fifth.”
 :::
 
 ______________________________________________________________________
@@ -92,7 +92,7 @@ Juana Torres appears, silent as midnight maintenance. She tilts her laptop so th
 > Wanjiru: “That’s impossible. Error rate panel shows zero.”\
 > Juana (raising an eyebrow): “Dashboard must be wired to the wrong metric.”
 
-Hector will later call this **Metric-Mirror Syndrome**: when teams chart a symptom unrelated to the customer journey and declare victory. The bank doesn’t care about CPU; it cares about money moving.
+Hector Alavaz will later call this **Metric-Mirror Syndrome**: when teams chart a symptom unrelated to the customer journey and declare victory. The bank doesn’t care about CPU; it cares about money moving.
 
 ### Image Embed
 
@@ -148,8 +148,8 @@ Think back to your last outage. Did every error log include a correlation or tra
 
 ![Alt text](images/panel3_missing_trace.png){width=640}
 
-:::hector quote
-**Hector says:** “Logs without context are gossip. Add IDs or keep guessing who started the fire.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Logs without context are gossip. Add IDs or keep guessing who started the fire.”
 :::
 
 ______________________________________________________________________
@@ -183,9 +183,9 @@ Performance test passed. Tracing died. Production lost its voice.
 
 Katherine exhales sharply. “We chased metrics for twenty minutes while the real clue was sitting in Git history.”
 
-Hector steps through the doorway like a human post-mortem.
+Hector Alavaz steps through the doorway like a human post-mortem.
 
-> Hector: “Observability isn’t magic. It’s preparation. And you didn’t prepare.”
+> Hector Alavaz: “Observability isn’t magic. It’s preparation. And you didn’t prepare.”
 
 He slams a laminated sequence diagram onto a table—arrows labelled with missing spans, empty IDs where context should be. The team gathers, cheeks warming with the particular shame of hindsight.
 
@@ -199,8 +199,8 @@ He slams a laminated sequence diagram onto a table—arrows labelled with missin
 
 ![Alt text](images/panel4_config_regression.png){width=640}
 
-:::hector quote
-**Hector says:** “Telemetry you *turn off* will come back for payment — with compound interest.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Telemetry you *turn off* will come back for payment — with compound interest.”
 :::
 
 ______________________________________________________________________
@@ -240,13 +240,13 @@ In your last incident, how many distinct teams posted *completely different* das
 
 ![Alt text](images/panel5_blame_game.png){width=640}
 
-:::hector quote
-**Hector says:** “Finger-pointing is the smoke. Missing telemetry is the fire.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Finger-pointing is the smoke. Missing telemetry is the fire.”
 :::
 
 ______________________________________________________________________
 
-## Panel 6 – **Hector Steps In**
+## Panel 6 – **Hector Alavaz Steps In**
 
 ### 🎯 Learning Objective
 
@@ -266,15 +266,15 @@ tracingCheck:
 
 ### Teaching Narrative
 
-Hector enters, drops his mug, and kills the conference-room lights. A single projector beam shows an old outage timeline:
+Hector Alavaz enters, drops his mug, and kills the conference-room lights. A single projector beam shows an old outage timeline:
 
 > **2017-10-03, 02 : 11 UTC** — European SEPA wires lost €23 M because trace headers were stripped by an NGINX upgrade.\
 > **Impact:** 14-hour reconciliation drill, 4 regulators, one 8-figure fine.
 
 He turns to the group. “You’re following the same script—except this time, the auditors are *already on the call*.”\
-Juana gulps; Katherine closes his blame spreadsheet. Hector flips to the next slide: a red CI step named **`telemetry-gate`**. It fails commits that disable tracing.
+Juana gulps; Katherine closes his blame spreadsheet. Hector Alavaz flips to the next slide: a red CI step named **`telemetry-gate`**. It fails commits that disable tracing.
 
-> Hector: “You built a house without smoke detectors. Then argued about who smelled smoke first.”\
+> Hector Alavaz: “You built a house without smoke detectors. Then argued about who smelled smoke first.”\
 > Wanjiru (quietly): “Let’s install detectors before we rebuild the kitchen.”
 
 :::incident flashback
@@ -285,8 +285,8 @@ During a 2021 ACH backlog, an intern hot-patched a feature flag that muted all t
 
 ![Alt text](images/panel6_hector_steps_in.png){width=640}
 
-:::hector quote
-**Hector says:** “Logs tell stories. Traces draw the crime-scene chalk. Ship both—or enjoy the unsolved mystery.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Logs tell stories. Traces draw the crime-scene chalk. Ship both—or enjoy the unsolved mystery.”
 :::
 
 ______________________________________________________________________
@@ -312,7 +312,7 @@ A single end-to-end trace short-circuits hours of speculation.
 ### Teaching Narrative
 
 Juana toggles the flag, redeploys, and reloads Grafana-Tempo. A vivid service map blossoms: `web` ➔ `auth` ➔ **`ledger-svc` (1 290 ms, red)** ➔ `db`.\
-Hector overlays the pre-fix view—an empty white void—with the new colorful DAG.
+Hector Alavaz overlays the pre-fix view—an empty white void—with the new colorful DAG.
 
 > Katherine: “That ledger hop is *7×* slower than baseline!”\
 > Wanjiru: “And every failed wire dies *right there*.”\
@@ -350,8 +350,8 @@ sequenceDiagram
 
 ![Alt text](images/panel7_corrected_view.png){width=640}
 
-:::hector quote
-**Hector says:** “Spans are receipts. Keep them, or refund the incident time.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Spans are receipts. Keep them, or refund the incident time.”
 :::
 
 ______________________________________________________________________
@@ -379,7 +379,7 @@ Instrument once; verify always; blame never.
 
 Katherine commits a guard-rail script; Wanjiru approves within seconds. CI passes. A fresh deploy rolls out; Grafana shows error rate collapsing from **12 %** to **< 0.4 %**.\
 Jamal posts in `#wire-ops`: *“Transfers cleared. Customers happy.”*\
-Silence—good silence—fills the room. Juana exhales. Hector merely nods.
+Silence—good silence—fills the room. Juana exhales. Hector Alavaz merely nods.
 
 Wanjiru turns to Katherine: “We didn’t *see* the problem because we never asked the system to speak.”\
 Katherine replies: “From now on, telemetry first, feature second.”
@@ -392,8 +392,8 @@ List two concrete CI checks you can add *today* that guarantee traces and logs r
 
 ![Alt text](images/panel8_team_realization.png){width=640}
 
-:::hector quote
-**Hector says:** “You’re not done when the code works—you’re done when the code confesses.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “You’re not done when the code works—you’re done when the code confesses.”
 :::
 
 ______________________________________________________________________
@@ -416,7 +416,7 @@ A bank’s *source of truth* must include its telemetry—or the statements are 
 
 ### Teaching Narrative
 
-The scene widens: dawn over Nairobi HQ, server-room lights dimmed, dashboards quiet. Hector locks the incident whiteboard, flips it to a clean slate, and addresses the learners:
+The scene widens: dawn over Nairobi HQ, server-room lights dimmed, dashboards quiet. Hector Alavaz locks the incident whiteboard, flips it to a clean slate, and addresses the learners:
 
 > “Today you watched a system lie through omission. You fixed the lie by giving it a louder mouth. Next time, make the mouth *before* the lie.”
 
@@ -430,8 +430,8 @@ He tosses a marker into a mug, grabs his RHEL cap, and heads for the exit.
 
 ![Alt text](images/panel9_closing_shot.png){width=640}
 
-:::hector quote
-**Hector’s Closing Line:** “Remember—if the problem can’t be *seen*, the problem will be *you*.”
+:::Hector Alavaz quote
+**Hector Alavaz’s Closing Line:** “Remember—if the problem can’t be *seen*, the problem will be *you*.”
 :::
 
 ______________________________________________________________________

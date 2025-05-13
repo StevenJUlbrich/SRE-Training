@@ -136,13 +136,13 @@ The contrasting incidents Aisha shows exemplify why financial institutions must 
 
 ## Scene Description
 
-**Burn Rate Awakening** – Hector enters with a diagram showing error budget burn across services. "You don't alert on thresholds. You alert on *threats.*"
+**Burn Rate Awakening** – Hector Alavaz enters with a diagram showing error budget burn across services. "You don't alert on thresholds. You alert on *threats.*"
 
-*Expanded narrative: Hector approaches with a printout showing a different type of graph—error budget consumption over time. "You don't alert on thresholds," he explains. "You alert on *threats*—to customer experience, to regulatory compliance, to business operations." He points to steep slopes in the graph. "This is burn rate—how quickly you're consuming your error budget. When this accelerates, real customers are being affected, regardless of what your CPU is doing."*
+*Expanded narrative: Hector Alavaz approaches with a printout showing a different type of graph—error budget consumption over time. "You don't alert on thresholds," he explains. "You alert on *threats*—to customer experience, to regulatory compliance, to business operations." He points to steep slopes in the graph. "This is burn rate—how quickly you're consuming your error budget. When this accelerates, real customers are being affected, regardless of what your CPU is doing."*
 
 ## Teaching Narrative
 
-Hector introduces a transformative concept in alerting: shifting from static thresholds to dynamic burn rates. This approach leverages Service Level Objectives (SLOs) and error budgets to create alerts that respond to changing conditions rather than fixed values. The distinction between thresholds and threats represents a fundamental evolution in how we think about system health.
+Hector Alavaz introduces a transformative concept in alerting: shifting from static thresholds to dynamic burn rates. This approach leverages Service Level Objectives (SLOs) and error budgets to create alerts that respond to changing conditions rather than fixed values. The distinction between thresholds and threats represents a fundamental evolution in how we think about system health.
 
 ## SLO-Based Alerting Explained
 
@@ -160,7 +160,7 @@ In financial services, SLO-based alerting provides several critical advantages. 
 
 ## The Threat Perspective
 
-Hector's distinction between thresholds and threats represents a powerful mental model for alert design. Thresholds are static values based on technical intuition; threats are dynamic conditions that represent actual risk to business outcomes, customer experience, or regulatory compliance.
+Hector Alavaz's distinction between thresholds and threats represents a powerful mental model for alert design. Thresholds are static values based on technical intuition; threats are dynamic conditions that represent actual risk to business outcomes, customer experience, or regulatory compliance.
 
 ## Banking Implementation Guidance
 
@@ -174,7 +174,7 @@ To implement SLO-based alerting in financial systems:
 
 4. **Compliance-Aware Budgets**: Include regulatory requirements in SLO definitions and error budget calculations
 
-Hector's burn rate diagram illustrates how this approach captures real problems while filtering noise. A momentary CPU spike might not affect error budgets at all, while a small but persistent increase in transaction failures will trigger alerts as it rapidly consumes the available error margin. This distinction helps focus attention on genuine threats to the business.
+Hector Alavaz's burn rate diagram illustrates how this approach captures real problems while filtering noise. A momentary CPU spike might not affect error budgets at all, while a small but persistent increase in transaction failures will trigger alerts as it rapidly consumes the available error margin. This distinction helps focus attention on genuine threats to the business.
 
 ## Panel 5: Fixing the Noise - Alert Engineering
 
@@ -268,13 +268,13 @@ Daniel's realization that "this is completely different" highlights the transfor
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's monologue: "Bad alerts make good engineers quit. Let's not build alarms. Let's build clarity."
+**Lesson Locked In** – Hector Alavaz's monologue: "Bad alerts make good engineers quit. Let's not build alarms. Let's build clarity."
 
-*Expanded narrative: As the team reviews the results, Hector offers a rare smile. "Bad alerts make good engineers quit," he observes. "Let's not build alarms. Let's build clarity." He gestures to the new system. "Every alert should answer three questions: What's broken? Who's affected? Where do I start looking? If it doesn't do that, it's not an alert—it's just noise." Daniel looks at his phone, newly configured with the SLO-based alerts, and for the first time in weeks, feels hope that he might actually sleep through the night.*
+*Expanded narrative: As the team reviews the results, Hector Alavaz offers a rare smile. "Bad alerts make good engineers quit," he observes. "Let's not build alarms. Let's build clarity." He gestures to the new system. "Every alert should answer three questions: What's broken? Who's affected? Where do I start looking? If it doesn't do that, it's not an alert—it's just noise." Daniel looks at his phone, newly configured with the SLO-based alerts, and for the first time in weeks, feels hope that he might actually sleep through the night.*
 
 ## Teaching Narrative
 
-Hector's closing observation captures a profound truth: alert design isn't just a technical discipline—it's a human factors challenge. His statement that "bad alerts make good engineers quit" acknowledges the real human cost of poor alerting, while his emphasis on clarity over alarms refocuses the team on the true purpose of notifications—to enable effective human response.
+Hector Alavaz's closing observation captures a profound truth: alert design isn't just a technical discipline—it's a human factors challenge. His statement that "bad alerts make good engineers quit" acknowledges the real human cost of poor alerting, while his emphasis on clarity over alarms refocuses the team on the true purpose of notifications—to enable effective human response.
 
 ## Human-Centered Alerting Explained
 
@@ -292,7 +292,7 @@ In financial services, human-centered alerting recognizes that the effectiveness
 
 ## The Three Questions
 
-Hector's three questions—"What's broken? Who's affected? Where do I start looking?"—provide a simple but powerful framework for alert design. Alerts that answer these questions enable engineers to understand the problem, prioritize it appropriately, and begin effective resolution immediately.
+Hector Alavaz's three questions—"What's broken? Who's affected? Where do I start looking?"—provide a simple but powerful framework for alert design. Alerts that answer these questions enable engineers to understand the problem, prioritize it appropriately, and begin effective resolution immediately.
 
 ## Banking Implementation Guidance
 

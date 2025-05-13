@@ -6,7 +6,7 @@
 
 **Death by Verbose Logging** – Leonel shows off a beautiful but bloated log stream. "We log everything!" he grins. Sofia raises an eyebrow.
 
-*Expanded narrative: Leonel proudly displays his terminal showing thousands of log lines scrolling by at dizzying speed. "We log EVERYTHING!" he proclaims with evident pride. "Every function call, every variable value, every CPU cycle—we've got full visibility!" Sofia, the lead architect, watches the blur of text with a raised eyebrow. She turns to Hector, who looks physically pained by the display. "Visibility isn't the same as clarity," she notes quietly.*
+*Expanded narrative: Leonel proudly displays his terminal showing thousands of log lines scrolling by at dizzying speed. "We log EVERYTHING!" he proclaims with evident pride. "Every function call, every variable value, every CPU cycle—we've got full visibility!" Sofia, the lead architect, watches the blur of text with a raised eyebrow. She turns to Hector Alavaz, who looks physically pained by the display. "Visibility isn't the same as clarity," she notes quietly.*
 
 ## Teaching Narrative
 
@@ -137,17 +137,17 @@ To implement effective structured logging in financial systems:
 
 The logs Wanjiru encounters aren't just poorly structured—they're actively failing their purpose. In financial systems, logs exist primarily to answer questions about specific transactions, particularly when something goes wrong. Logs that can't fulfill this basic purpose aren't just inefficient—they're essentially useless.
 
-## Panel 4: Hector Steps In - The Three Pillars Integration
+## Panel 4: Hector Alavaz Steps In - The Three Pillars Integration
 
 ## Scene Description
 
-**Hector Steps In** – He draws three overlapping circles labeled Logs, Metrics, Traces. "If they don't intersect, they don't help."
+**Hector Alavaz Steps In** – He draws three overlapping circles labeled Logs, Metrics, Traces. "If they don't intersect, they don't help."
 
-*Expanded narrative: Hector approaches the whiteboard and draws three circles labeled LOGS, METRICS, and TRACES with a small area where all three intersect. "Observability isn't about volume," he explains. "It's about connection. If your logs don't connect to your metrics, and your metrics don't connect to your traces, they don't help you when it matters. You need all three working together, telling the same story from different perspectives."*
+*Expanded narrative: Hector Alavaz approaches the whiteboard and draws three circles labeled LOGS, METRICS, and TRACES with a small area where all three intersect. "Observability isn't about volume," he explains. "It's about connection. If your logs don't connect to your metrics, and your metrics don't connect to your traces, they don't help you when it matters. You need all three working together, telling the same story from different perspectives."*
 
 ## Teaching Narrative
 
-This iconic whiteboard moment captures a fundamental observability principle: the three pillars are interconnected, not independent. Hector's Venn diagram visualizes how logs, metrics, and traces must work together as an integrated system rather than as separate tools. This integration turns raw data into actual insight.
+This iconic whiteboard moment captures a fundamental observability principle: the three pillars are interconnected, not independent. Hector Alavaz's Venn diagram visualizes how logs, metrics, and traces must work together as an integrated system rather than as separate tools. This integration turns raw data into actual insight.
 
 ## The Three Pillars Integration Explained
 
@@ -169,7 +169,7 @@ In financial services, this integration is essential for both operational and re
 
 ## The Intersection Value
 
-Hector's emphasis on the intersection of the three circles highlights a critical insight: the most valuable observability occurs where the pillars overlap. A metric spike becomes actionable when you can find the associated logs; log errors become solvable when you can see the traces they're part of.
+Hector Alavaz's emphasis on the intersection of the three circles highlights a critical insight: the most valuable observability occurs where the pillars overlap. A metric spike becomes actionable when you can find the associated logs; log errors become solvable when you can see the traces they're part of.
 
 ## Banking Implementation Guidance
 
@@ -183,15 +183,15 @@ To achieve three-pillar integration in financial systems:
 
 4. **Context Preservation**: Ensure critical business context (transaction types, amounts, statuses) appears consistently across all telemetry forms
 
-Hector's statement that "if they don't intersect, they don't help" emphasizes that isolated telemetry creates fragmented understanding. In financial systems, where complex transactions flow across dozens of services, this fragmentation isn't just inefficient—it's dangerous.
+Hector Alavaz's statement that "if they don't intersect, they don't help" emphasizes that isolated telemetry creates fragmented understanding. In financial systems, where complex transactions flow across dozens of services, this fragmentation isn't just inefficient—it's dangerous.
 
 ## Panel 5: Metric Hygiene Clinic - Naming and Ownership
 
 ## Scene Description
 
-**Metric Hygiene Clinic** – Clara points out a metric labeled `service_latency_time_chart_thing`. Hector winces audibly.
+**Metric Hygiene Clinic** – Clara points out a metric labeled `service_latency_time_chart_thing`. Hector Alavaz winces audibly.
 
-*Expanded narrative: Clara, the observability specialist, projects a list of current metrics onto the screen. She highlights one labeled `service_latency_time_chart_thing`. "What does this actually measure?" she asks the room. Silence. "Who owns it?" More silence. "What's the threshold for concern?" Complete silence. Hector winces audibly. "If you can't answer those questions, the metric is worse than useless—it's misleading," he states. "It gives the illusion of observability without the substance."*
+*Expanded narrative: Clara, the observability specialist, projects a list of current metrics onto the screen. She highlights one labeled `service_latency_time_chart_thing`. "What does this actually measure?" she asks the room. Silence. "Who owns it?" More silence. "What's the threshold for concern?" Complete silence. Hector Alavaz winces audibly. "If you can't answer those questions, the metric is worse than useless—it's misleading," he states. "It gives the illusion of observability without the substance."*
 
 ## Teaching Narrative
 
@@ -213,7 +213,7 @@ In financial services, metric clarity is particularly important. Banking operati
 
 ## The Illusion of Observability
 
-Hector's observation that poor metrics create "the illusion of observability without the substance" highlights a dangerous reality: having metrics doesn't mean having insight. Poorly defined metrics create false confidence while actually obscuring system understanding—a condition worse than having no metrics at all.
+Hector Alavaz's observation that poor metrics create "the illusion of observability without the substance" highlights a dangerous reality: having metrics doesn't mean having insight. Poorly defined metrics create false confidence while actually obscuring system understanding—a condition worse than having no metrics at all.
 
 ## Banking Implementation Guidance
 
@@ -326,13 +326,13 @@ The "ah-ha" moment in this scene represents the ultimate goal of observability: 
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's dry monologue over the scene: "Logs are your system's mouth. Metrics are its mood. Don't confuse ranting with reasoning."
+**Lesson Locked In** – Hector Alavaz's dry monologue over the scene: "Logs are your system's mouth. Metrics are its mood. Don't confuse ranting with reasoning."
 
-*Expanded narrative: Hector surveys the team's progress with quiet approval. "Logs are your system's mouth—they tell you what it's experiencing," he observes. "Metrics are its mood—they tell you how it's feeling over time. Traces are its memory—they tell you what happened in what order." He glances at Leonel. "Don't confuse ranting with reasoning. A system that shouts everything communicates nothing."*
+*Expanded narrative: Hector Alavaz surveys the team's progress with quiet approval. "Logs are your system's mouth—they tell you what it's experiencing," he observes. "Metrics are its mood—they tell you how it's feeling over time. Traces are its memory—they tell you what happened in what order." He glances at Leonel. "Don't confuse ranting with reasoning. A system that shouts everything communicates nothing."*
 
 ## Teaching Narrative
 
-Hector's anthropomorphic metaphor represents a profound shift in how we conceptualize observability: not as passive data collection but as active communication between systems and operators. This reframing transforms telemetry from technical measurements into a form of language through which systems express their state and behavior.
+Hector Alavaz's anthropomorphic metaphor represents a profound shift in how we conceptualize observability: not as passive data collection but as active communication between systems and operators. This reframing transforms telemetry from technical measurements into a form of language through which systems express their state and behavior.
 
 ## Telemetry Anthropomorphism Explained
 
@@ -350,7 +350,7 @@ In financial services, this anthropomorphic frame helps teams design more effect
 
 ## The Quality vs. Quantity Insight
 
-Hector's observation that "a system that shouts everything communicates nothing" captures a crucial truth: effective communication requires selectivity and focus. This principle applies equally to human communication and system telemetry—both become less effective when overwhelmed with irrelevant details.
+Hector Alavaz's observation that "a system that shouts everything communicates nothing" captures a crucial truth: effective communication requires selectivity and focus. This principle applies equally to human communication and system telemetry—both become less effective when overwhelmed with irrelevant details.
 
 ## Banking Implementation Guidance
 

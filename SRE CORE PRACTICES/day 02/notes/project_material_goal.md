@@ -15,7 +15,7 @@ This curriculum pioneers a hybrid approach that combines:
 Narrative Teaching: Conversational, story-driven explanations of technical concepts
 Visual Panels: Sequential art depicting real-world scenarios and technical visualizations
 Technical Depth: Substantial prose sections with banking-specific examples and practical applications
-Character Development: Consistent characterization of Hector and supporting cast to create emotional investment in the learning journey
+Character Development: Consistent characterization of Hector Alavaz and supporting cast to create emotional investment in the learning journey
 
 Target Outcomes
 The curriculum aims to transform how banking professionals approach system reliability by:

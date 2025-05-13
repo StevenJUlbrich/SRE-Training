@@ -39,7 +39,7 @@ ______________________________________________________________________
 
 ### Scene Description
 
-A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.
+A diverse team sits in a bright meeting room with large windows overlooking the banking district. The walls are covered with visualization boards showing recent incident timelines, system diagrams, and sticky notes with insights. In the center, Katherine, an SRE lead, stands beside Hector Alavaz, a former production support specialist now transitioning to SRE. They're reviewing a complex timeline of a recent payment processing outage. On the screen, a "Lessons Learned" document is being collaboratively edited in real-time as team members contribute insights rather than assigning blame.
 
 ### Teaching Narrative
 
@@ -53,12 +53,12 @@ Six months later, a nearly identical outage occurred during another high-volume 
 
 #### Visual Comparison of Incident Reviews
 
-| **Aspect** | **Incident 1** | **Incident 2** | **Missed Opportunity** |
+| **Aspect**                        | **Incident 1**                                | **Incident 2**                                 | **Missed Opportunity**                             |
 | --------------------------------- | --------------------------------------------- | ---------------------------------------------- | -------------------------------------------------- |
-| **Technical Trigger** | Payment gateway capacity limitation | Unexpected load from new promotional feature | Lack of holistic capacity planning across systems |
-| **Focus of Post-Incident Review** | Root cause: insufficient capacity | Root cause: unexpected load | Failure to recognize shared systemic patterns |
-| **Action Taken** | Increased payment gateway capacity thresholds | Isolated improvement to promo load handling | No comprehensive updates to load testing practices |
-| **Systemic Factors Overlooked** | Capacity planning process, holiday readiness | Interdependencies between promotional features | Cross-functional readiness and proactive scaling |
+| **Technical Trigger**             | Payment gateway capacity limitation           | Unexpected load from new promotional feature   | Lack of holistic capacity planning across systems  |
+| **Focus of Post-Incident Review** | Root cause: insufficient capacity             | Root cause: unexpected load                    | Failure to recognize shared systemic patterns      |
+| **Action Taken**                  | Increased payment gateway capacity thresholds | Isolated improvement to promo load handling    | No comprehensive updates to load testing practices |
+| **Systemic Factors Overlooked**   | Capacity planning process, holiday readiness  | Interdependencies between promotional features | Cross-functional readiness and proactive scaling   |
 
 #### Systemic Issues Diagram
 
@@ -254,13 +254,13 @@ The most effective SRE organizations systematically build psychological safety t
 
 Below is a summary of five key evidence-based approaches, their purpose, and expected outcomes:
 
-| **Approach** | **Purpose** | **Expected Outcomes** |
+| **Approach**                          | **Purpose**                                                                                          | **Expected Outcomes**                                                                                 |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Safety Climate Assessment** | Measure psychological safety across teams using validated survey instruments. | Identify specific barriers to open communication and areas requiring improvement. |
-| **Leader Behavior Analysis** | Observe and evaluate how leaders respond to failures, mistakes, and bad news. | Provide actionable feedback to leaders on behaviors that enhance or undermine psychological safety. |
-| **Communication Pattern Measurement** | Analyze team interactions, including conversational turn-taking and response to dissenting opinions. | Gain insights into how ideas are shared and ensure inclusive, respectful team dynamics. |
-| **Incident Response Evaluation** | Review handling of unexpected events to assess focus on learning versus blame. | Promote learning-focused responses, improving systemic reliability and reducing fear of repercussion. |
-| **Near-Miss Reporting Analysis** | Track voluntary reports of problems that did not yet cause incidents. | Increase early detection of potential issues, fostering a proactive reliability culture. |
+| **Safety Climate Assessment**         | Measure psychological safety across teams using validated survey instruments.                        | Identify specific barriers to open communication and areas requiring improvement.                     |
+| **Leader Behavior Analysis**          | Observe and evaluate how leaders respond to failures, mistakes, and bad news.                        | Provide actionable feedback to leaders on behaviors that enhance or undermine psychological safety.   |
+| **Communication Pattern Measurement** | Analyze team interactions, including conversational turn-taking and response to dissenting opinions. | Gain insights into how ideas are shared and ensure inclusive, respectful team dynamics.               |
+| **Incident Response Evaluation**      | Review handling of unexpected events to assess focus on learning versus blame.                       | Promote learning-focused responses, improving systemic reliability and reducing fear of repercussion. |
+| **Near-Miss Reporting Analysis**      | Track voluntary reports of problems that did not yet cause incidents.                                | Increase early detection of potential issues, fostering a proactive reliability culture.              |
 
 Organizations that implement these measurement-based approaches show 4-5 times higher rates of early problem detection and significantly reduced time to resolve incidents. By creating an environment where team members freely share information without fear of repercussions, these practices enable continuous improvement and long-term systemic reliability.
 
@@ -552,14 +552,14 @@ The absence of a questioning culture creates specific business consequences in b
 
 #### Key Metrics Comparison: High-Inquiry vs. Low-Inquiry Organizations
 
-| Metric | High-Inquiry Organizations | Low-Inquiry Organizations | Impact |
+| Metric                              | High-Inquiry Organizations               | Low-Inquiry Organizations          | Impact                                                                                                        |
 | ----------------------------------- | ---------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Systemic Risk Discovery Rate** | 60-70% | 20-30% | High-inquiry organizations identify more systemic risks proactively, reducing incident likelihood. |
-| **Change Failure Rate** | 1-2x | 3-4x | Robust questioning mitigates unidentified assumptions, lowering change failure risks. |
-| **Expertise Dependency** | Distributed across teams | Concentrated on individuals | Inquiry cultures reduce reliance on specific individuals, ensuring operational continuity during transitions. |
-| **Adaptation Rates During Change** | Rapid (adaptive response 40% faster) | Slower (50-60% lower rate) | Inquiry enables faster responses to market or organizational changes. |
-| **Regulatory Compliance Findings** | Fewer findings (higher "risk awareness") | More findings (undocumented risks) | Strong inquiry reduces regulatory vulnerabilities by surfacing hidden risks. |
-| **Digital Transformation Outcomes** | 62% fewer critical incidents | Higher incident rates | Inquiry cultures maintain stability during large-scale transformations. |
+| **Systemic Risk Discovery Rate**    | 60-70%                                   | 20-30%                             | High-inquiry organizations identify more systemic risks proactively, reducing incident likelihood.            |
+| **Change Failure Rate**             | 1-2x                                     | 3-4x                               | Robust questioning mitigates unidentified assumptions, lowering change failure risks.                         |
+| **Expertise Dependency**            | Distributed across teams                 | Concentrated on individuals        | Inquiry cultures reduce reliance on specific individuals, ensuring operational continuity during transitions. |
+| **Adaptation Rates During Change**  | Rapid (adaptive response 40% faster)     | Slower (50-60% lower rate)         | Inquiry enables faster responses to market or organizational changes.                                         |
+| **Regulatory Compliance Findings**  | Fewer findings (higher "risk awareness") | More findings (undocumented risks) | Strong inquiry reduces regulatory vulnerabilities by surfacing hidden risks.                                  |
+| **Digital Transformation Outcomes** | 62% fewer critical incidents             | Higher incident rates              | Inquiry cultures maintain stability during large-scale transformations.                                       |
 
 #### Additional Insights
 
@@ -675,13 +675,13 @@ This lack of knowledge sharing came at a significant cost. Throughout the organi
 
 High-reliability organizations implement deliberate knowledge diffusion strategies based on network theory and organizational learning research. These evidence-based approaches create multiple interconnected pathways for reliability knowledge to flow throughout the organization. Below is a checklist summarizing these practices, their benefits, and tips for implementation:
 
-| Practice | Benefits | Implementation Tips |
+| Practice                             | Benefits                                                                                                  | Implementation Tips                                                                                          |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Knowledge Network Mapping** | - Identifies bottlenecks and knowledge silos.<br>- Pinpoints bridge-builders for improved knowledge flow. | - Use tools like graph visualization software.<br>- Regularly update maps to reflect organizational changes. |
-| **Community of Practice Structures** | - Encourages cross-functional collaboration.<br>- Fosters continuous learning across boundaries. | - Define clear goals and domains for each community.<br>- Provide facilitation and dedicated resources. |
-| **Expertise Locator Systems** | - Reduces time spent searching for experts.<br>- Improves incident resolution speed. | - Implement searchable internal directories.<br>- Use tags or profiles to highlight areas of expertise. |
-| **Multi-Modal Knowledge Sharing** | - Accommodates diverse learning styles.<br>- Increases accessibility to critical knowledge. | - Combine formats like workshops, documentation, and mentoring.<br>- Tailor approaches to team needs. |
-| **Cross-Team Incident Analysis** | - Extracts broader insights from incidents.<br>- Reduces repeated issues through shared learnings. | - Invite participants from multiple teams.<br>- Document lessons learned in a shared repository. |
+| **Knowledge Network Mapping**        | - Identifies bottlenecks and knowledge silos.<br>- Pinpoints bridge-builders for improved knowledge flow. | - Use tools like graph visualization software.<br>- Regularly update maps to reflect organizational changes. |
+| **Community of Practice Structures** | - Encourages cross-functional collaboration.<br>- Fosters continuous learning across boundaries.          | - Define clear goals and domains for each community.<br>- Provide facilitation and dedicated resources.      |
+| **Expertise Locator Systems**        | - Reduces time spent searching for experts.<br>- Improves incident resolution speed.                      | - Implement searchable internal directories.<br>- Use tags or profiles to highlight areas of expertise.      |
+| **Multi-Modal Knowledge Sharing**    | - Accommodates diverse learning styles.<br>- Increases accessibility to critical knowledge.               | - Combine formats like workshops, documentation, and mentoring.<br>- Tailor approaches to team needs.        |
+| **Cross-Team Incident Analysis**     | - Extracts broader insights from incidents.<br>- Reduces repeated issues through shared learnings.        | - Invite participants from multiple teams.<br>- Document lessons learned in a shared repository.             |
 
 Organizations implementing these structured knowledge diffusion approaches show measurable improvements, including:
 
@@ -695,13 +695,13 @@ By leveraging these evidence-based strategies, organizations can treat knowledge
 
 Siloed knowledge creates specific business consequences in banking environments. The table below compares key outcomes between banks with effective knowledge diffusion networks and those with ineffective ones:
 
-| **Impact Area** | **Effective Knowledge Diffusion** | **Ineffective Knowledge Diffusion** |
+| **Impact Area**                | **Effective Knowledge Diffusion**                                      | **Ineffective Knowledge Diffusion**                                                  |
 | ------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| **Recovery Time Disparity** | Consistent recovery times across systems during major incidents. | 4-8 times greater variance in recovery times. |
-| **Solution Reinvention Costs** | Minimal duplication of effort, maximizing engineering capacity. | 15-20% of engineering capacity spent redeveloping existing solutions. |
-| **Customer Experience** | Reliable and consistent performance across all banking products. | Unpredictable and inconsistent reliability profiles. |
-| **Regulatory Response** | Unified and efficient implementation of compliance requirements. | Fragmented responses increasing compliance costs and risks. |
-| **Expertise Vulnerability** | Knowledge distributed across teams, reducing single points of failure. | Critical knowledge concentrated in specific individuals, creating operational risks. |
+| **Recovery Time Disparity**    | Consistent recovery times across systems during major incidents.       | 4-8 times greater variance in recovery times.                                        |
+| **Solution Reinvention Costs** | Minimal duplication of effort, maximizing engineering capacity.        | 15-20% of engineering capacity spent redeveloping existing solutions.                |
+| **Customer Experience**        | Reliable and consistent performance across all banking products.       | Unpredictable and inconsistent reliability profiles.                                 |
+| **Regulatory Response**        | Unified and efficient implementation of compliance requirements.       | Fragmented responses increasing compliance costs and risks.                          |
+| **Expertise Vulnerability**    | Knowledge distributed across teams, reducing single points of failure. | Critical knowledge concentrated in specific individuals, creating operational risks. |
 
 A comparative analysis of financial institutions during major system transformations found that:
 
@@ -877,13 +877,13 @@ The absence of structured experimentation creates specific business consequences
 
 #### Comparative Metrics: Banks With vs. Without Experimentation Practices
 
-| Metric | Banks With Experimentation Practices | Banks Without Experimentation Practices |
+| Metric                                       | Banks With Experimentation Practices | Banks Without Experimentation Practices  |
 | -------------------------------------------- | ------------------------------------ | ---------------------------------------- |
-| **Transaction Success Rate** | 99.95% | 92.3% |
-| **Average Recovery Time (Complex Incident)** | 30 minutes | 2-3 hours |
-| **Discovery of Failure Modes** | 80%+ discovered via controlled tests | 70-80% discovered via incidents |
-| **Change Implementation Risk** | Low, due to validated safeguards | High, leading to excessive risk aversion |
-| **Regulatory Non-Compliance Incidents** | Rare | Frequent |
+| **Transaction Success Rate**                 | 99.95%                               | 92.3%                                    |
+| **Average Recovery Time (Complex Incident)** | 30 minutes                           | 2-3 hours                                |
+| **Discovery of Failure Modes**               | 80%+ discovered via controlled tests | 70-80% discovered via incidents          |
+| **Change Implementation Risk**               | Low, due to validated safeguards     | High, leading to excessive risk aversion |
+| **Regulatory Non-Compliance Incidents**      | Rare                                 | Frequent                                 |
 
 This comparative analysis highlights the tangible benefits of robust experimentation practices in banking environments. By proactively testing system behaviors and understanding failure modes in controlled conditions, organizations significantly reduce downtime, improve customer experiences, and meet regulatory expectations. The data underscores that safe experimentation is not merely an operational enhancement but a strategic necessity for modern financial institutions.
 
@@ -970,15 +970,15 @@ Below is a simplified text-based representation of the scene setup:
 ```
 +-----------------------------------------------+
 |                     SCREEN                    |
-|   Learning Metrics Dashboard                  |
-|   ----------------------------------------    |
-|   Key Indicators:                             |
-|   - Time to Detect and Resolve Incidents      |
-|   - Percentage of Repeat Incidents            |
-|   - Knowledge Base Utilization Rates          |
-|   - Team Learning Satisfaction Scores         |
-|                                               |
-|   [Closed Loops: Before/After Metrics]        |
+| Learning Metrics Dashboard             |
+| -------------------------------------- |
+| Key Indicators:                        |
+| - Time to Detect and Resolve Incidents |
+| - Percentage of Repeat Incidents       |
+| - Knowledge Base Utilization Rates     |
+| - Team Learning Satisfaction Scores    |
+|                                        |
+| [Closed Loops: Before/After Metrics]   |
 +-----------------------------------------------+
 
 +------------------+      +--------------------+
@@ -990,11 +990,11 @@ Below is a simplified text-based representation of the scene setup:
 
 +-----------------------------------------------+
 | WALL-MOUNTED SCREEN                            |
-|   Learning Roadmap                             |
-|   ----------------------------------------    |
-|   Past Insights -> Future Initiatives         |
-|   (e.g., improved documentation,              |
-|   reduced resolution times)                   |
+| Learning Roadmap                    |
+| ----------------------------------- |
+| Past Insights -> Future Initiatives |
+| (e.g., improved documentation,      |
+| reduced resolution times)           |
 +-----------------------------------------------+
 ```
 
@@ -1010,12 +1010,12 @@ A large corporate bank conducted thorough post-incident reviews after each major
 
 An audit of the past two years' incidents revealed alarming statistics:
 
-| Metric | Value |
+| Metric                                       | Value                                                      |
 | -------------------------------------------- | ---------------------------------------------------------- |
-| High-priority recommendations unimplemented | 78% |
-| Recurring issues identified | 64% |
-| Estimated financial cost of repeated outages | $45M in delayed payments and lost interest |
-| Notable incidents | Critical authentication system failed 3 times in 18 months |
+| High-priority recommendations unimplemented  | 78%                                                        |
+| Recurring issues identified                  | 64%                                                        |
+| Estimated financial cost of repeated outages | $45M in delayed payments and lost interest                 |
+| Notable incidents                            | Critical authentication system failed 3 times in 18 months |
 
 When a critical authentication system failed for the third time in 18 months, executives were shocked to discover that the exact same root cause had been identified twice before, with clear remediation steps documented but never implemented. Without closed feedback loops connecting insights to actions and measurements, the organization was experiencing the same failures repeatedly despite having already discovered how to prevent them. The repeated treasury platform outages severely damaged the bank's reputation in a highly competitive market segment.
 
@@ -1051,13 +1051,13 @@ Organizations implementing these robust feedback loop systems demonstrate 70-80%
 
 The absence of closed learning loops creates specific business consequences in banking environments. The table below compares the impacts of weak versus strong feedback systems across key dimensions:
 
-| **Dimension** | **Weak Feedback Systems** | **Strong Feedback Systems** |
+| **Dimension**                | **Weak Feedback Systems**                                                                | **Strong Feedback Systems**                                                 |
 | ---------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **Recurring Incident Costs** | 3-5x higher rates of repeat incidents; each recurrence costing 120-150% of the original. | Significant reduction in repeat incidents; cost of recurrence minimized. |
-| **Engineering Resources** | 30-40% of engineering capacity wasted on rediscovering/readdressing known issues. | Engineering focus shifts to innovation; minimal time spent on rediscovery. |
-| **Compliance Remediation** | Regulatory findings remain open longer; higher recurrence rates. | Faster closure of regulatory findings; recurrence rates drop significantly. |
-| **Customer Confidence** | Transaction volumes decline after repeated similar incidents. | Increased customer trust and retention due to demonstrated improvements. |
-| **Competitive Position** | Slower innovation cycles; higher operational costs. | Faster innovation cycles; more efficient operations and cost advantages. |
+| **Recurring Incident Costs** | 3-5x higher rates of repeat incidents; each recurrence costing 120-150% of the original. | Significant reduction in repeat incidents; cost of recurrence minimized.    |
+| **Engineering Resources**    | 30-40% of engineering capacity wasted on rediscovering/readdressing known issues.        | Engineering focus shifts to innovation; minimal time spent on rediscovery.  |
+| **Compliance Remediation**   | Regulatory findings remain open longer; higher recurrence rates.                         | Faster closure of regulatory findings; recurrence rates drop significantly. |
+| **Customer Confidence**      | Transaction volumes decline after repeated similar incidents.                            | Increased customer trust and retention due to demonstrated improvements.    |
+| **Competitive Position**     | Slower innovation cycles; higher operational costs.                                      | Faster innovation cycles; more efficient operations and cost advantages.    |
 
 An analysis of digital banking transformation initiatives highlights the tangible benefits of strong feedback systems. Organizations with robust learning loops completed similar projects with 40% fewer critical defects and maintained 25-30% higher customer satisfaction during transition periods.
 
@@ -1157,12 +1157,12 @@ Learning organizations create structures that scale learning beyond individual t
 
 A multinational bank operated retail banking services across 14 countries, with each regional division maintaining independent technology teams and systems. The following table highlights a recurring issue that exemplifies the challenge of localized learning in the organization:
 
-| **Region** | **Incident Description** | **Time to Diagnose & Resolve** | **Root Cause** | **Impact** |
+| **Region**    | **Incident Description**                                 | **Time to Diagnose & Resolve** | **Root Cause**                                                                    | **Impact**                                                                                             |
 | ------------- | -------------------------------------------------------- | ------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Europe | Severe authentication failure on mobile banking platform | 18 hours | Interaction issue between identity provider and backend systems during peak load | Outage during peak hours, affecting millions of customers and requiring emergency engineering efforts. |
-| Asia-Pacific | Nearly identical authentication failure | 22 hours | Same interaction issue as Europe, rediscovered independently | Prolonged downtime, repeated engineering effort, significant customer dissatisfaction. |
-| North America | Backend system crash under high traffic | 15 hours | Similar load-related interaction issue identified after extensive troubleshooting | Service disruption, high engineering cost, and preventable customer churn. |
-| South America | Mobile platform failure during promotional event | 20 hours | Root cause traced to same backend interaction problem | Lost revenue due to failed transactions during a high-demand period. |
+| Europe        | Severe authentication failure on mobile banking platform | 18 hours                       | Interaction issue between identity provider and backend systems during peak load  | Outage during peak hours, affecting millions of customers and requiring emergency engineering efforts. |
+| Asia-Pacific  | Nearly identical authentication failure                  | 22 hours                       | Same interaction issue as Europe, rediscovered independently                      | Prolonged downtime, repeated engineering effort, significant customer dissatisfaction.                 |
+| North America | Backend system crash under high traffic                  | 15 hours                       | Similar load-related interaction issue identified after extensive troubleshooting | Service disruption, high engineering cost, and preventable customer churn.                             |
+| South America | Mobile platform failure during promotional event         | 20 hours                       | Root cause traced to same backend interaction problem                             | Lost revenue due to failed transactions during a high-demand period.                                   |
 
 #### Aggregated Impact
 

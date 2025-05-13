@@ -12,7 +12,7 @@
    - **Motion:** Energetic and tense, pointing at the screen.
    - **Props:** Circuit board tattoo on forearm, earbuds half-in, tipped coffee cup.
 
-2. **Hector**
+2. **Hector Alavaz**
 
    - **Appearance:** 49-year-old Mexican man, medium build, 5'10", with a weathered medium-brown complexion. His angular face is complemented by a neatly trimmed salt-and-pepper beard and intense hazel eyes with visible crow's feet. He wears a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
    - **Motion:** Calm and focused, standing with a grounded presence.
@@ -27,12 +27,12 @@
 
 - **Daniel:** “Must be the network again.”
 - **Njeri:** “Traceroute’s spotless—let’s not indict Layer 1 without evidence.”
-- **Hector:** “Assumptions are the first thing to fail.”
+- **Hector Alavaz:** “Assumptions are the first thing to fail.”
 
 **Narration**
 
 - Top-left corner of the panel, integrated within the scene:\
-  *“Network blame emerges despite clean metrics; Hector challenges bias.”*
+  *“Network blame emerges despite clean metrics; Hector Alavaz challenges bias.”*
 
 **Visual Style**
 
@@ -54,7 +54,7 @@
 
 **Constraints**
 
-- Characters are arranged left-to-right consistent with speaking order: Daniel, Njeri, Hector.
+- Characters are arranged left-to-right consistent with speaking order: Daniel, Njeri, Hector Alavaz.
 - Speech bubbles are clear of panel edges and ambient elements, ensuring all dialogue is legible.
 - Narration is distinct and not within a speech bubble, with a semi-transparent background for readability.
 - The panel is designed for enterprise training documentation, ensuring clarity and focus on the key message.

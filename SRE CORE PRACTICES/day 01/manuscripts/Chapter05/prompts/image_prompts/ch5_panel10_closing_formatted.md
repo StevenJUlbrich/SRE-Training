@@ -2,11 +2,11 @@
 
 #### Scene
 
-- Close-up of a whiteboard now covered in System Blue (#3478F6) sticky notes, each labeled with an action item and bold Rust Red (#8B2E2E) checkmark. Hector is pressing the final checkmark with a Rust Red marker, his cap brim low, casting a shadow over his eyes. A side screen displays an ATM dispensing $20, with cash notes illuminated by the off-white ATM light (#EDEDED). Omar clutches a notebook titled ‘Lava-Proof Checklist’. The room lighting shifts to a warm amber, signaling resolution.
+- Close-up of a whiteboard now covered in System Blue (#3478F6) sticky notes, each labeled with an action item and bold Rust Red (#8B2E2E) checkmark. Hector Alavaz is pressing the final checkmark with a Rust Red marker, his cap brim low, casting a shadow over his eyes. A side screen displays an ATM dispensing $20, with cash notes illuminated by the off-white ATM light (#EDEDED). Omar clutches a notebook titled ‘Lava-Proof Checklist’. The room lighting shifts to a warm amber, signaling resolution.
 
 #### Characters In Frame
 
-1. **Hector** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, short, neatly trimmed salt-and-pepper beard, intense hazel eyes with crow's feet, serious and analytical expression, wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
+1. **Hector Alavaz** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, short, neatly trimmed salt-and-pepper beard, intense hazel eyes with crow's feet, serious and analytical expression, wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Intentional, focused energy; rarely gestures unless explaining failure.
@@ -30,7 +30,7 @@
 #### Dialogue (speech bubbles, off-white #EDEDED, tails pointing to speakers)
 
 - **Omar:** “What if we miss a sin next time?”
-- **Hector:** “Volcanoes don’t grant second warnings.”
+- **Hector Alavaz:** “Volcanoes don’t grant second warnings.”
 
 #### Narration
 
@@ -57,7 +57,7 @@
 
 #### Constraints
 
-- Characters arranged left-to-right consistent with speaking order: Omar, Hector.
+- Characters arranged left-to-right consistent with speaking order: Omar, Hector Alavaz.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

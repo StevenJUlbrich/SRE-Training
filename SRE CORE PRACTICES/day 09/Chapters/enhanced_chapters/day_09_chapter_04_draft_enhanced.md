@@ -44,11 +44,11 @@ A tense meeting room where Katherine, an SRE lead, stands at a whiteboard that's
 
 ```
 +-------------------------+---------------------------+
-| Traditional Reliability | Error Budget Visualization|
-|-------------------------|---------------------------|
-| 99.99% Uptime           | Service A: 40% Consumed  |
-| (Red Circle)            | Service B: 60% Consumed  |
-|                         | Service C: 20% Consumed  |
+| Traditional Reliability | Error Budget Visualization |
+| ----------------------- | -------------------------- |
+| 99.99% Uptime           | Service A: 40% Consumed    |
+| (Red Circle)            | Service B: 60% Consumed    |
+|                         | Service C: 20% Consumed    |
 +-------------------------+---------------------------+
 ```
 
@@ -68,24 +68,24 @@ In a major retail banking platform, the operations team maintained an absolute f
 
 #### Comparison: Rigid Uptime Focus vs Balanced Error Budget Approach
 
-| Aspect | Rigid Uptime Focus | Balanced Error Budget Approach |
+| Aspect                   | Rigid Uptime Focus                                                                  | Balanced Error Budget Approach                       |
 | ------------------------ | ----------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| **Incident Handling** | Every issue, regardless of severity, freezes releases | Minor issues consume part of the error budget |
-| **Impact on Innovation** | Delayed feature rollouts and reduced velocity | Faster delivery of high-value features |
-| **Team Dynamics** | High tension between dev and ops teams | Collaborative decision-making between teams |
-| **Risk Management** | Fear-based, avoiding all failures | Data-driven, accepting controlled risk |
-| **Customer Value** | Focus on maintaining "perfect" uptime, often at the expense of feature enhancements | Reliability balanced with impactful feature delivery |
+| **Incident Handling**    | Every issue, regardless of severity, freezes releases                               | Minor issues consume part of the error budget        |
+| **Impact on Innovation** | Delayed feature rollouts and reduced velocity                                       | Faster delivery of high-value features               |
+| **Team Dynamics**        | High tension between dev and ops teams                                              | Collaborative decision-making between teams          |
+| **Risk Management**      | Fear-based, avoiding all failures                                                   | Data-driven, accepting controlled risk               |
+| **Customer Value**       | Focus on maintaining "perfect" uptime, often at the expense of feature enhancements | Reliability balanced with impactful feature delivery |
 
 ### SRE Best Practice: Evidence-Based Investigation
 
 To transform this culture, SRE teams implement evidence-based reliability targets through systematic collection and analysis. Below is a checklist summarizing the four core evidence-based approaches:
 
-| Evidence-Based Approach | Key Focus | Example Use Case |
+| Evidence-Based Approach       | Key Focus                                   | Example Use Case                                                                                                                   |
 | ----------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Customer Impact Data** | Measure actual customer experience metrics. | Transaction processing requires 99.99% reliability, while account history views may only need 99.9%. |
-| **Competitive Analysis** | Benchmark reliability within the industry. | Identify that competitors balance feature richness with appropriate reliability, rather than aiming for perfection. |
-| **Cost-Benefit Analysis** | Quantify the cost of "perfect" reliability. | Highlight diminishing returns on engineering hours and infrastructure costs beyond certain thresholds. |
-| **User Expectation Research** | Survey and analyze user expectations. | Determine that customers expect higher reliability for critical services but tolerate lower reliability for non-critical features. |
+| **Customer Impact Data**      | Measure actual customer experience metrics. | Transaction processing requires 99.99% reliability, while account history views may only need 99.9%.                               |
+| **Competitive Analysis**      | Benchmark reliability within the industry.  | Identify that competitors balance feature richness with appropriate reliability, rather than aiming for perfection.                |
+| **Cost-Benefit Analysis**     | Quantify the cost of "perfect" reliability. | Highlight diminishing returns on engineering hours and infrastructure costs beyond certain thresholds.                             |
+| **User Expectation Research** | Survey and analyze user expectations.       | Determine that customers expect higher reliability for critical services but tolerate lower reliability for non-critical features. |
 
 #### Checklist: Applying Evidence-Based Investigation
 
@@ -237,12 +237,12 @@ Without a quantified error budget, the team lacked a structured framework to eva
 
 To establish effective error budgets, SRE teams follow a systematic, evidence-based process. Below is a summarized checklist of the four key steps, including their actions and outcomes:
 
-| Step | Key Actions | Key Outcomes |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1. Service Performance Baseline** | - Gather historical performance data (e.g., transaction volumes, error rates, latency). <br>- Analyze seasonal or periodic trends. | - Clear definition of normal operational parameters. <br>- Identification of performance outliers. |
-| **2. Customer Impact Correlation** | - Map incidents to customer feedback (e.g., complaints, support tickets, abandonment rates). <br>- Assess thresholds where customers perceive disruptions. | - Realistic reliability thresholds based on customer experience. <br>- Alignment of technical metrics with customer impact. |
-| **3. Business Cycle Analysis** | - Examine transaction peaks during critical periods (e.g., month-end, tax season). <br>- Identify high-reliability windows. | - Dynamic error budgets aligned with business-critical timelines. <br>- Improved prioritization of resources for high-impact periods. |
-| **4. Component Dependency Mapping** | - Map upstream and downstream service dependencies. <br>- Analyze cascading failure risks. | - Comprehensive understanding of service chain reliability needs. <br>- Tailored error budgets to account for interdependencies. |
+| Step                                | Key Actions                                                                                                                                                | Key Outcomes                                                                                                                          |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Service Performance Baseline** | - Gather historical performance data (e.g., transaction volumes, error rates, latency). <br>- Analyze seasonal or periodic trends.                         | - Clear definition of normal operational parameters. <br>- Identification of performance outliers.                                    |
+| **2. Customer Impact Correlation**  | - Map incidents to customer feedback (e.g., complaints, support tickets, abandonment rates). <br>- Assess thresholds where customers perceive disruptions. | - Realistic reliability thresholds based on customer experience. <br>- Alignment of technical metrics with customer impact.           |
+| **3. Business Cycle Analysis**      | - Examine transaction peaks during critical periods (e.g., month-end, tax season). <br>- Identify high-reliability windows.                                | - Dynamic error budgets aligned with business-critical timelines. <br>- Improved prioritization of resources for high-impact periods. |
+| **4. Component Dependency Mapping** | - Map upstream and downstream service dependencies. <br>- Analyze cascading failure risks.                                                                 | - Comprehensive understanding of service chain reliability needs. <br>- Tailored error budgets to account for interdependencies.      |
 
 This evidence-based approach ensures error budgets are grounded in real data rather than arbitrary standards. By following these steps, SRE teams can confidently allocate reliability resources where they matter most.
 
@@ -370,16 +370,16 @@ This timeline illustrates the cause-and-effect relationship that led to the cris
 
 To implement effective circuit breakers, SRE teams establish robust measurement and response frameworks. These evidence-based practices ensure circuit breakers trigger based on meaningful reliability signals rather than arbitrary thresholds. Use the following checklist to guide your implementation:
 
-| Practice | Description | Key Questions to Ask |
+| Practice                    | Description                                                                                                            | Key Questions to Ask                                                                                     |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Early Warning Systems** | Implement trend analysis on error budget consumption rates to create proactive alerts. | - Are there patterns in error budget consumption that indicate potential exhaustion? |
-| | | - Are alerts configured to notify before critical thresholds are reached? |
-| **Burn Rate Calculations** | Define burn rate thresholds using historical data to identify when consumption suggests systemic issues. | - What thresholds indicate anomalous consumption patterns? |
-| | | - Are burn rates segmented by service or region for more targeted insights? |
-| **Impact Pattern Analysis** | Categorize and analyze errors to differentiate between low-impact and high-impact issues requiring distinct responses. | - Have errors been categorized by type and impact? |
-| | | - Are there specific patterns of concentrated failures that trigger different circuit breaker protocols? |
-| **Verification Testing** | Conduct controlled testing after improvements to ensure underlying issues are resolved before resuming operations. | - Are the fixes validated under realistic load conditions? |
-| | | - Has the system been tested to confirm reliability improvements? |
+| **Early Warning Systems**   | Implement trend analysis on error budget consumption rates to create proactive alerts.                                 | - Are there patterns in error budget consumption that indicate potential exhaustion?                     |
+|                             |                                                                                                                        | - Are alerts configured to notify before critical thresholds are reached?                                |
+| **Burn Rate Calculations**  | Define burn rate thresholds using historical data to identify when consumption suggests systemic issues.               | - What thresholds indicate anomalous consumption patterns?                                               |
+|                             |                                                                                                                        | - Are burn rates segmented by service or region for more targeted insights?                              |
+| **Impact Pattern Analysis** | Categorize and analyze errors to differentiate between low-impact and high-impact issues requiring distinct responses. | - Have errors been categorized by type and impact?                                                       |
+|                             |                                                                                                                        | - Are there specific patterns of concentrated failures that trigger different circuit breaker protocols? |
+| **Verification Testing**    | Conduct controlled testing after improvements to ensure underlying issues are resolved before resuming operations.     | - Are the fixes validated under realistic load conditions?                                               |
+|                             |                                                                                                                        | - Has the system been tested to confirm reliability improvements?                                        |
 
 By systematically applying these practices, SRE teams can respond to reliability challenges with precision and ensure circuit breaker mechanisms operate effectively.
 
@@ -512,14 +512,14 @@ Meanwhile, fintech competitors operated with a more balanced strategy, accepting
 
 The contrast between the bank's practices and its competitors' strategies can be summarized as follows:
 
-| **Aspect** | **Bank's Approach** | **Fintech Competitors' Approach** |
+| **Aspect**                   | **Bank's Approach**                  | **Fintech Competitors' Approach**   |
 | ---------------------------- | ------------------------------------ | ----------------------------------- |
-| **Reliability Target** | 99.97% (achieved consistently) | 99.9% |
-| **Error Budget Utilization** | Minimal | Strategic |
-| **Feature Delivery Speed** | Nine months per major feature | Monthly releases |
-| **Testing Process** | Weeks of manual testing per release | Automated testing with quick cycles |
-| **Approval Process** | Executive approval for minor changes | Decentralized and autonomous |
-| **Market Responsiveness** | Slow response to competitors | Rapid adaptation to market trends |
+| **Reliability Target**       | 99.97% (achieved consistently)       | 99.9%                               |
+| **Error Budget Utilization** | Minimal                              | Strategic                           |
+| **Feature Delivery Speed**   | Nine months per major feature        | Monthly releases                    |
+| **Testing Process**          | Weeks of manual testing per release  | Automated testing with quick cycles |
+| **Approval Process**         | Executive approval for minor changes | Decentralized and autonomous        |
+| **Market Responsiveness**    | Slow response to competitors         | Rapid adaptation to market trends   |
 
 This conservative approach became particularly problematic when a major competitor launched an instant money transfer feature that gained significant market attention. The bank's product team estimated that their development process would take nine months to deliver a comparable feature. In a post-mortem discussion, the team realized they had been optimizing for a reliability level far beyond what customers required or valued, at the expense of innovation and market responsiveness.
 
@@ -685,7 +685,7 @@ A large conference room where representatives from multiple banking divisions si
 - **Mobile App**: 90% consumed
 - **Core Banking**: 75% consumed
 
-Below the dashboard, a projected calendar highlights quarterly planning cycles with error budget reset points clearly marked. The atmosphere is professional yet collaborative, with executives leaning forward attentively as Hector, now a senior SRE, facilitates the discussion.
+Below the dashboard, a projected calendar highlights quarterly planning cycles with error budget reset points clearly marked. The atmosphere is professional yet collaborative, with executives leaning forward attentively as Hector Alavaz, now a senior SRE, facilitates the discussion.
 
 The following table structure represents the room setup:
 
@@ -698,12 +698,12 @@ The following table structure represents the room setup:
 |                                                |
 |   [Banking Division Representatives Table]     |
 |                                                |
-|   Hector (Facilitator) at the Head of Table    |
+|   Hector Alavaz (Facilitator) at the Head of Table    |
 |                                                |
 +------------------------------------------------+
 ```
 
-Hector guides the negotiation as division leaders discuss trading portions of their error budgets to balance priorities. For example, the payment processing team proposes borrowing from the core banking platform's error budget during an upcoming critical upgrade, with a clear plan to reciprocate in the next deployment cycle. The executives appear engaged and solution-oriented, a testament to the collaborative reliability culture fostered by the error budget framework.
+Hector Alavaz guides the negotiation as division leaders discuss trading portions of their error budgets to balance priorities. For example, the payment processing team proposes borrowing from the core banking platform's error budget during an upcoming critical upgrade, with a clear plan to reciprocate in the next deployment cycle. The executives appear engaged and solution-oriented, a testament to the collaborative reliability culture fostered by the error budget framework.
 
 ### Teaching Narrative
 
@@ -744,12 +744,12 @@ Without a mechanism like error budgets to facilitate negotiation, both teams def
 
 To establish error budgets as diplomatic currency, SRE teams implement systematic frameworks for cross-boundary collaboration. The following checklist summarizes the four key practices, making them actionable and easy to reference:
 
-| Practice | Description | Key Outcome |
+| Practice                         | Description                                                                                                                     | Key Outcome                                                                                     |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **Dependency Mapping Analysis** | Conduct thorough analysis of service interdependencies, quantifying how reliability in one service affects dependent services. | Creates visibility into the ripple effects of local decisions on interconnected systems. |
-| **Shared Fate Metrics** | Implement consolidated dashboards to show how interconnected services affect each other's error budgets. | Encourages cross-team transparency and reliability optimization. |
-| **Impact Distribution Analysis** | Use detailed incident review data to quantify how failures in shared components affect different business units asymmetrically. | Provides objective evidence for error budget allocation discussions. |
-| **Value Stream Mapping** | Facilitate exercises that trace customer and business value flows across organizational boundaries. | Helps teams understand their role in the larger ecosystem and encourages holistic optimization. |
+| **Dependency Mapping Analysis**  | Conduct thorough analysis of service interdependencies, quantifying how reliability in one service affects dependent services.  | Creates visibility into the ripple effects of local decisions on interconnected systems.        |
+| **Shared Fate Metrics**          | Implement consolidated dashboards to show how interconnected services affect each other's error budgets.                        | Encourages cross-team transparency and reliability optimization.                                |
+| **Impact Distribution Analysis** | Use detailed incident review data to quantify how failures in shared components affect different business units asymmetrically. | Provides objective evidence for error budget allocation discussions.                            |
+| **Value Stream Mapping**         | Facilitate exercises that trace customer and business value flows across organizational boundaries.                             | Helps teams understand their role in the larger ecosystem and encourages holistic optimization. |
 
 #### Checklist for Implementation
 
@@ -766,13 +766,13 @@ By following these practices, SRE teams replace subjective decision-making with 
 
 The absence of cross-boundary error budget frameworks creates significant business impacts for financial institutions. The table below summarizes these impacts, showcasing the key areas of concern and their quantified effects:
 
-| **Impact Area** | **Description** | **Quantified Effect** |
+| **Impact Area**                    | **Description**                                                                                    | **Quantified Effect**                                                      |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| **Delayed Regulatory Compliance** | Lack of negotiation mechanisms for critical infrastructure access delays implementation timelines. | 40% longer implementation times, increasing compliance risk and penalties. |
-| **Suboptimal Resource Allocation** | Siloed reliability management leads to uneven investment in system reliability. | 25-30% resource misallocation across systems. |
-| **Cascading Incidents** | Unrecognized dependencies cause failures to propagate across multiple business units. | 3.5x more cascading incidents experienced. |
-| **Extended Resolution Times** | Teams focus on defending boundaries rather than resolving customer impact during incidents. | 2.7x longer incident resolution times. |
-| **Strategic Misalignment** | Divisions optimize locally without aligning with enterprise-wide priorities. | Technology investments fail to meet global business goals. |
+| **Delayed Regulatory Compliance**  | Lack of negotiation mechanisms for critical infrastructure access delays implementation timelines. | 40% longer implementation times, increasing compliance risk and penalties. |
+| **Suboptimal Resource Allocation** | Siloed reliability management leads to uneven investment in system reliability.                    | 25-30% resource misallocation across systems.                              |
+| **Cascading Incidents**            | Unrecognized dependencies cause failures to propagate across multiple business units.              | 3.5x more cascading incidents experienced.                                 |
+| **Extended Resolution Times**      | Teams focus on defending boundaries rather than resolving customer impact during incidents.        | 2.7x longer incident resolution times.                                     |
+| **Strategic Misalignment**         | Divisions optimize locally without aligning with enterprise-wide priorities.                       | Technology investments fail to meet global business goals.                 |
 
 These impacts highlight the critical need for adopting error budgets as a cross-organizational framework. By aligning reliability goals across divisions, financial institutions can mitigate these challenges and foster a culture of collaboration and shared accountability.
 

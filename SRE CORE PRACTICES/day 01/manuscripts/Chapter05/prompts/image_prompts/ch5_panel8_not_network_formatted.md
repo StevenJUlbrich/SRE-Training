@@ -12,7 +12,7 @@
    - **Motion:** Tense, often ironic.
    - **Props:** Circuit board tattoo on forearm, earbuds half-in, coffee-stained notebook.
 
-2. **Hector** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, salt-and-pepper beard, intense hazel eyes, wearing a dark henley shirt and red RHEL baseball cap.
+2. **Hector Alavaz** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, salt-and-pepper beard, intense hazel eyes, wearing a dark henley shirt and red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Focused energy, rarely gestures unless explaining failure.
@@ -27,7 +27,7 @@
 **Dialogue (speech bubbles, off-white #EDEDED, tails pointing to speakers)**
 
 - **Njeri:** “Numbers clear the cables of all charges.”
-- **Hector:** “Prove—don’t presume—before you pull cables.”
+- **Hector Alavaz:** “Prove—don’t presume—before you pull cables.”
 
 **Narration**
 
@@ -54,7 +54,7 @@
 
 **Constraints**
 
-- Characters arranged left-to-right consistent with speaking order: Njeri, Hector.
+- Characters arranged left-to-right consistent with speaking order: Njeri, Hector Alavaz.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

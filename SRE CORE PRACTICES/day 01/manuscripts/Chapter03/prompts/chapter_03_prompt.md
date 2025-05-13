@@ -47,7 +47,7 @@ ______________________________________________________________________
 
 ### ✍️ STYLE & VOICE:
 
-- Use Hector’s dry, practical tone from his persona file
+- Use Hector Alavaz’s dry, practical tone from his persona file
 - Keep panels cinematic but always instructional
 - Ensure visuals and prose reinforce the declared learning objective
 
@@ -87,4 +87,4 @@ Start from:
 # Chapter 3 – “Logs That Talk, Metrics That Matter”
 ```
 
-Continue through all 8 panels. End with a reflection, assessment hook, and Hector’s closing line.
+Continue through all 8 panels. End with a reflection, assessment hook, and Hector Alavaz’s closing line.

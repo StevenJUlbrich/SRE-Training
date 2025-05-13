@@ -117,10 +117,10 @@ ______________________________________________________________________
 - All tiles green. Katherine frowns: “Everything looks fine… right?”
 - **Caption**: “The deeper the green, the louder the lie.”
 
-### Widget: Hector Quote
+### Widget: Hector Alavaz Quote
 
 ```markdown
-:::hector quote
+:::Hector Alavaz quote
 Green means the system’s lying. Now let’s teach it to confess.
 :::
 ```
@@ -148,9 +148,9 @@ ______________________________________________________________________
 - **Concept**: Observability = Logs + Metrics + Traces
 - **Bridge**: No single pillar can carry the diagnostic load alone.
 
-### Graphic Panel: “Hector’s Diagram”
+### Graphic Panel: “Hector Alavaz’s Diagram”
 
-- Hector sketches the observability Venn diagram on a whiteboard.
+- Hector Alavaz sketches the observability Venn diagram on a whiteboard.
 - He overlays the service graph and shows where each tool breaks down.
 - **Caption**: “Logs tell the story. Metrics show the pattern. Traces reveal the path.”
 
@@ -204,7 +204,7 @@ ______________________________________________________________________
 - **Wanjiru** panics: tools show green, but customer complaints are real.
 - **Katherine** focuses on CPU/memory: “Should we fail over to a bigger node?”
 - **Juana**: reads vague logs, frustrated by lack of trace IDs.
-- **Hector**: teaches the “green wall fallacy,” explains how telemetry should confess, not conceal.
+- **Hector Alavaz**: teaches the “green wall fallacy,” explains how telemetry should confess, not conceal.
 
 ______________________________________________________________________
 
@@ -218,12 +218,12 @@ ______________________________________________________________________
 
 ## 📋 Panel Beat-to-Concept Map
 
-| Beat # | Panel Title | Teaching Goal |
-| ------ | -------------------- | ---------------------------------------------- |
-| 1 | Pager Screams | Monitoring ≠ experience |
-| 2 | Dashboard Dissonance | Wanjiru learns that green doesn't mean healthy |
-| 3 | Juana’s Discovery | Logs without trace context are dead ends |
-| 4 | Hector’s Diagram | Three pillars: logs, metrics, traces |
-| 5 | Trace Synthesis | A visible fix, post-instrumentation |
-| 6 | Reflection Panel | Learners articulate observability gaps |
-| 7 | Lesson Locked In | Correlated telemetry restores control |
+| Beat # | Panel Title             | Teaching Goal                                  |
+| ------ | ----------------------- | ---------------------------------------------- |
+| 1      | Pager Screams           | Monitoring ≠ experience                        |
+| 2      | Dashboard Dissonance    | Wanjiru learns that green doesn't mean healthy |
+| 3      | Juana’s Discovery       | Logs without trace context are dead ends       |
+| 4      | Hector Alavaz’s Diagram | Three pillars: logs, metrics, traces           |
+| 5      | Trace Synthesis         | A visible fix, post-instrumentation            |
+| 6      | Reflection Panel        | Learners articulate observability gaps         |
+| 7      | Lesson Locked In        | Correlated telemetry restores control          |

@@ -1,6 +1,6 @@
-# Learner Cast Reference for Hector Curriculum
+# Learner Cast Reference for Hector Alavaz Curriculum
 
-This document supplements the Hector-led SRE training materials by providing an overview of recurring learner characters. These personas represent different backgrounds, technical proficiencies, and learning mindsets to enhance narrative depth and relatability throughout the curriculum.
+This document supplements the Hector Alavaz-led SRE training materials by providing an overview of recurring learner characters. These personas represent different backgrounds, technical proficiencies, and learning mindsets to enhance narrative depth and relatability throughout the curriculum.
 
 ---
 
@@ -51,7 +51,7 @@ This document supplements the Hector-led SRE training materials by providing an 
 ### 9. **Leonel Morales** – *The Metrics Maximalist*
 - 30, former site admin for a data-heavy fintech startup
 - Believes in instrumenting everything — even internal coffee machine usage
-- Slowly learns from Hector that observability is about signal, not volume
+- Slowly learns from Hector Alavaz that observability is about signal, not volume
 - Catchphrase: *"But what if we just exported... all of it?"*
 
 ### 10. **Juana Torres** – *The Alert Whisperer*

@@ -22,7 +22,7 @@ Create a markdown training chapter titled:
 
 This chapter teaches that dashboards showing green don’t mean a system is healthy. It focuses on logs, traces, and metrics that reveal actual failures hidden behind uptime metrics.
 
-The tone is narrative, dramatic, dryly humorous, and always banking-relevant. Use fictional SRE Hector Alvarez as the main teacher. Include a junior engineer (Wanjiru), a VP (Katherine), and a DB engineer (Juana).
+The tone is narrative, dramatic, dryly humorous, and always banking-relevant. Use fictional SRE Hector Alavaz Alvarez as the main teacher. Include a junior engineer (Wanjiru), a VP (Katherine), and a DB engineer (Juana).
 
 ______________________________________________________________________
 
@@ -38,7 +38,7 @@ Follow this general sequence:
 6. Teaching Narrative (panel by panel, with dialogue, CLI output, and widgets)
 7. Panel Image Embed (must use correct filenames)
 8. Must include:
-   - `:::hector quote`
+   - `:::Hector Alavaz quote`
    - `:::reflection`
    - `:::try this`
    - `:::debug pattern`
@@ -68,7 +68,7 @@ ______________________________________________________________________
 ## 🧠 WIDGETS TO USE
 
 - `:::debug pattern` for reusable diagnostics (e.g., “Green Wall Fallacy”)
-- `:::hector quote` for aphorisms
+- `:::Hector Alavaz quote` for aphorisms
 - `:::try this` and `:::reflection` for learner engagement
 - `:::incident flashback` for real-world context
 - `mermaid` diagrams for flows and traces
@@ -91,7 +91,7 @@ ______________________________________________________________________
 1. **The Pager Screams** – Dashboard all green; pager alert hits.
 2. **Wanjiru Panics** – She can’t find the issue; logs are vague.
 3. **What’s Actually Broken?** – Terminal reveals 500s; no helpful metrics.
-4. **The Dashboard Is Lying** – Hector enters, points out replica issue.
+4. **The Dashboard Is Lying** – Hector Alavaz enters, points out replica issue.
 5. **Context is Missing** – Logs lack trace ID; team blind.
 6. **Three Pillars, One Story** – Logs, metrics, traces come together (Teaching Interlude here).
 7. **Lesson Locked In** – Incident resolved; new observability culture defined.

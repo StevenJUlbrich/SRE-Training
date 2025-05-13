@@ -2,11 +2,11 @@
 
 #### Scene
 
-- **Interior:** A dimly lit, windowless Geneos war-room. The room is initially illuminated by 24 wall-mounted dashboards displaying System Blue (#3478F6) and Ash Gray (#B0B4B9) gauges and line charts, creating a pulsating neon-like ambiance. Hector, wearing a charcoal-black RHEL cap, steps forward and unplugs an HDMI cable, causing the screens to snap to charcoal black (#1C1C1E). The room is now lit only by a single emergency light, casting long shadows and highlighting Wanjiru's tense posture. Hector's off-white ceramic mug sits on a cluttered oak table, with steam curling upwards, surrounded by scribbled post-its. The atmosphere shifts to a sudden hush, with a stark contrast between the former blue glare and the dim red EXIT sign.
+- **Interior:** A dimly lit, windowless Geneos war-room. The room is initially illuminated by 24 wall-mounted dashboards displaying System Blue (#3478F6) and Ash Gray (#B0B4B9) gauges and line charts, creating a pulsating neon-like ambiance. Hector Alavaz, wearing a charcoal-black RHEL cap, steps forward and unplugs an HDMI cable, causing the screens to snap to charcoal black (#1C1C1E). The room is now lit only by a single emergency light, casting long shadows and highlighting Wanjiru's tense posture. Hector Alavaz's off-white ceramic mug sits on a cluttered oak table, with steam curling upwards, surrounded by scribbled post-its. The atmosphere shifts to a sudden hush, with a stark contrast between the former blue glare and the dim red EXIT sign.
 
 #### Characters In Frame
 
-1. **Hector**
+1. **Hector Alavaz**
 
    - **Appearance:** 49-year-old Mexican man, medium build, 5'10", weathered medium-brown complexion, angular face with a defined jawline, short, neatly trimmed salt-and-pepper beard. Intense hazel eyes with visible crow's feet, serious and analytical expression. Wearing a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
    - **Motion:** Intentional and focused energy, rarely gestures unless explaining failure.
@@ -21,7 +21,7 @@
 
 - **Wanjiru:** (Off-white #EDEDED bubble, tail pointing to Wanjiru)\
   “Which panel actually tells me why the ATMs aren't working?”
-- **Hector:** (Off-white #EDEDED bubble, tail pointing to Hector)\
+- **Hector Alavaz:** (Off-white #EDEDED bubble, tail pointing to Hector Alavaz)\
   “Better black than blind. Start with what you know.”
 
 #### Narration
@@ -50,7 +50,7 @@
 
 #### Constraints
 
-- Characters arranged left-to-right consistent with speaking order: Wanjiru, Hector.
+- Characters arranged left-to-right consistent with speaking order: Wanjiru, Hector Alavaz.
 - Speech bubbles stay clear of panel edges and ambient elements like coffee steam.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

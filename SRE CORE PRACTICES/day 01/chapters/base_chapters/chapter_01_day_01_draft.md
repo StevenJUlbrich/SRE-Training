@@ -2,9 +2,9 @@
 
 ## Scene Description - Understanding the Green Wall Fallacy
 
-**The Pager Screams** – Hector gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
+**The Pager Screams** – Hector Alavaz gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
 
-*Expanded narrative: It's 2:17 AM. Hector's phone vibrates violently on his nightstand. He's awake instantly—the practiced reflex of a veteran SRE. The screen shows a critical alert: "PAYMENT-PROCESSOR-PROD: Multiple customer impacts detected." He grabs his laptop, opens the monitoring dashboard. Everything is green. Every. Single. Indicator. Green.*
+*Expanded narrative: It's 2:17 AM. Hector Alavaz's phone vibrates violently on his nightstand. He's awake instantly—the practiced reflex of a veteran SRE. The screen shows a critical alert: "PAYMENT-PROCESSOR-PROD: Multiple customer impacts detected." He grabs his laptop, opens the monitoring dashboard. Everything is green. Every. Single. Indicator. Green.*
 
 ### Teaching Narrative - Understanding the Green Wall Fallacy
 
@@ -91,7 +91,7 @@ To develop metric literacy in financial services:
 
 4. **Practice Crisis Correlation**: Run regular exercises where teams must quickly identify which metrics matter during simulated incidents
 
-Remember Hector's wisdom: dashboards aren't just for admiring - they're diagnostic tools that require active interpretation. Don't get hypnotized by the colors; focus on what the numbers mean for customer experience.
+Remember Hector Alavaz's wisdom: dashboards aren't just for admiring - they're diagnostic tools that require active interpretation. Don't get hypnotized by the colors; focus on what the numbers mean for customer experience.
 
 # Panel 3: What's Actually Broken? - Evidence-Based Debugging
 
@@ -136,15 +136,15 @@ To implement evidence-based debugging in financial environments:
 
 4. **Runbook Verification**: Include direct system testing commands in all incident runbooks
 
-Hector's key insight - "CPU looks fine on a corpse, too" - reminds us that resource availability means nothing if the service isn't fulfilling its purpose. In banking systems, what matters is completed transactions, not utilized capacity.
+Hector Alavaz's key insight - "CPU looks fine on a corpse, too" - reminds us that resource availability means nothing if the service isn't fulfilling its purpose. In banking systems, what matters is completed transactions, not utilized capacity.
 
 # Panel 4: The Dashboard Is Lying - The Three Pillars Framework
 
 ## Scene Description
 
-**The Dashboard Is Lying** – Hector walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?"
+**The Dashboard Is Lying** – Hector Alavaz walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?"
 
-*Expanded narrative: Hector strides in, somehow looking perfectly composed despite the hour. He sips from a steaming coffee mug while surveying the chaos. His eyes move methodically between the frantic team and the cheerfully misleading green dashboard. "Did you check the actual logs," he asks dryly, "or are we just admiring the pretty colors?" The room falls silent.*
+*Expanded narrative: Hector Alavaz strides in, somehow looking perfectly composed despite the hour. He sips from a steaming coffee mug while surveying the chaos. His eyes move methodically between the frantic team and the cheerfully misleading green dashboard. "Did you check the actual logs," he asks dryly, "or are we just admiring the pretty colors?" The room falls silent.*
 
 ## Teaching Narrative
 
@@ -201,7 +201,7 @@ The Three Pillars aren't just technical tools - they're the foundation of a bank
 
 **Context is Missing** – Juana shows the logs: missing trace IDs, vague errors. "Nice. It broke, and it didn't even tell us who it killed."
 
-*Expanded narrative: Juana, the senior engineer, pulls up the log viewer. "Here's our problem," she points. The logs show errors, but they're generic—no transaction IDs, no trace context, no correlation identifiers. Just: "ERROR: Transaction failed." Hector looks over her shoulder. "Nice," he deadpans. "It broke, and it didn't even tell us who it killed. How are we supposed to find which transactions failed with this?"*
+*Expanded narrative: Juana, the senior engineer, pulls up the log viewer. "Here's our problem," she points. The logs show errors, but they're generic—no transaction IDs, no trace context, no correlation identifiers. Just: "ERROR: Transaction failed." Hector Alavaz looks over her shoulder. "Nice," he deadpans. "It broke, and it didn't even tell us who it killed. How are we supposed to find which transactions failed with this?"*
 
 ## Teaching Narrative
 
@@ -242,13 +242,13 @@ To implement proper structured telemetry:
 
 Juana's observation that "It broke, and it didn't even tell us who it killed" highlights the human cost of poor telemetry - without proper context, support teams can't provide answers to affected customers or executives, eroding trust and complicating recovery.
 
-# Panel 6: Monologue from Hector - Observability Integration
+# Panel 6: Monologue from Hector Alavaz - Observability Integration
 
 ## Scene Description
 
-**Monologue from Hector** – He points to each pillar (Logs, Metrics, Traces) and explains what they could've revealed. Dramatic diagram in background.
+**Monologue from Hector Alavaz** – He points to each pillar (Logs, Metrics, Traces) and explains what they could've revealed. Dramatic diagram in background.
 
-*Expanded narrative: Hector moves to the whiteboard and draws three overlapping circles labeled LOGS, METRICS, and TRACES. "This is what you're missing," he explains. "Proper logs would tell us exactly which transactions failed and why. Relevant metrics would show us the error rate spike before customers complained. And traces—" he taps the board emphatically, "—traces would show us exactly where in the transaction flow things went wrong. Without all three connected, you're just guessing. And banking systems don't tolerate guessing."*
+*Expanded narrative: Hector Alavaz moves to the whiteboard and draws three overlapping circles labeled LOGS, METRICS, and TRACES. "This is what you're missing," he explains. "Proper logs would tell us exactly which transactions failed and why. Relevant metrics would show us the error rate spike before customers complained. And traces—" he taps the board emphatically, "—traces would show us exactly where in the transaction flow things went wrong. Without all three connected, you're just guessing. And banking systems don't tolerate guessing."*
 
 ## Teaching Narrative
 
@@ -285,15 +285,15 @@ To achieve effective observability integration:
 3. **Workflow Design**: Create incident response processes that leverage all three pillars
 4. **Visualization Strategy**: Build dashboards that show relationships between different telemetry types
 
-Hector's whiteboard diagram showing the three pillars with "Root Cause Detection" at their intersection represents the goal: a system where every component's behavior is connected and comprehensible, even during complex failures.
+Hector Alavaz's whiteboard diagram showing the three pillars with "Root Cause Detection" at their intersection represents the goal: a system where every component's behavior is connected and comprehensible, even during complex failures.
 
 # Panel 7: Lesson Locked In - System Transparency
 
 ## Scene Description
 
-**Lesson Locked In** – Wanjiru says, "So… green doesn't mean good." Hector: "Green means the system's lying. Now let's teach it to confess."
+**Lesson Locked In** – Wanjiru says, "So… green doesn't mean good." Hector Alavaz: "Green means the system's lying. Now let's teach it to confess."
 
-*Expanded narrative: Understanding dawns on Wanjiru's face. "So... green doesn't mean good," she says slowly. "It just means we don't know what's bad." Hector nods. "Green means the system's lying to you about its health," he confirms. "Now let's teach it to confess." He opens his laptop and begins typing rapidly, adding structured logging and trace context to the payment service while the team watches, learning.*
+*Expanded narrative: Understanding dawns on Wanjiru's face. "So... green doesn't mean good," she says slowly. "It just means we don't know what's bad." Hector Alavaz nods. "Green means the system's lying to you about its health," he confirms. "Now let's teach it to confess." He opens his laptop and begins typing rapidly, adding structured logging and trace context to the payment service while the team watches, learning.*
 
 ## Teaching Narrative
 
@@ -312,7 +312,7 @@ In banking environments, the gap between dashboard appearance and system reality
 
 ## The Confession Metaphor
 
-Hector's powerful statement that "Green means the system's lying. Now let's teach it to confess" captures a fundamental shift in thinking:
+Hector Alavaz's powerful statement that "Green means the system's lying. Now let's teach it to confess" captures a fundamental shift in thinking:
 
 - **Traditional Monitoring**: Reading passive indicators about system status
 - **Modern Observability**: Creating systems that actively communicate their true state

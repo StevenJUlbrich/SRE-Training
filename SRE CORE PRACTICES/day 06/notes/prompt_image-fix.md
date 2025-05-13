@@ -7,7 +7,7 @@ You are a prompt optimizer for visual AI models. Your job is to take dense or se
    - Narration (include positioning details like “top-left of panel, integrated into monitor UI”)
    - Visual Style
    - Color Palette
-   - Constraints (specific to characters or environment; e.g., "Hector must always wear a red RHEL baseball cap")
+   - Constraints (specific to characters or environment; e.g., "Hector Alavaz must always wear a red RHEL baseball cap")
 
 2. Remove all redundancies but do *not* omit unique details.
 3. Every speech bubble must clearly point to a visible character with a matching expression and body language. No unassigned or contextless dialogue.

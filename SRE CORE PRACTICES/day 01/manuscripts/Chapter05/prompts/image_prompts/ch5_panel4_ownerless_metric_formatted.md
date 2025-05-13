@@ -12,7 +12,7 @@ Characters In Frame
    - **Motion:** Decisive, gesturing with a stylus.
    - **Props:** Tablet, stylus.
 
-2. **Hector** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, salt-and-pepper beard that is neat and trim, wearing a dark henley shirt and red RHEL baseball cap.
+2. **Hector Alavaz** — 49-year-old man, medium build, 5'10", weathered medium-brown complexion, angular face, salt-and-pepper beard that is neat and trim, wearing a dark henley shirt and red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Focused energy, rarely gestures unless explaining failure.
@@ -21,7 +21,7 @@ Characters In Frame
 Dialogue (speech bubbles, off-white #EDEDED, tails pointing to speakers)
 
 - **Clara:** “No owner, no page—no fix.”
-- **Hector:** “An orphan metric is a street rumor.”
+- **Hector Alavaz:** “An orphan metric is a street rumor.”
 
 Narration
 
@@ -48,7 +48,7 @@ Color Palette
 
 Constraints
 
-- Characters arranged left-to-right consistent with speaking order: Clara, Hector.
+- Characters arranged left-to-right consistent with speaking order: Clara, Hector Alavaz.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

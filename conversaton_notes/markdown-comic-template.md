@@ -25,7 +25,7 @@
 *Use bullet points or short lines for each character’s internal reaction.*
 
 - **Johan:** “This feels just like last Friday… but worse.”
-- **Hector:** “He better find that spike’s origin fast.”
+- **Hector Alavaz:** “He better find that spike’s origin fast.”
 
 ---
 

@@ -221,7 +221,7 @@ To implement strategic error budget investment in a banking environment, follow 
 ## Panel 5: Error Budgets as Diplomatic Currency: Breaking Down Silos
 ### Scene Description
 
- A large conference room where representatives from multiple banking divisions sit around a table. At the center is a digital dashboard showing error budget allocations across different banking services—payments, trading platform, mobile app, and core banking. Hector, now a senior SRE, facilitates a negotiation between division leaders who are discussing trading portions of their error budgets to accommodate different business priorities. A calendar shows quarterly planning cycles with error budget reset points marked clearly. The executives in the room look engaged rather than confrontational.
+ A large conference room where representatives from multiple banking divisions sit around a table. At the center is a digital dashboard showing error budget allocations across different banking services—payments, trading platform, mobile app, and core banking. Hector Alavaz, now a senior SRE, facilitates a negotiation between division leaders who are discussing trading portions of their error budgets to accommodate different business priorities. A calendar shows quarterly planning cycles with error budget reset points marked clearly. The executives in the room look engaged rather than confrontational.
 
 ### Teaching Narrative
 In mature SRE organizations, error budgets evolve beyond technical tools into a form of "diplomatic currency" that facilitates collaboration across organizational boundaries. This represents the highest evolution of error budgets as cultural tools.

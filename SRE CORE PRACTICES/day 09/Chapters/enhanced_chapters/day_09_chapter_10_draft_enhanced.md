@@ -99,13 +99,13 @@ By proactively addressing these failure points, teams can ensure that reliabilit
 
 The SRE approach to addressing the disconnect between perceived and actual reliability is to implement reliability measurement as a first-class product metric. Leading organizations quantify reliability through a combination of practices that focus on user experience and data-driven insights:
 
-| **Practice** | **Description** | **Benefits** | **Example Metrics** |
+| **Practice**                        | **Description**                                                                                                                        | **Benefits**                                                                                      | **Example Metrics**                                           |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Comprehensive User Journey Tracking | Monitoring full transaction paths from initiation to confirmation across all services, with attention to edge cases and failure modes. | Identifies weak points in the user journey, ensuring seamless end-to-end transaction reliability. | Transaction success rate, latency per user journey step. |
-| Experience-Based SLIs/SLOs | Defining Service Level Indicators that reflect user-perceived reliability rather than purely technical metrics. | Aligns reliability goals with user expectations and business outcomes. | Successful transaction completion rate, error-free API calls. |
-| Reliability Friction Detection | Implementing monitoring that detects user hesitation, repeated attempts, and abandonment patterns. | Proactively uncovers hidden reliability issues affecting user behavior. | Retry rates, abandonment rates, time-to-completion. |
-| Sentiment Analysis Integration | Correlating system monitoring with customer feedback from app reviews, support tickets, and social media. | Provides qualitative context for reliability metrics and uncovers issues not visible in logs. | Volume of reliability-related complaints, sentiment scores. |
-| Customer Reliability Surveys | Conducting targeted research to measure customer perception of system reliability. | Offers direct insight into customer trust and system credibility. | Survey scores on system reliability, Net Promoter Scores. |
+| Comprehensive User Journey Tracking | Monitoring full transaction paths from initiation to confirmation across all services, with attention to edge cases and failure modes. | Identifies weak points in the user journey, ensuring seamless end-to-end transaction reliability. | Transaction success rate, latency per user journey step.      |
+| Experience-Based SLIs/SLOs          | Defining Service Level Indicators that reflect user-perceived reliability rather than purely technical metrics.                        | Aligns reliability goals with user expectations and business outcomes.                            | Successful transaction completion rate, error-free API calls. |
+| Reliability Friction Detection      | Implementing monitoring that detects user hesitation, repeated attempts, and abandonment patterns.                                     | Proactively uncovers hidden reliability issues affecting user behavior.                           | Retry rates, abandonment rates, time-to-completion.           |
+| Sentiment Analysis Integration      | Correlating system monitoring with customer feedback from app reviews, support tickets, and social media.                              | Provides qualitative context for reliability metrics and uncovers issues not visible in logs.     | Volume of reliability-related complaints, sentiment scores.   |
+| Customer Reliability Surveys        | Conducting targeted research to measure customer perception of system reliability.                                                     | Offers direct insight into customer trust and system credibility.                                 | Survey scores on system reliability, Net Promoter Scores.     |
 
 The evidence consistently shows that applications with reliability problems see significantly higher abandonment rates regardless of feature richness. For example, analysis of banking application usage patterns reveals that after a single failed transaction, customer usage frequency drops by an average of 68% for the following 30 days. Cross-industry research further demonstrates that reliability issues have approximately three times the negative impact on Net Promoter Scores compared to missing features.
 
@@ -216,7 +216,7 @@ By following this checklist and flow, teams can systematically integrate reliabi
 
 ### Scene Description
 
-A banking executive boardroom where Hector (SRE lead) is presenting a compelling data visualization showing the correlation between system reliability metrics and business KPIs. The visualization includes split screens showing: downtime incidents mapped against customer churn, transaction error rates correlated with support call volume, and page load times linked to abandoned transactions. Banking executives are leaning forward, visibly connecting technical reliability concepts to financial impact for the first time.
+A banking executive boardroom where Hector Alavaz (SRE lead) is presenting a compelling data visualization showing the correlation between system reliability metrics and business KPIs. The visualization includes split screens showing: downtime incidents mapped against customer churn, transaction error rates correlated with support call volume, and page load times linked to abandoned transactions. Banking executives are leaning forward, visibly connecting technical reliability concepts to financial impact for the first time.
 
 ### Teaching Narrative
 
@@ -281,12 +281,12 @@ The evidence shows that organizations implementing structured reliability value 
 
 #### Financial Impact Categories and Corresponding Metrics
 
-| **Category** | **Description** | **Example Metrics** |
+| **Category**              | **Description**                                                                 | **Example Metrics**                             |
 | ------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------- |
 | **Direct Revenue Impact** | Financial losses due to disrupted customer transactions or abandoned workflows. | Transactions prevented, abandoned transactions. |
-| **Operational Costs** | Expenses incurred from incident handling and support operations. | Support ticket volume, incident response time. |
-| **Recovery Expenses** | Costs associated with remediation, compensation, or emergency engineering. | Compensation issued, emergency labor costs. |
-| **Brand/Trust Penalties** | Long-term business impacts from reduced customer confidence or attrition. | Customer churn rate, post-incident activity. |
+| **Operational Costs**     | Expenses incurred from incident handling and support operations.                | Support ticket volume, incident response time.  |
+| **Recovery Expenses**     | Costs associated with remediation, compensation, or emergency engineering.      | Compensation issued, emergency labor costs.     |
+| **Brand/Trust Penalties** | Long-term business impacts from reduced customer confidence or attrition.       | Customer churn rate, post-incident activity.    |
 
 This table provides a quick reference for SREs to connect reliability metrics with specific financial outcomes, making their investigations more actionable and aligned with business priorities.
 
@@ -498,24 +498,24 @@ Leading organizations implement Reliability Experience Design as a systematic pr
 
 #### Checklist: Evidence-Based Practices for Reliability Experience Design
 
-| Practice Area | Key Actions |
+| Practice Area                    | Key Actions                                                          |
 | -------------------------------- | -------------------------------------------------------------------- |
-| **Failure Mode Journey Mapping** | - Create journey maps for major failure scenarios |
-| | - Identify emotional impact points during service disruptions |
-| | - Map current vs. ideal customer experience during incidents |
-| | - Identify communication opportunities throughout failure timelines |
-| **Graceful Degradation** | - Implement circuit breakers to isolate failing components |
-| | - Design read-only modes for compromised write operations |
-| | - Enable offline capabilities for critical functions |
-| | - Prioritize service restoration based on customer impact |
-| **Transparent Communication** | - Develop tiered communication templates for varying severity levels |
-| | - Display estimated resolution times using historical data |
-| | - Maintain status dashboards accessible during major outages |
-| | - Build proactive notification systems for affected users |
-| **Recovery Experience Testing** | - Test customer notification mechanisms during recovery |
-| | - Verify correct processing of queued transactions |
-| | - Ensure consistent state across all customer touchpoints |
-| | - Measure time-to-confidence for customers after service restoration |
+| **Failure Mode Journey Mapping** | - Create journey maps for major failure scenarios                    |
+|                                  | - Identify emotional impact points during service disruptions        |
+|                                  | - Map current vs. ideal customer experience during incidents         |
+|                                  | - Identify communication opportunities throughout failure timelines  |
+| **Graceful Degradation**         | - Implement circuit breakers to isolate failing components           |
+|                                  | - Design read-only modes for compromised write operations            |
+|                                  | - Enable offline capabilities for critical functions                 |
+|                                  | - Prioritize service restoration based on customer impact            |
+| **Transparent Communication**    | - Develop tiered communication templates for varying severity levels |
+|                                  | - Display estimated resolution times using historical data           |
+|                                  | - Maintain status dashboards accessible during major outages         |
+|                                  | - Build proactive notification systems for affected users            |
+| **Recovery Experience Testing**  | - Test customer notification mechanisms during recovery              |
+|                                  | - Verify correct processing of queued transactions                   |
+|                                  | - Ensure consistent state across all customer touchpoints            |
+|                                  | - Measure time-to-confidence for customers after service restoration |
 
 #### Key Insights
 
@@ -668,14 +668,14 @@ The dashboard is structured as follows:
 +-------------------------------------------------------------+
 |                         Error Budget Dashboard              |
 +-------------------------------------------------------------+
-| Metric                        | Current Value   | Threshold |
-|-------------------------------|-----------------|-----------|
-| Error Budget Remaining (%)    | 15%            | N/A       |
-| Weekly Burn Rate (%)          | 12%            | N/A       |
-| Estimated Remaining Weeks     | 1.25           | N/A       |
-| Critical Incidents (Quarter)  | 4              | < 3       |
-| Feature Deployments (Quarter) | 8              | N/A       |
-| SLA Compliance (%)            | 98.5%          | ≥ 99.5%   |
+| Metric                        | Current Value | Threshold |
+| ----------------------------- | ------------- | --------- |
+| Error Budget Remaining (%)    | 15%           | N/A       |
+| Weekly Burn Rate (%)          | 12%           | N/A       |
+| Estimated Remaining Weeks     | 1.25          | N/A       |
+| Critical Incidents (Quarter)  | 4             | < 3       |
+| Feature Deployments (Quarter) | 8             | N/A       |
+| SLA Compliance (%)            | 98.5%         | ≥ 99.5%   |
 +-------------------------------------------------------------+
 ```
 
@@ -702,13 +702,13 @@ The lack of a shared reliability framework meant there was no objective way to d
 
 #### Decision Checklist: Launch vs. Delay
 
-| **Decision Point** | **Launch Now** | **Delay Launch** |
+| **Decision Point**      | **Launch Now**                                 | **Delay Launch**                               |
 | ----------------------- | ---------------------------------------------- | ---------------------------------------------- |
-| **Reliability Metrics** | Not meeting 99.9% target (96% during testing) | Opportunity to fix issues and meet target |
-| **Market Timing** | Aligned with Q3 commitments to shareholders | Missed Q3 milestone, potential market reaction |
-| **Customer Experience** | High risk of failed transactions on launch day | Improved experience with higher reliability |
-| **Development Costs** | Emergency remediation likely post-launch | Controlled remediation effort pre-launch |
-| **Reputation Risk** | Significant risk of alienating early adopters | Maintains trust by ensuring a stable platform |
+| **Reliability Metrics** | Not meeting 99.9% target (96% during testing)  | Opportunity to fix issues and meet target      |
+| **Market Timing**       | Aligned with Q3 commitments to shareholders    | Missed Q3 milestone, potential market reaction |
+| **Customer Experience** | High risk of failed transactions on launch day | Improved experience with higher reliability    |
+| **Development Costs**   | Emergency remediation likely post-launch       | Controlled remediation effort pre-launch       |
+| **Reputation Risk**     | Significant risk of alienating early adopters  | Maintains trust by ensuring a stable platform  |
 
 #### Consequences of the Decision
 
@@ -994,12 +994,12 @@ By using this checklist as a guide, teams can design systems that are resilient,
 
 Leading organizations implement operational design as a core development discipline, treating operability as a first-class product requirement. The most effective practices include:
 
-| Best Practice | Key Actions | Benefits |
+| Best Practice                             | Key Actions                                                                                                                                                                                                                                                    | Benefits                                                                                                                 |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Operability Requirements Definition** | - Document explicit observability requirements<br>- Create runbook specifications<br>- Define health check APIs and monitoring points<br>- Establish administrative interface requirements<br>- Specify operational control capabilities | - Clear operational expectations<br>- Reduced ambiguity in production readiness<br>- Faster incident resolution |
-| **Cross-Functional Design Collaboration** | - Include SRE/operations in architecture reviews<br>- Conduct operational readiness workshops<br>- Perform "day in the life" simulations<br>- Develop failure mode effect analyses<br>- Jointly define acceptance criteria | - Identification of more failure modes (3.1x more)<br>- Improved communication across teams<br>- Fewer deployment issues |
-| **Observability-First Development** | - Implement structured, consistent logging<br>- Create transaction tracing through processing stages<br>- Develop health endpoints beyond binary status<br>- Build granular performance metrics<br>- Design self-reporting error diagnostics | - Comprehensive system visibility<br>- Faster root cause analysis<br>- Proactive issue detection |
-| **Operational Tooling Co-Development** | - Develop administrative interfaces with functionality<br>- Create user-friendly configuration management<br>- Build diagnostic tools for common troubleshooting<br>- Implement automated recovery mechanisms<br>- Design override capabilities for exceptions | - Tools ready at launch<br>- Reduced operational friction<br>- Accelerated recovery from failure modes |
+| **Operability Requirements Definition**   | - Document explicit observability requirements<br>- Create runbook specifications<br>- Define health check APIs and monitoring points<br>- Establish administrative interface requirements<br>- Specify operational control capabilities                       | - Clear operational expectations<br>- Reduced ambiguity in production readiness<br>- Faster incident resolution          |
+| **Cross-Functional Design Collaboration** | - Include SRE/operations in architecture reviews<br>- Conduct operational readiness workshops<br>- Perform "day in the life" simulations<br>- Develop failure mode effect analyses<br>- Jointly define acceptance criteria                                     | - Identification of more failure modes (3.1x more)<br>- Improved communication across teams<br>- Fewer deployment issues |
+| **Observability-First Development**       | - Implement structured, consistent logging<br>- Create transaction tracing through processing stages<br>- Develop health endpoints beyond binary status<br>- Build granular performance metrics<br>- Design self-reporting error diagnostics                   | - Comprehensive system visibility<br>- Faster root cause analysis<br>- Proactive issue detection                         |
+| **Operational Tooling Co-Development**    | - Develop administrative interfaces with functionality<br>- Create user-friendly configuration management<br>- Build diagnostic tools for common troubleshooting<br>- Implement automated recovery mechanisms<br>- Design override capabilities for exceptions | - Tools ready at launch<br>- Reduced operational friction<br>- Accelerated recovery from failure modes                   |
 
 Industry data shows that organizations practicing "shift left" operational design experience 74% fewer production incidents in the first 90 days after deployment and resolve incidents 68% faster when they do occur. Research demonstrates that operational designs reviewed by cross-functional teams identify 3.1x more potential failure modes than those reviewed by development teams alone.
 
@@ -1122,20 +1122,20 @@ Below is a text-based representation of the digital board used during the sessio
 +-------------------------------------------------------+
 |                   Digital Planning Board              |
 +-------------------------------------------------------+
-| Priority | User Story                     | Type      |
-|----------|--------------------------------|-----------|
-|    1     | As a user, I want faster load | Feature   |
-|          | times to improve my experience|           |
-|----------|--------------------------------|-----------|
-|    2     | Improve database replication  | Reliability|
-|          | to reduce downtime during fail|           |
-|          | overs.                        |           |
-|----------|--------------------------------|-----------|
-|    3     | Add multi-factor authentication| Feature   |
-|          | to enhance security.          |           |
-|----------|--------------------------------|-----------|
-|    4     | Optimize log aggregation to   | Reliability|
-|          | improve troubleshooting speed.|           |
+| Priority   | User Story                       | Type        |
+| ---------- | -------------------------------- | ----------- |
+| 1          | As a user, I want faster load    | Feature     |
+|            | times to improve my experience   |             |
+| ---------- | -------------------------------- | ----------- |
+| 2          | Improve database replication     | Reliability |
+|            | to reduce downtime during fail   |             |
+|            | overs.                           |             |
+| ---------- | -------------------------------- | ----------- |
+| 3          | Add multi-factor authentication  | Feature     |
+|            | to enhance security.             |             |
+| ---------- | -------------------------------- | ----------- |
+| 4          | Optimize log aggregation to      | Reliability |
+|            | improve troubleshooting speed.   |             |
 +-------------------------------------------------------+
 
 Key actions happening in the scene:
@@ -1149,13 +1149,13 @@ Key actions happening in the scene:
 
 For reliability to be treated as a product feature, it must be managed with the same rigor and methodology as traditional features. This panel demonstrates how to integrate reliability work into standard product management practices. The teaching narrative emphasizes five key approaches, summarized below for quick reference:
 
-| **Approach** | **Description** | **Key Considerations** |
+| **Approach**                                       | **Description**                                                                                                   | **Key Considerations**                                                                                |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **1. Writing effective reliability user stories** | Craft user stories with clear acceptance criteria that define measurable outcomes for reliability improvements. | Ensure stories focus on observable behavior and outcomes. |
-| **2. Quantifying customer and business impact** | Assess and articulate the value of reliability improvements in terms of customer experience and business metrics. | Use metrics like reduced downtime, improved SLAs, or customer satisfaction scores. |
-| **3. Breaking down large reliability initiatives** | Decompose reliability goals into smaller, manageable, and estimable work items. | Apply standard techniques like vertical slicing or dependency mapping. |
-| **4. Balanced prioritization methodologies** | Integrate functional and non-functional requirements into a unified prioritization process. | Consider business goals, customer needs, and technical risks when sequencing work. |
-| **5. Measuring and demonstrating value delivered** | Track and present tangible outcomes of reliability investments using empirical data. | Use metrics such as error rate reductions, uptime improvements, or decreased incident response times. |
+| **1. Writing effective reliability user stories**  | Craft user stories with clear acceptance criteria that define measurable outcomes for reliability improvements.   | Ensure stories focus on observable behavior and outcomes.                                             |
+| **2. Quantifying customer and business impact**    | Assess and articulate the value of reliability improvements in terms of customer experience and business metrics. | Use metrics like reduced downtime, improved SLAs, or customer satisfaction scores.                    |
+| **3. Breaking down large reliability initiatives** | Decompose reliability goals into smaller, manageable, and estimable work items.                                   | Apply standard techniques like vertical slicing or dependency mapping.                                |
+| **4. Balanced prioritization methodologies**       | Integrate functional and non-functional requirements into a unified prioritization process.                       | Consider business goals, customer needs, and technical risks when sequencing work.                    |
+| **5. Measuring and demonstrating value delivered** | Track and present tangible outcomes of reliability investments using empirical data.                              | Use metrics such as error rate reductions, uptime improvements, or decreased incident response times. |
 
 These approaches ensure that reliability work becomes sustainable by embedding it into the same frameworks and processes used for product features, rather than treating it as separate "technical debt" or "maintenance" activities. Below is a checklist to guide the application of these practices:
 
@@ -1220,11 +1220,11 @@ Leading organizations manage reliability improvements using the same product man
 
    #### Example Table: Poorly Written vs. Well-Written Reliability Stories
 
-   | Poorly Written Story | Well-Written Story |
+   | Poorly Written Story                   | Well-Written Story                                                                                                            |
    | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-   | "Fix the database performance issues." | "As a customer, I want query response times to remain under 200ms during peak load, so I can complete transactions quickly." |
-   | "Improve system reliability by 10%." | "As a customer, I want 99.95% system availability during business hours, so I can trust the service for critical tasks." |
-   | "Reduce error rates in the API." | "As an API consumer, I want a 0.1% error rate for all requests, ensuring consistent and reliable integration with my system." |
+   | "Fix the database performance issues." | "As a customer, I want query response times to remain under 200ms during peak load, so I can complete transactions quickly."  |
+   | "Improve system reliability by 10%."   | "As a customer, I want 99.95% system availability during business hours, so I can trust the service for critical tasks."      |
+   | "Reduce error rates in the API."       | "As an API consumer, I want a 0.1% error rate for all requests, ensuring consistent and reliable integration with my system." |
 
    By framing stories in this way, teams create clarity around customer impact, measurable outcomes, and testable acceptance criteria.
 
@@ -1476,12 +1476,12 @@ Identifying one or more of these issues may indicate a cultural gap that could l
 
 Leading organizations create cultures where reliability advocacy extends across all functions rather than residing solely with SRE teams. The most effective approaches include:
 
-| **Best Practice** | **Description** | **Benefits** | **Implementation Examples** |
+| **Best Practice**                         | **Description**                                                                                | **Benefits**                                                                                                                         | **Implementation Examples**                                                                                                                                                                                           |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Shared Reliability Ownership Models** | Establish explicit reliability responsibilities across all roles. | - Enhanced accountability across teams.<br>- Reduced silos in incident response.<br>- Improved collaboration. | - Create clear reliability accountabilities for each function.<br>- Develop cross-functional reliability working groups.<br>- Establish reliability champions in each department. |
-| **Integrated Reliability Metrics** | Embed reliability measures throughout organizational reporting. | - Data-driven decision-making.<br>- Improved visibility into reliability performance.<br>- Alignment with business KPIs. | - Include reliability KPIs in executive dashboards.<br>- Integrate reliability metrics into product success measures.<br>- Develop team-level reliability scorecards. |
-| **Reliability Celebration Mechanisms** | Reinforce a culture of reliability by recognizing and celebrating achievements in reliability. | - Increased motivation and morale.<br>- Cultural reinforcement of reliability as a value.<br>- Positive feedback loops. | - Celebrate reliability milestones with the same visibility as feature launches.<br>- Share reliability success stories in company communications.<br>- Implement recognition programs for reliability contributions. |
-| **Cross-Functional Reliability Programs** | Establish organizational initiatives that foster reliability across diverse teams. | - Broader organizational alignment on reliability goals.<br>- Accelerated reliability improvements.<br>- Strengthened collaboration. | - Create dedicated reliability improvement time across all teams.<br>- Develop mentorship programs pairing SREs with other functions.<br>- Establish reliability communities of practice. |
+| **Shared Reliability Ownership Models**   | Establish explicit reliability responsibilities across all roles.                              | - Enhanced accountability across teams.<br>- Reduced silos in incident response.<br>- Improved collaboration.                        | - Create clear reliability accountabilities for each function.<br>- Develop cross-functional reliability working groups.<br>- Establish reliability champions in each department.                                     |
+| **Integrated Reliability Metrics**        | Embed reliability measures throughout organizational reporting.                                | - Data-driven decision-making.<br>- Improved visibility into reliability performance.<br>- Alignment with business KPIs.             | - Include reliability KPIs in executive dashboards.<br>- Integrate reliability metrics into product success measures.<br>- Develop team-level reliability scorecards.                                                 |
+| **Reliability Celebration Mechanisms**    | Reinforce a culture of reliability by recognizing and celebrating achievements in reliability. | - Increased motivation and morale.<br>- Cultural reinforcement of reliability as a value.<br>- Positive feedback loops.              | - Celebrate reliability milestones with the same visibility as feature launches.<br>- Share reliability success stories in company communications.<br>- Implement recognition programs for reliability contributions. |
+| **Cross-Functional Reliability Programs** | Establish organizational initiatives that foster reliability across diverse teams.             | - Broader organizational alignment on reliability goals.<br>- Accelerated reliability improvements.<br>- Strengthened collaboration. | - Create dedicated reliability improvement time across all teams.<br>- Develop mentorship programs pairing SREs with other functions.<br>- Establish reliability communities of practice.                             |
 
 **Key Insight:**\
 Industry data shows that organizations with dispersed reliability advocacy experience 64% fewer major incidents than those where reliability is solely an SRE concern. Research demonstrates that teams with explicit reliability objectives across all functions implement 3.7x more proactive reliability improvements than those where reliability is a specialized responsibility.

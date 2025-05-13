@@ -137,7 +137,7 @@ To advance through the automation hierarchy, follow these five actionable steps:
 ## Panel 3: Balancing Safety and Speed - The Guardrails Approach to Automation
 ### Scene Description
 
- A split-screen view of two scenarios. On the left, Hector examines a complex automation system with multiple highlighted "circuit breaker" points and safety thresholds visible in the code. On the right, a retrospective meeting where the team reviews an incident timeline showing how an automated system safely stopped and alerted humans when it detected unexpected conditions during a trading platform deployment. Digital screens show metrics tracking automated vs. manual deployments, with automated ones clearly exhibiting fewer incidents while handling greater deployment volume.
+ A split-screen view of two scenarios. On the left, Hector Alavaz examines a complex automation system with multiple highlighted "circuit breaker" points and safety thresholds visible in the code. On the right, a retrospective meeting where the team reviews an incident timeline showing how an automated system safely stopped and alerted humans when it detected unexpected conditions during a trading platform deployment. Digital screens show metrics tracking automated vs. manual deployments, with automated ones clearly exhibiting fewer incidents while handling greater deployment volume.
 
 ### Teaching Narrative
 Automation skepticism in banking often stems from valid concerns: What if the automated system makes catastrophic mistakes at machine speed? The guardrails approach addresses this by building safety mechanisms directly into automation systems.

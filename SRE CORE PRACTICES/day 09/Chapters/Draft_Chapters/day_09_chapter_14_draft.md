@@ -122,7 +122,7 @@ Banks that implemented compliance-as-engineering approaches reported 64% lower c
 
 ### Scene Description
 
- An auditor sits with Hector as he demonstrates their observability platform. The screen shows a dashboard with clear indicators for transaction monitoring, data privacy controls, and system access logs. The auditor is taking notes as Hector points to a "Compliance Evidence Trail" tab that shows historical data with tamper-evident timestamps. In the background, other team members are working normally, uninterrupted by the audit process.
+ An auditor sits with Hector Alavaz as he demonstrates their observability platform. The screen shows a dashboard with clear indicators for transaction monitoring, data privacy controls, and system access logs. The auditor is taking notes as Hector Alavaz points to a "Compliance Evidence Trail" tab that shows historical data with tamper-evident timestamps. In the background, other team members are working normally, uninterrupted by the audit process.
 
 ### Teaching Narrative
 

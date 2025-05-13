@@ -2,13 +2,13 @@
 
 ## Chapter Overview
 
-The first time a Tier-1 banking platform paged Hector for “CPU > 85 %,” no customer ever noticed. The second time it happened, a junior on-call quit on the spot. Static, host-centric alerts like that once made sense in mainframe days, but today’s micro-service meshes evaporate beneath them. Modern incidents hide in the seam between healthy hardware and furious users, so the chapter begins by exposing why old thresholds sleepwalk past real pain. :contentReference[oaicite:0]{index=0}
+The first time a Tier-1 banking platform paged Hector Alavaz for “CPU > 85 %,” no customer ever noticed. The second time it happened, a junior on-call quit on the spot. Static, host-centric alerts like that once made sense in mainframe days, but today’s micro-service meshes evaporate beneath them. Modern incidents hide in the seam between healthy hardware and furious users, so the chapter begins by exposing why old thresholds sleepwalk past real pain. :contentReference[oaicite:0]{index=0}
 
 Traditional alerting pipelines assume resource exhaustion will always precede service failure. Banking stacks disprove that daily: a single mis-timed feature flag burns through a login SLO long before any host feels pressure. When engineers bind alerts to internals—CPU, memory, queue depth—they inherit every false positive those metrics cough up at high load, while missing the low-volume edge cases auditors actually care about.
 
 Enter **burn rate**: the speed at which an error budget evaporates. An SLO-aware alert treats “five minutes of 15 % 5xx responses” as a burning fuse, regardless of CPU. By quantifying how quickly customer experience erodes, SLO alerts cut through infrastructure noise and wake the right humans only when failure is *imminent*. Error budgets become the currency of reliability, and burn-rate slopes show when that currency is on fire.
 
-This chapter anchors those ideas in a real outage: login requests timed out for 8 % of mobile users while dashboards flashed green. Forty CPU alerts fired; zero user-impact alerts did. We’ll replay that night through Daniel’s exhausted eyes, let Juana surgically dismantle the faulty rules, and watch Hector drop a burn-rate diagram like an accountant revealing fraud.
+This chapter anchors those ideas in a real outage: login requests timed out for 8 % of mobile users while dashboards flashed green. Forty CPU alerts fired; zero user-impact alerts did. We’ll replay that night through Daniel’s exhausted eyes, let Juana surgically dismantle the faulty rules, and watch Hector Alavaz drop a burn-rate diagram like an accountant revealing fraud.
 
 By the end, you will rewrite one of your own alerts to measure **threats, not thresholds**. Expect fewer pages at 3 AM—and alerts that actually point to the smoking component.
 
@@ -43,9 +43,9 @@ Juana Torres, still awake thanks to espresso and cynicism, pops into the Slack w
 > **Daniel (yawning):** “Legacy spreadsheet said CPU cost money. So we page.”
 > **Juana:** “Users cost more. Where’s their metric in that alert?”
 
-Hector’s avatar appears—a coffee-stained RHEL cap an omen of honesty.
+Hector Alavaz’s avatar appears—a coffee-stained RHEL cap an omen of honesty.
 
-> **Hector:** “Daniel, stop admiring server sweat. If customers aren’t screaming, go back to bed.”
+> **Hector Alavaz:** “Daniel, stop admiring server sweat. If customers aren’t screaming, go back to bed.”
 
 He pastes a screenshot of the login SLI, flat as a calm pulse. “You paged people for *exercise*, not for injury.”&#32;
 
@@ -82,9 +82,9 @@ Morning glow creeps across the Mexico City NOC. A wall monitor lists last night�
 
 Juana taps the rule file onscreen: “Check the comment timestamp. 14 years ago. Nobody paged the author when the world changed.”
 
-Daniel muscles a grin. “Better safe than sorry?” Hector’s laugh ricochets off graphite-painted walls.
+Daniel muscles a grin. “Better safe than sorry?” Hector Alavaz’s laugh ricochets off graphite-painted walls.
 
-> **Hector (Aphorism)**: “Geneos rules don’t fix modern risk. They just remind you how old your runbooks are.”&#32;
+> **Hector Alavaz (Aphorism)**: “Geneos rules don’t fix modern risk. They just remind you how old your runbooks are.”&#32;
 
 He toggles an overlay: last quarter’s *ignored* alerts versus mean-time-to-detect. Trendline? Upward misery. The team sees the silent killer: not downtime, but *trust decay*.
 
@@ -92,8 +92,8 @@ He toggles an overlay: last quarter’s *ignored* alerts versus mean-time-to-det
 
 ![Dashboard juxtaposing a skyscraper of alert counts against a flat line of user-impact incidents; Clara circles the spike in red.](images/ch4_p2_false_positives.png){width=600}
 
-:::hector quote
-**Hector says:** “If your pager is louder than your customers, your priorities are upside-down.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “If your pager is louder than your customers, your priorities are upside-down.”
 :::
 
 ______________________________________________________________________
@@ -124,7 +124,7 @@ Aisha projects two timelines. Top: CPU spiking on a replica set during nightly f
 
 > **Aisha:** “We alerted on the *lungs* wheezing, not the *heart* stopping.”
 > **Clara:** “So we page on pain, not panting?”
-> **Hector:** “Correct. Monitor the scream, not the sweat.”
+> **Hector Alavaz:** “Correct. Monitor the scream, not the sweat.”
 
 He tells the war story of a London banking outage where CPU thresholds masked a TLS certificate failure; customers couldn’t trade for six minutes while on-call rebooted healthy servers. The bank lost £2.7 million before anyone checked error logs. System-failure anecdote delivered, the room falls silent.
 
@@ -159,11 +159,11 @@ Service B  ❱ 30 % of 1 % error budget consumed in 30 m →  ⚠️ Ticket
 
 ### Teaching Narrative
 
-Hector stands at a wall screen that slopes upward like a mountain run. Two lines race: **green** for Service A, **rust-red** for Service B. Service B’s incline is twice as steep.
+Hector Alavaz stands at a wall screen that slopes upward like a mountain run. Two lines race: **green** for Service A, **rust-red** for Service B. Service B’s incline is twice as steep.
 
-> **Hector (pointing):** “CPU didn’t move, but your *trust balance* is draining. That slope, amigos, is your mortgage rate on failure.”
+> **Hector Alavaz (pointing):** “CPU didn’t move, but your *trust balance* is draining. That slope, amigos, is your mortgage rate on failure.”
 
-Clara whispers, “So the alert fires *earlier* for Service B?” Juana nods: “Because customers feel it sooner.” Daniel frowns: “We set one threshold—why two windows?” Hector taps his watch.
+Clara whispers, “So the alert fires *earlier* for Service B?” Juana nods: “Because customers feel it sooner.” Daniel frowns: “We set one threshold—why two windows?” Hector Alavaz taps his watch.
 
 > “Fast burn wakes you *now*. Slow burn nudges you *today*. Both protect users; one protects your weekend.”
 
@@ -217,13 +217,13 @@ Good alerts tell *who’s hurt* and *where to click first*.
 
 Clara’s stylus taps the “BEFORE” block: “One metric, zero context.” Daniel scrolls to the bottom: “And no link to *anything*.” Together they craft the “AFTER” rule.
 
-Juana pastes a trace-ID token. “Pager buttons you; click takes you straight to the failing span.” Hector grins—rare, brief.
+Juana pastes a trace-ID token. “Pager buttons you; click takes you straight to the failing span.” Hector Alavaz grins—rare, brief.
 
-> **Hector Aphorism:** “Alerts should arrive with directions, not riddles.”&#32;
+> **Hector Alavaz Aphorism:** “Alerts should arrive with directions, not riddles.”&#32;
 
 ### Image Embed
 
-![Side-by-side YAML before/after on Clara’s tablet; Hector’s reflection in the glass giving a thumbs-up.](images/ch4_p5_fixing_noise.png){width=600}
+![Side-by-side YAML before/after on Clara’s tablet; Hector Alavaz’s reflection in the glass giving a thumbs-up.](images/ch4_p5_fixing_noise.png){width=600}
 
 :::try this
 Rewrite one of your own host-based alerts.
@@ -262,7 +262,7 @@ User Impact: 6 % mobile login failure (projected 15 % in 10 m)
 
 Sofia flips the chaos-switch in staging. Error rates climb; the new alert fires once—*only once*. Daniel follows the embedded trace, lands precisely on a failing gRPC call, and patches it in four commands.
 
-Clara clocks the timeline: first byte to fix in seven minutes. She high-fives Juana. Hector raises his coffee mug. “That, kids, is an alert that earns its decibels.”
+Clara clocks the timeline: first byte to fix in seven minutes. She high-fives Juana. Hector Alavaz raises his coffee mug. “That, kids, is an alert that earns its decibels.”
 
 ### Image Embed
 
@@ -282,24 +282,24 @@ An alert is production-worthy only if it answers: **What broke? Who’s affected
 
 ### 🚦 Applied Example
 
-| Question | Example Data in Alert |
+| Question        | Example Data in Alert                |
 | --------------- | ------------------------------------ |
-| What broke? | *Mobile-login SLO fast-burn* |
-| Who’s affected? | *6 % of sessions → timeouts* |
-| Next step? | *Rollback `login-svc` or add 2 pods* |
+| What broke?     | *Mobile-login SLO fast-burn*         |
+| Who’s affected? | *6 % of sessions → timeouts*         |
+| Next step?      | *Rollback `login-svc` or add 2 pods* |
 
 ### Teaching Narrative
 
-Hector stands before a fresh standards doc, signatures queued. “No alert ships until it passes the litmus.” Aisha signs first; Daniel scribbles last, exhaustion replaced by relief.
+Hector Alavaz stands before a fresh standards doc, signatures queued. “No alert ships until it passes the litmus.” Aisha signs first; Daniel scribbles last, exhaustion replaced by relief.
 
-> **Hector (closing grin):** “Let’s not build alarms. Let’s build clarity.”&#32;
+> **Hector Alavaz (closing grin):** “Let’s not build alarms. Let’s build clarity.”&#32;
 
 ### Image Embed
 
 ![Group signing new “Alert Litmus” document; banner overhead reads “Quality beats Quantity.”](images/ch4_p7_lesson_locked.png){width=600}
 
-:::hector quote
-**Hector says:** “Bad alerts make good engineers quit. Great alerts let them sleep—and still keep their jobs.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Bad alerts make good engineers quit. Great alerts let them sleep—and still keep their jobs.”
 :::
 
 ______________________________________________________________________

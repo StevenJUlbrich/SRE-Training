@@ -92,13 +92,13 @@ Financial institutions must recognize that technical metrics only matter insofar
 
 ## Scene Description
 
-**The Anti-Signal** – Hector calls it "dashboard theatre." "You made something pretty. Can it stop a fire?"
+**The Anti-Signal** – Hector Alavaz calls it "dashboard theatre." "You made something pretty. Can it stop a fire?"
 
-*Expanded narrative: Hector examines the dashboard with his characteristic directness. "This is dashboard theatre," he declares. "It looks impressive, but it's actually making you less effective." He points to the array of colorful widgets. "With this much visual noise, you'll miss the real signals when they appear. It's like trying to hear a whispered warning in a rock concert." He turns to Leonel. "You made something pretty. Can it stop a fire? Can it tell you, in the first five seconds of looking at it, exactly what's wrong and where to start fixing it? Because that's the only thing that matters at 3 AM when transactions are failing."*
+*Expanded narrative: Hector Alavaz examines the dashboard with his characteristic directness. "This is dashboard theatre," he declares. "It looks impressive, but it's actually making you less effective." He points to the array of colorful widgets. "With this much visual noise, you'll miss the real signals when they appear. It's like trying to hear a whispered warning in a rock concert." He turns to Leonel. "You made something pretty. Can it stop a fire? Can it tell you, in the first five seconds of looking at it, exactly what's wrong and where to start fixing it? Because that's the only thing that matters at 3 AM when transactions are failing."*
 
 ## Teaching Narrative
 
-Hector's critique introduces a powerful concept in observability design: the signal-to-noise ratio. His characterization of the dashboard as "theatre" highlights how visualizations can create the illusion of insight while actually obscuring important information. This pattern demonstrates how excessive complexity and visual noise can transform dashboards from helpful tools into harmful distractions during critical incidents.
+Hector Alavaz's critique introduces a powerful concept in observability design: the signal-to-noise ratio. His characterization of the dashboard as "theatre" highlights how visualizations can create the illusion of insight while actually obscuring important information. This pattern demonstrates how excessive complexity and visual noise can transform dashboards from helpful tools into harmful distractions during critical incidents.
 
 ## Signal-to-Noise Ratio Explained
 
@@ -116,7 +116,7 @@ In financial services, signal-to-noise ratio directly impacts incident response 
 
 ## The 3 AM Test
 
-Hector's question about whether the dashboard can identify problems "in the first five seconds" at "3 AM when transactions are failing" introduces a crucial evaluation criterion: the emergency utility test. This standard recognizes that dashboards must perform their most critical function—identifying problems quickly—under the worst possible circumstances: during middle-of-the-night incidents when operators are tired and stressed.
+Hector Alavaz's question about whether the dashboard can identify problems "in the first five seconds" at "3 AM when transactions are failing" introduces a crucial evaluation criterion: the emergency utility test. This standard recognizes that dashboards must perform their most critical function—identifying problems quickly—under the worst possible circumstances: during middle-of-the-night incidents when operators are tired and stressed.
 
 ## Banking Implementation Guidance
 
@@ -308,17 +308,17 @@ To demonstrate observability transformation in financial systems:
 
 Financial institutions should establish concrete evidence of dashboard effectiveness as a standard practice. By systematically comparing how different visualization approaches perform during actual incidents, organizations can ensure their observability tools continuously improve in their ability to highlight issues affecting customer transactions.
 
-## Panel 8: Hector's Standard - Observation Principles
+## Panel 8: Hector Alavaz's Standard - Observation Principles
 
 ## Scene Description
 
-**Hector's Standard** – He scribbles on the whiteboard: "3 graphs: What broke. When it broke. Why it broke."
+**Hector Alavaz's Standard** – He scribbles on the whiteboard: "3 graphs: What broke. When it broke. Why it broke."
 
-*Expanded narrative: Hector approaches the whiteboard and writes a simple standard for dashboard effectiveness. "You need just three things," he explains as he writes. "What broke: which service or component is failing. When it broke: the precise time the issue began and any correlating events. Why it broke: the specific mechanism causing the failure." He caps his marker. "Everything else is diagnostic detail that belongs on drill-down views, not your primary dashboard. If you can answer these three questions in the first thirty seconds, your dashboard works. If not, it's just decoration."*
+*Expanded narrative: Hector Alavaz approaches the whiteboard and writes a simple standard for dashboard effectiveness. "You need just three things," he explains as he writes. "What broke: which service or component is failing. When it broke: the precise time the issue began and any correlating events. Why it broke: the specific mechanism causing the failure." He caps his marker. "Everything else is diagnostic detail that belongs on drill-down views, not your primary dashboard. If you can answer these three questions in the first thirty seconds, your dashboard works. If not, it's just decoration."*
 
 ## Teaching Narrative
 
-This scene distills observability principles into a clear, actionable standard. Hector's "three questions" framework provides a simple but powerful criterion for evaluating dashboard effectiveness. This pattern demonstrates how complex observability concepts can be reduced to fundamental principles that guide practical implementation and evaluation.
+This scene distills observability principles into a clear, actionable standard. Hector Alavaz's "three questions" framework provides a simple but powerful criterion for evaluating dashboard effectiveness. This pattern demonstrates how complex observability concepts can be reduced to fundamental principles that guide practical implementation and evaluation.
 
 ## Observation Principles Explained
 
@@ -336,7 +336,7 @@ In financial services, clear observation principles address both operational and
 
 ## The Three Questions
 
-Hector's specific questions—"What broke. When it broke. Why it broke."—provide a powerful framework for dashboard design and evaluation. These questions focus attention on the information that directly enables incident response: identifying the affected component, understanding the timing and context, and determining the causal mechanism. By organizing dashboards explicitly around these questions, teams create tools that directly support their most critical operational need.
+Hector Alavaz's specific questions—"What broke. When it broke. Why it broke."—provide a powerful framework for dashboard design and evaluation. These questions focus attention on the information that directly enables incident response: identifying the affected component, understanding the timing and context, and determining the causal mechanism. By organizing dashboards explicitly around these questions, teams create tools that directly support their most critical operational need.
 
 ## Banking Implementation Guidance
 
@@ -350,19 +350,19 @@ To implement effective observation principles in financial systems:
 
 4. **Standards Documentation**: Create clear, simple principles that guide all dashboard development
 
-Financial institutions should establish and document clear observation principles for all observability tools. By reducing complex design considerations to fundamental questions like Hector's three, organizations can ensure consistent, effective dashboards across diverse teams and technologies—dashboards that directly support rapid response to issues affecting customer transactions.
+Financial institutions should establish and document clear observation principles for all observability tools. By reducing complex design considerations to fundamental questions like Hector Alavaz's three, organizations can ensure consistent, effective dashboards across diverse teams and technologies—dashboards that directly support rapid response to issues affecting customer transactions.
 
 ## Panel 9: Final Reflection - Dashboard Purpose
 
 ## Scene Description
 
-**Final Reflection** – Leonel: "You don't want pretty. You want accurate." Hector: "You want clarity when everything's on fire."
+**Final Reflection** – Leonel: "You don't want pretty. You want accurate." Hector Alavaz: "You want clarity when everything's on fire."
 
-*Expanded narrative: As the team implements the new dashboard, Leonel reflects on the transformation. "I get it now," he acknowledges. "You don't want pretty. You want accurate." Hector nods, but corrects slightly: "What you really want is clarity when everything's on fire. A dashboard has one job: to tell you exactly what's wrong and where to start fixing it when an incident is underway. Everything else—analytics, reporting, exploration—belongs in different tools designed for those specific purposes. Dashboards are for emergencies. Design them accordingly."*
+*Expanded narrative: As the team implements the new dashboard, Leonel reflects on the transformation. "I get it now," he acknowledges. "You don't want pretty. You want accurate." Hector Alavaz nods, but corrects slightly: "What you really want is clarity when everything's on fire. A dashboard has one job: to tell you exactly what's wrong and where to start fixing it when an incident is underway. Everything else—analytics, reporting, exploration—belongs in different tools designed for those specific purposes. Dashboards are for emergencies. Design them accordingly."*
 
 ## Teaching Narrative
 
-This closing exchange captures a fundamental insight about dashboard purpose: they are emergency tools, not general-purpose visualizations. Hector's emphasis on "clarity when everything's on fire" highlights how dashboard requirements differ fundamentally from other visualization needs. This perspective shift helps the team understand why different design principles apply to operational dashboards versus analytics or reporting tools.
+This closing exchange captures a fundamental insight about dashboard purpose: they are emergency tools, not general-purpose visualizations. Hector Alavaz's emphasis on "clarity when everything's on fire" highlights how dashboard requirements differ fundamentally from other visualization needs. This perspective shift helps the team understand why different design principles apply to operational dashboards versus analytics or reporting tools.
 
 ## Dashboard Purpose Explained
 
@@ -380,7 +380,7 @@ In financial services, clear dashboard purpose addresses a common observability 
 
 ## The Emergency Design Principle
 
-Hector's statement that "dashboards are for emergencies" provides a powerful design principle that clarifies many specific implementation decisions. Emergency tools have unique requirements—immediate clarity, focus on critical information, resilience under stress—that directly shape effective dashboard design. This framing helps explain why techniques appropriate for analytical or reporting visualizations often fail in operational contexts.
+Hector Alavaz's statement that "dashboards are for emergencies" provides a powerful design principle that clarifies many specific implementation decisions. Emergency tools have unique requirements—immediate clarity, focus on critical information, resilience under stress—that directly shape effective dashboard design. This framing helps explain why techniques appropriate for analytical or reporting visualizations often fail in operational contexts.
 
 ## Banking Implementation Guidance
 
@@ -400,13 +400,13 @@ Financial institutions should recognize that effective observability requires sp
 
 ## Scene Description
 
-**Lesson Locked In** – Juana: "Less dashboard. More insight." Hector: "Now it tells the truth—whether you like it or not."
+**Lesson Locked In** – Juana: "Less dashboard. More insight." Hector Alavaz: "Now it tells the truth—whether you like it or not."
 
-*Expanded narrative: As they activate the new dashboard in production, Juana summarizes the transformation: "Less dashboard. More insight." Hector nods approvingly and adds his characteristic perspective: "Now it tells the truth—whether you like it or not." He looks at the team. "That's the real test of good observability. It doesn't flatter you with green status when things are failing. It doesn't hide problems behind pretty visualizations. It tells you exactly what's happening, especially when that truth is uncomfortable. Because in this business, uncomfortable truths caught early save jobs, money, and customer trust."*
+*Expanded narrative: As they activate the new dashboard in production, Juana summarizes the transformation: "Less dashboard. More insight." Hector Alavaz nods approvingly and adds his characteristic perspective: "Now it tells the truth—whether you like it or not." He looks at the team. "That's the real test of good observability. It doesn't flatter you with green status when things are failing. It doesn't hide problems behind pretty visualizations. It tells you exactly what's happening, especially when that truth is uncomfortable. Because in this business, uncomfortable truths caught early save jobs, money, and customer trust."*
 
 ## Teaching Narrative
 
-This final exchange captures a profound insight about observability purpose: telling uncomfortable truths clearly. Hector's emphasis that good dashboards "tell the truth—whether you like it or not" highlights how effective observability often conflicts with organizational comfort. This perspective helps the team understand that the true measure of observability quality isn't how it makes them feel, but how effectively it reveals problems—especially those they might prefer not to see.
+This final exchange captures a profound insight about observability purpose: telling uncomfortable truths clearly. Hector Alavaz's emphasis that good dashboards "tell the truth—whether you like it or not" highlights how effective observability often conflicts with organizational comfort. This perspective helps the team understand that the true measure of observability quality isn't how it makes them feel, but how effectively it reveals problems—especially those they might prefer not to see.
 
 ## Observability Communication Explained
 
@@ -424,7 +424,7 @@ In financial services, effective observability communication addresses both tech
 
 ## The Uncomfortable Truth Value
 
-Hector's observation that "uncomfortable truths caught early save jobs, money, and customer trust" highlights the business value of effective observability. This framing transforms potentially negative messages—system problems, performance issues, customer impact—into valuable early warnings that actually protect the organization's interests by enabling earlier, more effective intervention.
+Hector Alavaz's observation that "uncomfortable truths caught early save jobs, money, and customer trust" highlights the business value of effective observability. This framing transforms potentially negative messages—system problems, performance issues, customer impact—into valuable early warnings that actually protect the organization's interests by enabling earlier, more effective intervention.
 
 ## Banking Implementation Guidance
 

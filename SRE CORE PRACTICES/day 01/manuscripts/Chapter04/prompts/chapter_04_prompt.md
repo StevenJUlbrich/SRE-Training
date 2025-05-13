@@ -47,7 +47,7 @@ ______________________________________________________________________
 
 ### ✍️ STYLE & VOICE:
 
-- Use Hector’s sharp, practical tone from his persona file
+- Use Hector Alavaz’s sharp, practical tone from his persona file
 - Let Daniel feel exhausted, Clara sound assertive, Juana stay cool-headed
 - Keep scenes cinematic but always instructional
 - Ensure visuals and prose reinforce the declared learning objective
@@ -87,4 +87,4 @@ Start from:
 # Chapter 4 – “You’re Not Alerting — You’re Alarming”
 ```
 
-Continue through all 7 panels. End with a reflection, an assessment hook, and a Hector aphorism.
+Continue through all 7 panels. End with a reflection, an assessment hook, and a Hector Alavaz aphorism.

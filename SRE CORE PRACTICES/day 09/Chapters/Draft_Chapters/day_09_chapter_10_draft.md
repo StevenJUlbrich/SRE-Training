@@ -144,7 +144,7 @@ For organizations seeking to elevate reliability to a first-class product featur
 
 ### Scene Description
 
- A banking executive boardroom where Hector (SRE lead) is presenting a compelling data visualization showing the correlation between system reliability metrics and business KPIs. The visualization includes split screens showing: downtime incidents mapped against customer churn, transaction error rates correlated with support call volume, and page load times linked to abandoned transactions. Banking executives are leaning forward, visibly connecting technical reliability concepts to financial impact for the first time.
+ A banking executive boardroom where Hector Alavaz (SRE lead) is presenting a compelling data visualization showing the correlation between system reliability metrics and business KPIs. The visualization includes split screens showing: downtime incidents mapped against customer churn, transaction error rates correlated with support call volume, and page load times linked to abandoned transactions. Banking executives are leaning forward, visibly connecting technical reliability concepts to financial impact for the first time.
 
 ### Teaching Narrative
 

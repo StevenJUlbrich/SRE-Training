@@ -46,10 +46,10 @@ ______________________________________________________________________
 - Agent call transcript + green dashboard + `curl` returns 200 but no confirmation
 - No trace ID in logs
 
-### Widget: Hector Quote
+### Widget: Hector Alavaz Quote
 
 ```markdown
-:::hector quote
+:::Hector Alavaz quote
 You didn’t build telemetry—you built denial. And now it’s trying to teach you something.
 :::
 ```
@@ -111,7 +111,7 @@ Who gets blamed first when your observability fails? Who should?
 
 ______________________________________________________________________
 
-## 🧪 Teaching Sequence 4 – Hector’s Debrief
+## 🧪 Teaching Sequence 4 – Hector Alavaz’s Debrief
 
 ### Teaching Moment
 
@@ -143,7 +143,7 @@ ______________________________________________________________________
 - **Wanjiru**: struggles to explain the failure without traces
 - **Katherine**: trusts CPU/memory; learns observability regression is a risk
 - **Juana**: shows how it *should’ve* worked
-- **Hector**: defines tracing as the postmortem you can run live
+- **Hector Alavaz**: defines tracing as the postmortem you can run live
 
 ______________________________________________________________________
 
@@ -157,14 +157,14 @@ ______________________________________________________________________
 
 ## 📋 Panel Beat-to-Concept Map
 
-| Beat # | Panel Title | Teaching Goal |
-| ------ | ----------------------- | ----------------------------------------- |
-| 1 | The Mystery Crash | No visibility despite user pain |
-| 2 | Dashboard Deceit, Pt II | Misleading confidence via metrics |
-| 3 | The Missing Trace | Traces missing = no request context |
-| 4 | What They Missed | Dev config regression kills telemetry |
-| 5 | The Blame Game Begins | Absence of trace breeds finger-pointing |
-| 6 | Hector Steps In | Observability is a preparation discipline |
-| 7 | The Corrected View | Juana restores trace view for clarity |
-| 8 | Team Realization | Learners own the failure |
-| 9 | Closing Shot | Hector summarizes: telemetry must confess |
+| Beat # | Panel Title             | Teaching Goal                                    |
+| ------ | ----------------------- | ------------------------------------------------ |
+| 1      | The Mystery Crash       | No visibility despite user pain                  |
+| 2      | Dashboard Deceit, Pt II | Misleading confidence via metrics                |
+| 3      | The Missing Trace       | Traces missing = no request context              |
+| 4      | What They Missed        | Dev config regression kills telemetry            |
+| 5      | The Blame Game Begins   | Absence of trace breeds finger-pointing          |
+| 6      | Hector Alavaz Steps In  | Observability is a preparation discipline        |
+| 7      | The Corrected View      | Juana restores trace view for clarity            |
+| 8      | Team Realization        | Learners own the failure                         |
+| 9      | Closing Shot            | Hector Alavaz summarizes: telemetry must confess |

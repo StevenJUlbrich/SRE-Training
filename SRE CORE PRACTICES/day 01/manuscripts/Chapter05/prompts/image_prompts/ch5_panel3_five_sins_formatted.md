@@ -2,7 +2,7 @@
 
 **Scene**
 
-- A mobile whiteboard stands prominently in front of a frosted-glass wall. Drawn in thick Rust Red marker are five distinct icons: a broken chain, a ringing bell, a corked bottle, a hollow green circle, and a tangled cable. Each icon is labeled in bold charcoal with Hector’s angular handwriting. Learner laptops are open on a slate-gray conference table, reflecting the red icons on their screens. Overhead pendant lamps cast soft pools of off-white (#EDEDED) light, illuminating dust motes and the anxious expressions of the characters.
+- A mobile whiteboard stands prominently in front of a frosted-glass wall. Drawn in thick Rust Red marker are five distinct icons: a broken chain, a ringing bell, a corked bottle, a hollow green circle, and a tangled cable. Each icon is labeled in bold charcoal with Hector Alavaz’s angular handwriting. Learner laptops are open on a slate-gray conference table, reflecting the red icons on their screens. Overhead pendant lamps cast soft pools of off-white (#EDEDED) light, illuminating dust motes and the anxious expressions of the characters.
 
 **Characters In Frame**
 
@@ -17,7 +17,7 @@
    - **Appearance:** Overcaffeinated SRE, balancing sarcasm and stress.
    - **Props:** Circuit board tattoo on forearm, earbuds half-in.
 
-3. **Hector** — 49-year-old man, medium build, 5'10", with a weathered medium-brown complexion, angular face, and a neat salt-and-pepper beard, wearing a dark henley shirt and a red RHEL baseball cap.
+3. **Hector Alavaz** — 49-year-old man, medium build, 5'10", with a weathered medium-brown complexion, angular face, and a neat salt-and-pepper beard, wearing a dark henley shirt and a red RHEL baseball cap.
 
    - **Appearance:** Seasoned operations engineer, grounded and alert.
    - **Motion:** Focused energy, rarely gestures unless explaining failure.
@@ -35,12 +35,12 @@
 
 **Dialogue (speech bubbles, off-white #EDEDED, tails pointing to speakers)**
 
-- **Hector:** “Every outage I’ve survived traces back to these five mistakes.”
+- **Hector Alavaz:** “Every outage I’ve survived traces back to these five mistakes.”
 
 **Narration**
 
 - Top-left corner of the panel, integrated within the scene:\
-  *“Hector reveals Five Observability Sins, tying them to current outage.”*
+  *“Hector Alavaz reveals Five Observability Sins, tying them to current outage.”*
 
 **Visual Style**
 
@@ -62,7 +62,7 @@
 
 **Constraints**
 
-- Characters arranged left-to-right consistent with speaking order: Aisha, Daniel, Hector, Juana, Wanjiru.
+- Characters arranged left-to-right consistent with speaking order: Aisha, Daniel, Hector Alavaz, Juana, Wanjiru.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

@@ -40,7 +40,7 @@ ______________________________________________________________________
 
 - **Scene**: Leonel shows off a 3,000-line log tail
 - **Teaching Moment**: Volume ≠ value
-- **Widget**: Hector Quote — “Visibility isn’t the same as clarity.”
+- **Widget**: Hector Alavaz Quote — “Visibility isn’t the same as clarity.”
 - **Artifact**: Log stream full of irrelevant DEBUG, no context fields
 
 ### Panel 2 – The Metrics Don’t Match
@@ -57,7 +57,7 @@ ______________________________________________________________________
 - **Widget**: Debug Pattern — Missing Context Fields
 - **Artifact**: Log with missing `transactionId`, `traceId`
 
-### Panel 4 – Hector Steps In
+### Panel 4 – Hector Alavaz Steps In
 
 - **Scene**: Draws Logs / Metrics / Traces Venn diagram
 - **Teaching Moment**: Connection is the point, not coverage
@@ -87,9 +87,9 @@ ______________________________________________________________________
 
 ### Panel 8 – Lesson Locked In
 
-- **Scene**: Hector delivers summary while sipping coffee
+- **Scene**: Hector Alavaz delivers summary while sipping coffee
 - **Teaching Moment**: Logs = mouth, Metrics = mood, Traces = memory
-- **Widget**: Hector Quote — “Don’t confuse ranting with reasoning.”
+- **Widget**: Hector Alavaz Quote — “Don’t confuse ranting with reasoning.”
 - **Artifact**: Correlated trace+metric+log view of same transaction
 
 ______________________________________________________________________
@@ -99,7 +99,7 @@ ______________________________________________________________________
 - **Leonel**: Believes more logs = better logs; learns about signal value
 - **Wanjiru**: Hits dead ends in unstructured logs; asks better questions
 - **Clara**: Drives the metric cleanup and pushes for ownership
-- **Hector**: Explains that telemetry is storytelling, not shouting
+- **Hector Alavaz**: Explains that telemetry is storytelling, not shouting
 
 ______________________________________________________________________
 
@@ -113,13 +113,13 @@ ______________________________________________________________________
 
 ## 📋 Panel Beat-to-Concept Map
 
-| Beat # | Panel Title | Teaching Goal |
+| Beat # | Panel Title              | Teaching Goal                             |
 | ------ | ------------------------ | ----------------------------------------- |
-| 1 | Death by Verbose Logging | Log volume vs. usefulness |
-| 2 | The Metrics Don’t Match | User experience ≠ dashboard comfort |
-| 3 | The Unreadable Log | Importance of structured, contextual logs |
-| 4 | Hector Steps In | Logs + Metrics + Traces = diagnosis |
-| 5 | Metric Hygiene Clinic | Taxonomy and ownership |
-| 6 | Refactoring the Noise | Simplify, clarify, connect |
-| 7 | The Ah-Ha Graph | Insights emerge when noise reduces |
-| 8 | Lesson Locked In | Summary metaphor and system clarity |
+| 1      | Death by Verbose Logging | Log volume vs. usefulness                 |
+| 2      | The Metrics Don’t Match  | User experience ≠ dashboard comfort       |
+| 3      | The Unreadable Log       | Importance of structured, contextual logs |
+| 4      | Hector Alavaz Steps In   | Logs + Metrics + Traces = diagnosis       |
+| 5      | Metric Hygiene Clinic    | Taxonomy and ownership                    |
+| 6      | Refactoring the Noise    | Simplify, clarify, connect                |
+| 7      | The Ah-Ha Graph          | Insights emerge when noise reduces        |
+| 8      | Lesson Locked In         | Summary metaphor and system clarity       |

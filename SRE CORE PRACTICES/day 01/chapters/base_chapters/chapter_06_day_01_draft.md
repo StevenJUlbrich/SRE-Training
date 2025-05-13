@@ -48,9 +48,9 @@ Financial institutions should recognize that metric reliability isn't just a tec
 
 ## Scene Description
 
-**Cardinality Explosion** – Clara pulls up metrics with thousands of user-tagged variations. Hector mutters, "The dashboard's bleeding context."
+**Cardinality Explosion** – Clara pulls up metrics with thousands of user-tagged variations. Hector Alavaz mutters, "The dashboard's bleeding context."
 
-*Expanded narrative: Clara investigates by examining the metric definition itself. Her eyes widen as she discovers the issue. "Look at this—we're tagging CPU metrics with user IDs." She displays the metadata showing thousands of unique time series being generated—one for each active user. Hector looks over her shoulder and mutters, "The dashboard's bleeding context. You've got so many time series that the aggregation is meaningless. No wonder the graph looks unstable."*
+*Expanded narrative: Clara investigates by examining the metric definition itself. Her eyes widen as she discovers the issue. "Look at this—we're tagging CPU metrics with user IDs." She displays the metadata showing thousands of unique time series being generated—one for each active user. Hector Alavaz looks over her shoulder and mutters, "The dashboard's bleeding context. You've got so many time series that the aggregation is meaningless. No wonder the graph looks unstable."*
 
 ## Teaching Narrative
 
@@ -72,7 +72,7 @@ In financial services, proper metric design addresses both technical and busines
 
 ## The Context Bleeding Problem
 
-Hector's vivid description of the dashboard "bleeding context" captures a crucial insight: excessive cardinality doesn't just create technical problems—it fundamentally undermines the metrics' purpose by making them harder to interpret. When simple CPU measurements splinter into thousands of per-user variations, meaningful patterns become impossible to discern.
+Hector Alavaz's vivid description of the dashboard "bleeding context" captures a crucial insight: excessive cardinality doesn't just create technical problems—it fundamentally undermines the metrics' purpose by making them harder to interpret. When simple CPU measurements splinter into thousands of per-user variations, meaningful patterns become impossible to discern.
 
 ## Banking Implementation Guidance
 
@@ -141,13 +141,13 @@ The specific example metric (`agg_metric_report_perf_multi_v2`) exhibits multipl
 
 ## Scene Description
 
-**Metric Hygiene Time** – Hector redraws the metric stack on a whiteboard, replacing them with business KPIs and SLO-aligned graphs.
+**Metric Hygiene Time** – Hector Alavaz redraws the metric stack on a whiteboard, replacing them with business KPIs and SLO-aligned graphs.
 
-*Expanded narrative: Hector moves to the whiteboard and sketches a new observability hierarchy. At the top: customer-facing metrics like "Balance Lookup Success Rate" and "Average Lookup Time." Below these: service-level indicators like API latency and error rates. At the foundation: resource metrics like CPU and memory. "Your dashboards should reflect this hierarchy," he explains. "Start with what customers experience, then drill down to explain why that experience is changing. Infrastructure metrics support diagnosis but shouldn't drive alerts."*
+*Expanded narrative: Hector Alavaz moves to the whiteboard and sketches a new observability hierarchy. At the top: customer-facing metrics like "Balance Lookup Success Rate" and "Average Lookup Time." Below these: service-level indicators like API latency and error rates. At the foundation: resource metrics like CPU and memory. "Your dashboards should reflect this hierarchy," he explains. "Start with what customers experience, then drill down to explain why that experience is changing. Infrastructure metrics support diagnosis but shouldn't drive alerts."*
 
 ## Teaching Narrative
 
-This scene demonstrates a transformative shift in metrics organization: moving from a flat collection of technical measurements to a structured hierarchy aligned with business outcomes. Hector's whiteboard sketch represents a fundamental reframing—organizing metrics not by type (CPU, memory, network) but by relationship to customer experience. This hierarchical approach bridges the gap between technical indicators and business impact.
+This scene demonstrates a transformative shift in metrics organization: moving from a flat collection of technical measurements to a structured hierarchy aligned with business outcomes. Hector Alavaz's whiteboard sketch represents a fundamental reframing—organizing metrics not by type (CPU, memory, network) but by relationship to customer experience. This hierarchical approach bridges the gap between technical indicators and business impact.
 
 ## Metric Hierarchy Explained
 
@@ -165,7 +165,7 @@ In financial services, metric hierarchy provides both operational and business v
 
 ## The Drilling Down Principle
 
-Hector's guidance to "start with what customers experience, then drill down" represents a crucial shift in observability thinking. Rather than starting with infrastructure metrics and trying to infer impact, this approach begins with customer outcomes and works backward to identify technical causes—a much more direct path to meaningful diagnosis.
+Hector Alavaz's guidance to "start with what customers experience, then drill down" represents a crucial shift in observability thinking. Rather than starting with infrastructure metrics and trying to infer impact, this approach begins with customer outcomes and works backward to identify technical causes—a much more direct path to meaningful diagnosis.
 
 ## Banking Implementation Guidance
 
@@ -317,13 +317,13 @@ The cache TTL issue revealed in this scene exemplifies a common class of problem
 
 ## Scene Description
 
-**Lesson Locked In** – Hector: "Metrics are medical charts. If you don't know how to read them, you're just looking at patient doodles."
+**Lesson Locked In** – Hector Alavaz: "Metrics are medical charts. If you don't know how to read them, you're just looking at patient doodles."
 
-*Expanded narrative: Hector reviews the team's work with approval. "Metrics are like medical charts," he observes. "They need to tell a coherent story about the patient's condition. If you don't know how to read them—or worse, if they're recording the wrong things—you're just looking at patient doodles." He points to the new dashboard. "Now your metrics tell a story anyone can understand: what happened, when it happened, and why it matters to customers."*
+*Expanded narrative: Hector Alavaz reviews the team's work with approval. "Metrics are like medical charts," he observes. "They need to tell a coherent story about the patient's condition. If you don't know how to read them—or worse, if they're recording the wrong things—you're just looking at patient doodles." He points to the new dashboard. "Now your metrics tell a story anyone can understand: what happened, when it happened, and why it matters to customers."*
 
 ## Teaching Narrative
 
-Hector's medical analogy captures a profound truth about metrics: they're diagnostic tools, not just status displays. His comparison of poorly designed metrics to "patient doodles" perfectly illustrates how metrics without proper design, organization, and interpretation provide the illusion of understanding without the substance. This framing shifts the concept of metrics from passive measurements to active diagnostic instruments.
+Hector Alavaz's medical analogy captures a profound truth about metrics: they're diagnostic tools, not just status displays. His comparison of poorly designed metrics to "patient doodles" perfectly illustrates how metrics without proper design, organization, and interpretation provide the illusion of understanding without the substance. This framing shifts the concept of metrics from passive measurements to active diagnostic instruments.
 
 ## Metrics as Diagnosis Explained
 
@@ -341,7 +341,7 @@ In financial services, the diagnostic model of metrics aligns perfectly with ope
 
 ## The Readability Requirement
 
-Hector's emphasis on metrics that "tell a story anyone can understand" highlights a crucial but often overlooked requirement: metrics must be interpretable not just by their creators, but by anyone who might need to use them during an incident. This readability is especially important in financial systems, where issues may require collaboration across multiple technical and business teams.
+Hector Alavaz's emphasis on metrics that "tell a story anyone can understand" highlights a crucial but often overlooked requirement: metrics must be interpretable not just by their creators, but by anyone who might need to use them during an incident. This readability is especially important in financial systems, where issues may require collaboration across multiple technical and business teams.
 
 ## Banking Implementation Guidance
 
@@ -355,19 +355,19 @@ To implement the diagnostic view of metrics in financial systems:
 
 4. **Cross-Team Readability**: Design metrics and visualizations to be interpretable by both technical and business stakeholders
 
-Hector's conclusion that the new dashboard now tells "what happened, when it happened, and why it matters to customers" captures the essence of effective financial system observability: connecting technical telemetry to business impact. When metrics tell this complete story, they transform from abstract numbers into valuable tools for maintaining the reliability and performance of critical banking services.
+Hector Alavaz's conclusion that the new dashboard now tells "what happened, when it happened, and why it matters to customers" captures the essence of effective financial system observability: connecting technical telemetry to business impact. When metrics tell this complete story, they transform from abstract numbers into valuable tools for maintaining the reliability and performance of critical banking services.
 
 ## Panel 9: Epilogue Panel - Communication Design
 
 ## Scene Description
 
-**Epilogue Panel** – Sofia: "We made it less noisy." Hector: "No. You made it *speak.*"
+**Epilogue Panel** – Sofia: "We made it less noisy." Hector Alavaz: "No. You made it *speak.*"
 
-*Expanded narrative: As the team implements the fix for the cache configuration issue, Sofia reflects on the transformation. "We made the dashboard less noisy," she observes. Hector shakes his head slightly. "No," he corrects. "You made it *speak*. Before, it was shouting random numbers. Now it's telling you exactly what's happening in language anyone can understand." The final panel shows the dashboard with new, clearly labeled metrics showing healthy operations—and a minor anomaly immediately drawing attention to a potential emerging issue.*
+*Expanded narrative: As the team implements the fix for the cache configuration issue, Sofia reflects on the transformation. "We made the dashboard less noisy," she observes. Hector Alavaz shakes his head slightly. "No," he corrects. "You made it *speak*. Before, it was shouting random numbers. Now it's telling you exactly what's happening in language anyone can understand." The final panel shows the dashboard with new, clearly labeled metrics showing healthy operations—and a minor anomaly immediately drawing attention to a potential emerging issue.*
 
 ## Teaching Narrative
 
-This closing exchange captures the fundamental transformation in how the team views metrics: from passive data to active communication. Hector's distinction between reducing noise and enabling speech represents a profound shift in perspective—from thinking about what metrics show to focusing on what they say. This framing completes the journey from seeing metrics as numbers to understanding them as a form of system communication.
+This closing exchange captures the fundamental transformation in how the team views metrics: from passive data to active communication. Hector Alavaz's distinction between reducing noise and enabling speech represents a profound shift in perspective—from thinking about what metrics show to focusing on what they say. This framing completes the journey from seeing metrics as numbers to understanding them as a form of system communication.
 
 ## Communication Design Explained
 
@@ -385,7 +385,7 @@ In financial services, effective communication design addresses a critical chall
 
 ## The Speaking System
 
-Hector's characterization of the dashboard now "telling you exactly what's happening in language anyone can understand" represents the ultimate goal of observability: systems that effectively communicate their state to humans. This communication isn't just about data display—it's about creating a shared understanding between systems and the people responsible for them.
+Hector Alavaz's characterization of the dashboard now "telling you exactly what's happening in language anyone can understand" represents the ultimate goal of observability: systems that effectively communicate their state to humans. This communication isn't just about data display—it's about creating a shared understanding between systems and the people responsible for them.
 
 ## Banking Implementation Guidance
 

@@ -51,21 +51,21 @@ Below is a simplified representation of Katherine's workspace to illustrate the 
 |    [Service Restart Window 2] [Alerts]   |
 +-------------------------------------------+
 |                                           |
-|   Desk:                                   |
-|   -------------------------------------   |
-|   | Manual Procedures Binder   | ☕     | |
-|   -------------------------------------   |
-|                                           |
-|   Phone: 5 Missed Calls                   |
-|                                           |
+| Desk:                                 |
+| ------------------------------------- |
+|                                       | Manual Procedures Binder | ☕ |  |
+| ------------------------------------- |
+|                                       |
+| Phone: 5 Missed Calls                 |
+|                                       |
 +-------------------------------------------+
 |                                           |
-|   Whiteboard (Background):                |
-|   -------------------------------------   |
-|   | Incidents This Month: 15          |   |
-|   -------------------------------------   |
-|                                           |
-|   Clock: 4:37 AM                          |
+| Whiteboard (Background):              |
+| ------------------------------------- |
+|                                       | Incidents This Month: 15 |  |
+| ------------------------------------- |
+|                                       |
+| Clock: 4:37 AM                        |
 +-------------------------------------------+
 ```
 
@@ -144,13 +144,13 @@ Three engineers have become "experts" at this restart procedure, making them the
 
 An evidence-based approach to identifying and quantifying toil begins with data collection rather than anecdotes. Progressive SRE teams implement systematic measurement through several techniques, each offering unique benefits and actionable insights.
 
-| **Evidence-Based Approach** | **Description** | **Benefits** | **Implementation Tips** |
+| **Evidence-Based Approach**      | **Description**                                                                  | **Benefits**                                                                        | **Implementation Tips**                                                                        |
 | -------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Time Studies** | Recording precise time spent on manual activities across team members. | Quantifies operational burden and highlights high-toil tasks. | Use time-tracking tools integrated with ticketing systems for accuracy. |
-| **Activity Journals** | Engineers log and categorize daily tasks as toil, engineering, or overhead. | Establishes baseline metrics and identifies trends over time. | Provide a structured template to ensure consistency across team members. |
-| **Toil Heat Maps** | Visual representations of when and where manual interventions occur. | Reveals patterns and clusters not apparent in individual incident reports. | Use data from incident management systems or logs to build a chronological and team-based map. |
-| **Scalability Analysis** | Measures how manual effort grows with system size, transaction volume, or users. | Projects future toil burdens and supports prioritization of automation investments. | Regularly review scaling metrics during architecture and planning discussions. |
-| **Opportunity Cost Calculation** | Quantifies missed engineering improvements due to operational toil. | Provides a financial and reliability perspective to support automation proposals. | Translate impact into measurable business outcomes (e.g., time saved, reduced downtime). |
+| **Time Studies**                 | Recording precise time spent on manual activities across team members.           | Quantifies operational burden and highlights high-toil tasks.                       | Use time-tracking tools integrated with ticketing systems for accuracy.                        |
+| **Activity Journals**            | Engineers log and categorize daily tasks as toil, engineering, or overhead.      | Establishes baseline metrics and identifies trends over time.                       | Provide a structured template to ensure consistency across team members.                       |
+| **Toil Heat Maps**               | Visual representations of when and where manual interventions occur.             | Reveals patterns and clusters not apparent in individual incident reports.          | Use data from incident management systems or logs to build a chronological and team-based map. |
+| **Scalability Analysis**         | Measures how manual effort grows with system size, transaction volume, or users. | Projects future toil burdens and supports prioritization of automation investments. | Regularly review scaling metrics during architecture and planning discussions.                 |
+| **Opportunity Cost Calculation** | Quantifies missed engineering improvements due to operational toil.              | Provides a financial and reliability perspective to support automation proposals.   | Translate impact into measurable business outcomes (e.g., time saved, reduced downtime).       |
 
 When Capital One implemented this evidence-based approach, they discovered that 67% of their incident response team's time was consumed by just three categories of repetitive tasks, none of which required human judgment. This data-driven insight broke through years of assumptions about "necessary manual work" and catalyzed an automation initiative that ultimately reduced on-call interruptions by 73%.
 
@@ -293,13 +293,13 @@ Even with automated scripts, the process still requires 60 minutes of human invo
 
 Organizations following best practices evaluate their automation maturity through structured evidence gathering. Below is a checklist summarizing the five key steps for evidence-based investigation, ensuring actionable insights:
 
-| Step | Description | Key Outputs |
+| Step                                   | Description                                                                                                                                               | Key Outputs                                           |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| **1. Automation Inventory Assessment** | Catalog all existing automation tools, scripts, and workflows. Classify them by the five-level maturity model using clear criteria. | Comprehensive inventory with maturity classifications |
-| **2. Time-to-Resolution Analysis** | Measure the full incident lifecycle, breaking down time spent in detection, response, diagnosis, remediation, and verification. Identify automation gaps. | Detailed breakdown of time spent per phase |
-| **3. Human Decision Mapping** | Document decision trees followed by operators during incidents. Identify decisions requiring human judgment versus those with predictable patterns. | Mapped decision trees with automation candidates |
-| **4. Dependency Visualization** | Create service dependency maps to understand orchestration needs for higher-level automation. | Visualized dependency map for critical services |
-| **5. Success Rate Measurement** | Track automation reliability by analyzing false positives (unnecessary actions) and false negatives (missed issues). Establish improvement metrics. | Metrics on automation accuracy and performance |
+| **1. Automation Inventory Assessment** | Catalog all existing automation tools, scripts, and workflows. Classify them by the five-level maturity model using clear criteria.                       | Comprehensive inventory with maturity classifications |
+| **2. Time-to-Resolution Analysis**     | Measure the full incident lifecycle, breaking down time spent in detection, response, diagnosis, remediation, and verification. Identify automation gaps. | Detailed breakdown of time spent per phase            |
+| **3. Human Decision Mapping**          | Document decision trees followed by operators during incidents. Identify decisions requiring human judgment versus those with predictable patterns.       | Mapped decision trees with automation candidates      |
+| **4. Dependency Visualization**        | Create service dependency maps to understand orchestration needs for higher-level automation.                                                             | Visualized dependency map for critical services       |
+| **5. Success Rate Measurement**        | Track automation reliability by analyzing false positives (unnecessary actions) and false negatives (missed issues). Establish improvement metrics.       | Metrics on automation accuracy and performance        |
 
 #### Example: Evidence-Based Investigation in Action
 
@@ -314,13 +314,13 @@ This structured approach allows organizations to systematically identify automat
 
 The business impact of advancing through the automation hierarchy is substantial, with quantifiable benefits at each level of maturity. The following table summarizes key metrics and real-world outcomes observed in banking systems:
 
-| **Impact Area** | **Metric/Outcome** | **Example** |
+| **Impact Area**                 | **Metric/Outcome**                                                                                                                                                 | **Example**                                                                                                                         |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Resolution Time Compression** | Incident resolution times reduced by **40-60%** per automation level. Self-healing systems respond in seconds compared to 30+ minutes for human-initiated scripts. | A major bank reduced critical incident resolution time from **45 minutes to under 2 minutes** by implementing self-healing systems. |
-| **Consistency Improvement** | Error rates reduced by up to **91%** through automated workflows that eliminate human variation. | A credit card processor cut payment reconciliation errors by **91%** after deploying orchestrated automation. |
-| **Scaling Capability** | Enabled transaction volume increases of **300%** without additional staffing. | A digital bank supported a **300% increase in transactions** with the same operational team using closed-loop automation. |
-| **Compliance Advantage** | Regulatory reporting preparation times reduced from **3 weeks to 3 hours** with automated audit trails. | A regional bank achieved **consistent, comprehensive audit trails** for compliance using orchestrated automation. |
-| **Competitive Intelligence** | Banks at the highest automation maturity release customer-facing features **3.7x faster** than those relying on basic scripts. | Automation freed engineering time, enabling one institution to accelerate innovation cycles and gain a competitive edge. |
+| **Consistency Improvement**     | Error rates reduced by up to **91%** through automated workflows that eliminate human variation.                                                                   | A credit card processor cut payment reconciliation errors by **91%** after deploying orchestrated automation.                       |
+| **Scaling Capability**          | Enabled transaction volume increases of **300%** without additional staffing.                                                                                      | A digital bank supported a **300% increase in transactions** with the same operational team using closed-loop automation.           |
+| **Compliance Advantage**        | Regulatory reporting preparation times reduced from **3 weeks to 3 hours** with automated audit trails.                                                            | A regional bank achieved **consistent, comprehensive audit trails** for compliance using orchestrated automation.                   |
+| **Competitive Intelligence**    | Banks at the highest automation maturity release customer-facing features **3.7x faster** than those relying on basic scripts.                                     | Automation freed engineering time, enabling one institution to accelerate innovation cycles and gain a competitive edge.            |
 
 By leveraging advanced automation, banks not only reduce downtime and operational costs but also unlock strategic advantages. These improvements directly enhance customer trust, support rapid scaling, and strengthen the institution’s market position in an increasingly competitive financial landscape.
 
@@ -353,7 +353,7 @@ flowchart TD
 A split-screen view illustrates two complementary scenarios:
 
 **Left Panel:**\
-Hector is analyzing a complex automation system. The code features multiple highlighted "circuit breaker" points represented by red and green indicators. Green indicates normal thresholds, while red marks areas where anomalies would trigger an automated pause. Safety thresholds are annotated with labels like "CPU Usage Limit: 80%" and "Transaction Deviation Tolerance: ±5%". Below the code, a flowchart outlines the decision process for handling anomalies, structured as follows:
+Hector Alavaz is analyzing a complex automation system. The code features multiple highlighted "circuit breaker" points represented by red and green indicators. Green indicates normal thresholds, while red marks areas where anomalies would trigger an automated pause. Safety thresholds are annotated with labels like "CPU Usage Limit: 80%" and "Transaction Deviation Tolerance: ±5%". Below the code, a flowchart outlines the decision process for handling anomalies, structured as follows:
 
 ```
 Start --> Check Thresholds --> [Threshold Exceeded?] --> Yes --> Trigger Circuit Breaker --> Alert Human
@@ -397,17 +397,17 @@ Investment United Bank's deployment process for their trading platform illustrat
 
 The table below compares the current manual deployment process with an automated guardrails-based process to highlight key inefficiencies and potential improvements:
 
-| **Process Step** | **Manual Deployment** | **Guardrails-Based Automation** |
+| **Process Step**       | **Manual Deployment**                                                             | **Guardrails-Based Automation**                                                                          |
 | ---------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Code Approvals** | Three manual approvals required before staging deployment, introducing delays | Automated policy checks ensure code meets pre-defined standards before proceeding |
-| **Staging Testing** | Manual sign-off from QA, security, and operations | Automatic verification pipelines test for security, functionality, and compliance |
-| **Deployment Timing** | Weekend-only deployment windows (2 AM - 6 AM Sundays) | Progressive deployments can occur anytime, with smaller changes reducing risk |
-| **Component Updates** | One component deployed at a time with manual health checks between each | Circuit breakers monitor health metrics and pause deployment automatically when anomalies are detected |
-| **Regression Testing** | Full regression test suite executed manually after each component update | Incremental testing integrated into progressive rollouts, reducing redundant testing |
-| **Rollback Decisions** | Requires VP-level approval, causing delays during critical incidents | Controlled rollbacks automatically return to a known-good state when thresholds for failure are exceeded |
-| **Deployment Effort** | 18-22 hours of combined human effort per deployment | Minimal human intervention required; time reduced significantly |
-| **Release Frequency** | Monthly release cycles | Multiple daily releases supported safely through automation |
-| **Incident Response** | Full rollback requires extensive stakeholder coordination and manual intervention | Automated rollback and incident alerts allow rapid recovery with minimal disruption |
+| **Code Approvals**     | Three manual approvals required before staging deployment, introducing delays     | Automated policy checks ensure code meets pre-defined standards before proceeding                        |
+| **Staging Testing**    | Manual sign-off from QA, security, and operations                                 | Automatic verification pipelines test for security, functionality, and compliance                        |
+| **Deployment Timing**  | Weekend-only deployment windows (2 AM - 6 AM Sundays)                             | Progressive deployments can occur anytime, with smaller changes reducing risk                            |
+| **Component Updates**  | One component deployed at a time with manual health checks between each           | Circuit breakers monitor health metrics and pause deployment automatically when anomalies are detected   |
+| **Regression Testing** | Full regression test suite executed manually after each component update          | Incremental testing integrated into progressive rollouts, reducing redundant testing                     |
+| **Rollback Decisions** | Requires VP-level approval, causing delays during critical incidents              | Controlled rollbacks automatically return to a known-good state when thresholds for failure are exceeded |
+| **Deployment Effort**  | 18-22 hours of combined human effort per deployment                               | Minimal human intervention required; time reduced significantly                                          |
+| **Release Frequency**  | Monthly release cycles                                                            | Multiple daily releases supported safely through automation                                              |
+| **Incident Response**  | Full rollback requires extensive stakeholder coordination and manual intervention | Automated rollback and incident alerts allow rapid recovery with minimal disruption                      |
 
 This manual process not only consumes 18-22 hours of effort per deployment but also limits the team to monthly release cycles. In contrast, digital-native competitors deploy multiple times daily, outpacing Investment United Bank in both speed and responsiveness. After a recent deployment failure that required a full rollback, leadership tightened the process further, exacerbating delays and reducing the ability to respond rapidly to market changes or security threats.
 
@@ -685,13 +685,13 @@ For banking systems, this creates powerful risk reduction by ensuring that commo
 
 Global Financial Services operates a credit card authorization platform processing 15,000 transactions per second during peak hours. Their observability system captures hundreds of metrics but struggles to translate this data into automated action. The current process and its inefficiencies can be summarized as follows:
 
-| **Step** | **Action** | **Time Impact** | **Pain Point** |
+| **Step**                    | **Action**                                                                                    | **Time Impact**      | **Pain Point**                                                                                 |
 | --------------------------- | --------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------- |
-| **1. Detection** | Operators visually scan dashboards for anomalies across dozens of screens | 5-15 minutes delay | Relies on human attention, prone to fatigue, and introduces delays in spotting critical issues |
-| **2. Investigation** | Operators manually check logs, run queries, and correlate patterns | 10-30 minutes delay | Requires accessing multiple disconnected systems, increasing complexity and time to insight |
-| **3. Diagnosis** | Operators compare findings to historical incidents and runbooks | Varies by experience | Highly dependent on operator expertise, leading to inconsistent quality and slower resolutions |
-| **4. Remediation** | Operators execute manual fixes for identified issues | Case-specific | Manual execution delays response; low-severity issues often ignored due to bandwidth limits |
-| **5. Post-Incident Review** | Findings are documented in tickets, but rarely inform future detection or response automation | Minimal value added | Lack of feedback loops means lessons learned are not encoded into systems for future benefit |
+| **1. Detection**            | Operators visually scan dashboards for anomalies across dozens of screens                     | 5-15 minutes delay   | Relies on human attention, prone to fatigue, and introduces delays in spotting critical issues |
+| **2. Investigation**        | Operators manually check logs, run queries, and correlate patterns                            | 10-30 minutes delay  | Requires accessing multiple disconnected systems, increasing complexity and time to insight    |
+| **3. Diagnosis**            | Operators compare findings to historical incidents and runbooks                               | Varies by experience | Highly dependent on operator expertise, leading to inconsistent quality and slower resolutions |
+| **4. Remediation**          | Operators execute manual fixes for identified issues                                          | Case-specific        | Manual execution delays response; low-severity issues often ignored due to bandwidth limits    |
+| **5. Post-Incident Review** | Findings are documented in tickets, but rarely inform future detection or response automation | Minimal value added  | Lack of feedback loops means lessons learned are not encoded into systems for future benefit   |
 
 #### Workflow Visualization
 
@@ -718,13 +718,13 @@ Despite significant investment in observability tools, the organization fails to
 
 Leading SRE organizations implement observability-driven automation through systematic approaches. The following checklist summarizes best practices and their benefits for easier reference and practical application:
 
-| Step | Description | Benefits |
+| Step                              | Description                                                                                                                                                                                              | Benefits                                                                                        |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **Incident Pattern Analysis** | Mine historical incident data to identify recurring patterns. Quantify the percentage of incidents that follow known patterns versus novel scenarios. Prioritize automation for high-frequency patterns. | Enables focus on automating the most impactful scenarios, reducing recurring manual effort. |
-| **Response Decision Mapping** | Document detailed decision trees from expert responders. Include specific queries, evaluated data points, and thresholds triggering actions. | Encodes expert knowledge into repeatable processes, ensuring consistent responses to incidents. |
-| **Automation Confidence Scoring** | Develop frameworks to assess automation confidence based on signal clarity, historical precedent, and impact potential. Use these scores to decide between automated action and human review. | Balances risk and efficiency by ensuring automation acts only when confidence is high. |
-| **Feedback Loop Instrumentation** | Capture outcomes of both automated and manual actions. Structure this data to continuously improve response algorithms. | Facilitates learning from every incident, improving the system’s intelligence over time. |
-| **Graduated Autonomy Testing** | Gradually increase automation authority through controlled experiments. Start with recommendations only, then supervised automation, and finally autonomous operation. | Builds trust in automation through iterative validation, minimizing risks during deployment. |
+| **Incident Pattern Analysis**     | Mine historical incident data to identify recurring patterns. Quantify the percentage of incidents that follow known patterns versus novel scenarios. Prioritize automation for high-frequency patterns. | Enables focus on automating the most impactful scenarios, reducing recurring manual effort.     |
+| **Response Decision Mapping**     | Document detailed decision trees from expert responders. Include specific queries, evaluated data points, and thresholds triggering actions.                                                             | Encodes expert knowledge into repeatable processes, ensuring consistent responses to incidents. |
+| **Automation Confidence Scoring** | Develop frameworks to assess automation confidence based on signal clarity, historical precedent, and impact potential. Use these scores to decide between automated action and human review.            | Balances risk and efficiency by ensuring automation acts only when confidence is high.          |
+| **Feedback Loop Instrumentation** | Capture outcomes of both automated and manual actions. Structure this data to continuously improve response algorithms.                                                                                  | Facilitates learning from every incident, improving the system’s intelligence over time.        |
+| **Graduated Autonomy Testing**    | Gradually increase automation authority through controlled experiments. Start with recommendations only, then supervised automation, and finally autonomous operation.                                   | Builds trust in automation through iterative validation, minimizing risks during deployment.    |
 
 #### Example in Practice: Bank of America
 
@@ -734,13 +734,13 @@ When Bank of America applied these evidence-based practices to their online bank
 
 The business impact of observability-driven automation includes significant improvements across key operational metrics. Below is a summary table highlighting these achievements, paired with real-world examples from leading banks:
 
-| **Impact Area** | **Metric/Result** | **Bank Example** |
+| **Impact Area**                    | **Metric/Result**                                                    | **Bank Example**                                                                                    |
 | ---------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| **Time-to-Resolution Compression** | MTTR reduced by **60-85%** for known patterns | Citibank: Resolution time for payment processing incidents reduced from **47 minutes to 8 minutes** |
-| **Incident Prevention** | **72% reduction** in service disruptions | Digital Bank: Emerging issues preemptively addressed before becoming customer-impacting incidents |
-| **Consistency Improvement** | **94% consistency** in problem identification | Wells Fargo: Standardized diagnostic algorithms eliminated variation in troubleshooting approaches |
-| **Coverage Expansion** | Monitoring scope increased from **50 to 750+ metrics** | TD Bank: Expanded observability coverage enabled by automated analysis systems |
-| **Operational Efficiency** | ROI exceeding **5x** within two years, with significant cost savings | HSBC: Achieved **$7.3M annual savings** in retail banking operations |
+| **Time-to-Resolution Compression** | MTTR reduced by **60-85%** for known patterns                        | Citibank: Resolution time for payment processing incidents reduced from **47 minutes to 8 minutes** |
+| **Incident Prevention**            | **72% reduction** in service disruptions                             | Digital Bank: Emerging issues preemptively addressed before becoming customer-impacting incidents   |
+| **Consistency Improvement**        | **94% consistency** in problem identification                        | Wells Fargo: Standardized diagnostic algorithms eliminated variation in troubleshooting approaches  |
+| **Coverage Expansion**             | Monitoring scope increased from **50 to 750+ metrics**               | TD Bank: Expanded observability coverage enabled by automated analysis systems                      |
+| **Operational Efficiency**         | ROI exceeding **5x** within two years, with significant cost savings | HSBC: Achieved **$7.3M annual savings** in retail banking operations                                |
 
 These metrics illustrate how observability-driven automation transforms banking operations, enabling faster resolution, proactive prevention, and measurable financial benefits. Through these enhancements, banks ensure greater reliability and customer satisfaction, especially for critical systems like high-frequency trading and real-time payments.
 
@@ -889,13 +889,13 @@ The most mature SRE teams track "reliability leverage"—a measure of how much s
 
 Continental Trust Bank's automation proposal stalled for three consecutive budget cycles because the team relied exclusively on engineer time savings to justify investments. Their proposal highlighted specific manual tasks and their associated time and cost:
 
-| Task | Annual Hours | Fully-Loaded Hourly Cost | Annual Cost |
+| Task                                 | Annual Hours | Fully-Loaded Hourly Cost | Annual Cost  |
 | ------------------------------------ | ------------ | ------------------------ | ------------ |
-| Certificate renewals and rotation | 520 | $120 | $62,400 |
-| User access reviews and provisioning | 780 | $120 | $93,600 |
-| Month-end reconciliation procedures | 940 | $120 | $112,800 |
-| Backup verification and validation | 650 | $120 | $78,000 |
-| **Total** | **2,890** | **$120** | **$346,800** |
+| Certificate renewals and rotation    | 520          | $120                     | $62,400      |
+| User access reviews and provisioning | 780          | $120                     | $93,600      |
+| Month-end reconciliation procedures  | 940          | $120                     | $112,800     |
+| Backup verification and validation   | 650          | $120                     | $78,000      |
+| **Total**                            | **2,890**    | **$120**                 | **$346,800** |
 
 With an estimated automation development cost of $425,000, the simple ROI calculation showed a projected annual savings of $346,800, resulting in a 15-month payback period. While these numbers captured time savings effectively, they failed to provide a comprehensive view of the broader business value.
 
@@ -1097,13 +1097,13 @@ When this transformation succeeds, the result is better for both the business an
 
 Atlantic Financial's credit card fraud detection team exemplifies the firefighting trap. Their 24/7 operation centers around responding to suspected fraud alerts generated by their detection systems. The team of 18 specialists spends over 90% of their time on repetitive investigation procedures, which can be summarized as follows:
 
-| Step | Manual Action | Inefficiency |
+| Step                        | Manual Action                                                           | Inefficiency                                                                                |
 | --------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| **1. Alert Processing** | Each alert triggers a manual review process | High volume of alerts leads to constant context switching and cognitive fatigue |
-| **2. Data Gathering** | Specialists access multiple systems to gather transaction history | Fragmented systems require time-consuming navigation and manual correlation |
+| **1. Alert Processing**     | Each alert triggers a manual review process                             | High volume of alerts leads to constant context switching and cognitive fatigue             |
+| **2. Data Gathering**       | Specialists access multiple systems to gather transaction history       | Fragmented systems require time-consuming navigation and manual correlation                 |
 | **3. Pattern Verification** | Standard verification scripts are run to check for known fraud patterns | Scripts are executed manually, limiting throughput and increasing the chance of human error |
-| **4. Documentation** | Results are manually documented in case management systems | Repetition introduces delays and inconsistencies in record-keeping |
-| **5. Decision Execution** | Decisions (approve/decline/escalate) are manually implemented | Manual updates to systems increase latency and risk of operational mistakes |
+| **4. Documentation**        | Results are manually documented in case management systems              | Repetition introduces delays and inconsistencies in record-keeping                          |
+| **5. Decision Execution**   | Decisions (approve/decline/escalate) are manually implemented           | Manual updates to systems increase latency and risk of operational mistakes                 |
 
 The impact of this manual process is severe. Despite hiring top talent with advanced degrees in data science and financial crime, the team has devolved into a procedural response unit. Turnover has reached 37% annually, with exit interviews consistently citing "mundane work" and "lack of innovation opportunity" as primary reasons for leaving. Meanwhile, the backlog of fraud detection improvements—pattern recognition algorithms, machine learning models, and automated verification systems—remains untouched because the team never escapes the daily response cycle.
 
@@ -1171,13 +1171,13 @@ Use this checklist as a guide to implement evidence-based investigation within y
 
 The business impact of transforming from reactive to proactive extends throughout the organization. The following table summarizes key quantitative outcomes observed in banking environments after implementing a "prevention first" reliability model:
 
-| **Impact Area** | **Observed Outcome** | **Example** |
+| **Impact Area**              | **Observed Outcome**                                                                              | **Example**                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Incident Reduction** | 60-80% reduction in customer-impacting incidents within 18 months. | USAA documented a 73% decrease in critical incidents after their "prevention first" initiative. |
-| **Innovation Acceleration** | 3-5x faster delivery of customer-facing innovations, freeing teams from firefighting. | Danske Bank increased feature delivery velocity by 340% after automating their operational model. |
-| **Risk Profile Improvement** | 92% reduction in security breaches by proactively addressing vulnerabilities before exploitation. | A multinational bank credited their proactive security shift for this improvement. |
-| **Talent Acquisition** | 47% higher application rates for technical positions and 58% higher job offer acceptance rates. | Banks with prevention-focused cultures gain a competitive advantage in talent recruitment. |
-| **Cost Efficiency** | 40-60% lower operational costs compared to firefighting teams. | Bank of Montreal saved $3.2M annually while improving customer experience metrics. |
+| **Incident Reduction**       | 60-80% reduction in customer-impacting incidents within 18 months.                                | USAA documented a 73% decrease in critical incidents after their "prevention first" initiative.   |
+| **Innovation Acceleration**  | 3-5x faster delivery of customer-facing innovations, freeing teams from firefighting.             | Danske Bank increased feature delivery velocity by 340% after automating their operational model. |
+| **Risk Profile Improvement** | 92% reduction in security breaches by proactively addressing vulnerabilities before exploitation. | A multinational bank credited their proactive security shift for this improvement.                |
+| **Talent Acquisition**       | 47% higher application rates for technical positions and 58% higher job offer acceptance rates.   | Banks with prevention-focused cultures gain a competitive advantage in talent recruitment.        |
+| **Cost Efficiency**          | 40-60% lower operational costs compared to firefighting teams.                                    | Bank of Montreal saved $3.2M annually while improving customer experience metrics.                |
 
 This transformation not only reduces risks and costs but also enhances innovation velocity and talent acquisition, positioning banks for long-term success in competitive markets.
 
@@ -1287,14 +1287,14 @@ For SREs transitioning from production support in banking environments, this gov
 
 Western United Bank's automation initiative stalled in a prolonged compliance review after their initial deployment attempt was rejected by regulators. The SRE team had developed automated database maintenance procedures to improve reliability and performance, but failed to integrate governance requirements into their design. Key issues identified included:
 
-| **Key Issue** | **Impact** | **Potential Solution** |
+| **Key Issue**                                                                    | **Impact**                                                                              | **Potential Solution**                                                                                     |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Automation scripts ran with elevated privileges without granular permissions | Increased risk of unauthorized or unintended changes to critical systems | Implement role-based access controls (RBAC) with least privilege principles for automation workflows |
-| No separation existed between development and execution environments | Increased risk of introducing untested or insecure changes into production | Enforce strict separation of development, staging, and production environments with controlled handoffs |
-| Audit logging captured only high-level actions, not detailed before/after states | Limited traceability and inability to fully reconstruct changes during audits | Enhance logging to include detailed state changes and integrate with tamper-proof audit systems |
-| No formal risk assessment or classification framework guided approval processes | Inconsistent or inappropriate approval workflows for automation changes | Introduce a formal risk classification matrix to define approval workflows based on change impact and risk |
-| Emergency override procedures lacked appropriate controls and documentation | Potential for misuse or lack of accountability during critical incidents | Design and document emergency override procedures with strict controls and logging of all override actions |
-| Testing focused on functionality rather than security and compliance validation | Failure to identify compliance gaps or security vulnerabilities in automation processes | Expand testing frameworks to include compliance and security validation alongside functional tests |
+| Automation scripts ran with elevated privileges without granular permissions     | Increased risk of unauthorized or unintended changes to critical systems                | Implement role-based access controls (RBAC) with least privilege principles for automation workflows       |
+| No separation existed between development and execution environments             | Increased risk of introducing untested or insecure changes into production              | Enforce strict separation of development, staging, and production environments with controlled handoffs    |
+| Audit logging captured only high-level actions, not detailed before/after states | Limited traceability and inability to fully reconstruct changes during audits           | Enhance logging to include detailed state changes and integrate with tamper-proof audit systems            |
+| No formal risk assessment or classification framework guided approval processes  | Inconsistent or inappropriate approval workflows for automation changes                 | Introduce a formal risk classification matrix to define approval workflows based on change impact and risk |
+| Emergency override procedures lacked appropriate controls and documentation      | Potential for misuse or lack of accountability during critical incidents                | Design and document emergency override procedures with strict controls and logging of all override actions |
+| Testing focused on functionality rather than security and compliance validation  | Failure to identify compliance gaps or security vulnerabilities in automation processes | Expand testing frameworks to include compliance and security validation alongside functional tests         |
 
 After receiving regulatory findings, the compliance team implemented strict controls requiring manual review and approval of all automation changes. This created a 6-8 week delay for any automation deployment, effectively killing the initiative's momentum. Engineering teams reverted to manual procedures, viewing compliance as an insurmountable obstacle rather than a design requirement.
 

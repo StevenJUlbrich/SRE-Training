@@ -1,6 +1,5 @@
 # Chapter 1: Green Wall Fallacy - The Horror of Banking System Monitoring
 
-
 ## Chapter Overview
 
 Welcome to the horror show of banking system monitoring, where “all green” dashboards lull you into a false sense of security right up until the pager starts screaming at 2:17 AM. This chapter dissects the Green Wall Fallacy—the deadly belief that if your dashboards look fine, your customers must be happy. Spoiler: they aren’t. You’ll watch a parade of SREs and IT ops folks stumble through incidents while their tools lie, metrics mislead, and logs hide the truth like a mobster’s accountant. By the end, you’ll be equipped to turn your telemetry from a gaslighting accomplice into a brutally honest confessional. Forget vanity dashboards—learn how to force your systems to cough up the ugly truth, before your customers, your regulators, or your boss do it for you.
@@ -29,20 +28,19 @@ Welcome to the horror show of banking system monitoring, where “all green” d
 - “Green doesn’t mean good”—it means you’re not monitoring what actually matters. Make your system confess or get ready for public embarrassment.
 - If user complaints are the only real signal you have, your monitoring is already obsolete. Fix it before the next 2AM wake-up.
 
-
 ## Panel 1: The Pager Screams
 
 ### Scene Description - Understanding the Green Wall Fallacy
 
-**The Pager Screams** – Hector gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
+**The Pager Screams** – Hector Alavaz gets paged in the middle of the night while the rainbow dashboard shows all green. Visual: chaos behind him, dashboard glowing like a rave.
 
-*Expanded narrative: It's 2:17 AM. Hector's phone vibrates violently on his nightstand. He's awake instantly—the practiced reflex of a veteran SRE. The screen shows a critical alert: "PAYMENT-PROCESSOR-PROD: Multiple customer impacts detected." He grabs his laptop, opens the monitoring dashboard. Everything is green. Every. Single. Indicator. Green.*
+*Expanded narrative: It's 2:17 AM. Hector Alavaz's phone vibrates violently on his nightstand. He's awake instantly—the practiced reflex of a veteran SRE. The screen shows a critical alert: "PAYMENT-PROCESSOR-PROD: Multiple customer impacts detected." He grabs his laptop, opens the monitoring dashboard. Everything is green. Every. Single. Indicator. Green.*
 
 ### Teaching Narrative - Understanding the Green Wall Fallacy
 
 When critical alerts wake you during off-hours, your instinct might be to trust your monitoring dashboards. This common reaction exposes a fundamental gap between traditional monitoring and modern observability practices.
 
-### The Green Wall Fallacy Explained
+#### The Green Wall Fallacy Explained
 
 The Green Wall Fallacy occurs when monitoring systems display a "wall of green" indicators suggesting normal operations while critical services are actually failing. This dangerous anti-pattern happens because:
 
@@ -88,11 +86,11 @@ ______________________________________________________________________
 
 *Expanded narrative: In the operations center, Wanjiru—a recent transfer from traditional IT operations—frantically clicks through Geneos dashboards. Nothing makes sense. All systems show nominal. Yet Slack channels are exploding with executive messages: "40% of international wire transfers failing! What's happening?" Wanjiru's mouse hovers uncertainly between screens. Which metric matters? What should she be looking for?*
 
-## Teaching Narrative
+### Teaching Narrative
 
 When alerts are firing and executives are demanding answers, the pressure to find meaningful signals in your dashboards becomes intense. This scenario highlights a critical skill gap in many production support transitions to SRE: metric literacy.
 
-## Metric Literacy Explained
+#### Metric Literacy Explained
 
 Metric Literacy is the ability to quickly interpret which metrics matter in a crisis and which are merely noise. This requires:
 
@@ -102,7 +100,7 @@ Metric Literacy is the ability to quickly interpret which metrics matter in a cr
 
 In financial services, the metric literacy gap is particularly dangerous. While support teams scan performance dashboards showing stable CPU, memory, and throughput metrics, customers may be experiencing failed transfers, blocked account access, or incomplete settlements.
 
-## The Transition Challenge
+#### The Transition Challenge
 
 Production support professionals moving to SRE roles often face this specific challenge:
 
@@ -111,7 +109,7 @@ Production support professionals moving to SRE roles often face this specific ch
 
 This paradigm shift is difficult precisely because the old indicators often look completely normal during real outages.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To develop metric literacy in financial services:
 
@@ -123,7 +121,7 @@ To develop metric literacy in financial services:
 
 4. **Practice Crisis Correlation**: Run regular exercises where teams must quickly identify which metrics matter during simulated incidents
 
-Remember Hector's wisdom: dashboards aren't just for admiring - they're diagnostic tools that require active interpretation. Don't get hypnotized by the colors; focus on what the numbers mean for customer experience.
+Remember Hector Alavaz's wisdom: dashboards aren't just for admiring - they're diagnostic tools that require active interpretation. Don't get hypnotized by the colors; focus on what the numbers mean for customer experience.
 
 ## Panel 3: What's Actually Broken? - Evidence-Based Debugging
 
@@ -133,11 +131,11 @@ Remember Hector's wisdom: dashboards aren't just for admiring - they're diagnost
 
 *Expanded narrative: Katherine, the night shift engineer, opens a terminal window and runs a quick curl command against the payment API. The response: HTTP 500. He tries again. Same result. "Found it—payment-service is throwing 500s," he calls out. He switches to the performance dashboard. "But CPU is only at 30% utilization, memory looks fine, network traffic normal. The traditional metrics say nothing's wrong."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 When monitoring systems provide contradictory signals, SREs must rely on direct evidence gathering rather than dashboard interpretations. This panel illustrates the critical shift from assumption to verification.
 
-## Evidence-Based Debugging Explained
+#### Evidence-Based Debugging Explained
 
 Evidence-Based Debugging is a systematic approach that prioritizes direct system interrogation over dashboard interpretation:
 
@@ -147,7 +145,7 @@ Evidence-Based Debugging is a systematic approach that prioritizes direct system
 
 In financial services, the gap between reported health and actual functionality often represents millions in transaction value. When a payment service returns HTTP 500 errors while dashboards show healthy CPU usage, the direct evidence takes precedence.
 
-## The Resource Monitoring Fallacy
+#### The Resource Monitoring Fallacy
 
 A dangerous pattern in production support is overreliance on resource metrics:
 
@@ -156,7 +154,7 @@ A dangerous pattern in production support is overreliance on resource metrics:
 
 This shift from inferring health to verifying functionality is foundational to effective incident response in modern banking systems.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement evidence-based debugging in financial environments:
 
@@ -168,21 +166,21 @@ To implement evidence-based debugging in financial environments:
 
 4. **Runbook Verification**: Include direct system testing commands in all incident runbooks
 
-Hector's key insight - "CPU looks fine on a corpse, too" - reminds us that resource availability means nothing if the service isn't fulfilling its purpose. In banking systems, what matters is completed transactions, not utilized capacity.
+Hector Alavaz's key insight - "CPU looks fine on a corpse, too" - reminds us that resource availability means nothing if the service isn't fulfilling its purpose. In banking systems, what matters is completed transactions, not utilized capacity.
 
 ## Panel 4: The Dashboard Is Lying - The Three Pillars Framework
 
 ### Scene Description
 
-**The Dashboard Is Lying** – Hector walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?"
+**The Dashboard Is Lying** – Hector Alavaz walks in holding coffee, asks: "Did you check logs, or are we just admiring the colors?"
 
-*Expanded narrative: Hector strides in, somehow looking perfectly composed despite the hour. He sips from a steaming coffee mug while surveying the chaos. His eyes move methodically between the frantic team and the cheerfully misleading green dashboard. "Did you check the actual logs," he asks dryly, "or are we just admiring the pretty colors?" The room falls silent.*
+*Expanded narrative: Hector Alavaz strides in, somehow looking perfectly composed despite the hour. He sips from a steaming coffee mug while surveying the chaos. His eyes move methodically between the frantic team and the cheerfully misleading green dashboard. "Did you check the actual logs," he asks dryly, "or are we just admiring the pretty colors?" The room falls silent.*
 
-## Teaching Narrative
+### Teaching Narrative
 
 The most dangerous monitoring failure isn't when dashboards show red - it's when they falsely show green. Understanding the Three Pillars of Observability provides the framework to overcome dashboard deception.
 
-## The Three Pillars Framework Explained
+### The Three Pillars Framework Explained
 
 Modern observability relies on three interconnected pillars that together provide a complete system understanding:
 
@@ -206,7 +204,7 @@ Modern observability relies on three interconnected pillars that together provid
 
 The power comes when these pillars intersect: logs provide context for metric spikes, traces connect related logs, and metrics show when traces are abnormal.
 
-## Financial Services Implementation
+### Financial Services Implementation
 
 In banking systems, the Three Pillars form a critical regulatory and operational framework:
 
@@ -216,7 +214,7 @@ In banking systems, the Three Pillars form a critical regulatory and operational
 
 Without all three working together, banks face both operational blindness and regulatory exposure. A security event might be logged, but without associated metrics and traces, its impact remains unknown.
 
-## Implementation Guidance
+### Implementation Guidance
 
 To implement the Three Pillars effectively:
 
@@ -227,19 +225,19 @@ To implement the Three Pillars effectively:
 
 The Three Pillars aren't just technical tools - they're the foundation of a banking system that can defend its actions to regulators, explain failures to customers, and guide engineers during incidents.
 
-# Panel 5: Context is Missing - Structured Telemetry Design
+## Panel 5: Context is Missing - Structured Telemetry Design
 
-## Scene Description
+### Scene Description
 
 **Context is Missing** – Juana shows the logs: missing trace IDs, vague errors. "Nice. It broke, and it didn't even tell us who it killed."
 
-*Expanded narrative: Juana, the senior engineer, pulls up the log viewer. "Here's our problem," she points. The logs show errors, but they're generic—no transaction IDs, no trace context, no correlation identifiers. Just: "ERROR: Transaction failed." Hector looks over her shoulder. "Nice," he deadpans. "It broke, and it didn't even tell us who it killed. How are we supposed to find which transactions failed with this?"*
+*Expanded narrative: Juana, the senior engineer, pulls up the log viewer. "Here's our problem," she points. The logs show errors, but they're generic—no transaction IDs, no trace context, no correlation identifiers. Just: "ERROR: Transaction failed." Hector Alavaz looks over her shoulder. "Nice," he deadpans. "It broke, and it didn't even tell us who it killed. How are we supposed to find which transactions failed with this?"*
 
-## Teaching Narrative
+### Teaching Narrative
 
 Generic error logs without context are worse than useless - they create the illusion of visibility while providing no actionable information. This panel demonstrates how proper telemetry design transforms unintelligible noise into diagnostic clarity.
 
-## Structured Telemetry Design Explained
+#### Structured Telemetry Design Explained
 
 Structured Telemetry Design is an intentional approach to instrumentation that ensures all system outputs contain the context needed for diagnosis and correlation:
 
@@ -250,7 +248,7 @@ Structured Telemetry Design is an intentional approach to instrumentation that e
 
 In financial services, the difference between "ERROR: Transaction failed" and a properly structured log entry determines whether you can identify which customers are affected, what regulations might be violated, and where to begin remediation.
 
-## Critical Banking Context Fields
+#### Critical Banking Context Fields
 
 Financial systems require specific context in their telemetry:
 
@@ -263,7 +261,7 @@ Financial systems require specific context in their telemetry:
 
 Without these fields, telemetry creates dangerous blind spots - you know something is wrong but can't determine scope, impact, or recovery requirements.
 
-## Implementation Guidance
+### Implementation Guidance
 
 To implement proper structured telemetry:
 
@@ -274,19 +272,19 @@ To implement proper structured telemetry:
 
 Juana's observation that "It broke, and it didn't even tell us who it killed" highlights the human cost of poor telemetry - without proper context, support teams can't provide answers to affected customers or executives, eroding trust and complicating recovery.
 
-# Panel 6: Monologue from Hector - Observability Integration
+## Panel 6: Monologue from Hector Alavaz - Observability Integration
 
-## Scene Description
+### Scene Description
 
-**Monologue from Hector** – He points to each pillar (Logs, Metrics, Traces) and explains what they could've revealed. Dramatic diagram in background.
+**Monologue from Hector Alavaz** – He points to each pillar (Logs, Metrics, Traces) and explains what they could've revealed. Dramatic diagram in background.
 
-*Expanded narrative: Hector moves to the whiteboard and draws three overlapping circles labeled LOGS, METRICS, and TRACES. "This is what you're missing," he explains. "Proper logs would tell us exactly which transactions failed and why. Relevant metrics would show us the error rate spike before customers complained. And traces—" he taps the board emphatically, "—traces would show us exactly where in the transaction flow things went wrong. Without all three connected, you're just guessing. And banking systems don't tolerate guessing."*
+*Expanded narrative: Hector Alavaz moves to the whiteboard and draws three overlapping circles labeled LOGS, METRICS, and TRACES. "This is what you're missing," he explains. "Proper logs would tell us exactly which transactions failed and why. Relevant metrics would show us the error rate spike before customers complained. And traces—" he taps the board emphatically, "—traces would show us exactly where in the transaction flow things went wrong. Without all three connected, you're just guessing. And banking systems don't tolerate guessing."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 The value of observability isn't in collecting data - it's in connecting it to form a complete diagnostic picture. This panel shows how integrating the three pillars creates a powerful system for understanding complex failures.
 
-## Observability Integration Explained
+#### Observability Integration Explained
 
 Observability Integration is the practice of connecting logs, metrics, and traces to create a unified view of system behavior:
 
@@ -297,7 +295,7 @@ Observability Integration is the practice of connecting logs, metrics, and trace
 
 In banking systems, observability integration determines how quickly you can move from detecting a problem to understanding its cause, scope, and resolution path. Without integration, each team sees only a fragment of the whole picture.
 
-## Financial Services Applications
+### Financial Services Applications
 
 Banking systems use integrated observability for critical functions:
 
@@ -308,7 +306,7 @@ Banking systems use integrated observability for critical functions:
 
 When properly implemented, integrated observability transforms incident response from hours of fragmented investigation to minutes of focused diagnosis.
 
-## Implementation Guidance
+### Implementation Guidance
 
 To achieve effective observability integration:
 
@@ -317,21 +315,21 @@ To achieve effective observability integration:
 3. **Workflow Design**: Create incident response processes that leverage all three pillars
 4. **Visualization Strategy**: Build dashboards that show relationships between different telemetry types
 
-Hector's whiteboard diagram showing the three pillars with "Root Cause Detection" at their intersection represents the goal: a system where every component's behavior is connected and comprehensible, even during complex failures.
+Hector Alavaz's whiteboard diagram showing the three pillars with "Root Cause Detection" at their intersection represents the goal: a system where every component's behavior is connected and comprehensible, even during complex failures.
 
-# Panel 7: Lesson Locked In - System Transparency
+## Panel 7: Lesson Locked In - System Transparency
 
-## Scene Description
+### Scene Description
 
-**Lesson Locked In** – Wanjiru says, "So… green doesn't mean good." Hector: "Green means the system's lying. Now let's teach it to confess."
+**Lesson Locked In** – Wanjiru says, "So… green doesn't mean good." Hector Alavaz: "Green means the system's lying. Now let's teach it to confess."
 
-*Expanded narrative: Understanding dawns on Wanjiru's face. "So... green doesn't mean good," she says slowly. "It just means we don't know what's bad." Hector nods. "Green means the system's lying to you about its health," he confirms. "Now let's teach it to confess." He opens his laptop and begins typing rapidly, adding structured logging and trace context to the payment service while the team watches, learning.*
+*Expanded narrative: Understanding dawns on Wanjiru's face. "So... green doesn't mean good," she says slowly. "It just means we don't know what's bad." Hector Alavaz nods. "Green means the system's lying to you about its health," he confirms. "Now let's teach it to confess." He opens his laptop and begins typing rapidly, adding structured logging and trace context to the payment service while the team watches, learning.*
 
-## Teaching Narrative
+### Teaching Narrative
 
 The ultimate goal of observability is to make systems transparent - to eliminate the gap between what's happening and what we understand. This panel captures the transformative moment when a team realizes that dashboards don't define reality - they merely represent it.
 
-## System Transparency Explained
+### System Transparency Explained
 
 System Transparency is the principle that systems should communicate their true state clearly and accurately:
 
@@ -342,16 +340,16 @@ System Transparency is the principle that systems should communicate their true 
 
 In banking environments, the gap between dashboard appearance and system reality represents significant risk. A "green" system that's actually failing creates false confidence, delayed response, and potential compliance violations.
 
-## The Confession Metaphor
+#### The Confession Metaphor
 
-Hector's powerful statement that "Green means the system's lying. Now let's teach it to confess" captures a fundamental shift in thinking:
+Hector Alavaz's powerful statement that "Green means the system's lying. Now let's teach it to confess" captures a fundamental shift in thinking:
 
 - **Traditional Monitoring**: Reading passive indicators about system status
 - **Modern Observability**: Creating systems that actively communicate their true state
 
 This active "confession" model transforms incident response from investigation to collaboration - the system itself becomes your most valuable incident responder by clearly articulating what's wrong.
 
-## Implementation Guidance
+### Implementation Guidance
 
 To build transparent banking systems:
 
@@ -361,4 +359,3 @@ To build transparent banking systems:
 4. **Impact Visualization**: Create dashboards that highlight customer experience, not just system resources
 
 The transformation from "green doesn't mean good" to "teach it to confess" represents the core journey from traditional monitoring to modern observability - from systems we must interrogate to systems that actively communicate their true state.
-

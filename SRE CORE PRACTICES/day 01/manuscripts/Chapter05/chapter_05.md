@@ -4,9 +4,9 @@
 
 ATMs are an oddly intimate part of banking: cold metal, fluorescent glow, and a promise that your cash is as reliable as gravity. When those machines stall, the illusion collapses instantly. In the pre-dawn hours of May 6, the bank’s Mid-West network of 1 127 ATMs simultaneously began declining withdrawals—no public explanation, no red alerts on the ops wall, only a growing queue of angry customers and a trending hashtag.
 
-Inside the incident war-room, Hector Alvarez confronts the deeper story: the outage is merely a symptom of five slowly accrued observability debts. He calls them the **Five Sins**—silent anti-patterns that masquerade as “best practice” until real cash meets missing telemetry. Each sin is a lesson in how data fails when ownership, context, or honesty disappear.
+Inside the incident war-room, Hector Alavaz Alvarez confronts the deeper story: the outage is merely a symptom of five slowly accrued observability debts. He calls them the **Five Sins**—silent anti-patterns that masquerade as “best practice” until real cash meets missing telemetry. Each sin is a lesson in how data fails when ownership, context, or honesty disappear.
 
-This chapter walks you through a minute-by-minute reconstruction of the outage. You will stand beside each learner character—Wanjiru overwhelmed by unlabeled graphs, Daniel defaulting to network blame, Juana staring at an alert with a dead runbook link—and feel how confusion compounds when signals lie. Hector’s dry, incisive commentary slices through the chaos, forcing the team to replace guesses with evidence.
+This chapter walks you through a minute-by-minute reconstruction of the outage. You will stand beside each learner character—Wanjiru overwhelmed by unlabeled graphs, Daniel defaulting to network blame, Juana staring at an alert with a dead runbook link—and feel how confusion compounds when signals lie. Hector Alavaz’s dry, incisive commentary slices through the chaos, forcing the team to replace guesses with evidence.
 
 Along the way, we expose real-world regulatory stakes. Banking standards such as PCI DSS and FFIEC demand provable audit trails for customer-facing interruptions. If your observability stack masks failures, auditors will eventually unmask them—usually with fines attached. The lesson is blunt: *design telemetry that confesses before auditors interrogate.*
 
@@ -48,7 +48,7 @@ You arrive in the dimly lit Geneos war-room at **04:45**. Twenty-four glowing pa
 
 You note her shoulders tightening, her eyes darting, classic cognitive overload. A Vice-President’s voice erupts from the conference speaker: *“People can’t get cash. Where’s the root cause chart?”* The panels stay proudly green. Wanjiru mutters, “Which one tells me why the ATMs aren’t working?” No one answers.
 
-The silence breaks when Hector strides in, steaming coffee in hand, battered RHEL cap casting a shadow over tired eyes . He surveys the kaleidoscope, unplugs the HDMI cable feeding the wall, and plunges the room into darkness save for one emergency light. Gasps ripple. In the hush he says, voice level: *“Better black than blind. Start with what you know, not with what you hope.”*
+The silence breaks when Hector Alavaz strides in, steaming coffee in hand, battered RHEL cap casting a shadow over tired eyes . He surveys the kaleidoscope, unplugs the HDMI cable feeding the wall, and plunges the room into darkness save for one emergency light. Gasps ripple. In the hush he says, voice level: *“Better black than blind. Start with what you know, not with what you hope.”*
 
 You feel the shift—a raw moment where everyone must admit they have *no idea* which graph matters. The outage clock keeps ticking.
 
@@ -64,13 +64,13 @@ ______________________________________________________________________
 
 Lights return on personal monitors. **Daniel** squints at a flat network-latency graph and declares, “Must be the network again.” It’s a reflex—last quarter a bad fiber splice *was* the villain. Habits fossilize quickly. **Njeri**, network engineer, swivels her chair, brow knitted. She launches `mtr -rw atm-gateway.bank.int` and watches ten perfect hops, zero packet loss. She retorts with controlled calm: “Latency’s normal. Let’s not indict Layer 1 without evidence.”
 
-Daniel shrugs, doubling down: “Users see timeouts—that screams network.” Njeri’s eyes flash; bias is loud, data is quiet. You catch Hector leaning against a desk, notebook open to scribbled incident timestamps. Without looking up he recites:
+Daniel shrugs, doubling down: “Users see timeouts—that screams network.” Njeri’s eyes flash; bias is loud, data is quiet. You catch Hector Alavaz leaning against a desk, notebook open to scribbled incident timestamps. Without looking up he recites:
 
-:::hector quote
-**Hector says:** “Assumptions are the first thing to fail.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Assumptions are the first thing to fail.”
 :::
 
-The room digests the aphorism. To cement the point, Hector drags three graphs onto the central screen: Infrastructure CPU, DB I/O, Application Latency. All three lines are eerily *too* smooth—plateauing exactly at previous-day averages. He circles the flatness. “When customers scream and graphs stay flat, you’re either measuring the wrong thing or not measuring at all.”
+The room digests the aphorism. To cement the point, Hector Alavaz drags three graphs onto the central screen: Infrastructure CPU, DB I/O, Application Latency. All three lines are eerily *too* smooth—plateauing exactly at previous-day averages. He circles the flatness. “When customers scream and graphs stay flat, you’re either measuring the wrong thing or not measuring at all.”
 
 Wanjiru whispers to you, “If the network isn’t guilty, what is?” Your answer is cold: *“Whatever we refused to instrument.”*
 
@@ -86,7 +86,7 @@ ______________________________________________________________________
 
 #### Teaching Narrative
 
-At **05:20**, Hector flips a mobile whiteboard toward the team. Sketched in Rust Red icons are five blunt headings:
+At **05:20**, Hector Alavaz flips a mobile whiteboard toward the team. Sketched in Rust Red icons are five blunt headings:
 
 1. **Ownerless Metrics** – orphan graphs whose parents left town.
 2. **Orphaned Alerts** – pages that demand action yet provide none.
@@ -110,7 +110,7 @@ ______________________________________________________________________
 
 **Clara** isolates a jagged line tagged `latency_avg_all`. Its spike coincides perfectly with the first ATM declines. She pings the on-call rota: no owner listed. They search the Git repo—no code comment. They query Grafana annotations—blank. The metric is an orphan wailing for adoption.
 
-Hector calls it out: “An orphan metric is a street rumor—heard by everyone, answered by no one.” He pulls up the metric’s label set; it lacks `service`, `owner_team`, and `runbook_url`. Clara winces. She opens a pull request right there, adding mandatory labels and a failing CI test for any future unlabeled metric. Action replaces despair.
+Hector Alavaz calls it out: “An orphan metric is a street rumor—heard by everyone, answered by no one.” He pulls up the metric’s label set; it lacks `service`, `owner_team`, and `runbook_url`. Clara winces. She opens a pull request right there, adding mandatory labels and a failing CI test for any future unlabeled metric. Action replaces despair.
 
 :::debug pattern
 **Pattern Name:** Metric with No Owner
@@ -134,7 +134,7 @@ ______________________________________________________________________
 
 At **06:11** Juana’s phone erupts: `atm_txn_5xx_rate > 2%`. She taps the runbook link—HTTP 404. She exhales a single dry laugh: “It’s a riddle now.” The alert message contains no clue which microservice, which commit, or even which region. It is a siren with no map.
 
-Hector doesn’t flinch. “An alert without action is a loud opinion.” He assigns Daniel to inventory every alert rule, verify each has a valid runbook URL, and set `reviewed_on` labels. The broader team groans—busywork? Hector clarifies: “Busywork is pushing the same boulder at 3 a.m. This is building a ramp.”
+Hector Alavaz doesn’t flinch. “An alert without action is a loud opinion.” He assigns Daniel to inventory every alert rule, verify each has a valid runbook URL, and set `reviewed_on` labels. The broader team groans—busywork? Hector Alavaz clarifies: “Busywork is pushing the same boulder at 3 a.m. This is building a ramp.”
 
 Juana drafts a prototype index table:
 
@@ -143,7 +143,7 @@ Juana drafts a prototype index table:
 | `atm_txn_5xx_rate`       | **404**                       | –           | Core Apps |
 | `ledger_rpc_latency_p99` | `/runbooks/ledger_latency.md` | 2025-04-02  | Core Apps |
 
-Daniel scripts a linter to curl every URL, failing CI if status ≥ 400. Progress through automation—a quiet smile from Hector.
+Daniel scripts a linter to curl every URL, failing CI if status ≥ 400. Progress through automation—a quiet smile from Hector Alavaz.
 
 :::try this
 **Exercise:** In your repo, run:
@@ -168,7 +168,7 @@ ______________________________________________________________________
 
 >*Planning the visual narrative**
 
-I need to focus on ensuring certain elements are included in the panels, like "Logs That Lie," "Uptime ≠ Success," and "It's Always the Network." I should also make sure to follow the structure for the flow, placing voice widgets after image embeds. Panel 8 needs an "incident flashback" after the image, along with reflections and a closing reflection involving Hector. Finally, the external panels should be structured as an array with filenames, scene descriptions, and other specific details for each panel. Lastly, I still need to finalize the word count.
+I need to focus on ensuring certain elements are included in the panels, like "Logs That Lie," "Uptime ≠ Success," and "It's Always the Network." I should also make sure to follow the structure for the flow, placing voice widgets after image embeds. Panel 8 needs an "incident flashback" after the image, along with reflections and a closing reflection involving Hector Alavaz. Finally, the external panels should be structured as an array with filenames, scene descriptions, and other specific details for each panel. Lastly, I still need to finalize the word count.
 
 Thought for 29 seconds
 
@@ -190,7 +190,7 @@ Yet customers are still walking away empty-handed. Katherine filters for `result
 
 No `trace_id`, no `customer_id`, and that dash in `txn-id` mocks them. Juana sighs: “Feels like reading a murder mystery with the names blacked out.”
 
-Hector’s reply is a soft whistle; he opens two panes in tmux: **left** displays the current log line, **right** a proposed schema-validated version:
+Hector Alavaz’s reply is a soft whistle; he opens two panes in tmux: **left** displays the current log line, **right** a proposed schema-validated version:
 
 ```json
 {
@@ -209,7 +209,7 @@ Hector’s reply is a soft whistle; he opens two panes in tmux: **left** display
 
 The difference is visceral: the second line offers a surgical path from ATM to faulty function.
 
-> **Hector, after four seconds of silence:** “A log without context is a liar that swears it told you everything.”
+> **Hector Alavaz, after four seconds of silence:** “A log without context is a liar that swears it told you everything.”
 
 Katherine unpacks the JSON, pivots on `trace_id`, and finally renders an end-to-end waterfall inside Jaeger: **gateway → fee-calculator → ledger**. The bad division lives in the fee-calculator. MTTR just collapsed from hours to minutes—once the logs started telling the truth.
 
@@ -225,8 +225,8 @@ Katherine unpacks the JSON, pivots on `trace_id`, and finally renders an end-to-
 
 ![Panel 6 – Logs That Lie](images/ch5_panel6_logs_lie.png){width=800}
 
-:::hector quote
-**Hector says:** “Telemetry without context is bad fiction. And fiction won’t release cash.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Telemetry without context is bad fiction. And fiction won’t release cash.”
 :::
 
 ______________________________________________________________________
@@ -252,7 +252,7 @@ She sketches the **Customer Journey Funnel** on the glass wall:
 
 Only step #4 fails, yet traditional uptime ignores it. Wanjiru murmurs, “Our definition of ‘healthy’ forgot the human.”
 
-Hector writes a new Prometheus query in a shared pad:
+Hector Alavaz writes a new Prometheus query in a shared pad:
 
 ```promQL
 # Percentage of withdrawals that end in success in a 30-min window
@@ -292,14 +292,14 @@ Evidence exonerates the cables. Nonetheless, SRE folklore holds that “it’s a
 
 Njeri recounts a 2023 outage where a **faulty TLS cipher mismatch** was chased as “packet drops” for six hours. The rhetorical knife twists: “We replaced two spine switches that night—still failed until someone flipped a JDK flag.”
 
-Hector nods. “Blame is cheap; proof costs curiosity.” He pins a laminated checklist to the incident wall: **Prove Layer-1 Guilt**—requires packet capture, link stats, path trace, and correlated application error. Until all four align, the network is innocent.
+Hector Alavaz nods. “Blame is cheap; proof costs curiosity.” He pins a laminated checklist to the incident wall: **Prove Layer-1 Guilt**—requires packet capture, link stats, path trace, and correlated application error. Until all four align, the network is innocent.
 
 #### Image Embed
 
 ![Panel 8 – Not the Network](images/ch5_panel8_not_network.png){width=800}
 
-:::hector quote
-**Hector says:** “Prove—don’t presume—before you pull cables.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Prove—don’t presume—before you pull cables.”
 :::
 
 ______________________________________________________________________
@@ -308,7 +308,7 @@ ______________________________________________________________________
 
 #### Teaching Narrative
 
-With the Five Sins identified, Hector orchestrates a forensic replay. The big screen lights with a **Mermaid sequence diagram** that stitches every blind spot to its delay:
+With the Five Sins identified, Hector Alavaz orchestrates a forensic replay. The big screen lights with a **Mermaid sequence diagram** that stitches every blind spot to its delay:
 
 ```mermaid
 sequenceDiagram
@@ -328,7 +328,7 @@ sequenceDiagram
     note left of GW: Uptime = 100 %, Success = 0 %  %% Sin #4
 ```
 
-Hector annotates each arrow with a red tag matching its sin. He overlays a second timeline mapping **Cost in Minutes**:
+Hector Alavaz annotates each arrow with a red tag matching its sin. He overlays a second timeline mapping **Cost in Minutes**:
 
 | Sin               | Delay Minutes | Stakeholder Impact           |
 | ----------------- | ------------- | ---------------------------- |
@@ -338,7 +338,7 @@ Hector annotates each arrow with a red tag matching its sin. He overlays a secon
 | Uptime≠Success    | 75            | Dashboard green-washes pain  |
 | Blame Network     | 90            | 4 engineers chasing ghosts   |
 
-Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees. Hector closes the diagram and turns: “Memorize these numbers; you’ll recite them to auditors.”
+Silence settles; the math is brutal—390 lost minutes, six-figure penalty fees. Hector Alavaz closes the diagram and turns: “Memorize these numbers; you’ll recite them to auditors.”
 
 #### Image Embed
 
@@ -350,7 +350,7 @@ ______________________________________________________________________
 
 #### Teaching Narrative
 
-By **09 : 58**, code patches merge, dashboards refresh, and the first ATM dispenses cash in a Chicago vestibule. Relief doesn’t excuse omission. Hector convenes a closure ritual: the whiteboard now lists firm **Action Items**—each sin translated into work:
+By **09 : 58**, code patches merge, dashboards refresh, and the first ATM dispenses cash in a Chicago vestibule. Relief doesn’t excuse omission. Hector Alavaz convenes a closure ritual: the whiteboard now lists firm **Action Items**—each sin translated into work:
 
 - **Ownerless Metrics** → Adopt metric-ownership labels, gate via CI
 - **Orphaned Alerts** → Build alert-runbook registry, link-check nightly job
@@ -360,10 +360,10 @@ By **09 : 58**, code patches merge, dashboards refresh, and the first ATM dispen
 
 He initials each item, red marker squeaking—a binding contract. The juniors nod, exhausted but wiser. Omar scribbles in his notebook: *“Telemetry that hides pain is a liability.”* He looks up and asks, “What if we miss a sin next time?”
 
-Hector’s final words cut clean:
+Hector Alavaz’s final words cut clean:
 
-:::hector quote
-**Hector says:** “Volcanoes don’t grant second warnings. Build gauges that scream before the lava hits.”
+:::Hector Alavaz quote
+**Hector Alavaz says:** “Volcanoes don’t grant second warnings. Build gauges that scream before the lava hits.”
 :::
 
 #### Image Embed
@@ -374,6 +374,6 @@ ______________________________________________________________________
 
 ## Postmortem Reflection & Assessment Hook
 
-You have witnessed a full-scale cash outage and mapped each lost minute to an observability sin. **Your mission:** Before the week ends, audit one service you own against Hector’s checklist. Identify the sin lurking closest to eruption and file a pull request that neutralizes it. Share your PR link in the team channel tagged **#lava-proof**. Your manager—and future auditors—will notice.
+You have witnessed a full-scale cash outage and mapped each lost minute to an observability sin. **Your mission:** Before the week ends, audit one service you own against Hector Alavaz’s checklist. Identify the sin lurking closest to eruption and file a pull request that neutralizes it. Share your PR link in the team channel tagged **#lava-proof**. Your manager—and future auditors—will notice.
 
 ______________________________________________________________________

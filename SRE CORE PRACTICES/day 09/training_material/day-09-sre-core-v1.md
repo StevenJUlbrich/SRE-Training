@@ -1,14 +1,14 @@
 **Day 9. The human layer.**  
 All your metrics, logs, traces, dashboards, SLOs, and tail-sampled observability pipelines mean nothing if your **culture** is broken.
 
-Today Hector returns—not to talk about tools, but about **the people, processes, and pain** that define real reliability.  
+Today Hector Alavaz returns—not to talk about tools, but about **the people, processes, and pain** that define real reliability.  
 Because SRE isn’t just what you ship. It’s what you *live* with after 2 a.m.
 
 ---
 
 # 🧱 **Day 9: Reliability Culture & Engineering Maturity**
 
-**Character:** Hector – Mexico City  
+**Character:** Hector Alavaz – Mexico City  
 **Style:** Battle-hardened, jaded, deeply invested in doing things right  
 **Vibe:** “If you want reliable systems, build reliable teams.”
 
@@ -81,14 +81,14 @@ Examples:
 
 ### 🔹 Production Readiness Review (PRR) Checklist
 
-| Category | Questions |
-|---------|-----------|
-| Monitoring | Are metrics, logs, and traces in place? |
-| Alerting | Are SLOs defined? Are alerts tested? |
-| Documentation | Is there a runbook or FAQ? |
-| Ownership | Who owns this in off-hours? |
-| Dependency Risk | Are upstream SLAs known? |
-| Rollback | Can you revert easily? |
+| Category        | Questions                               |
+| --------------- | --------------------------------------- |
+| Monitoring      | Are metrics, logs, and traces in place? |
+| Alerting        | Are SLOs defined? Are alerts tested?    |
+| Documentation   | Is there a runbook or FAQ?              |
+| Ownership       | Who owns this in off-hours?             |
+| Dependency Risk | Are upstream SLAs known?                |
+| Rollback        | Can you revert easily?                  |
 
 ---
 
@@ -118,13 +118,13 @@ flowchart LR
     D --> E[Reliability-as-a-Product]
 ```
 
-| Level | Description |
-|-------|-------------|
-| **Ad Hoc** | “We have some alerts” |
-| **Reactive** | “We page the right team eventually” |
-| **Proactive** | “We have SLOs and incident timelines” |
-| **Predictive** | “We prevent outages with risk analysis” |
-| **Reliability-as-a-Product** | “Users trust us, and we iterate fast” |
+| Level                        | Description                             |
+| ---------------------------- | --------------------------------------- |
+| **Ad Hoc**                   | “We have some alerts”                   |
+| **Reactive**                 | “We page the right team eventually”     |
+| **Proactive**                | “We have SLOs and incident timelines”   |
+| **Predictive**               | “We prevent outages with risk analysis” |
+| **Reliability-as-a-Product** | “Users trust us, and we iterate fast”   |
 
 ---
 
@@ -167,7 +167,7 @@ You’re given:
 
 ---
 
-## 📜 Hector’s Commandments
+## 📜 Hector Alavaz’s Commandments
 
 1. “You don’t build reliable systems. You build teams who do.”  
 2. “Toil is debt. And interest is paid in burnout.”  

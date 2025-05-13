@@ -39,9 +39,9 @@ There you go: brutal, practical, and guaranteed to make an SRE mutter “finally
 ## Panel 1: The Midnight Alert Avalanche
 ### Scene Description
 
-A banking operations center at 2:15 AM. Hector, a new SRE transitioning from production support, sits alone at a monitoring station surrounded by multiple screens. His phone buzzes repeatedly with alerts. The screens show a dashboard for a payment processing system with multiple red indicators. Hector looks overwhelmed, staring at dozens of simultaneous alerts, unsure which ones matter. His expression shows panic as he scrolls through the flood of notifications.
+A banking operations center at 2:15 AM. Hector Alavaz, a new SRE transitioning from production support, sits alone at a monitoring station surrounded by multiple screens. His phone buzzes repeatedly with alerts. The screens show a dashboard for a payment processing system with multiple red indicators. Hector Alavaz looks overwhelmed, staring at dozens of simultaneous alerts, unsure which ones matter. His expression shows panic as he scrolls through the flood of notifications.
 
-Below is a conceptual representation of Hector's monitoring station and the overwhelming alert storm he faces:
+Below is a conceptual representation of Hector Alavaz's monitoring station and the overwhelming alert storm he faces:
 
 ```mermaid
 graph TD
@@ -49,18 +49,18 @@ graph TD
     A -->|Dashboard| C[Multiple Screens]
     C -->|Red Indicators| D[Payment System Failures]
     C -->|Red Indicators| E[Interdependent Systems Failing]
-    B -->|Overwhelming Notifications| F[[Hector's Reaction: Panic]]
+    B -->|Overwhelming Notifications| F[[Hector Alavaz's Reaction: Panic]]
     D -->|Cascading Failures| G[Root Cause Hidden]
     E -->|Noise| G
     F -->|Scrolls Aimlessly| G
 ```
 
-This diagram illustrates the chaotic nature of the alert storm and highlights how the volume and lack of prioritization obscure the root cause, leaving Hector unsure of where to focus.
+This diagram illustrates the chaotic nature of the alert storm and highlights how the volume and lack of prioritization obscure the root cause, leaving Hector Alavaz unsure of where to focus.
 ### Teaching Narrative
 Alert fatigue is a critical challenge in financial systems monitoring. Traditional alerting approaches often generate "alert storms" where numerous related alerts fire simultaneously, making it impossible to identify the true issues requiring immediate attention. This panel introduces the concept of alert design hierarchy - the practice of structuring alerts to provide clear signals rather than noise. In the banking environment, where multiple interdependent systems generate cascading failures, properly designed alerts must differentiate between causal issues and their downstream effects. The transition from monitoring to incident response begins with recognizing that alerts should be actionable signals that guide response, not just notifications of state change.
 ### Common Example of the Problem
 
-A major retail bank's payment gateway experiences performance degradation at 2:15 AM. Within seconds, Hector's phone and dashboard explode with over 30 different alerts: database connection timeouts, API response latency violations, queue depth thresholds, memory utilization spikes, and transaction failure rates – all triggered by the same root cause. Additionally, downstream systems begin generating their own alerts as the issue cascades through the payment ecosystem. Mobile banking alerts, ATM transaction failures, and merchant processing warnings create an overwhelming cacophony of notifications. Hector, unable to determine which alerts represent the primary issue versus secondary effects, wastes precious minutes jumping between dashboards while the incident continues to expand in scope.
+A major retail bank's payment gateway experiences performance degradation at 2:15 AM. Within seconds, Hector Alavaz's phone and dashboard explode with over 30 different alerts: database connection timeouts, API response latency violations, queue depth thresholds, memory utilization spikes, and transaction failure rates – all triggered by the same root cause. Additionally, downstream systems begin generating their own alerts as the issue cascades through the payment ecosystem. Mobile banking alerts, ATM transaction failures, and merchant processing warnings create an overwhelming cacophony of notifications. Hector Alavaz, unable to determine which alerts represent the primary issue versus secondary effects, wastes precious minutes jumping between dashboards while the incident continues to expand in scope.
 
 #### Alert Cascade Timeline
 
@@ -192,7 +192,7 @@ To transform alert chaos into structured intelligence, implement these five acti
 ## Panel 2: Designing Meaningful Alerts
 ### Scene Description
 
-A whiteboard session in a bright conference room. Maya, a senior SRE, leads a workshop with Hector and other team members. On the whiteboard is a diagram showing a banking transaction flow with multiple components. Maya is highlighting specific points in the flow where alerts should be placed. She's drawing connections between user impact and technical metrics. Sample alert templates are visible on one section of the board with the words "ACTIONABLE" and "USER-CENTRIC" underlined.
+A whiteboard session in a bright conference room. Maya, a senior SRE, leads a workshop with Hector Alavaz and other team members. On the whiteboard is a diagram showing a banking transaction flow with multiple components. Maya is highlighting specific points in the flow where alerts should be placed. She's drawing connections between user impact and technical metrics. Sample alert templates are visible on one section of the board with the words "ACTIONABLE" and "USER-CENTRIC" underlined.
 
 Below is a simplified text representation of the banking transaction flow diagram on the whiteboard:
 
@@ -322,24 +322,24 @@ By following this checklist and structured flow, you can design alerts that alig
 ## Panel 3: First Responder Protocol
 ### Scene Description
 
-Hector's workstation during an active incident is organized and purpose-driven for rapid response. On his desk, a printed checklist labeled "First Responder Protocol" rests beside his keyboard, clearly visible for quick reference. His computer screen displays a structured incident response dashboard prominently showing payment gateway errors, with key metrics highlighted for immediate attention. A digital timer in the corner of the dashboard reads "Incident Duration: 4:32," emphasizing the urgency of the situation. Hector is focused, methodically following the checklist while simultaneously typing updates into the team chat to maintain real-time communication.
+Hector Alavaz's workstation during an active incident is organized and purpose-driven for rapid response. On his desk, a printed checklist labeled "First Responder Protocol" rests beside his keyboard, clearly visible for quick reference. His computer screen displays a structured incident response dashboard prominently showing payment gateway errors, with key metrics highlighted for immediate attention. A digital timer in the corner of the dashboard reads "Incident Duration: 4:32," emphasizing the urgency of the situation. Hector Alavaz is focused, methodically following the checklist while simultaneously typing updates into the team chat to maintain real-time communication.
 
-Below is a text-based representation of Hector's workstation setup:
+Below is a text-based representation of Hector Alavaz's workstation setup:
 
 ```
 +----------------------------------------------------------+
-| INCIDENT RESPONSE DASHBOARD                              |
-| -------------------------------------------------------  |
-| Payment Gateway Errors                                   |
-| - Error Code: 502                                        |
-| - Affected Transactions: 1,342                          |
-| - Severity: High                                         |
-|                                                          |
-| [ Incident Duration: 4:32 ]                              |
-|                                                          |
-| [Team Chat Window]                                       |
-| > Hector: Acknowledged alert, verifying customer impact. |
-| > Team Member: Copy that. Notify payments team next.     |
+| INCIDENT RESPONSE DASHBOARD                                     |
+| --------------------------------------------------------------- |
+| Payment Gateway Errors                                          |
+| - Error Code: 502                                               |
+| - Affected Transactions: 1,342                                  |
+| - Severity: High                                                |
+|                                                                 |
+| [ Incident Duration: 4:32 ]                                     |
+|                                                                 |
+| [Team Chat Window]                                              |
+| > Hector Alavaz: Acknowledged alert, verifying customer impact. |
+| > Team Member: Copy that. Notify payments team next.            |
 +----------------------------------------------------------+
 
 [Printed Checklist]
@@ -453,8 +453,8 @@ Split screen visualization:
   - Attempting to complete a transfer and encountering an error message: "Transaction failed. Please try again later."
   - Phone screen showing the error prominently.
 
-- **Foreground: Hector's Actions**
-  - Hector seated at a workstation with both screens in view.
+- **Foreground: Hector Alavaz's Actions**
+  - Hector Alavaz seated at a workstation with both screens in view.
   - One hand navigating the payment system in a test environment.
   - The other hand holding a notebook or typing on a laptop.
   - His expression shifting to concern as he notices mismatches between the dashboards and the customer’s failed transaction.
@@ -463,16 +463,16 @@ To illustrate this scenario conceptually, here’s a simple text-based represent
 
 ```
 +---------------------------+     +---------------------------+
-| Monitoring Dashboards     |     | Customer Experience       |
-| ------------------------- |     | ------------------------- |
+| Monitoring Dashboards |  | Customer Experience |
+| --------------------- || ------------------------- |
 | Latency: Green            |     | Mobile Banking App        |
 | Error Rate: Green         |     | Error: "Transaction       |
 | Resource Utilization:     |     | failed. Please try        |
-| Mostly Green, Some Yellow |     | again later."             |
-| ------------------------- |     | ------------------------- |
+| Mostly Green, Some Yellow |  | again later." |
+| ------------------------- || ------------------------- |
 +---------------------------+     +---------------------------+
 
-                    Hector Observing Both Screens
+                    Hector Alavaz Observing Both Screens
                     - Testing Payment System
                     - Noticing the Discrepancy
 ```
@@ -577,7 +577,7 @@ A team huddle in the operations center. A large display shows a severity classif
 +------+----------------------+------------------------+-------------------+
 ```
 
-Hector is actively discussing an ongoing incident with the team, pointing to specific criteria in the matrix to determine the correct severity level. Team members are contributing additional context regarding affected services and providing estimates for transaction and customer impact percentages. The matrix serves as a shared reference, enabling structured decision-making during the discussion.
+Hector Alavaz is actively discussing an ongoing incident with the team, pointing to specific criteria in the matrix to determine the correct severity level. Team members are contributing additional context regarding affected services and providing estimates for transaction and customer impact percentages. The matrix serves as a shared reference, enabling structured decision-making during the discussion.
 ### Teaching Narrative
 Severity classification transforms chaotic incident response into structured action. This panel introduces the concept of standardized severity levels and their crucial role in driving appropriate response. In banking environments, severity must incorporate both technical and business dimensions: number of affected transactions, financial impact, regulatory implications, and customer segments. The severity framework ensures proportional response - critical issues receive all-hands attention while minor incidents are handled without disrupting the entire organization. This structured approach replaces subjective severity assessment ("this feels like a big problem") with evidence-based classification that triggers the appropriate response playbooks, escalation paths, and communication templates. The panel highlights how proper classification immediately sets expectations for resolution timeframes and resource allocation.
 ### Common Example of the Problem
@@ -701,11 +701,11 @@ By following this structured approach, teams can ensure consistent and effective
 ## Panel 6: The Initial Assessment
 ### Scene Description
 
-Hector is seated at his workstation, focused on creating an initial incident document. His primary monitor displays a structured template with distinct sections: "Affected Services," "Customer Impact," "Initial Timeline," and "Working Hypothesis," each being populated with preliminary information. A clock on the wall indicates that 5 minutes have passed since the alert.
+Hector Alavaz is seated at his workstation, focused on creating an initial incident document. His primary monitor displays a structured template with distinct sections: "Affected Services," "Customer Impact," "Initial Timeline," and "Working Hypothesis," each being populated with preliminary information. A clock on the wall indicates that 5 minutes have passed since the alert.
 
 To his left, a secondary monitor shows a video call interface with multiple team members joining to collaborate on the incident. To his right, a third monitor displays real-time dashboard data, featuring metrics and alerts relevant to the ongoing issue. The setup is a hub of activity, balancing documentation, communication, and monitoring.
 
-Below is a text-based representation of Hector's workstation layout for better visualization:
+Below is a text-based representation of Hector Alavaz's workstation layout for better visualization:
 
 ```
 +----------------------------+   +--------------------------+   +----------------------------+
@@ -715,7 +715,7 @@ Below is a text-based representation of Hector's workstation layout for better v
 |                            |   |                          |   |  (Metrics and Alerts)     |
 +----------------------------+   +--------------------------+   +----------------------------+
 
-                           [Hector's Workstation]
+                           [Hector Alavaz's Workstation]
 ```
 
 This configuration emphasizes the centrality of the structured template for capturing key details while ensuring parallel communication and monitoring, essential for an effective initial assessment.

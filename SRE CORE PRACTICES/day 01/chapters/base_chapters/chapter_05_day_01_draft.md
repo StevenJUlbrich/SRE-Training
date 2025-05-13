@@ -92,13 +92,13 @@ Njeri's death stare represents the human cost of assumption-based troubleshootin
 
 ## Scene Description
 
-**The Five Sins** – Hector slams down a whiteboard with the five sins of banking observability. "Every one of these has ruined a production system I've seen."
+**The Five Sins** – Hector Alavaz slams down a whiteboard with the five sins of banking observability. "Every one of these has ruined a production system I've seen."
 
-*Expanded narrative: Hector enters and immediately takes control. He places a pre-prepared whiteboard against the wall with dramatic emphasis. The heading reads: "THE FIVE DEADLY SINS OF BANKING OBSERVABILITY" with detailed illustrations for each. "Every one of these has ruined a production system I've seen," he announces grimly. "And every one has triggered a regulatory finding. Let's see which ones are killing your payment network right now." The room falls silent as everyone recognizes patterns they've perpetuated.*
+*Expanded narrative: Hector Alavaz enters and immediately takes control. He places a pre-prepared whiteboard against the wall with dramatic emphasis. The heading reads: "THE FIVE DEADLY SINS OF BANKING OBSERVABILITY" with detailed illustrations for each. "Every one of these has ruined a production system I've seen," he announces grimly. "And every one has triggered a regulatory finding. Let's see which ones are killing your payment network right now." The room falls silent as everyone recognizes patterns they've perpetuated.*
 
 ## Teaching Narrative
 
-This moment represents a pivotal shift in the scene: from chaos to structure, from reactivity to analysis. Hector's introduction of the "Five Deadly Sins" framework transforms a confusing incident into a diagnostic opportunity. By categorizing common anti-patterns, he provides the team with a mental model for understanding not just what's happening, but why it's happening.
+This moment represents a pivotal shift in the scene: from chaos to structure, from reactivity to analysis. Hector Alavaz's introduction of the "Five Deadly Sins" framework transforms a confusing incident into a diagnostic opportunity. By categorizing common anti-patterns, he provides the team with a mental model for understanding not just what's happening, but why it's happening.
 
 ## Anti-Pattern Recognition Explained
 
@@ -116,7 +116,7 @@ In financial services, anti-pattern recognition serves multiple purposes. Operat
 
 ## The Regulatory Connection
 
-Hector's specific mention that each sin has "triggered a regulatory finding" highlights a critical dimension of observability in financial services. Poor observability practices don't just create operational problems—they create compliance risks, potentially leading to formal findings, fines, or restrictions from financial regulators.
+Hector Alavaz's specific mention that each sin has "triggered a regulatory finding" highlights a critical dimension of observability in financial services. Poor observability practices don't just create operational problems—they create compliance risks, potentially leading to formal findings, fines, or restrictions from financial regulators.
 
 ## Banking Implementation Guidance
 
@@ -130,7 +130,7 @@ To implement anti-pattern recognition in financial systems:
 
 4. **Pre-Implementation Pattern Screening**: Evaluate new systems and changes for known observability anti-patterns
 
-Hector's prepared whiteboard illustrates an important principle: anti-pattern recognition shouldn't happen only during incidents. By documenting and teaching these patterns proactively, organizations can help teams avoid creating the same problems repeatedly. This preventative approach is particularly valuable in financial services, where the cost of learning through failure is exceptionally high.
+Hector Alavaz's prepared whiteboard illustrates an important principle: anti-pattern recognition shouldn't happen only during incidents. By documenting and teaching these patterns proactively, organizations can help teams avoid creating the same problems repeatedly. This preventative approach is particularly valuable in financial services, where the cost of learning through failure is exceptionally high.
 
 ## Panel 4: Sin #1: Ownerless Metrics - Metric Governance
 
@@ -270,7 +270,7 @@ The generic "ERROR 500: Request failed" message Katherine discovers represents a
 
 **Sin #4: Uptime Without User Success** – Split screen shows 100% uptime for payment service but customers unable to complete transactions. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing."
 
-*Expanded narrative: Aisha displays a troubling comparison on the main screen. On the left: service uptime graphs showing 100% availability for the payment processing service. On the right: successful transaction rate showing near-zero completions. "Your metrics say everything's perfect," she notes. "Meanwhile, not a single customer can complete their transaction." Hector nods grimly. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing. Uptime without user success is just efficiently failing."*
+*Expanded narrative: Aisha displays a troubling comparison on the main screen. On the left: service uptime graphs showing 100% availability for the payment processing service. On the right: successful transaction rate showing near-zero completions. "Your metrics say everything's perfect," she notes. "Meanwhile, not a single customer can complete their transaction." Hector Alavaz nods grimly. "Congratulations, your metrics are perfect. Too bad they're measuring the wrong thing. Uptime without user success is just efficiently failing."*
 
 ## Teaching Narrative
 
@@ -292,7 +292,7 @@ In financial services, this approach is essential for both operational and busin
 
 ## The Efficient Failure
 
-Hector's observation that "uptime without user success is just efficiently failing" perfectly captures the absurdity of this anti-pattern. Technical uptime becomes not just meaningless but actively misleading when disconnected from business outcomes.
+Hector Alavaz's observation that "uptime without user success is just efficiently failing" perfectly captures the absurdity of this anti-pattern. Technical uptime becomes not just meaningless but actively misleading when disconnected from business outcomes.
 
 ## Banking Implementation Guidance
 
@@ -356,13 +356,13 @@ Njeri's 90% statistic powerfully illustrates how persistent "network blame" can 
 
 ## Scene Description
 
-**Lesson Locked In** – Hector's closing line: "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming."
+**Lesson Locked In** – Hector Alavaz's closing line: "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming."
 
-*Expanded narrative: As the team implements fixes and payment service restoration begins, Hector delivers his final assessment. "Today was expensive—in customer trust, operational costs, and reputation. But the regulatory audit next month will be much worse if these sins aren't addressed." He taps the whiteboard. "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming." The team looks at each other with new understanding—their observability practices aren't just technical challenges but business and regulatory imperatives.*
+*Expanded narrative: As the team implements fixes and payment service restoration begins, Hector Alavaz delivers his final assessment. "Today was expensive—in customer trust, operational costs, and reputation. But the regulatory audit next month will be much worse if these sins aren't addressed." He taps the whiteboard. "Avoid these sins or prepare for the volcano. And I mean a real one—because the auditors are coming." The team looks at each other with new understanding—their observability practices aren't just technical challenges but business and regulatory imperatives.*
 
 ## Teaching Narrative
 
-This closing scene connects technical practices to their business and regulatory consequences. Hector's volcano metaphor and explicit mention of auditors transforms observability from an engineering concern to a business imperative. This shift in framing helps the team understand that addressing these anti-patterns isn't optional—it's essential for the organization's regulatory standing and business continuity.
+This closing scene connects technical practices to their business and regulatory consequences. Hector Alavaz's volcano metaphor and explicit mention of auditors transforms observability from an engineering concern to a business imperative. This shift in framing helps the team understand that addressing these anti-patterns isn't optional—it's essential for the organization's regulatory standing and business continuity.
 
 ## Observability Maturity Explained
 
@@ -380,7 +380,7 @@ In financial services, observability maturity has direct regulatory implications
 
 ## The Audit Perspective
 
-Hector's explicit reference to auditors highlights an often-overlooked aspect of observability in regulated industries: external validation. Financial institutions must be able to demonstrate to regulators that they have appropriate controls and visibility into system behavior—particularly for systems handling customer funds or sensitive data.
+Hector Alavaz's explicit reference to auditors highlights an often-overlooked aspect of observability in regulated industries: external validation. Financial institutions must be able to demonstrate to regulators that they have appropriate controls and visibility into system behavior—particularly for systems handling customer funds or sensitive data.
 
 ## Banking Implementation Guidance
 
@@ -394,4 +394,4 @@ To develop observability maturity in financial systems:
 
 4. **Validation Mechanisms**: Implement processes to verify that observability improvements actually deliver expected capabilities
 
-Hector's volcano metaphor provides a powerful image of the consequences of ignoring observability sins—sudden, catastrophic failure. In financial services, this metaphor is particularly apt. Poor observability creates accumulated risk that may remain hidden until a major incident or audit reveals the full extent of the problem. By addressing the five sins proactively, teams can avoid both the operational volcanoes of major outages and the regulatory volcanoes of audit findings.
+Hector Alavaz's volcano metaphor provides a powerful image of the consequences of ignoring observability sins—sudden, catastrophic failure. In financial services, this metaphor is particularly apt. Poor observability creates accumulated risk that may remain hidden until a major incident or audit reveals the full extent of the problem. By addressing the five sins proactively, teams can avoid both the operational volcanoes of major outages and the regulatory volcanoes of audit findings.

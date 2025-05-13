@@ -1,4 +1,4 @@
-# Hector Alvarez: Physical Characteristics
+# Hector Alavaz Alvarez: Physical Characteristics
 
 ## Physical Appearance
 

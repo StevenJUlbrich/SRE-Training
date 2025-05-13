@@ -56,12 +56,12 @@ flowchart LR
 
 ### 🔹 Volume Management Strategies
 
-| Signal | Strategy | Example |
-|--------|----------|---------|
-| Logs | Structured logging + sampling | Only keep 10% of info/debug |
-| Traces | Tail sampling, latency filters | Only keep slow requests |
-| Metrics | Label control, recording rules | No `user_id` in labels |
-| Dashboards | Panel deduplication | Avoid 100 PromQL queries at once |
+| Signal     | Strategy                       | Example                          |
+| ---------- | ------------------------------ | -------------------------------- |
+| Logs       | Structured logging + sampling  | Only keep 10% of info/debug      |
+| Traces     | Tail sampling, latency filters | Only keep slow requests          |
+| Metrics    | Label control, recording rules | No `user_id` in labels           |
+| Dashboards | Panel deduplication            | Avoid 100 PromQL queries at once |
 
 ---
 
@@ -157,7 +157,7 @@ rate(api_requests_total{service="checkout"}[5m])  # YES
 
 ## 🤝 Handoff to Tomorrow
 
-> “You’ve cleaned the signals. Tomorrow, Hector comes back with the final lesson:  
+> “You’ve cleaned the signals. Tomorrow, Hector Alavaz comes back with the final lesson:  
 > Culture. Toil. Readiness. And the long-term view of building reliability like it’s a product.”
 
 ---

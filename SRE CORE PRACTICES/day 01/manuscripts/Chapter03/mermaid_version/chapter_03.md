@@ -10,7 +10,7 @@ In this chapter, you’ll explore what happens when teams over-collect but under
 
 This isn’t about new tools. It’s about using the ones you already have more deliberately. Through structured fields, naming conventions, and signal-to-noise ratios, the team learns to reduce telemetry volume while increasing its resolution.
 
-By the end, you'll have a working understanding of structured logs, owned metrics, cardinality control, and what Hector calls the mouth, the mood, and the memory of an honest system.
+By the end, you'll have a working understanding of structured logs, owned metrics, cardinality control, and what Hector Alavaz calls the mouth, the mood, and the memory of an honest system.
 
 ______________________________________________________________________
 
@@ -38,10 +38,10 @@ Only the final line matters, yet it was paged away by 3,000 DEBUG siblings.
 
 Leonel stands before a wall terminal, eyes gleaming as Splunk’s live-tail scrolls like falling code in *The Matrix*. “Beautiful, isn’t it?” he says. Katherine squints: “Beautiful? Or blinding?” A sudden spike turns the scroll amber—disk write throttle hits 95 MB/s. The sole ERROR entry—`NullPointerException at DebitProcessor`—flies past, instantly buried.
 
-Hector steps from the doorway, coffee steaming. “Visibility isn’t the same as clarity,” he growls, killing the tail with `Ctrl-C`. He reruns the query, adding a **filter for severity >= WARN** and a **field extractor for `transactionId`**. Splunk now returns *three* lines—one per failed payment. Katherine whispers, “We could’ve fixed this forty minutes ago.”
+Hector Alavaz steps from the doorway, coffee steaming. “Visibility isn’t the same as clarity,” he growls, killing the tail with `Ctrl-C`. He reruns the query, adding a **filter for severity >= WARN** and a **field extractor for `transactionId`**. Splunk now returns *three* lines—one per failed payment. Katherine whispers, “We could’ve fixed this forty minutes ago.”
 
-:::hector quote\
-**Hector says:** “If your telemetry doesn’t snitch, your outage will.”\
+:::Hector Alavaz quote\
+**Hector Alavaz says:** “If your telemetry doesn’t snitch, your outage will.”\
 :::
 
 ### Image Embed
@@ -68,7 +68,7 @@ A Grafana panel shows median latency at **120 ms (green)** while a Zendesk heat-
 
 Katherine drags Leonel to the observability wall: response-time graphs purr along a safe green band. Meanwhile, Wanjiru reads live chat. “Customers can’t complete transfers.” Katherine taps the graph, puzzled. Aisha raises an eyebrow: “Latency isn’t lying; it’s just not answering the right question.”
 
-Hector overlays **failed-transaction-rate** atop latency. The green band vanishes under a sharp rust-red spike—250 fails/min at 02:15 UTC. “Metrics disconnected from reality are just static art,” he says. Wanjiru exhales, finally seeing the mismatch.
+Hector Alavaz overlays **failed-transaction-rate** atop latency. The green band vanishes under a sharp rust-red spike—250 fails/min at 02:15 UTC. “Metrics disconnected from reality are just static art,” he says. Wanjiru exhales, finally seeing the mismatch.
 
 :::reflection\
 **Learner Reflection:** *Recall a time when your dashboard said “all good” but users disagreed. What metric was missing?*\
@@ -102,7 +102,7 @@ INFO 2025-05-01T02:14:35Z  Debit OK amount=25000
 
 Wanjiru, fists tight, greps through 100 MB chunks: `grep "TX-977af"` returns nothing. “How does a transfer vanish?” she asks. Clara answers, “By never being logged.” Behind them, Leonel’s earlier *everything-log-everything* stance collapses—he sees that quantity without structure is nihilism.
 
-Hector opens the logging config, adding JSON layout:
+Hector Alavaz opens the logging config, adding JSON layout:
 
 ```json
 {"ts":"2025-05-01T02:14:35Z","level":"INFO","service":"debit",
@@ -123,7 +123,7 @@ He reruns the transfer in dev; Splunk lights up with correlated entries. “See?
 
 ______________________________________________________________________
 
-## Panel 4 – Hector Steps In
+## Panel 4 – Hector Alavaz Steps In
 
 ### 🎯 Learning Objective
 
@@ -135,17 +135,17 @@ Coverage is meaningless without *intersection*; only the overlapping core accele
 
 ### 🚦 Applied Example
 
-Hector sketches a Venn: Logs (mouth), Metrics (mood), Traces (memory). The sweet spot—**Root Cause Detection**—sits dead-center.
+Hector Alavaz sketches a Venn: Logs (mouth), Metrics (mood), Traces (memory). The sweet spot—**Root Cause Detection**—sits dead-center.
 
 ### Teaching Narrative
 
-The room dims; Hector flips a digital whiteboard. Three circles bloom in **Slate Gray**, **System Blue**, and **Deep Amber**. “Logs shout events,” he begins, coloring that circle charcoal. “Metrics hum feelings,”—Slate overlay. “Traces remember timelines,”—Blue join. Their intersection glows amber.
+The room dims; Hector Alavaz flips a digital whiteboard. Three circles bloom in **Slate Gray**, **System Blue**, and **Deep Amber**. “Logs shout events,” he begins, coloring that circle charcoal. “Metrics hum feelings,”—Slate overlay. “Traces remember timelines,”—Blue join. Their intersection glows amber.
 
 He overlays today’s incident: metrics flagged nothing, verbose logs hid context, traces weren’t wired. The intersection is blank—no overlap, no truth. The team stares, chastened.
 
 ### Image Embed
 
-![Panel 4 – Hector Steps In](images/ch03_p4.png){width=600}
+![Panel 4 – Hector Alavaz Steps In](images/ch03_p4.png){width=600}
 
 ______________________________________________________________________
 
@@ -173,7 +173,7 @@ No unit, no SLA, no description, no owner label.
 The night still smells of burnt coffee when **Clara** storms toward the wall of Grafana panes. She jabs a finger at a widget titled `service_latency_time_chart_thing`.\
 “Whose chart thing?” she snaps. No one answers. The metric legend shows forty-seven labels—pods, zones, random debug tags. The Y-axis is unlabeled; the title scrolls off the panel frame.
 
-**Hector** folds his arms. “Dollars to donuts this metric predates half the team,” he says. **Leonel** shrugs: “I-I think it came from the legacy Helm chart.”
+**Hector Alavaz** folds his arms. “Dollars to donuts this metric predates half the team,” he says. **Leonel** shrugs: “I-I think it came from the legacy Helm chart.”
 
 Clara executes:
 
@@ -184,7 +184,7 @@ curl -s http://prometheus:9090/api/v1/series?match[]=service_latency_time_chart_
 
 Sixteen-thousand distinct series—one for every pod restart since March. Disk churn disguises real signals. Prometheus churn alert lights red.
 
-“Metric hygiene,” Hector intones, “is *dental care* for dashboards. Ignore it and everything rots—quietly.” Clara opens a pull request:
+“Metric hygiene,” Hector Alavaz intones, “is *dental care* for dashboards. Ignore it and everything rots—quietly.” Clara opens a pull request:
 
 - rename: `service_latency_time_chart_thing` ➜ `payments_request_latency_seconds`
 - add `team="payments"`, `slo="p95_lt_300ms"`
@@ -230,13 +230,13 @@ Refactoring telemetry is code work: treat it with the same rigor—reviews, test
 
 ### Teaching Narrative
 
-Hector pulls the team into what he calls a **“telemetry mob refactor.”** Monitors darken; editors open. They draft a *Telemetry Definition of Done*:
+Hector Alavaz pulls the team into what he calls a **“telemetry mob refactor.”** Monitors darken; editors open. They draft a *Telemetry Definition of Done*:
 
 1. Every log in prod emits `transactionId`, `traceId`, `status`.
 2. Metrics carry ≤ 4 labels; one must be `team`.
 3. Owners document every metric in `metrics.md` with purpose & unit.
 
-**Katherine** objects: “But DEBUG logs help *somebody* someday.” Hector fires back: “Not until they bury the outage.” He flips an old disk-space incident: DEBUG logs filled the disk, WAL flushes stalled, *auth-service* panicked. The bank missed an ACH window—$460 K in penalty fees. **System Failure Anecdote delivered.**
+**Katherine** objects: “But DEBUG logs help *somebody* someday.” Hector Alavaz fires back: “Not until they bury the outage.” He flips an old disk-space incident: DEBUG logs filled the disk, WAL flushes stalled, *auth-service* panicked. The bank missed an ACH window—$460 K in penalty fees. **System Failure Anecdote delivered.**
 
 Together they rip out naked `printf`s, replace with a **Logfmt** helper:
 
@@ -291,7 +291,7 @@ Fresh dashboards glow against the dim NOC. The first graph shows a synchronized 
 **Wanjiru** gasps. “It’s the same trace ID!” She clicks the node; **Tempo** renders a waterfall:\
 `frontend → auth-svc → ledger-db` — latencies stack until *ledger-db* retries thrice on a stale connection pool.
 
-Hector nods, a rare half-smile flickering. “When your system finally *whispers* instead of screams, you can hear the pattern.” He draws a quick timeline on the tablet: log at `02:28:14Z` shows `connection_reset`; metric `db_connection_reset_total` ticks; trace span ID `8e12c3` turns crimson.
+Hector Alavaz nods, a rare half-smile flickering. “When your system finally *whispers* instead of screams, you can hear the pattern.” He draws a quick timeline on the tablet: log at `02:28:14Z` shows `connection_reset`; metric `db_connection_reset_total` ticks; trace span ID `8e12c3` turns crimson.
 
 :::diagram
 
@@ -341,7 +341,7 @@ A single observability view (log search + metric graph + trace view) filtered by
 
 ### Teaching Narrative
 
-Sunrise bleeds through the frosted windows. The incident is over; the lesson isn’t. Hector pours lukewarm coffee, eyes on the team.
+Sunrise bleeds through the frosted windows. The incident is over; the lesson isn’t. Hector Alavaz pours lukewarm coffee, eyes on the team.
 
 “Logs,” he says, tapping the console printout, “are the mouth. They tell you **what** happened.”\
 “Metrics”—he gestures to the stabilized green bar—“are the mood. They hint **how** the system feels.”\
@@ -349,12 +349,12 @@ Sunrise bleeds through the frosted windows. The incident is over; the lesson isn
 
 He leans back. “You need all three to write the autopsy *before* the patient dies.”
 
-:::hector quote\
-**Hector says:** “Don’t confuse ranting with reasoning.”\
+:::Hector Alavaz quote\
+**Hector Alavaz says:** “Don’t confuse ranting with reasoning.”\
 :::
 
 **Leonel** exhales, finally amused. “So… less karaoke, more confession?”\
-Hector’s eyes crinkle. “Exactly. Teach the system to confess on the first note, not the last breath.”
+Hector Alavaz’s eyes crinkle. “Exactly. Teach the system to confess on the first note, not the last breath.”
 
 ### Image Embed
 
@@ -372,7 +372,7 @@ You close your laptop, new dashboards humming. Ask yourself:
 
 Next chapter: **“You’re Not Alerting — You’re Alarming.”** We’ll make the pages beep for the *right* reasons.
 
-Hector’s final line, half into his mug:
+Hector Alavaz’s final line, half into his mug:
 
 > “Get some sleep. Your logs know how to wake you—*now* they’ll know *why*.”
 

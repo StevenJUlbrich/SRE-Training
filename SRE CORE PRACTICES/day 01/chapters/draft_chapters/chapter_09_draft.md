@@ -1,6 +1,5 @@
 # Chapter 9: What Good Looks Like (And What It Covers Up)
 
-
 ## Chapter Overview
 
 Welcome to the dashboard beauty pageant, where glittering charts, animated gauges, and rainbow gradients seduce your C-suite—while hiding the fact that you’re flying blind in a burning building. This chapter rips the mask off “good-looking” dashboards and exposes the ugly truths they’re designed to distract you from. Forget aesthetics; in the world of SRE and financial systems, a dashboard’s only job is to scream “FIRE!” before your customers do. We’ll torch the myth that more data equals more insight, dissect the damage caused by visual noise and polite silence, and show you how to build dashboards that actually save your bacon at 3AM. If you’re tired of dashboards that look great right up until your career implodes, you’re in the right place.
@@ -14,7 +13,7 @@ Welcome to the dashboard beauty pageant, where glittering charts, animated gauge
 - **Prioritize** and **eliminate**: ruthlessly focus dashboards on critical business and customer-impacting metrics.
 - **Implement** visual hierarchy and contextual annotation to make dashboards actionable, not just attractive.
 - **Validate** dashboards with before-and-after evidence, showing concrete improvements in incident response.
-- **Adopt** Hector’s three-question framework: What broke? When? Why?—and reject everything else as clutter.
+- **Adopt** Hector Alavaz’s three-question framework: What broke? When? Why?—and reject everything else as clutter.
 - **Enforce** a “dashboards are for emergencies” mindset, separating operational clarity from analytics vanity.
 - **Champion** uncomfortable truths in observability, valuing early warnings over ego-saving green lights.
 
@@ -37,17 +36,17 @@ Welcome to the dashboard beauty pageant, where glittering charts, animated gauge
 
 ## Panel 1: The Pretty Dashboard - Visual Distraction
 
-## Scene Description
+### Scene Description
 
 **The Pretty Dashboard** – Leonel presents a stunning dashboard to the team: rainbow gauges, graphs, gradients galore. Everyone stares in polite confusion.
 
 *Expanded narrative: Leonel proudly unveils his masterpiece on the main operations display: a spectacular dashboard with rainbow color schemes, animated gauges, 3D charts, and gradient backgrounds. It's visually stunning—a work of digital art. "I've included every metric we collect," he announces proudly. "Over 200 different measurements in real-time!" The team stares in polite confusion. No one wants to ask the obvious question: What are we supposed to learn from this beautiful but overwhelming display?*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene illustrates a fundamental trap in observability design: confusing visual appeal with effectiveness. Leonel's dashboard represents an extreme form of a common pattern: displays that prioritize aesthetics and comprehensiveness over usability and insight. This pattern reveals how even well-intentioned visualization efforts can create obstacles rather than enablers when they lack clarity of purpose.
 
-## Visual Distraction Explained
+#### Visual Distraction Explained
 
 Visual Distraction occurs when aesthetic elements and information density overwhelm meaningful insight:
 
@@ -61,11 +60,11 @@ Visual Distraction occurs when aesthetic elements and information density overwh
 
 In financial services, visual distraction creates significant operational risk. Banking systems require clear, immediate understanding of critical transaction metrics. When dashboards prioritize visual impressiveness over functional clarity, they delay recognition of important patterns and anomalies that affect customer experience and business outcomes.
 
-## The Polite Confusion Response
+#### The Polite Confusion Response
 
 The team's reaction of "polite confusion" highlights a common organizational dynamic around observability tools: the reluctance to criticize dashboards that represent significant investment and expertise. This social dynamic often allows ineffective visualizations to persist despite their limited practical value.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To avoid visual distraction in financial system dashboards:
 
@@ -81,17 +80,17 @@ Financial institutions must recognize that dashboards exist to serve operational
 
 ## Panel 2: The Misleading Calm - Reality Verification
 
-## Scene Description
+### Scene Description
 
 **The Misleading Calm** – Sofia compares it to user metrics. "It looks clean… but logins are down 6%."
 
 *Expanded narrative: Sofia quietly opens another screen showing direct user experience metrics. "Your dashboard looks beautiful and shows all systems operating normally," she notes. "But according to our actual user metrics, logins are down 6% compared to normal, and transaction completions have dropped by 8% in the last hour." She switches to the customer support queue. "And we've received 27 reports of slow performance in the last 30 minutes." She looks at Leonel. "So either all our customers are simultaneously imagining problems, or something's wrong that your dashboard isn't showing."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene demonstrates a critical failure mode in observability: the disconnect between technical metrics and user reality. Sofia's comparison exposes how dashboards can present a misleading impression of system health while customers experience real problems. This pattern reveals the importance of validating internal technical measurements against external customer experience data.
 
-## Reality Verification Explained
+#### Reality Verification Explained
 
 Reality Verification is the practice of checking technical metrics against real user experience:
 
@@ -105,11 +104,11 @@ Reality Verification is the practice of checking technical metrics against real 
 
 In financial services, reality verification is essential for both operational and business reasons. Operationally, it prevents the dangerous situation of believing systems are healthy when customers cannot complete transactions. From a business perspective, it ensures that technical measurements remain focused on what actually matters: successful customer experiences.
 
-## The Numerical Precision
+#### The Numerical Precision
 
 Sofia's specific metrics—"logins are down 6%... transaction completions have dropped by 8%"—highlight an important aspect of reality verification: the need for precise, quantitative measurements of user experience, not just anecdotal reports. These concrete numbers transform user experience from a subjective impression into an objective measurement that can be tracked and analyzed alongside technical metrics.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement effective reality verification in financial systems:
 
@@ -125,17 +124,17 @@ Financial institutions must recognize that technical metrics only matter insofar
 
 ## Panel 3: The Anti-Signal - Signal-to-Noise Ratio
 
-## Scene Description
+### Scene Description
 
-**The Anti-Signal** – Hector calls it "dashboard theatre." "You made something pretty. Can it stop a fire?"
+**The Anti-Signal** – Hector Alavaz calls it "dashboard theatre." "You made something pretty. Can it stop a fire?"
 
-*Expanded narrative: Hector examines the dashboard with his characteristic directness. "This is dashboard theatre," he declares. "It looks impressive, but it's actually making you less effective." He points to the array of colorful widgets. "With this much visual noise, you'll miss the real signals when they appear. It's like trying to hear a whispered warning in a rock concert." He turns to Leonel. "You made something pretty. Can it stop a fire? Can it tell you, in the first five seconds of looking at it, exactly what's wrong and where to start fixing it? Because that's the only thing that matters at 3 AM when transactions are failing."*
+*Expanded narrative: Hector Alavaz examines the dashboard with his characteristic directness. "This is dashboard theatre," he declares. "It looks impressive, but it's actually making you less effective." He points to the array of colorful widgets. "With this much visual noise, you'll miss the real signals when they appear. It's like trying to hear a whispered warning in a rock concert." He turns to Leonel. "You made something pretty. Can it stop a fire? Can it tell you, in the first five seconds of looking at it, exactly what's wrong and where to start fixing it? Because that's the only thing that matters at 3 AM when transactions are failing."*
 
-## Teaching Narrative
+### Teaching Narrative
 
-Hector's critique introduces a powerful concept in observability design: the signal-to-noise ratio. His characterization of the dashboard as "theatre" highlights how visualizations can create the illusion of insight while actually obscuring important information. This pattern demonstrates how excessive complexity and visual noise can transform dashboards from helpful tools into harmful distractions during critical incidents.
+Hector Alavaz's critique introduces a powerful concept in observability design: the signal-to-noise ratio. His characterization of the dashboard as "theatre" highlights how visualizations can create the illusion of insight while actually obscuring important information. This pattern demonstrates how excessive complexity and visual noise can transform dashboards from helpful tools into harmful distractions during critical incidents.
 
-## Signal-to-Noise Ratio Explained
+#### Signal-to-Noise Ratio Explained
 
 Signal-to-Noise Ratio in observability represents the balance between meaningful information and distracting clutter:
 
@@ -149,11 +148,11 @@ Signal-to-Noise Ratio in observability represents the balance between meaningful
 
 In financial services, signal-to-noise ratio directly impacts incident response effectiveness. Banking systems handling critical financial transactions require dashboards that immediately highlight problems affecting customer experience. When important signals are buried in visual noise, incident detection and diagnosis takes longer, extending outage duration and business impact.
 
-## The 3 AM Test
+#### The 3 AM Test
 
-Hector's question about whether the dashboard can identify problems "in the first five seconds" at "3 AM when transactions are failing" introduces a crucial evaluation criterion: the emergency utility test. This standard recognizes that dashboards must perform their most critical function—identifying problems quickly—under the worst possible circumstances: during middle-of-the-night incidents when operators are tired and stressed.
+Hector Alavaz's question about whether the dashboard can identify problems "in the first five seconds" at "3 AM when transactions are failing" introduces a crucial evaluation criterion: the emergency utility test. This standard recognizes that dashboards must perform their most critical function—identifying problems quickly—under the worst possible circumstances: during middle-of-the-night incidents when operators are tired and stressed.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To improve signal-to-noise ratio in financial system dashboards:
 
@@ -169,17 +168,17 @@ Financial institutions should evaluate dashboards not just on their comprehensiv
 
 ## Panel 4: Dashboard Autopsy - Failure Analysis
 
-## Scene Description
+### Scene Description
 
 **Dashboard Autopsy** – Clara highlights 3 charts showing downward trends during last week's outage. None are visible in Leonel's view.
 
 *Expanded narrative: Clara opens the incident review from the previous week's outage. "Let's do a dashboard autopsy," she suggests. She pulls up three specific metrics that clearly showed developing problems 30 minutes before customer impact: connection pool exhaustion, authentication latency, and transaction error rates. "These signals told the complete story before users started complaining." She switches to Leonel's dashboard and tries to find the same metrics. "But in this view, they're either completely missing or buried on page seven of a dashboard carousel. If we'd been using this during the incident, we would have been blind to the early warning signs."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene introduces a powerful technique for dashboard evaluation: the failure analysis. Clara's methodical comparison of what metrics actually mattered during a real incident versus what's visible in the current dashboard creates an evidence-based assessment rather than a subjective critique. This approach demonstrates how past incidents provide invaluable data for improving future observability effectiveness.
 
-## Failure Analysis Explained
+#### Failure Analysis Explained
 
 Failure Analysis in observability uses past incidents to evaluate and improve telemetry systems:
 
@@ -193,11 +192,11 @@ Failure Analysis in observability uses past incidents to evaluate and improve te
 
 In financial services, failure analysis addresses both operational and regulatory needs. Operationally, it ensures that dashboards evolve to highlight the metrics that matter most during real incidents. From a regulatory perspective, it demonstrates a structured approach to continuous control improvement, which financial oversight bodies increasingly expect.
 
-## The Early Warning Focus
+#### The Early Warning Focus
 
 Clara's emphasis on metrics that "showed developing problems 30 minutes before customer impact" highlights a crucial aspect of effective observability: early warning capability. The most valuable signals aren't just those that confirm problems after they affect customers, but those that identify developing issues before they create significant impact.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement dashboard failure analysis in financial systems:
 
@@ -213,17 +212,17 @@ Financial institutions should establish failure analysis as a standard part of i
 
 ## Panel 5: Redesign Begins - Signal Prioritization
 
-## Scene Description
+### Scene Description
 
 **Redesign Begins** – Juana and Omar help reduce panels to just 5: request rate, error rate, latency, business KPI, trace-linked event summary.
 
 *Expanded narrative: The team launches into redesigning the dashboard with ruthless prioritization. Juana and Omar lead the effort, eliminating dozens of widgets and focusing on just five critical panels: request rate by service, error rate with customer impact, end-to-end transaction latency, key business metrics (daily active users, transaction volume, completion rate), and a trace-linked event summary showing recent errors with context. "These are the only metrics that directly answer the question 'Is the system working properly for customers?'" Juana explains. "Everything else is diagnostic detail that should be available on drill-down, not front and center."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene demonstrates a fundamental principle in effective dashboard design: radical prioritization. The team's dramatic reduction from hundreds of metrics to just five core panels represents a shift from comprehensive coverage to focused utility. This pattern illustrates how effective observability often requires courage to eliminate interesting but less critical information in favor of what truly matters for understanding system health.
 
-## Signal Prioritization Explained
+#### Signal Prioritization Explained
 
 Signal Prioritization is the deliberate selection and emphasis of the most important metrics:
 
@@ -237,11 +236,11 @@ Signal Prioritization is the deliberate selection and emphasis of the most impor
 
 In financial services, effective signal prioritization addresses a critical challenge: distinguishing between what's interesting and what's important. Banking systems generate thousands of potential metrics, but only a small subset directly indicates whether customers can successfully complete financial transactions. By prioritizing these critical few, organizations can create dashboards that provide immediate insight into what truly matters.
 
-## The Customer Focus
+#### The Customer Focus
 
 Juana's framing of the core question as "Is the system working properly for customers?" represents a crucial perspective shift in observability design. This customer-centric question centers the dashboard on business outcomes rather than technical details, ensuring that the most prominent metrics directly reflect what matters to the organization's purpose: enabling successful financial transactions.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement effective signal prioritization in financial system dashboards:
 
@@ -257,17 +256,17 @@ Financial institutions should recognize that effective dashboards aren't compreh
 
 ## Panel 6: Signal Highlighting - Visual Hierarchy
 
-## Scene Description
+### Scene Description
 
 **Signal Highlighting** – They add change annotations, zoomed time windows, and trace IDs directly into the visuals.
 
 *Expanded narrative: With the core metrics selected, the team focuses on making them maximally informative. They add change annotations directly on timelines, showing deployments, configuration changes, and scaling events. They implement zoomed time windows that automatically focus on periods with anomalous behavior. They embed trace IDs from failing transactions directly into error rate visualizations, enabling one-click navigation to detailed traces. "The dashboard shouldn't just show there's a problem," Omar explains. "It should tell you when it started, what changed right before it, and give you an immediate path to dive deeper."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This scene illustrates advanced techniques for enhancing dashboard clarity: contextual annotation and direct navigation. The team's additions—change markers, focused time windows, embedded trace links—transform their metrics from isolated measurements into rich, contextual information sources. This pattern demonstrates how effective dashboards don't just present data but actively guide users toward understanding and resolution.
 
-## Visual Hierarchy Explained
+#### Visual Hierarchy Explained
 
 Visual Hierarchy in dashboards uses design techniques to guide attention and enhance understanding:
 
@@ -281,11 +280,11 @@ Visual Hierarchy in dashboards uses design techniques to guide attention and enh
 
 In financial services, effective visual hierarchy addresses a critical incident response challenge: the need to quickly understand not just what's happening but why and what to do next. Banking systems require dashboards that not only show when transactions are failing but provide immediate context about potential causes and direct paths to detailed diagnostic information.
 
-## The Navigation Value
+#### The Navigation Value
 
 Omar's point that dashboards should "give you an immediate path to dive deeper" highlights a crucial but often overlooked dashboard function: navigation. Effective dashboards don't just show status—they serve as starting points for investigation, providing direct pathways to the detailed information needed for diagnosis and resolution.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement effective visual hierarchy in financial system dashboards:
 
@@ -301,17 +300,17 @@ Financial institutions should approach dashboard design not just as data visuali
 
 ## Panel 7: Before & After - Transformation Evidence
 
-## Scene Description
+### Scene Description
 
 **Before & After** – A side-by-side of Leonel's old vs new version. The "quiet dashboard" has two red blips—and they correlate directly with user complaints.
 
 *Expanded narrative: The team presents a side-by-side comparison of the original dashboard and the redesigned version. The contrast is stark. The original shows a complex array of colorful widgets, most showing healthy green status despite ongoing issues. The new "quiet dashboard" is predominantly empty space with just five key panels. Two clear red spikes stand out on the error rate graph—each perfectly aligned with clusters of customer complaints. "The old dashboard showed everything but told us nothing," Sofia observes. "The new one shows only what matters, but tells us exactly what we need to know, exactly when we need to know it."*
 
-## Teaching Narrative
+### Teaching Narrative
 
 This direct comparison scene provides powerful visual evidence of effective dashboard transformation. The contrast between the cluttered, misleading original and the focused, insightful replacement demonstrates how less information often delivers more value when it's the right information presented effectively. This pattern illustrates the tangible benefits of signal prioritization, visual hierarchy, and reality verification in creating truly useful observability tools.
 
-## Transformation Evidence Explained
+#### Transformation Evidence Explained
 
 Transformation Evidence in observability demonstrates the concrete improvements from design changes:
 
@@ -325,11 +324,11 @@ Transformation Evidence in observability demonstrates the concrete improvements 
 
 In financial services, transformation evidence serves both technical and organizational purposes. Technically, it validates that dashboard improvements actually enhance visibility into critical issues. Organizationally, it builds confidence and buy-in for observability changes, which is particularly important in conservative banking environments where changes often face significant scrutiny.
 
-## The Quiet Dashboard Concept
+#### The Quiet Dashboard Concept
 
 Sofia's description of the "quiet dashboard" that "shows only what matters" introduces a powerful observability design principle: minimalism by default with clear exceptions. This approach creates displays that remain calm and unobtrusive during normal operations but immediately draw attention to anomalies when they occur—exactly the behavior needed for effective incident detection.
 
-## Banking Implementation Guidance
+#### Banking Implementation Guidance
 
 To demonstrate observability transformation in financial systems:
 
@@ -343,19 +342,19 @@ To demonstrate observability transformation in financial systems:
 
 Financial institutions should establish concrete evidence of dashboard effectiveness as a standard practice. By systematically comparing how different visualization approaches perform during actual incidents, organizations can ensure their observability tools continuously improve in their ability to highlight issues affecting customer transactions.
 
-## Panel 8: Hector's Standard - Observation Principles
+## Panel 8: Hector Alavaz's Standard - Observation Principles
 
-## Scene Description
+### Scene Description
 
-**Hector's Standard** – He scribbles on the whiteboard: "3 graphs: What broke. When it broke. Why it broke."
+**Hector Alavaz's Standard** – He scribbles on the whiteboard: "3 graphs: What broke. When it broke. Why it broke."
 
-*Expanded narrative: Hector approaches the whiteboard and writes a simple standard for dashboard effectiveness. "You need just three things," he explains as he writes. "What broke: which service or component is failing. When it broke: the precise time the issue began and any correlating events. Why it broke: the specific mechanism causing the failure." He caps his marker. "Everything else is diagnostic detail that belongs on drill-down views, not your primary dashboard. If you can answer these three questions in the first thirty seconds, your dashboard works. If not, it's just decoration."*
+*Expanded narrative: Hector Alavaz approaches the whiteboard and writes a simple standard for dashboard effectiveness. "You need just three things," he explains as he writes. "What broke: which service or component is failing. When it broke: the precise time the issue began and any correlating events. Why it broke: the specific mechanism causing the failure." He caps his marker. "Everything else is diagnostic detail that belongs on drill-down views, not your primary dashboard. If you can answer these three questions in the first thirty seconds, your dashboard works. If not, it's just decoration."*
 
-## Teaching Narrative
+### Teaching Narrative
 
-This scene distills observability principles into a clear, actionable standard. Hector's "three questions" framework provides a simple but powerful criterion for evaluating dashboard effectiveness. This pattern demonstrates how complex observability concepts can be reduced to fundamental principles that guide practical implementation and evaluation.
+This scene distills observability principles into a clear, actionable standard. Hector Alavaz's "three questions" framework provides a simple but powerful criterion for evaluating dashboard effectiveness. This pattern demonstrates how complex observability concepts can be reduced to fundamental principles that guide practical implementation and evaluation.
 
-## Observation Principles Explained
+#### Observation Principles Explained
 
 Observation Principles are the fundamental guidelines that shape effective observability design:
 
@@ -369,11 +368,11 @@ Observation Principles are the fundamental guidelines that shape effective obser
 
 In financial services, clear observation principles address both operational and governance needs. Operationally, they ensure that dashboards provide the specific insights needed during incidents affecting critical financial transactions. From a governance perspective, they establish objective standards for evaluating observability effectiveness, which supports consistent implementation across the organization.
 
-## The Three Questions
+#### The Three Questions
 
-Hector's specific questions—"What broke. When it broke. Why it broke."—provide a powerful framework for dashboard design and evaluation. These questions focus attention on the information that directly enables incident response: identifying the affected component, understanding the timing and context, and determining the causal mechanism. By organizing dashboards explicitly around these questions, teams create tools that directly support their most critical operational need.
+Hector Alavaz's specific questions—"What broke. When it broke. Why it broke."—provide a powerful framework for dashboard design and evaluation. These questions focus attention on the information that directly enables incident response: identifying the affected component, understanding the timing and context, and determining the causal mechanism. By organizing dashboards explicitly around these questions, teams create tools that directly support their most critical operational need.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement effective observation principles in financial systems:
 
@@ -385,21 +384,21 @@ To implement effective observation principles in financial systems:
 
 4. **Standards Documentation**: Create clear, simple principles that guide all dashboard development
 
-Financial institutions should establish and document clear observation principles for all observability tools. By reducing complex design considerations to fundamental questions like Hector's three, organizations can ensure consistent, effective dashboards across diverse teams and technologies—dashboards that directly support rapid response to issues affecting customer transactions.
+Financial institutions should establish and document clear observation principles for all observability tools. By reducing complex design considerations to fundamental questions like Hector Alavaz's three, organizations can ensure consistent, effective dashboards across diverse teams and technologies—dashboards that directly support rapid response to issues affecting customer transactions.
 
 ## Panel 9: Final Reflection - Dashboard Purpose
 
-## Scene Description
+### Scene Description
 
-**Final Reflection** – Leonel: "You don't want pretty. You want accurate." Hector: "You want clarity when everything's on fire."
+**Final Reflection** – Leonel: "You don't want pretty. You want accurate." Hector Alavaz: "You want clarity when everything's on fire."
 
-*Expanded narrative: As the team implements the new dashboard, Leonel reflects on the transformation. "I get it now," he acknowledges. "You don't want pretty. You want accurate." Hector nods, but corrects slightly: "What you really want is clarity when everything's on fire. A dashboard has one job: to tell you exactly what's wrong and where to start fixing it when an incident is underway. Everything else—analytics, reporting, exploration—belongs in different tools designed for those specific purposes. Dashboards are for emergencies. Design them accordingly."*
+*Expanded narrative: As the team implements the new dashboard, Leonel reflects on the transformation. "I get it now," he acknowledges. "You don't want pretty. You want accurate." Hector Alavaz nods, but corrects slightly: "What you really want is clarity when everything's on fire. A dashboard has one job: to tell you exactly what's wrong and where to start fixing it when an incident is underway. Everything else—analytics, reporting, exploration—belongs in different tools designed for those specific purposes. Dashboards are for emergencies. Design them accordingly."*
 
-## Teaching Narrative
+### Teaching Narrative
 
-This closing exchange captures a fundamental insight about dashboard purpose: they are emergency tools, not general-purpose visualizations. Hector's emphasis on "clarity when everything's on fire" highlights how dashboard requirements differ fundamentally from other visualization needs. This perspective shift helps the team understand why different design principles apply to operational dashboards versus analytics or reporting tools.
+This closing exchange captures a fundamental insight about dashboard purpose: they are emergency tools, not general-purpose visualizations. Hector Alavaz's emphasis on "clarity when everything's on fire" highlights how dashboard requirements differ fundamentally from other visualization needs. This perspective shift helps the team understand why different design principles apply to operational dashboards versus analytics or reporting tools.
 
-## Dashboard Purpose Explained
+#### Dashboard Purpose Explained
 
 Dashboard Purpose defines the specific function that observability visualizations must serve:
 
@@ -413,11 +412,11 @@ Dashboard Purpose defines the specific function that observability visualization
 
 In financial services, clear dashboard purpose addresses a common observability problem: trying to create visualizations that serve too many different needs simultaneously. Banking systems require focused tools for different contexts: operational dashboards for incident response, analytical tools for performance optimization, reporting systems for business insights. When these purposes get conflated, none are served effectively.
 
-## The Emergency Design Principle
+#### The Emergency Design Principle
 
-Hector's statement that "dashboards are for emergencies" provides a powerful design principle that clarifies many specific implementation decisions. Emergency tools have unique requirements—immediate clarity, focus on critical information, resilience under stress—that directly shape effective dashboard design. This framing helps explain why techniques appropriate for analytical or reporting visualizations often fail in operational contexts.
+Hector Alavaz's statement that "dashboards are for emergencies" provides a powerful design principle that clarifies many specific implementation decisions. Emergency tools have unique requirements—immediate clarity, focus on critical information, resilience under stress—that directly shape effective dashboard design. This framing helps explain why techniques appropriate for analytical or reporting visualizations often fail in operational contexts.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To clarify dashboard purpose in financial systems:
 
@@ -433,17 +432,17 @@ Financial institutions should recognize that effective observability requires sp
 
 ## Panel 10: Lesson Locked In - Observability Communication
 
-## Scene Description
+### Scene Description
 
-**Lesson Locked In** – Juana: "Less dashboard. More insight." Hector: "Now it tells the truth—whether you like it or not."
+**Lesson Locked In** – Juana: "Less dashboard. More insight." Hector Alavaz: "Now it tells the truth—whether you like it or not."
 
-*Expanded narrative: As they activate the new dashboard in production, Juana summarizes the transformation: "Less dashboard. More insight." Hector nods approvingly and adds his characteristic perspective: "Now it tells the truth—whether you like it or not." He looks at the team. "That's the real test of good observability. It doesn't flatter you with green status when things are failing. It doesn't hide problems behind pretty visualizations. It tells you exactly what's happening, especially when that truth is uncomfortable. Because in this business, uncomfortable truths caught early save jobs, money, and customer trust."*
+*Expanded narrative: As they activate the new dashboard in production, Juana summarizes the transformation: "Less dashboard. More insight." Hector Alavaz nods approvingly and adds his characteristic perspective: "Now it tells the truth—whether you like it or not." He looks at the team. "That's the real test of good observability. It doesn't flatter you with green status when things are failing. It doesn't hide problems behind pretty visualizations. It tells you exactly what's happening, especially when that truth is uncomfortable. Because in this business, uncomfortable truths caught early save jobs, money, and customer trust."*
 
-## Teaching Narrative
+### Teaching Narrative
 
-This final exchange captures a profound insight about observability purpose: telling uncomfortable truths clearly. Hector's emphasis that good dashboards "tell the truth—whether you like it or not" highlights how effective observability often conflicts with organizational comfort. This perspective helps the team understand that the true measure of observability quality isn't how it makes them feel, but how effectively it reveals problems—especially those they might prefer not to see.
+This final exchange captures a profound insight about observability purpose: telling uncomfortable truths clearly. Hector Alavaz's emphasis that good dashboards "tell the truth—whether you like it or not" highlights how effective observability often conflicts with organizational comfort. This perspective helps the team understand that the true measure of observability quality isn't how it makes them feel, but how effectively it reveals problems—especially those they might prefer not to see.
 
-## Observability Communication Explained
+#### Observability Communication Explained
 
 Observability Communication focuses on how telemetry systems convey information to humans:
 
@@ -457,11 +456,11 @@ Observability Communication focuses on how telemetry systems convey information 
 
 In financial services, effective observability communication addresses both technical and cultural challenges. Technically, it ensures that dashboards present the most important information clearly, even when that information reveals problems. Culturally, it helps organizations develop the maturity to value early warning over false comfort—a critical capability for maintaining reliable banking systems.
 
-## The Uncomfortable Truth Value
+#### The Uncomfortable Truth Value
 
-Hector's observation that "uncomfortable truths caught early save jobs, money, and customer trust" highlights the business value of effective observability. This framing transforms potentially negative messages—system problems, performance issues, customer impact—into valuable early warnings that actually protect the organization's interests by enabling earlier, more effective intervention.
+Hector Alavaz's observation that "uncomfortable truths caught early save jobs, money, and customer trust" highlights the business value of effective observability. This framing transforms potentially negative messages—system problems, performance issues, customer impact—into valuable early warnings that actually protect the organization's interests by enabling earlier, more effective intervention.
 
-## Banking Implementation Guidance
+### Banking Implementation Guidance
 
 To implement effective observability communication in financial systems:
 

@@ -13,7 +13,7 @@
    - **Motion:** Typing furiously, earbuds half-in.
    - **Props:** Circuit board tattoo on forearm, charcoal keyboard.
 
-2. **Hector**
+2. **Hector Alavaz**
 
    - **Appearance:** 49-year-old Mexican male, medium build, 5'10", with a weathered medium-brown complexion, angular face, and a neatly trimmed salt-and-pepper beard. He wears a dark henley shirt, dark technical jeans, and a red RHEL baseball cap.
    - **Expression:** Serious and analytical, with intense hazel eyes and visible crow's feet.
@@ -31,8 +31,8 @@
 - **Juana:** “Great, a riddle alert.”\
   *(Off-white #EDEDED speech bubble with a tail pointing to Juana, positioned to the left of the panel.)*
 
-- **Hector:** “An alert without action is a loud opinion.”\
-  *(Off-white #EDEDED speech bubble with a tail pointing to Hector, positioned to the right of the panel.)*
+- **Hector Alavaz:** “An alert without action is a loud opinion.”\
+  *(Off-white #EDEDED speech bubble with a tail pointing to Hector Alavaz, positioned to the right of the panel.)*
 
 #### Narration
 
@@ -60,7 +60,7 @@
 
 #### Constraints
 
-- Characters arranged left-to-right consistent with speaking order: Juana, Hector.
+- Characters arranged left-to-right consistent with speaking order: Juana, Hector Alavaz.
 - Speech bubbles stay clear of panel edges and ambient elements.
 - No motion blur, no watermarks, single widescreen panel suitable for enterprise training documentation.
 - Ensure speech bubbles are not duplicated, and text is fully legible at final resolution.

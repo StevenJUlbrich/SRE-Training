@@ -890,7 +890,7 @@
             "role": "CTO",
             "catchphrase": "What if we could...? Let's explore the art of the possible."
         },
-        "Marcus Thorne": {
+        "Jack Horton": {
             "visual_tags": [
                 "male",
                 "55 years old",
@@ -1782,6 +1782,307 @@
             "appearance": "The moral compass of the executive group, ensuring that success is achieved responsibly and sustainably. Looks like she can guide any organization towards a more ethical and equitable future.",
             "role": "Executive Stakeholder",
             "catchphrase": "While profitability is essential, how are we considering the broader impact of our decisions on all our stakeholders and on society?"
+        },
+        "Aarav Sharma (Junior Developer - The Enthusiast)": {
+            "visual_tags": [
+                "male",
+                "22 years old",
+                "5'8\"",
+                "slim build, almost perpetually wide-eyed with curiosity",
+                "short, dark, slightly messy hair",
+                "bright, eager brown eyes",
+                "wears t-shirts from hackathons or with programming jokes, often under an unzipped hoodie",
+                "brand new high-spec laptop covered in 'new developer' stickers"
+            ],
+            "required_constraints": [
+                "Always has at least three Stack Overflow tabs open",
+                "Volunteers for new tasks, sometimes overestimating his current skill set",
+                "Drinks copious amounts of free office soda or energy drinks"
+            ],
+            "motion_rules": "Bounces his leg when concentrating or excited. Quick, energetic movements. Types rapidly, sometimes with more enthusiasm than accuracy.",
+            "voice_tone": "Fast-paced, enthusiastic, full of questions. Sometimes speaks before fully thinking through a technical point. Very receptive to feedback.",
+            "prop_loadout": [
+                "latest model laptop with multiple IDEs open",
+                "noise-canceling headphones (often playing Lo-Fi beats or coding tutorials)",
+                "a collection of rubber ducks for debugging",
+                "a heavily annotated 'Intro to [Current Language]' textbook"
+            ],
+            "appearance": "The quintessential eager beaver, bright-eyed and ready to absorb all knowledge. Looks like he codes in his sleep and dreams in algorithms.",
+            "role": "Junior Developer",
+            "catchphrase": "Oh, I think I saw something about that on a blog post! Let me try..."
+        },
+        "Priya Desai (Junior Developer - The Quiet Observer)": {
+            "visual_tags": [
+                "female",
+                "24 years old",
+                "5'4\"",
+                "calm, observant demeanor",
+                "neat, shoulder-length dark hair, often tucked behind her ears",
+                "thoughtful, dark eyes, usually focused intently on her screen",
+                "prefers comfortable, minimalist clothing; often solid colored sweaters or blouses",
+                "keeps her desk very organized"
+            ],
+            "required_constraints": [
+                "Takes meticulous notes during every meeting and code review",
+                "Prefers to understand a problem thoroughly before attempting a solution",
+                "Rarely speaks up in large groups but offers insightful comments in smaller settings or 1-on-1s"
+            ],
+            "motion_rules": "Methodical and precise movements. Listens intently, often with a slight head tilt. Types carefully and deliberately.",
+            "voice_tone": "Soft-spoken, articulate, and thoughtful. Asks very specific, well-considered questions. Values clarity and correctness.",
+            "prop_loadout": [
+                "well-organized digital notebook (e.g., Notion, OneNote) with detailed code snippets and diagrams",
+                "a high-quality mechanical keyboard with quiet switches",
+                "a small, potted plant on her desk",
+                "bookmarks to official documentation for various technologies"
+            ],
+            "appearance": "A diligent and focused learner who absorbs information like a sponge. Looks like she’s carefully building a deep understanding of software engineering from the ground up.",
+            "role": "Junior Developer",
+            "catchphrase": "Let me just double-check the documentation on that function before I proceed."
+        },
+        "Leo Maxwell (Junior Developer - The Pragmatist)": {
+            "visual_tags": [
+                "male",
+                "25 years old",
+                "5'11\"",
+                "down-to-earth, practical expression",
+                "short, easy-to-maintain brown hair",
+                "direct, hazel eyes",
+                "functional and comfortable clothing, like plain t-shirts and jeans; no frills",
+                "older, but reliable, laptop with a few scuffs"
+            ],
+            "required_constraints": [
+                "Focuses on getting the task done efficiently and reliably",
+                "Isn't afraid to ask 'basic' questions if it means avoiding mistakes",
+                "Appreciates clear instructions and well-defined tasks"
+            ],
+            "motion_rules": "Calm and steady. Not easily flustered. Methodical approach to debugging. Often leans back to think, arms crossed.",
+            "voice_tone": "Clear, straightforward, and concise. No jargon unless necessary. Values practical solutions over theoretical elegance.",
+            "prop_loadout": [
+                "a well-commented codebase he's working on",
+                "a simple to-do list app or a physical notepad for tasks",
+                "a sturdy, no-nonsense coffee mug",
+                "a collection of useful utility scripts he's written for himself"
+            ],
+            "appearance": "A reliable and sensible new developer focused on building solid skills and contributing effectively. Looks like he's determined to understand how things *actually* work.",
+            "role": "Junior Developer",
+            "catchphrase": "Okay, so what's the most straightforward way to get this working?"
+        },
+        "Isabelle 'Isa' Moreau (VP Executive - VP of Product Strategy)": {
+            "visual_tags": [
+                "female",
+                "48 years old",
+                "5'7\"",
+                "sharp, intelligent green eyes that convey strategic insight",
+                "stylish, ash-blonde bob haircut",
+                "impeccable, modern business attire – often sophisticated dresses or tailored pant-suits",
+                "wears elegant but understated jewelry"
+            ],
+            "required_constraints": [
+                "Always has her finger on the pulse of market trends and competitor movements",
+                "Can articulate the company's product vision with compelling clarity and passion",
+                "Data-driven but with strong intuitive judgment for product direction"
+            ],
+            "motion_rules": "Confident and poised movements. Uses expressive hand gestures when presenting strategy. Often paces thoughtfully when brainstorming new product initiatives.",
+            "voice_tone": "Articulate, persuasive, and visionary. Can energize a room when talking about future possibilities. Decisive and clear when outlining product roadmaps.",
+            "prop_loadout": [
+                "latest smartphone and tablet, loaded with market research apps and analytics dashboards",
+                "a collection of industry reports and design thinking literature",
+                "a Moleskine notebook for jotting down spontaneous ideas and sketches",
+                "noise-canceling headphones for focused strategic thinking"
+            ],
+            "appearance": "A dynamic and forward-thinking leader who lives and breathes product innovation. Looks like she's always three steps ahead of the market.",
+            "role": "VP Executive",
+            "catchphrase": "Where is the market going, and how do we ensure our product gets there first, creating undeniable value for our customers?"
+        },
+        "Marcus Thorne (VP Executive - VP of Global Operations)": {
+            "visual_tags": [
+                "male",
+                "55 years old",
+                "6'1\"",
+                "commanding presence, with a calm and resolute demeanor",
+                "short, neatly trimmed grey hair",
+                "steady, discerning blue eyes",
+                "classic, conservative business suits; always looks ready for a high-stakes meeting",
+                "often carries a leather portfolio"
+            ],
+            "required_constraints": [
+                "Obsessed with efficiency, scalability, and operational excellence",
+                "Has an encyclopedic knowledge of the company's internal processes and supply chains",
+                "Never makes a decision without considering its logistical and financial implications"
+            ],
+            "motion_rules": "Deliberate and measured movements. Often reviews operational dashboards or complex spreadsheets. Uses precise gestures when explaining process improvements.",
+            "voice_tone": "Authoritative, calm, and analytical. Values clarity and data-backed assertions. Can be firm when addressing inefficiencies or operational risks.",
+            "prop_loadout": [
+                "encrypted laptop with access to global operational metrics and ERP systems",
+                "multiple phones for international communication",
+                "a well-worn copy of 'The Goal' or similar operations management Bibles",
+                "a world map in his office with key operational sites highlighted"
+            ],
+            "appearance": "A seasoned operational heavyweight who ensures the entire global machinery of the company runs smoothly and effectively. Looks like he can solve any logistical nightmare.",
+            "role": "VP Executive",
+            "catchphrase": "How can we optimize this process to reduce waste, improve throughput, and ensure consistent quality across all regions?"
+        },
+        "Dr. Anya Sharma (Senior Engineer - The Architect)": {
+            "visual_tags": [
+                "female",
+                "42 years old",
+                "5'9\"",
+                "intense, focused dark eyes that seem to visualize complex systems",
+                "long dark hair, often tied up in a practical but stylish manner",
+                "favors smart, functional clothing; often dark colors, comfortable for long coding sessions but presentable",
+                "wears minimalist glasses when reading or coding"
+            ],
+            "required_constraints": [
+                "Can design and explain highly complex, scalable, and resilient system architectures",
+                "Mentors junior engineers on best practices in software design and system thinking",
+                "Always considers the long-term maintainability and evolvability of any solution"
+            ],
+            "motion_rules": "Often found whiteboarding intricate diagrams. Uses hands to sketch out system flows in the air. Can get lost in thought, staring at a screen or diagram for long periods.",
+            "voice_tone": "Clear, articulate, and authoritative on technical matters. Patient when explaining complex concepts. Passionate about elegant and robust design.",
+            "prop_loadout": [
+                "large, high-resolution monitor (or multiple monitors) for displaying complex diagrams and code",
+                "a vast digital library of design patterns, architectural blueprints, and technical papers",
+                "a collection of different colored dry-erase markers",
+                "noise-canceling headphones for deep architectural work"
+            ],
+            "appearance": "A master builder in the digital realm, capable of designing the blueprints for vast and intricate software systems. Looks like she holds the entire system map in her head.",
+            "role": "Senior Engineer",
+            "catchphrase": "What are the non-functional requirements here? We need to think about scalability, fault tolerance, and security from day one."
+        },
+        "Kenji 'Ken' Tanaka (Senior Engineer - The Troubleshooter)": {
+            "visual_tags": [
+                "male",
+                "48 years old",
+                "5'10\"",
+                "calm, almost stoic expression, but with eyes that light up when a challenging problem arises",
+                "short, salt-and-pepper hair, always neat",
+                "practical, comfortable clothing, often a company polo shirt or a simple button-down",
+                "looks like he's seen and solved every type of production fire imaginable"
+            ],
+            "required_constraints": [
+                "Has an uncanny ability to diagnose and resolve the most obscure and difficult technical issues",
+                "Remains calm and methodical under extreme pressure during critical incidents",
+                "Possesses deep knowledge across multiple layers of the tech stack"
+            ],
+            "motion_rules": "Moves with quiet efficiency. Can stare intently at logs or dashboards for hours. Types with precision when executing commands or writing diagnostic scripts.",
+            "voice_tone": "Measured, direct, and reassuring during crises. Can explain complex root causes in a clear, concise manner. Often uses dry humor to diffuse tension.",
+            "prop_loadout": [
+                "a battle-tested laptop with a plethora of diagnostic tools and custom scripts",
+                "access to all critical system monitoring and logging platforms",
+                "a well-maintained personal knowledge base of past incidents and their resolutions",
+                "a supply of strong coffee or tea for long troubleshooting sessions"
+            ],
+            "appearance": "The seasoned veteran you call when everything is broken and no one else knows why. Looks like he can debug a system with nothing but a command line and sheer willpower.",
+            "role": "Senior Engineer",
+            "catchphrase": "Okay, let's look at the telemetry. The system is trying to tell us something."
+        },
+        "Sofia Rostova (Senior Engineer - The Pragmatic Finisher)": {
+            "visual_tags": [
+                "female",
+                "39 years old",
+                "5'6\"",
+                "determined, focused expression; a get-it-done attitude",
+                "practical, no-nonsense haircut, perhaps a short bob or ponytail",
+                "wears comfortable, functional clothing that doesn't get in the way",
+                "often has a slight smudge of whiteboard marker on her hand"
+            ],
+            "required_constraints": [
+                "Excels at taking complex projects over the finish line, ensuring all details are handled",
+                "Balances technical excellence with practical delivery timelines",
+                "Is a strong advocate for clear documentation and robust testing"
+            ],
+            "motion_rules": "Efficient and purposeful movements. Often seen coordinating with team members or ticking off tasks on a project board. Uses decisive gestures.",
+            "voice_tone": "Clear, direct, and results-oriented. Good at motivating teams to push through the final stages of a project. Values completeness and quality.",
+            "prop_loadout": [
+                "a well-organized project management tool or personal task list",
+                "a comprehensive set of testing frameworks and CI/CD pipeline access",
+                "templates for technical documentation and release notes",
+                "a 'Definition of Done' checklist that she adheres to rigorously"
+            ],
+            "appearance": "The reliable expert who ensures that great ideas become fully realized, high-quality products. Looks like she can wrestle any complex feature into submission and ship it on time.",
+            "role": "Senior Engineer",
+            "catchphrase": "What are the remaining tasks to get this to production-ready? Let's ensure all edge cases are covered."
+        },
+        "Rajesh Singh": {
+            "visual_tags": [
+                "male",
+                "47 years old",
+                "5'9\"",
+                "calm, intelligent eyes that have seen many tech cycles",
+                "short, neat black hair with some silver at the temples",
+                "often wears a comfortable but smart button-down shirt (sometimes with a subtle tech logo) and dark jeans or chinos",
+                "wears a high-quality smartwatch, always seems to be glancing at it for notifications"
+            ],
+            "required_constraints": [
+                "Deeply technical but now focuses on empowering engineering teams and strategy",
+                "Always asks about scalability, reliability, and the long-term technical vision",
+                "Champions a culture of innovation, quality, and blameless post-mortems"
+            ],
+            "motion_rules": "Thoughtful and deliberate in meetings. Often leans back, listening intently. Uses clear, logical hand gestures when explaining architectural concepts or strategic priorities. Can occasionally be found whiteboarding with his teams.",
+            "voice_tone": "Measured, articulate, and deeply knowledgeable. Can dive deep into technical details when needed but prefers to speak about engineering culture, process, and strategy. Instills confidence.",
+            "prop_loadout": [
+                "latest high-spec laptop, often with multiple external monitors in his office",
+                "a well-worn copy of 'Accelerate' or 'The Phoenix Project'",
+                "access to engineering dashboards showing key metrics (DORA, system uptime, etc.)",
+                "a collection of books on software architecture and leadership"
+            ],
+            "appearance": "A seasoned engineering leader who combines deep technical expertise with strong managerial skills. Looks like he can guide a large engineering organization to build complex, reliable systems at scale.",
+            "role": "VP",
+            "catchphrase": "Are we building this right, and are we building the right thing? How does this scale, not just technically, but for our teams?"
+        },
+        "Brenda Keagan": {
+            "visual_tags": [
+                "female",
+                "42 years old",
+                "5'6\"",
+                "energetic and charismatic, with bright, engaging blue eyes",
+                "stylish, modern haircut, perhaps a chic blonde bob",
+                "fashionable business attire, often with a pop of color or a statement accessory; always looks polished and on-trend",
+                "seems to radiate positivity and creative energy"
+            ],
+            "required_constraints": [
+                "Always up-to-date on the latest marketing trends, analytics, and digital tools",
+                "Can craft a compelling brand narrative and translate it into effective campaigns",
+                "Data-driven in decision-making but with a strong creative flair"
+            ],
+            "motion_rules": "Dynamic and expressive. Uses animated gestures when presenting ideas. Often moving, whether pacing during a brainstorm or networking at an event. Her energy is infectious.",
+            "voice_tone": "Enthusiastic, persuasive, and articulate. Can simplify complex marketing concepts and get buy-in for new initiatives. Passionate about brand building and customer engagement.",
+            "prop_loadout": [
+                "smartphone with all major social media and analytics apps",
+                "tablet for presentations and reviewing campaign mockups",
+                "a mood board or digital inspiration file for current campaigns",
+                "a collection of marketing awards or successful case studies"
+            ],
+            "appearance": "A visionary marketing leader who knows how to capture attention and build brand loyalty. Looks like she could launch a global campaign and make it a viral sensation.",
+            "role": "VP",
+            "catchphrase": "What's the story we're telling, who are we telling it to, and how do we make it unforgettable and measurable?"
+        },
+        "David Chen": {
+            "visual_tags": [
+                "male",
+                "50 years old",
+                "5'11\"",
+                "warm, empathetic brown eyes; a genuinely approachable demeanor",
+                "neatly combed dark hair, starting to grey at the sides",
+                "smart business-casual attire, often a blazer with an open-collar shirt; aims for professional but relatable",
+                "often has a friendly, listening expression"
+            ],
+            "required_constraints": [
+                "Deeply committed to fostering a positive, inclusive, and high-performing company culture",
+                "Always prioritizes employee well-being, development, and fair treatment",
+                "Expert in talent acquisition, retention strategies, and conflict resolution"
+            ],
+            "motion_rules": "Open and inviting body language. Nods frequently when listening. Uses calm, reassuring gestures. Often walks around to connect with employees.",
+            "voice_tone": "Calm, empathetic, and diplomatic. An excellent listener. Can handle sensitive conversations with grace and professionalism. Inspires trust and confidence.",
+            "prop_loadout": [
+                "laptop with HR management software and employee engagement survey results",
+                "books on organizational psychology, leadership development, and HR best practices",
+                "a private, comfortable office space designed for confidential conversations",
+                "a ready supply of tissues and perhaps a stress ball for tense meetings"
+            ],
+            "appearance": "The compassionate and strategic leader dedicated to the company's most valuable asset: its people. Looks like he can resolve any interpersonal conflict and build a thriving workplace.",
+            "role": "VP",
+            "catchphrase": "Our people drive our success. How are we ensuring they feel valued, supported, and empowered to grow with us?"
         }
     }
 }

@@ -1,6 +1,6 @@
 Observability 101+ Curriculum: A Hybrid Graphic Novel Approach
 Project Vision
-The Observability 101+ Curriculum is an innovative educational initiative that transforms complex Site Reliability Engineering (SRE) concepts into an engaging hybrid graphic novel format. Led by the character Hector Alvarez, a seasoned SRE professional with decades of experience, this curriculum aims to bridge the gap between traditional IT operations monitoring (like ITRS Geneos) and modern observability practices for production support professionals in the banking industry.
+The Observability 101+ Curriculum is an innovative educational initiative that transforms complex Site Reliability Engineering (SRE) concepts into an engaging hybrid graphic novel format. Led by the character Hector Alavaz Alvarez, a seasoned SRE professional with decades of experience, this curriculum aims to bridge the gap between traditional IT operations monitoring (like ITRS Geneos) and modern observability practices for production support professionals in the banking industry.
 Core Project Goals
 
 Transform Technical Learning: Replace dry, abstract technical documentation with narrative-driven, visually engaging content that makes observability concepts memorable and applicable.
@@ -15,7 +15,7 @@ This curriculum pioneers a hybrid approach that combines:
 Narrative Teaching: Conversational, story-driven explanations of technical concepts
 Visual Panels: Sequential art depicting real-world scenarios and technical visualizations
 Technical Depth: Substantial prose sections with banking-specific examples and practical applications
-Character Development: Consistent characterization of Hector and supporting cast to create emotional investment in the learning journey
+Character Development: Consistent characterization of Hector Alavaz and supporting cast to create emotional investment in the learning journey
 
 Target Outcomes
 The curriculum aims to transform how banking professionals approach system reliability by:

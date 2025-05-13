@@ -59,7 +59,7 @@ ______________________________________________________________________
 
 ### Panel 4 – Metric Hygiene Time
 
-- **Scene**: Hector whiteboards a metric stack: customer > SLI > infra
+- **Scene**: Hector Alavaz whiteboards a metric stack: customer > SLI > infra
 - **Teaching Moment**: Structure reveals diagnostic flow
 - **Widget**: Diagram — Metric hierarchy (Mermaid chart)
 - **Artifact**: Venn or stack showing metric grouping logic
@@ -87,9 +87,9 @@ ______________________________________________________________________
 
 ### Panel 8 – Lesson Locked In
 
-- **Scene**: Hector compares old and new dashboard state
+- **Scene**: Hector Alavaz compares old and new dashboard state
 - **Teaching Moment**: Your system is speaking—are you listening?
-- **Widget**: Hector Quote — “Don’t measure more. Measure better.”
+- **Widget**: Hector Alavaz Quote — “Don’t measure more. Measure better.”
 - **Artifact**: Final, cleaned dashboard layout
 
 ### Panel 9 – Epilogue Panel
@@ -107,7 +107,7 @@ ______________________________________________________________________
 - **Clara**: Drives taxonomy and reduction
 - **Daniel**: Highlights naming debt
 - **Wanjiru**: Connects metric gaps to customer pain
-- **Hector**: Reframes telemetry design as storytelling, not collection
+- **Hector Alavaz**: Reframes telemetry design as storytelling, not collection
 
 ______________________________________________________________________
 

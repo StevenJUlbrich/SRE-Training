@@ -1,8 +1,8 @@
 # Learner Cast Reference for Observability 101
 
-This guide introduces the learner personas featured in Hector's Observability 101 curriculum. These characters embody a range of technical backgrounds, learning challenges, and growth arcs that make them ideal participants in observability-themed scenarios. Each profile is designed to model real-world learners transitioning into reliability thinking through Hector’s mentorship.
+This guide introduces the learner personas featured in Hector Alavaz's Observability 101 curriculum. These characters embody a range of technical backgrounds, learning challenges, and growth arcs that make them ideal participants in observability-themed scenarios. Each profile is designed to model real-world learners transitioning into reliability thinking through Hector Alavaz’s mentorship.
 
-This document supplements the Hector-led SRE training materials by providing an overview of recurring learner characters. These personas represent different backgrounds, technical proficiencies, and learning mindsets to enhance narrative depth and relatability throughout the curriculum.
+This document supplements the Hector Alavaz-led SRE training materials by providing an overview of recurring learner characters. These personas represent different backgrounds, technical proficiencies, and learning mindsets to enhance narrative depth and relatability throughout the curriculum.
 
 ______________________________________________________________________
 
@@ -48,7 +48,7 @@ ______________________________________________________________________
 
 - 30, former site admin for a data-heavy fintech startup
 - Believes in instrumenting everything — even internal coffee machine usage
-- Slowly learns from Hector that observability is about signal, not volume
+- Slowly learns from Hector Alavaz that observability is about signal, not volume
 - Catchphrase: *"But what if we just exported... all of it?"*
 
 ### 10. **Juana Torres** – *The Alert Whisperer*

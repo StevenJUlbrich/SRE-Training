@@ -73,11 +73,11 @@ Resilience testing represents a fundamental shift from traditional QA testing. W
 
 First National Bank's mobile payment platform experienced a catastrophic outage during Black Friday shopping hours, processing only 42% of attempted transactions for nearly 90 minutes before full service was restored. Post-incident analysis revealed that the failure occurred due to an unexpected interaction between three conditions:
 
-| Failure Condition | Individual Test Conducted | Missed Interaction Scenario |
+| Failure Condition                                                  | Individual Test Conducted                                 | Missed Interaction Scenario                                                 |
 | ------------------------------------------------------------------ | --------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Transaction volume exceeded historical peaks by 35% | Load testing at 150% of expected volume | Volume spike coincided with other failure triggers, amplifying the impact. |
-| Database connection pool reached its configured maximum | Unit tests verified handling of maximum connection limits | High volume overwhelmed the connection pool, triggering cascading delays. |
-| Failover mechanism to a secondary database cluster never activated | Standard failover scenarios tested in isolation | Failover failed to initiate under high load and pool exhaustion conditions. |
+| Transaction volume exceeded historical peaks by 35%                | Load testing at 150% of expected volume                   | Volume spike coincided with other failure triggers, amplifying the impact.  |
+| Database connection pool reached its configured maximum            | Unit tests verified handling of maximum connection limits | High volume overwhelmed the connection pool, triggering cascading delays.   |
+| Failover mechanism to a secondary database cluster never activated | Standard failover scenarios tested in isolation           | Failover failed to initiate under high load and pool exhaustion conditions. |
 
 Despite rigorous traditional testing, including load testing, unit tests with 98% code coverage, and full integration testing in staging environments, this specific failure scenario was never detected. The production support team had meticulously tested all components individually and verified standard failover scenarios, but never simulated the precise combination of conditions that occurred in production.
 
@@ -164,7 +164,7 @@ To implement effective resilience testing beyond traditional QA approaches, foll
 
 ### Scene Description
 
-A team meeting room with whiteboard walls covered in system diagrams. Hector leads a diverse group of engineers as they map out a banking system's critical paths. On the whiteboard, they've written:
+A team meeting room with whiteboard walls covered in system diagrams. Hector Alavaz leads a diverse group of engineers as they map out a banking system's critical paths. On the whiteboard, they've written:
 
 ```
 HYPOTHESIS:
@@ -206,14 +206,14 @@ Capital Markets Bank attempted resilience testing of their bond trading platform
 
 This unstructured approach created several problems. The following table summarizes the issues and their consequences:
 
-| **Issue** | **Description** | **Consequence** |
+| **Issue**                            | **Description**                                                                | **Consequence**                                                               |
 | ------------------------------------ | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| Ambiguous test results | Results lacked clarity and were difficult to interpret | Reduced confidence in findings and wasted effort on inconclusive observations |
-| Contradictory findings | Some results conflicted with prior observations | Created confusion and undermined trust in the testing process |
-| Testing artifacts vs. genuine issues | Unclear whether observed behaviors were due to tests or actual system problems | Impeded root cause analysis and slowed resolution |
-| Poor documentation of findings | Findings lacked actionable recommendations | Limited the ability to prioritize and implement meaningful improvements |
-| Stakeholder skepticism | Stakeholders questioned the value of the exercise | Reduced buy-in and support for future resilience testing |
-| Compliance concerns | Methodology lacked rigor and transparency | Raised red flags about adherence to regulatory expectations |
+| Ambiguous test results               | Results lacked clarity and were difficult to interpret                         | Reduced confidence in findings and wasted effort on inconclusive observations |
+| Contradictory findings               | Some results conflicted with prior observations                                | Created confusion and undermined trust in the testing process                 |
+| Testing artifacts vs. genuine issues | Unclear whether observed behaviors were due to tests or actual system problems | Impeded root cause analysis and slowed resolution                             |
+| Poor documentation of findings       | Findings lacked actionable recommendations                                     | Limited the ability to prioritize and implement meaningful improvements       |
+| Stakeholder skepticism               | Stakeholders questioned the value of the exercise                              | Reduced buy-in and support for future resilience testing                      |
+| Compliance concerns                  | Methodology lacked rigor and transparency                                      | Raised red flags about adherence to regulatory expectations                   |
 
 #### Checklist: Avoiding Unstructured Testing Pitfalls
 
@@ -252,13 +252,13 @@ When Goldman Sachs implemented this evidence-based approach for their trading pl
 
 The business consequences of hypothesis-driven resilience testing include measurable benefits across multiple dimensions. The table below summarizes key impacts along with relevant metrics from real-world implementations:
 
-| **Impact Area** | **Description** | **Example Metrics** |
+| **Impact Area**                | **Description**                                                              | **Example Metrics**                                                       |
 | ------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Regulatory Confidence** | Satisfies stringent regulatory requirements for operational resilience. | - 83% reduction in regulatory findings during reviews. |
-| **Incident Prevention ROI** | Prevents significant incidents annually, reducing outage costs. | - $14.6M in avoided outage costs.<br>- 7-12 incidents prevented per year. |
-| **Recovery Time Optimization** | Improves MTTR through targeted recovery mechanism testing. | - 35-60% improvement in MTTR. |
-| **Change Risk Reduction** | Reduces incidents caused by system changes, enabling safer feature rollouts. | - 40-70% reduction in change-related incidents. |
-| **Resource Optimization** | Enhances efficiency by focusing on critical scenarios and components. | - 62% more efficient use of testing resources. |
+| **Regulatory Confidence**      | Satisfies stringent regulatory requirements for operational resilience.      | - 83% reduction in regulatory findings during reviews.                    |
+| **Incident Prevention ROI**    | Prevents significant incidents annually, reducing outage costs.              | - $14.6M in avoided outage costs.<br>- 7-12 incidents prevented per year. |
+| **Recovery Time Optimization** | Improves MTTR through targeted recovery mechanism testing.                   | - 35-60% improvement in MTTR.                                             |
+| **Change Risk Reduction**      | Reduces incidents caused by system changes, enabling safer feature rollouts. | - 40-70% reduction in change-related incidents.                           |
+| **Resource Optimization**      | Enhances efficiency by focusing on critical scenarios and components.        | - 62% more efficient use of testing resources.                            |
 
 By quantifying these impacts, financial institutions can clearly articulate the value of hypothesis-driven resilience testing, both internally to stakeholders and externally to regulators. This structured approach reinforces the commitment to protecting customer assets, maintaining service integrity, and ensuring operational excellence in the banking sector.
 
@@ -331,15 +331,15 @@ graph TD
 
 What was intended as a controlled experiment affected critical business operations, required executive escalation, and triggered regulatory disclosure requirements. The sequence of cascading failures is summarized below:
 
-| Failure Point | Impact |
+| Failure Point                        | Impact                                              |
 | ------------------------------------ | --------------------------------------------------- |
-| Health check failures | Stressed nodes became unavailable |
-| Load balancers redirected traffic | Increased load on remaining nodes |
-| Overloaded nodes | Resource exhaustion and degraded performance |
-| Database connection pool exhaustion | Upstream systems unable to complete transactions |
+| Health check failures                | Stressed nodes became unavailable                   |
+| Load balancers redirected traffic    | Increased load on remaining nodes                   |
+| Overloaded nodes                     | Resource exhaustion and degraded performance        |
+| Database connection pool exhaustion  | Upstream systems unable to complete transactions    |
 | Timeout cascades in order management | Failed order processing and missed settlement times |
-| Missed settlement deadlines | Financial and reputational damage |
-| Incomplete regulatory reporting | Non-compliance and mandatory disclosure |
+| Missed settlement deadlines          | Financial and reputational damage                   |
+| Incomplete regulatory reporting      | Non-compliance and mandatory disclosure             |
 
 The team had failed to identify key dependencies, establish containment mechanisms, or define clear abort conditions. As a result, the entire resilience testing program was suspended for six months while new controls were developed.
 
@@ -370,13 +370,13 @@ By following this checklist, SRE teams can systematically reduce the risk of uni
 
 Proper blast radius control in resilience testing is critical for minimizing business consequences in the banking sector. The table below summarizes key impacts and their quantified effects:
 
-| **Impact Area** | **Description** | **Quantified Impact** |
+| **Impact Area**               | **Description**                                                                         | **Quantified Impact**                                                              |
 | ----------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Regulatory Compliance** | Prevents resilience tests from triggering mandatory regulatory reporting events. | Estimated savings of $350,000 per quarter in compliance-related costs. |
-| **Customer Experience** | Avoids customer-visible disruptions, reducing churn rates and maintaining trust. | Customers are 3x more likely to switch banks after unexpected outages. |
-| **Market Risk Limitation** | Protects trading and investment platforms from market exposure risks during testing. | Valued at $7.3M per testing cycle based on average open position values. |
-| **Resilience Program Health** | Prevents organizational resistance due to failed tests escaping containment. | Containment failures can delay resilience initiatives by 6-12 months. |
-| **Reputation Preservation** | Reduces impact of technical failures on institutional reputation and public perception. | On average, 7 months required to recover from publicly visible technical failures. |
+| **Regulatory Compliance**     | Prevents resilience tests from triggering mandatory regulatory reporting events.        | Estimated savings of $350,000 per quarter in compliance-related costs.             |
+| **Customer Experience**       | Avoids customer-visible disruptions, reducing churn rates and maintaining trust.        | Customers are 3x more likely to switch banks after unexpected outages.             |
+| **Market Risk Limitation**    | Protects trading and investment platforms from market exposure risks during testing.    | Valued at $7.3M per testing cycle based on average open position values.           |
+| **Resilience Program Health** | Prevents organizational resistance due to failed tests escaping containment.            | Containment failures can delay resilience initiatives by 6-12 months.              |
+| **Reputation Preservation**   | Reduces impact of technical failures on institutional reputation and public perception. | On average, 7 months required to recover from publicly visible technical failures. |
 
 By containing the blast radius effectively, banks can conduct resilience tests safely while avoiding these costly and damaging outcomes.
 
@@ -470,13 +470,13 @@ While individual components functioned as designed under stress, the human respo
 
 Elite SRE organizations prepare for effective Game Days through systematic evidence gathering. The following table summarizes five key evidence-based practices and their benefits to improve incident response and organizational resilience:
 
-| Practice | Description | Benefits |
+| Practice                              | Description                                                                                                                                                                   | Benefits                                                                                      |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| **Incident Response Observation** | Deploy trained observers during incidents to document communication patterns, decision points, information flows, and coordination challenges not captured in technical logs. | Identifies hidden coordination issues and areas for process improvement. |
-| **Decision Latency Analysis** | Measure the time between when information becomes available and when decisions are made during incidents. Identify factors causing delays in effective response. | Reduces response times by addressing bottlenecks in decision-making processes. |
-| **Communication Pattern Mapping** | Record and analyze communication during incidents to uncover information silos, repeated questions, contradictory understandings, and coordination failures. | Enhances cross-team communication and reduces misunderstandings during high-pressure events. |
-| **Knowledge Distribution Assessment** | Test how effectively critical system knowledge is distributed across team members through structured interviews and scenario evaluations. | Ensures more team members can respond effectively, reducing reliance on specific individuals. |
-| **Scenario Realism Validation** | Compare proposed Game Day scenarios to historical incidents to ensure exercises reflect real-world complexity, ambiguity, and pressure. | Improves the accuracy and relevance of training scenarios, increasing preparedness. |
+| **Incident Response Observation**     | Deploy trained observers during incidents to document communication patterns, decision points, information flows, and coordination challenges not captured in technical logs. | Identifies hidden coordination issues and areas for process improvement.                      |
+| **Decision Latency Analysis**         | Measure the time between when information becomes available and when decisions are made during incidents. Identify factors causing delays in effective response.              | Reduces response times by addressing bottlenecks in decision-making processes.                |
+| **Communication Pattern Mapping**     | Record and analyze communication during incidents to uncover information silos, repeated questions, contradictory understandings, and coordination failures.                  | Enhances cross-team communication and reduces misunderstandings during high-pressure events.  |
+| **Knowledge Distribution Assessment** | Test how effectively critical system knowledge is distributed across team members through structured interviews and scenario evaluations.                                     | Ensures more team members can respond effectively, reducing reliance on specific individuals. |
+| **Scenario Realism Validation**       | Compare proposed Game Day scenarios to historical incidents to ensure exercises reflect real-world complexity, ambiguity, and pressure.                                       | Improves the accuracy and relevance of training scenarios, increasing preparedness.           |
 
 **Case Study:** When HSBC implemented these evidence-based approaches to Game Day design, analysis revealed that 64% of their extended outages were caused primarily by human coordination failures rather than technical recovery challenges. This insight transformed their resilience program by shifting focus toward improving cross-team collaboration and decision-making efficiency.
 
@@ -651,15 +651,15 @@ As SRE practices mature, resilience testing evolves from manual, human-orchestra
 
 Merchant Banking Services struggled with inconsistent, labor-intensive resilience testing for their card processing platform. Their manual approach created several challenges, leading to inefficiencies and gaps in coverage. The table below summarizes these challenges, their corresponding impacts, and an illustrative example:
 
-| **Challenge** | **Impact** | **Example** |
+| **Challenge**                                   | **Impact**                                                       | **Example**                                                                                     |
 | ----------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Infrequent testing due to extensive preparation | Limited ability to detect issues early | Testing was limited to once per quarter, delaying identification of critical vulnerabilities. |
-| High resource requirements | Significant operational overhead | Each test consumed 8-12 engineers and ~400 person-hours, reducing availability for other tasks. |
-| Variability in test execution | Inconsistent test results and reduced reliability of findings | Results varied based on who performed specific actions. |
-| Poor documentation | Lack of repeatability and difficulty in post-test analysis | Procedures and results were inconsistently recorded, complicating incident investigations. |
-| Limited test coverage | Failure to detect issues in non-critical or secondary components | Subtle issues like memory leaks in secondary services were overlooked. |
-| Difficulty simulating nuanced failure modes | Inability to replicate real-world conditions | Scenarios like latency spikes or partial degradations were not tested effectively. |
-| Lack of reproducibility | Challenges in verifying and improving resilience over time | Test scenarios could not be reliably reproduced for iterative improvements. |
+| Infrequent testing due to extensive preparation | Limited ability to detect issues early                           | Testing was limited to once per quarter, delaying identification of critical vulnerabilities.   |
+| High resource requirements                      | Significant operational overhead                                 | Each test consumed 8-12 engineers and ~400 person-hours, reducing availability for other tasks. |
+| Variability in test execution                   | Inconsistent test results and reduced reliability of findings    | Results varied based on who performed specific actions.                                         |
+| Poor documentation                              | Lack of repeatability and difficulty in post-test analysis       | Procedures and results were inconsistently recorded, complicating incident investigations.      |
+| Limited test coverage                           | Failure to detect issues in non-critical or secondary components | Subtle issues like memory leaks in secondary services were overlooked.                          |
+| Difficulty simulating nuanced failure modes     | Inability to replicate real-world conditions                     | Scenarios like latency spikes or partial degradations were not tested effectively.              |
+| Lack of reproducibility                         | Challenges in verifying and improving resilience over time       | Test scenarios could not be reliably reproduced for iterative improvements.                     |
 
 #### Timeline of Key Events
 
@@ -746,13 +746,13 @@ This structured approach helps teams ensure that their automated fault injection
 
 Automated fault injection has had transformative impacts on banking systems by enhancing resilience, reducing operational overhead, and accelerating innovation. The table below highlights key metrics comparing resilience testing outcomes before and after automation across major banking institutions:
 
-| Metric | Before Automation | After Automation | Example Bank |
+| Metric                                 | Before Automation                                                               | After Automation                                                                            | Example Bank    |
 | -------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------- |
-| **Resilience Coverage** | Limited to common failure scenarios, often based on manual prioritization. | Comprehensive testing across 5.7x more failure modes. | Goldman Sachs |
-| **Reproducibility for Verification** | Inconsistent reproduction of failure scenarios, reliant on manual execution. | Consistent and precise scenario reproduction enabling 94% reduction in recurring incidents. | JP Morgan Chase |
-| **Operational Burden** | High engineering hours required for infrequent tests. | 83% reduction in testing-related engineering hours with a 400% increase in test frequency. | Citibank |
-| **Release Cycles** | Longer release cycles due to high deployment risk and manual resilience checks. | 42% faster feature deployments with automated pre-deployment resilience testing. | Bank of America |
-| **Preemptive Vulnerability Detection** | Vulnerabilities often detected only after incidents occur. | 68% reduction in severity-1 incidents due to early detection of resilience gaps. | Wells Fargo |
+| **Resilience Coverage**                | Limited to common failure scenarios, often based on manual prioritization.      | Comprehensive testing across 5.7x more failure modes.                                       | Goldman Sachs   |
+| **Reproducibility for Verification**   | Inconsistent reproduction of failure scenarios, reliant on manual execution.    | Consistent and precise scenario reproduction enabling 94% reduction in recurring incidents. | JP Morgan Chase |
+| **Operational Burden**                 | High engineering hours required for infrequent tests.                           | 83% reduction in testing-related engineering hours with a 400% increase in test frequency.  | Citibank        |
+| **Release Cycles**                     | Longer release cycles due to high deployment risk and manual resilience checks. | 42% faster feature deployments with automated pre-deployment resilience testing.            | Bank of America |
+| **Preemptive Vulnerability Detection** | Vulnerabilities often detected only after incidents occur.                      | 68% reduction in severity-1 incidents due to early detection of resilience gaps.            | Wells Fargo     |
 
 This shift from manual to automated resilience testing has enabled banking institutions to adopt a proactive approach to resilience engineering. By integrating fault injection into CI/CD pipelines, banks can continuously verify resilience properties, reduce risk, and maintain high availability while accelerating innovation.
 
@@ -877,14 +877,14 @@ These complex interactions between supposedly independent systems remained undis
 
 #### Architecture and Failure Analysis Table
 
-| **Component** | **Designed Resilience** | **Failure Observed** | **Impact** |
+| **Component**                     | **Designed Resilience**                          | **Failure Observed**                                  | **Impact**                                                  |
 | --------------------------------- | ------------------------------------------------ | ----------------------------------------------------- | ----------------------------------------------------------- |
-| Load-balanced application servers | Distribute load across three availability zones | Regional outage led to cascading failures | Complete failure of user-facing services |
-| Authentication services | Redundant with hot standby | Failover increased latency by 700ms | Triggered transaction timeouts and degraded user experience |
-| Database clusters | Automatic failover between primary and secondary | Failover functioned but caused write delays | Slowed critical operations such as payment processing |
-| Payment gateway integrations | Multiple gateways with fallback routing | Gateway fallback introduced variable processing times | Inconsistent transaction success rates |
-| Monitoring systems | Individual component health checks | Reported "green" despite end-to-end failure | Misleading signals delayed root cause identification |
-| Recovery procedures | Documented and pre-tested | Conflicts during simultaneous execution | Prolonged downtime and further destabilization |
+| Load-balanced application servers | Distribute load across three availability zones  | Regional outage led to cascading failures             | Complete failure of user-facing services                    |
+| Authentication services           | Redundant with hot standby                       | Failover increased latency by 700ms                   | Triggered transaction timeouts and degraded user experience |
+| Database clusters                 | Automatic failover between primary and secondary | Failover functioned but caused write delays           | Slowed critical operations such as payment processing       |
+| Payment gateway integrations      | Multiple gateways with fallback routing          | Gateway fallback introduced variable processing times | Inconsistent transaction success rates                      |
+| Monitoring systems                | Individual component health checks               | Reported "green" despite end-to-end failure           | Misleading signals delayed root cause identification        |
+| Recovery procedures               | Documented and pre-tested                        | Conflicts during simultaneous execution               | Prolonged downtime and further destabilization              |
 
 #### High-Level Failure Flow Diagram
 
@@ -907,13 +907,13 @@ This example highlights the need for Chaos Engineering to test not just individu
 
 Organizations implementing mature Chaos Engineering practices follow evidence-based approaches to uncover hidden vulnerabilities and improve system resilience. The following checklist summarizes the key steps and their outcomes:
 
-| **Step** | **Description** | **Outcome** |
+| **Step**                                       | **Description**                                                                                                                                               | **Outcome**                                                                                     |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **1. Steady State Pattern Analysis** | Collect extended baseline measurements of normal system behavior across hundreds of metrics to define "healthy" operation and detect subtle degradations. | Well-defined system health baselines and early detection of small anomalies. |
-| **2. Systemic Vulnerability Mapping** | Apply complex systems theory and accident analysis techniques to identify emergent behaviors and interaction points invisible in component-level testing. | Identification of hidden systemic vulnerabilities and interaction risks. |
-| **3. Hypothesis Disprove Models** | Construct experiments to challenge assumptions by attempting to disprove rather than confirm beliefs about system resilience. | Discovery of overlooked failure modes and confirmation or refutation of resilience assumptions. |
-| **4. Recovery Pattern Analysis** | Measure and categorize how systems recover from perturbations, analyzing recovery shapes (e.g., immediate, oscillating, degraded) for architectural insights. | Improved understanding of recovery dynamics and architectural weaknesses. |
-| **5. Randomized Testing Efficacy Measurement** | Compare structured vs. randomized testing to measure the discovery rate of "unknown unknowns" across different chaos strategies. | Quantifiable insights into the effectiveness of various chaos testing methods. |
+| **1. Steady State Pattern Analysis**           | Collect extended baseline measurements of normal system behavior across hundreds of metrics to define "healthy" operation and detect subtle degradations.     | Well-defined system health baselines and early detection of small anomalies.                    |
+| **2. Systemic Vulnerability Mapping**          | Apply complex systems theory and accident analysis techniques to identify emergent behaviors and interaction points invisible in component-level testing.     | Identification of hidden systemic vulnerabilities and interaction risks.                        |
+| **3. Hypothesis Disprove Models**              | Construct experiments to challenge assumptions by attempting to disprove rather than confirm beliefs about system resilience.                                 | Discovery of overlooked failure modes and confirmation or refutation of resilience assumptions. |
+| **4. Recovery Pattern Analysis**               | Measure and categorize how systems recover from perturbations, analyzing recovery shapes (e.g., immediate, oscillating, degraded) for architectural insights. | Improved understanding of recovery dynamics and architectural weaknesses.                       |
+| **5. Randomized Testing Efficacy Measurement** | Compare structured vs. randomized testing to measure the discovery rate of "unknown unknowns" across different chaos strategies.                              | Quantifiable insights into the effectiveness of various chaos testing methods.                  |
 
 #### Practical Example: Netflix's Evidence-Based Chaos Engineering
 
@@ -1060,13 +1060,13 @@ Use this checklist and iterative diagram to guide your organization's Chaos Engi
 
 A quarterly review meeting where an SRE team presents results from their resilience testing program to executive stakeholders. Slides show year-over-year improvements in key resilience metrics, summarized as follows:
 
-| Metric | Before Program Implementation | After Program Implementation | Improvement |
+| Metric                                | Before Program Implementation | After Program Implementation | Improvement       |
 | ------------------------------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Mean Time to Detect Critical Failures | 12 min | 3 min | 75% Faster |
-| Regional Failover Success Rate | 82% | 99.8% | Near-Perfect Rate |
-| Dependency Failure Recovery | 17 min | 4 min | 76% Faster |
-| Game Day Mean Time to Repair | 52 min | 14 min | 73% Faster |
-| Unexpected Production Incidents | 24 | 7 | 70% Reduction |
+| Mean Time to Detect Critical Failures | 12 min                        | 3 min                        | 75% Faster        |
+| Regional Failover Success Rate        | 82%                           | 99.8%                        | Near-Perfect Rate |
+| Dependency Failure Recovery           | 17 min                        | 4 min                        | 76% Faster        |
+| Game Day Mean Time to Repair          | 52 min                        | 14 min                       | 73% Faster        |
+| Unexpected Production Incidents       | 24                            | 7                            | 70% Reduction     |
 
 The most prominent metric, "Unexpected Production Incidents," highlights a 70% reduction after resilience program implementation. Banking executives are nodding approvingly while reviewing a document titled "Resilience Testing ROI: Customer Trust and Regulatory Compliance."
 
@@ -1118,13 +1118,13 @@ The absence of these considerations led to quarterly reviews where executives co
 
 Elite organizations measure resilience effectiveness through systematic evidence gathering. The table below summarizes five key best practices, providing descriptions and real-world examples to illustrate their application:
 
-| **Practice** | **Description** | **Example** |
+| **Practice**                           | **Description**                                                                                                                                          | **Example**                                                                                                   |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Resilience Benchmark Development** | Establishing industry-specific baselines through peer comparison, historical incident analysis, and regulatory expectations to define "good" resilience. | Mastercard developed benchmarks by analyzing historical outages and aligning with regulatory standards. |
-| **Counterfactual Incident Analysis** | Estimating avoided incidents by reviewing remediated vulnerabilities and comparing against historical patterns to quantify the value of prevention. | Mastercard quantified that addressing key vulnerabilities prevented 7 high-severity incidents annually. |
-| **Business Impact Correlation** | Linking resilience metrics to business outcomes like customer retention, transaction volume, and fraud loss to demonstrate value beyond technical gains. | Mastercard found that a 10% resilience score improvement yielded a 4.7% drop in customer-impacting incidents. |
-| **Recovery Pattern Measurement** | Implementing telemetry to capture recovery behavior during tests and incidents, enabling precise, time-based improvement tracking. | Mastercard used detailed telemetry to reduce dependency recovery time from 17 minutes to 4 minutes. |
-| **Resilience Investment ROI Modeling** | Building valuation models that quantify the impact of resilience investments across dimensions like incident reduction, compliance, and customer trust. | Mastercard’s ROI modeling showed a 3.2% increase in transaction approval rates post-resilience improvements. |
+| **Resilience Benchmark Development**   | Establishing industry-specific baselines through peer comparison, historical incident analysis, and regulatory expectations to define "good" resilience. | Mastercard developed benchmarks by analyzing historical outages and aligning with regulatory standards.       |
+| **Counterfactual Incident Analysis**   | Estimating avoided incidents by reviewing remediated vulnerabilities and comparing against historical patterns to quantify the value of prevention.      | Mastercard quantified that addressing key vulnerabilities prevented 7 high-severity incidents annually.       |
+| **Business Impact Correlation**        | Linking resilience metrics to business outcomes like customer retention, transaction volume, and fraud loss to demonstrate value beyond technical gains. | Mastercard found that a 10% resilience score improvement yielded a 4.7% drop in customer-impacting incidents. |
+| **Recovery Pattern Measurement**       | Implementing telemetry to capture recovery behavior during tests and incidents, enabling precise, time-based improvement tracking.                       | Mastercard used detailed telemetry to reduce dependency recovery time from 17 minutes to 4 minutes.           |
+| **Resilience Investment ROI Modeling** | Building valuation models that quantify the impact of resilience investments across dimensions like incident reduction, compliance, and customer trust.  | Mastercard’s ROI modeling showed a 3.2% increase in transaction approval rates post-resilience improvements.  |
 
 When Mastercard implemented these evidence-based approaches to resilience measurement, they were able to demonstrate that each 10% improvement in their aggregate resilience score correlated with a 4.7% reduction in customer-impacting incidents and a 3.2% improvement in transaction approval rates.
 

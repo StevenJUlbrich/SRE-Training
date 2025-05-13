@@ -136,13 +136,13 @@ Financial institutions must recognize that cross-service visibility isn't just a
 
 ## Scene Description
 
-**The Ghost Span Appears** – Hector walks in, drops a hand-annotated span diagram. "Your request went here, here, here, and exploded here."
+**The Ghost Span Appears** – Hector Alavaz walks in, drops a hand-annotated span diagram. "Your request went here, here, here, and exploded here."
 
-*Expanded narrative: Hector arrives, observes the situation briefly, and then places a hand-drawn diagram on the table. It shows a complete transaction flow with precise timing for each service: frontend → auth → ledger → notification. One segment is circled in red: ledger → compliance-check → ledger. "Your request went here, here, here, and exploded here," he explains, pointing to the compliance check service. "The actual processing takes 200ms, but you're waiting 11 seconds for a response because of a retry loop."*
+*Expanded narrative: Hector Alavaz arrives, observes the situation briefly, and then places a hand-drawn diagram on the table. It shows a complete transaction flow with precise timing for each service: frontend → auth → ledger → notification. One segment is circled in red: ledger → compliance-check → ledger. "Your request went here, here, here, and exploded here," he explains, pointing to the compliance check service. "The actual processing takes 200ms, but you're waiting 11 seconds for a response because of a retry loop."*
 
 ## Teaching Narrative
 
-This scene demonstrates the diagnostic power of trace visualization. Hector's hand-drawn trace diagram immediately reveals what hours of discussion and log analysis couldn't: the exact location and mechanism of the problem. This moment illustrates how properly visualized trace data transforms troubleshooting from speculation to precision, enabling teams to directly target the root cause rather than its symptoms.
+This scene demonstrates the diagnostic power of trace visualization. Hector Alavaz's hand-drawn trace diagram immediately reveals what hours of discussion and log analysis couldn't: the exact location and mechanism of the problem. This moment illustrates how properly visualized trace data transforms troubleshooting from speculation to precision, enabling teams to directly target the root cause rather than its symptoms.
 
 ## Trace Visualization Explained
 
@@ -160,7 +160,7 @@ In financial services, trace visualization provides tremendous operational value
 
 ## The Visual Diagnosis Power
 
-Hector's immediate identification of the problem—"ledger → compliance-check → ledger"—demonstrates how effective visualization transforms diagnostic capability. What was invisible in logs and metrics becomes instantly apparent in a properly structured trace visualization, allowing immediate focus on the specific component causing the issue.
+Hector Alavaz's immediate identification of the problem—"ledger → compliance-check → ledger"—demonstrates how effective visualization transforms diagnostic capability. What was invisible in logs and metrics becomes instantly apparent in a properly structured trace visualization, allowing immediate focus on the specific component causing the issue.
 
 ## Banking Implementation Guidance
 
@@ -174,7 +174,7 @@ To implement effective trace visualization in financial systems:
 
 4. **Business Context Integration**: Include relevant financial information (transaction types, amounts) directly in trace visualizations
 
-The specific issue Hector identifies—a retry loop in the communication with the compliance service—represents a common pattern in financial systems. Compliance checks are critical for regulatory reasons but often become bottlenecks or failure points. Effective trace visualization makes these patterns immediately visible, enabling both tactical fixes and strategic improvements to these critical components.
+The specific issue Hector Alavaz identifies—a retry loop in the communication with the compliance service—represents a common pattern in financial systems. Compliance checks are critical for regulatory reasons but often become bottlenecks or failure points. Effective trace visualization makes these patterns immediately visible, enabling both tactical fixes and strategic improvements to these critical components.
 
 ## Panel 5: OpenTelemetry Unleashed - Tracing Implementation
 
@@ -312,13 +312,13 @@ The visualization of "red bars" on the trace makes a critical point about effect
 
 ## Scene Description
 
-**Lesson Locked In** – Hector: "Tracing is the chalk outline. You want to see where the body dropped. Now you can."
+**Lesson Locked In** – Hector Alavaz: "Tracing is the chalk outline. You want to see where the body dropped. Now you can."
 
-*Expanded narrative: As the team deploys the fix and watches transaction times return to normal, Hector offers his assessment. "Tracing is the chalk outline at a crime scene," he observes. "You want to see exactly where the body dropped and how it happened. Logs tell you something died. Metrics tell you when it died. Traces show you the entire sequence of events in perfect detail." He looks at the now-functioning trace visualization. "Now you can see not just that something's wrong, but precisely what's wrong—and how to fix it."*
+*Expanded narrative: As the team deploys the fix and watches transaction times return to normal, Hector Alavaz offers his assessment. "Tracing is the chalk outline at a crime scene," he observes. "You want to see exactly where the body dropped and how it happened. Logs tell you something died. Metrics tell you when it died. Traces show you the entire sequence of events in perfect detail." He looks at the now-functioning trace visualization. "Now you can see not just that something's wrong, but precisely what's wrong—and how to fix it."*
 
 ## Teaching Narrative
 
-Hector's crime scene metaphor perfectly captures the unique value of distributed tracing in observability. His comparison of traces to chalk outlines emphasizes how tracing provides spatial and temporal context that other telemetry types can't. This framing helps the team understand not just the technical implementation of tracing but its fundamental purpose: to reveal the complete story of system behavior in a way that enables precise understanding and action.
+Hector Alavaz's crime scene metaphor perfectly captures the unique value of distributed tracing in observability. His comparison of traces to chalk outlines emphasizes how tracing provides spatial and temporal context that other telemetry types can't. This framing helps the team understand not just the technical implementation of tracing but its fundamental purpose: to reveal the complete story of system behavior in a way that enables precise understanding and action.
 
 ## Forensic Observability Explained
 
@@ -336,7 +336,7 @@ In financial services, forensic observability addresses both operational and reg
 
 ## The Telemetry Trinity
 
-Hector's description of how "logs tell you something died, metrics tell you when it died, traces show you the entire sequence" perfectly articulates the complementary nature of different telemetry types. This trinity provides complete observability when properly integrated, with each type contributing critical information that the others lack.
+Hector Alavaz's description of how "logs tell you something died, metrics tell you when it died, traces show you the entire sequence" perfectly articulates the complementary nature of different telemetry types. This trinity provides complete observability when properly integrated, with each type contributing critical information that the others lack.
 
 ## Banking Implementation Guidance
 
@@ -350,4 +350,4 @@ To implement forensic observability in financial systems:
 
 4. **Replay Capability**: Create the ability to replay traced transactions to understand and verify system behavior
 
-The difference Hector highlights—seeing "not just that something's wrong, but precisely what's wrong—and how to fix it"—represents the fundamental value proposition of distributed tracing. In financial systems, where transaction failures directly impact customers and the business, this precision translates to faster resolution, reduced downtime, better customer experience, and ultimately improved financial performance.
+The difference Hector Alavaz highlights—seeing "not just that something's wrong, but precisely what's wrong—and how to fix it"—represents the fundamental value proposition of distributed tracing. In financial systems, where transaction failures directly impact customers and the business, this precision translates to faster resolution, reduced downtime, better customer experience, and ultimately improved financial performance.

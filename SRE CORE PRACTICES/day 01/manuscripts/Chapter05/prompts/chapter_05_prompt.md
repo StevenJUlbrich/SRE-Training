@@ -47,7 +47,7 @@ ______________________________________________________________________
 
 ### ✍️ STYLE & VOICE:
 
-- Hector’s tone: dry, incisive, slightly intimidating
+- Hector Alavaz’s tone: dry, incisive, slightly intimidating
 - Cast behavior must reflect the pressure of a high-stakes ATM outage
 - Let frustration, confusion, and relief all show up through actions and internal monologue
 - Keep scenes cinematic but always tied to the teaching goals
@@ -88,4 +88,4 @@ Start from:
 # Chapter 5 – “Patterns to Avoid Like Volcanoes”
 ```
 
-Continue through all 10 panels. End with a postmortem reflection, an assessment hook, and Hector’s closing line.
+Continue through all 10 panels. End with a postmortem reflection, an assessment hook, and Hector Alavaz’s closing line.

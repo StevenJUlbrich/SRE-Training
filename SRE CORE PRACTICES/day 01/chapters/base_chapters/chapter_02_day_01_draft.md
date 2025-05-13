@@ -228,17 +228,17 @@ To establish cross-team visibility in financial systems:
 
 The blame cycle doesn't just delay resolution—it creates regulatory and reputational risk as customers experience extended outages. Breaking this cycle requires technical solutions that bridge visibility gaps and cultural approaches that prioritize collaborative problem-solving over defensive positioning.
 
-## Panel 6: Hector Steps In - Observability Preparation
+## Panel 6: Hector Alavaz Steps In - Observability Preparation
 
 ## Scene Description
 
-**Hector Steps In** – "Observability isn't magic. It's preparation. And you didn't prepare." He slams a diagram down.
+**Hector Alavaz Steps In** – "Observability isn't magic. It's preparation. And you didn't prepare." He slams a diagram down.
 
-*Expanded narrative: Hector listens silently, then stands. The room quiets. "Observability isn't magic," he says evenly. "It's preparation. And you didn't prepare." He places a diagram on the table showing service dependencies with observability touchpoints highlighted—and critical gaps where telemetry should exist but doesn't. "You can't debug what you can't see, and you chose not to see."*
+*Expanded narrative: Hector Alavaz listens silently, then stands. The room quiets. "Observability isn't magic," he says evenly. "It's preparation. And you didn't prepare." He places a diagram on the table showing service dependencies with observability touchpoints highlighted—and critical gaps where telemetry should exist but doesn't. "You can't debug what you can't see, and you chose not to see."*
 
 ## Teaching Narrative
 
-Hector's intervention cuts through the chaos with a fundamental truth: effective observability is proactive, not reactive. His diagram visualizes a critical concept—that observability must be deliberately designed into systems before incidents occur, not improvised during crises.
+Hector Alavaz's intervention cuts through the chaos with a fundamental truth: effective observability is proactive, not reactive. His diagram visualizes a critical concept—that observability must be deliberately designed into systems before incidents occur, not improvised during crises.
 
 ## Observability Preparation Explained
 
@@ -256,7 +256,7 @@ In financial systems, this preparation is vital. Banking transactions aren't mer
 
 ## The Choice Factor
 
-Hector's statement that "you chose not to see" highlights a critical insight: observability gaps aren't accidents—they're consequences of deliberate decisions. Either through active choices (disabling tracing) or passive omissions (not designing for visibility), teams create their own blind spots.
+Hector Alavaz's statement that "you chose not to see" highlights a critical insight: observability gaps aren't accidents—they're consequences of deliberate decisions. Either through active choices (disabling tracing) or passive omissions (not designing for visibility), teams create their own blind spots.
 
 ## Banking Implementation Guidance
 
@@ -278,7 +278,7 @@ Financial institutions must recognize that observability isn't an afterthought o
 
 **The Corrected View** – Juana overlays what *should* have been captured: key spans, context IDs, and log correlation.
 
-*Expanded narrative: Juana steps forward with a tablet showing an enhanced version of Hector's diagram. "Here's what we should be capturing," she explains, highlighting key points in the transaction flow. "Trace spans between services. Context IDs preserved across boundaries. Correlated logs at each step." She toggles between the current state and the ideal state. "With this in place, we'd have found the issue in seconds, not hours."*
+*Expanded narrative: Juana steps forward with a tablet showing an enhanced version of Hector Alavaz's diagram. "Here's what we should be capturing," she explains, highlighting key points in the transaction flow. "Trace spans between services. Context IDs preserved across boundaries. Correlated logs at each step." She toggles between the current state and the ideal state. "With this in place, we'd have found the issue in seconds, not hours."*
 
 ## Teaching Narrative
 
@@ -364,13 +364,13 @@ The realization that "we've been flying blind by our own choice" represents the 
 
 ## Scene Description
 
-**Closing Shot** – Hector sipping coffee: "The system didn't hide the truth. You just didn't teach it how to talk."
+**Closing Shot** – Hector Alavaz sipping coffee: "The system didn't hide the truth. You just didn't teach it how to talk."
 
-*Expanded narrative: Hector leans against the wall, sipping his ever-present coffee. "The system didn't hide the truth from you," he observes calmly. "You just didn't teach it how to talk." He nods toward the configuration management screen. "Fix the observability first, then the bug. Otherwise, you'll be here again tomorrow, having the same conversation about a different problem."*
+*Expanded narrative: Hector Alavaz leans against the wall, sipping his ever-present coffee. "The system didn't hide the truth from you," he observes calmly. "You just didn't teach it how to talk." He nods toward the configuration management screen. "Fix the observability first, then the bug. Otherwise, you'll be here again tomorrow, having the same conversation about a different problem."*
 
 ## Teaching Narrative
 
-Hector's closing observation captures a profound shift in how we should think about systems: not as passive entities that we monitor, but as active participants that we teach to communicate. This personification isn't just metaphorical—it represents a fundamental reframing of the relationship between systems and operators.
+Hector Alavaz's closing observation captures a profound shift in how we should think about systems: not as passive entities that we monitor, but as active participants that we teach to communicate. This personification isn't just metaphorical—it represents a fundamental reframing of the relationship between systems and operators.
 
 ## Systems That Speak Explained
 
@@ -402,4 +402,4 @@ To build financial systems that speak clearly:
 
 4. **Conversational Interfaces**: Design observability tools that facilitate dialogue-like interaction with systems
 
-Hector's prioritization—"Fix the observability first, then the bug"—emphasizes that visibility is a prerequisite for effective problem-solving. In banking systems, where every minute of outage has financial and regulatory implications, this prioritization isn't theoretical—it's essential for maintaining trust, compliance, and operational excellence.
+Hector Alavaz's prioritization—"Fix the observability first, then the bug"—emphasizes that visibility is a prerequisite for effective problem-solving. In banking systems, where every minute of outage has financial and regulatory implications, this prioritization isn't theoretical—it's essential for maintaining trust, compliance, and operational excellence.

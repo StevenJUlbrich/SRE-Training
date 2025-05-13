@@ -28,11 +28,11 @@ CREATE THE CORE LEARNING MATERIAL FOR "Foundations of Observability" FOCUSED ON 
    - Diagram should show data flow or conceptual relationship
 
 3. TIERED INSIGHTS TABLE
-   | Level | Core Insight | Common Pitfall |
-   |-------|-------------|----------------|
-   | Beginner | ... | ... |
-   | Intermediate | ... | ... |
-   | Advanced/SRE | ... | ... |
+   | Level        | Core Insight | Common Pitfall |
+   | ------------ | ------------ | -------------- |
+   | Beginner     | ...          | ...            |
+   | Intermediate | ...          | ...            |
+   | Advanced/SRE | ...          | ...            |
 
 4. REFLECTION QUESTION
    - Pose ONE thought-provoking question that challenges assumptions about [pillar]
@@ -50,24 +50,24 @@ Return a well-formatted Markdown document.
 
 ### Part B: Character Integration & Practical Application
 
-The second prompt would take the core material and wrap it in Hector's perspective and practical insights:
+The second prompt would take the core material and wrap it in Hector Alavaz's perspective and practical insights:
 
 ```
 YOU ARE A TECHNICAL STORYTELLER.
 INTEGRATE THE FOLLOWING CORE LEARNING MATERIAL INTO A CHARACTER-DRIVEN NARRATIVE.
 
 ## SPECIFICATIONS
-- **Character**: Hector, veteran SRE from Mexico City (experienced, slightly cynical, practical)
+- **Character**: Hector Alavaz, veteran SRE from Mexico City (experienced, slightly cynical, practical)
 - **Length**: Add ~400 words to the provided material
-- **Voice**: 60% Hector's dialogue / 40% neutral narrator
+- **Voice**: 60% Hector Alavaz's dialogue / 40% neutral narrator
 - **Structure**: Maintain the core learning material while adding character elements
 
 ## CONTENT TO INTEGRATE
 [PASTE PART A OUTPUT HERE]
 
 ## INTEGRATION STRUCTURE
-1. HECTOR'S INTRODUCTION (200 words)
-   - Open with Hector explaining WHY this pillar matters
+1. Hector Alavaz'S INTRODUCTION (200 words)
+   - Open with Hector Alavaz explaining WHY this pillar matters
    - Include a war story demonstrating costly consequences of getting this wrong
    - End with a provocative statement that challenges conventional thinking
 
@@ -75,20 +75,20 @@ INTEGRATE THE FOLLOWING CORE LEARNING MATERIAL INTO A CHARACTER-DRIVEN NARRATIVE
    - Keep all educational content from the provided material
    - Do not modify the Mermaid diagrams or tables
 
-3. HECTOR'S PRACTICAL REVIEW (200 words)
+3. Hector Alavaz'S PRACTICAL REVIEW (200 words)
    - Provide specific examples using common enterprise tools (Grafana, Datadog, Dynatrace)
    - Explain how different environments affect this pillar
    - Share 2-3 "field-tested" best practices
-   - Include one anti-pattern that Hector has seen repeatedly
+   - Include one anti-pattern that Hector Alavaz has seen repeatedly
 
 4. EXTEND THE REFLECTION QUESTION
-   - Take the existing question and provide Hector's nuanced answer
+   - Take the existing question and provide Hector Alavaz's nuanced answer
    - Have him share deeper insight from his experience
    - End with a practical "what to do next" suggestion
 
 ## IMPORTANT GUIDELINES
 - Maintain the technical accuracy of the original content
-- Keep Hector's voice consistent throughout
+- Keep Hector Alavaz's voice consistent throughout
 - Ensure smooth transitions between educational content and character narrative
 - Enhance but don't overshadow the learning material
 
@@ -112,7 +112,7 @@ Return a well-formatted Markdown document that integrates the character elements
 
 1. Generate core learning material for each pillar (Metrics, Logs, Traces) using Part A
 2. Review and refine the technical content if needed
-3. Feed each refined piece into Part B to add Hector's perspective
+3. Feed each refined piece into Part B to add Hector Alavaz's perspective
 4. Create a final integration section that ties all three pillars together
 
 This modular approach gives you more control over the quality and consistency of your training materials while still achieving the character-driven, educationally sound content you're aiming for.

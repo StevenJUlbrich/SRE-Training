@@ -47,7 +47,7 @@ ______________________________________________________________________
 
 - **Scene**: Juana mocks Daniel’s threshold-based alert
 - **Teaching Moment**: Alert volume =/= alert validity
-- **Widget**: Hector Quote — “Geneos rules don’t fix modern risk.”
+- **Widget**: Hector Alavaz Quote — “Geneos rules don’t fix modern risk.”
 - **Artifact**: Screenshot of alert rules from 2009
 
 ### Panel 3 – Looking for Symptoms, Not Signals
@@ -59,7 +59,7 @@ ______________________________________________________________________
 
 ### Panel 4 – Burn Rate Awakening
 
-- **Scene**: Hector shows burn rate slope visual
+- **Scene**: Hector Alavaz shows burn rate slope visual
 - **Teaching Moment**: SLO alerting is about **speed of degradation**
 - **Widget**: Diagram — Burn rate slope visual
 - **Artifact**: Service A: 10% in 5m, Service B: 30% in 30m
@@ -80,9 +80,9 @@ ______________________________________________________________________
 
 ### Panel 7 – Lesson Locked In
 
-- **Scene**: Hector summarizes new alert standards
+- **Scene**: Hector Alavaz summarizes new alert standards
 - **Teaching Moment**: Alerts should answer: what’s broken, who’s affected, what’s next?
-- **Widget**: Hector Quote — “Let’s not build alarms. Let’s build clarity.”
+- **Widget**: Hector Alavaz Quote — “Let’s not build alarms. Let’s build clarity.”
 - **Artifact**: Screenshot of alert with embedded links and triggers
 
 ______________________________________________________________________
@@ -93,7 +93,7 @@ ______________________________________________________________________
 - **Juana**: Mentor role, encourages meaningful thresholds and minimalism
 - **Aisha**: Reframes alerts around business context and customer experience
 - **Clara**: Drives YAML cleanup and alert correlation logic
-- **Hector**: Brings SLO awareness and alert criteria philosophy
+- **Hector Alavaz**: Brings SLO awareness and alert criteria philosophy
 
 ______________________________________________________________________
 
@@ -107,12 +107,12 @@ ______________________________________________________________________
 
 ## 📋 Panel Beat-to-Concept Map
 
-| Beat # | Panel Title | Teaching Goal |
+| Beat # | Panel Title                | Teaching Goal                          |
 | ------ | -------------------------- | -------------------------------------- |
-| 1 | The All-Night Alarm | Static alert ≠ meaningful incident |
-| 2 | False Positives Everywhere | Alert fatigue breeds distrust |
-| 3 | Looking for Symptoms | User pain must trigger alerts |
-| 4 | Burn Rate Awakening | Burn rate reveals risk slope |
-| 5 | Fixing the Noise | Criteria = correlation + clarity |
-| 6 | Test Fire Drill | Good alerts = actionable context |
-| 7 | Lesson Locked In | System-wide alerting standards defined |
+| 1      | The All-Night Alarm        | Static alert ≠ meaningful incident     |
+| 2      | False Positives Everywhere | Alert fatigue breeds distrust          |
+| 3      | Looking for Symptoms       | User pain must trigger alerts          |
+| 4      | Burn Rate Awakening        | Burn rate reveals risk slope           |
+| 5      | Fixing the Noise           | Criteria = correlation + clarity       |
+| 6      | Test Fire Drill            | Good alerts = actionable context       |
+| 7      | Lesson Locked In           | System-wide alerting standards defined |
