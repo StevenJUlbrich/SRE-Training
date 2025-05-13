@@ -28,7 +28,7 @@
                 "leather notebook on desk"
             ],
             "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated.",
-            "role": "SRE Trainer"
+            "role": "Senior SRE"
         },
         "Daniel": {
             "visual_tags": [
@@ -48,7 +48,8 @@
                 "circuit board tattoo on forearm",
                 "earbuds (frequently half-in)"
             ],
-            "appearance": "An overcaffeinated SRE in constant tension between sarcasm and stress."
+            "appearance": "An overcaffeinated SRE in constant tension between sarcasm and stress.",
+            "role": "Junior SRE"
         },
         "Juana": {
             "visual_tags": [
@@ -69,7 +70,8 @@
                 "tablet",
                 "alert screen"
             ],
-            "appearance": "Quietly competent and always ready to call out bad monitoring logic."
+            "appearance": "Quietly competent and always ready to call out bad monitoring logic.",
+            "role": "SRE Engineer"
         },
         "Claudia": {
             "visual_tags": [
@@ -89,102 +91,8 @@
                 "laptop case",
                 "wireless earbuds"
             ],
-            "appearance": "An ops optimist with too many dashboards and not enough hands."
-        },
-        "Ops Lead": {
-            "visual_tags": [
-                "non-binary",
-                "24 years old",
-                "5'8\"",
-                "athletic build",
-                "short hair dyed in bright colors",
-                "quirky t-shirts with tech humor"
-            ],
-            "required_constraints": [],
-            "motion_rules": null,
-            "voice_tone": null,
-            "prop_loadout": [],
-            "appearance": null
-        },
-        "Dev Lead": {
-            "visual_tags": [
-                "non-binary",
-                "32 years old",
-                "5'9\"",
-                "tall and lanky",
-                "medium-length black hair often in a bun",
-                "eye color deep blue",
-                "stylish glasses",
-                "business casual with a tech twist"
-            ],
-            "required_constraints": [],
-            "motion_rules": null,
-            "voice_tone": null,
-            "prop_loadout": [],
-            "appearance": null
-        },
-        "Net-Eng": {
-            "visual_tags": [
-                "38 years old",
-                "5'10\"",
-                "stocky build",
-                "round face with a friendly demeanor",
-                "short hair with a slight wave",
-                "eye color dark brown",
-                "casual tech attire with a hint of geeky flair",
-                "often seen with a tablet or laptop"
-            ],
-            "required_constraints": [],
-            "motion_rules": null,
-            "voice_tone": null,
-            "prop_loadout": [],
-            "appearance": null
-        },
-        "Finance Analyst": {
-            "visual_tags": [
-                "female",
-                "30 years old",
-                "5'5\"",
-                "slim build",
-                "long straight hair tied in low ponytail",
-                "business casual with colorful pens"
-            ],
-            "required_constraints": [],
-            "motion_rules": null,
-            "voice_tone": null,
-            "prop_loadout": [],
-            "appearance": null
-        },
-        "Engineer": {
-            "visual_tags": [
-                "female",
-                "35 years old",
-                "5'2\"",
-                "petite",
-                "simple, practical clothing",
-                "quirky pins on backpack"
-            ],
-            "required_constraints": [],
-            "motion_rules": null,
-            "voice_tone": null,
-            "prop_loadout": [],
-            "appearance": null
-        },
-        "Developer": {
-            "visual_tags": [
-                "male",
-                "25 years old",
-                "5'6\"",
-                "petite",
-                "short curly hair",
-                "eye color green",
-                "hoodies and jeans"
-            ],
-            "required_constraints": [],
-            "motion_rules": null,
-            "voice_tone": null,
-            "prop_loadout": [],
-            "appearance": null
+            "appearance": "An ops optimist with too many dashboards and not enough hands.",
+            "role": "SRE Engineer"
         },
         "Wanjiru": {
             "visual_tags": [
@@ -210,7 +118,8 @@
                 "annotated printouts of logs"
             ],
             "appearance": "Eager junior dev with the energy of someone who hasn't been broken by prod yet.",
-            "catchphrase": "But why does it work that way in production?"
+            "catchphrase": "But why does it work that way in production?",
+            "role": "SRE Junior"
         },
         "Emmanuel": {
             "visual_tags": [
@@ -234,7 +143,8 @@
                 "cracked-screen Android phone"
             ],
             "appearance": "Mid-career support hero with one eye on the logs and one on his exit plan.",
-            "catchphrase": "There’s always a hidden dependency..."
+            "catchphrase": "There’s always a hidden dependency...",
+            "role": "Architect"
         },
         "Aisha": {
             "visual_tags": [
@@ -257,7 +167,8 @@
                 "tablet with CRM dashboard"
             ],
             "appearance": "Strategic analyst who always brings the conversation back to human impact.",
-            "catchphrase": "How would we explain this to the customer?"
+            "catchphrase": "How would we explain this to the customer?",
+            "role": "Operations Manager"
         },
         "Danny": {
             "visual_tags": [
@@ -281,7 +192,8 @@
                 "forearm circuit tattoo"
             ],
             "appearance": "DevOps rebel who believes every incident is just one YAML file away from resolution.",
-            "catchphrase": "There’s definitely a script for that."
+            "catchphrase": "There’s definitely a script for that.",
+            "role": "Developer"
         },
         "Njeri": {
             "visual_tags": [
@@ -303,7 +215,8 @@
                 "laptop with three terminal windows open"
             ],
             "appearance": "Quiet network engineer with a deep philosophical bent about infrastructure.",
-            "catchphrase": "The network isn't the problem… but it might be part of the solution."
+            "catchphrase": "The network isn't the problem… but it might be part of the solution.",
+            "role": "Network Engineer"
         },
         "Clara": {
             "visual_tags": [
@@ -327,7 +240,8 @@
                 "personal severity tracker"
             ],
             "appearance": "QA specialist with a stare that could make a flaky service apologize.",
-            "catchphrase": "Prove it in logs, or I’m not changing my mind."
+            "catchphrase": "Prove it in logs, or I’m not changing my mind.",
+            "role": "QA Engineer"
         },
         "Omar": {
             "visual_tags": [
@@ -351,7 +265,8 @@
                 "sticky notes with analogies"
             ],
             "appearance": "Bridge-builder between devs and humans; good at PR, better at empathy.",
-            "catchphrase": "So… what would we tell users about this?"
+            "catchphrase": "So… what would we tell users about this?",
+            "role": "SRE Advocate"
         },
         "Malik": {
             "visual_tags": [
@@ -375,7 +290,8 @@
                 "printed SLO docs"
             ],
             "appearance": "Legacy-systems whisperer with a strategist’s calm and CTO scars to prove it.",
-            "catchphrase": "Let’s not confuse new with better."
+            "catchphrase": "Let’s not confuse new with better.",
+            "role": "Auditor"
         },
         "Zuri": {
             "visual_tags": [
@@ -398,7 +314,8 @@
                 "laptop with dark-mode IDE"
             ],
             "appearance": "Modern DevOps lead who believes every manual process is an insult to evolution.",
-            "catchphrase": "Can we automate this, or are we just bored?"
+            "catchphrase": "Can we automate this, or are we just bored?",
+            "role": "DevOps Engineer"
         },
         "Jamal": {
             "visual_tags": [
@@ -423,7 +340,8 @@
                 "coffee with 2 sugars"
             ],
             "appearance": "Customer advocate who humanizes the metrics and translates alerts into emotions.",
-            "catchphrase": "What would the user say about this graph?"
+            "catchphrase": "What would the user say about this graph?",
+            "role": "Customer Advocate"
         },
         "Lucia": {
             "visual_tags": [
@@ -447,7 +365,8 @@
                 "mechanical pencil"
             ],
             "appearance": "Senior risk engineer with a courtroom vibe and zero tolerance for guesswork.",
-            "catchphrase": "Every system lies. The question is how loudly and when."
+            "catchphrase": "Every system lies. The question is how loudly and when.",
+            "role": "Risk Analyst"
         },
         "Gabriel": {
             "visual_tags": [
@@ -471,7 +390,8 @@
                 "hand-drawn trace diagrams"
             ],
             "appearance": "Observability savant who sees systems in waveform and dreams in latency.",
-            "catchphrase": "Logs are for when you're scared. Metrics are for when you're wise."
+            "catchphrase": "Logs are for when you're scared. Metrics are for when you're wise.",
+            "role": "SRE Engineer"
         },
         "Ana": {
             "visual_tags": [
@@ -495,7 +415,8 @@
                 "speech-to-text assistant"
             ],
             "appearance": "Comms lead who controls chaos through structure and speaks fluent outage.",
-            "catchphrase": "You don’t just fix outages. You narrate them."
+            "catchphrase": "You don’t just fix outages. You narrate them.",
+            "role": "Board Member"
         },
         "Emily": {
             "visual_tags": [
@@ -519,9 +440,10 @@
                 "folded MBTA train map"
             ],
             "appearance": "Looks quiet until she casually dismantles your whole sprint logic in one sentence.",
-            "catchphrase": "Have we checked what the user actually does with this?"
+            "catchphrase": "Have we checked what the user actually does with this?",
+            "role": "Product Manager"
         },
-        "Risk Officer Kamau": {
+        "Kamau": {
             "visual_tags": [
                 "male",
                 "38 years old",
@@ -543,9 +465,10 @@
                 "steel pen"
             ],
             "appearance": "Feels like legal counsel but operates like a surgical auditor. Quietly terrifying in meetings.",
-            "catchphrase": "Where’s the documented exception for this risk class?"
+            "catchphrase": "Where’s the documented exception for this risk class?",
+            "role": "Compliance Officer"
         },
-        "Junior Dev": {
+        "Tanusha": {
             "visual_tags": [
                 "female",
                 "25 years old",
@@ -567,9 +490,10 @@
                 "USB toy on desk with blinking LED"
             ],
             "appearance": "New to prod, hungry to learn, and quietly terrified of being blamed for downtime.",
-            "catchphrase": "Is this safe to test in staging first...?"
+            "catchphrase": "Is this safe to test in staging first...?",
+            "role": "Junior Devevloper"
         },
-        "Finance Rep": {
+        "Austen": {
             "visual_tags": [
                 "male",
                 "45 years old",
@@ -591,7 +515,8 @@
                 "legal pad with budget notes"
             ],
             "appearance": "Looks like he’s here to say no to your new observability tooling—but only after a long pause.",
-            "catchphrase": "Show me how that improves margin, not morale."
+            "catchphrase": "Show me how that improves margin, not morale.",
+            "role": "Finance Director"
         },
         "Alejandro": {
             "visual_tags": [
@@ -615,7 +540,8 @@
                 "steel pen that clicks when thinking"
             ],
             "appearance": "An engineer who documents outages like field reports and treats root cause like a personal vendetta.",
-            "catchphrase": "We build for failure. The question is: which one are you ignoring today?"
+            "catchphrase": "We build for failure. The question is: which one are you ignoring today?",
+            "role": "Incident Commander"
         },
         "Marisol": {
             "visual_tags": [
@@ -639,7 +565,8 @@
                 "fine-tip pen, always black"
             ],
             "appearance": "Her presence calms a room but subtly resets the stakes. People lean in when she starts to speak.",
-            "catchphrase": "What’s the long-term cost of getting this wrong?"
+            "catchphrase": "What’s the long-term cost of getting this wrong?",
+            "role": " Banking Executive"
         },
         "Sofia": {
             "visual_tags": [
@@ -664,7 +591,8 @@
                 "highlighted incident logs"
             ],
             "appearance": "She’s not just watching the systems. She’s watching the watchers, too.",
-            "catchphrase": "I think… there's something weird in the logs, if you zoom in."
+            "catchphrase": "I think… there's something weird in the logs, if you zoom in.",
+            "role": "SRE Engineer"
         },
         "Leonel": {
             "visual_tags": [
@@ -689,7 +617,8 @@
                 "portable monitor just for graphs"
             ],
             "appearance": "Looks like he hasn't blinked since the last Grafana update. Loves metrics too much to sleep.",
-            "catchphrase": "But what if we tracked *everything* and then filtered it later?"
+            "catchphrase": "But what if we tracked *everything* and then filtered it later?",
+            "role": "Data Analyst"
         },
         "Katherine": {
             "visual_tags": [
@@ -714,7 +643,8 @@
                 "checklist card for 'when things go sideways'"
             ],
             "appearance": "The kind of senior engineer who leads without announcing it—and gets paged even when she’s not on call.",
-            "catchphrase": "Have we stress-tested the human parts of this system yet?"
+            "catchphrase": "Have we stress-tested the human parts of this system yet?",
+            "role": "Senior Engineer"
         },
         "Raj": {
             "visual_tags": [
@@ -738,7 +668,8 @@
                 "USB drive labeled 'Raj's Stuff v3 FINAL_FINAL'"
             ],
             "appearance": "Looks like your dev buddy until he casually rewrites your toolchain for efficiency.",
-            "catchphrase": "If it’s working, why are we still talking about it?"
+            "catchphrase": "If it’s working, why are we still talking about it?",
+            "role": "SRE Engineer"
         },
         "Achieng": {
             "visual_tags": [
@@ -762,7 +693,8 @@
                 "company-issued laptop with scratched logo sticker"
             ],
             "appearance": "Looks like she’s one pivot table away from a breakthrough—and she knows it.",
-            "catchphrase": "There’s a pattern here, and we’re ignoring it."
+            "catchphrase": "There’s a pattern here, and we’re ignoring it.",
+            "role": "Data Analyst"
         },
         "Sifuna": {
             "visual_tags": [
@@ -786,7 +718,8 @@
                 "frictionless pen that no one else is allowed to borrow"
             ],
             "appearance": "The unofficial chief of execution. Doesn’t argue—just adjusts course and delivers.",
-            "catchphrase": "Let’s document this, or it didn’t happen."
+            "catchphrase": "Let’s document this, or it didn’t happen.",
+            "role": " Banking Executive"
         }
     },
     "global_style": {
