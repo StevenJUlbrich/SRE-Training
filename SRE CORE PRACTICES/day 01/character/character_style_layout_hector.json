@@ -720,6 +720,147 @@
             "appearance": "The unofficial chief of execution. Doesn’t argue—just adjusts course and delivers.",
             "catchphrase": "Let’s document this, or it didn’t happen.",
             "role": " Banking Executive"
+        },
+        "Brenda": {
+            "visual_tags": [
+                "female",
+                "27 years old",
+                "5'4\"",
+                "expressive, friendly face",
+                "naturally curly brown hair, often tied up with a colorful scrunchie",
+                "eye color warm hazel",
+                "comfortable, slightly worn headset",
+                "branded polo shirt from 'OmniCorp Support'",
+                "jeans"
+            ],
+            "required_constraints": [
+                "Headset is always on or around her neck during work hours",
+                "Always has a half-empty water bottle with a quirky straw on her desk",
+                "Never misses a chance to use an emoji in written comms if appropriate"
+            ],
+            "motion_rules": "Active listener, nods frequently; uses hand gestures even when the other person can't see them. Taps pen when thinking.",
+            "voice_tone": "Clear, patient, empathetic, with an upbeat lilt; can become firm but fair when dealing with difficult customers.",
+            "prop_loadout": [
+                "company-issued headset",
+                "stress ball shaped like a brain",
+                "collection of colorful pens and highlighters",
+                "notepad filled with call scripts and doodles"
+            ],
+            "appearance": "The friendly voice of reason at the other end of the line. Looks perpetually ready to solve your problem, or at least find someone who can.",
+            "role": "Call Center Representative",
+            "catchphrase": "Okay, let's see how we can get this sorted for you!"
+        },
+        "Leo": {
+            "visual_tags": [
+                "male",
+                "32 years old",
+                "5'11\"",
+                "slim build",
+                "sharp, modern haircut, often subtly colored (e.g., dark blue or silver tips)",
+                "eye color piercing gray, framed by stylish, minimalist glasses",
+                "well-curated 'creative professional' attire: dark turtlenecks or designer t-shirts under a blazer",
+                "sleek smartwatch"
+            ],
+            "required_constraints": [
+                "Always has a Moleskine notebook and a specific brand of fineliner pen",
+                "Never uses default fonts if a more aesthetically pleasing option is available",
+                "Sketches ideas constantly, even during casual conversations"
+            ],
+            "motion_rules": "Deliberate and precise movements; often observes with a slight head tilt. Uses hands to frame or outline concepts in the air.",
+            "voice_tone": "Calm, articulate, passionate about design principles; can sound slightly exasperated when explaining usability issues for the 'umpteenth time'.",
+            "prop_loadout": [
+                "latest model tablet with stylus",
+                "Moleskine notebook",
+                "collection of design and typography books on shelf",
+                "high-quality noise-cancelling headphones"
+            ],
+            "appearance": "The epitome of sleek, modern design. Looks like he could redesign your entire life for better flow and aesthetics, starting with your app interface.",
+            "role": "UX Designer",
+            "catchphrase": "But is it intuitive? Let's walk through the user journey."
+        },
+        "Eleanor": {
+            "visual_tags": [
+                "female",
+                "58 years old",
+                "5'6\"",
+                "commanding presence, poised posture",
+                "short, impeccably styled silver hair",
+                "eye color sharp blue, often narrowed in thought",
+                "power suit in a muted color (navy, charcoal)",
+                "understated but expensive-looking jewelry"
+            ],
+            "required_constraints": [
+                "Always carries a leather-bound folio",
+                "Never makes a decision without consulting multiple data sources",
+                "Prefers direct, concise communication; dislikes jargon without substance"
+            ],
+            "motion_rules": "Minimal, purposeful gestures; often steeples fingers when listening or speaking. Moves with an air of quiet authority.",
+            "voice_tone": "Measured, authoritative, calm even under pressure; possesses a dry wit that surfaces unexpectedly.",
+            "prop_loadout": [
+                "leather folio with risk assessment reports",
+                "encrypted tablet",
+                "several high-end pens",
+                "reading glasses on a discreet chain"
+            ],
+            "appearance": "The seasoned executive who has seen it all and can quantify the risk in any situation. Her calm demeanor belies a mind constantly calculating probabilities.",
+            "role": "CRO (Chief Risk Officer)",
+            "catchphrase": "What are the second and third-order consequences here?"
+        },
+        "Marcus": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "5'10\"",
+                "solid, dependable build",
+                "neatly trimmed short brown hair, slight receding hairline",
+                "eye color steady brown",
+                "crisp button-down shirt, tie loosened by midday",
+                "sensible, polished shoes"
+            ],
+            "required_constraints": [
+                "Always has his financial calculator within reach",
+                "Never relies on mental math for critical figures",
+                "Maintains an immaculate desk with everything perfectly aligned"
+            ],
+            "motion_rules": "Methodical and organized movements. Tends to tap his pen on a notepad while reviewing figures.",
+            "voice_tone": "Precise, factual, patient when explaining complex financial instruments. Unflappable.",
+            "prop_loadout": [
+                "financial calculator",
+                "multiple monitors displaying market data and spreadsheets",
+                "thick binder of compliance regulations",
+                "a perpetually full coffee mug with a bank logo"
+            ],
+            "appearance": "The diligent guardian of the company's liquid assets. Looks like he could spot a rounding error from a mile away and thrives on the predictability of numbers.",
+            "role": "Treasury Operations Specialist",
+            "catchphrase": "Let's reconcile these accounts to the penny."
+        },
+        "Jax": {
+            "visual_tags": [
+                "non-binary",
+                "29 years old",
+                "5'7\"",
+                "lean, agile build",
+                "short, choppy dark hair with an undercut, sometimes with a streak of bright color",
+                "eye color intense, dark, always scanning",
+                "functional, dark clothing – hoodies, cargo pants, comfortable sneakers",
+                "often wears a subtle piece of tech-jewelry (e.g., a ring that's also a tiny storage device)"
+            ],
+            "required_constraints": [
+                "Always has multiple screens open, displaying logs or network traffic",
+                "Never fully trusts a system that they haven't personally tried to break",
+                "Drinks copious amounts of energy drinks or strong black coffee"
+            ],
+            "motion_rules": "Quick, alert movements; often fidgets with a small gadget or pen. Can go from relaxed to intensely focused in an instant.",
+            "voice_tone": "Direct, sometimes terse, especially during an incident. Sarcastic when relaxed, but all business when a threat is detected.",
+            "prop_loadout": [
+                "customized laptop covered in security-related stickers",
+                "multiple USB drives on a keychain",
+                "a collection of lock-picking tools (for 'educational purposes')",
+                "noise-canceling earbuds, usually with one earbud out"
+            ],
+            "appearance": "The digital ghost in the machine, always watching for threats. Looks like they haven't slept properly in days but is more alert than anyone in the room.",
+            "role": "Security Specialist",
+            "catchphrase": "Assume breach. Always assume breach."
         }
     },
     "global_style": {

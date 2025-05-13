@@ -1,0 +1,112 @@
+{
+    "characters": {
+        "General Armistead": {
+            "visual_tags": [
+                "male",
+                "62 years old",
+                "6'2\"",
+                "commanding presence, upright military posture even in civilian attire",
+                "sharp, piercing blue eyes that have seen much",
+                "short, impeccably neat silver hair",
+                "favors dark, well-tailored suits or high-quality blazers; sometimes a subtle nod to a past military affiliation"
+            ],
+            "required_constraints": [
+                "Always speaks with clarity and conviction, expecting to be understood and followed",
+                "Focuses on long-term strategic vision and inspiring teams to achieve ambitious goals",
+                "Maintains a calm demeanor under extreme pressure, providing a steady hand for the organization"
+            ],
+            "motion_rules": "Minimal, purposeful gestures. Stands tall and still when addressing groups. Walks with a confident, measured stride. Conveys authority without needing to raise his voice.",
+            "voice_tone": "Resonant, authoritative, inspiring. Can deliver powerful speeches that galvanize action. Articulates complex strategies in a way that everyone can understand.",
+            "prop_loadout": [
+                "a leather-bound notebook with strategic notes",
+                "a collection of books on leadership, history, and strategy",
+                "a simple, elegant pen used for signing off on major directives",
+                "often has a map or large display showing organizational reach or strategic deployments"
+            ],
+            "appearance": "A seasoned leader who commands respect through presence and strategic acumen. Looks like he could lead any organization through complex challenges to decisive victory.",
+            "role": "Executive Leader",
+            "catchphrase": "The objective is clear. Our strategy is sound. Now, let's execute with precision and unity."
+        },
+        "Seraphina Monroe": {
+            "visual_tags": [
+                "female",
+                "48 years old",
+                "5'8\"",
+                "dynamic, energetic presence; eyes that sparkle with innovative ideas",
+                "stylish, modern professional attire, often with a bold color or unique design element",
+                "expressive hand gestures when discussing change and future possibilities",
+                "wears contemporary, artful jewelry"
+            ],
+            "required_constraints": [
+                "Constantly challenges the status quo and seeks opportunities for radical improvement",
+                "Champions innovation, agility, and a culture of continuous learning",
+                "Empowers her teams to take risks and experiment with new approaches"
+            ],
+            "motion_rules": "Moves with a vibrant energy. Often paces or uses a whiteboard to sketch out transformational roadmaps. Leans forward with enthusiasm when discussing new ideas.",
+            "voice_tone": "Passionate, persuasive, and forward-looking. Can articulate a compelling vision for the future that energizes and motivates. Encourages debate and creative thinking.",
+            "prop_loadout": [
+                "tablet filled with industry research, trend analyses, and innovation frameworks",
+                "a wall of sticky notes and mind maps in her office",
+                "connections to a wide network of thought leaders and innovators",
+                "latest tech gadgets that enhance productivity and collaboration"
+            ],
+            "appearance": "A visionary change agent who inspires organizations to reinvent themselves. Looks like she's always five steps ahead, designing the future of the business.",
+            "role": "Executive Leader",
+            "catchphrase": "We can't just adapt to the future; we must create it. What bold steps will we take today?"
+        },
+        "Mr. Alistair Finch": {
+            "visual_tags": [
+                "male",
+                "65 years old",
+                "5'10\"",
+                "astute, discerning gaze behind conservative spectacles",
+                "immaculately dressed in bespoke suits, often with a traditional tie",
+                "thinning silver hair, always perfectly groomed",
+                "carries an air of quiet financial power"
+            ],
+            "required_constraints": [
+                "Primarily concerned with shareholder value, ROI, and long-term financial stability",
+                "Asks probing questions about capital allocation, risk exposure, and market positioning",
+                "Expects clear, data-driven justifications for all major strategic decisions"
+            ],
+            "motion_rules": "Calm and deliberate. Listens more than speaks in large meetings, but his questions are always impactful. Reviews financial reports with intense focus. Subtle, thoughtful nods.",
+            "voice_tone": "Measured, precise, and deeply informed. Speaks with the authority of significant capital backing. Can be skeptical of initiatives without a clear financial upside.",
+            "prop_loadout": [
+                "a locked briefcase containing detailed financial analyses and investment portfolios",
+                "a secure encrypted device for confidential communications",
+                "subscriptions to numerous high-level financial publications",
+                "a direct line to major institutional investors"
+            ],
+            "appearance": "The discerning guardian of investor interests. Looks like he can assess the financial viability of a company with a glance at its balance sheet and a few pointed questions.",
+            "role": "Executive Stakeholder",
+            "catchphrase": "How does this initiative directly contribute to enhancing shareholder value in the next 3-5 years?"
+        },
+        "Dr. Evelyn Reed": {
+            "visual_tags": [
+                "female",
+                "58 years old",
+                "5'6\"",
+                "thoughtful, principled expression; kind but firm eyes",
+                "elegant, understated professional attire; often wears a meaningful brooch or pin",
+                "carries herself with quiet dignity and intellectual rigor",
+                "radiates integrity"
+            ],
+            "required_constraints": [
+                "Champions corporate social responsibility, ethical conduct, and robust governance frameworks",
+                "Ensures that business strategies align with long-term sustainability and societal impact",
+                "Advocates for transparency, accountability, and stakeholder inclusivity"
+            ],
+            "motion_rules": "Listens intently with a slight head tilt. Uses calm, considered gestures when speaking. Her presence encourages respectful dialogue and ethical consideration.",
+            "voice_tone": "Articulate, compassionate, and principled. Speaks with moral authority but also with a pragmatic understanding of business realities. Asks thought-provoking ethical questions.",
+            "prop_loadout": [
+                "copies of the company's code of conduct and ESG (Environmental, Social, Governance) reports",
+                "academic papers on corporate ethics and sustainable business practices",
+                "a notepad for recording governance concerns and recommendations",
+                "a history of advocating for positive change within organizations"
+            ],
+            "appearance": "The moral compass of the executive group, ensuring that success is achieved responsibly and sustainably. Looks like she can guide any organization towards a more ethical and equitable future.",
+            "role": "Executive Stakeholder",
+            "catchphrase": "While profitability is essential, how are we considering the broader impact of our decisions on all our stakeholders and on society?"
+        }
+    }
+}

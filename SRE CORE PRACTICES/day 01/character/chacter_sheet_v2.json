@@ -1,171 +1,168 @@
 {
     "characters": {
-        "Wanjiru": {
+        "Anya Sharma": {
             "visual_tags": [
                 "female",
-                "24 years old",
-                "5'1\" petite frame",
-                "short natural hair with purple dye streak",
-                "eye color dark brown",
-                "tech-smart casual with colorful scarves",
-                "stickers on laptop",
-                "freckles"
+                "48 years old",
+                "5'7\"",
+                "energetic, charismatic presence",
+                "sharp, analytical dark eyes",
+                "short, stylish salt-and-pepper hair",
+                "modern, tailored business attire, often with a unique accessory like a bold necklace or scarf",
+                "wears a high-end smartwatch"
             ],
             "required_constraints": [
-                "Always asks follow-up questions",
-                "Laptop is stickered, never pristine",
-                "Prefers keyboard shortcuts, never uses trackpad"
+                "Always thinking 5 years ahead",
+                "Never dismisses a 'crazy' idea without exploring its potential",
+                "Frequently uses analogies from science fiction or history to explain complex tech concepts"
             ],
-            "motion_rules": "Animated hands when learning; leans forward when curious.",
-            "voice_tone": "Bright, inquisitive, occasionally overwhelmed",
+            "motion_rules": "Paces when brainstorming; uses expressive hand gestures when presenting. Leans forward with intensity when listening to new ideas.",
+            "voice_tone": "Inspiring, articulate, confident; can simplify complex topics effectively. Passionate about innovation.",
             "prop_loadout": [
-                "sticker-covered laptop",
-                "multicolor pens",
-                "annotated printouts of logs"
+                "latest smartphone and tablet",
+                "digital whiteboard or large sketchpad",
+                "collection of tech biographies and future-studies books",
+                "high-quality espresso machine in office"
             ],
-            "appearance": "Eager junior dev with the energy of someone who hasn't been broken by prod yet.",
-            "catchphrase": "But why does it work that way in production?"
+            "appearance": "A forward-thinking leader who embodies innovation. Looks like she's always just stepped out of a successful keynote on the future of technology.",
+            "role": "CTO",
+            "catchphrase": "What if we could...? Let's explore the art of the possible."
         },
-        "Emmanuel": {
+        "Marcus Thorne": {
             "visual_tags": [
                 "male",
-                "31 years old",
-                "5'7\" solid build",
-                "closely cropped hair and trimmed goatee",
-                "light brown eyes",
-                "button-up shirts with rolled sleeves",
-                "slightly weary expression"
+                "55 years old",
+                "6'0\"",
+                "calm, grounded demeanor",
+                "thoughtful, deep-set hazel eyes behind rimless glasses",
+                "neatly combed graying hair",
+                "classic, impeccable suits, always with a tie",
+                "prefers an analog high-quality watch"
             ],
             "required_constraints": [
-                "Always wears ID badge",
-                "Carries pager even when off-call"
+                "Prioritizes stability and scalability in all tech decisions",
+                "Always asks 'What's the operational impact and TCO?'",
+                "Maintains meticulously organized digital files and notes"
             ],
-            "motion_rules": "Moves deliberately; slight limp from years of 3am troubleshooting marathons.",
-            "voice_tone": "Calm, resigned, quietly skeptical",
+            "motion_rules": "Still and composed in meetings; tends to listen more than speak, but when he does, it's concise and impactful. Slight, thoughtful nod when agreeing.",
+            "voice_tone": "Measured, authoritative, deeply knowledgeable; values clarity and precision. Skeptical of hype.",
             "prop_loadout": [
-                "bank ID badge",
-                "production runbook",
-                "cracked-screen Android phone"
+                "leather briefcase",
+                "multiple monitors displaying system architecture diagrams and performance metrics",
+                "well-worn copies of seminal software engineering books",
+                "a single, high-quality fountain pen for important signatures"
             ],
-            "appearance": "Mid-career support hero with one eye on the logs and one on his exit plan.",
-            "catchphrase": "There’s always a hidden dependency..."
+            "appearance": "The seasoned technologist who ensures the engine room is running smoothly and efficiently. Exudes quiet competence and a deep understanding of complex systems.",
+            "role": "CTO",
+            "catchphrase": "Let's focus on robust fundamentals before we chase the next shiny object."
         },
-        "Aisha": {
+        "Sarah Chen": {
             "visual_tags": [
                 "female",
-                "29 years old",
-                "5'8\" tall with elegant presence",
-                "colorful hijab",
-                "eye color deep brown",
-                "neat business attire",
-                "rectangular glasses"
+                "32 years old",
+                "5'5\"",
+                "bright, inquisitive expression",
+                "trendy glasses",
+                "often wears t-shirts from tech conferences or with geeky references",
+                "carries a messenger bag with a laptop and various gadgets"
             ],
             "required_constraints": [
-                "Hijab always coordinated with outfit",
-                "Takes paper notes, never types during calls"
+                "Has already tried all the troubleshooting steps in the FAQ before calling support",
+                "Reads tech blogs and product reviews extensively",
+                "Isn't afraid to use developer tools in a browser to diagnose a web issue"
             ],
-            "motion_rules": "Composed, measured movements; often pauses before responding thoughtfully.",
-            "voice_tone": "Empathetic, strategic, and articulate",
+            "motion_rules": "Animated when describing a problem or a feature request. Taps fingers impatiently if kept on hold or if explanations are too simplistic.",
+            "voice_tone": "Clear, direct, knowledgeable about tech terms; expects a similar level of understanding. Can be enthusiastic about good products.",
             "prop_loadout": [
-                "color-coded notebook",
-                "tablet with CRM dashboard"
+                "latest smartphone",
+                "powerful laptop",
+                "portable battery pack",
+                "notes app filled with feature requests and bug reports for various services"
             ],
-            "appearance": "Strategic analyst who always brings the conversation back to human impact.",
-            "catchphrase": "How would we explain this to the customer?"
+            "appearance": "An engaged and informed user who knows her way around technology. Expects products to be intuitive and powerful.",
+            "role": "Customer",
+            "catchphrase": "I've already cleared my cache and cookies. The issue seems to be on your end."
         },
-        "Danny": {
+        "David Miller": {
             "visual_tags": [
                 "male",
-                "26 years old",
-                "5'11\" lanky",
-                "tech startup hoodies",
-                "tattoo peeking out from sleeve",
-                "short blond hair, wavy",
-                "eye color dark brown"
+                "62 years old",
+                "5'9\"",
+                "slightly bewildered but friendly expression when dealing with tech",
+                "reading glasses usually perched on his head or hanging around his neck",
+                "comfortable, casual clothing like a polo shirt and khakis",
+                "prefers phone calls to chat support"
             ],
             "required_constraints": [
-                "Never uses GUIs when a CLI exists",
-                "Always carries at least one device that’s jailbroken"
+                "Writes down instructions carefully on a notepad",
+                "Often prefaces questions with 'This might be a silly question, but...'",
+                "Values patience and clear, simple explanations above all else"
             ],
-            "motion_rules": "Fast-twitch energy, always fidgeting with shell scripts or API clients.",
-            "voice_tone": "Casual, confident, automation-obsessed",
+            "motion_rules": "Listens intently, often with a furrowed brow of concentration. Points at the screen when describing what he sees.",
+            "voice_tone": "Polite, slightly hesitant when describing technical problems; appreciative of help. Can get flustered if overwhelmed with jargon.",
             "prop_loadout": [
-                "custom mechanical keyboard",
-                "USB-to-everything adapter",
-                "forearm circuit tattoo"
+                "older but reliable desktop computer",
+                "spiral-bound notebook and a favorite pen",
+                "a printed list of passwords (kept 'somewhere safe')",
+                "magnifying glass for small print"
             ],
-            "appearance": "DevOps rebel who believes every incident is just one YAML file away from resolution.",
-            "catchphrase": "There’s definitely a script for that."
+            "appearance": "A kind individual trying his best to navigate an increasingly digital world. Values human connection and straightforward assistance.",
+            "role": "Customer",
+            "catchphrase": "Could you explain that one more time, but maybe a bit simpler?"
         },
-        "Njeri": {
+        "Lena Hanson": {
+            "visual_tags": [
+                "female",
+                "41 years old",
+                "5'6\"",
+                "thoughtful, observant gaze behind rectangular glasses",
+                "often wears cardigans or blazers over practical tops",
+                "hair usually tied back in a neat bun or ponytail",
+                "minimalist jewelry"
+            ],
+            "required_constraints": [
+                "Always grounds insights in established HCI principles and research methodologies",
+                "Meticulously documents every observation and user quote",
+                "Believes in ethical research practices above all"
+            ],
+            "motion_rules": "Calm and methodical during user interviews; takes copious notes. Uses precise gestures when explaining findings, often referring to data visualizations.",
+            "voice_tone": "Articulate, analytical, empathetic; skilled at asking open-ended questions. Passionate about user advocacy based on evidence.",
+            "prop_loadout": [
+                "laptop with qualitative analysis software",
+                "multiple notebooks for different projects",
+                "audio recorder and transcription tools",
+                "a well-marked copy of 'The Design of Everyday Things'"
+            ],
+            "appearance": "A dedicated researcher focused on understanding the 'why' behind user behavior. Looks like she could turn any observation into a compelling research paper.",
+            "role": "UX Researcher",
+            "catchphrase": "What mental model do users have when approaching this task?"
+        },
+        "Sam Jordan": {
             "visual_tags": [
                 "non-binary",
                 "33 years old",
-                "5'6\"",
-                "undercut hairstyle dyed teal",
-                "eye color deep blue",
-                "minimalist, functional clothing"
+                "5'8\"",
+                "sharp, focused eyes that seem to see patterns everywhere",
+                "short, edgy haircut",
+                "wears comfortable, data-themed t-shirts (e.g., with charts or code snippets) under a zip-up hoodie",
+                "fitness tracker displaying lots of personal metrics"
             ],
             "required_constraints": [
-                "Never speaks unless it's important",
-                "Always has cable tester or ping console open"
+                "Always asks 'How can we measure that?'",
+                "Believes in A/B testing almost everything",
+                "Can create a compelling data visualization for any user behavior"
             ],
-            "motion_rules": "Moves slowly, precisely; often pauses mid-sentence to think.",
-            "voice_tone": "Low, deliberate, deeply focused",
+            "motion_rules": "Energetic and quick; often pointing at dashboards or analytics screens. Taps fingers rapidly when looking at data streams.",
+            "voice_tone": "Fast-paced, enthusiastic about data, peppers speech with statistical terms. Can be very persuasive when backed by numbers.",
             "prop_loadout": [
-                "network topology sketchpad",
-                "laptop with three terminal windows open"
+                "powerful laptop optimized for data analysis (R, Python, SQL)",
+                "large monitor for displaying dashboards",
+                "collection of survey tools and analytics platform accounts",
+                "noise-cancelling headphones for deep focus"
             ],
-            "appearance": "Quiet network engineer with a deep philosophical bent about infrastructure.",
-            "catchphrase": "The network isn't the problem… but it might be part of the solution."
-        },
-        "Clara": {
-            "visual_tags": [
-                "female",
-                "37 years old",
-                "5'6\"",
-                "sharp posture",
-                "eye color dark brown",
-                "blouse and tablet ensemble",
-                "simple silver necklace"
-            ],
-            "required_constraints": [
-                "Stylus always in hand",
-                "Never trusts undocumented metrics"
-            ],
-            "motion_rules": "Points with stylus instead of finger; stillness used as judgment.",
-            "voice_tone": "Precise, analytical, never rushed",
-            "prop_loadout": [
-                "stylus",
-                "QA test harness app",
-                "personal severity tracker"
-            ],
-            "appearance": "QA specialist with a stare that could make a flaky service apologize.",
-            "catchphrase": "Prove it in logs, or I’m not changing my mind."
-        },
-        "Omar": {
-            "visual_tags": [
-                "male",
-                "28 years old",
-                "5'10\" extroverted",
-                "buzzed haircut",
-                "eye color brown",
-                "tech-casual with layered shirts",
-                "smirking by default"
-            ],
-            "required_constraints": [
-                "Always repeats question for clarity",
-                "Carries tablet even to lunch"
-            ],
-            "motion_rules": "Leans in to speak, expressive hands when explaining",
-            "voice_tone": "Friendly, persuasive, occasionally cheeky",
-            "prop_loadout": [
-                "tablet",
-                "incident translation guide",
-                "sticky notes with analogies"
-            ],
-            "appearance": "Bridge-builder between devs and humans; good at PR, better at empathy.",
-            "catchphrase": "So… what would we tell users about this?"
+            "appearance": "A quantitative specialist who lives and breathes data. Looks for statistical significance in every user interaction.",
+            "role": "UX Researcher",
+            "catchphrase": "The data suggests a significant correlation here. Let's run another test to confirm."
         }
     }
 }

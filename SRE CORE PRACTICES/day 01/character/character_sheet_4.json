@@ -1,0 +1,167 @@
+{
+    "characters": {
+        "Arthur Finch": {
+            "visual_tags": [
+                "male",
+                "61 years old",
+                "5'8\"",
+                "thinning gray hair, meticulously combed",
+                "sharp, pale blue eyes behind bifocal glasses",
+                "always wears a slightly dated but perfectly maintained suit and tie",
+                "carries a worn leather satchel"
+            ],
+            "required_constraints": [
+                "Always uses a specific brand of green ink pen for marking documents",
+                "Never accepts information at face value; requires primary source verification for everything",
+                "Maintains an almost supernaturally organized workspace, even when temporary"
+            ],
+            "motion_rules": "Methodical and precise movements. Adjusts glasses frequently when reading fine print. Listens with head slightly tilted, as if discerning hidden sounds.",
+            "voice_tone": "Quiet, precise, dryly factual. Can ask deceptively simple questions that uncover major discrepancies. Rarely shows emotion.",
+            "prop_loadout": [
+                "magnifying glass",
+                "collection of green ink pens",
+                "custom-made checklists for various audit procedures",
+                "portable document scanner"
+            ],
+            "appearance": "The quintessential old-school auditor who can find a needle in a haystack of financial records. His quiet demeanor belies a relentless pursuit of accuracy.",
+            "role": "Auditor",
+            "catchphrase": "Let's trace this back to the source document, shall we?"
+        },
+        "Isabelle Moreau": {
+            "visual_tags": [
+                "female",
+                "43 years old",
+                "5'10\"",
+                "athletic build, confident posture",
+                "dark hair pulled back in a sleek ponytail",
+                "penetrating dark eyes that assess systems quickly",
+                "modern, sharp business attire, often trousers and a blazer",
+                "wears a smartwatch that buzzes with reminders"
+            ],
+            "required_constraints": [
+                "Focuses on control weaknesses and process inefficiencies rather than just numbers",
+                "Always creates detailed flowcharts of processes being audited",
+                "Believes a good audit should result in actionable recommendations for improvement"
+            ],
+            "motion_rules": "Walks with a purposeful stride. Uses dynamic gestures when explaining system vulnerabilities. Often sketches diagrams on whiteboards or tablets.",
+            "voice_tone": "Clear, confident, articulate. Can explain complex audit findings in a way that management understands and appreciates. Constructive and solution-oriented.",
+            "prop_loadout": [
+                "tablet with process mapping software",
+                "portable projector for presentations",
+                "library of best-practice frameworks (COSO, ISO, etc.)",
+                "noise-canceling headphones for focused work in busy environments"
+            ],
+            "appearance": "A modern auditor who sees organizations as complex systems. She's here to improve efficiency and reduce risk through better processes, not just tick boxes.",
+            "role": "Auditor",
+            "catchphrase": "The issue isn't just the variance, it's the weakness in the control process that allowed it."
+        },
+        "Reginald Sterling": {
+            "visual_tags": [
+                "male",
+                "72 years old",
+                "5'11\"",
+                "distinguished, with a full head of silver hair",
+                "astute, experienced blue eyes",
+                "impeccably tailored Savile Row suits, often with a pocket square",
+                "expensive, classic timepiece"
+            ],
+            "required_constraints": [
+                "Always prioritizes long-term stability and shareholder value",
+                "Skeptical of overly ambitious tech ventures without clear ROI",
+                "Reads every board pack cover-to-cover and comes with pointed questions"
+            ],
+            "motion_rules": "Commanding presence even when seated. Listens intently, steepling fingers. Slow, deliberate nods when a point resonates. Rarely raises voice, but his disapproval is palpable.",
+            "voice_tone": "Deep, resonant, authoritative. Speaks with gravitas and the weight of experience. Can be charming but firm on matters of governance.",
+            "prop_loadout": [
+                "leather-bound board papers",
+                "gold fountain pen for making discreet notes",
+                "reading glasses on an elegant chain",
+                "a history of the company memorized"
+            ],
+            "appearance": "The elder statesman of the board, embodying tradition and fiscal conservatism. His presence ensures that new ideas are rigorously vetted against established principles.",
+            "role": "Board Member",
+            "catchphrase": "And what is the precise governance implication of this proposal?"
+        },
+        "Dr. Aris Thorne": {
+            "visual_tags": [
+                "male",
+                "48 years old",
+                "6'1\"",
+                "dynamic, energetic presence",
+                "sharp, forward-looking gaze, often with a hint of impatience",
+                "stylish, modern attire – no tie, often a designer jacket over a high-quality t-shirt",
+                "wears the latest tech gadgets subtly"
+            ],
+            "required_constraints": [
+                "Champions disruptive technologies and new market opportunities",
+                "Constantly challenges the status quo and traditional business models",
+                "Asks 'What if?' and 'Why not?' frequently"
+            ],
+            "motion_rules": "Leans forward when engaged. Uses animated hand gestures when discussing future trends. Often stands or paces if a meeting room allows.",
+            "voice_tone": "Enthusiastic, persuasive, fast-paced. Passionate about innovation and can make complex tech sound exciting and accessible. Sometimes challenges others directly.",
+            "prop_loadout": [
+                "latest tablet loaded with tech news and startup pitch decks",
+                "wireless earbuds for calls between meetings",
+                "a mind map of future industry trends always in his head",
+                "strong coffee"
+            ],
+            "appearance": "The voice of the future on the board. Pushes for bold moves and digital transformation, sometimes to the discomfort of more traditional members.",
+            "role": "Board Member",
+            "catchphrase": "If we're not disrupting ourselves, someone else will. Where's our moonshot?"
+        },
+        "Maria Flores": {
+            "visual_tags": [
+                "female",
+                "39 years old",
+                "5'6\"",
+                "warm, approachable smile, kind eyes",
+                "dark curly hair often tied back loosely",
+                "comfortable, smart-casual attire, often with a colorful cardigan",
+                "always seems to have a spare moment for a question"
+            ],
+            "required_constraints": [
+                "Prioritizes team well-being and individual growth above all else",
+                "Always makes time for 1-on-1s, even when busy",
+                "Celebrates team successes, big or small"
+            ],
+            "motion_rules": "Open and inviting body language. Nods encouragingly when listening. Often gives a reassuring pat on the shoulder.",
+            "voice_tone": "Empathetic, patient, supportive. Skilled at giving constructive feedback in a positive way. Her voice naturally calms tense situations.",
+            "prop_loadout": [
+                "notepad filled with notes about her team members' goals and challenges",
+                "a stash of good quality tea and snacks in her desk drawer",
+                "whiteboard markers for impromptu brainstorming sessions",
+                "a collection of 'thank you' cards from past and present team members"
+            ],
+            "appearance": "The nurturing leader who builds strong, cohesive teams by fostering a supportive and collaborative environment. Everyone feels heard and valued under her guidance.",
+            "role": "Team Lead",
+            "catchphrase": "How can I help you succeed with this? Let's talk it through."
+        },
+        "Vikram Chen": {
+            "visual_tags": [
+                "male",
+                "34 years old",
+                "5'11\"",
+                "intense, focused gaze, always thinking about the next deadline",
+                "short, spiky black hair",
+                "energetic, often wearing a company polo or a slightly rumpled button-down shirt",
+                "constantly checking his watch or phone for updates"
+            ],
+            "required_constraints": [
+                "Driven by results and meeting targets; highly organized",
+                "Keeps meetings short, focused, and action-oriented",
+                "Expects high performance and accountability from every team member"
+            ],
+            "motion_rules": "Fast-paced movements; often on his feet, moving between desks or pointing at Gantt charts. Taps pen impatiently if things are moving too slowly.",
+            "voice_tone": "Direct, assertive, clear. Can be demanding but is also quick to recognize and reward effort that leads to results. No time for excuses.",
+            "prop_loadout": [
+                "laptop with project management software always open",
+                "multiple to-do lists (digital and paper)",
+                "energy drinks or strong coffee readily available",
+                "a well-worn baseball cap for 'focus mode'"
+            ],
+            "appearance": "The high-energy leader focused on execution and delivery. He pushes his team hard but leads from the front and gets things done.",
+            "role": "Team Lead",
+            "catchphrase": "What's the status, what are the blockers, and when will it be done?"
+        }
+    }
+}

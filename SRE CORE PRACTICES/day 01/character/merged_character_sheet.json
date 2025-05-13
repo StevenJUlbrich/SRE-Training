@@ -1,6 +1,6 @@
 {
     "characters": {
-        "Hector": {
+        "Hector Alavaz": {
             "visual_tags": [
                 "49-year-old Mexican man",
                 "medium build, 5'10\" (178 cm)",
@@ -27,66 +27,1761 @@
                 "mechanical keyboard with no RGB lighting",
                 "leather notebook on desk"
             ],
-            "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated."
+            "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated.",
+            "role": "Senior SRE"
         },
-        "OtherCharacter1": {
+        "Daniel": {
             "visual_tags": [
-                "Example visual tag 1",
-                "Example visual tag 2"
+                "male",
+                "31 years old",
+                "5'2\"",
+                "lanky with a runner's physique",
+                "casual attire with tech company hoodies",
+                "short, curly hair with slight wave",
+                "light brown skin with a few freckles",
+                "eye color light blue"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": "Dry, nerdy, often ironic",
+            "prop_loadout": [
+                "circuit board tattoo on forearm",
+                "earbuds (frequently half-in)"
+            ],
+            "appearance": "An overcaffeinated SRE in constant tension between sarcasm and stress.",
+            "role": "Junior SRE"
+        },
+        "Juana": {
+            "visual_tags": [
+                "female",
+                "34 years old",
+                "5'7\"",
+                "calm body language",
+                "subtle intensity",
+                "short cropped blond hair",
+                "eye color icy blue",
+                "minimal makeup",
+                "tech-ready attire"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Stands still with intentional presence; tends to hover behind dashboards.",
+            "voice_tone": "Calm, direct, always a slight smile",
+            "prop_loadout": [
+                "tablet",
+                "alert screen"
+            ],
+            "appearance": "Quietly competent and always ready to call out bad monitoring logic.",
+            "role": "SRE Engineer"
+        },
+        "Claudia": {
+            "visual_tags": [
+                "female",
+                "34 years old",
+                "5'6\"",
+                "short, curly hair with slight wave",
+                "eye color green",
+                "energetic modern appearance",
+                "tech accessories",
+                "two-tone laptop case"
+            ],
+            "required_constraints": [],
+            "motion_rules": "Animated; taps feet when impatient.",
+            "voice_tone": "Upbeat, slightly chaotic, deeply engaged",
+            "prop_loadout": [
+                "laptop case",
+                "wireless earbuds"
+            ],
+            "appearance": "An ops optimist with too many dashboards and not enough hands.",
+            "role": "SRE Engineer"
+        },
+        "Wanjiru": {
+            "visual_tags": [
+                "female",
+                "24 years old",
+                "5'1\" petite frame",
+                "short natural hair with purple dye streak",
+                "eye color dark brown",
+                "tech-smart casual with colorful scarves",
+                "stickers on laptop",
+                "freckles"
             ],
             "required_constraints": [
-                "Example constraint 1",
-                "Example constraint 2"
+                "Always asks follow-up questions",
+                "Laptop is stickered, never pristine",
+                "Prefers keyboard shortcuts, never uses trackpad"
             ],
-            "motion_rules": "Example motion rules.",
-            "voice_tone": "Example voice tone.",
+            "motion_rules": "Animated hands when learning; leans forward when curious.",
+            "voice_tone": "Bright, inquisitive, occasionally overwhelmed",
             "prop_loadout": [
-                "Example prop 1",
-                "Example prop 2"
+                "sticker-covered laptop",
+                "multicolor pens",
+                "annotated printouts of logs"
             ],
-            "appearance": "Example appearance description."
+            "appearance": "Eager junior dev with the energy of someone who hasn't been broken by prod yet.",
+            "catchphrase": "But why does it work that way in production?",
+            "role": "SRE Junior"
         },
-        "OtherCharacter2": {
+        "Emmanuel": {
             "visual_tags": [
-                "Example visual tag A",
-                "Example visual tag B"
+                "male",
+                "31 years old",
+                "5'7\" solid build",
+                "closely cropped hair and trimmed goatee",
+                "light brown eyes",
+                "button-up shirts with rolled sleeves",
+                "slightly weary expression"
             ],
             "required_constraints": [
-                "Example constraint A",
-                "Example constraint B"
+                "Always wears ID badge",
+                "Carries pager even when off-call"
             ],
-            "motion_rules": "Example motion rules for character 2.",
-            "voice_tone": "Example voice tone for character 2.",
+            "motion_rules": "Moves deliberately; slight limp from years of 3am troubleshooting marathons.",
+            "voice_tone": "Calm, resigned, quietly skeptical",
             "prop_loadout": [
-                "Example prop A",
-                "Example prop B"
+                "bank ID badge",
+                "production runbook",
+                "cracked-screen Android phone"
             ],
-            "appearance": "Example appearance description for character 2."
-        }
-    },
-    "global_style": {
-        "font": "Arial",
-        "color_scheme": {
-            "background": "#FFFFFF",
-            "text": "#000000"
+            "appearance": "Mid-career support hero with one eye on the logs and one on his exit plan.",
+            "catchphrase": "There’s always a hidden dependency...",
+            "role": "Architect"
         },
-        "spacing": {
-            "line_height": "1.5",
-            "margin": "10px"
-        }
-    },
-    "layout_rules": {
-        "header": {
-            "alignment": "center",
-            "font_size": "20px"
+        "Aisha": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "5'8\" tall with elegant presence",
+                "colorful hijab",
+                "eye color deep brown",
+                "neat business attire",
+                "rectangular glasses"
+            ],
+            "required_constraints": [
+                "Hijab always coordinated with outfit",
+                "Takes paper notes, never types during calls"
+            ],
+            "motion_rules": "Composed, measured movements; often pauses before responding thoughtfully.",
+            "voice_tone": "Empathetic, strategic, and articulate",
+            "prop_loadout": [
+                "color-coded notebook",
+                "tablet with CRM dashboard"
+            ],
+            "appearance": "Strategic analyst who always brings the conversation back to human impact.",
+            "catchphrase": "How would we explain this to the customer?",
+            "role": "Operations Manager"
         },
-        "body": {
-            "alignment": "left",
-            "font_size": "14px"
+        "Danny": {
+            "visual_tags": [
+                "male",
+                "26 years old",
+                "5'11\" lanky",
+                "tech startup hoodies",
+                "tattoo peeking out from sleeve",
+                "short blond hair, wavy",
+                "eye color dark brown"
+            ],
+            "required_constraints": [
+                "Never uses GUIs when a CLI exists",
+                "Always carries at least one device that’s jailbroken"
+            ],
+            "motion_rules": "Fast-twitch energy, always fidgeting with shell scripts or API clients.",
+            "voice_tone": "Casual, confident, automation-obsessed",
+            "prop_loadout": [
+                "custom mechanical keyboard",
+                "USB-to-everything adapter",
+                "forearm circuit tattoo"
+            ],
+            "appearance": "DevOps rebel who believes every incident is just one YAML file away from resolution.",
+            "catchphrase": "There’s definitely a script for that.",
+            "role": "Developer"
         },
-        "footer": {
-            "alignment": "right",
-            "font_size": "12px"
+        "Njeri": {
+            "visual_tags": [
+                "non-binary",
+                "33 years old",
+                "5'6\"",
+                "undercut hairstyle dyed teal",
+                "eye color deep blue",
+                "minimalist, functional clothing"
+            ],
+            "required_constraints": [
+                "Never speaks unless it's important",
+                "Always has cable tester or ping console open"
+            ],
+            "motion_rules": "Moves slowly, precisely; often pauses mid-sentence to think.",
+            "voice_tone": "Low, deliberate, deeply focused",
+            "prop_loadout": [
+                "network topology sketchpad",
+                "laptop with three terminal windows open"
+            ],
+            "appearance": "Quiet network engineer with a deep philosophical bent about infrastructure.",
+            "catchphrase": "The network isn't the problem… but it might be part of the solution.",
+            "role": "Network Engineer"
+        },
+        "Clara": {
+            "visual_tags": [
+                "female",
+                "37 years old",
+                "5'6\"",
+                "sharp posture",
+                "eye color dark brown",
+                "blouse and tablet ensemble",
+                "simple silver necklace"
+            ],
+            "required_constraints": [
+                "Stylus always in hand",
+                "Never trusts undocumented metrics"
+            ],
+            "motion_rules": "Points with stylus instead of finger; stillness used as judgment.",
+            "voice_tone": "Precise, analytical, never rushed",
+            "prop_loadout": [
+                "stylus",
+                "QA test harness app",
+                "personal severity tracker"
+            ],
+            "appearance": "QA specialist with a stare that could make a flaky service apologize.",
+            "catchphrase": "Prove it in logs, or I’m not changing my mind.",
+            "role": "QA Engineer"
+        },
+        "Omar": {
+            "visual_tags": [
+                "male",
+                "28 years old",
+                "5'10\" extroverted",
+                "buzzed haircut",
+                "eye color brown",
+                "tech-casual with layered shirts",
+                "smirking by default"
+            ],
+            "required_constraints": [
+                "Always repeats question for clarity",
+                "Carries tablet even to lunch"
+            ],
+            "motion_rules": "Leans in to speak, expressive hands when explaining",
+            "voice_tone": "Friendly, persuasive, occasionally cheeky",
+            "prop_loadout": [
+                "tablet",
+                "incident translation guide",
+                "sticky notes with analogies"
+            ],
+            "appearance": "Bridge-builder between devs and humans; good at PR, better at empathy.",
+            "catchphrase": "So… what would we tell users about this?",
+            "role": "SRE Advocate"
+        },
+        "Malik": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "6'2\" lean build",
+                "salt-and-pepper hair, closely cropped",
+                "deep blue eyes",
+                "rolled-sleeve dress shirts",
+                "analog watch"
+            ],
+            "required_constraints": [
+                "Always carries a pen",
+                "Never checks dashboards during meetings—relies on printed reports"
+            ],
+            "motion_rules": "Moves with slow authority, gestures sparingly for emphasis.",
+            "voice_tone": "Measured, dry, occasionally deadpan",
+            "prop_loadout": [
+                "leather-bound legacy migration notebook",
+                "pen with engraved initials",
+                "printed SLO docs"
+            ],
+            "appearance": "Legacy-systems whisperer with a strategist’s calm and CTO scars to prove it.",
+            "catchphrase": "Let’s not confuse new with better.",
+            "role": "Auditor"
+        },
+        "Zuri": {
+            "visual_tags": [
+                "female",
+                "27 years old",
+                "5'6\" athletic build",
+                "long braids with colorful beads",
+                "eye color dark brown",
+                "bright, modern business attire"
+            ],
+            "required_constraints": [
+                "Always brings AI automation pitch deck",
+                "Never uses the same tool stack twice in a row"
+            ],
+            "motion_rules": "Quick, confident steps; always half a thought ahead.",
+            "voice_tone": "Fast, energetic, jargon-heavy",
+            "prop_loadout": [
+                "smartwatch",
+                "wireless earbuds",
+                "laptop with dark-mode IDE"
+            ],
+            "appearance": "Modern DevOps lead who believes every manual process is an insult to evolution.",
+            "catchphrase": "Can we automate this, or are we just bored?",
+            "role": "DevOps Engineer"
+        },
+        "Jamal": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\" stocky build",
+                "uses wheelchair",
+                "shaved head",
+                "light brown eyes",
+                "friendly face",
+                "colorful sneakers"
+            ],
+            "required_constraints": [
+                "Always advocates for user empathy",
+                "Never dismisses frontline feedback"
+            ],
+            "motion_rules": "Leans forward when speaking, relaxed posture when listening.",
+            "voice_tone": "Warm, empathetic, persuasive",
+            "prop_loadout": [
+                "incident summary printouts",
+                "notepad with customer quotes",
+                "coffee with 2 sugars"
+            ],
+            "appearance": "Customer advocate who humanizes the metrics and translates alerts into emotions.",
+            "catchphrase": "What would the user say about this graph?",
+            "role": "Customer Advocate"
+        },
+        "Lucia": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "5'5\" polished presence",
+                "gray-streaked bun",
+                "light blue eyes",
+                "navy business suit",
+                "leather folio"
+            ],
+            "required_constraints": [
+                "Only uses mechanical pencils",
+                "Always references risk matrix before SLO talks"
+            ],
+            "motion_rules": "Upright, no wasted movement; scans rooms with quiet authority.",
+            "voice_tone": "Crisp, principled, exacting",
+            "prop_loadout": [
+                "risk ledger",
+                "compliance checklists",
+                "mechanical pencil"
+            ],
+            "appearance": "Senior risk engineer with a courtroom vibe and zero tolerance for guesswork.",
+            "catchphrase": "Every system lies. The question is how loudly and when.",
+            "role": "Risk Analyst"
+        },
+        "Gabriel": {
+            "visual_tags": [
+                "male",
+                "41 years old",
+                "5'10\"",
+                "dark hoodie",
+                "noise-canceling headphones",
+                "eye color light blue",
+                "waveform tattoo on inner wrist"
+            ],
+            "required_constraints": [
+                "Only speaks when tracing",
+                "Never appears without some data visualization nearby"
+            ],
+            "motion_rules": "Hunched over dashboards; eyes dart between graphs.",
+            "voice_tone": "Quiet, focused, intensity just under the surface",
+            "prop_loadout": [
+                "headphones",
+                "dual-monitor setup",
+                "hand-drawn trace diagrams"
+            ],
+            "appearance": "Observability savant who sees systems in waveform and dreams in latency.",
+            "catchphrase": "Logs are for when you're scared. Metrics are for when you're wise.",
+            "role": "SRE Engineer"
+        },
+        "Ana": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'5\"",
+                "oversized glasses",
+                "dark lipstick",
+                "fast-moving",
+                "stylus-equipped tablet"
+            ],
+            "required_constraints": [
+                "Tablet always within arm’s reach",
+                "Never repeats the same phrasing twice"
+            ],
+            "motion_rules": "Rapid taps on tablet; walks and talks simultaneously.",
+            "voice_tone": "Fast, witty, process-driven",
+            "prop_loadout": [
+                "incident comms templates",
+                "reputation risk heatmap",
+                "speech-to-text assistant"
+            ],
+            "appearance": "Comms lead who controls chaos through structure and speaks fluent outage.",
+            "catchphrase": "You don’t just fix outages. You narrate them.",
+            "role": "Board Member"
+        },
+        "Emily": {
+            "visual_tags": [
+                "female",
+                "28 years old",
+                "5'5\" slim build",
+                "long straight black hair tied in a low ponytail",
+                "eye color dark brown",
+                "Boston-local business casual",
+                "black blazer over startup T-shirt"
+            ],
+            "required_constraints": [
+                "Always has a notepad nearby",
+                "Never interrupts—lets silence hang like a trap"
+            ],
+            "motion_rules": "Still and observant in meetings, scribbles notes during arguments.",
+            "voice_tone": "Soft-spoken but piercing when focused",
+            "prop_loadout": [
+                "pen and legal pad",
+                "USB keychain with backups",
+                "folded MBTA train map"
+            ],
+            "appearance": "Looks quiet until she casually dismantles your whole sprint logic in one sentence.",
+            "catchphrase": "Have we checked what the user actually does with this?",
+            "role": "Product Manager"
+        },
+        "Kamau": {
+            "visual_tags": [
+                "male",
+                "38 years old",
+                "5'8\" stocky build",
+                "short neatly combed hair",
+                "tailored navy suit",
+                "silver tie clip",
+                "sharp, evaluative gaze"
+            ],
+            "required_constraints": [
+                "Always brings a printed copy of the risk matrix",
+                "Never accepts verbal assurances without documentation"
+            ],
+            "motion_rules": "Moves with deliberate formality; slow nods during tense moments.",
+            "voice_tone": "Even, forensic, never speculative",
+            "prop_loadout": [
+                "compliance binder",
+                "data breach incident flowchart",
+                "steel pen"
+            ],
+            "appearance": "Feels like legal counsel but operates like a surgical auditor. Quietly terrifying in meetings.",
+            "catchphrase": "Where’s the documented exception for this risk class?",
+            "role": "Compliance Officer"
+        },
+        "Tanusha": {
+            "visual_tags": [
+                "female",
+                "25 years old",
+                "5'2\" petite frame",
+                "short curly hair with pink streaks",
+                "eye color light brown",
+                "oversized hoodie with anime pins",
+                "beat-up canvas sneakers"
+            ],
+            "required_constraints": [
+                "Always asks to double-check before pushing",
+                "Never deploys without a buddy check"
+            ],
+            "motion_rules": "Bounces slightly when excited; curls inward when nervous.",
+            "voice_tone": "Earnest, cautious, learning-focused",
+            "prop_loadout": [
+                "sticky note cheat sheet",
+                "half-empty bubble tea",
+                "USB toy on desk with blinking LED"
+            ],
+            "appearance": "New to prod, hungry to learn, and quietly terrified of being blamed for downtime.",
+            "catchphrase": "Is this safe to test in staging first...?",
+            "role": "Junior Devevloper"
+        },
+        "Austen": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "slightly overweight",
+                "short neatly combed hair",
+                "tailored suits with colorful ties",
+                "reading glasses perched on nose"
+            ],
+            "required_constraints": [
+                "Always wears a colorful tie",
+                "Never brings a laptop to meetings—only printouts"
+            ],
+            "motion_rules": "Adjusts tie when uncomfortable; slow blinks during technical talk.",
+            "voice_tone": "Measured, cautiously skeptical, thrives on numbers",
+            "prop_loadout": [
+                "binder of quarterly forecasts",
+                "pocket calculator",
+                "legal pad with budget notes"
+            ],
+            "appearance": "Looks like he’s here to say no to your new observability tooling—but only after a long pause.",
+            "catchphrase": "Show me how that improves margin, not morale.",
+            "role": "Finance Director"
+        },
+        "Alejandro": {
+            "visual_tags": [
+                "male",
+                "39 years old",
+                "6'0\" lean build",
+                "short, trimmed beard",
+                "hazel eyes",
+                "structured button-up with rolled sleeves",
+                "tactical watch"
+            ],
+            "required_constraints": [
+                "Never presents without at least two backup plans",
+                "Always wears his tactical watch, never digital"
+            ],
+            "motion_rules": "Moves with military efficiency; subtle tension in shoulders during strategy shifts.",
+            "voice_tone": "Calm, tactical, and layered with dry judgment",
+            "prop_loadout": [
+                "incident response checklist",
+                "folded paper architecture diagrams",
+                "steel pen that clicks when thinking"
+            ],
+            "appearance": "An engineer who documents outages like field reports and treats root cause like a personal vendetta.",
+            "catchphrase": "We build for failure. The question is: which one are you ignoring today?",
+            "role": "Incident Commander"
+        },
+        "Marisol": {
+            "visual_tags": [
+                "female",
+                "41 years old",
+                "5'7\" graceful posture",
+                "green eyes",
+                "vibrant silk scarf",
+                "sleek business-casual wrap dress",
+                "meticulous appearance"
+            ],
+            "required_constraints": [
+                "Always wears her signature scarf",
+                "Never speaks until everyone else has weighed in"
+            ],
+            "motion_rules": "Glides rather than walks; tilts head slightly when absorbing information.",
+            "voice_tone": "Measured, elegant, with a quiet gravity",
+            "prop_loadout": [
+                "tablet with color-coded stakeholder maps",
+                "analog journal for personal reflections",
+                "fine-tip pen, always black"
+            ],
+            "appearance": "Her presence calms a room but subtly resets the stakes. People lean in when she starts to speak.",
+            "catchphrase": "What’s the long-term cost of getting this wrong?",
+            "role": " Banking Executive"
+        },
+        "Sofia": {
+            "visual_tags": [
+                "female",
+                "25 years old",
+                "5'4\" slim build",
+                "icy blue eyes",
+                "long dark hair tied back",
+                "soft, precise movements",
+                "practical clothing",
+                "always with a notepad"
+            ],
+            "required_constraints": [
+                "Always carries a pen she never lends",
+                "Never speaks unless she’s triple-checked her facts"
+            ],
+            "motion_rules": "Moves quietly and efficiently; scribbles constantly but rarely looks down.",
+            "voice_tone": "Soft but sharply observant—like a whisper with consequences",
+            "prop_loadout": [
+                "graph-ruled notebook",
+                "custom log parser scripts on USB",
+                "highlighted incident logs"
+            ],
+            "appearance": "She’s not just watching the systems. She’s watching the watchers, too.",
+            "catchphrase": "I think… there's something weird in the logs, if you zoom in.",
+            "role": "SRE Engineer"
+        },
+        "Leonel": {
+            "visual_tags": [
+                "male",
+                "30 years old",
+                "5'9\" slightly disheveled",
+                "hazel eyes",
+                "t-shirt with metrics jokes",
+                "casual hoodie",
+                "glasses often askew",
+                "frequently gesturing or carrying a laptop"
+            ],
+            "required_constraints": [
+                "Always has at least one unused dashboard tab open",
+                "Never deletes old metrics, 'just in case'"
+            ],
+            "motion_rules": "Taps feet when dashboards load slowly; waves hands during explanations.",
+            "voice_tone": "Excitable, verbose, and lovingly obsessive",
+            "prop_loadout": [
+                "laptop with 12 pinned tabs",
+                "dashboard stress ball",
+                "portable monitor just for graphs"
+            ],
+            "appearance": "Looks like he hasn't blinked since the last Grafana update. Loves metrics too much to sleep.",
+            "catchphrase": "But what if we tracked *everything* and then filtered it later?",
+            "role": "Data Analyst"
+        },
+        "Katherine": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "6'2\" tall and lean",
+                "salt-and-pepper shoulder-length hair",
+                "deep blue eyes",
+                "rolled-sleeve button-up shirt",
+                "digital watch",
+                "imposing but approachable presence"
+            ],
+            "required_constraints": [
+                "Always stands during meetings",
+                "Never answers right away—thinks, then speaks"
+            ],
+            "motion_rules": "Stands with weight shifted to one side; folds arms when thinking.",
+            "voice_tone": "Firm, experienced, quietly motivational",
+            "prop_loadout": [
+                "folded incident playbook",
+                "annotated service diagrams",
+                "checklist card for 'when things go sideways'"
+            ],
+            "appearance": "The kind of senior engineer who leads without announcing it—and gets paged even when she’s not on call.",
+            "catchphrase": "Have we stress-tested the human parts of this system yet?",
+            "role": "Senior Engineer"
+        },
+        "Raj": {
+            "visual_tags": [
+                "male",
+                "30 years old",
+                "5'7\" average height",
+                "short curly hair",
+                "dark brown eyes",
+                "sport jackets over nerdy t-shirts",
+                "quirky watch designs"
+            ],
+            "required_constraints": [
+                "Always checking time but never on his phone",
+                "Never runs a meeting—somehow ends up leading them anyway"
+            ],
+            "motion_rules": "Paces in short bursts when ideating; fidgets with pen caps.",
+            "voice_tone": "Dryly funny, big on analogies, often skeptical",
+            "prop_loadout": [
+                "watch with exposed gears",
+                "folded to-do list in back pocket",
+                "USB drive labeled 'Raj's Stuff v3 FINAL_FINAL'"
+            ],
+            "appearance": "Looks like your dev buddy until he casually rewrites your toolchain for efficiency.",
+            "catchphrase": "If it’s working, why are we still talking about it?",
+            "role": "SRE Engineer"
+        },
+        "Achieng": {
+            "visual_tags": [
+                "female",
+                "28 years old",
+                "5'6\" solid build",
+                "medium length hair in a bun",
+                "dark brown eyes",
+                "modern business suit",
+                "focused, deliberate expression"
+            ],
+            "required_constraints": [
+                "Always speaks second in meetings",
+                "Never makes a claim without a supporting chart"
+            ],
+            "motion_rules": "Walks with confident stride; pauses mid-sentence to let data speak first.",
+            "voice_tone": "Clear, steady, analytical with a slight edge",
+            "prop_loadout": [
+                "folded printouts of performance graphs",
+                "highlighter-coded incident journal",
+                "company-issued laptop with scratched logo sticker"
+            ],
+            "appearance": "Looks like she’s one pivot table away from a breakthrough—and she knows it.",
+            "catchphrase": "There’s a pattern here, and we’re ignoring it.",
+            "role": "Data Analyst"
+        },
+        "Sifuna": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\" strong build",
+                "medium-length dark brown hair precisely styled",
+                "hazel eyes",
+                "crisp dress shirt",
+                "subtle cologne that means business"
+            ],
+            "required_constraints": [
+                "Always restarts meetings that get off-topic",
+                "Never lets an action item go undocumented"
+            ],
+            "motion_rules": "Moves like someone who blocks calendar time for reflection; gestures minimally.",
+            "voice_tone": "Polished, strategic, quietly assertive",
+            "prop_loadout": [
+                "elegant notebook with metal-edged corners",
+                "discreet phone stand",
+                "frictionless pen that no one else is allowed to borrow"
+            ],
+            "appearance": "The unofficial chief of execution. Doesn’t argue—just adjusts course and delivers.",
+            "catchphrase": "Let’s document this, or it didn’t happen.",
+            "role": " Banking Executive"
+        },
+        "Brenda": {
+            "visual_tags": [
+                "female",
+                "27 years old",
+                "5'4\"",
+                "expressive, friendly face",
+                "naturally curly brown hair, often tied up with a colorful scrunchie",
+                "eye color warm hazel",
+                "comfortable, slightly worn headset",
+                "branded polo shirt from 'OmniCorp Support'",
+                "jeans"
+            ],
+            "required_constraints": [
+                "Headset is always on or around her neck during work hours",
+                "Always has a half-empty water bottle with a quirky straw on her desk",
+                "Never misses a chance to use an emoji in written comms if appropriate"
+            ],
+            "motion_rules": "Active listener, nods frequently; uses hand gestures even when the other person can't see them. Taps pen when thinking.",
+            "voice_tone": "Clear, patient, empathetic, with an upbeat lilt; can become firm but fair when dealing with difficult customers.",
+            "prop_loadout": [
+                "company-issued headset",
+                "stress ball shaped like a brain",
+                "collection of colorful pens and highlighters",
+                "notepad filled with call scripts and doodles"
+            ],
+            "appearance": "The friendly voice of reason at the other end of the line. Looks perpetually ready to solve your problem, or at least find someone who can.",
+            "role": "Call Center Representative",
+            "catchphrase": "Okay, let's see how we can get this sorted for you!"
+        },
+        "Leo": {
+            "visual_tags": [
+                "male",
+                "32 years old",
+                "5'11\"",
+                "slim build",
+                "sharp, modern haircut, often subtly colored (e.g., dark blue or silver tips)",
+                "eye color piercing gray, framed by stylish, minimalist glasses",
+                "well-curated 'creative professional' attire: dark turtlenecks or designer t-shirts under a blazer",
+                "sleek smartwatch"
+            ],
+            "required_constraints": [
+                "Always has a Moleskine notebook and a specific brand of fineliner pen",
+                "Never uses default fonts if a more aesthetically pleasing option is available",
+                "Sketches ideas constantly, even during casual conversations"
+            ],
+            "motion_rules": "Deliberate and precise movements; often observes with a slight head tilt. Uses hands to frame or outline concepts in the air.",
+            "voice_tone": "Calm, articulate, passionate about design principles; can sound slightly exasperated when explaining usability issues for the 'umpteenth time'.",
+            "prop_loadout": [
+                "latest model tablet with stylus",
+                "Moleskine notebook",
+                "collection of design and typography books on shelf",
+                "high-quality noise-cancelling headphones"
+            ],
+            "appearance": "The epitome of sleek, modern design. Looks like he could redesign your entire life for better flow and aesthetics, starting with your app interface.",
+            "role": "UX Designer",
+            "catchphrase": "But is it intuitive? Let's walk through the user journey."
+        },
+        "Eleanor": {
+            "visual_tags": [
+                "female",
+                "58 years old",
+                "5'6\"",
+                "commanding presence, poised posture",
+                "short, impeccably styled silver hair",
+                "eye color sharp blue, often narrowed in thought",
+                "power suit in a muted color (navy, charcoal)",
+                "understated but expensive-looking jewelry"
+            ],
+            "required_constraints": [
+                "Always carries a leather-bound folio",
+                "Never makes a decision without consulting multiple data sources",
+                "Prefers direct, concise communication; dislikes jargon without substance"
+            ],
+            "motion_rules": "Minimal, purposeful gestures; often steeples fingers when listening or speaking. Moves with an air of quiet authority.",
+            "voice_tone": "Measured, authoritative, calm even under pressure; possesses a dry wit that surfaces unexpectedly.",
+            "prop_loadout": [
+                "leather folio with risk assessment reports",
+                "encrypted tablet",
+                "several high-end pens",
+                "reading glasses on a discreet chain"
+            ],
+            "appearance": "The seasoned executive who has seen it all and can quantify the risk in any situation. Her calm demeanor belies a mind constantly calculating probabilities.",
+            "role": "CRO (Chief Risk Officer)",
+            "catchphrase": "What are the second and third-order consequences here?"
+        },
+        "Marcus": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "5'10\"",
+                "solid, dependable build",
+                "neatly trimmed short brown hair, slight receding hairline",
+                "eye color steady brown",
+                "crisp button-down shirt, tie loosened by midday",
+                "sensible, polished shoes"
+            ],
+            "required_constraints": [
+                "Always has his financial calculator within reach",
+                "Never relies on mental math for critical figures",
+                "Maintains an immaculate desk with everything perfectly aligned"
+            ],
+            "motion_rules": "Methodical and organized movements. Tends to tap his pen on a notepad while reviewing figures.",
+            "voice_tone": "Precise, factual, patient when explaining complex financial instruments. Unflappable.",
+            "prop_loadout": [
+                "financial calculator",
+                "multiple monitors displaying market data and spreadsheets",
+                "thick binder of compliance regulations",
+                "a perpetually full coffee mug with a bank logo"
+            ],
+            "appearance": "The diligent guardian of the company's liquid assets. Looks like he could spot a rounding error from a mile away and thrives on the predictability of numbers.",
+            "role": "Treasury Operations Specialist",
+            "catchphrase": "Let's reconcile these accounts to the penny."
+        },
+        "Jax": {
+            "visual_tags": [
+                "non-binary",
+                "29 years old",
+                "5'7\"",
+                "lean, agile build",
+                "short, choppy dark hair with an undercut, sometimes with a streak of bright color",
+                "eye color intense, dark, always scanning",
+                "functional, dark clothing – hoodies, cargo pants, comfortable sneakers",
+                "often wears a subtle piece of tech-jewelry (e.g., a ring that's also a tiny storage device)"
+            ],
+            "required_constraints": [
+                "Always has multiple screens open, displaying logs or network traffic",
+                "Never fully trusts a system that they haven't personally tried to break",
+                "Drinks copious amounts of energy drinks or strong black coffee"
+            ],
+            "motion_rules": "Quick, alert movements; often fidgets with a small gadget or pen. Can go from relaxed to intensely focused in an instant.",
+            "voice_tone": "Direct, sometimes terse, especially during an incident. Sarcastic when relaxed, but all business when a threat is detected.",
+            "prop_loadout": [
+                "customized laptop covered in security-related stickers",
+                "multiple USB drives on a keychain",
+                "a collection of lock-picking tools (for 'educational purposes')",
+                "noise-canceling earbuds, usually with one earbud out"
+            ],
+            "appearance": "The digital ghost in the machine, always watching for threats. Looks like they haven't slept properly in days but is more alert than anyone in the room.",
+            "role": "Security Specialist",
+            "catchphrase": "Assume breach. Always assume breach."
+        },
+        "Anya Sharma": {
+            "visual_tags": [
+                "female",
+                "48 years old",
+                "5'7\"",
+                "energetic, charismatic presence",
+                "sharp, analytical dark eyes",
+                "short, stylish salt-and-pepper hair",
+                "modern, tailored business attire, often with a unique accessory like a bold necklace or scarf",
+                "wears a high-end smartwatch"
+            ],
+            "required_constraints": [
+                "Always thinking 5 years ahead",
+                "Never dismisses a 'crazy' idea without exploring its potential",
+                "Frequently uses analogies from science fiction or history to explain complex tech concepts"
+            ],
+            "motion_rules": "Paces when brainstorming; uses expressive hand gestures when presenting. Leans forward with intensity when listening to new ideas.",
+            "voice_tone": "Inspiring, articulate, confident; can simplify complex topics effectively. Passionate about innovation.",
+            "prop_loadout": [
+                "latest smartphone and tablet",
+                "digital whiteboard or large sketchpad",
+                "collection of tech biographies and future-studies books",
+                "high-quality espresso machine in office"
+            ],
+            "appearance": "A forward-thinking leader who embodies innovation. Looks like she's always just stepped out of a successful keynote on the future of technology.",
+            "role": "CTO",
+            "catchphrase": "What if we could...? Let's explore the art of the possible."
+        },
+        "Marcus Thorne": {
+            "visual_tags": [
+                "male",
+                "55 years old",
+                "6'0\"",
+                "calm, grounded demeanor",
+                "thoughtful, deep-set hazel eyes behind rimless glasses",
+                "neatly combed graying hair",
+                "classic, impeccable suits, always with a tie",
+                "prefers an analog high-quality watch"
+            ],
+            "required_constraints": [
+                "Prioritizes stability and scalability in all tech decisions",
+                "Always asks 'What's the operational impact and TCO?'",
+                "Maintains meticulously organized digital files and notes"
+            ],
+            "motion_rules": "Still and composed in meetings; tends to listen more than speak, but when he does, it's concise and impactful. Slight, thoughtful nod when agreeing.",
+            "voice_tone": "Measured, authoritative, deeply knowledgeable; values clarity and precision. Skeptical of hype.",
+            "prop_loadout": [
+                "leather briefcase",
+                "multiple monitors displaying system architecture diagrams and performance metrics",
+                "well-worn copies of seminal software engineering books",
+                "a single, high-quality fountain pen for important signatures"
+            ],
+            "appearance": "The seasoned technologist who ensures the engine room is running smoothly and efficiently. Exudes quiet competence and a deep understanding of complex systems.",
+            "role": "CTO",
+            "catchphrase": "Let's focus on robust fundamentals before we chase the next shiny object."
+        },
+        "Sarah Chen": {
+            "visual_tags": [
+                "female",
+                "32 years old",
+                "5'5\"",
+                "bright, inquisitive expression",
+                "trendy glasses",
+                "often wears t-shirts from tech conferences or with geeky references",
+                "carries a messenger bag with a laptop and various gadgets"
+            ],
+            "required_constraints": [
+                "Has already tried all the troubleshooting steps in the FAQ before calling support",
+                "Reads tech blogs and product reviews extensively",
+                "Isn't afraid to use developer tools in a browser to diagnose a web issue"
+            ],
+            "motion_rules": "Animated when describing a problem or a feature request. Taps fingers impatiently if kept on hold or if explanations are too simplistic.",
+            "voice_tone": "Clear, direct, knowledgeable about tech terms; expects a similar level of understanding. Can be enthusiastic about good products.",
+            "prop_loadout": [
+                "latest smartphone",
+                "powerful laptop",
+                "portable battery pack",
+                "notes app filled with feature requests and bug reports for various services"
+            ],
+            "appearance": "An engaged and informed user who knows her way around technology. Expects products to be intuitive and powerful.",
+            "role": "Customer",
+            "catchphrase": "I've already cleared my cache and cookies. The issue seems to be on your end."
+        },
+        "David Miller": {
+            "visual_tags": [
+                "male",
+                "62 years old",
+                "5'9\"",
+                "slightly bewildered but friendly expression when dealing with tech",
+                "reading glasses usually perched on his head or hanging around his neck",
+                "comfortable, casual clothing like a polo shirt and khakis",
+                "prefers phone calls to chat support"
+            ],
+            "required_constraints": [
+                "Writes down instructions carefully on a notepad",
+                "Often prefaces questions with 'This might be a silly question, but...'",
+                "Values patience and clear, simple explanations above all else"
+            ],
+            "motion_rules": "Listens intently, often with a furrowed brow of concentration. Points at the screen when describing what he sees.",
+            "voice_tone": "Polite, slightly hesitant when describing technical problems; appreciative of help. Can get flustered if overwhelmed with jargon.",
+            "prop_loadout": [
+                "older but reliable desktop computer",
+                "spiral-bound notebook and a favorite pen",
+                "a printed list of passwords (kept 'somewhere safe')",
+                "magnifying glass for small print"
+            ],
+            "appearance": "A kind individual trying his best to navigate an increasingly digital world. Values human connection and straightforward assistance.",
+            "role": "Customer",
+            "catchphrase": "Could you explain that one more time, but maybe a bit simpler?"
+        },
+        "Lena Hanson": {
+            "visual_tags": [
+                "female",
+                "41 years old",
+                "5'6\"",
+                "thoughtful, observant gaze behind rectangular glasses",
+                "often wears cardigans or blazers over practical tops",
+                "hair usually tied back in a neat bun or ponytail",
+                "minimalist jewelry"
+            ],
+            "required_constraints": [
+                "Always grounds insights in established HCI principles and research methodologies",
+                "Meticulously documents every observation and user quote",
+                "Believes in ethical research practices above all"
+            ],
+            "motion_rules": "Calm and methodical during user interviews; takes copious notes. Uses precise gestures when explaining findings, often referring to data visualizations.",
+            "voice_tone": "Articulate, analytical, empathetic; skilled at asking open-ended questions. Passionate about user advocacy based on evidence.",
+            "prop_loadout": [
+                "laptop with qualitative analysis software",
+                "multiple notebooks for different projects",
+                "audio recorder and transcription tools",
+                "a well-marked copy of 'The Design of Everyday Things'"
+            ],
+            "appearance": "A dedicated researcher focused on understanding the 'why' behind user behavior. Looks like she could turn any observation into a compelling research paper.",
+            "role": "UX Researcher",
+            "catchphrase": "What mental model do users have when approaching this task?"
+        },
+        "Sam Jordan": {
+            "visual_tags": [
+                "non-binary",
+                "33 years old",
+                "5'8\"",
+                "sharp, focused eyes that seem to see patterns everywhere",
+                "short, edgy haircut",
+                "wears comfortable, data-themed t-shirts (e.g., with charts or code snippets) under a zip-up hoodie",
+                "fitness tracker displaying lots of personal metrics"
+            ],
+            "required_constraints": [
+                "Always asks 'How can we measure that?'",
+                "Believes in A/B testing almost everything",
+                "Can create a compelling data visualization for any user behavior"
+            ],
+            "motion_rules": "Energetic and quick; often pointing at dashboards or analytics screens. Taps fingers rapidly when looking at data streams.",
+            "voice_tone": "Fast-paced, enthusiastic about data, peppers speech with statistical terms. Can be very persuasive when backed by numbers.",
+            "prop_loadout": [
+                "powerful laptop optimized for data analysis (R, Python, SQL)",
+                "large monitor for displaying dashboards",
+                "collection of survey tools and analytics platform accounts",
+                "noise-cancelling headphones for deep focus"
+            ],
+            "appearance": "A quantitative specialist who lives and breathes data. Looks for statistical significance in every user interaction.",
+            "role": "UX Researcher",
+            "catchphrase": "The data suggests a significant correlation here. Let's run another test to confirm."
+        },
+        "Eleanor Vance": {
+            "visual_tags": [
+                "female",
+                "52 years old",
+                "5'5\"",
+                "sharp, discerning brown eyes, often looking over the rim of her glasses",
+                "hair always in a neat, professional style, perhaps a classic bob",
+                "impeccable business attire, usually a skirt suit or a perfectly pressed dress shirt and trousers",
+                "minimal jewelry, practical watch"
+            ],
+            "required_constraints": [
+                "Always has a copy of the latest regulatory handbook (physical or digital) readily accessible",
+                "Never approves anything without thorough documentation and cross-referencing",
+                "Uses red pen for annotations and markups on draft documents"
+            ],
+            "motion_rules": "Calm, deliberate movements. Taps her pen when reviewing documents. Adjusts glasses when scrutinizing a detail.",
+            "voice_tone": "Precise, firm, unambiguous. Speaks clearly and ensures understanding of complex regulations. Rarely raises her voice, but her tone commands attention.",
+            "prop_loadout": [
+                "multiple binders filled with regulations and internal policies",
+                "tablet loaded with compliance software and legal databases",
+                "a collection of high-quality pens, including several red ones",
+                "secure, locked filing cabinet"
+            ],
+            "appearance": "The epitome of diligence and regulatory adherence. Looks like she can recite compliance codes in her sleep and spots deviations instantly.",
+            "role": "Compliance Officer",
+            "catchphrase": "As per section 4, subsection B, paragraph 3, this requires further clarification."
+        },
+        "Kenji Tanaka": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "5'10\"",
+                "approachable, thoughtful expression",
+                "neatly trimmed black hair, perhaps with a few distinguished grey streaks at the temples",
+                "smart business casual – often a blazer over an open-collar shirt",
+                "modern, lightweight glasses"
+            ],
+            "required_constraints": [
+                "Believes in training and prevention over punitive measures",
+                "Always seeks to understand the 'why' behind a potential non-compliance issue",
+                "Maintains an open-door policy for questions about regulations"
+            ],
+            "motion_rules": "Nods attentively when listening. Uses inclusive hand gestures when explaining policies. Often walks around the office to engage with different teams.",
+            "voice_tone": "Calm, advisory, encouraging. Strives to make compliance understandable and less intimidating. Patient with explanations.",
+            "prop_loadout": [
+                "laptop with interactive training modules he designed",
+                "whiteboard in his office covered in flowcharts and simplified regulatory summaries",
+                "a selection of 'Compliance Myths vs. Facts' pamphlets",
+                "a friendly, well-used coffee mug"
+            ],
+            "appearance": "A supportive guide through the complex world of regulations. Looks like he genuinely wants to help everyone stay on the right side of the rules.",
+            "role": "Compliance Officer",
+            "catchphrase": "Let's work together to ensure we meet these requirements proactively."
+        },
+        "Priya Singh": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "5'3\"",
+                "intense, focused dark eyes that don't miss a thing",
+                "long dark hair, usually in a practical ponytail or braid",
+                "business casual, often with a colorful scarf to add a personal touch",
+                "wears blue-light filtering glasses when deep in spreadsheets"
+            ],
+            "required_constraints": [
+                "Triple-checks every calculation and data entry",
+                "Can spot a mismatched number in a dense report from ten paces",
+                "Always has her favorite advanced calculator on her desk, even with powerful spreadsheet software"
+            ],
+            "motion_rules": "Leans close to the screen when analyzing data. Taps fingers on the desk rhythmically when reconciling accounts. Quick, efficient movements.",
+            "voice_tone": "Clear, concise, factual. Asks pointed questions to get to the bottom of financial queries. Confident when presenting her findings.",
+            "prop_loadout": [
+                "multi-monitor setup displaying complex spreadsheets and financial models",
+                "high-precision calculator",
+                "noise-cancelling headphones for deep concentration",
+                "a vast collection of colored pens for marking up reports"
+            ],
+            "appearance": "A financial sleuth who thrives on accuracy and detail. Looks like she can unravel any numerical mystery with her analytical prowess.",
+            "role": "Finance Analyst",
+            "catchphrase": "The numbers tell a story; my job is to make sure it's the true one."
+        },
+        "Ben Carter": {
+            "visual_tags": [
+                "male",
+                "38 years old",
+                "6'1\"",
+                "calm, strategic gaze; often looks into the distance when thinking",
+                "short, well-maintained brown hair",
+                "sharp, modern suits; sometimes foregoes a tie for a more approachable look",
+                "wears a smartwatch with financial news alerts"
+            ],
+            "required_constraints": [
+                "Focuses on trends, forecasts, and long-term financial planning",
+                "Always connects financial data to broader business strategy",
+                "Uses data visualization extensively to communicate insights"
+            ],
+            "motion_rules": "Uses broad, sweeping gestures when discussing future trends. Paces thoughtfully when developing financial models. Often sketches charts on whiteboards.",
+            "voice_tone": "Authoritative, persuasive, articulate. Can explain complex financial forecasts in an accessible way. Forward-looking and optimistic, but grounded in data.",
+            "prop_loadout": [
+                "laptop with advanced forecasting software and BI tools",
+                "large whiteboard filled with trend lines and scenario analyses",
+                "subscriptions to multiple financial journals and market data services",
+                "a sleek, modern water bottle to stay hydrated during long strategy sessions"
+            ],
+            "appearance": "A financial strategist who sees beyond the immediate numbers to chart the course for future growth. Looks ready to present a compelling case for investment.",
+            "role": "Finance Analyst",
+            "catchphrase": "Based on current trends, we project... but let's also consider these alternative scenarios."
+        },
+        "Alex Rodriguez": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "5'9\"",
+                "stocky, strong build",
+                "always looks slightly disheveled from crawling under desks or through server racks",
+                "cargo pants with many pockets, usually filled with tools and gadgets",
+                "company polo shirt or a t-shirt from a hardware vendor"
+            ],
+            "required_constraints": [
+                "Can identify any server component by sight, sound, or smell",
+                "Always has a multi-tool and a flashlight on their belt or in a pocket",
+                "Believes proper cable management is a form of art"
+            ],
+            "motion_rules": "Decisive, physical movements; comfortable in server rooms and data centers. Often gestures with a screwdriver or a network cable in hand.",
+            "voice_tone": "Direct, practical, no-nonsense. Can explain complex hardware issues in simple terms. Occasionally gruff but deeply knowledgeable.",
+            "prop_loadout": [
+                "heavy-duty tool bag",
+                "headlamp",
+                "laptop for diagnostics and server management",
+                "a large roll of Velcro cable ties in various colors"
+            ],
+            "appearance": "The hands-on expert who keeps the physical heart of the IT infrastructure beating. Looks like they can build or fix any piece of hardware.",
+            "role": "Infrastructure Specialist",
+            "catchphrase": "Have you tried rebooting it? Okay, let me check the physical layer."
+        },
+        "Samira Chen": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'6\"",
+                "sharp, intelligent eyes that light up when talking about cloud architecture",
+                "modern, comfortable clothing; often wears tech conference hoodies",
+                "stylish glasses, often with a slight tint",
+                "multiple screens displaying cloud dashboards and configuration files"
+            ],
+            "required_constraints": [
+                "Can architect and deploy complex cloud environments from scratch",
+                "Automates everything possible using IaC (Infrastructure as Code) principles",
+                "Always up-to-date with the latest services and features from major cloud providers"
+            ],
+            "motion_rules": "Fluid and fast on the keyboard; navigates complex cloud consoles with ease. Uses hand gestures to describe abstract cloud concepts like scalability and resilience.",
+            "voice_tone": "Enthusiastic, articulate, highly technical. Passionate about the power and flexibility of cloud computing. Enjoys teaching others about cloud technologies.",
+            "prop_loadout": [
+                "high-performance laptop with multiple virtual machines",
+                "tablet for sketching architecture diagrams",
+                "bookmarks to extensive cloud documentation and API references",
+                "a collection of certification badges from AWS, Azure, or GCP"
+            ],
+            "appearance": "A master of the virtual realm, effortlessly managing vast networks and server fleets that exist only as code. Looks like she can spin up a global infrastructure before lunch.",
+            "role": "Infrastructure Specialist",
+            "catchphrase": "Why build it physically when we can define it in code and scale it infinitely in the cloud?"
+        },
+        "Arthur Finch": {
+            "visual_tags": [
+                "male",
+                "61 years old",
+                "5'8\"",
+                "thinning gray hair, meticulously combed",
+                "sharp, pale blue eyes behind bifocal glasses",
+                "always wears a slightly dated but perfectly maintained suit and tie",
+                "carries a worn leather satchel"
+            ],
+            "required_constraints": [
+                "Always uses a specific brand of green ink pen for marking documents",
+                "Never accepts information at face value; requires primary source verification for everything",
+                "Maintains an almost supernaturally organized workspace, even when temporary"
+            ],
+            "motion_rules": "Methodical and precise movements. Adjusts glasses frequently when reading fine print. Listens with head slightly tilted, as if discerning hidden sounds.",
+            "voice_tone": "Quiet, precise, dryly factual. Can ask deceptively simple questions that uncover major discrepancies. Rarely shows emotion.",
+            "prop_loadout": [
+                "magnifying glass",
+                "collection of green ink pens",
+                "custom-made checklists for various audit procedures",
+                "portable document scanner"
+            ],
+            "appearance": "The quintessential old-school auditor who can find a needle in a haystack of financial records. His quiet demeanor belies a relentless pursuit of accuracy.",
+            "role": "Auditor",
+            "catchphrase": "Let's trace this back to the source document, shall we?"
+        },
+        "Isabelle Moreau": {
+            "visual_tags": [
+                "female",
+                "43 years old",
+                "5'10\"",
+                "athletic build, confident posture",
+                "dark hair pulled back in a sleek ponytail",
+                "penetrating dark eyes that assess systems quickly",
+                "modern, sharp business attire, often trousers and a blazer",
+                "wears a smartwatch that buzzes with reminders"
+            ],
+            "required_constraints": [
+                "Focuses on control weaknesses and process inefficiencies rather than just numbers",
+                "Always creates detailed flowcharts of processes being audited",
+                "Believes a good audit should result in actionable recommendations for improvement"
+            ],
+            "motion_rules": "Walks with a purposeful stride. Uses dynamic gestures when explaining system vulnerabilities. Often sketches diagrams on whiteboards or tablets.",
+            "voice_tone": "Clear, confident, articulate. Can explain complex audit findings in a way that management understands and appreciates. Constructive and solution-oriented.",
+            "prop_loadout": [
+                "tablet with process mapping software",
+                "portable projector for presentations",
+                "library of best-practice frameworks (COSO, ISO, etc.)",
+                "noise-canceling headphones for focused work in busy environments"
+            ],
+            "appearance": "A modern auditor who sees organizations as complex systems. She's here to improve efficiency and reduce risk through better processes, not just tick boxes.",
+            "role": "Auditor",
+            "catchphrase": "The issue isn't just the variance, it's the weakness in the control process that allowed it."
+        },
+        "Reginald Sterling": {
+            "visual_tags": [
+                "male",
+                "72 years old",
+                "5'11\"",
+                "distinguished, with a full head of silver hair",
+                "astute, experienced blue eyes",
+                "impeccably tailored Savile Row suits, often with a pocket square",
+                "expensive, classic timepiece"
+            ],
+            "required_constraints": [
+                "Always prioritizes long-term stability and shareholder value",
+                "Skeptical of overly ambitious tech ventures without clear ROI",
+                "Reads every board pack cover-to-cover and comes with pointed questions"
+            ],
+            "motion_rules": "Commanding presence even when seated. Listens intently, steepling fingers. Slow, deliberate nods when a point resonates. Rarely raises voice, but his disapproval is palpable.",
+            "voice_tone": "Deep, resonant, authoritative. Speaks with gravitas and the weight of experience. Can be charming but firm on matters of governance.",
+            "prop_loadout": [
+                "leather-bound board papers",
+                "gold fountain pen for making discreet notes",
+                "reading glasses on an elegant chain",
+                "a history of the company memorized"
+            ],
+            "appearance": "The elder statesman of the board, embodying tradition and fiscal conservatism. His presence ensures that new ideas are rigorously vetted against established principles.",
+            "role": "Board Member",
+            "catchphrase": "And what is the precise governance implication of this proposal?"
+        },
+        "Dr. Aris Thorne": {
+            "visual_tags": [
+                "male",
+                "48 years old",
+                "6'1\"",
+                "dynamic, energetic presence",
+                "sharp, forward-looking gaze, often with a hint of impatience",
+                "stylish, modern attire – no tie, often a designer jacket over a high-quality t-shirt",
+                "wears the latest tech gadgets subtly"
+            ],
+            "required_constraints": [
+                "Champions disruptive technologies and new market opportunities",
+                "Constantly challenges the status quo and traditional business models",
+                "Asks 'What if?' and 'Why not?' frequently"
+            ],
+            "motion_rules": "Leans forward when engaged. Uses animated hand gestures when discussing future trends. Often stands or paces if a meeting room allows.",
+            "voice_tone": "Enthusiastic, persuasive, fast-paced. Passionate about innovation and can make complex tech sound exciting and accessible. Sometimes challenges others directly.",
+            "prop_loadout": [
+                "latest tablet loaded with tech news and startup pitch decks",
+                "wireless earbuds for calls between meetings",
+                "a mind map of future industry trends always in his head",
+                "strong coffee"
+            ],
+            "appearance": "The voice of the future on the board. Pushes for bold moves and digital transformation, sometimes to the discomfort of more traditional members.",
+            "role": "Board Member",
+            "catchphrase": "If we're not disrupting ourselves, someone else will. Where's our moonshot?"
+        },
+        "Maria Flores": {
+            "visual_tags": [
+                "female",
+                "39 years old",
+                "5'6\"",
+                "warm, approachable smile, kind eyes",
+                "dark curly hair often tied back loosely",
+                "comfortable, smart-casual attire, often with a colorful cardigan",
+                "always seems to have a spare moment for a question"
+            ],
+            "required_constraints": [
+                "Prioritizes team well-being and individual growth above all else",
+                "Always makes time for 1-on-1s, even when busy",
+                "Celebrates team successes, big or small"
+            ],
+            "motion_rules": "Open and inviting body language. Nods encouragingly when listening. Often gives a reassuring pat on the shoulder.",
+            "voice_tone": "Empathetic, patient, supportive. Skilled at giving constructive feedback in a positive way. Her voice naturally calms tense situations.",
+            "prop_loadout": [
+                "notepad filled with notes about her team members' goals and challenges",
+                "a stash of good quality tea and snacks in her desk drawer",
+                "whiteboard markers for impromptu brainstorming sessions",
+                "a collection of 'thank you' cards from past and present team members"
+            ],
+            "appearance": "The nurturing leader who builds strong, cohesive teams by fostering a supportive and collaborative environment. Everyone feels heard and valued under her guidance.",
+            "role": "Team Lead",
+            "catchphrase": "How can I help you succeed with this? Let's talk it through."
+        },
+        "Vikram Chen": {
+            "visual_tags": [
+                "male",
+                "34 years old",
+                "5'11\"",
+                "intense, focused gaze, always thinking about the next deadline",
+                "short, spiky black hair",
+                "energetic, often wearing a company polo or a slightly rumpled button-down shirt",
+                "constantly checking his watch or phone for updates"
+            ],
+            "required_constraints": [
+                "Driven by results and meeting targets; highly organized",
+                "Keeps meetings short, focused, and action-oriented",
+                "Expects high performance and accountability from every team member"
+            ],
+            "motion_rules": "Fast-paced movements; often on his feet, moving between desks or pointing at Gantt charts. Taps pen impatiently if things are moving too slowly.",
+            "voice_tone": "Direct, assertive, clear. Can be demanding but is also quick to recognize and reward effort that leads to results. No time for excuses.",
+            "prop_loadout": [
+                "laptop with project management software always open",
+                "multiple to-do lists (digital and paper)",
+                "energy drinks or strong coffee readily available",
+                "a well-worn baseball cap for 'focus mode'"
+            ],
+            "appearance": "The high-energy leader focused on execution and delivery. He pushes his team hard but leads from the front and gets things done.",
+            "role": "Team Lead",
+            "catchphrase": "What's the status, what are the blockers, and when will it be done?"
+        },
+        "Dr. Evelyn Hayes": {
+            "visual_tags": [
+                "female",
+                "42 years old",
+                "5'7\"",
+                "intense, thoughtful blue eyes that seem to be constantly processing information",
+                "short, slightly unkempt auburn hair",
+                "often wears academic-style clothing: tweed jackets, button-down shirts, comfortable trousers",
+                "minimal makeup, often seen with reading glasses perched on her nose or head"
+            ],
+            "required_constraints": [
+                "Always carries a notebook filled with complex mathematical formulas and model diagrams",
+                "Prefers to explain concepts using theoretical frameworks and first principles",
+                "Can get lost in thought when working on a particularly challenging problem"
+            ],
+            "motion_rules": "Paces when thinking deeply. Uses precise hand gestures to illustrate abstract concepts. Often gazes into the distance while formulating ideas.",
+            "voice_tone": "Articulate, measured, with a passion for an elegant hypothesis. Can sometimes sound a bit abstract or overly academic to non-specialists.",
+            "prop_loadout": [
+                "multiple monitors displaying complex data visualizations and code (Python/R)",
+                "a library of academic papers and advanced statistics textbooks",
+                "a high-powered workstation for model training",
+                "a perpetually refilled teapot"
+            ],
+            "appearance": "A brilliant academic who lives in the world of data, models, and algorithms. Looks like she's on the verge of the next big data breakthrough, if only she can get the variables right.",
+            "role": "Data Scientist",
+            "catchphrase": "The data is trying to tell us something profound, we just need the right model to interpret it."
+        },
+        "Kenji Ito": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\"",
+                "sharp, analytical dark eyes, quick to spot patterns",
+                "neatly styled black hair",
+                "practical, modern business-casual attire; often a smart shirt and dark jeans",
+                "wears a fitness tracker and optimizes his own 'metrics'"
+            ],
+            "required_constraints": [
+                "Focuses on delivering actionable insights and measurable business value from data",
+                "Always tests models rigorously for real-world applicability and bias",
+                "Believes in clear communication of results to non-technical stakeholders"
+            ],
+            "motion_rules": "Efficient and direct movements. Uses clear, concise gestures when presenting findings. Navigates dashboards and reports with speed.",
+            "voice_tone": "Confident, clear, results-oriented. Can explain complex data findings in simple business terms. Values practicality over theoretical purity.",
+            "prop_loadout": [
+                "laptop with Jupyter notebooks and BI tools",
+                "a portfolio of successful data-driven projects",
+                "presentation clicker for stakeholder meetings",
+                "a well-organized system for tracking experiments and model performance"
+            ],
+            "appearance": "A results-driven data expert who translates complex data into tangible business outcomes. Looks like he can always find the signal in the noise and make it profitable.",
+            "role": "Data Scientist",
+            "catchphrase": "That's an interesting correlation, but how does it help us move the needle on our KPIs?"
+        },
+        "Chloe Davis": {
+            "visual_tags": [
+                "female",
+                "38 years old",
+                "5'6\"",
+                "bright, engaging hazel eyes, full of ideas",
+                "stylish, often colorful, business-casual attire; might wear unique accessories",
+                "expressive face, often smiling or animated when discussing product features",
+                "carries a notebook or tablet everywhere"
+            ],
+            "required_constraints": [
+                "Deeply understands user needs and advocates for the user relentlessly",
+                "Maintains and passionately communicates the product vision and roadmap",
+                "Is decisive about backlog prioritization based on value and strategic goals"
+            ],
+            "motion_rules": "Uses expansive gestures when describing the product vision. Often draws on whiteboards or sketches ideas. Moves with energy and enthusiasm.",
+            "voice_tone": "Inspiring, persuasive, clear. Can articulate the 'why' behind product decisions effectively. Passionate about creating great user experiences.",
+            "prop_loadout": [
+                "tablet filled with user personas, journey maps, and wireframes",
+                "a well-groomed backlog in a project management tool (e.g., Jira)",
+                "sticky notes in various colors for brainstorming",
+                "a collection of user feedback and market research reports"
+            ],
+            "appearance": "The passionate champion of the product and its users. Looks like she's always envisioning the next great feature that will delight customers and achieve business goals.",
+            "role": "Product Owner",
+            "catchphrase": "What problem are we solving for the user here, and how does this feature deliver maximum value?"
+        },
+        "Marcus Chen": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "calm, focused brown eyes; a no-nonsense expression",
+                "short, practical haircut",
+                "functional, understated clothing; often a polo shirt and comfortable chinos",
+                "always seems to have a pen ready to make a list or check something off"
+            ],
+            "required_constraints": [
+                "Excels at breaking down complex problems into manageable user stories",
+                "Ensures the development team has clear, well-defined requirements",
+                "Ruthlessly prioritizes to maximize throughput and deliver on commitments"
+            ],
+            "motion_rules": "Methodical and organized. Ticks items off lists. Prefers clear, structured communication. Nods decisively when requirements are clear.",
+            "voice_tone": "Pragmatic, direct, unambiguous. Values clarity and efficiency in communication. Focused on execution and delivery.",
+            "prop_loadout": [
+                "laptop with a highly organized digital backlog and sprint plans",
+                "noise-canceling headphones to focus on writing detailed acceptance criteria",
+                "a system for tracking dependencies and impediments",
+                "a water bottle to stay hydrated through intense planning sessions"
+            ],
+            "appearance": "The master of execution who ensures the product vision becomes a reality. Looks like he can take any complex idea and turn it into a well-oiled delivery machine.",
+            "role": "Product Owner",
+            "catchphrase": "Is this story 'ready-ready'? What are the clear acceptance criteria?"
+        },
+        "Aisha Khan": {
+            "visual_tags": [
+                "female",
+                "40 years old",
+                "5'8\"",
+                "calm, steady gaze, exuding competence and control",
+                "hair often neatly tied back, practical for long incident calls",
+                "professional but comfortable attire, ready for action or a strategy meeting",
+                "wears a headset during major incidents, otherwise keeps it nearby"
+            ],
+            "required_constraints": [
+                "Prioritizes reliability, scalability, and performance of services above all",
+                "Mentors her team in best practices for incident response and proactive engineering",
+                "Always maintains a clear head during high-pressure situations and guides the team effectively"
+            ],
+            "motion_rules": "Composed and deliberate movements, even under pressure. Uses clear hand signals or concise instructions during incidents. Often seen observing dashboards with intense focus.",
+            "voice_tone": "Authoritative, calm, reassuring. Can de-escalate tense situations and provide clear direction. Instills confidence in her team.",
+            "prop_loadout": [
+                "laptop with comprehensive monitoring dashboards and communication tools",
+                "runbooks and incident management protocols (physical or digital)",
+                "a well-maintained knowledge base for her team",
+                "a 'go-bag' with essentials for extended incident handling"
+            ],
+            "appearance": "The bedrock of stability for the engineering teams. Looks like she has weathered countless storms and can navigate any production crisis with expertise and calm.",
+            "role": "SRE Lead",
+            "catchphrase": "Okay team, what's our current state, what's the impact, and what's our next indicated action?"
+        },
+        "Rajiv Patel": {
+            "visual_tags": [
+                "male",
+                "36 years old",
+                "5'10\"",
+                "bright, curious eyes, always looking for ways to improve systems",
+                "casually stylish, often wears t-shirts from tech conferences or open-source projects",
+                "energetic and often seen whiteboarding new automation ideas",
+                "sports a smartwatch with custom alerts for system anomalies"
+            ],
+            "required_constraints": [
+                "Constantly seeks to automate toil and improve system efficiency through innovative solutions",
+                "Encourages his team to experiment with new tools and techniques",
+                "Believes in 'everything as code' and proactive problem prevention"
+            ],
+            "motion_rules": "Animated when discussing new technologies or automation strategies. Quickly sketches diagrams to explain complex ideas. Moves with a sense of urgency and excitement.",
+            "voice_tone": "Enthusiastic, forward-thinking, persuasive. Can inspire his team to embrace change and adopt new SRE practices. Passionate about engineering excellence.",
+            "prop_loadout": [
+                "laptop with advanced scripting environments and IaC tools",
+                "a backlog of automation projects and R&D tasks for the team",
+                "access to multiple cloud provider consoles and open-source project repos",
+                "a collection of stickers from various tech tools and projects on his laptop"
+            ],
+            "appearance": "The forward-thinking leader driving the evolution of SRE practices. Looks like he's always three steps ahead, envisioning a more automated and resilient future.",
+            "role": "SRE Lead",
+            "catchphrase": "Why are we doing this manually? There has to be a way to automate this and make it self-healing."
+        },
+        "Eleanor Ainsworth": {
+            "visual_tags": [
+                "female",
+                "55 years old",
+                "5'7\"",
+                "sharp, intelligent gray eyes that miss nothing",
+                "short, impeccably styled silver hair",
+                "classic, tailored business attire in muted colors (e.g., charcoal, navy)",
+                "wears an understated but high-quality watch"
+            ],
+            "required_constraints": [
+                "Always carries a comprehensive risk register (digital or physical)",
+                "Believes in proactive risk mitigation and contingency planning",
+                "Never makes a decision without considering the potential downsides and probabilities"
+            ],
+            "motion_rules": "Calm, composed, and deliberate in her movements. Often steeples her fingers when listening or explaining. Her posture conveys authority and control.",
+            "voice_tone": "Measured, precise, and authoritative. Can explain complex risk scenarios clearly and concisely. Remains calm even when discussing high-impact threats.",
+            "prop_loadout": [
+                "tablet with risk management software and scenario models",
+                "multiple secure communication devices",
+                "a library of regulatory frameworks and industry best practices for risk",
+                "a well-organized digital archive of past incidents and lessons learned"
+            ],
+            "appearance": "The epitome of strategic foresight and control. Looks like she has anticipated every possible catastrophe and has a plan for each one.",
+            "role": "Risk Manager",
+            "catchphrase": "It's not just about identifying risks, it's about having robust, tested plans to address them."
+        },
+        "David Lee": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "alert, observant brown eyes, always scanning his surroundings",
+                "fit, athletic build, looks ready for action",
+                "practical, slightly informal business attire, like a blazer over an open-necked shirt",
+                "often looks a bit weathered, as if he's just come from a crisis zone"
+            ],
+            "required_constraints": [
+                "Focuses on operational risks and on-the-ground realities",
+                "Believes in hands-on assessment and direct observation",
+                "Always has a 'go-bag' ready with essential tools and communication gear"
+            ],
+            "motion_rules": "Purposeful and energetic movements. Tends to walk around while on calls. Uses direct gestures to emphasize points. Always seems aware of his environment.",
+            "voice_tone": "Clear, direct, no-nonsense. Can be very persuasive in high-stakes situations. Instills a sense of urgency and action.",
+            "prop_loadout": [
+                "ruggedized laptop and tablet",
+                "satellite phone or other backup communication devices",
+                "first-aid kit and emergency supplies",
+                "a network of trusted contacts across various departments and locations"
+            ],
+            "appearance": "The pragmatic risk professional who understands that plans are useless without practical execution. Looks like he’s most comfortable in the middle of a developing situation, managing it directly.",
+            "role": "Risk Manager",
+            "catchphrase": "Theoretical risks are one thing; what are we seeing on the ground right now?"
+        },
+        "Victoria Sterling": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "5'9\"",
+                "commanding presence, warm and engaging smile",
+                "striking silver-streaked dark hair, impeccably styled",
+                "elegant, powerful business attire, often with a signature piece of jewelry",
+                "radiates confidence and authority"
+            ],
+            "required_constraints": [
+                "Always knows the names of her key team members and their contributions",
+                "Can deliver inspiring speeches with little preparation",
+                "Prioritizes company culture and employee morale as key business drivers"
+            ],
+            "motion_rules": "Graceful and confident movements. Uses open, inviting gestures. Makes eye contact and connects with people individually, even in large groups.",
+            "voice_tone": "Articulate, persuasive, and motivational. Can adapt her tone to be firm when needed but prefers to inspire and uplift. Her voice carries natural authority.",
+            "prop_loadout": [
+                "tablet with key business metrics and presentation notes",
+                "a collection of leadership books and biographies",
+                "a well-used fountain pen for signing important documents and thank-you notes",
+                "a schedule packed with strategic meetings and employee engagements"
+            ],
+            "appearance": "A natural leader who inspires loyalty and high performance. Looks like she could rally the entire company to achieve an audacious goal with a single speech.",
+            "role": "Executive",
+            "catchphrase": "Our people are our greatest asset; let's empower them to do their best work."
+        },
+        "James Maxwell": {
+            "visual_tags": [
+                "male",
+                "58 years old",
+                "5'11\"",
+                "sharp, analytical blue eyes behind rimless glasses",
+                "thinning grey hair, always neat",
+                "conservative, perfectly tailored suits; always looks ready for a board meeting",
+                "prefers data over anecdotes"
+            ],
+            "required_constraints": [
+                "Relies heavily on data, dashboards, and financial reports for decision-making",
+                "Always asks for the ROI and strategic alignment of any new initiative",
+                "Maintains a calm, almost detached demeanor, even under pressure"
+            ],
+            "motion_rules": "Minimal, precise gestures. Often reviews documents or screens intently during discussions. Nods slowly when processing information. Rarely shows strong emotion.",
+            "voice_tone": "Measured, factual, and direct. Values precision and clarity. Can cut through noise to get to the core financial or strategic implications.",
+            "prop_loadout": [
+                "multiple devices displaying real-time business intelligence dashboards",
+                "encrypted hard drives with sensitive financial data",
+                "a secure briefcase, always locked",
+                "a worn copy of a classic business strategy book"
+            ],
+            "appearance": "A data-driven strategist who views the business as a complex system to be optimized. Looks like he can dissect any business problem with a spreadsheet and a keen analytical mind.",
+            "role": "Executive",
+            "catchphrase": "Let's look at what the data says before we proceed. What are the key metrics here?"
+        },
+        "Brenda Miller": {
+            "visual_tags": [
+                "female",
+                "42 years old",
+                "5'5\"",
+                "expressive, empathetic brown eyes",
+                "friendly, approachable demeanor",
+                "comfortable, practical business-casual attire",
+                "often carries a notebook filled with user feedback and process improvement ideas"
+            ],
+            "required_constraints": [
+                "Always champions the needs and pain points of the actual users of a system or product",
+                "Can clearly articulate how business decisions will impact day-to-day operations",
+                "Not afraid to speak up if a proposed change will negatively affect her team's workflow"
+            ],
+            "motion_rules": "Animated when discussing user issues. Leans in when listening to concerns. Uses hand gestures to illustrate user workflows or problems.",
+            "voice_tone": "Passionate, clear, and persuasive, especially when advocating for users. Can be firm when defending her team's needs.",
+            "prop_loadout": [
+                "notebook with user stories, pain points, and feature requests",
+                "screenshots or recordings of system issues",
+                "a well-worn process map highlighting inefficiencies",
+                "a list of frequently asked questions from her department"
+            ],
+            "appearance": "The voice of the front lines, ensuring that business decisions are grounded in the reality of how work gets done. Looks like she genuinely cares about making things better for her colleagues.",
+            "role": "Business Stakeholder",
+            "catchphrase": "But how will this actually work for the people doing the job every day?"
+        },
+        "Marcus Thorne": {
+            "visual_tags": [
+                "male",
+                "50 years old",
+                "6'1\"",
+                "authoritative presence, confident posture",
+                "sharp, focused gaze that assesses situations quickly",
+                "impeccable business suit, always looks polished",
+                "carries an air of responsibility and strategic importance"
+            ],
+            "required_constraints": [
+                "Represents the interests and strategic objectives of his specific department or business unit",
+                "Focuses on resource allocation, budget adherence, and departmental KPIs",
+                "Expects clear communication and accountability from project teams impacting his area"
+            ],
+            "motion_rules": "Commanding and deliberate movements. Uses firm handshakes. Often stands with arms crossed when evaluating proposals. Direct eye contact.",
+            "voice_tone": "Assertive, strategic, and results-oriented. Clearly articulates his department's needs and expectations. Can be tough but fair in negotiations.",
+            "prop_loadout": [
+                "departmental budget reports and strategic plans",
+                "performance dashboards for his business unit",
+                "a list of critical success factors for his department's initiatives",
+                "a high-quality pen for signing off on important decisions"
+            ],
+            "appearance": "A key leader focused on the success and efficiency of his domain. Looks like he's constantly balancing departmental needs with overall company objectives.",
+            "role": "Business Stakeholder",
+            "catchphrase": "How does this align with our department's strategic goals, and what resources will be required from my team?"
+        },
+        "General Armistead": {
+            "visual_tags": [
+                "male",
+                "62 years old",
+                "6'2\"",
+                "commanding presence, upright military posture even in civilian attire",
+                "sharp, piercing blue eyes that have seen much",
+                "short, impeccably neat silver hair",
+                "favors dark, well-tailored suits or high-quality blazers; sometimes a subtle nod to a past military affiliation"
+            ],
+            "required_constraints": [
+                "Always speaks with clarity and conviction, expecting to be understood and followed",
+                "Focuses on long-term strategic vision and inspiring teams to achieve ambitious goals",
+                "Maintains a calm demeanor under extreme pressure, providing a steady hand for the organization"
+            ],
+            "motion_rules": "Minimal, purposeful gestures. Stands tall and still when addressing groups. Walks with a confident, measured stride. Conveys authority without needing to raise his voice.",
+            "voice_tone": "Resonant, authoritative, inspiring. Can deliver powerful speeches that galvanize action. Articulates complex strategies in a way that everyone can understand.",
+            "prop_loadout": [
+                "a leather-bound notebook with strategic notes",
+                "a collection of books on leadership, history, and strategy",
+                "a simple, elegant pen used for signing off on major directives",
+                "often has a map or large display showing organizational reach or strategic deployments"
+            ],
+            "appearance": "A seasoned leader who commands respect through presence and strategic acumen. Looks like he could lead any organization through complex challenges to decisive victory.",
+            "role": "Executive Leader",
+            "catchphrase": "The objective is clear. Our strategy is sound. Now, let's execute with precision and unity."
+        },
+        "Seraphina Monroe": {
+            "visual_tags": [
+                "female",
+                "48 years old",
+                "5'8\"",
+                "dynamic, energetic presence; eyes that sparkle with innovative ideas",
+                "stylish, modern professional attire, often with a bold color or unique design element",
+                "expressive hand gestures when discussing change and future possibilities",
+                "wears contemporary, artful jewelry"
+            ],
+            "required_constraints": [
+                "Constantly challenges the status quo and seeks opportunities for radical improvement",
+                "Champions innovation, agility, and a culture of continuous learning",
+                "Empowers her teams to take risks and experiment with new approaches"
+            ],
+            "motion_rules": "Moves with a vibrant energy. Often paces or uses a whiteboard to sketch out transformational roadmaps. Leans forward with enthusiasm when discussing new ideas.",
+            "voice_tone": "Passionate, persuasive, and forward-looking. Can articulate a compelling vision for the future that energizes and motivates. Encourages debate and creative thinking.",
+            "prop_loadout": [
+                "tablet filled with industry research, trend analyses, and innovation frameworks",
+                "a wall of sticky notes and mind maps in her office",
+                "connections to a wide network of thought leaders and innovators",
+                "latest tech gadgets that enhance productivity and collaboration"
+            ],
+            "appearance": "A visionary change agent who inspires organizations to reinvent themselves. Looks like she's always five steps ahead, designing the future of the business.",
+            "role": "Executive Leader",
+            "catchphrase": "We can't just adapt to the future; we must create it. What bold steps will we take today?"
+        },
+        "Mr. Alistair Finch": {
+            "visual_tags": [
+                "male",
+                "65 years old",
+                "5'10\"",
+                "astute, discerning gaze behind conservative spectacles",
+                "immaculately dressed in bespoke suits, often with a traditional tie",
+                "thinning silver hair, always perfectly groomed",
+                "carries an air of quiet financial power"
+            ],
+            "required_constraints": [
+                "Primarily concerned with shareholder value, ROI, and long-term financial stability",
+                "Asks probing questions about capital allocation, risk exposure, and market positioning",
+                "Expects clear, data-driven justifications for all major strategic decisions"
+            ],
+            "motion_rules": "Calm and deliberate. Listens more than speaks in large meetings, but his questions are always impactful. Reviews financial reports with intense focus. Subtle, thoughtful nods.",
+            "voice_tone": "Measured, precise, and deeply informed. Speaks with the authority of significant capital backing. Can be skeptical of initiatives without a clear financial upside.",
+            "prop_loadout": [
+                "a locked briefcase containing detailed financial analyses and investment portfolios",
+                "a secure encrypted device for confidential communications",
+                "subscriptions to numerous high-level financial publications",
+                "a direct line to major institutional investors"
+            ],
+            "appearance": "The discerning guardian of investor interests. Looks like he can assess the financial viability of a company with a glance at its balance sheet and a few pointed questions.",
+            "role": "Executive Stakeholder",
+            "catchphrase": "How does this initiative directly contribute to enhancing shareholder value in the next 3-5 years?"
+        },
+        "Dr. Evelyn Reed": {
+            "visual_tags": [
+                "female",
+                "58 years old",
+                "5'6\"",
+                "thoughtful, principled expression; kind but firm eyes",
+                "elegant, understated professional attire; often wears a meaningful brooch or pin",
+                "carries herself with quiet dignity and intellectual rigor",
+                "radiates integrity"
+            ],
+            "required_constraints": [
+                "Champions corporate social responsibility, ethical conduct, and robust governance frameworks",
+                "Ensures that business strategies align with long-term sustainability and societal impact",
+                "Advocates for transparency, accountability, and stakeholder inclusivity"
+            ],
+            "motion_rules": "Listens intently with a slight head tilt. Uses calm, considered gestures when speaking. Her presence encourages respectful dialogue and ethical consideration.",
+            "voice_tone": "Articulate, compassionate, and principled. Speaks with moral authority but also with a pragmatic understanding of business realities. Asks thought-provoking ethical questions.",
+            "prop_loadout": [
+                "copies of the company's code of conduct and ESG (Environmental, Social, Governance) reports",
+                "academic papers on corporate ethics and sustainable business practices",
+                "a notepad for recording governance concerns and recommendations",
+                "a history of advocating for positive change within organizations"
+            ],
+            "appearance": "The moral compass of the executive group, ensuring that success is achieved responsibly and sustainably. Looks like she can guide any organization towards a more ethical and equitable future.",
+            "role": "Executive Stakeholder",
+            "catchphrase": "While profitability is essential, how are we considering the broader impact of our decisions on all our stakeholders and on society?"
         }
     }
 }

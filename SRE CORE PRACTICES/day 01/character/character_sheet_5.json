@@ -1,0 +1,166 @@
+{
+    "characters": {
+        "Dr. Evelyn Hayes": {
+            "visual_tags": [
+                "female",
+                "42 years old",
+                "5'7\"",
+                "intense, thoughtful blue eyes that seem to be constantly processing information",
+                "short, slightly unkempt auburn hair",
+                "often wears academic-style clothing: tweed jackets, button-down shirts, comfortable trousers",
+                "minimal makeup, often seen with reading glasses perched on her nose or head"
+            ],
+            "required_constraints": [
+                "Always carries a notebook filled with complex mathematical formulas and model diagrams",
+                "Prefers to explain concepts using theoretical frameworks and first principles",
+                "Can get lost in thought when working on a particularly challenging problem"
+            ],
+            "motion_rules": "Paces when thinking deeply. Uses precise hand gestures to illustrate abstract concepts. Often gazes into the distance while formulating ideas.",
+            "voice_tone": "Articulate, measured, with a passion for an elegant hypothesis. Can sometimes sound a bit abstract or overly academic to non-specialists.",
+            "prop_loadout": [
+                "multiple monitors displaying complex data visualizations and code (Python/R)",
+                "a library of academic papers and advanced statistics textbooks",
+                "a high-powered workstation for model training",
+                "a perpetually refilled teapot"
+            ],
+            "appearance": "A brilliant academic who lives in the world of data, models, and algorithms. Looks like she's on the verge of the next big data breakthrough, if only she can get the variables right.",
+            "role": "Data Scientist",
+            "catchphrase": "The data is trying to tell us something profound, we just need the right model to interpret it."
+        },
+        "Kenji Ito": {
+            "visual_tags": [
+                "male",
+                "35 years old",
+                "5'9\"",
+                "sharp, analytical dark eyes, quick to spot patterns",
+                "neatly styled black hair",
+                "practical, modern business-casual attire; often a smart shirt and dark jeans",
+                "wears a fitness tracker and optimizes his own 'metrics'"
+            ],
+            "required_constraints": [
+                "Focuses on delivering actionable insights and measurable business value from data",
+                "Always tests models rigorously for real-world applicability and bias",
+                "Believes in clear communication of results to non-technical stakeholders"
+            ],
+            "motion_rules": "Efficient and direct movements. Uses clear, concise gestures when presenting findings. Navigates dashboards and reports with speed.",
+            "voice_tone": "Confident, clear, results-oriented. Can explain complex data findings in simple business terms. Values practicality over theoretical purity.",
+            "prop_loadout": [
+                "laptop with Jupyter notebooks and BI tools",
+                "a portfolio of successful data-driven projects",
+                "presentation clicker for stakeholder meetings",
+                "a well-organized system for tracking experiments and model performance"
+            ],
+            "appearance": "A results-driven data expert who translates complex data into tangible business outcomes. Looks like he can always find the signal in the noise and make it profitable.",
+            "role": "Data Scientist",
+            "catchphrase": "That's an interesting correlation, but how does it help us move the needle on our KPIs?"
+        },
+        "Chloe Davis": {
+            "visual_tags": [
+                "female",
+                "38 years old",
+                "5'6\"",
+                "bright, engaging hazel eyes, full of ideas",
+                "stylish, often colorful, business-casual attire; might wear unique accessories",
+                "expressive face, often smiling or animated when discussing product features",
+                "carries a notebook or tablet everywhere"
+            ],
+            "required_constraints": [
+                "Deeply understands user needs and advocates for the user relentlessly",
+                "Maintains and passionately communicates the product vision and roadmap",
+                "Is decisive about backlog prioritization based on value and strategic goals"
+            ],
+            "motion_rules": "Uses expansive gestures when describing the product vision. Often draws on whiteboards or sketches ideas. Moves with energy and enthusiasm.",
+            "voice_tone": "Inspiring, persuasive, clear. Can articulate the 'why' behind product decisions effectively. Passionate about creating great user experiences.",
+            "prop_loadout": [
+                "tablet filled with user personas, journey maps, and wireframes",
+                "a well-groomed backlog in a project management tool (e.g., Jira)",
+                "sticky notes in various colors for brainstorming",
+                "a collection of user feedback and market research reports"
+            ],
+            "appearance": "The passionate champion of the product and its users. Looks like she's always envisioning the next great feature that will delight customers and achieve business goals.",
+            "role": "Product Owner",
+            "catchphrase": "What problem are we solving for the user here, and how does this feature deliver maximum value?"
+        },
+        "Marcus Chen": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "calm, focused brown eyes; a no-nonsense expression",
+                "short, practical haircut",
+                "functional, understated clothing; often a polo shirt and comfortable chinos",
+                "always seems to have a pen ready to make a list or check something off"
+            ],
+            "required_constraints": [
+                "Excels at breaking down complex problems into manageable user stories",
+                "Ensures the development team has clear, well-defined requirements",
+                "Ruthlessly prioritizes to maximize throughput and deliver on commitments"
+            ],
+            "motion_rules": "Methodical and organized. Ticks items off lists. Prefers clear, structured communication. Nods decisively when requirements are clear.",
+            "voice_tone": "Pragmatic, direct, unambiguous. Values clarity and efficiency in communication. Focused on execution and delivery.",
+            "prop_loadout": [
+                "laptop with a highly organized digital backlog and sprint plans",
+                "noise-canceling headphones to focus on writing detailed acceptance criteria",
+                "a system for tracking dependencies and impediments",
+                "a water bottle to stay hydrated through intense planning sessions"
+            ],
+            "appearance": "The master of execution who ensures the product vision becomes a reality. Looks like he can take any complex idea and turn it into a well-oiled delivery machine.",
+            "role": "Product Owner",
+            "catchphrase": "Is this story 'ready-ready'? What are the clear acceptance criteria?"
+        },
+        "Aisha Khan": {
+            "visual_tags": [
+                "female",
+                "40 years old",
+                "5'8\"",
+                "calm, steady gaze, exuding competence and control",
+                "hair often neatly tied back, practical for long incident calls",
+                "professional but comfortable attire, ready for action or a strategy meeting",
+                "wears a headset during major incidents, otherwise keeps it nearby"
+            ],
+            "required_constraints": [
+                "Prioritizes reliability, scalability, and performance of services above all",
+                "Mentors her team in best practices for incident response and proactive engineering",
+                "Always maintains a clear head during high-pressure situations and guides the team effectively"
+            ],
+            "motion_rules": "Composed and deliberate movements, even under pressure. Uses clear hand signals or concise instructions during incidents. Often seen observing dashboards with intense focus.",
+            "voice_tone": "Authoritative, calm, reassuring. Can de-escalate tense situations and provide clear direction. Instills confidence in her team.",
+            "prop_loadout": [
+                "laptop with comprehensive monitoring dashboards and communication tools",
+                "runbooks and incident management protocols (physical or digital)",
+                "a well-maintained knowledge base for her team",
+                "a 'go-bag' with essentials for extended incident handling"
+            ],
+            "appearance": "The bedrock of stability for the engineering teams. Looks like she has weathered countless storms and can navigate any production crisis with expertise and calm.",
+            "role": "SRE Lead",
+            "catchphrase": "Okay team, what's our current state, what's the impact, and what's our next indicated action?"
+        },
+        "Rajiv Patel": {
+            "visual_tags": [
+                "male",
+                "36 years old",
+                "5'10\"",
+                "bright, curious eyes, always looking for ways to improve systems",
+                "casually stylish, often wears t-shirts from tech conferences or open-source projects",
+                "energetic and often seen whiteboarding new automation ideas",
+                "sports a smartwatch with custom alerts for system anomalies"
+            ],
+            "required_constraints": [
+                "Constantly seeks to automate toil and improve system efficiency through innovative solutions",
+                "Encourages his team to experiment with new tools and techniques",
+                "Believes in 'everything as code' and proactive problem prevention"
+            ],
+            "motion_rules": "Animated when discussing new technologies or automation strategies. Quickly sketches diagrams to explain complex ideas. Moves with a sense of urgency and excitement.",
+            "voice_tone": "Enthusiastic, forward-thinking, persuasive. Can inspire his team to embrace change and adopt new SRE practices. Passionate about engineering excellence.",
+            "prop_loadout": [
+                "laptop with advanced scripting environments and IaC tools",
+                "a backlog of automation projects and R&D tasks for the team",
+                "access to multiple cloud provider consoles and open-source project repos",
+                "a collection of stickers from various tech tools and projects on his laptop"
+            ],
+            "appearance": "The forward-thinking leader driving the evolution of SRE practices. Looks like he's always three steps ahead, envisioning a more automated and resilient future.",
+            "role": "SRE Lead",
+            "catchphrase": "Why are we doing this manually? There has to be a way to automate this and make it self-healing."
+        }
+    }
+}

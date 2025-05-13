@@ -1,0 +1,166 @@
+{
+    "characters": {
+        "Eleanor Ainsworth": {
+            "visual_tags": [
+                "female",
+                "55 years old",
+                "5'7\"",
+                "sharp, intelligent gray eyes that miss nothing",
+                "short, impeccably styled silver hair",
+                "classic, tailored business attire in muted colors (e.g., charcoal, navy)",
+                "wears an understated but high-quality watch"
+            ],
+            "required_constraints": [
+                "Always carries a comprehensive risk register (digital or physical)",
+                "Believes in proactive risk mitigation and contingency planning",
+                "Never makes a decision without considering the potential downsides and probabilities"
+            ],
+            "motion_rules": "Calm, composed, and deliberate in her movements. Often steeples her fingers when listening or explaining. Her posture conveys authority and control.",
+            "voice_tone": "Measured, precise, and authoritative. Can explain complex risk scenarios clearly and concisely. Remains calm even when discussing high-impact threats.",
+            "prop_loadout": [
+                "tablet with risk management software and scenario models",
+                "multiple secure communication devices",
+                "a library of regulatory frameworks and industry best practices for risk",
+                "a well-organized digital archive of past incidents and lessons learned"
+            ],
+            "appearance": "The epitome of strategic foresight and control. Looks like she has anticipated every possible catastrophe and has a plan for each one.",
+            "role": "Risk Manager",
+            "catchphrase": "It's not just about identifying risks, it's about having robust, tested plans to address them."
+        },
+        "David Lee": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "6'0\"",
+                "alert, observant brown eyes, always scanning his surroundings",
+                "fit, athletic build, looks ready for action",
+                "practical, slightly informal business attire, like a blazer over an open-necked shirt",
+                "often looks a bit weathered, as if he's just come from a crisis zone"
+            ],
+            "required_constraints": [
+                "Focuses on operational risks and on-the-ground realities",
+                "Believes in hands-on assessment and direct observation",
+                "Always has a 'go-bag' ready with essential tools and communication gear"
+            ],
+            "motion_rules": "Purposeful and energetic movements. Tends to walk around while on calls. Uses direct gestures to emphasize points. Always seems aware of his environment.",
+            "voice_tone": "Clear, direct, no-nonsense. Can be very persuasive in high-stakes situations. Instills a sense of urgency and action.",
+            "prop_loadout": [
+                "ruggedized laptop and tablet",
+                "satellite phone or other backup communication devices",
+                "first-aid kit and emergency supplies",
+                "a network of trusted contacts across various departments and locations"
+            ],
+            "appearance": "The pragmatic risk professional who understands that plans are useless without practical execution. Looks like he’s most comfortable in the middle of a developing situation, managing it directly.",
+            "role": "Risk Manager",
+            "catchphrase": "Theoretical risks are one thing; what are we seeing on the ground right now?"
+        },
+        "Victoria Sterling": {
+            "visual_tags": [
+                "female",
+                "50 years old",
+                "5'9\"",
+                "commanding presence, warm and engaging smile",
+                "striking silver-streaked dark hair, impeccably styled",
+                "elegant, powerful business attire, often with a signature piece of jewelry",
+                "radiates confidence and authority"
+            ],
+            "required_constraints": [
+                "Always knows the names of her key team members and their contributions",
+                "Can deliver inspiring speeches with little preparation",
+                "Prioritizes company culture and employee morale as key business drivers"
+            ],
+            "motion_rules": "Graceful and confident movements. Uses open, inviting gestures. Makes eye contact and connects with people individually, even in large groups.",
+            "voice_tone": "Articulate, persuasive, and motivational. Can adapt her tone to be firm when needed but prefers to inspire and uplift. Her voice carries natural authority.",
+            "prop_loadout": [
+                "tablet with key business metrics and presentation notes",
+                "a collection of leadership books and biographies",
+                "a well-used fountain pen for signing important documents and thank-you notes",
+                "a schedule packed with strategic meetings and employee engagements"
+            ],
+            "appearance": "A natural leader who inspires loyalty and high performance. Looks like she could rally the entire company to achieve an audacious goal with a single speech.",
+            "role": "Executive",
+            "catchphrase": "Our people are our greatest asset; let's empower them to do their best work."
+        },
+        "James Maxwell": {
+            "visual_tags": [
+                "male",
+                "58 years old",
+                "5'11\"",
+                "sharp, analytical blue eyes behind rimless glasses",
+                "thinning grey hair, always neat",
+                "conservative, perfectly tailored suits; always looks ready for a board meeting",
+                "prefers data over anecdotes"
+            ],
+            "required_constraints": [
+                "Relies heavily on data, dashboards, and financial reports for decision-making",
+                "Always asks for the ROI and strategic alignment of any new initiative",
+                "Maintains a calm, almost detached demeanor, even under pressure"
+            ],
+            "motion_rules": "Minimal, precise gestures. Often reviews documents or screens intently during discussions. Nods slowly when processing information. Rarely shows strong emotion.",
+            "voice_tone": "Measured, factual, and direct. Values precision and clarity. Can cut through noise to get to the core financial or strategic implications.",
+            "prop_loadout": [
+                "multiple devices displaying real-time business intelligence dashboards",
+                "encrypted hard drives with sensitive financial data",
+                "a secure briefcase, always locked",
+                "a worn copy of a classic business strategy book"
+            ],
+            "appearance": "A data-driven strategist who views the business as a complex system to be optimized. Looks like he can dissect any business problem with a spreadsheet and a keen analytical mind.",
+            "role": "Executive",
+            "catchphrase": "Let's look at what the data says before we proceed. What are the key metrics here?"
+        },
+        "Brenda Miller": {
+            "visual_tags": [
+                "female",
+                "42 years old",
+                "5'5\"",
+                "expressive, empathetic brown eyes",
+                "friendly, approachable demeanor",
+                "comfortable, practical business-casual attire",
+                "often carries a notebook filled with user feedback and process improvement ideas"
+            ],
+            "required_constraints": [
+                "Always champions the needs and pain points of the actual users of a system or product",
+                "Can clearly articulate how business decisions will impact day-to-day operations",
+                "Not afraid to speak up if a proposed change will negatively affect her team's workflow"
+            ],
+            "motion_rules": "Animated when discussing user issues. Leans in when listening to concerns. Uses hand gestures to illustrate user workflows or problems.",
+            "voice_tone": "Passionate, clear, and persuasive, especially when advocating for users. Can be firm when defending her team's needs.",
+            "prop_loadout": [
+                "notebook with user stories, pain points, and feature requests",
+                "screenshots or recordings of system issues",
+                "a well-worn process map highlighting inefficiencies",
+                "a list of frequently asked questions from her department"
+            ],
+            "appearance": "The voice of the front lines, ensuring that business decisions are grounded in the reality of how work gets done. Looks like she genuinely cares about making things better for her colleagues.",
+            "role": "Business Stakeholder",
+            "catchphrase": "But how will this actually work for the people doing the job every day?"
+        },
+        "Marcus Thorne": {
+            "visual_tags": [
+                "male",
+                "50 years old",
+                "6'1\"",
+                "authoritative presence, confident posture",
+                "sharp, focused gaze that assesses situations quickly",
+                "impeccable business suit, always looks polished",
+                "carries an air of responsibility and strategic importance"
+            ],
+            "required_constraints": [
+                "Represents the interests and strategic objectives of his specific department or business unit",
+                "Focuses on resource allocation, budget adherence, and departmental KPIs",
+                "Expects clear communication and accountability from project teams impacting his area"
+            ],
+            "motion_rules": "Commanding and deliberate movements. Uses firm handshakes. Often stands with arms crossed when evaluating proposals. Direct eye contact.",
+            "voice_tone": "Assertive, strategic, and results-oriented. Clearly articulates his department's needs and expectations. Can be tough but fair in negotiations.",
+            "prop_loadout": [
+                "departmental budget reports and strategic plans",
+                "performance dashboards for his business unit",
+                "a list of critical success factors for his department's initiatives",
+                "a high-quality pen for signing off on important decisions"
+            ],
+            "appearance": "A key leader focused on the success and efficiency of his domain. Looks like he's constantly balancing departmental needs with overall company objectives.",
+            "role": "Business Stakeholder",
+            "catchphrase": "How does this align with our department's strategic goals, and what resources will be required from my team?"
+        }
+    }
+}

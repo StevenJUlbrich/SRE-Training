@@ -1,0 +1,166 @@
+{
+    "characters": {
+        "Eleanor Vance": {
+            "visual_tags": [
+                "female",
+                "52 years old",
+                "5'5\"",
+                "sharp, discerning brown eyes, often looking over the rim of her glasses",
+                "hair always in a neat, professional style, perhaps a classic bob",
+                "impeccable business attire, usually a skirt suit or a perfectly pressed dress shirt and trousers",
+                "minimal jewelry, practical watch"
+            ],
+            "required_constraints": [
+                "Always has a copy of the latest regulatory handbook (physical or digital) readily accessible",
+                "Never approves anything without thorough documentation and cross-referencing",
+                "Uses red pen for annotations and markups on draft documents"
+            ],
+            "motion_rules": "Calm, deliberate movements. Taps her pen when reviewing documents. Adjusts glasses when scrutinizing a detail.",
+            "voice_tone": "Precise, firm, unambiguous. Speaks clearly and ensures understanding of complex regulations. Rarely raises her voice, but her tone commands attention.",
+            "prop_loadout": [
+                "multiple binders filled with regulations and internal policies",
+                "tablet loaded with compliance software and legal databases",
+                "a collection of high-quality pens, including several red ones",
+                "secure, locked filing cabinet"
+            ],
+            "appearance": "The epitome of diligence and regulatory adherence. Looks like she can recite compliance codes in her sleep and spots deviations instantly.",
+            "role": "Compliance Officer",
+            "catchphrase": "As per section 4, subsection B, paragraph 3, this requires further clarification."
+        },
+        "Kenji Tanaka": {
+            "visual_tags": [
+                "male",
+                "45 years old",
+                "5'10\"",
+                "approachable, thoughtful expression",
+                "neatly trimmed black hair, perhaps with a few distinguished grey streaks at the temples",
+                "smart business casual – often a blazer over an open-collar shirt",
+                "modern, lightweight glasses"
+            ],
+            "required_constraints": [
+                "Believes in training and prevention over punitive measures",
+                "Always seeks to understand the 'why' behind a potential non-compliance issue",
+                "Maintains an open-door policy for questions about regulations"
+            ],
+            "motion_rules": "Nods attentively when listening. Uses inclusive hand gestures when explaining policies. Often walks around the office to engage with different teams.",
+            "voice_tone": "Calm, advisory, encouraging. Strives to make compliance understandable and less intimidating. Patient with explanations.",
+            "prop_loadout": [
+                "laptop with interactive training modules he designed",
+                "whiteboard in his office covered in flowcharts and simplified regulatory summaries",
+                "a selection of 'Compliance Myths vs. Facts' pamphlets",
+                "a friendly, well-used coffee mug"
+            ],
+            "appearance": "A supportive guide through the complex world of regulations. Looks like he genuinely wants to help everyone stay on the right side of the rules.",
+            "role": "Compliance Officer",
+            "catchphrase": "Let's work together to ensure we meet these requirements proactively."
+        },
+        "Priya Singh": {
+            "visual_tags": [
+                "female",
+                "29 years old",
+                "5'3\"",
+                "intense, focused dark eyes that don't miss a thing",
+                "long dark hair, usually in a practical ponytail or braid",
+                "business casual, often with a colorful scarf to add a personal touch",
+                "wears blue-light filtering glasses when deep in spreadsheets"
+            ],
+            "required_constraints": [
+                "Triple-checks every calculation and data entry",
+                "Can spot a mismatched number in a dense report from ten paces",
+                "Always has her favorite advanced calculator on her desk, even with powerful spreadsheet software"
+            ],
+            "motion_rules": "Leans close to the screen when analyzing data. Taps fingers on the desk rhythmically when reconciling accounts. Quick, efficient movements.",
+            "voice_tone": "Clear, concise, factual. Asks pointed questions to get to the bottom of financial queries. Confident when presenting her findings.",
+            "prop_loadout": [
+                "multi-monitor setup displaying complex spreadsheets and financial models",
+                "high-precision calculator",
+                "noise-cancelling headphones for deep concentration",
+                "a vast collection of colored pens for marking up reports"
+            ],
+            "appearance": "A financial sleuth who thrives on accuracy and detail. Looks like she can unravel any numerical mystery with her analytical prowess.",
+            "role": "Finance Analyst",
+            "catchphrase": "The numbers tell a story; my job is to make sure it's the true one."
+        },
+        "Ben Carter": {
+            "visual_tags": [
+                "male",
+                "38 years old",
+                "6'1\"",
+                "calm, strategic gaze; often looks into the distance when thinking",
+                "short, well-maintained brown hair",
+                "sharp, modern suits; sometimes foregoes a tie for a more approachable look",
+                "wears a smartwatch with financial news alerts"
+            ],
+            "required_constraints": [
+                "Focuses on trends, forecasts, and long-term financial planning",
+                "Always connects financial data to broader business strategy",
+                "Uses data visualization extensively to communicate insights"
+            ],
+            "motion_rules": "Uses broad, sweeping gestures when discussing future trends. Paces thoughtfully when developing financial models. Often sketches charts on whiteboards.",
+            "voice_tone": "Authoritative, persuasive, articulate. Can explain complex financial forecasts in an accessible way. Forward-looking and optimistic, but grounded in data.",
+            "prop_loadout": [
+                "laptop with advanced forecasting software and BI tools",
+                "large whiteboard filled with trend lines and scenario analyses",
+                "subscriptions to multiple financial journals and market data services",
+                "a sleek, modern water bottle to stay hydrated during long strategy sessions"
+            ],
+            "appearance": "A financial strategist who sees beyond the immediate numbers to chart the course for future growth. Looks ready to present a compelling case for investment.",
+            "role": "Finance Analyst",
+            "catchphrase": "Based on current trends, we project... but let's also consider these alternative scenarios."
+        },
+        "Alex Rodriguez": {
+            "visual_tags": [
+                "male",
+                "42 years old",
+                "5'9\"",
+                "stocky, strong build",
+                "always looks slightly disheveled from crawling under desks or through server racks",
+                "cargo pants with many pockets, usually filled with tools and gadgets",
+                "company polo shirt or a t-shirt from a hardware vendor"
+            ],
+            "required_constraints": [
+                "Can identify any server component by sight, sound, or smell",
+                "Always has a multi-tool and a flashlight on their belt or in a pocket",
+                "Believes proper cable management is a form of art"
+            ],
+            "motion_rules": "Decisive, physical movements; comfortable in server rooms and data centers. Often gestures with a screwdriver or a network cable in hand.",
+            "voice_tone": "Direct, practical, no-nonsense. Can explain complex hardware issues in simple terms. Occasionally gruff but deeply knowledgeable.",
+            "prop_loadout": [
+                "heavy-duty tool bag",
+                "headlamp",
+                "laptop for diagnostics and server management",
+                "a large roll of Velcro cable ties in various colors"
+            ],
+            "appearance": "The hands-on expert who keeps the physical heart of the IT infrastructure beating. Looks like they can build or fix any piece of hardware.",
+            "role": "Infrastructure Specialist",
+            "catchphrase": "Have you tried rebooting it? Okay, let me check the physical layer."
+        },
+        "Samira Chen": {
+            "visual_tags": [
+                "female",
+                "35 years old",
+                "5'6\"",
+                "sharp, intelligent eyes that light up when talking about cloud architecture",
+                "modern, comfortable clothing; often wears tech conference hoodies",
+                "stylish glasses, often with a slight tint",
+                "multiple screens displaying cloud dashboards and configuration files"
+            ],
+            "required_constraints": [
+                "Can architect and deploy complex cloud environments from scratch",
+                "Automates everything possible using IaC (Infrastructure as Code) principles",
+                "Always up-to-date with the latest services and features from major cloud providers"
+            ],
+            "motion_rules": "Fluid and fast on the keyboard; navigates complex cloud consoles with ease. Uses hand gestures to describe abstract cloud concepts like scalability and resilience.",
+            "voice_tone": "Enthusiastic, articulate, highly technical. Passionate about the power and flexibility of cloud computing. Enjoys teaching others about cloud technologies.",
+            "prop_loadout": [
+                "high-performance laptop with multiple virtual machines",
+                "tablet for sketching architecture diagrams",
+                "bookmarks to extensive cloud documentation and API references",
+                "a collection of certification badges from AWS, Azure, or GCP"
+            ],
+            "appearance": "A master of the virtual realm, effortlessly managing vast networks and server fleets that exist only as code. Looks like she can spin up a global infrastructure before lunch.",
+            "role": "Infrastructure Specialist",
+            "catchphrase": "Why build it physically when we can define it in code and scale it infinitely in the cloud?"
+        }
+    }
+}
