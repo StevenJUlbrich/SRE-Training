@@ -42,11 +42,11 @@ ______________________________________________________________________
 
 SRE metrics fundamentally differ from traditional IT monitoring by measuring what matters to users rather than infrastructure health. While traditional monitoring captures system state (CPU, memory, disk utilization), SRE metrics measure service outcomes from the customer perspective. These outcome-based metrics create a direct link between technical measurements and business impact, enabling teams to understand if systems are truly meeting user needs regardless of internal component status.
 
-### Common Example of the Problem
+#### Common Example of the Problem
 
 A major credit card authorization system shows perfect health metrics across all infrastructure components: servers at 15% CPU utilization, 40% memory usage, network bandwidth at 30% capacity, and all service health checks reporting "OK" status. Yet the customer support queue is filling with urgent reports of declined transactions and merchant complaints. The disconnect exists because the monitoring system measures only component health, not transaction success - creating a dangerous false sense of security while actual business operations fail.
 
-### SRE Best Practice: Evidence-Based Investigation
+#### SRE Best Practice: Evidence-Based Investigation
 
 Implement comprehensive transaction-focused metrics that measure actual customer outcomes:
 

@@ -1,0 +1,111 @@
+{
+  "panels": [
+    {
+      "panel": 1,
+      "filename": "day_03_chapter_01_draft_enhanced_p1_panel-1-the-midnight-alert---limitations-of-traditional-monitoring.png",
+      "scene_description": "In the dim glow of an operations center at 2 AM, a banking support engineer sits tense and exhausted, bathed in the green light of dashboards that all report \"healthy\" systems. Yet the phone rings incessantly, carrying the frustration of customers unable to transfer their money. The engineer’s furrowed brow and darting eyes reflect growing confusion—everything looks fine, but something is clearly wrong. The stark contrast between the reassuring dashboards and the angry calls highlights a critical flaw: traditional monitoring fails to capture the true customer experience, setting the stage for a deeper understanding of system reliability.",
+      "characters_in_frame": [
+        "Rhys Morgan",
+        "Valerie Dubois",
+        "Juana",
+        "Chloe Davis"
+      ],
+      "speech_bubbles": {
+        "Rhys Morgan": "Dashboards lie. Something’s broken, but where?",
+        "Valerie Dubois": "This is unacceptable! Fix it now or I’m pulling our business!",
+        "Juana": "Could be an edge case. Let’s dig deeper."
+      },
+      "narration": "\"Green Lights, Red Flags\""
+    },
+    {
+      "panel": 2,
+      "filename": "day_03_chapter_01_draft_enhanced_p2_panel-2-the-hidden-conversation---discovering-the-value-of-logs.png",
+      "scene_description": "Two engineers lean over a glowing terminal in a bustling operations center, their faces lit with urgency and discovery. One points to a stream of detailed log entries revealing hidden communication failures between the bank’s payment processor and the international settlement system—an issue invisible on the \"all green\" monitoring dashboards. The contrast is striking: the dashboards offer a false sense of calm, while the logs tell the real, intricate story of the system’s inner workings. The scene captures the moment of insight, highlighting the power of logs to uncover the truth behind complex processes.",
+      "characters_in_frame": [
+        "Juana",
+        "Aarav Sharma (Junior Developer - The Enthusiast)",
+        "Priya Singh",
+        "Chloe Davis"
+      ],
+      "speech_bubbles": {
+        "Juana": "The logs don’t lie—this is where the problem lives.",
+        "Aarav": "Wait, so the dashboards missed all of this? How?",
+        "Priya": "This could explain the settlement delays we’ve been tracking.",
+        "Chloe": "We need to prioritize fixing this—users depend on seamless transactions."
+      },
+      "narration": "\"Logs Reveal the Truth\""
+    },
+    {
+      "panel": 3,
+      "filename": "day_03_chapter_01_draft_enhanced_p3_panel-3-the-three-pillars---logs-metrics-and-traces.png",
+      "scene_description": "In a bright training room, an SRE stands at the whiteboard, sketching a triangle labeled \"Observability\" with its three sides marked as Logs, Metrics, and Traces. Using simple banking examples, they explain how logs capture detailed transaction events, metrics show trends like success rates, and traces follow the path of a single payment through interconnected systems. Below the triangle, a flowchart connects the concepts: logs answer \"why,\" metrics answer \"what,\" and traces answer \"where.\" New team members, seated with notebooks in hand, nod thoughtfully as they compare this framework to their own tools, realizing how these pillars work together to uncover not just known issues but unexpected failures in complex systems. The atmospher...",
+      "characters_in_frame": [
+        "Juana",
+        "Aarav Sharma (Junior Developer - The Enthusiast)",
+        "Danny",
+        "Chloe Davis"
+      ],
+      "speech_bubbles": {
+        "Juana": "Logs, metrics, traces—together, they reveal the full story. Think systems, not silos.",
+        "Aarav": "Wait, so traces are like breadcrumbs? Following every step of a payment?",
+        "Danny": "Metrics tell me trends, but traces? That’s where the debugging magic happens.",
+        "Chloe": "This triangle could really explain our downtime impact to stakeholders. Can we simplify it further?"
+      },
+      "narration": "\"Three Pillars, One Insight\""
+    },
+    {
+      "panel": 4,
+      "filename": "day_03_chapter_01_draft_enhanced_p4_panel-4-the-shift-from-what-to-why---investigative-logging.png",
+      "scene_description": "On one side, a stressed team stares at dashboards filled with vague error counts and generic failure metrics, scrambling to guess the root cause of a trading platform issue. On the other, a focused team examines detailed logs revealing exactly which transactions failed and why, complete with error messages and context. The contrast is clear: the first team is stuck in reactive guesswork, while the second, using observability tools, pinpoints a data formatting issue affecting specific trades, resolving the incident quickly and confidently. The scene highlights the power of shifting from \"what is happening\" to \"why it's happening\" for faster, smarter problem-solving.",
+      "characters_in_frame": [
+        "Juana",
+        "Aarav Sharma (Junior Developer - The Enthusiast)",
+        "Danny",
+        "Chloe Davis"
+      ],
+      "speech_bubbles": {
+        "Juana": "Transaction logs pinpoint the issue—data formatting error on specific trades.",
+        "Aarav": "Wait, we can see that level of detail? That’s amazing!",
+        "Danny": "Told you observability beats guessing. Let’s automate this check next time.",
+        "Chloe": "Faster resolution means happier users. This is exactly the clarity we need."
+      },
+      "narration": "\"From Guesswork to Clarity\""
+    },
+    {
+      "panel": 5,
+      "filename": "day_03_chapter_01_draft_enhanced_p5_panel-5-the-cost-of-invisibility---business-impact-of-poor-logging.png",
+      "scene_description": "In a tense boardroom, executives sit around a table, their eyes fixed on a large screen displaying stark financial data. A bar chart shows rising customer abandonment, a line graph tracks plummeting revenue, and a pie chart highlights soaring support costs. At the center of the screen, a side-by-side timeline comparison contrasts two incidents: one with poor logging that dragged on for hours, losing $500K, and another with comprehensive logging that resolved in minutes, limiting losses to $50K. The room is filled with concern as the visuals drive home a critical lesson—better logging isn’t just a technical upgrade; it’s a vital safeguard for the business.",
+      "characters_in_frame": [
+        "Juana",
+        "Priya Singh",
+        "Chloe Davis",
+        "Victoria Sterling"
+      ],
+      "speech_bubbles": {
+        "Juana": "This proves it—investing in robust logging isn’t optional anymore.",
+        "Priya": "How much could we save annually with better logging practices across all incidents?",
+        "Chloe": "If we don't fix this, we're losing trust—and users—faster than we can recover.",
+        "Victoria": "We can’t afford another $500K mistake. Prioritize the solution and make it happen."
+      },
+      "narration": "\"Logging Saves Millions\""
+    },
+    {
+      "panel": 6,
+      "filename": "day_03_chapter_01_draft_enhanced_p6_panel-6-the-journey-ahead---from-reactive-to-proactive.png",
+      "scene_description": "In a bustling banking operations center, engineers stand before towering walls of vibrant dashboards, their screens alive with detailed log analytics. The once-basic status indicators have evolved into powerful tools, highlighting unusual transaction patterns and subtle anomalies before they escalate into issues. A timeline on display illustrates the transformation: from chaotic, reactive firefighting to a proactive system that prevents problems before customers even notice. The team’s focus and the steadily rising customer satisfaction metrics reflect the power of predictive insights, showcasing how advanced observability has revolutionized reliability and service.",
+      "characters_in_frame": [
+        "Juana",
+        "Aarav Sharma (Junior Developer - The Enthusiast)",
+        "Chloe Davis",
+        "Priya Singh"
+      ],
+      "speech_bubbles": {
+        "Juana": "The anomaly detection flagged this early—no customer impact yet.",
+        "Aarav": "Wait, how does it spot patterns *that* fast? That’s insane!",
+        "Chloe": "This proves why investing in observability was the right call.",
+        "Priya": "Can we quantify how much downtime we've avoided this quarter?"
+      },
+      "narration": "\"From Reactive to Proactive\""
+    }
+  ]
+}
