@@ -1,18 +1,23 @@
+# SRE Cast Reference
+
 ## ✅ Existing SRE & Specialist Cast Review
 
 ### 🔹 Malik Odhiambo – *The Institutional Architect*
+
 - Former banking CTO → now a highly structured SRE consultant
 - Dry humor, methodical, prefers patterns over chaos
 - Anchor for long-term thinking, ideal mentor foil to someone like Danny
 - 📘 Ideal for: case studies, policy discussion, and bridging legacy systems
 
 ### 🔹 Zuri Wanjiku – *The Modern DevOps Lead*
+
 - Former startup founder, bright visual flair, high energy
 - Pushes cutting-edge automation and AI tools
 - Great tech-intensity counterbalance to Malik
 - 📘 Ideal for: microservice reliability, CI/CD, fast-iteration scenes
 
 ### 🔹 Jamal Kimeu – *The User Advocate*
+
 - Wheelchair-using Customer Experience Director
 - Warm, empathetic, speaks for the customer in SRE discussions
 - Brings lived experience to reliability debates

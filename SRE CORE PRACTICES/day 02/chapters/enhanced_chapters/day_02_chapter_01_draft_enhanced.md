@@ -66,20 +66,20 @@ SRE metrics fundamentally differ from traditional IT monitoring by measuring wha
 
 A major credit card authorization system shows perfect health metrics across all infrastructure components:
 
-| **Infrastructure Metric** | **Status** |
+| **Infrastructure Metric** | **Status**             |
 | ------------------------- | ---------------------- |
-| CPU Utilization | 15% (Healthy) |
-| Memory Usage | 40% (Healthy) |
-| Network Bandwidth | 30% Capacity (Healthy) |
-| Service Health Checks | All "OK" |
+| CPU Utilization           | 15% (Healthy)          |
+| Memory Usage              | 40% (Healthy)          |
+| Network Bandwidth         | 30% Capacity (Healthy) |
+| Service Health Checks     | All "OK"               |
 
 Despite these positive indicators, the customer support queue is filling with urgent reports of declined transactions and merchant complaints. Here's the disconnect:
 
-| **What Monitoring Captures** | **What Customers Experience** |
+| **What Monitoring Captures**   | **What Customers Experience**                                         |
 | ------------------------------ | --------------------------------------------------------------------- |
-| Low CPU and memory utilization | Transactions failing during payment processing |
-| Healthy network bandwidth | Merchants reporting authorization timeouts |
-| All system health checks "OK" | Spike in declined transactions, creating frustration and lost revenue |
+| Low CPU and memory utilization | Transactions failing during payment processing                        |
+| Healthy network bandwidth      | Merchants reporting authorization timeouts                            |
+| All system health checks "OK"  | Spike in declined transactions, creating frustration and lost revenue |
 
 This discrepancy happens because traditional monitoring systems focus solely on the health of infrastructure components, not on the success rate of transactions or user-facing outcomes. The result is a dangerous false sense of security: while system components appear healthy, critical business operations are failing, leaving customers and merchants dissatisfied.
 
@@ -166,14 +166,14 @@ Metrics maturity follows a clear evolution from basic monitoring through metrics
 
 A bank's fraud detection system appears healthy according to conventional metrics:
 
-| Metric | Current Value | Missing Measurement |
+| Metric               | Current Value | Missing Measurement                    |
 | -------------------- | ------------- | -------------------------------------- |
-| Service Availability | 100% | False Positive Rate in Fraud Detection |
-| API Response Time | 3ms (average) | Transaction Pattern Anomalies |
-| API Error Rate | 0.1% | Decision Boundary Insights |
-| CPU Utilization | Normal | Customer Behavior Analysis |
-| Memory Utilization | Normal | |
-| Database Connections | Functioning | |
+| Service Availability | 100%          | False Positive Rate in Fraud Detection |
+| API Response Time    | 3ms (average) | Transaction Pattern Anomalies          |
+| API Error Rate       | 0.1%          | Decision Boundary Insights             |
+| CPU Utilization      | Normal        | Customer Behavior Analysis             |
+| Memory Utilization   | Normal        |                                        |
+| Database Connections | Functioning   |                                        |
 
 Despite these positive indicators, customer complaints about legitimate transactions being incorrectly declined are increasing exponentially. The existing metrics fail to capture critical measurements such as false positive rates in the fraud detection algorithm, requiring deeper observability across transaction patterns, customer behavior, and decision boundaries. This highlights the gap between basic monitoring metrics and the actionable insights provided by comprehensive observability.
 
@@ -378,12 +378,12 @@ By following this checklist and maintaining visibility across the lifecycle, SRE
 
 The cost of inadequate metrics during banking incidents cascades across multiple dimensions. A detailed breakdown of these cost categories is provided below:
 
-| **Cost Category** | **Examples** | **Potential Dollar Impact** |
+| **Cost Category**           | **Examples**                                                             | **Potential Dollar Impact**           |
 | --------------------------- | ------------------------------------------------------------------------ | ------------------------------------- |
-| **Direct Financial Impact** | Failed transactions, compensation payments, penalty interest | $500,000 - $2,000,000 per hour |
-| **Operational Costs** | Extended resolution time, emergency resource allocation, recovery effort | $200,000 - $800,000 per incident |
-| **Regulatory Consequences** | Reporting violations, examination findings, compliance penalties | $1,000,000+ in fines and legal fees |
-| **Customer Impact** | Relationship damage, trust erosion, potential attrition | Loss of 5-10% of high-value customers |
+| **Direct Financial Impact** | Failed transactions, compensation payments, penalty interest             | $500,000 - $2,000,000 per hour        |
+| **Operational Costs**       | Extended resolution time, emergency resource allocation, recovery effort | $200,000 - $800,000 per incident      |
+| **Regulatory Consequences** | Reporting violations, examination findings, compliance penalties         | $1,000,000+ in fines and legal fees   |
+| **Customer Impact**         | Relationship damage, trust erosion, potential attrition                  | Loss of 5-10% of high-value customers |
 
 When metrics enable just 15 minutes faster detection and resolution, the financial benefit can be measured in millions of dollars for critical banking services during peak periods. This underscores the importance of robust metrics in minimizing incident costs and protecting long-term business performance.
 
@@ -522,13 +522,13 @@ This flow highlights how technical measurements, when thoughtfully aligned with 
 
 To effectively implement Service Level Indicators (SLIs) that bridge technical metrics and customer experience, follow these structured steps:
 
-| **Step** | **Purpose** | **Example Output** |
+| **Step** | **Purpose**                                                                                    | **Example Output**                                                                                                                                   |
 | -------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 | Create customer journey maps for all critical ATM transaction types with measurement points | A detailed map showing key stages like card insertion, PIN entry, cash withdrawal, and receipt printing, with associated metrics. |
-| 2 | Develop composite SLIs that reflect successful journey completion rather than component health | A composite SLI such as "ATM Transaction Success Rate," combining metrics like card authentication, cash availability, and receipt printing success. |
-| 3 | Implement weighted metric calculations that prioritize customer-visible components | Calculation formula where metrics like cash availability are weighted more heavily than receipt printing. |
-| 4 | Establish correlation analysis between SLIs and customer satisfaction/complaint metrics | A report showing a strong positive correlation between the "ATM Transaction Success Rate" and Net Promoter Score (NPS). |
-| 5 | Create regular SLI effectiveness reviews using actual customer feedback and behavior data | Quarterly review documentation summarizing customer feedback trends and adjustments to SLIs for improved alignment. |
+| 1        | Create customer journey maps for all critical ATM transaction types with measurement points    | A detailed map showing key stages like card insertion, PIN entry, cash withdrawal, and receipt printing, with associated metrics.                    |
+| 2        | Develop composite SLIs that reflect successful journey completion rather than component health | A composite SLI such as "ATM Transaction Success Rate," combining metrics like card authentication, cash availability, and receipt printing success. |
+| 3        | Implement weighted metric calculations that prioritize customer-visible components             | Calculation formula where metrics like cash availability are weighted more heavily than receipt printing.                                            |
+| 4        | Establish correlation analysis between SLIs and customer satisfaction/complaint metrics        | A report showing a strong positive correlation between the "ATM Transaction Success Rate" and Net Promoter Score (NPS).                              |
+| 5        | Create regular SLI effectiveness reviews using actual customer feedback and behavior data      | Quarterly review documentation summarizing customer feedback trends and adjustments to SLIs for improved alignment.                                  |
 
 This structured approach ensures SLIs are both technically robust and aligned with meaningful customer outcomes.
 
@@ -565,11 +565,11 @@ A bank's payment processing product team demands "five nines" reliability (99.99
 
 This uniform approach disregards crucial differences between payment types that should be reflected in differentiated metric targets. Below is a comparison of reliability requirements and criticality for different payment services:
 
-| **Payment Type** | **Criticality** | **Suggested Reliability Target** | **Key Metric Considerations** |
+| **Payment Type**             | **Criticality**                            | **Suggested Reliability Target** | **Key Metric Considerations**                                                     |
 | ---------------------------- | ------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------- |
-| High-Value Wire Transfers | Extremely high (millions per transaction) | 99.999% | Prioritize reliability and transaction success rate; minor latency is tolerable. |
-| Retail Card Authorizations | High (high volume, lower individual value) | 99.99% | Prioritize throughput and low-latency response; minor failure rate is acceptable. |
-| Account Information Requests | Moderate (non-transactional data access) | 99.9% | Moderate reliability; focus on cost efficiency and acceptable response time. |
+| High-Value Wire Transfers    | Extremely high (millions per transaction)  | 99.999%                          | Prioritize reliability and transaction success rate; minor latency is tolerable.  |
+| Retail Card Authorizations   | High (high volume, lower individual value) | 99.99%                           | Prioritize throughput and low-latency response; minor failure rate is acceptable. |
+| Account Information Requests | Moderate (non-transactional data access)   | 99.9%                            | Moderate reliability; focus on cost efficiency and acceptable response time.      |
 
 By applying uniform "five nines" standards, the SLO metrics create impossible benchmarks for less critical services while inadequately addressing the needs of truly business-critical functions. Differentiated targets ensure resources are allocated effectively and trade-offs align with service criticality.
 
@@ -618,11 +618,11 @@ Implement a differentiated SLO framework based on service criticality and busine
 
 #### Example Service Categorization Metrics
 
-| Service Tier | Example Services | Availability Target |
+| Service Tier | Example Services                 | Availability Target |
 | ------------ | -------------------------------- | ------------------- |
-| Tier 1 | Settlement, high-value transfers | 99.99%+ |
-| Tier 2 | Standard payment processing | 99.9%+ |
-| Tier 3 | Informational services | 99.5%+ |
+| Tier 1       | Settlement, high-value transfers | 99.99%+             |
+| Tier 2       | Standard payment processing      | 99.9%+              |
+| Tier 3       | Informational services           | 99.5%+              |
 
 By following this checklist, you can create an evidence-based, differentiated SLO framework that balances reliability needs with business objectives and technical feasibility.
 
@@ -689,11 +689,11 @@ Financial services metrics exist within a complex regulatory framework that impo
 
 A bank implements SLO metrics based solely on engineering considerations without incorporating regulatory requirements. This creates three parallel measurement systems, leading to conflicting outputs during incidents:
 
-| **Metric System** | **Focus** | **Example Measurement** | **Primary Concern During Incident** |
+| **Metric System**        | **Focus**               | **Example Measurement**                        | **Primary Concern During Incident**                                                          |
 | ------------------------ | ----------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| **Engineering Metrics** | Technical performance | Response time, error rates | Show performance within acceptable thresholds, leading to a false sense of stability. |
-| **Compliance Metrics** | Regulatory requirements | Availability calculations, incident thresholds | Highlight regulatory violations if thresholds are crossed, even if unnoticed by engineering. |
-| **Customer SLA Metrics** | Contractual obligations | Processing time guarantees | Indicate SLA breaches impacting customer commitments, potentially triggering penalties. |
+| **Engineering Metrics**  | Technical performance   | Response time, error rates                     | Show performance within acceptable thresholds, leading to a false sense of stability.        |
+| **Compliance Metrics**   | Regulatory requirements | Availability calculations, incident thresholds | Highlight regulatory violations if thresholds are crossed, even if unnoticed by engineering. |
+| **Customer SLA Metrics** | Contractual obligations | Processing time guarantees                     | Indicate SLA breaches impacting customer commitments, potentially triggering penalties.      |
 
 #### Incident Flow Example
 
@@ -735,10 +735,12 @@ Create an integrated metrics framework that aligns technical, contractual, and r
   - **Business Metrics**: Aggregated indicators tied to regulatory compliance, such as transaction processing times.
   - **Customer Metrics**: Metrics tied to service-level agreements (SLAs), such as response times and availability guarantees.
 - Use a structured approach to map dependencies between these layers. For example:
-  ```
+  
+  ```text
   Technical -> Business -> Regulatory
              -> Customer
   ```
+  
 - Ensure traceability between metric levels to identify how lower-level technical metrics contribute to higher-level compliance and customer obligations.
 
 #### **Step 3: Align Thresholds Across Metrics**
@@ -898,20 +900,20 @@ Without capturing these metrics at critical points, understanding and resolving 
 
 Implement a comprehensive instrumentation strategy across three key dimensions. Use the following checklist to ensure all critical measurement points are covered:
 
-| **Dimension** | **Key Metrics** | **Purpose** |
+| **Dimension**             | **Key Metrics**                                               | **Purpose**                                                                |
 | ------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| **Technical Performance** | - Function-level timing metrics for processing steps | Identify bottlenecks and optimize performance. |
-| | - Error capture metrics with detailed classification | Provide actionable insights into failure patterns. |
-| | - Resource utilization metrics (threads, connections, memory) | Monitor and manage resource efficiency. |
-| | - Dependency performance metrics for external services | Ensure reliability and responsiveness of integrations. |
-| **Business Context** | - Transaction type classification metrics | Analyze and optimize for specific transaction categories. |
-| | - Processing stage tracking metrics | Track progress and identify delays across stages. |
-| | - Amount range and risk category metrics | Enable risk-based analysis and reporting. |
-| | - Merchant or counterparty classification metrics | Provide insights into partner or merchant-specific performance. |
-| **Customer Experience** | - User segment identification metrics | Tailor optimizations for different customer groups. |
-| | - Channel and device context metrics | Understand and enhance user experience across channels and devices. |
-| | - Session and journey position metrics | Pinpoint user interactions and their context within the workflow. |
-| | - Historical context and relationship metrics | Leverage prior interactions to improve personalization and predict issues. |
+| **Technical Performance** | - Function-level timing metrics for processing steps          | Identify bottlenecks and optimize performance.                             |
+|                           | - Error capture metrics with detailed classification          | Provide actionable insights into failure patterns.                         |
+|                           | - Resource utilization metrics (threads, connections, memory) | Monitor and manage resource efficiency.                                    |
+|                           | - Dependency performance metrics for external services        | Ensure reliability and responsiveness of integrations.                     |
+| **Business Context**      | - Transaction type classification metrics                     | Analyze and optimize for specific transaction categories.                  |
+|                           | - Processing stage tracking metrics                           | Track progress and identify delays across stages.                          |
+|                           | - Amount range and risk category metrics                      | Enable risk-based analysis and reporting.                                  |
+|                           | - Merchant or counterparty classification metrics             | Provide insights into partner or merchant-specific performance.            |
+| **Customer Experience**   | - User segment identification metrics                         | Tailor optimizations for different customer groups.                        |
+|                           | - Channel and device context metrics                          | Understand and enhance user experience across channels and devices.        |
+|                           | - Session and journey position metrics                        | Pinpoint user interactions and their context within the workflow.          |
+|                           | - Historical context and relationship metrics                 | Leverage prior interactions to improve personalization and predict issues. |
 
 ### Banking Impact
 

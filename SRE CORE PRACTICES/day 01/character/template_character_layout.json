@@ -1,0 +1,48 @@
+{
+    "characters": {
+        "CharacterName (e.g., UniqueFirstName UniqueLastName)": {
+            "visual_tags": [
+                "string (e.g., 'female', 'male', 'non-binary')",
+                "string (e.g., 'age years old')",
+                "string (e.g., 'height')",
+                "string (e.g., 'facial feature description')",
+                "string (e.g., 'hair description')",
+                "string (e.g., 'eye color description')",
+                "string (e.g., 'clothing description 1')",
+                "string (e.g., 'clothing description 2')",
+                "string (e.g., 'other distinguishing visual feature or accessory')"
+            ],
+            "required_constraints": [
+                "string (e.g., 'Always does X')",
+                "string (e.g., 'Never does Y')",
+                "string (e.g., 'Frequently seen with Z')"
+            ],
+            "motion_rules": "string (description of typical movements, gestures, posture, or habits like fidgeting)",
+            "voice_tone": "string (description of typical speaking manner, pitch, speed, and common emotional expressions)",
+            "prop_loadout": [
+                "string (e.g., 'item 1 commonly carried or used')",
+                "string (e.g., 'item 2 commonly carried or used')",
+                "string (e.g., 'item 3 commonly carried or used')"
+            ],
+            "appearance": "string (a summary statement of the character's overall look and the impression they give)",
+            "role": "string (the character's job title or function, e.g., 'Risk Officer', 'Vendor Manager')",
+            "catchphrase": "string (a distinctive phrase the character often says, optional)"
+        },
+        "AnotherCharacterName": {
+            "visual_tags": [
+                "..."
+            ],
+            "required_constraints": [
+                "..."
+            ],
+            "motion_rules": "...",
+            "voice_tone": "...",
+            "prop_loadout": [
+                "..."
+            ],
+            "appearance": "...",
+            "role": "...",
+            "catchphrase": "..."
+        }
+    }
+}
