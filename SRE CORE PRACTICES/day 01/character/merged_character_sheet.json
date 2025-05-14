@@ -566,7 +566,7 @@
             ],
             "appearance": "Her presence calms a room but subtly resets the stakes. People lean in when she starts to speak.",
             "catchphrase": "What’s the long-term cost of getting this wrong?",
-            "role": " Banking Executive"
+            "role": "Banking Executive"
         },
         "Sofia": {
             "visual_tags": [
@@ -719,7 +719,7 @@
             ],
             "appearance": "The unofficial chief of execution. Doesn’t argue—just adjusts course and delivers.",
             "catchphrase": "Let’s document this, or it didn’t happen.",
-            "role": " Banking Executive"
+            "role": "Banking Executive"
         },
         "Brenda": {
             "visual_tags": [
@@ -2243,11 +2243,7 @@
                 "prototypes or demos of new digital banking features"
             ],
             "appearance": "The catalyst for change within a traditional industry, pushing the boundaries of banking with cutting-edge technology. Looks like he's building the bank of the future.",
-            "role": [
-                "Banking Executive",
-                "Business Executive",
-                "VP of Digital Transformation"
-            ],
+            "role": "Banking Executive",
             "catchphrase": "How can we leverage technology to not just improve our current services, but to fundamentally reinvent the banking experience for our customers?"
         },
         "Dr. Evelyn Reed": {
@@ -3276,10 +3272,7 @@
                 "a library of best practices for building scalable and resilient platforms"
             ],
             "appearance": "A builder of robust foundations, enabling other developers to innovate faster and more reliably. Looks like she can automate and scale any infrastructure.",
-            "role": [
-                "Platform Engineer",
-                "Infrastructure Architect"
-            ],
+            "role": "Infrastructure Architect",
             "catchphrase": "How can we make this platform more reliable, scalable, and easier for our developers to use? Let's automate everything."
         },
         "Ronan O'Connor": {
@@ -3306,10 +3299,7 @@
                 "a genuine interest in his team members' careers"
             ],
             "appearance": "A dedicated leader who builds high-performing engineering teams through mentorship, clear direction, and a supportive environment. Looks like the kind of manager who helps everyone level up.",
-            "role": [
-                "Engineering Manager",
-                "System Architect"
-            ],
+            "role": "Engineering Manager",
             "catchphrase": "What are your blockers, and how can I help you overcome them? Let's also talk about your growth goals for this quarter."
         },
         "Thalia Moreau": {
@@ -3687,10 +3677,7 @@
                 "a collection of influential research papers and books on machine learning, deep learning, and statistical modeling"
             ],
             "appearance": "A skilled engineer who brings artificial intelligence to life, building the algorithms that power intelligent applications. Looks like she can teach a machine to do almost anything.",
-            "role": [
-                "Machine Learning Engineer",
-                "AI Researcher"
-            ],
+            "role": "Machine Learning Engineer",
             "catchphrase": "The model's performance is promising, but can we optimize the feature engineering or try a different architecture to improve accuracy and reduce bias?"
         },
         "Anya Sharma": {
