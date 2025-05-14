@@ -15,6 +15,7 @@
             ],
             "required_constraints": [
                 "Never appears clean-shaven",
+                "Always has the short trimmed beard",
                 "Always wears a baseball cap, never a beanie or other headwear",
                 "Baseball cap is always red, never any other color",
                 "Baseball cap is always a RHEL baseball cap, never any other brand"
