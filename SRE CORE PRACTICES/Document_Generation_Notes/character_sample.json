@@ -1,0 +1,83 @@
+{
+    "characters": {
+        "Hector Alavaz": {
+            "visual_tags": [
+                "49-year-old Mexican man",
+                "medium build, 5'10\" (178 cm)",
+                "weathered medium-brown complexion",
+                "angular face with defined jawline",
+                "short, neatly trimmed salt-and-pepper beard",
+                "eye color intense hazel with visible crow's feet",
+                "serious and analytical expression",
+                "dark henley shirt",
+                "dark technical jeans",
+                "red RHEL baseball cap"
+            ],
+            "required_constraints": [
+                "Never appears clean-shaven",
+                "Always has the short trimmed beard",
+                "Always wears a baseball cap, never a beanie or other headwear",
+                "Baseball cap is always red, never any other color",
+                "Baseball cap is always a RHEL baseball cap, never any other brand"
+            ],
+            "motion_rules": "Moves with intentional, focused energy; rarely gestures unless explaining failure.",
+            "voice_tone": "Serious, analytical, sarcastic when annoyed or unimpressed.",
+            "prop_loadout": [
+                "stainless steel mechanical watch",
+                "ceramic black coffee mug",
+                "mechanical keyboard with no RGB lighting",
+                "leather notebook on desk"
+            ],
+            "appearance": "A seasoned operations engineer with a grounded, no-nonsense appearance. Always alert, always caffeinated.",
+            "role": "Senior SRE"
+        },
+        "Daniel": {
+            "visual_tags": [
+                "male",
+                "31 years old",
+                "5'2\"",
+                "lanky with a runner's physique",
+                "casual attire with tech company hoodies",
+                "short, curly hair with slight wave",
+                "light brown skin with a few freckles",
+                "eye color light blue"
+            ],
+            "required_constraints": [],
+            "motion_rules": null,
+            "voice_tone": "Dry, nerdy, often ironic",
+            "prop_loadout": [
+                "circuit board tattoo on forearm",
+                "earbuds (frequently half-in)"
+            ],
+            "appearance": "An overcaffeinated SRE in constant tension between sarcasm and stress.",
+            "role": "Junior SRE"
+        },
+        "Wanjiru": {
+            "visual_tags": [
+                "female",
+                "24 years old",
+                "5'1\" petite frame",
+                "short natural hair with purple dye streak",
+                "eye color dark brown",
+                "tech-smart casual with colorful scarves",
+                "stickers on laptop",
+                "freckles"
+            ],
+            "required_constraints": [
+                "Always asks follow-up questions",
+                "Laptop is stickered, never pristine",
+                "Prefers keyboard shortcuts, never uses trackpad"
+            ],
+            "motion_rules": "Animated hands when learning; leans forward when curious.",
+            "voice_tone": "Bright, inquisitive, occasionally overwhelmed",
+            "prop_loadout": [
+                "sticker-covered laptop",
+                "multicolor pens",
+                "annotated printouts of logs"
+            ],
+            "appearance": "Eager junior dev with the energy of someone who hasn't been broken by prod yet.",
+            "catchphrase": "But why does it work that way in production?",
+            "role": "SRE Junior"
+        }
+    }
+}

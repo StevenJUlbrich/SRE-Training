@@ -1,5 +1,5 @@
 # Mermaid Diagram Generation Guidelines
-# Mermaid Diagram Generation Guidelines
+
 
 When creating Mermaid diagrams, follow these best practices to ensure proper rendering:
 
